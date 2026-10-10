@@ -1,0 +1,353 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>少步蒸馏 · 每日 2026-10-10（轻量版）</title>
+<style>
+:root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--side:#f6f8fa;--line:#d1d9e0;--acc:#0b57d0;--l1:#fff8e6;--l1b:#f0c36d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--fg);background:var(--bg);font:15.5px/1.75 "Noto Sans CJK SC","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.top{position:sticky;top:0;z-index:5;background:#24292f;color:#fff;padding:8px 20px;display:flex;gap:18px;align-items:center;font-size:14px}
+.top a{color:#fff;opacity:.9} .top .brand{font-weight:700;opacity:1}
+.wrap{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1400px;margin:0 auto}
+nav.toc{position:sticky;top:40px;align-self:start;height:calc(100vh - 40px);overflow:auto;background:var(--side);border-right:1px solid var(--line);padding:14px 10px 40px 14px;font-size:13.5px;line-height:1.5}
+nav.toc .tt{font-weight:700;color:var(--muted);margin:2px 0 8px}
+nav.toc ul{list-style:none;margin:0;padding-left:10px} nav.toc>div>ul{padding-left:0}
+nav.toc li{margin:3px 0} nav.toc a{color:#333;display:block;padding:1px 4px;border-radius:4px}
+nav.toc a:hover,nav.toc a.on{background:#dde7f7;text-decoration:none}
+main{padding:22px 40px 80px;min-width:0}
+h1{font-size:26px;margin:.2em 0 .6em;border-bottom:2px solid var(--line);padding-bottom:.3em}
+h2{font-size:21px;margin:1.8em 0 .6em;border-bottom:1px solid var(--line);padding-bottom:.25em}
+h3{font-size:17.5px;margin:1.4em 0 .5em}
+h4{font-size:15.5px}
+blockquote{margin:0 0 1em;padding:8px 16px;border-left:4px solid #8c959f;background:#f6f8fa;color:#3d444d;font-size:14px}
+blockquote p{margin:.3em 0}
+code{font-family:"JetBrains Mono","DejaVu Sans Mono",Menlo,Consolas,monospace;font-size:.88em;background:#eff1f3;padding:.1em .35em;border-radius:4px}
+pre{background:#f6f8fa;border:1px solid var(--line);border-radius:6px;padding:10px 14px;overflow:auto} pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:.6em 0 1.1em}
+table{border-collapse:collapse;font-size:13.8px;line-height:1.55;min-width:60%}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left}
+th{background:#eef2f6;font-weight:700;position:sticky;top:0}
+tr:nth-child(even) td{background:#fafbfc}
+td strong{color:#8a1c1c}
+hr{border:0;border-top:1px solid var(--line);margin:1.6em 0}
+section.layer1{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:2px 22px 10px;margin:18px 0 26px}
+section.layer1>h2{border-bottom-color:var(--l1b)}
+section.layer1 .tw table{background:#fff}
+.layer-tag{display:inline-block;font-size:12px;font-weight:700;color:#7a4b00;background:#ffe2a8;border-radius:10px;padding:0 9px;margin-left:8px;vertical-align:middle}
+details.card{border:1px solid var(--line);border-radius:8px;margin:12px 0;background:#fff}
+details.card>summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:16.5px;background:#f3f6fa;border-radius:8px;list-style:none}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary:before{content:"▸ ";color:var(--acc)} details.card[open]>summary:before{content:"▾ "}
+details.card[open]>summary{border-bottom:1px solid var(--line);border-radius:8px 8px 0 0}
+details.card>.body{padding:4px 18px 10px}
+.cardtools{font-size:13px;margin:6px 0 2px} .cardtools button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:#fff;border-radius:5px;padding:1px 8px;cursor:pointer;margin-right:6px}
+.b{display:inline-block;font-size:11.5px;line-height:1.5;padding:0 6px;border-radius:9px;margin:0 2px;font-weight:600;white-space:nowrap;vertical-align:1px;border:1px solid transparent}
+.b-meas{background:#dafbe1;color:#116329;border-color:#a8e6b5}
+.b-orig{background:#ddf4ff;color:#0a4b8c;border-color:#a6d4f5}
+.b-team{background:#fff1e5;color:#953800;border-color:#ffc89a}
+.b-inf{background:#eef0f2;color:#4a535c;border-color:#cfd5db}
+.b-codex{background:#fbefff;color:#6e2b91;border-color:#e3b8f5}
+.b-oth{background:#f6f8fa;color:#4a535c;border-color:#d1d9e0}
+.idx{max-width:900px;margin:0 auto;padding:30px 30px 80px}
+.idx .hero{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:12px 22px;margin:14px 0 24px;font-size:16.5px}
+.idx .cards a{display:block;border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:10px 0;color:var(--fg)}
+.idx .cards a:hover{border-color:var(--acc);text-decoration:none;background:#f6f9ff}
+.idx .cards .t{font-weight:700;color:var(--acc)} .idx .cards .d{font-size:13.5px;color:var(--muted)}
+.foot{color:var(--muted);font-size:12.5px;margin-top:40px;border-top:1px solid var(--line);padding-top:8px}
+@media (max-width:900px){.wrap{grid-template-columns:1fr} nav.toc{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)} main{padding:16px}}
+@media print{nav.toc,.top,.cardtools{display:none}.wrap{display:block} details.card{break-inside:avoid}}
+</style></head><body>
+<div class="top"><a class="brand" href="../index.html">多模态少步蒸馏 · 前沿调研</a><a href="../baseline.html">2026Q3 基线</a><a href="../index.html#dailies">每日</a></div>
+<div class="wrap"><nav class="toc"><div class="tt">目录</div><div><div class="toc">
+<ul>
+<li><a href="#结论先行">结论先行</a></li>
+<li><a href="#30-秒速览每篇一行评级-一句新知识-相对谁">30 秒速览（每篇一行：评级 · 一句新知识 · 相对谁）</a></li>
+<li><a href="#一屏框架今天的论文挂在哪一格">一屏框架：今天的论文挂在哪一格</a></li>
+<li><a href="#详细条目23-篇">详细条目（2–3 篇）</a><ul><li><a href="#①-facegan-因果-每步新噪声-抖动和呆板二选一必读">① FaceGAN — 因果 + 每步新噪声 = 抖动和呆板二选一（必读）</a></li><li><a href="#②-ptd-只靠轨迹监督33b-av-4-步多样性远高于-dmd值得读可直接用">② PTD — 只靠轨迹监督，33B AV 4 步，多样性远高于 DMD（值得读，可直接用）</a></li><li><a href="#③-data-space-iteration-少步不需要时间表值得读">③ Data-Space Iteration — 少步不需要时间表（值得读）</a></li></ul></li>
+<li><a href="#放不进框架的发现挂到前提上">放不进框架的（发现挂到前提上）</a></li>
+<li><a href="#没覆盖-观察名单">没覆盖 / 观察名单</a></li>
+</ul>
+</div>
+</div></nav>
+<main><h1 id="少步蒸馏-每日-2026-10-10轻量版">少步蒸馏 · 每日 2026-10-10（轻量版）</h1>
+<blockquote>
+<p>覆盖范围：arXiv 最新一批公告，即 <strong>Fri 9 Oct 2026</strong>（10-10 是周六，没有新公告），分类为 cs.CV、cs.LG、stat.ML、cs.SD、eess.AS、cs.MM、cs.AI、eess.IV 的 new + cross + replacement 列表，共 1,059 条（新提交 390、跨列 317、替换 352）。队友转发：video-wm-daily 最新是 10-09，内容（PAC）已收进季度基线，<strong>今天没有新转发</strong>。
+怎么筛的：先用语义正则过滤到 21 条「生成 × 少步/流式」；逐条读摘要后，9 篇与范围相关：</p>
+<ul>
+<li>季度已精读 1 篇（MB-DMD <a href="https://arxiv.org/abs/2610.10989">2610.10989</a>）；</li>
+<li>转出 2 篇（Memory Forcing → 多模态文献追踪；<a href="https://arxiv.org/abs/2610.10859">2610.10859</a> 少步模型遗忘 → RL 追踪）；</li>
+<li>摘要级 1 篇（Omni-Diffusion-Distill）；</li>
+<li><strong>本次全文精读 5 篇</strong>（PTD、Data-Space Iteration、Connected SF、FaceGAN、CRP）。</li>
+</ul>
+<p>其余 12 条不在范围内（VSR、tokenizer、dLLM 推理加速、机器人、天气等）。另有 43 条替换版（v2），没有一条是范围内的新内容。
+数字全部是原文自报。标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span><span class="b b-inf">推断</span><span class="b b-codex">Codex✓</span>。</p>
+</blockquote>
+<hr />
+<section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
+<p><strong>今天的判断：</strong> 最值得记的不是新方法，而是一条把几件事串起来的<strong>机制</strong>。FaceGAN 证明：一个因果生成器，如果每一步都注入新的 i.i.d. 噪声，就不可能同时做到「动作平滑」和「每步有新变化」，要么抖动，要么呆板。流式长视频里反复出现的「一致性上去、动态度下来」（SGF、今天的 CSF），<strong>可能就是这个界在 chunk 级的表现</strong><span class="b b-inf">推断</span>。</p>
+<p><strong>对我们训练的含义：</strong></p>
+<ul>
+<li>流式 AR / AV 的长程训练：报一致性时<strong>必须同时报动态度</strong>。</li>
+<li>可以试「预先采样未来 chunk 的噪声，再做平滑」。这条成本很低，但还没有任何论文在视频上做过<span class="b b-inf">推断</span>。</li>
+</ul>
+</section><section class="layer1"><h2 id="30-秒速览每篇一行评级-一句新知识-相对谁">30 秒速览（每篇一行：评级 · 一句新知识 · 相对谁）<span class="layer-tag">第一层 · 框架</span></h2>
+<ul>
+<li><strong>必读 · FaceGAN <a href="https://arxiv.org/abs/2610.11070">2610.11070</a></strong>（新发现 × 站得住；仅限 motion latent）：因果生成器每步注入 iid 噪声时，输出谱的阻带深度和每步新信息量此消彼长，界为 σ²∞ ≤ ε^δ。把噪声通路改成非因果的（反正是合成噪声，可以预先采样未来），音频通路保持因果，就能绕开这个界。相对扩散 / LLM 类数字人（Fallingwater、DiffPoseTalk）：单次前向，质量持平。</li>
+<li><strong>值得读 · PTD <a href="https://arxiv.org/abs/2610.11498">2610.11498</a></strong>（新机制（弱）× 存疑；可直接用）：只用轨迹监督，LoRA 训 150 步，就能把 33B AV 底座压到 4 步。和 DMD 加速器（LightX2V Turbo）相比，静态画质持平，多样性大幅提高（Astra 2.81 vs 1.55）。相对 Flow Map Matching / PDD：教师在<strong>学生自己预测的多项式曲线</strong>上被查询。</li>
+<li><strong>值得读 · Data-Space Iteration <a href="https://arxiv.org/abs/2610.12102">2610.12102</a></strong>（新机制 × 站得住，只在 ImageNet-256）：少步时不加噪、不要时间表，直接在数据空间迭代 x̂←G(x̂, z, r)。DMD 损失不变，4 NFE FID 2.46 vs 2.75（无 CFG）。相对 DMD 的 renoise 迭代和 Phased DMD 的 flow-map 迭代。</li>
+<li><strong>值得读（弱）· Connected Self Forcing <a href="https://arxiv.org/abs/2610.12156">2610.12156</a></strong>（新机制（弱）× 存疑）：比 SGF 多走一步，跨 chunk 的梯度不只进 KV 写入，还回到生成历史 chunk 的计算。它自己的 λ 消融显示，<strong>跨 chunk 梯度的强度直接在一致性和动态度之间换</strong>。相对 <a href="https://arxiv.org/abs/2607.20368">SGF</a>。</li>
+<li><strong>范围外但相关 · CRP / Optica <a href="https://arxiv.org/abs/2610.11479">2610.11479</a></strong>：没有做蒸馏（作者原话「not yet distilled」），但它不用任何双向模型就训出了因果底座，可以作为「因果教师从哪来」的新来源。转给多模态文献追踪。</li>
+<li>摘要级 / 不评级：Omni-Diffusion-Distill <a href="https://arxiv.org/abs/2610.10990">2610.10990</a>（离散 dLLM 的少步蒸馏，没有格子，见下）；Memory Forcing <a href="https://arxiv.org/abs/2610.11756">2610.11756</a>（记忆机制，季度已转给文献追踪）；Velocity Scaling <a href="https://arxiv.org/abs/2610.10823">2610.10823</a>（是采样器的速度增益，不是蒸馏，范围外）。</li>
+</ul>
+<hr />
+</section><section class="layer1"><h2 id="一屏框架今天的论文挂在哪一格">一屏框架：今天的论文挂在哪一格<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文</th>
+<th>我归的格（按等价形式）</th>
+<th>Codex 盲分</th>
+<th>按格 / 按论文的预判（读结果前写，见 notes/predictions.md）</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PTD</td>
+<td><strong>L1 轨迹匹配</strong>（教师在学生曲线上查询的速度回归）</td>
+<td>轨迹匹配 ✓</td>
+<td>按格（L1 偏软）：静态画质不如 DMD，或持平</td>
+<td>持平（Astra 49/51）→ 按我写的「持平或略低」算命中，但 L1 的典型失效<strong>没有出现</strong></td>
+</tr>
+<tr>
+<td>Data-Space Iteration</td>
+<td><strong>L2 分布匹配</strong>（DMD 不变，只改 rollout 的状态）</td>
+<td>分布匹配 ✓</td>
+<td>多样性不报，或略降</td>
+<td>不报 → 不可判</td>
+</tr>
+<tr>
+<td>Connected SF</td>
+<td><strong>轴 C × L2</strong>（梯度路由）</td>
+<td>分布匹配 ✓</td>
+<td>一致性上去、动态度下来</td>
+<td>是（TF 初始化 60s：DD 0.496 vs SF 0.699）；<strong>预测被污染，不计入</strong></td>
+</tr>
+<tr>
+<td>FaceGAN</td>
+<td><strong>L3 对抗</strong>（直接训 GAN，不蒸馏）</td>
+<td>对抗 ✓</td>
+<td>唇同步不是最好</td>
+<td>错：按 Fallingwater 协议，Sync Score 最好（0.8767）</td>
+</tr>
+<tr>
+<td>CRP</td>
+<td><strong>放不进框架</strong>（监督去噪，不蒸馏）→ 挂在轴 C 的前提上</td>
+<td>「其他：监督去噪」✓</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Codex 盲分 5/5 与我一致<span class="b b-codex">Codex✓，每篇的等价式我都对照方法段抽查过</span>。</li>
+<li>论文级预测命中 <strong>8/11</strong>（PTD 3/4、DSI 3/4、FaceGAN 2/3；CSF 不计入）。</li>
+<li>按格写的预判今天只有 1 条，不足以检验框架；从明天起每篇单独落一条，周五统计。</li>
+</ul>
+<hr />
+</section><section class=""><div class="cardtools">详细条目：<button data-act="open">全部展开</button><button data-act="close">全部收起</button></div><h2 id="详细条目23-篇">详细条目（2–3 篇）</h2>
+<details class="card" open="open">
+<summary id="①-facegan-因果-每步新噪声-抖动和呆板二选一必读">① FaceGAN — 因果 + 每步新噪声 = 抖动和呆板二选一（必读）</summary>
+<div class="body">
+<p><strong>操作：</strong></p>
+<ol>
+<li>冻结的 Mimi 编码器把语音转成 25 Hz 特征（因果，只看 1 帧前瞻，即 40 ms）。</li>
+<li>噪声通路：<strong>一次采好过去和未来的 iid 噪声</strong>，经两层<strong>双向</strong>网络整形成平滑的运动先验。噪声是合成的，所以「看未来」不增加任何延迟。</li>
+<li>六层<strong>因果</strong>条件网络把音频特征和运动先验融合起来，每帧一次前向，输出 128 维表情码和头部姿态。</li>
+<li>训练用 hinge GAN（一个条件判别器、一个无条件判别器），另加特征匹配、多样性项和平滑正则。没有教师，也没有 score 网络。</li>
+</ol>
+<p><strong>因果链：</strong></p>
+<ul>
+<li>自然的面部运动是<strong>带限</strong>的：高频几乎没有能量；</li>
+<li>由 Kolmogorov–Szegő 公式，谱在一段比例 δ 的频带上低于 ε 时，一步预测误差（即每步的新信息）σ²∞ ≤ ε^δ；</li>
+<li>一个因果、每步注入新 iid 噪声的生成器，它的 σ²∞ 必然 &gt; 0，所以做不出真正的阻带：<ul>
+<li>要保住新信息，就会漏出高频，即<strong>抖动</strong>；</li>
+<li>要压住高频，就会把新信息压没，即<strong>呆板</strong>；</li>
+</ul>
+</li>
+<li>把噪声改成非因果整形之后，「每步必须有新噪声」这个前提不成立了，界也就不再约束生成器。</li>
+</ul>
+<p><strong>数字例子：</strong></p>
+<ul>
+<li>论文：40 dB 阻带覆盖 90% 频谱时，σ²∞ ≤ 2.5×10⁻⁴。</li>
+<li>我的验证<span class="b b-meas">实测，daily/toys/facegan_bound.py</span>：用因果低通 FIR 驱动 iid 噪声，阻带从 −7 dB 加深到 −75 dB 时，σ²∞ 从 1.1×10⁻² 掉到 1.9×10⁻⁷。所有设置都满足 σ²∞ ≤ ε^δ。</li>
+</ul>
+<p><strong>与最近工作的核心差别：</strong></p>
+<ul>
+<li>和扩散 / LLM 数字人（Fallingwater、DiffPoseTalk、ARTalk）相比：不做多步采样，也不做蒸馏。</li>
+<li>和一般的时序 GAN（Codex 给的 1805.09313，我未读）相比：<strong>新东西只有「噪声通路非因果」这一处</strong>。</li>
+</ul>
+<p><strong>证据</strong><span class="b b-orig">原文 Tab.2/4</span>，64 个保留 clip：</p>
+<ul>
+<li>FED 12.15（DiffPoseTalk 11.35 最好），Sync Score <strong>0.8767</strong>（Fallingwater 0.6964）。</li>
+<li>用户研究（19 人，684 次比较）：唇同步持平（50.5%），自然度胜出（57.1%）。</li>
+<li>关键消融（完整模型跑 3 次，给出 sd 带）：在<strong>相同注意宽度</strong>下，把噪声通路改成因果：<ul>
+<li>表情幅度 0.92–0.93，真值为 1，即「说话不到位」；</li>
+<li>表情多样性 −14%，姿态多样性 −22%；</li>
+<li>Sync 和 FED 不变。
+这正好对应「呆板」那一侧。</li>
+</ul>
+</li>
+</ul>
+<p><strong>疑点：</strong></p>
+<ul>
+<li>只在 137 维 motion latent 上做，不是像素视频；</li>
+<li>同步分数用的是 Fallingwater 协议。队友此前转述，项目页上 LSE-C 是所有方法里最低的<span class="b b-team">队友</span>，两个口径冲突，未核实。</li>
+<li>Codex 提醒：应该再加一个「因果彩色噪声 + 同样的平滑正则」的对照<span class="b b-codex">Codex✓</span>，论文的消融没有完全覆盖这一点。</li>
+</ul>
+<p><strong>对我们训练的含义：</strong></p>
+<ul>
+<li>图像：无。</li>
+<li>视频（双向）：无。</li>
+<li><strong>AV / 数字人：</strong> 决定「流式数字人要不要走扩散蒸馏」。在 motion latent 这一层，单次前向的 GAN 已经够用，可以先做这一层。先跑的对照：因果噪声 vs 非因果噪声，用 ffmpeg 测抖动和 RMS。</li>
+<li><strong>流式 AR：</strong> 自回归蒸馏学生每个 chunk 都注入新噪声，正好落在这个界里<span class="b b-inf">推断</span>，可以解释 SGF / CSF 的「一致性 vs 动态度」。决定：chunk 噪声是独立采样，还是预采后跨 chunk 平滑。先跑的对照：同样采样预算下，比较 iid 噪声和平滑噪声的 DD 与 Subject Consistency。</li>
+</ul>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="②-ptd-只靠轨迹监督33b-av-4-步多样性远高于-dmd值得读可直接用">② PTD — 只靠轨迹监督，33B AV 4 步，多样性远高于 DMD（值得读，可直接用）</summary>
+<div class="body">
+<p><strong>操作：</strong></p>
+<ol>
+<li>固定 4 跳的时间网格。学生在每一跳起点 x_k 做一次前向，输出<strong>平均速度 h</strong> 和 K=8 个 Legendre <strong>曲率系数 c</strong>。曲线 x(τ) = x_k + Δ[τh + Σ b_j(τ)c_j]，其中 b_j 在两端为 0。</li>
+<li>在这条<strong>学生自己预测的曲线</strong>上取 2 个点（分层采样），在这两点查<strong>教师速度</strong> u_T（停梯度）。</li>
+<li>损失：‖h + Σ b′_j(τ_i)c_j − u_T‖²。曲线的速度是解析求导得到的，不需要 JVP。</li>
+<li>推理时丢掉 c，只用 x_{k+1} = x_k + Δh。</li>
+<li>在 H3 上，最后一跳改为回归 8 步教师积分得到的终点；每跳一个 rank-128 LoRA，150 次更新，batch 512。</li>
+</ol>
+<p><strong>因果链：</strong></p>
+<ul>
+<li>高噪声段的教师轨迹弯得最厉害，学生的容量学不会这种弯；</li>
+<li>如果硬去回归「教师积分出来的终点」，就会学成条件均值，细节变软；</li>
+<li>改为在学生自己的曲线上查教师速度，得到的是<strong>学生学得动</strong>的目标。</li>
+<li>论文的探针结果：第一跳的教师弯曲，学生特征只能解释 7–11%；学到的是一个「缩小版、方向对齐」的弯（第一跳 64 次更新时 r=0.081，PDD 为 0.024）。</li>
+</ul>
+<p><strong>与最近工作的核心差别：</strong></p>
+<ul>
+<li><a href="https://arxiv.org/abs/2406.07507">Flow Map Matching</a>：作者说式 5 就是 FMM 的 Lagrangian 损失，只是把映射限定成多项式、从网格起点出发<span class="b b-orig">原文；FMM 本身我没读</span>。</li>
+<li>PDD 回归的是「教师 RK 积分的目标」，PTD 查的是「学生曲线上的教师速度」。</li>
+<li><a href="https://arxiv.org/abs/2510.08431">rCM</a> 是 sCM+DMD，PTD <strong>没有任何分布匹配项</strong>。</li>
+</ul>
+<p><strong>证据</strong><span class="b b-orig">原文 Fig.4、Tab.1</span>：</p>
+<ul>
+<li>H3：Astra 多样性 2.81 vs 1.55，自然度 3.09 vs 2.98，静态画质 49/51 持平；盲测人评 63.4% 偏好 PTD。</li>
+<li>Wan2.1-14B：VBench 84.57，复现的 PDD 为 83.67。V-JEPA2 多样性 0.1220，教师 0.1263，DMD2 0.0568。</li>
+</ul>
+<p><strong>疑点：</strong></p>
+<ul>
+<li>复现的 PDD（83.67）比 PDD 自报的数（84.92 / 84.69）低一截，所以基线偏弱；PTD 自己的 84.57 也低于各文自报的 rCM 84.92 和 AnyFlow 84.95（协议不同）。</li>
+<li>主要证据是 LLM judge（GPT-6 Astra，只看抽帧），<strong>AV 没有任何客观音频数字</strong>（WER、DeSync 都没有）。</li>
+<li>H3 上的增益可能部分来自「最后一跳额外的教师积分」<span class="b b-codex">Codex✓</span>。</li>
+</ul>
+<p><strong>对我们训练的含义：</strong></p>
+<ul>
+<li>图像：无（论文没做图像）。</li>
+<li><strong>视频：</strong> 决定「4 步视频要不要用 DMD」。如果多样性是硬需求，就用 PTD。先跑的对照：同 LoRA 预算下的 DMD 加速器，测同 prompt 多 seed 的 precision/coverage。</li>
+<li><strong>AV：</strong> 只有 LoRA，成本很低（150 次更新）。先跑的对照：WER、DeSync 和 ffmpeg 测的 RMS，论文全都没报。</li>
+<li><strong>流式 AR：</strong> 推断它和 K3 一致：只在首 chunk 的高噪段用 PTD 式轨迹监督，其余用 DMD。</li>
+</ul>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="③-data-space-iteration-少步不需要时间表值得读">③ Data-Space Iteration — 少步不需要时间表（值得读）</summary>
+<div class="body">
+<p><strong>操作：</strong></p>
+<ol>
+<li>x̂⁽⁰⁾=0；x̂⁽ʳ⁺¹⁾ = G(x̂⁽ʳ⁾, z, r)。<strong>每一步都喂同一个 z</strong>，中间不重新加噪。</li>
+<li>训练时随机选一个 r，先无梯度跑 r 步，再带梯度跑一步。</li>
+<li>对输出加独立噪声 τ ~ Beta(2.5, 1)（偏向高噪声），做标准 DMD。fake score 额外以 r 为条件。</li>
+<li>Adam β₁=0；每次生成器更新配 4 次 fake 更新。</li>
+</ol>
+<p><strong>因果链：</strong></p>
+<ul>
+<li>renoise 式迭代（DMD、CM）要在步与步之间重新加噪到预先定好的 t_r，时间表必须在训练前就定死，换一个时间表就要重训；</li>
+<li>改在数据空间直接修正、不加噪，就既不需要时间表，也不会在每一步把上一步的信息洗掉一部分；</li>
+<li>所以同样的 DMD 目标，迭代效率更高。</li>
+</ul>
+<p><strong>证据</strong><span class="b b-orig">原文 Tab.3，SiT-XL/2 教师，ImageNet-256 FID-50K，4 NFE</span>：</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>设置</th>
+<th>数据空间迭代</th>
+<th>DMD（uniform 时间表）</th>
+<th>Phased DMD</th>
+<th>搜索出的最好时间表（oracle）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>无 CFG</td>
+<td><strong>2.46</strong></td>
+<td>2.75</td>
+<td>2.55</td>
+<td>2.48</td>
+</tr>
+<tr>
+<td>有 CFG</td>
+<td><strong>2.29</strong></td>
+<td>2.61</td>
+<td>2.86</td>
+<td>2.37</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>1→2→4 NFE 的 FID：3.85 → 2.68 → 2.46。</li>
+</ul>
+<p><strong>疑点：</strong> 只有 ImageNet-256 一个基准、单次运行；差距在 0.1–0.3 FID 量级；Codex 提醒 fake 以 r 为条件本身可能就帮了 fake score 的估计<span class="b b-codex">Codex✓</span>。</p>
+<p><strong>对我们训练的含义：</strong></p>
+<ul>
+<li><strong>图像：</strong> 决定「少步时间表还要不要调」。可以直接改 rollout。先跑的对照：同一 fake 条件化下的 renoise DMD。</li>
+<li>视频：未验证。</li>
+<li>AV：无。</li>
+<li>流式 AR：推断可以和 Uncertainty DMD 的「首步 timestep 扰动」放在一起比，因为两者都在改「首步的状态」。</li>
+</ul>
+<hr />
+</div>
+</details>
+</section><section class=""><h2 id="放不进框架的发现挂到前提上">放不进框架的（发现挂到前提上）</h2>
+<ul>
+<li><strong>CSF 的 λ 消融</strong><span class="b b-orig">原文 Tab.3</span>：跨 chunk 梯度减半后，DD 0.598→0.848，Avg(6) 0.8589→0.8429。挂在轴 C × L2 的前提「长程方法提升了质量」上，<strong>部分推翻</strong>：这些「一致性提升」有一部分是用动态度换来的。<ul>
+<li>这是第 3 个同向的数据点：SGF 的 DD 大降、RMD 不报 DD、CSF 在 TF 和 ODE 初始化下 DD 低于两个基线。</li>
+<li>Avg(6) 和 VBench-Long 的一致性项天然偏好静止画面。</li>
+</ul>
+</li>
+<li><strong>FaceGAN 的谱界</strong>：挂在轴 C 的前提「因果化只损失『依赖未来』的信号」上，<strong>补充</strong>了一种新的损失：即使信号不依赖未来，「因果 + 每步新噪声」也会在平滑和新信息之间设一个上限。</li>
+<li><strong>CRP</strong>：挂在轴 C 的前提「因果教师只能从双向模型来」上，<strong>推翻</strong>了它。不用任何双向模型、直接训练的因果底座 Optica 2B 的 VBench 为 82.78<span class="b b-orig">原文摘要</span>。机制是：历史分支只能在「无历史」预测之上加残差，用来降低 exposure bias。可以作为 CMD 式因果 real score 的候选来源。</li>
+<li><strong>Omni-Diffusion-Distill <a href="https://arxiv.org/abs/2610.10990">2610.10990</a></strong>（摘要级）：离散 token 的统一 dLLM 少步蒸馏（先回放教师轨迹，再 on-policy 精修），现有的三根轴都是为连续扩散建的，放不进去。如果再出现 1–2 篇，就开一个「离散扩散」的格子。</li>
+</ul>
+</section><section class=""><h2 id="没覆盖-观察名单">没覆盖 / 观察名单</h2>
+<ul>
+<li>没覆盖：HF Daily、X、GitHub 新仓库都没查；OpenReview 403。</li>
+<li>观察：PDD（匿名，未见 arXiv）；Vidu S2 Self-Replay Forcing <a href="https://arxiv.org/abs/2609.11638">2609.11638</a>（CSF 的同期工作，未读）；Optica 的少步版本（作者说还没做）。</li>
+</ul></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-10 18:41 (UTC+8)</div></main></div>
+<script>
+(function(){
+ // 详情卡片全部展开/收起
+ document.querySelectorAll('[data-act]').forEach(function(b){b.addEventListener('click',function(){
+   var o=b.getAttribute('data-act')==='open';document.querySelectorAll('details.card').forEach(function(d){d.open=o;});});});
+ // 点击目录中位于折叠卡片内的锚点时自动展开
+ function openFor(id){var el=document.getElementById(id);if(!el)return;var d=el.closest('details');if(d)d.open=true;}
+ if(location.hash)openFor(decodeURIComponent(location.hash.slice(1)));
+ window.addEventListener('hashchange',function(){openFor(decodeURIComponent(location.hash.slice(1)));});
+ // 目录高亮
+ var links=[].slice.call(document.querySelectorAll('nav.toc a'));
+ var heads=links.map(function(a){return document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));});
+ function hl(){var y=window.scrollY+80,k=-1;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top+window.scrollY<=y&&h.offsetParent!==null)k=i;});
+   links.forEach(function(a,i){a.classList.toggle('on',i===k);});}
+ window.addEventListener('scroll',hl,{passive:true});hl();
+})();
+</script><script>if(document.querySelector('code.language-mermaid')){var s=document.createElement('script');
+s.src='https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';s.onload=function(){document.querySelectorAll('code.language-mermaid').forEach(function(c){var d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentNode.replaceWith(d);});mermaid.initialize({startOnLoad:false});mermaid.run();};document.head.appendChild(s);}</script></body></html>

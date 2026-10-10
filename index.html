@@ -1,0 +1,67 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>多模态少步蒸馏 · 前沿调研</title><style>
+:root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--side:#f6f8fa;--line:#d1d9e0;--acc:#0b57d0;--l1:#fff8e6;--l1b:#f0c36d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--fg);background:var(--bg);font:15.5px/1.75 "Noto Sans CJK SC","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.top{position:sticky;top:0;z-index:5;background:#24292f;color:#fff;padding:8px 20px;display:flex;gap:18px;align-items:center;font-size:14px}
+.top a{color:#fff;opacity:.9} .top .brand{font-weight:700;opacity:1}
+.wrap{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1400px;margin:0 auto}
+nav.toc{position:sticky;top:40px;align-self:start;height:calc(100vh - 40px);overflow:auto;background:var(--side);border-right:1px solid var(--line);padding:14px 10px 40px 14px;font-size:13.5px;line-height:1.5}
+nav.toc .tt{font-weight:700;color:var(--muted);margin:2px 0 8px}
+nav.toc ul{list-style:none;margin:0;padding-left:10px} nav.toc>div>ul{padding-left:0}
+nav.toc li{margin:3px 0} nav.toc a{color:#333;display:block;padding:1px 4px;border-radius:4px}
+nav.toc a:hover,nav.toc a.on{background:#dde7f7;text-decoration:none}
+main{padding:22px 40px 80px;min-width:0}
+h1{font-size:26px;margin:.2em 0 .6em;border-bottom:2px solid var(--line);padding-bottom:.3em}
+h2{font-size:21px;margin:1.8em 0 .6em;border-bottom:1px solid var(--line);padding-bottom:.25em}
+h3{font-size:17.5px;margin:1.4em 0 .5em}
+h4{font-size:15.5px}
+blockquote{margin:0 0 1em;padding:8px 16px;border-left:4px solid #8c959f;background:#f6f8fa;color:#3d444d;font-size:14px}
+blockquote p{margin:.3em 0}
+code{font-family:"JetBrains Mono","DejaVu Sans Mono",Menlo,Consolas,monospace;font-size:.88em;background:#eff1f3;padding:.1em .35em;border-radius:4px}
+pre{background:#f6f8fa;border:1px solid var(--line);border-radius:6px;padding:10px 14px;overflow:auto} pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:.6em 0 1.1em}
+table{border-collapse:collapse;font-size:13.8px;line-height:1.55;min-width:60%}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left}
+th{background:#eef2f6;font-weight:700;position:sticky;top:0}
+tr:nth-child(even) td{background:#fafbfc}
+td strong{color:#8a1c1c}
+hr{border:0;border-top:1px solid var(--line);margin:1.6em 0}
+section.layer1{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:2px 22px 10px;margin:18px 0 26px}
+section.layer1>h2{border-bottom-color:var(--l1b)}
+section.layer1 .tw table{background:#fff}
+.layer-tag{display:inline-block;font-size:12px;font-weight:700;color:#7a4b00;background:#ffe2a8;border-radius:10px;padding:0 9px;margin-left:8px;vertical-align:middle}
+details.card{border:1px solid var(--line);border-radius:8px;margin:12px 0;background:#fff}
+details.card>summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:16.5px;background:#f3f6fa;border-radius:8px;list-style:none}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary:before{content:"▸ ";color:var(--acc)} details.card[open]>summary:before{content:"▾ "}
+details.card[open]>summary{border-bottom:1px solid var(--line);border-radius:8px 8px 0 0}
+details.card>.body{padding:4px 18px 10px}
+.cardtools{font-size:13px;margin:6px 0 2px} .cardtools button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:#fff;border-radius:5px;padding:1px 8px;cursor:pointer;margin-right:6px}
+.b{display:inline-block;font-size:11.5px;line-height:1.5;padding:0 6px;border-radius:9px;margin:0 2px;font-weight:600;white-space:nowrap;vertical-align:1px;border:1px solid transparent}
+.b-meas{background:#dafbe1;color:#116329;border-color:#a8e6b5}
+.b-orig{background:#ddf4ff;color:#0a4b8c;border-color:#a6d4f5}
+.b-team{background:#fff1e5;color:#953800;border-color:#ffc89a}
+.b-inf{background:#eef0f2;color:#4a535c;border-color:#cfd5db}
+.b-codex{background:#fbefff;color:#6e2b91;border-color:#e3b8f5}
+.b-oth{background:#f6f8fa;color:#4a535c;border-color:#d1d9e0}
+.idx{max-width:900px;margin:0 auto;padding:30px 30px 80px}
+.idx .hero{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:12px 22px;margin:14px 0 24px;font-size:16.5px}
+.idx .cards a{display:block;border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:10px 0;color:var(--fg)}
+.idx .cards a:hover{border-color:var(--acc);text-decoration:none;background:#f6f9ff}
+.idx .cards .t{font-weight:700;color:var(--acc)} .idx .cards .d{font-size:13.5px;color:var(--muted)}
+.foot{color:var(--muted);font-size:12.5px;margin-top:40px;border-top:1px solid var(--line);padding-top:8px}
+@media (max-width:900px){.wrap{grid-template-columns:1fr} nav.toc{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)} main{padding:16px}}
+@media print{nav.toc,.top,.cardtools{display:none}.wrap{display:block} details.card{break-inside:avoid}}
+</style></head><body>
+<div class="top"><a class="brand" href="index.html">多模态少步蒸馏 · 前沿调研</a><a href="baseline.html">2026Q3 基线</a><a href="#dailies">每日</a></div>
+<div class="idx"><h1>多模态少步蒸馏 · 前沿调研</h1>
+<div class="hero"><b>基线一句话：</b>本季的进展不在「换散度」，而是把 DMD 的每一个输入摆正——打分上下文要和生成时一致，条件要有真实锚点，多样性要在开头保住，critic 误差要过滤，越过教师要靠真实数据。少步本身几乎没有代价，真正的代价在因果化和目标分布选错。</div>
+<div class="cards">
+<a href="baseline.html"><div class="t">2026Q3 基线（2026-07-01 → 2026-10-10）</div><div class="d">两层结构：第一层框架（结论 · 分类轴 · DMD 一次迭代 7 步 · 逐篇挂格）；第二层 K1–K5 细节、最强 baseline 表、配方、逐篇含义。</div></a>
+<a href="daily/2026-10-10.html"><div class="t">最新每日：少步蒸馏 · 每日 2026-10-10（轻量版）</div><div class="d">最值得记的不是新方法，而是一条把几件事串起来的机制。FaceGAN 证明：一个因果生成器，如果每一步都注入新的 i.i.d. 噪声，就不可能同时做到「动作平滑」和「每步有新变化」，要么抖动，要么呆板。流式长视频里反复出现的「一致性上去、动态度下来」（SGF、今天的 CSF），可能就是这个界在 chunk 级的表现【推断】。</div></a>
+</div>
+<h2 id="dailies">全部每日</h2><div class="cards"><a href="daily/2026-10-10.html"><div class="t">少步蒸馏 · 每日 2026-10-10（轻量版）</div><div class="d">最值得记的不是新方法，而是一条把几件事串起来的机制。FaceGAN 证明：一个因果生成器，如果每一步都注入新的 i.i.d. 噪声，就不可能同时做到「动作平滑」和「每步有新变化」，要么抖动，要么呆板。流式长视频里反复出现的「一致性上去、动态度下来」（SGF、今天的 CSF），可能就是这个界在 chunk 级的表现【推断…</div></a></div>
+<div class="foot">本地静态站点，未发布。数字均为原文自报，未复现。由 build.py 生成 · 2026-10-10 18:41 (UTC+8)</div></div></body></html>

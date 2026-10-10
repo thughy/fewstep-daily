@@ -1,0 +1,912 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>多模态少步蒸馏 · 2026Q3 基线（2026-07-01 → 2026-10-10）</title>
+<style>
+:root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--side:#f6f8fa;--line:#d1d9e0;--acc:#0b57d0;--l1:#fff8e6;--l1b:#f0c36d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--fg);background:var(--bg);font:15.5px/1.75 "Noto Sans CJK SC","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.top{position:sticky;top:0;z-index:5;background:#24292f;color:#fff;padding:8px 20px;display:flex;gap:18px;align-items:center;font-size:14px}
+.top a{color:#fff;opacity:.9} .top .brand{font-weight:700;opacity:1}
+.wrap{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1400px;margin:0 auto}
+nav.toc{position:sticky;top:40px;align-self:start;height:calc(100vh - 40px);overflow:auto;background:var(--side);border-right:1px solid var(--line);padding:14px 10px 40px 14px;font-size:13.5px;line-height:1.5}
+nav.toc .tt{font-weight:700;color:var(--muted);margin:2px 0 8px}
+nav.toc ul{list-style:none;margin:0;padding-left:10px} nav.toc>div>ul{padding-left:0}
+nav.toc li{margin:3px 0} nav.toc a{color:#333;display:block;padding:1px 4px;border-radius:4px}
+nav.toc a:hover,nav.toc a.on{background:#dde7f7;text-decoration:none}
+main{padding:22px 40px 80px;min-width:0}
+h1{font-size:26px;margin:.2em 0 .6em;border-bottom:2px solid var(--line);padding-bottom:.3em}
+h2{font-size:21px;margin:1.8em 0 .6em;border-bottom:1px solid var(--line);padding-bottom:.25em}
+h3{font-size:17.5px;margin:1.4em 0 .5em}
+h4{font-size:15.5px}
+blockquote{margin:0 0 1em;padding:8px 16px;border-left:4px solid #8c959f;background:#f6f8fa;color:#3d444d;font-size:14px}
+blockquote p{margin:.3em 0}
+code{font-family:"JetBrains Mono","DejaVu Sans Mono",Menlo,Consolas,monospace;font-size:.88em;background:#eff1f3;padding:.1em .35em;border-radius:4px}
+pre{background:#f6f8fa;border:1px solid var(--line);border-radius:6px;padding:10px 14px;overflow:auto} pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:.6em 0 1.1em}
+table{border-collapse:collapse;font-size:13.8px;line-height:1.55;min-width:60%}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left}
+th{background:#eef2f6;font-weight:700;position:sticky;top:0}
+tr:nth-child(even) td{background:#fafbfc}
+td strong{color:#8a1c1c}
+hr{border:0;border-top:1px solid var(--line);margin:1.6em 0}
+section.layer1{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:2px 22px 10px;margin:18px 0 26px}
+section.layer1>h2{border-bottom-color:var(--l1b)}
+section.layer1 .tw table{background:#fff}
+.layer-tag{display:inline-block;font-size:12px;font-weight:700;color:#7a4b00;background:#ffe2a8;border-radius:10px;padding:0 9px;margin-left:8px;vertical-align:middle}
+details.card{border:1px solid var(--line);border-radius:8px;margin:12px 0;background:#fff}
+details.card>summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:16.5px;background:#f3f6fa;border-radius:8px;list-style:none}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary:before{content:"▸ ";color:var(--acc)} details.card[open]>summary:before{content:"▾ "}
+details.card[open]>summary{border-bottom:1px solid var(--line);border-radius:8px 8px 0 0}
+details.card>.body{padding:4px 18px 10px}
+.cardtools{font-size:13px;margin:6px 0 2px} .cardtools button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:#fff;border-radius:5px;padding:1px 8px;cursor:pointer;margin-right:6px}
+.b{display:inline-block;font-size:11.5px;line-height:1.5;padding:0 6px;border-radius:9px;margin:0 2px;font-weight:600;white-space:nowrap;vertical-align:1px;border:1px solid transparent}
+.b-meas{background:#dafbe1;color:#116329;border-color:#a8e6b5}
+.b-orig{background:#ddf4ff;color:#0a4b8c;border-color:#a6d4f5}
+.b-team{background:#fff1e5;color:#953800;border-color:#ffc89a}
+.b-inf{background:#eef0f2;color:#4a535c;border-color:#cfd5db}
+.b-codex{background:#fbefff;color:#6e2b91;border-color:#e3b8f5}
+.b-oth{background:#f6f8fa;color:#4a535c;border-color:#d1d9e0}
+.idx{max-width:900px;margin:0 auto;padding:30px 30px 80px}
+.idx .hero{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:12px 22px;margin:14px 0 24px;font-size:16.5px}
+.idx .cards a{display:block;border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:10px 0;color:var(--fg)}
+.idx .cards a:hover{border-color:var(--acc);text-decoration:none;background:#f6f9ff}
+.idx .cards .t{font-weight:700;color:var(--acc)} .idx .cards .d{font-size:13.5px;color:var(--muted)}
+.foot{color:var(--muted);font-size:12.5px;margin-top:40px;border-top:1px solid var(--line);padding-top:8px}
+@media (max-width:900px){.wrap{grid-template-columns:1fr} nav.toc{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)} main{padding:16px}}
+@media print{nav.toc,.top,.cardtools{display:none}.wrap{display:block} details.card{break-inside:avoid}}
+</style></head><body>
+<div class="top"><a class="brand" href="index.html">多模态少步蒸馏 · 前沿调研</a><a href="baseline.html">2026Q3 基线</a><a href="index.html#dailies">每日</a></div>
+<div class="wrap"><nav class="toc"><div class="tt">目录</div><div><div class="toc">
+<ul>
+<li><a href="#结论先行">结论先行</a></li>
+<li><a href="#先懂这三件事">先懂这三件事</a></li>
+<li><a href="#第一层分类框架一屏">第一层：分类框架（一屏）</a><ul><li><a href="#逐篇挂格按等价形式归类-按格预判的出问题处">逐篇挂格（按等价形式归类）+ 按格预判的出问题处</a></li></ul></li>
+<li><a href="#五项关键进展与判断第二层细节">五项关键进展与判断（第二层：细节）</a><ul><li><a href="#k1-流式-dmd-的-real-score-不能是双向教师对整段打分轴-c-l2流式-流式-av">K1. 流式 DMD 的 real score 不能是「双向教师对整段打分」【轴 C × L2；流式 / 流式 AV】</a></li><li><a href="#k2-少步几乎免费贵的是因果化和条件来源轴-c-l4流式-av-数字人">K2. 少步几乎免费，贵的是因果化和条件来源【轴 C × L4；流式 AV / 数字人】</a></li><li><a href="#k3-多样性在首-chunk-的首步就定了l1-l2-时间分工流式-视频">K3. 多样性在「首 chunk 的首步」就定了【L1 + L2 时间分工；流式 / 视频】</a></li><li><a href="#k4-dmd-过饱和退化来自-critic-误差一行投影可以过滤l2全模态">K4. DMD 过饱和/退化来自 critic 误差，一行投影可以过滤【L2；全模态】</a></li><li><a href="#k5-越过教师要靠真实数据判别器-logit-本身就是-dmd-梯度l3图像-视频-av">K5. 越过教师要靠真实数据，判别器 logit 本身就是 DMD 梯度【L3；图像 / 视频 / AV】</a></li></ul></li>
+<li><a href="#三条元判断">三条元判断</a></li>
+<li><a href="#各方法线当前最强-baseline新论文要在同协议下赢过这些数字">各方法线当前最强 baseline（新论文要在同协议下赢过这些数字）</a></li>
+<li><a href="#现在就能用的配方按成本排序每条先跑的对照写在前面">现在就能用的配方（按成本排序，每条先跑的对照写在前面）</a></li>
+<li><a href="#逐篇对我们训练的含义改哪个决定-先跑哪个对照">逐篇：对我们训练的含义（改哪个决定 · 先跑哪个对照）</a></li>
+<li><a href="#放不进框架的发现挂到它证实或推翻的那一格的前提上">放不进框架的（发现挂到它证实或推翻的那一格的前提上）</a></li>
+<li><a href="#开放问题短">开放问题（短）</a></li>
+<li><a href="#盲区短">盲区（短）</a></li>
+</ul>
+</div>
+</div></nav>
+<main><h1 id="多模态少步蒸馏-2026q3-基线2026-07-01-2026-10-10">多模态少步蒸馏 · 2026Q3 基线（2026-07-01 → 2026-10-10）</h1>
+<blockquote>
+<p>给 Henry。读法分两层：<strong>上层</strong>是一屏的分类框架，用来导航；<strong>下层</strong>是每个格子的细节，包括操作步骤、因果链、与最接近工作的差别、证据，细到能照着复现关键一步。
+召回范围：arXiv 月度全量列表（cs.CV、cs.LG、stat.ML、cs.SD、eess.AS、cs.MM，共 41,887 条）→ 标题关键词命中 609 → 入围 132（都读了摘要）→ 精读 14 篇，另有 3 篇 primer 补读了方法段。克隆了 2 个仓库读代码（Self-Forcing、Mask-Forcing）。
+<strong>论文数字全部是原文自报，没有复现</strong>（盒子无 GPU）。我自己跑的只有 CPU 玩具、读代码和 ffmpeg 单 clip 测量。
+标签：<span class="b b-meas">实测</span>盒子上跑的或读代码 ·<span class="b b-orig">原文</span>读过原文 ·<span class="b b-team">队友</span>队友转述 ·<span class="b b-inf">推断</span>·<span class="b b-codex">Codex✓</span>Codex 产出且已抽查。arXiv 链接全部在 2026-10-10 逐个打开核过。
+详细卡片见 <code>survey.md</code>；方法谱系见 <code>/home/box/agent-data/fewstep-digest/lineage.md</code>；理论底座见 <code>primer/foundations.md</code>。</p>
+</blockquote>
+<hr />
+<section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
+<p><strong>一句话：本季的进展不在「换散度」，而是把 DMD 的每一个输入摆正——打分上下文要和生成时一致，条件要有真实锚点，多样性要在开头保住，critic 误差要过滤，越过教师要靠真实数据。少步本身几乎没有代价，真正的代价在因果化和目标分布选错。</strong></p>
+<p><strong>对我们训练的含义（按要做的决定排列）：</strong></p>
+<ol>
+<li><strong>流式视频 / 流式 AV：</strong> DMD 阶段第一个消融做<strong>打分上下文</strong>（双向整段 vs 因果前缀 vs 无前缀），不要先去换散度。<ul>
+<li>先跑的对照：双向教师在同一批数据上微调，所有组的 CFG 保持一致。</li>
+</ul>
+</li>
+<li><strong>流式 AV：</strong> 先单独测「只因果化、不减步」的 WER 和 RMS。如果它已经掉了，问题在因果化，减步不是原因。<ul>
+<li>少步部分可以直接复用双向 LoRA（PAC）。</li>
+</ul>
+</li>
+<li><strong>所有模态的 DMD：</strong> 加 PDMD 一行投影，训练曲线拉到 ≥5K 步。<ul>
+<li>先跑的对照：等范数缩步。我的玩具里，在没有过冲的区间，缩步反而更好。</li>
+</ul>
+</li>
+<li><strong>流式 / 视频：</strong> 多样性只在<strong>首 chunk 首步</strong>处理（timestep 扰动，或换成轨迹专家），其余交给 DMD。<ul>
+<li>先跑的对照：同量的额外噪声；同 prompt 采 ≥8 个 seed，看 precision/coverage。</li>
+</ul>
+</li>
+<li><strong>图像 / 视频（AV 待验证）：</strong> 想越过教师就接入真实数据判别头（DMAD）。<ul>
+<li>先跑的对照：去掉真实头的版本，并把预生成教师样本的算力计入成本。</li>
+</ul>
+</li>
+</ol>
+<hr />
+</section><section class="layer1"><h2 id="先懂这三件事">先懂这三件事<span class="layer-tag">第一层 · 框架</span></h2>
+<ol>
+<li><strong>少步蒸馏在做什么。</strong> 去噪网络在高噪声处输出的是后验<strong>均值</strong> E[x₀|x_t]，所以直接一步去噪只会出一张糊图。少步蒸馏要做的，是让网络一步输出<strong>一个样本</strong>，而不是一个平均。所有方法最后都是「让学生输出 x̂ 回归一个停梯度目标 sg[·]」，差别只在这个目标怎么造。<span class="b b-orig">原文，primer §0/§8</span></li>
+<li><strong>三条线，各自一个等价 loss，各自一个典型失效：</strong><ul>
+<li><strong>轨迹匹配</strong>（CM / sCM / MeanFlow / flow map）：<code>‖f_θ(x_t,t) − sg[f_θ⁻(Φ_teacher(x_t→s), s)]‖²</code>。样本是真图或教师加噪得到的（离线，前向散度）。优点是<strong>覆盖所有模式</strong>；失效方式是细节偏软，误差沿自举链累积。</li>
+<li><strong>分布匹配</strong>（DMD / SiD）：<code>½‖x̂ − sg[x̂ − (x0_fake − x0_real)]‖²</code>，在学生<strong>自己的</strong>样本上计算（on-policy，反向 KL）。优点是<strong>锐利</strong>；失效方式是<strong>模式塌缩、过饱和</strong>，而且上限被教师卡住。</li>
+<li><strong>对抗</strong>（ADD / LADD / APT）：生成器沿判别器 logit 的梯度 <code>∇ₓh_φ(x_t)</code> 走。好处是可以直接接入<strong>真实数据</strong>、越过教师；代价是 GAN 不稳。</li>
+</ul>
+</li>
+<li><strong>流式 AR 和 AV 多出来的问题。</strong><ul>
+<li>流式是把「训练分布 = 推理分布」这条原则从<strong>去噪步轴</strong>搬到<strong>帧轴</strong>上：Teacher Forcing 对上下文是离线的，Self-Forcing 是 on-policy 的。</li>
+<li>新麻烦一：因果学生<strong>看不到未来的噪声</strong>，用回归去学时只能学到条件均值。数字例子（🧪 primer Toy6，<span class="b b-meas">实测</span>）：两帧相关系数 ρ=0.95 时，因果学生第 1 帧的方差只有 <strong>0.656</strong>，真值是 1。帧间越相关，丢失的方差越多，这也是流式主干选 DMD 而不选 ODE 回归的原因。</li>
+<li>新麻烦二：教师的 score 是在<strong>双向全片</strong>上下文里算的，和学生生成时的上下文对不上。</li>
+<li>AV 在此之上还多一条模态轴：音频和视频的 token 密度不对称；同步是一个条件分布，不是边际质量；因果化会抹掉「声音依赖未来画面」的那部分信号。</li>
+</ul>
+</li>
+</ol>
+<hr />
+</section><section class="layer1"><h2 id="第一层分类框架一屏">第一层：分类框架（一屏）<span class="layer-tag">第一层 · 框架</span></h2>
+<p><strong>为什么选这三根轴：</strong></p>
+<ul>
+<li>轴 A「目标怎么造」决定散度方向，从而决定是<strong>保覆盖还是求锐利</strong>。</li>
+<li>轴 B「样本从哪来」决定<strong>训练分布能不能等于推理分布</strong>。</li>
+<li>轴 C「打分时看到什么上下文」只在流式/AV 出现，是本季新长出来的轴，<strong>收益最大</strong>。</li>
+<li>模态（图像 / 视频 / AV / 流式）是第四维，体现在后面的「当前最强 baseline」和「逐篇：对我们训练的含义」两张表里。</li>
+<li><strong>轴 C 是被预测失误逼出来的。</strong> 季初我只用轴 A × 轴 B 做预判，28 条预测错了 6 条，而且都是<strong>低估</strong>：CMD 的打分上下文收益、DMAD 的真实数据收益、DUET 的时间分工收益都远超预期。两根轴解释不了这些收益，所以加了第三根轴「打分目标与条件从哪来」。<span class="b b-oth">自己的预测记录，read-log §1</span></li>
+<li><strong>归类按等价形式，不按论文自己的叫法。</strong> Codex 盲分（只给方法段，让它写等价形式和所属线）的结果附在下表，有分歧的已标出。<span class="b b-codex">Codex✓</span></li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>线（轴 A）</th>
+<th>样本来源（轴 B）</th>
+<th>典型失效</th>
+<th>本季的关键修补 → 下层</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L1 轨迹匹配</td>
+<td>离线（真图 / 教师配对）</td>
+<td>偏软；因果化后退成条件均值（Toy6）</td>
+<td>只在<strong>高噪首步</strong>使用，作多样性来源 → <strong>K3</strong></td>
+</tr>
+<tr>
+<td>L2 分布匹配 DMD</td>
+<td>on-policy</td>
+<td>塌缩、过饱和、受教师上限所限</td>
+<td>critic 误差投影 → <strong>K4</strong>；打分上下文 → <strong>K1</strong></td>
+</tr>
+<tr>
+<td>L3 对抗 / 判别式</td>
+<td>on-policy + 真实数据</td>
+<td>训练不稳</td>
+<td>判别器 logit 本身就是 DMD 梯度，再加真实头 → <strong>K5</strong></td>
+</tr>
+<tr>
+<td>L4 混合</td>
+<td>两路一起</td>
+<td>损失级混合会互相稀释</td>
+<td>按<strong>噪声时间</strong>分工（DUET）、按<strong>权重</strong>相加（PAC）→ <strong>K3 / K2</strong></td>
+</tr>
+<tr>
+<td>L5 样本级 MMD</td>
+<td>on-policy + 教师样本集</td>
+<td>无 score 模型，但仍受教师上限所限</td>
+<td>Elastic Forcing（值得读，存疑）</td>
+</tr>
+<tr>
+<td><strong>轴 C（流式/AV）</strong></td>
+<td>生成上下文 vs 打分上下文 vs 条件来源</td>
+<td>双向整段打分错位；自条件无锚定</td>
+<td><strong>K1、K2</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>一张「流式 DMD 一次迭代」的操作图</strong>（以 Self-Forcing 为参照；本季几乎每篇论文都只改其中一步，所以先把这张图记住）：</p>
+<ol>
+<li>采噪声 z_k。首 chunk 的首步用 timestep T。　← <em>Uncertainty DMD 在这里把 T 减去 U(0,100)</em></li>
+<li>学生以 KV cache 里的<strong>自己生成的历史</strong>为条件，做 4 步去噪得到 x̂_k。　← <em>DynaForcing 在这里以 0.3 的概率把起点换成加噪真片段</em></li>
+<li>把 x̂_k 写进 KV cache（不带梯度）。　← <em>Uncertainty DMD 写之前加噪；SGF 改成带梯度的重编码；CSF（10-10 每日）再把梯度送回历史 chunk 的生成计算</em></li>
+<li>随机采 t，把 x̂_k 加噪成 x_t。</li>
+<li><strong>教师</strong>（real score）和 <strong>critic</strong>（fake score，在学生样本上持续训练）各自在 x_t 上预测干净图，得到 x0_real 和 x0_fake。　← <em>CMD / Salt++ / RMD 改的是「这一步看到什么上下文」；DMAD 把这两个网络换成一个判别器</em></li>
+<li>计算 d = x0_fake − x0_real（再归一化）。　← <em>PDMD 在这里投影掉 critic 误差方向</em></li>
+<li>学生 loss = ½‖x̂ − sg[x̂ − d]‖²，梯度就是 d 本身。critic 用学生样本做去噪回归，每 5 次 critic 更新配 1 次学生更新。
+- 代码对应<span class="b b-meas">实测，读代码；Codex✓</span>：Self-Forcing <code>model/dmd.py:113</code> 为 <code>grad = pred_fake_image - pred_real_image</code>；<code>model/base.py:33/36</code> 中 real/fake score 都是 <code>is_causal=False</code>，real 用 Wan2.1-T2V-14B；配置里 <code>dfake_gen_update_ratio=5</code>，去噪步为 [1000, 750, 500, 250]，共 7 个 chunk、每 chunk 3 帧。</li>
+</ol>
+<hr />
+<details class="card" open="open">
+<summary id="逐篇挂格按等价形式归类-按格预判的出问题处">逐篇挂格（按等价形式归类）+ 按格预判的出问题处</summary>
+<div class="body">
+<blockquote>
+<p>「按格预判」= 只根据这一格的典型失效，推出这篇论文最可能在哪里出问题。<strong>本表的 Q3 预判是读完原文之后补写的，不计入命中率。</strong> 从 10-10 的每日起改为读结果前写，每周统计命中率，用来检验这个框架。</p>
+</blockquote>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文</th>
+<th>我归的格</th>
+<th>Codex 盲分（轴 A）</th>
+<th>按格预判会在哪里出问题</th>
+<th>原文里是否已见</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CMD <a href="https://arxiv.org/abs/2608.13391">2608.13391</a></td>
+<td>轴C × L2</td>
+<td>分布匹配 ✓</td>
+<td>因果教师比双向教师弱，画质上限下降</td>
+<td>部分：AQ 60.6 vs SF 62.3</td>
+</tr>
+<tr>
+<td>Salt++ <a href="https://arxiv.org/abs/2609.36995">2609.36995</a></td>
+<td>轴C × L2</td>
+<td><strong>混合</strong>（把教师训练的 Causal Self-Flow 也算进去）⚑</td>
+<td>L2：过饱和；轴 C：教师 CFG 混杂</td>
+<td>是：饱和度 +18%（实测）；CFG 混杂未拆清</td>
+</tr>
+<tr>
+<td>RMD <a href="https://arxiv.org/abs/2609.37925">2609.37925</a></td>
+<td>轴C × L2</td>
+<td>分布匹配 ✓</td>
+<td>只配边际 → 跨 chunk 一致性和动态度掉</td>
+<td>闪烁是；动态度未报</td>
+</tr>
+<tr>
+<td>PAC <a href="https://arxiv.org/abs/2610.10343">2610.10343</a></td>
+<td>轴C × L4（权重级）</td>
+<td><strong>其他</strong>（FM 微调 + 权重组合）⚑</td>
+<td>因果化损失依赖未来的信号 → 声音、声纹掉</td>
+<td>是：声纹 −41%，WER 0.127</td>
+</tr>
+<tr>
+<td>DynaForcing <a href="https://arxiv.org/abs/2608.17707">2608.17707</a></td>
+<td>轴C × L2</td>
+<td>分布匹配 ✓</td>
+<td>奖励进评测 → 刷指标</td>
+<td>是：作者自承；DD 是独立证据</td>
+</tr>
+<tr>
+<td>Uncertainty DMD <a href="https://arxiv.org/abs/2609.11265">2609.11265</a></td>
+<td>L2（rollout 状态）</td>
+<td>分布匹配 ✓</td>
+<td>「多样性」部分只是抖动</td>
+<td>未拆：没有 precision/recall</td>
+</tr>
+<tr>
+<td>DUET <a href="https://arxiv.org/abs/2608.09637">2608.09637</a></td>
+<td>L4（时间级）</td>
+<td>混合 ✓</td>
+<td>两套权重的部署代价</td>
+<td>是：未报显存</td>
+</tr>
+<tr>
+<td>PDMD <a href="https://arxiv.org/abs/2609.35768">2609.35768</a></td>
+<td>L2</td>
+<td>分布匹配 ✓</td>
+<td>收益只是「有效步长更小」</td>
+<td>部分：我的玩具在 lr=0.2 时支持这种解释</td>
+</tr>
+<tr>
+<td>DMAD <a href="https://arxiv.org/abs/2610.02188">2610.02188</a></td>
+<td>L3（DMD 极限）</td>
+<td>对抗，DMD 极限 ✓</td>
+<td>GAN 式多样性下降；真实数据可得性不对等</td>
+<td>多样性未报</td>
+</tr>
+<tr>
+<td>SGF <a href="https://arxiv.org/abs/2607.20368">2607.20368</a></td>
+<td>轴C × L2（梯度路径）</td>
+<td>分布匹配 ✓</td>
+<td>长程一致性上去了，动态度下来</td>
+<td>是：DD 0.909→0.634</td>
+</tr>
+<tr>
+<td>Elastic Forcing <a href="https://arxiv.org/abs/2609.35491">2609.35491</a></td>
+<td>L5</td>
+<td>样本级 MMD ✓</td>
+<td>受教师上限所限；prompt 跟随变差</td>
+<td>上限是；跟随未专门测</td>
+</tr>
+<tr>
+<td>TurboT2VA <a href="https://arxiv.org/abs/2608.24674">2608.24674</a></td>
+<td>L4（损失级）</td>
+<td>混合 ✓</td>
+<td>「超教师」其实是锐化加打分器偏好</td>
+<td>推断，未拆</td>
+</tr>
+<tr>
+<td>DistillAlign <a href="https://arxiv.org/abs/2607.26811">2607.26811</a></td>
+<td>L4（损失级）</td>
+<td>混合 ✓</td>
+<td>VBench 差距 &lt;1 分，处在噪声级</td>
+<td>是</td>
+</tr>
+<tr>
+<td>MB-DMD <a href="https://arxiv.org/abs/2610.10989">2610.10989</a></td>
+<td>L2</td>
+<td>分布匹配 ✓</td>
+<td>「等价」依赖噪声位置</td>
+<td>是（实测玩具）</td>
+</tr>
+</tbody>
+</table></div>
+<p>⚑ 分歧处理：</p>
+<ul>
+<li><strong>Salt++</strong>：分布匹配阶段确实就是 DMD；教师侧的表示对齐不改变学生回归的目标，所以保留 L2。</li>
+<li><strong>PAC</strong>：它的学生自己不做任何蒸馏，少步能力来自外部 LoRA。我把它挂在「L4 权重级混合」，Codex 的「其他」也说得通。以后若再出现同类论文，就给「权重组合」单开一格。</li>
+<li><strong>轴 C 没有做过盲分</strong>：Codex 的提示词只有轴 A。下周把轴 C 加进提示词后补做。</li>
+</ul>
+</div>
+</details>
+</section><section class=""><div class="cardtools">K1–K5 详细卡片：<button data-act="open">全部展开</button><button data-act="close">全部收起</button></div><h2 id="五项关键进展与判断第二层细节">五项关键进展与判断（第二层：细节）</h2>
+<details class="card" open="open">
+<summary id="k1-流式-dmd-的-real-score-不能是双向教师对整段打分轴-c-l2流式-流式-av">K1. 流式 DMD 的 real score 不能是「双向教师对整段打分」【轴 C × L2；流式 / 流式 AV】</summary>
+<div class="body">
+<p><strong>操作</strong>（只改上面的第 5 步）：</p>
+<ul>
+<li><a href="https://arxiv.org/abs/2608.13391">CMD</a>：<ol>
+<li>用 Diffusion Forcing 训一个<strong>因果多步教师</strong>；</li>
+<li>第 k 个 chunk 打分时，教师看的前缀是<strong>学生自己 rollout 出的干净前缀，加噪到 t_prefix=256</strong>；</li>
+<li>其余步骤和 DMD 相同。</li>
+</ol>
+</li>
+<li><a href="https://arxiv.org/abs/2609.36995">Salt++</a>：生成器、real score、fake score <strong>三方共用同一个因果前缀</strong>。先用干净前缀（TF）做 DMD，再换成 on-policy 前缀；教师 CFG 从 U(1, 3.5) 里随机采。</li>
+<li><a href="https://arxiv.org/abs/2609.37925">RMD</a>：方向相反，后续 chunk 打分时<strong>不带任何前缀</strong>，只匹配单 chunk 的边际；之后再用整段 DMD 以低学习率微调 800 步，把跨 chunk 一致性补回来。</li>
+</ul>
+<p><strong>因果链：</strong></p>
+<ul>
+<li>双向教师打分时评估的是 p(x^{1:N})，即教师自己想象中的整段；</li>
+<li>学生需要的却是「<strong>给定自己生成的历史</strong>」下的条件分布 p(x^k | x̂^{&lt;k})；</li>
+<li>两者不一样，所以梯度把学生推向一个它在因果条件下到不了的目标。primer U6 预言了这一点。</li>
+</ul>
+<p><strong>证据：</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文</th>
+<th>底座</th>
+<th>改动</th>
+<th>结果</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CMD</td>
+<td>Cosmos-2B I2V</td>
+<td>双向打分 → 因果打分</td>
+<td>VBench Total <strong>+5.68</strong>；30s 下 65.98→69.37</td>
+<td><span class="b b-orig">原文 Tab.4/5</span></td>
+</tr>
+<tr>
+<td>Salt++</td>
+<td>LTX-2 AV</td>
+<td>三方前缀从双向/双向 → 因果/因果</td>
+<td>VQ 0.837→<strong>3.147</strong></td>
+<td><span class="b b-orig">原文 Tab.3</span></td>
+</tr>
+<tr>
+<td>RMD</td>
+<td>Wan 1.3B</td>
+<td>无前缀边际打分</td>
+<td>60s Total 81.26，SF 70.94</td>
+<td><span class="b b-orig">原文 Tab.1</span></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>官方 Self-Forcing 代码确实是双向 14B 整段打分，作者在 <code>dmd.py:115</code> 留了 TODO「Change the normalizer for causal teacher」<span class="b b-meas">实测</span>。</li>
+</ul>
+<p><strong>与最近工作的差别：</strong></p>
+<ul>
+<li>Causal Forcing（<a href="https://arxiv.org/abs/2602.02214">2602.02214</a>）只把<strong>初始化</strong>的 ODE 配对换成因果教师，DMD 阶段仍用双向打分。K1 改的是 <strong>DMD 阶段的打分</strong>。</li>
+<li>三篇的替代方案互相矛盾（因果前缀 / 同前缀 / 无前缀）。</li>
+</ul>
+<p><strong>判断：「双向整段打分是错的」已有三份独立证据；但「该换成哪种」没有任何同协议对比，而且 CMD（教师域适配）和 Salt++（CFG）各有混杂。</strong></p>
+<p><strong>对你的模型：</strong></p>
+<ul>
+<li>流式视频和流式 AV：DMD 阶段第一个该做的消融就是打分上下文，预期收益大于任何散度改动。</li>
+<li>图像和双向视频：不涉及。</li>
+</ul>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="k2-少步几乎免费贵的是因果化和条件来源轴-c-l4流式-av-数字人">K2. 少步几乎免费，贵的是因果化和条件来源【轴 C × L4；流式 AV / 数字人】</summary>
+<div class="body">
+<p><strong>操作：</strong></p>
+<ul>
+<li><a href="https://arxiv.org/abs/2610.10343">PAC</a>：<ol>
+<li>冻结双向 AV 底座 W；</li>
+<li>训练一个<strong>因果 LoRA Δc</strong>：在块因果 mask 下，用干净上下文做 teacher forcing 的 FM 回归；</li>
+<li>少步部分直接拿社区现成的 4 步 LoRA Δd，不训练；</li>
+<li>推理时用 W + Δc + Δd。</li>
+</ol>
+</li>
+<li><a href="https://arxiv.org/abs/2608.17707">DynaForcing</a>：Self-Forcing rollout 时，以 p=0.3 的概率从<strong>加噪的真实片段</strong>起步；DMD 梯度再乘上 exp(0.1·R_dyn)，R_dyn 由 Sync-C 和表情方差组成。</li>
+</ul>
+<p><strong>因果链（PAC）：</strong></p>
+<ul>
+<li>双向 4 步已经接近 50 步教师；</li>
+<li>只做因果化、仍用 50 步，WER 就从 0.041 升到 0.110；</li>
+<li>所以<strong>语音损失来自「看不到未来」</strong>，不来自步数少。这和 Toy6 的条件均值论证一致。</li>
+<li>两个 LoRA 写入权重的方向近正交：write interference 0.0147，随机对照 0.0117，所以相加时互不覆盖。</li>
+</ul>
+<p><strong>因果链（DynaForcing）：</strong></p>
+<ul>
+<li>同样的 DMD、同样 4K 步，只把条件从「自己生成的历史」换成真实前缀，Sync-C / ExpVar / DD 就从 5.48 / 0.69 / 0.31 升到 6.85 / 1.36 / 0.52；</li>
+<li>所以动态塌缩的<strong>主因是条件没有锚点</strong>，其次才是 reverse KL；</li>
+<li>而且先塌的是受音频驱动的口型和表情，不是外观。</li>
+</ul>
+<p><strong>证据：</strong></p>
+<ul>
+<li>PAC<span class="b b-orig">原文 Tab.1–3</span>：Whole-seg 4 步 vs 教师 WER 0.047 / 0.041，Sync-C 8.403 / 8.412；Decoupled（Δc+Δd）WER 0.127。</li>
+<li>PAC 的链式基线「先蒸馏再因果化」在 30s 时 RMS −37.9%（逐渐失声）。ffmpeg 单 clip<span class="b b-meas">实测</span>：首 5s −30.6 dB，末 5s −38.4 dB。</li>
+<li>DynaForcing<span class="b b-orig">原文 Tab.2</span>：完整方法 DD 0.73，教师 0.72；DD 不在奖励里，可以作为独立证据。</li>
+</ul>
+<p><strong>与最近工作的差别：</strong></p>
+<ul>
+<li><a href="https://arxiv.org/abs/2603.11647">OmniForcing</a> 是<strong>串行</strong>的：双向 DMD → 因果 ODE 回归 → 联合 SF。PAC 是<strong>并行相加</strong>。</li>
+<li>PAC 的链式基线同时改变了目标函数，所以只能说「相加可行且不差」，不能说「相加优于一切顺序」<span class="b b-codex">Codex✓</span>。</li>
+<li>DynaForcing 相对 <a href="https://arxiv.org/abs/2412.07772">CausVid</a>：不是全用真实前缀（那样有 exposure bias），而是按概率混入。</li>
+</ul>
+<p><strong>判断：做流式 AV 时，先测「只因果化、不减步」的损失，因为它才是瓶颈；少步可以直接复用双向 LoRA。</strong></p>
+<p><strong>对你的模型：</strong></p>
+<ul>
+<li>流式 AV / 数字人：PAC 的 Δc+Δd 是成本最低的起点（论文中 16 卡训 2 epoch），但声纹漂移 −41% 是作者自承的短板。</li>
+<li>自 rollout 要混入少量真实起点。</li>
+</ul>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="k3-多样性在首-chunk-的首步就定了l1-l2-时间分工流式-视频">K3. 多样性在「首 chunk 的首步」就定了【L1 + L2 时间分工；流式 / 视频】</summary>
+<div class="body">
+<p><strong>操作：</strong></p>
+<ul>
+<li><a href="https://arxiv.org/abs/2609.11265">Uncertainty DMD</a>：损失不变，只改 rollout 的两个状态：<ol>
+<li>首 chunk 首步的 timestep 条件改为 T − U(0,100)；</li>
+<li>写入 cache 前，以概率 p_cache 把 x̂ 加噪到 τ_cache；</li>
+<li>训练时用课程从 0 升到上限，推理用同一规则。</li>
+</ol>
+</li>
+<li><a href="https://arxiv.org/abs/2608.09637">DUET</a>（2 步）：<ol>
+<li><strong>sCM 专家</strong>把 t∈[1, 0.8] 的噪声 z 映射到 u；</li>
+<li>把 u 重加噪到 τ=0.8；</li>
+<li>交给<strong>另一个独立训练的 DMD 专家</strong>完成最后一步。</li>
+</ol>
+</li>
+</ul>
+<p><strong>因果链：</strong></p>
+<ul>
+<li>高噪声首步决定构图和模式，低噪声步只决定细节；</li>
+<li>AR 里后续 chunk 通过 cache 继承开头；</li>
+<li>所以开头一旦塌缩，后面几乎无法再分叉。</li>
+<li>数字例子<span class="b b-orig">原文 §3.3</span>：固定 8 段历史，每段续写 8 次，后续 chunk 的特征方差中「历史之间」的部分占 <strong>0.94–0.97</strong>；当前步的采样噪声只贡献 3–6%。</li>
+</ul>
+<p><strong>证据：</strong></p>
+<ul>
+<li>Uncertainty DMD<span class="b b-orig">原文 Tab.2</span>，SF 初始化：TE-CLIP 16.4→19.5，VENDI 2.6→3.3，DD 25.1→42.4，美学 65.9→64.6。对照组「DMD + 额外噪声」没有一致增益。</li>
+<li>
+<p>DUET<span class="b b-orig">原文 Tab.1，同管线 NFE=2</span>：</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>多样性</th>
+<th>质量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sCM</td>
+<td>.1865</td>
+<td>81.51</td>
+</tr>
+<tr>
+<td>DMD</td>
+<td>.0727</td>
+<td>84.38</td>
+</tr>
+<tr>
+<td>rCM</td>
+<td>.0783</td>
+<td>84.26</td>
+</tr>
+<tr>
+<td><strong>DUET</strong></td>
+<td><strong>.1512</strong></td>
+<td>83.96</td>
+</tr>
+</tbody>
+</table></div>
+</li>
+</ul>
+<p><strong>与最近工作的差别：</strong></p>
+<ul>
+<li><a href="https://arxiv.org/abs/2510.08431">rCM</a> 是<strong>损失级</strong>混合（sCM+DMD 加在一起），多样性只比 DMD 多一点；DUET 是<strong>时间级</strong>分工，多样性约为 rCM 的 2 倍。</li>
+<li>Uncertainty DMD 相对 Self-Forcing：不改目标，改的是 rollout 的状态变量。</li>
+</ul>
+<p><strong>判断：只在开头做覆盖型处理，其余全交给 DMD，这是本季性价比最高的多样性配方。不过两篇都是单底座、短视频，多样性也只用了特征熵/Vendi，没有 precision/recall。</strong></p>
+<p><strong>对你的模型：</strong></p>
+<ul>
+<li>流式：只在首 chunk 首步做扰动或用轨迹专家。</li>
+<li>图像 / 双向视频：用 DUET 式两段。</li>
+<li>AV（推断）：音频的节奏和音色也在首 chunk 定下，可以同样处理。</li>
+</ul>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="k4-dmd-过饱和退化来自-critic-误差一行投影可以过滤l2全模态">K4. DMD 过饱和/退化来自 critic 误差，一行投影可以过滤【L2；全模态】</summary>
+<div class="body">
+<p><strong>操作</strong>（<a href="https://arxiv.org/abs/2609.35768">PDMD</a>，只改第 6 步）：</p>
+<ol>
+<li>d = x0_fake − x0_real；</li>
+<li>r = x0_critic(x_t) − x̂_student，即「critic 对这个加噪查询给出的干净图」减去「学生真正的样本」；</li>
+<li>d ← d − ⟨d,r⟩/‖r‖² · r。
+- 在 Self-Forcing 里就是 <code>dmd.py:113</code> 之后加一行<span class="b b-meas">实测</span>。</li>
+</ol>
+<p><strong>因果链：</strong></p>
+<ul>
+<li>critic 一直在追学生分布，总有误差；</li>
+<li>DMD 把这个误差原样当成梯度，误差在一次次更新里累积，表现为过饱和；</li>
+<li>r 在固定查询上是 critic 误差的无偏估计（加零均值噪声）；</li>
+<li>高维时 r 与真正的信号方向近似正交，所以投影掉 r 方向几乎不损失有用信号。</li>
+</ul>
+<p><strong>证据：</strong></p>
+<ul>
+<li><span class="b b-orig">原文 Tab.1</span>Wan 1.3B 4 NFE：DMD 在 1,500 步时 VBench 82.70，5,000 步掉到 63.04，7,500 步掉到 56.09；PDMD 在 10,000 步时仍高于 83.5，最终 83.73。</li>
+<li>MiniMax-H3 AV 上音频 6 项全部最佳，DeSync 0.802（DMD 0.905，教师 0.797）。</li>
+<li>
+<p><strong>我的 CPU 玩具<span class="b b-meas">实测</span></strong>：16 维粒子，critic 故意设错，3 个 seed；每格是能量距离，越低越好。</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>lr</th>
+<th>DMD</th>
+<th>PDMD</th>
+<th>等范数缩步</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.2</td>
+<td>1.377</td>
+<td>1.348</td>
+<td><strong>1.257</strong></td>
+</tr>
+<tr>
+<td>0.5</td>
+<td>0.664</td>
+<td><strong>0.522</strong></td>
+<td>0.599</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>lr=0.2 时，单纯缩小步长<strong>比投影还好</strong>；</li>
+<li>lr=0.5 时 DMD 已经过冲（范数是数据的 1.082 倍），这时投影才明显赢。</li>
+</ul>
+</li>
+</ul>
+<p><strong>与最近工作的差别：</strong> <a href="https://arxiv.org/abs/2405.14867">DMD2</a> 靠两时间尺度和 GAN 来稳住 critic；PDMD 不加任何网络或损失。</p>
+<p><strong>判断：机制成立，成本几乎为零；但「方向性收益」只在过冲区间被我的玩具支持，论文的方向消融（Fig.9）我没有定量核实。</strong></p>
+<p><strong>对你的模型：</strong> 四个模态都能直接加。AV 建议按模态各算各的 r<span class="b b-inf">推断</span>。</p>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="k5-越过教师要靠真实数据判别器-logit-本身就是-dmd-梯度l3图像-视频-av">K5. 越过教师要靠真实数据，判别器 logit 本身就是 DMD 梯度【L3；图像 / 视频 / AV】</summary>
+<div class="body">
+<p><strong>操作</strong>（<a href="https://arxiv.org/abs/2610.02188">DMAD</a>，替换第 5–6 步）：</p>
+<ol>
+<li>预先生成一批教师样本，训练时<strong>不在线调用教师</strong>；</li>
+<li>两个判别头：h_T 区分「教师样本 vs 学生」，h_R 区分「真实数据 vs 学生」；</li>
+<li>判别器用 BCE 训练，判别器与生成器 1:1 更新；</li>
+<li>生成器 loss = −λ_T·ω·h_T(x_t) − λ_R·h_R(x_t)，其中 ω 按噪声段，根据真实头对「真实 vs 教师样本」的区分 gap 自适应调整。</li>
+</ol>
+<p><strong>因果链：</strong></p>
+<ul>
+<li>BCE 的最优 logit h<em> = log p_target − log p_θ，所以 ∇h</em> = s_target − s_θ，<strong>恰好就是 DMD 梯度</strong>（Prop.1）；</li>
+<li>因此不需要两个 score 网络相减，任何近似最优的密度比估计器都能给出 DMD 梯度；</li>
+<li>于是把目标换成「真实数据」就几乎零成本，上限也就不再是教师。</li>
+</ul>
+<p><strong>证据：</strong></p>
+<ul>
+<li><span class="b b-orig">原文 Tab.2/4</span>SDXL 4 步，COCO-2014 10K prompts：FID <strong>14.47</strong>，教师（cfg 6）19.36；去掉真实头后 21.37，比教师还差。</li>
+<li>去掉教师头：VBench 语义 −4.19。也就是说，教师头负责对齐文本，真实头负责越过天花板。</li>
+<li>Wan2.1-1.3B 4 步 VBench 84.70（DMD2 84.56，rCM 84.43）。</li>
+<li>MiniMax-H3 AV <strong>只有人评</strong>：总体 79.1% 胜 DMD2，音频质量 87.9% 胜 DMD2。</li>
+</ul>
+<p><strong>与最近工作的差别：</strong></p>
+<ul>
+<li>DMD2 是「real/fake score + 附加的 GAN 头，critic 5:1 更新」；DMAD 去掉了两个 score 网络。</li>
+<li><a href="https://arxiv.org/abs/2311.17042">ADD</a> 用非饱和损失；DMAD 用线性 logit 损失，使最优点正好对应 DMD。</li>
+</ul>
+<p><strong>判断：图像上「真实数据越过教师」证据扎实；AV 只有偏好，没有客观数字。没报多样性，代码尚未发布。</strong></p>
+<p><strong>对你的模型：</strong></p>
+<ul>
+<li>图像 / 视频：可以直接试真实头。</li>
+<li>AV：音频头用真实录音<span class="b b-inf">推断，未见论文</span>。</li>
+<li>流式：chunk 级判别<span class="b b-inf">推断</span>。</li>
+</ul>
+<hr />
+</div>
+</details>
+</section><section class=""><h2 id="三条元判断">三条元判断</h2>
+<ul>
+<li><strong>预测命中 22/28（79%），未命中的全部是「低估」了修正条件或目标的收益</strong>（CMD、DMAD、DUET）。这说明在流式和 AV 里，<strong>选错目标分布造成的损失比少几步造成的损失大一个量级</strong>。这是我对本季最确定的认知。<span class="b b-orig">原文 + 自己的预测记录</span></li>
+<li><strong>AV 少步的证据还停留在「自报 + 人评」阶段。</strong><ul>
+<li>同步指标 LSE-C/Sync-C 与人评的相关只有约 0.34<span class="b b-team">队友</span>；</li>
+<li>只有 PAC 报了 WER；</li>
+<li>我用 ffmpeg 测到 Salt++、OmniForcing 和 LTX-2 教师都接近单声道，这是<strong>底座特性，不是蒸馏伪影</strong><span class="b b-meas">实测，单 clip</span>。</li>
+</ul>
+</li>
+<li><strong>学习型打分器在奖励高饱和和大运动。</strong> Salt++ 的饱和度比教师高约 18%，帧差是教师的约 2.8 倍<span class="b b-meas">实测，单 clip</span>。因此 VBench、VQ 上「学生超过教师」的结论，默认要追问是不是 DMD 锐化加上打分器偏好。</li>
+</ul>
+<hr />
+</section><section class=""><h2 id="各方法线当前最强-baseline新论文要在同协议下赢过这些数字">各方法线当前最强 baseline（新论文要在同协议下赢过这些数字）</h2>
+<p>只填我在原文里核过的数字；跨论文协议不同的不做横比。</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>模态 × 线</th>
+<th>当前最强</th>
+<th>步数</th>
+<th>标准协议与指标</th>
+<th>关键数字<span class="b b-orig">原文</span></th>
+<th>新论文要赢什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>图像 · 分布/对抗</td>
+<td>DMAD</td>
+<td>4</td>
+<td>SDXL，COCO-2014 10K prompts，零样本 FID</td>
+<td>14.47（教师 cfg 6 为 19.36）</td>
+<td>同教师、4 步 FID &lt; 14.47，并报多样性</td>
+</tr>
+<tr>
+<td>图像 · 分布/对抗</td>
+<td>DMAD</td>
+<td>1</td>
+<td>EDM ImageNet-64，FID</td>
+<td>1.04（投影判别器版）/ 1.24</td>
+<td>&lt; 1.04</td>
+</tr>
+<tr>
+<td>图像 · 轨迹 (sCM/MeanFlow)</td>
+<td>本季未精读</td>
+<td>—</td>
+<td>—</td>
+<td>未核实</td>
+<td>未核实</td>
+</tr>
+<tr>
+<td>视频双向 · 分布</td>
+<td>DMAD / PDMD</td>
+<td>4</td>
+<td>Wan2.1-1.3B，VBench Total</td>
+<td>DMAD 84.70（教师 83.02）；PDMD 83.73（教师 83.06）。两篇教师分不同 → 不可横比</td>
+<td>同实现下超过 DMD2；<strong>另报长训练曲线</strong>（PDMD 揭示 DMD 会退化）</td>
+</tr>
+<tr>
+<td>视频双向 · 分布 (14B)</td>
+<td>DMAD</td>
+<td>4</td>
+<td>Wan2.1-14B，VBench Total</td>
+<td>85.15</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>视频双向 · 轨迹 (14B)（10-10 每日新增）</td>
+<td>PTD</td>
+<td>4</td>
+<td>Wan2.1-14B，VBench + V-JEPA2 多样性</td>
+<td>84.57 / 0.1220（复现的 PDD 为 83.67 / 0.1340；PDD 自报 84.92，协议不同）</td>
+<td>同设置下赢过 PTD，并用 LLM judge 之外的客观指标报多样性</td>
+</tr>
+<tr>
+<td>视频双向 · 2 步多样性</td>
+<td>DUET</td>
+<td>2</td>
+<td>Wan2.1-1.3B，同管线多样性均值 + VBench 质量</td>
+<td>.1512 / 83.96（rCM .0783 / 84.26）</td>
+<td>多样性 &gt; .15，且质量不低于 rCM</td>
+</tr>
+<tr>
+<td>AV 双向</td>
+<td>无同协议</td>
+<td>4</td>
+<td>TurboT2VA：LTX-2 19B；PDMD/DMAD：MiniMax-H3</td>
+<td>TurboT2VA 生成器耗时 50.52s→2.51s；PDMD DeSync 0.802、PQ 6.530</td>
+<td>至少报 WER、DeSync、与教师的差值和人评</td>
+</tr>
+<tr>
+<td>流式视频 · 短 (≈5s)</td>
+<td>无同协议</td>
+<td>4</td>
+<td>Wan2.1-1.3B，VBench（各文重跑的 SF 分数不同：84.21 vs 83.80）</td>
+<td>DistillAlign 84.83；Elastic 84.64</td>
+<td>同文内超过重跑的 SF/CF，并报多样性/覆盖</td>
+</tr>
+<tr>
+<td>流式视频 · 长 (≥60s)</td>
+<td>RMD / SGF</td>
+<td>4</td>
+<td>60s/240s VBench 分项</td>
+<td>RMD 60s Total 81.26（SF 70.94，但 SF 没有 sink，基线偏弱）</td>
+<td>必须和 LongLive / Rolling Forcing / CMD 同协议比，并报动态度</td>
+</tr>
+<tr>
+<td>流式 AV</td>
+<td>PAC</td>
+<td>4</td>
+<td>MiniMax-H3 talking head，30s × 40 clip；WER、Sync-C、RMS、声纹</td>
+<td>WER 0.127（教师 0.041）；26 fps 用 6 卡</td>
+<td>降低因果化带来的 WER，同时声纹漂移不能更差</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class=""><h2 id="现在就能用的配方按成本排序每条先跑的对照写在前面">现在就能用的配方（按成本排序，每条先跑的对照写在前面）</h2>
+<ol>
+<li><strong>PDMD 一行投影</strong>（K4）。<ul>
+<li>先跑对照：<strong>等范数缩步</strong>（把 d 缩到 ‖d⊥‖ 的大小，但不改方向）；</li>
+<li>再画训练曲线到 ≥5K 步，因为 DMD 的退化要到这时才出现。</li>
+</ul>
+</li>
+<li><strong>首 chunk 不确定性</strong>（K3）：首步 T − U(0,100)，cache 写入前加噪，训练和推理同规则。<ul>
+<li>先跑对照：「DMD + 同量额外噪声」；</li>
+<li>同 prompt 采 ≥8 个 seed，用 precision/coverage 判断是不是只是在抖动。DistillAlign 的教师归一化 coverage 协议可以直接用。</li>
+</ul>
+</li>
+<li><strong>真实起点混入 p=0.3</strong>（K2，DynaForcing）。<ul>
+<li>先跑对照：纯 SF vs 纯真实前缀的诊断对（论文 Tab.2 的做法）；</li>
+<li>奖励里的量<strong>不能</strong>同时出现在评测里。</li>
+</ul>
+</li>
+<li><strong>换打分上下文</strong>（K1）：因果前缀 / 同前缀 / 无前缀三选一，<strong>三个都跑</strong>。<ul>
+<li>先跑对照：把双向教师也在同一批数据上微调（排除 CMD 的教师域适配混杂）；</li>
+<li>所有组的 CFG 保持一致（排除 Salt++ 的 CFG 混杂）。</li>
+</ul>
+</li>
+<li><strong>因果 LoRA + 现成少步 LoRA 相加</strong>（K2，PAC）。<ul>
+<li>先跑对照：只有 Δc、50 步，用来分离「因果化损失」和「少步损失」；</li>
+<li>用 ffmpeg 测首 5s 和末 5s 的 RMS（逐渐失声），测 WER 与教师的差值。</li>
+</ul>
+</li>
+<li><strong>DUET 式时间分工</strong>（K3）。先跑对照：同管线下的 rCM，并报两套权重的总参数和显存。</li>
+<li><strong>DMAD 真实头</strong>（K5）。先跑对照：去掉真实头的版本；预生成教师样本的成本要算进总训练算力。</li>
+<li><strong>rCM 课程用于大 AV 底座</strong>（TurboT2VA）：2K dCM → 0.5K sCM → 4.5K sCM+DMD，模态分开归一化，论文报 8×H20 约 21 小时<span class="b b-orig">原文</span>。<ul>
+<li>先跑对照：分模态归一化的消融（我没有读到 → 未核实）。</li>
+</ul>
+</li>
+</ol>
+<hr />
+</section><section class=""><h2 id="逐篇对我们训练的含义改哪个决定-先跑哪个对照">逐篇：对我们训练的含义（改哪个决定 · 先跑哪个对照）</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文</th>
+<th>图像</th>
+<th>视频（双向）</th>
+<th>AV</th>
+<th>流式 AR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CMD / Salt++ / RMD</td>
+<td>无</td>
+<td>无</td>
+<td>流式 AV 的 real score 上下文（同右列）</td>
+<td><strong>决定：real score 用什么上下文。</strong> 先跑三选一，并控制教师数据和 CFG</td>
+</tr>
+<tr>
+<td>PAC</td>
+<td>无</td>
+<td>无</td>
+<td><strong>决定：串行蒸馏，还是 Δc+Δd 相加。</strong> 先跑 Decoupled-50（只因果化）</td>
+<td>同左；先测因果化单独造成的损失</td>
+</tr>
+<tr>
+<td>DynaForcing</td>
+<td>无</td>
+<td>无</td>
+<td>数字人：rollout 起点混入 p=0.3 的真实片段</td>
+<td><strong>决定：rollout 起点。</strong> 先跑纯 SF 对纯真实前缀的诊断对</td>
+</tr>
+<tr>
+<td>Uncertainty DMD</td>
+<td>无</td>
+<td>无</td>
+<td>推断：首 chunk 的音频 timestep 也做扰动</td>
+<td><strong>决定：首 chunk 和 cache 写入是否加噪。</strong> 先跑同量额外噪声</td>
+</tr>
+<tr>
+<td>DUET</td>
+<td>2 步时可用</td>
+<td><strong>决定：是否改成高噪 sCM + 低噪 DMD 两专家。</strong> 先跑同管线 rCM</td>
+<td>推断：音频高噪段用轨迹专家</td>
+<td>推断：只在首 chunk 首步用</td>
+</tr>
+<tr>
+<td>PDMD</td>
+<td>可加</td>
+<td><strong>决定：DMD 更新是否投影。</strong> 先跑等范数缩步，并拉长训练曲线</td>
+<td>分模态各算 r（推断）</td>
+<td>加在 dmd.py:113 之后</td>
+</tr>
+<tr>
+<td>DMAD</td>
+<td><strong>决定：是否加真实数据头。</strong> 先跑去掉真实头的版本</td>
+<td>同左</td>
+<td>音频头用真实录音（推断）；目前只有人评</td>
+<td>chunk 级判别（推断）</td>
+</tr>
+<tr>
+<td>SGF</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+<td><strong>决定：KV 写入是否带梯度。</strong> 先跑 60s 以上评测，同时报动态度</td>
+</tr>
+<tr>
+<td>Elastic Forcing</td>
+<td>无</td>
+<td>无</td>
+<td>推断：可用 CLAP/BEATs 特征做 MMD</td>
+<td><strong>决定：后训练是否改为无 score 的 MMD。</strong> 先测 prompt 跟随</td>
+</tr>
+<tr>
+<td>TurboT2VA</td>
+<td>无</td>
+<td>无</td>
+<td><strong>决定：大 AV 双向底座的课程。</strong> 先跑分模态归一化的消融</td>
+<td>无</td>
+</tr>
+<tr>
+<td>DistillAlign</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+<td>初始化数据要和 DMD 教师同源；coverage 协议可直接拿来用</td>
+</tr>
+<tr>
+<td>MB-DMD</td>
+<td>无（增益很小）</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody>
+</table></div>
+</section><section class=""><h2 id="放不进框架的发现挂到它证实或推翻的那一格的前提上">放不进框架的（发现挂到它证实或推翻的那一格的前提上）</h2>
+<ul>
+<li><strong>评测类发现</strong>挂在「所有格的证据前提」上，即「指标反映质量」：<ul>
+<li>同步指标 LSE-C/Sync-C 与人评的相关只有约 0.34<span class="b b-team">队友</span>；</li>
+<li>学习型打分器偏爱高饱和、大运动（Salt++ 的饱和度比教师高 18%，帧差是教师的 2.8 倍，<span class="b b-meas">实测，单 clip</span>）。</li>
+<li>这两条削弱了 L2「超过教师」类结论的前提。</li>
+</ul>
+</li>
+<li><strong>LTX-2 教师本身接近单声道</strong>（侧信号 −59.2 dB）<span class="b b-meas">实测，单 clip</span>：挂在 AV 列的前提「立体声或声场退化是蒸馏造成的」上，<strong>推翻</strong>了这个前提。</li>
+<li><strong>MB-DMD 的等价性</strong>：DMD 与 Drifting 只在不加噪时等价<span class="b b-meas">实测玩具</span>。挂在 L2 的前提「DMD 就是在做核均值漂移」上，部分推翻。</li>
+<li><strong>CRP <a href="https://arxiv.org/abs/2610.11479">2610.11479</a></strong>：不做蒸馏，只是不用双向教师直接训练因果底座。它挂在轴 C 的前提「因果教师从哪来」上，提供了一个新来源（详见每日）。</li>
+<li><strong>没有格子的方法</strong>：PAC 式「权重组合」暂时挂在 L4；如果再出现一篇，就单开一格。</li>
+</ul>
+</section><section class=""><h2 id="开放问题短">开放问题（短）</h2>
+<ol>
+<li>因果打分的三种替代（因果前缀 / 同前缀 / 无前缀）谁最好？还没有同协议比较。</li>
+<li>reverse KL 先伤 AV 的哪一部分？TurboT2VA 显示先伤视频多样性（−40%，音频 −29%），音频损的是质量；DynaForcing 显示先伤受音频驱动的动态。<strong>没有人分开测量同步和音频边际质量。</strong></li>
+<li>真实数据判别头在 AV 上能否在客观指标上越过教师？</li>
+<li>窗口内的边际约束能否锁住分钟级的身份和场景一致性？RMD 和 SGF 都只给了部分答案，而且都没报动态度，或者动态度大降。</li>
+</ol>
+</section><section class=""><h2 id="盲区短">盲区（短）</h2>
+<ul>
+<li>召回只用了标题关键词，系统报告里的蒸馏章节会漏；没用 OpenAlex、OpenReview、会议。</li>
+<li>没有 GPU，任何结论都没有复现；AV 测量只有 3 个单 clip。</li>
+<li>118 篇只读了摘要。FaceGAN <a href="https://arxiv.org/abs/2610.11070">2610.11070</a>、CRP <a href="https://arxiv.org/abs/2610.11479">2610.11479</a>、PTD <a href="https://arxiv.org/abs/2610.11498">2610.11498</a>、Data-Space Iteration <a href="https://arxiv.org/abs/2610.12102">2610.12102</a>、CSF <a href="https://arxiv.org/abs/2610.12156">2610.12156</a> 已在 <a href="daily/2026-10-10.html">10-10 每日</a> 精读；其中 FaceGAN 的谱界给出一个可能的机制，解释流式里的「一致性 vs 动态度」（每日 Q6）。</li>
+<li>精读的 14 篇里只有 Mask Forcing 公开了仓库，而且只有推理代码。</li>
+</ul></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-10 18:41 (UTC+8)</div></main></div>
+<script>
+(function(){
+ // 详情卡片全部展开/收起
+ document.querySelectorAll('[data-act]').forEach(function(b){b.addEventListener('click',function(){
+   var o=b.getAttribute('data-act')==='open';document.querySelectorAll('details.card').forEach(function(d){d.open=o;});});});
+ // 点击目录中位于折叠卡片内的锚点时自动展开
+ function openFor(id){var el=document.getElementById(id);if(!el)return;var d=el.closest('details');if(d)d.open=true;}
+ if(location.hash)openFor(decodeURIComponent(location.hash.slice(1)));
+ window.addEventListener('hashchange',function(){openFor(decodeURIComponent(location.hash.slice(1)));});
+ // 目录高亮
+ var links=[].slice.call(document.querySelectorAll('nav.toc a'));
+ var heads=links.map(function(a){return document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));});
+ function hl(){var y=window.scrollY+80,k=-1;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top+window.scrollY<=y&&h.offsetParent!==null)k=i;});
+   links.forEach(function(a,i){a.classList.toggle('on',i===k);});}
+ window.addEventListener('scroll',hl,{passive:true});hl();
+})();
+</script><script>if(document.querySelector('code.language-mermaid')){var s=document.createElement('script');
+s.src='https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';s.onload=function(){document.querySelectorAll('code.language-mermaid').forEach(function(c){var d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentNode.replaceWith(d);});mermaid.initialize({startOnLoad:false});mermaid.run();};document.head.appendChild(s);}</script></body></html>
