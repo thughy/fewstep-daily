@@ -1,0 +1,442 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>少步蒸馏 · 每日 2026-10-13（轻量版）</title>
+<style>
+:root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--side:#f6f8fa;--line:#d1d9e0;--acc:#0b57d0;--l1:#fff8e6;--l1b:#f0c36d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--fg);background:var(--bg);font:15.5px/1.75 "Noto Sans CJK SC","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.top{position:sticky;top:0;z-index:5;background:#24292f;color:#fff;padding:8px 20px;display:flex;gap:18px;align-items:center;font-size:14px}
+.top a{color:#fff;opacity:.9} .top .brand{font-weight:700;opacity:1}
+.wrap{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1400px;margin:0 auto}
+nav.toc{position:sticky;top:40px;align-self:start;height:calc(100vh - 40px);overflow:auto;background:var(--side);border-right:1px solid var(--line);padding:14px 10px 40px 14px;font-size:13.5px;line-height:1.5}
+nav.toc .tt{font-weight:700;color:var(--muted);margin:2px 0 8px}
+nav.toc ul{list-style:none;margin:0;padding-left:10px} nav.toc>div>ul{padding-left:0}
+nav.toc li{margin:3px 0} nav.toc a{color:#333;display:block;padding:1px 4px;border-radius:4px}
+nav.toc a:hover,nav.toc a.on{background:#dde7f7;text-decoration:none}
+main{padding:22px 40px 80px;min-width:0}
+h1{font-size:26px;margin:.2em 0 .6em;border-bottom:2px solid var(--line);padding-bottom:.3em}
+h2{font-size:21px;margin:1.8em 0 .6em;border-bottom:1px solid var(--line);padding-bottom:.25em}
+h3{font-size:17.5px;margin:1.4em 0 .5em}
+h4{font-size:15.5px}
+blockquote{margin:0 0 1em;padding:8px 16px;border-left:4px solid #8c959f;background:#f6f8fa;color:#3d444d;font-size:14px}
+blockquote p{margin:.3em 0}
+code{font-family:"JetBrains Mono","DejaVu Sans Mono",Menlo,Consolas,monospace;font-size:.88em;background:#eff1f3;padding:.1em .35em;border-radius:4px}
+pre{background:#f6f8fa;border:1px solid var(--line);border-radius:6px;padding:10px 14px;overflow:auto} pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:.6em 0 1.1em}
+table{border-collapse:collapse;font-size:13.8px;line-height:1.55;min-width:60%}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left}
+th{background:#eef2f6;font-weight:700;position:sticky;top:0}
+tr:nth-child(even) td{background:#fafbfc}
+td strong{color:#8a1c1c}
+hr{border:0;border-top:1px solid var(--line);margin:1.6em 0}
+section.layer1{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:2px 22px 10px;margin:18px 0 26px}
+section.layer1>h2{border-bottom-color:var(--l1b)}
+section.layer1 .tw table{background:#fff}
+.layer-tag{display:inline-block;font-size:12px;font-weight:700;color:#7a4b00;background:#ffe2a8;border-radius:10px;padding:0 9px;margin-left:8px;vertical-align:middle}
+details.card{border:1px solid var(--line);border-radius:8px;margin:12px 0;background:#fff}
+details.card>summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:16.5px;background:#f3f6fa;border-radius:8px;list-style:none}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary:before{content:"▸ ";color:var(--acc)} details.card[open]>summary:before{content:"▾ "}
+details.card[open]>summary{border-bottom:1px solid var(--line);border-radius:8px 8px 0 0}
+details.card>.body{padding:4px 18px 10px}
+.cardtools{font-size:13px;margin:6px 0 2px} .cardtools button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:#fff;border-radius:5px;padding:1px 8px;cursor:pointer;margin-right:6px}
+.b{display:inline-block;font-size:11.5px;line-height:1.5;padding:0 6px;border-radius:9px;margin:0 2px;font-weight:600;white-space:nowrap;vertical-align:1px;border:1px solid transparent}
+.b-meas{background:#dafbe1;color:#116329;border-color:#a8e6b5}
+.b-orig{background:#ddf4ff;color:#0a4b8c;border-color:#a6d4f5}
+.b-team{background:#fff1e5;color:#953800;border-color:#ffc89a}
+.b-inf{background:#eef0f2;color:#4a535c;border-color:#cfd5db}
+.b-codex{background:#fbefff;color:#6e2b91;border-color:#e3b8f5}
+.b-oth{background:#f6f8fa;color:#4a535c;border-color:#d1d9e0}
+.idx{max-width:900px;margin:0 auto;padding:30px 30px 80px}
+.idx .hero{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:12px 22px;margin:14px 0 24px;font-size:16.5px}
+.idx .cards a{display:block;border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:10px 0;color:var(--fg)}
+.idx .cards a:hover{border-color:var(--acc);text-decoration:none;background:#f6f9ff}
+.idx .cards .t{font-weight:700;color:var(--acc)} .idx .cards .d{font-size:13.5px;color:var(--muted)}
+.foot{color:var(--muted);font-size:12.5px;margin-top:40px;border-top:1px solid var(--line);padding-top:8px}
+@media (max-width:900px){.wrap{grid-template-columns:1fr} nav.toc{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)} main{padding:16px}}
+@media print{nav.toc,.top,.cardtools{display:none}.wrap{display:block} details.card{break-inside:avoid}}
+</style></head><body>
+<div class="top"><a class="brand" href="../index.html">多模态少步蒸馏 · 前沿调研</a><a href="../baseline.html">2026Q3 基线</a><a href="../index.html#dailies">每日</a></div>
+<div class="wrap"><nav class="toc"><div class="tt">目录</div><div><div class="toc">
+<ul>
+<li><a href="#结论先行">结论先行</a></li>
+<li><a href="#30-秒速览每篇一行评级-一句新知识-相对谁">30 秒速览（每篇一行：评级 · 一句新知识 · 相对谁）</a></li>
+<li><a href="#一屏框架今天的论文挂在哪一格">一屏框架：今天的论文挂在哪一格</a></li>
+<li><a href="#详细条目3-篇">详细条目（3 篇）</a><ul><li><a href="#①-unigvc双向教师打分在什么时候没问题值得读">① UniGVC：双向教师打分在什么时候没问题（值得读）</a></li><li><a href="#②-forcingbooster逐-patch-提前停打不过等时间的均匀-2-步存疑">② ForcingBooster：逐 patch 提前停，打不过等时间的均匀 2 步（存疑）</a></li><li><a href="#③-velocity-corrector在自己走到的状态上重算目标值得读可直接用">③ Velocity Corrector：在自己走到的状态上重算目标（值得读，可直接用）</a></li></ul></li>
+<li><a href="#框架更新权重级组合单开一格">框架更新：「权重级组合」单开一格</a></li>
+<li><a href="#放不进框架的">放不进框架的</a></li>
+<li><a href="#逐篇对我们训练的含义">逐篇：对我们训练的含义</a></li>
+<li><a href="#转发">转发</a></li>
+<li><a href="#没覆盖的来源">没覆盖的来源</a></li>
+</ul>
+</div>
+</div></nav>
+<main><h1 id="少步蒸馏-每日-2026-10-13轻量版">少步蒸馏 · 每日 2026-10-13（轻量版）</h1>
+<blockquote>
+<p>覆盖范围：arXiv <strong>Mon 12 Oct 2026</strong> 这一批公告（覆盖上周四、周五的提交）。截至 09:20（北京时间）周二这一批还没出来<span class="b b-meas">实测</span>。分类 cs.CV、cs.LG、stat.ML、cs.SD、eess.AS、cs.MM、cs.AI、eess.IV，去掉与 10-09 批重复的 30 条后共 786 条（新提交 323、跨列 191、替换 272）。
+怎么筛的：语义正则 + 第二轮宽口径标题筛，得到约 130 条「生成 × 少步/流式/加速」；逐条读摘要后，9 篇与范围相关：</p>
+<ul>
+<li><strong>全文精读 3 篇</strong>（UniGVC、ForcingBooster、Velocity Corrector）；</li>
+<li>读了方法和消融 1 篇（Avatar-Forever v2，观察名单里的）；</li>
+<li>摘要级 5 篇（Seq-Drifting、ReSFlow、OSIS、Sonic-AMG、InstantFusion）。</li>
+</ul>
+<p>其余不在范围内（LLM on-policy 蒸馏、ASR 加速、VSR、KV 压缩、无训练 CFG 调度等）。
+标签：<span class="b b-meas">实测</span>我自己抓取/计算；<span class="b b-orig">原文</span>论文自报；<span class="b b-inf">推断</span>我的推理；<span class="b b-codex">Codex✓</span>Codex 盲分且我已抽查。</p>
+</blockquote>
+<hr />
+<section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
+<p><strong>今天的判断：</strong> 两篇论文合起来，给 Q3 基线的 K1「双向教师整段打分对因果学生是错的」划出了<strong>适用边界</strong>。UniGVC 用双向教师给一步因果学生打分，效果很好（最终和 50 步双向只差 BD-LPIPS 0.001）<span class="b b-orig">原文 Tab.2</span>。原因是它的条件是逐帧对齐的压缩码流：条件几乎把整段钉死了，教师「想象的整段」和学生「给定历史的条件分布」差不多是一回事<span class="b b-inf">推断</span>。所以 K1 的错位大小，取决于<strong>条件给未来留下了多少不确定性</strong>。压缩、超分这类强条件任务里，双向教师可以直接用。文生视频、音频驱动的数字人里条件很弱，K1 仍然成立。
+另一个提醒来自 ForcingBooster：在 4 步因果学生上做逐 patch 提前停止，<strong>和同样省时的「全体都走 2 步」比，4 个底座里只在 1 个上明显占优</strong>（Causal Forcing +0.26 VBench Total），另外 3 个持平或更慢<span class="b b-orig">由原文 Tab.1/2 计算</span>。</p>
+<p><strong>对我们训练的含义：</strong></p>
+<ul>
+<li>流式 AV / 数字人：DMD 阶段该先做的消融仍是打分上下文（K1 不变）。今天新增一条判据：<strong>条件越弱，越要换因果打分</strong>。</li>
+<li>流式推理加速：先算 Amdahl 账。Causal Forcing 1.3B 上，4 步的 11.15 s 里约 5.7 s 和后续 chunk 的去噪步无关，任何减步方法的上限约 1.58×<span class="b b-orig">由原文 Tab.1 计算</span>。在这之前不要投入逐 patch 路由。</li>
+<li>图像少步模型想补「复杂指令跟随」：冻结主干 + 外挂 20M 速度校正器、在<strong>校正后的状态上重算目标</strong>，这个做法可以直接借用，成本很低。但目标图来自 GPT-Image-2 编辑，复现性差。</li>
+</ul>
+</section><section class="layer1"><h2 id="30-秒速览每篇一行评级-一句新知识-相对谁">30 秒速览（每篇一行：评级 · 一句新知识 · 相对谁）<span class="layer-tag">第一层 · 框架</span></h2>
+<ul>
+<li><strong>值得读 · UniGVC <a href="https://arxiv.org/abs/2610.13023">2610.13023</a></strong>（新发现（弱）× 站得住，只在压缩任务）：双向 DiT 同时当 real score、fake score 初始化和判别头，在<strong>同一 codec 条件</strong>下把窗口因果 DiT 蒸成 1 步。DMD+GAN 把 1 步直接推理的 BD-DISTS 差距从 +0.142 缩到 +0.045；最终 1080p 解码 36.85 FPS。相对 CausVid：同样是双向教师加因果学生，但历史走 codec 条件，不走学生自己生成的潜变量，所以<strong>训练时不需要 self-rollout</strong>。</li>
+<li><strong>值得读（存疑）· ForcingBooster <a href="https://arxiv.org/abs/2610.12625">2610.12625</a></strong>（新机制（弱）× 存疑）：冻结 4 步因果学生，加一个路由器逐 patch 决定「这一步后停」；停掉的 patch 用当前 x0 预测作输出，KV 保留给其他 patch。patch-NFE 少了 50%，墙钟 1.30×。相对 DSA（逐帧/chunk 选步数）和 HSA（无训练逐 token 步数）：逐 patch、需训练、停掉就冻结。<strong>没有赢过等时间的均匀 2 步</strong>。</li>
+<li><strong>值得读 · Velocity Corrector <a href="https://arxiv.org/abs/2610.12899">2610.12899</a></strong>（新机制（弱）× 存疑；可直接用）：冻结 8 步 Z-Image-Turbo，用 18.6M 校正器在第 2–4 步加速度残差，目标是「从初始噪声到编辑后目标图的直线桥」，并且<strong>在校正器自己走到的状态上重算</strong>。NetWin +17.60 pp，SFT+LoRA 只有 +3.83。相对 D-OPSD：不更新生成器，也没有教师分支（D-OPSD 在这里是 −12.37）。</li>
+<li><strong>读方法与消融 · Avatar-Forever v2 <a href="https://arxiv.org/abs/2608.12107">2608.12107</a></strong>（新机制（弱）× 存疑；观察名单）：DMD 全参蒸成 4 步，另在<strong>底座</strong>上用 FM 训一个长程 LoRA（先损坏早期历史，自回归滚几个 chunk，再监督恢复），推理时把 LoRA 合进 DMD 学生。这是继 PAC 之后第二篇「<strong>权重级组合</strong>」，按基线里的约定今天单开一格。</li>
+<li>摘要级 / 不评级：Seq-Drifting <a href="https://arxiv.org/abs/2610.12879">2610.12879</a>（用 Drifting 做一步文本生成，离散，挂「放不进框架」）；ReSFlow <a href="https://arxiv.org/abs/2610.13225">2610.13225</a>（统计流形上的 ReFlow，一步离散生成）；OSIS <a href="https://arxiv.org/abs/2610.12679">2610.12679</a>（一步摊销后验采样，以 MCMC 核为局部目标）；Sonic-AMG <a href="https://arxiv.org/abs/2610.13300">2610.13300</a>（空间音频驱动的流式动作生成，「rehearsal training」= 短 self-rollout 监督，不蒸馏）；InstantFusion <a href="https://arxiv.org/abs/2610.13944">2610.13944</a>（跨架构共享潜空间，顺带做了跨架构 on-policy 蒸馏，摘要无数字）。</li>
+</ul>
+<hr />
+</section><section class="layer1"><h2 id="一屏框架今天的论文挂在哪一格">一屏框架：今天的论文挂在哪一格<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文</th>
+<th>我归的格（按等价形式）</th>
+<th>Codex 盲分</th>
+<th>按格 / 按论文的预判（读结果前写，见 notes/predictions.md）</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UniGVC</td>
+<td><strong>轴C × L4 损失级混合</strong>（DMD 分数差 + 潜空间 GAN；双向教师、同一 codec 条件）</td>
+<td>混合 ✓</td>
+<td>按格：K1 说双向打分会错位，但强条件下错位应很小 → 1 步 AR 与 50 步 BI 差距小</td>
+<td><strong>命中</strong>：BD-LPIPS 只差 +0.001</td>
+</tr>
+<tr>
+<td>ForcingBooster</td>
+<td><strong>放不进框架</strong>（不训生成器，学一个停止策略）→ 挂在「流式时间轴 × 推理计算」</td>
+<td>其他 ✓</td>
+<td>按格：早停 patch 用早步 x0（偏软），误差进 KV 后复合</td>
+<td>不可判：只测 81 帧</td>
+</tr>
+<tr>
+<td>Velocity Corrector</td>
+<td><strong>L1 轨迹匹配 × on-policy 状态 × 外部目标</strong>（回归到固定终点的直线速度）</td>
+<td>轨迹匹配 ✓</td>
+<td>按格：L1 偏软 → 画质略降</td>
+<td>不可判：不报画质</td>
+</tr>
+<tr>
+<td>Avatar-Forever v2</td>
+<td><strong>L4 权重级组合</strong>（新格；DMD 学生 + 底座上训的长程 LoRA）</td>
+<td>未盲分（只读了方法与消融）</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Codex 盲分 3/3 与我一致<span class="b b-codex">Codex✓，等价式与方法段逐条对照过</span>。</li>
+<li>论文级预测命中 <strong>6/8</strong>（ForcingBooster 2/3、UniGVC 3/3、Velocity Corrector 1/2；各有 1 条不可判，Velocity 的第 ④ 条半污染不计）。</li>
+<li>按格预判今天 3 条，可判的 1 条命中。周五一起统计。</li>
+</ul>
+<hr />
+</section><section class=""><div class="cardtools">详细条目：<button data-act="open">全部展开</button><button data-act="close">全部收起</button></div><h2 id="详细条目3-篇">详细条目（3 篇）</h2>
+<details class="card" open="open">
+<summary id="①-unigvc双向教师打分在什么时候没问题值得读">① UniGVC：双向教师打分在什么时候没问题（值得读）</summary>
+<div class="body">
+<p><strong>操作：</strong></p>
+<ol>
+<li>Wan VAE 潜变量经一个循环分层熵编码器压成码流；码流解出每帧对齐的 256 通道条件 c_t。</li>
+<li>阶段 1：双向 DiT（BI）和窗口因果 DiT（AR，只看前 w=3 个潜帧）都从 Wan2.1-1.3B 起，各加 LoRA，和 codec 一起用 FM 联合训练。AR 的「历史」是 <strong>c 序列本身</strong>，不是生成出来的潜变量，所以所有帧可以共用一个 t、并行训练（作者称为条件版 Diffusion Forcing）。</li>
+<li>阶段 2（600 步）：合并 LoRA，冻结 codec。real score 和 fake score 都从 <strong>BI-DiT</strong> 初始化，在<strong>同一 c</strong> 下给 1 步 AR 学生的整段输出打分，梯度 = 分数差（DMD）。另在 fake score 的中间特征上接判别头，做真/生成潜变量的非饱和 GAN；每更新 1 次学生，更新 5 次 fake score 和判别头。</li>
+<li>阶段 3：换成带 c 输入的 2D 因果小解码器，用 DINOv3 判别器、LPIPS/DISTS、光流 warping 误差做像素级微调。</li>
+</ol>
+<p><strong>因果链：</strong></p>
+<ul>
+<li>K1 的错位来自：双向教师评估的是 p(x^{1:N} | c)，学生需要的是 p(x^k | x̂^{&lt;k}, c)。</li>
+<li>两者的差距 ≈ 「已知历史」比「已知整段条件」多出来的信息。当 c 已经逐帧描述了内容（码率 0.0005 bpp 也带着几何和颜色），这个差距很小。</li>
+<li>所以这里双向打分几乎不错位。证据：阶段 2 让 1 步 AR 的 BD-DISTS 从 +0.142 降到 +0.045，最终和 BI-50 只差 +0.017<span class="b b-orig">原文 Tab.2</span>。</li>
+<li>数字例子：DiT 每帧延迟 6948.61 ms（BI-50）→ 16.10 ms（AR-1）；这时原版 VAE 解码 69.34 ms 成了瓶颈，换小解码器后 3.62 ms，端到端 10.77 → 36.85 FPS<span class="b b-orig">原文 Tab.2</span>。</li>
+</ul>
+<p><strong>与最接近的关键论文的核心差别：</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>改了什么</th>
+<th>为什么重要</th>
+<th>证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CausVid</td>
+<td>同为双向教师 + 因果学生 DMD；UniGVC 的历史走 codec 条件，不走生成潜变量</td>
+<td>没有 exposure bias，不需要 Self-Forcing 式串行 rollout</td>
+<td>作者对比 TF/SF/DF 三种 AR 范式，只给了定性图（Fig.4）<span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td>CMD / Salt++（K1）</td>
+<td>它们把打分换成因果前缀；UniGVC 保持双向打分</td>
+<td>给 K1 划边界：条件强时不必换</td>
+<td>没有因果教师对照，所以是<strong>推断</strong>，不是同协议证据</td>
+</tr>
+<tr>
+<td>DMD2 / APT</td>
+<td>DMD 和 GAN 头都挂在<strong>同一个</strong>双向网络上</td>
+<td>省一套网络</td>
+<td>判别头没有单独消融（Tab.2 只有「Adv. DMD」整体一行）<span class="b b-orig">原文</span></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>疑点：</strong> 指标差距很小，但人评里 BI 在低码率下「明显」更受偏好，作者自己也说 BD 指标不能反映真实观感<span class="b b-orig">原文 §4.3</span>；AR 的时间稳定性比 BI 差<span class="b b-orig">原文 Fig.7</span>。代码和权重「之后发布」。</p>
+<p><strong>迁移到 AV / 流式：</strong> 只有当条件足够强时才适用。例如音频驱动的口型区域，或者给定动作序列的世界模型重放。普通文生视频、数字人整体运动不适用，那里条件弱，K1 仍成立<span class="b b-inf">推断</span>。</p>
+</div>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="②-forcingbooster逐-patch-提前停打不过等时间的均匀-2-步存疑">② ForcingBooster：逐 patch 提前停，打不过等时间的均匀 2 步（存疑）</summary>
+<div class="body">
+<p><strong>操作：</strong></p>
+<ol>
+<li>底座：冻结的 4 步因果学生（主实验用 Causal Forcing 1.3B，81 帧）。首 chunk 照走 4 步。</li>
+<li>后续每个 chunk，每走完一步，路由器读取生成器最后一层的隐特征，给每个 patch 输出停止概率 p；p 超过阈值就停。</li>
+<li>停掉的 patch 用这一步的 x0 预测作最终输出；它的 KV 留在缓存里供未停的 patch 注意，但不再被计算。</li>
+<li>训练只训路由器（500 步，batch 8）：先用满 4 步跑出参考 x_full，再在记录的轨迹上回放。loss = p·sg[‖x0_k − x_full‖] + λ·[p·k + (1−p)·sg[K_exit]]，其中 K_exit 是<strong>按当前路由策略</strong>把剩下的步跑完时 patch 实际停在第几步（on-policy 估计）。</li>
+</ol>
+<p><strong>因果链（Amdahl 账）：</strong></p>
+<ul>
+<li>原文 Tab.1：4 步 11.15 s，1 步 7.08 s。所以后续 chunk 每多 1 步约 1.36 s，与步数无关的部分（文本编码、首 chunk 的 4 步、VAE 解码、KV 构建）约 5.72 s，占 51%<span class="b b-orig">由原文数字计算</span>。</li>
+<li>所以 patch-NFE 少 50%，理想墙钟约 5.72 + 4×1.36×0.50 ≈ 8.4 s，实测 8.56 s（1.30×）。省下的时间几乎全部被 Amdahl 吃掉，均匀 2 步也是 1.29×。</li>
+<li>在同样的时间下比质量：</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>底座</th>
+<th>ForcingBooster Total / 加速</th>
+<th>均匀 2 步 Total / 加速</th>
+<th>差</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Causal Forcing 1.3B</td>
+<td>81.55 / 1.30×</td>
+<td>81.29 / 1.29×</td>
+<td><strong>+0.26</strong></td>
+</tr>
+<tr>
+<td>Wan2.1 14B</td>
+<td>83.32 / 1.31×</td>
+<td>83.35 / 1.29×</td>
+<td>−0.03</td>
+</tr>
+<tr>
+<td>LingBot-World-V2 14B</td>
+<td>78.54 / 1.25×</td>
+<td>78.43 / 1.36×</td>
+<td>+0.11，但更慢</td>
+</tr>
+<tr>
+<td>LongLive</td>
+<td>78.58 / 1.15×</td>
+<td>78.46 / 1.21×</td>
+<td>+0.12，但更慢</td>
+</tr>
+</tbody>
+</table></div>
+<p><span class="b b-orig">原文 Tab.1/2，差值我算</span></p>
+<ul>
+<li>这正是 MEND 那条教训：核心机制要赢过<strong>同样强的朴素对照</strong>。这里朴素对照就是均匀 2 步，而作者的文字只和 1 步比。</li>
+<li>有一条消融是站得住的：保持每帧停止步数的分布不变、只随机打乱位置，Total 掉到 79.03，<strong>比均匀 2 步还差</strong><span class="b b-orig">原文 Tab.3</span>。也就是说，<strong>同一 chunk 里各 patch 步数不一致本身有害</strong>，除非位置选得准<span class="b b-inf">推断</span>。</li>
+</ul>
+<p><strong>与最接近的关键论文的核心差别：</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>改了什么</th>
+<th>为什么重要</th>
+<th>证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DSA（Le et al. 2026）</td>
+<td>逐帧/chunk 选步数，并且和生成器一起训 → ForcingBooster 逐 patch、只训路由器</td>
+<td>不动生成器，可以挂到任何 4 步学生上</td>
+<td>「chunk 级路由」对照 80.01 vs 81.54<span class="b b-orig">原文 Tab.3</span></td>
+</tr>
+<tr>
+<td>HSA（Chu &amp; Patel 2026）</td>
+<td>无训练，跳过的 token 用缓存速度继续推进 → 这里停了就冻结 x0</td>
+<td>冻结更省，但早步 x0 偏软</td>
+<td>没有同协议对比<span class="b b-orig">原文未做</span></td>
+</tr>
+<tr>
+<td>TeaCache / 缓存类</td>
+<td>复用特征 → 这里直接不算</td>
+<td>两者可以叠加</td>
+<td>未测</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>疑点：</strong> 只有 81 帧（约 5 s），没有 30 s 以上的漂移评测；作者说定性优势比 VBench 明显（手部伪影），但没有给人评。</p>
+<p><strong>迁移到 AV / 流式：</strong> 先算自己底座的 Amdahl 账。如果 VAE 和首 chunk 占一半以上，就先优化那里（参照 UniGVC 的小解码器：69 → 3.6 ms）。</p>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="③-velocity-corrector在自己走到的状态上重算目标值得读可直接用">③ Velocity Corrector：在自己走到的状态上重算目标（值得读，可直接用）</summary>
+<div class="body">
+<p><strong>操作：</strong></p>
+<ol>
+<li>冻结 8 步 Z-Image-Turbo。先用它生成图，再用 GPT-Image-2 编辑成「更符合 prompt」的目标图 x*（约 4K 条 caption），并记下当时的初始噪声 ε。</li>
+<li>固定一条直线桥 b(σ) = (1−σ)·x* + σ·ε。</li>
+<li>训练时用<strong>当前校正器</strong>在线 rollout。在第 2、3、4 步，当前状态 x_k 处的目标残差 r* = (b_{k+1} − x_k)/h_k − sg[v_θ(x_k)]，也就是「一步 Euler 正好落到桥上所需的速度」减去主干给的速度。</li>
+<li>校正器（18.6M，输入 x_k 和<strong>上一步</strong>缓存的主干速度）用 Smooth-L1 回归 r*；步与步之间截断梯度。因为不依赖本步主干输出，它可以和主干并行算，只多 26.9 ms（0.84%）。</li>
+</ol>
+<p><strong>因果链：</strong></p>
+<ul>
+<li>在 base rollout 的状态上算好的目标，到了校正后的状态就不对了（状态已经偏离）。</li>
+<li>所以要在<strong>校正器自己走到的状态</strong>上重算：r* 里包含「参考速度修正」和「把偏离拉回桥上」两项。</li>
+<li>证据<span class="b b-orig">原文 Fig.7a</span>：固定目标 + 校正后的 rollout，只是「不变差」；在校正后的状态上重算目标，才有大幅提升。这和流式里「Self-Forcing 在自己的历史上训」是同一个道理，只是这里落在去噪步之间。</li>
+<li>只在早步校正：第 2–4 步最好，晚步校正会严重变差。原因是后面没有足够的步数消化校正带来的偏差<span class="b b-orig">原文 Fig.8</span>。</li>
+</ul>
+<p><strong>与最接近的关键论文的核心差别：</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>改了什么</th>
+<th>为什么重要</th>
+<th>证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D-OPSD</td>
+<td>在学生 rollout 上匹配一个看过目标图的 EMA 教师，更新 LoRA → 这里无教师、不改主干</td>
+<td>改主干会破坏蒸馏出来的少步行为</td>
+<td>D-OPSD NetWin −12.37，CompBench Color 0.7919 → 0.7597<span class="b b-orig">原文 Tab.1</span></td>
+</tr>
+<tr>
+<td>SFT + LoRA</td>
+<td>在随机 σ 上做标准 FM 回归 → 这里在 on-policy 状态上回归桥速度</td>
+<td>少步模型上普通 FM 微调学不进去</td>
+<td>+3.83 vs +17.60<span class="b b-orig">原文 Tab.1</span></td>
+</tr>
+<tr>
+<td>ReFlow</td>
+<td>同样回归直线速度 → 这里加了「拉回桥」项，只训残差</td>
+<td>允许状态偏离桥，再纠回来</td>
+<td>两项单独都有用，合起来最好<span class="b b-orig">原文 Fig.7b</span></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>疑点：</strong></p>
+<ul>
+<li>缺一个关键对照：<strong>同样的 on-policy 桥目标拿去训 LoRA</strong>。没有它，就分不清增益来自「外挂不改主干」还是来自「on-policy 重算目标」。SFT-LoRA 用的是随机 σ 的 FM，是一个偏弱的对照。</li>
+<li>评测用 claude-opus-4-8 两两比，5 次重评标准差 &lt;1 pp<span class="b b-orig">原文 A.3</span>。评测和训练目标的来源不同（训练用 GPT-Image-2 编辑），这一点是好的。</li>
+<li>在通用基准上增益很小：T2I-CompBench++ Complex 0.3927 → 0.4026，3D 空间略降<span class="b b-orig">原文 Tab.1</span>。</li>
+<li>不报画质和多样性。</li>
+</ul>
+<p><strong>迁移：</strong> 视频少步模型的指令跟随、AV 少步模型的同步修正，都可以照搬「冻结主干 + 早步外挂残差 + on-policy 重算目标」。难点是目标从哪来，视频里没有现成的 GPT-Image-2 级编辑器<span class="b b-inf">推断</span>。</p>
+<hr />
+</div>
+</details>
+</section><section class=""><h2 id="框架更新权重级组合单开一格">框架更新：「权重级组合」单开一格</h2>
+<ul>
+<li>基线里约定：PAC 之后如果再出现「两套权重分别训、推理时合并」的方法，就单开一格。<strong>Avatar-Forever v2 是第二篇</strong>：DMD 全参蒸成 4 步（5K 步），另在<strong>底座</strong>上用 FM 训长程 LoRA（3K 步，RRT：先损坏历史，在 30 步无 CFG 的条件下自回归滚 h 个 chunk，再监督下一个 chunk），推理时把 LoRA 合进 DMD 学生<span class="b b-orig">原文 §3–4</span>。</li>
+<li>证据<span class="b b-orig">原文 Tab.3</span>：相对只做 DMD，FID 39.5 → 35.0，FVD 1080 → 902，Sync-C 6.43 → 6.69。h=0（只是损坏历史、马上监督）定性上明显更差，<strong>收益来自让误差先传播几个 chunk</strong>（Fig.9，只有定性图）。</li>
+<li>缺的对照：同底座上的串行 Self-Forcing 式流水线（这是它自称要替代的东西）；以及「LoRA 是在底座上训的，合进 DMD 学生后为什么仍然有效」的分析。</li>
+<li>格子的预判（今后用来检验）：<strong>权重级组合在两个增量都是低秩、互相正交时有效；在 DMD 学生和底座差得远时，会失效在音色/口型这类细节上</strong>（对应 PAC 的声纹 −41%）<span class="b b-inf">推断</span>。</li>
+</ul>
+</section><section class=""><h2 id="放不进框架的">放不进框架的</h2>
+<ul>
+<li><strong>ForcingBooster 的随机位置消融</strong>挂在「少步学生的每一步对整块是同质的」这个隐含前提上，<strong>部分推翻</strong>：同一 chunk 内步数不一致，如果位置选不准，会比统一少走一步还差（79.03 vs 81.29）。</li>
+<li><strong>Seq-Drifting</strong>（一步文本，离散）挂在 L2 的前提「DMD 是核均值漂移」上（MB-DMD 那一条）。再出现离散一步生成，就开「离散」子格。</li>
+</ul>
+</section><section class=""><h2 id="逐篇对我们训练的含义">逐篇：对我们训练的含义</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文</th>
+<th>图像</th>
+<th>视频</th>
+<th>AV</th>
+<th>流式 AR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UniGVC</td>
+<td>无</td>
+<td>无</td>
+<td>强条件子任务（口型区域）可以保留双向打分；先跑「双向打分 vs 因果前缀打分」，按条件强弱分组比较</td>
+<td>同左；另外 VAE 解码要单独计时</td>
+</tr>
+<tr>
+<td>ForcingBooster</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+<td>先做 Amdahl 拆账；任何减步方法都要和「等时间的均匀少步」比</td>
+</tr>
+<tr>
+<td>Velocity Corrector</td>
+<td>复杂指令跟随：先跑「外挂校正器 vs 同目标 LoRA」</td>
+<td>同一思路可用于少步视频的指令跟随</td>
+<td>可用于同步修正，但先要解决目标从哪来</td>
+<td>无</td>
+</tr>
+<tr>
+<td>Avatar-Forever v2</td>
+<td>无</td>
+<td>无</td>
+<td>数字人长程稳定：先跑「DMD + RRT-LoRA 合并」vs「串行 Self-Forcing」</td>
+<td>同左；h（误差传播的 chunk 数）是最该扫的超参</td>
+</tr>
+</tbody>
+</table></div>
+</section><section class=""><h2 id="转发">转发</h2>
+<ul>
+<li>给 <strong>多模态文献追踪</strong>：UniGVC（流式 AR 一步蒸馏 + 双向教师）、ForcingBooster（流式 AR / 世界模型加速）、Avatar-Forever v2（流式 AV 数字人）、Sonic-AMG（空间音频驱动的流式动作生成）、CORAL-KV <a href="https://arxiv.org/abs/2610.12514">2610.12514</a>（AR 视频 KV 缓存压缩）。</li>
+<li>给 <strong>多模态强化学习进展跟踪</strong>：Velocity Corrector 论文里的对照数字：D-OPSD（on-policy 自蒸馏）用在 8 步蒸馏模型 Z-Image-Turbo 上，NetWin −12.37，CompBench 7/8 项下降；DPO+LoRA 只有 +1.05。这是「在少步模型上做后训练会破坏少步行为」的一个数据点。</li>
+</ul>
+</section><section class=""><h2 id="没覆盖的来源">没覆盖的来源</h2>
+<ul>
+<li>周二（10-13）arXiv 批次 09:20 还没出来，留给明天的日报。</li>
+<li>HF Daily Papers 10-12 有数据，只用来交叉核对，没有发现漏掉的范围内论文；X 没有查；OpenReview 照旧暂缺。</li>
+<li>代码：UniGVC、Velocity Corrector 都还没放代码；ForcingBooster 只有项目页。今天没有跑任何代码，所以「实测」只限于抓取和算术。</li>
+</ul></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-13 09:24 (UTC+8)</div></main></div>
+<script>
+(function(){
+ // 详情卡片全部展开/收起
+ document.querySelectorAll('[data-act]').forEach(function(b){b.addEventListener('click',function(){
+   var o=b.getAttribute('data-act')==='open';document.querySelectorAll('details.card').forEach(function(d){d.open=o;});});});
+ // 点击目录中位于折叠卡片内的锚点时自动展开
+ function openFor(id){var el=document.getElementById(id);if(!el)return;var d=el.closest('details');if(d)d.open=true;}
+ if(location.hash)openFor(decodeURIComponent(location.hash.slice(1)));
+ window.addEventListener('hashchange',function(){openFor(decodeURIComponent(location.hash.slice(1)));});
+ // 目录高亮
+ var links=[].slice.call(document.querySelectorAll('nav.toc a'));
+ var heads=links.map(function(a){return document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));});
+ function hl(){var y=window.scrollY+80,k=-1;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top+window.scrollY<=y&&h.offsetParent!==null)k=i;});
+   links.forEach(function(a,i){a.classList.toggle('on',i===k);});}
+ window.addEventListener('scroll',hl,{passive:true});hl();
+})();
+</script><script>if(document.querySelector('code.language-mermaid')){var s=document.createElement('script');
+s.src='https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';s.onload=function(){document.querySelectorAll('code.language-mermaid').forEach(function(c){var d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentNode.replaceWith(d);});mermaid.initialize({startOnLoad:false});mermaid.run();};document.head.appendChild(s);}</script></body></html>
