@@ -1,0 +1,498 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>少步蒸馏 · 每日 2026-10-15（周四，轻量版）</title>
+<style>
+:root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--side:#f6f8fa;--line:#d1d9e0;--acc:#0b57d0;--l1:#fff8e6;--l1b:#f0c36d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--fg);background:var(--bg);font:15.5px/1.75 "Noto Sans CJK SC","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.top{position:sticky;top:0;z-index:5;background:#24292f;color:#fff;padding:8px 20px;display:flex;gap:18px;align-items:center;font-size:14px}
+.top a{color:#fff;opacity:.9} .top .brand{font-weight:700;opacity:1}
+.wrap{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1400px;margin:0 auto}
+nav.toc{position:sticky;top:40px;align-self:start;height:calc(100vh - 40px);overflow:auto;background:var(--side);border-right:1px solid var(--line);padding:14px 10px 40px 14px;font-size:13.5px;line-height:1.5}
+nav.toc .tt{font-weight:700;color:var(--muted);margin:2px 0 8px}
+nav.toc ul{list-style:none;margin:0;padding-left:10px} nav.toc>div>ul{padding-left:0}
+nav.toc li{margin:3px 0} nav.toc a{color:#333;display:block;padding:1px 4px;border-radius:4px}
+nav.toc a:hover,nav.toc a.on{background:#dde7f7;text-decoration:none}
+main{padding:22px 40px 80px;min-width:0}
+h1{font-size:26px;margin:.2em 0 .6em;border-bottom:2px solid var(--line);padding-bottom:.3em}
+h2{font-size:21px;margin:1.8em 0 .6em;border-bottom:1px solid var(--line);padding-bottom:.25em}
+h3{font-size:17.5px;margin:1.4em 0 .5em}
+h4{font-size:15.5px}
+blockquote{margin:0 0 1em;padding:8px 16px;border-left:4px solid #8c959f;background:#f6f8fa;color:#3d444d;font-size:14px}
+blockquote p{margin:.3em 0}
+code{font-family:"JetBrains Mono","DejaVu Sans Mono",Menlo,Consolas,monospace;font-size:.88em;background:#eff1f3;padding:.1em .35em;border-radius:4px}
+pre{background:#f6f8fa;border:1px solid var(--line);border-radius:6px;padding:10px 14px;overflow:auto} pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:.6em 0 1.1em}
+table{border-collapse:collapse;font-size:13.8px;line-height:1.55;min-width:60%}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left}
+th{background:#eef2f6;font-weight:700;position:sticky;top:0}
+tr:nth-child(even) td{background:#fafbfc}
+td strong{color:#8a1c1c}
+hr{border:0;border-top:1px solid var(--line);margin:1.6em 0}
+section.layer1{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:2px 22px 10px;margin:18px 0 26px}
+section.layer1>h2{border-bottom-color:var(--l1b)}
+section.layer1 .tw table{background:#fff}
+.layer-tag{display:inline-block;font-size:12px;font-weight:700;color:#7a4b00;background:#ffe2a8;border-radius:10px;padding:0 9px;margin-left:8px;vertical-align:middle}
+details.card{border:1px solid var(--line);border-radius:8px;margin:12px 0;background:#fff}
+details.card>summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:16.5px;background:#f3f6fa;border-radius:8px;list-style:none}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary:before{content:"▸ ";color:var(--acc)} details.card[open]>summary:before{content:"▾ "}
+details.card[open]>summary{border-bottom:1px solid var(--line);border-radius:8px 8px 0 0}
+details.card>.body{padding:4px 18px 10px}
+.cardtools{font-size:13px;margin:6px 0 2px} .cardtools button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:#fff;border-radius:5px;padding:1px 8px;cursor:pointer;margin-right:6px}
+.b{display:inline-block;font-size:11.5px;line-height:1.5;padding:0 6px;border-radius:9px;margin:0 2px;font-weight:600;white-space:nowrap;vertical-align:1px;border:1px solid transparent}
+.b-meas{background:#dafbe1;color:#116329;border-color:#a8e6b5}
+.b-orig{background:#ddf4ff;color:#0a4b8c;border-color:#a6d4f5}
+.b-team{background:#fff1e5;color:#953800;border-color:#ffc89a}
+.b-inf{background:#eef0f2;color:#4a535c;border-color:#cfd5db}
+.b-codex{background:#fbefff;color:#6e2b91;border-color:#e3b8f5}
+.b-oth{background:#f6f8fa;color:#4a535c;border-color:#d1d9e0}
+.idx{max-width:900px;margin:0 auto;padding:30px 30px 80px}
+.idx .hero{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:12px 22px;margin:14px 0 24px;font-size:16.5px}
+.idx .cards a{display:block;border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:10px 0;color:var(--fg)}
+.idx .cards a:hover{border-color:var(--acc);text-decoration:none;background:#f6f9ff}
+.idx .cards .t{font-weight:700;color:var(--acc)} .idx .cards .d{font-size:13.5px;color:var(--muted)}
+.foot{color:var(--muted);font-size:12.5px;margin-top:40px;border-top:1px solid var(--line);padding-top:8px}
+@media (max-width:900px){.wrap{grid-template-columns:1fr} nav.toc{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)} main{padding:16px}}
+@media print{nav.toc,.top,.cardtools{display:none}.wrap{display:block} details.card{break-inside:avoid}}
+</style></head><body>
+<div class="top"><a class="brand" href="../index.html">多模态少步蒸馏 · 前沿调研</a><a href="../baseline.html">2026Q3 基线</a><a href="../index.html#dailies">每日</a></div>
+<div class="wrap"><nav class="toc"><div class="tt">目录</div><div><div class="toc">
+<ul>
+<li><a href="#结论先行">结论先行</a></li>
+<li><a href="#30-秒速览每篇一行评级-一句新知识-相对谁">30 秒速览（每篇一行：评级 · 一句新知识 · 相对谁）</a></li>
+<li><a href="#一屏框架今天的论文挂在哪一格">一屏框架：今天的论文挂在哪一格</a></li>
+<li><a href="#详细条目3-篇">详细条目（3 篇）</a><ul><li><a href="#①-smd纯回归的-on-policy-蒸馏其实是学配点解放大-cfg值得读">① SMD：纯回归的 on-policy 蒸馏，其实是「学配点解」+「放大 CFG」（值得读）</a></li><li><a href="#②-agf对历史做一步-fgsm-的流式-dmd值得读可直接用">② AGF：对历史做一步 FGSM 的流式 DMD（值得读，可直接用）</a></li><li><a href="#③-longforcing换一个看整段的长教师值得读弱">③ LongForcing：换一个看整段的长教师（值得读（弱））</a></li></ul></li>
+<li><a href="#摘要级未精读各一句">摘要级（未精读，各一句）</a></li>
+<li><a href="#放不进框架的">放不进框架的</a></li>
+<li><a href="#当前最强基线变化">当前最强基线变化</a></li>
+<li><a href="#观察名单更新">观察名单（更新）</a></li>
+<li><a href="#转发摘要级已发给队友">转发（摘要级，已发给队友）</a></li>
+<li><a href="#附worldride-卡片10-14-预备今天发布">附：WorldRIDE 卡片（10-14 预备，今天发布）</a><ul>
+<li><a href="#worldrideiclr27-匿名投稿openreview-vhofsk33ik奖励引导的-ar-世界模型-4-步蒸馏">WorldRIDE（ICLR'27 匿名投稿，OpenReview VhOfSK33iK）：奖励引导的 AR 世界模型 4 步蒸馏</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div></nav>
+<main><h1 id="少步蒸馏-每日-2026-10-15周四轻量版">少步蒸馏 · 每日 2026-10-15（周四，轻量版）</h1>
+<blockquote>
+<p>覆盖范围：arXiv <strong>Wed 14 Oct 2026</strong> 这一批公告（周二没有单独一批，周一之后的提交都在这一批里）【实测：<code>/list/*/recent</code> 只列 Mon 12 与 Wed 14 两批】。分类 cs.CV、cs.LG、stat.ML、cs.SD、eess.AS、cs.MM、cs.AI、eess.IV，去重后 <strong>2,827 条</strong>（新提交 1,387、跨列 421、替换 1,019）；HF Daily 10-14（97 篇）交叉核对。
+怎么筛的：正则粗筛 432 条 → 逐条读标题/摘要 → 约 25 条与「生成 × 少步/流式/加速」有关 → <strong>全文精读 3 篇</strong>（SMD、AGF、LongForcing）+ 昨天预备好的 WorldRIDE 卡片 1 篇；摘要级 10 余篇。
+标签：<span class="b b-meas">实测</span>我自己抓取/计算/跑玩具；<span class="b b-orig">原文</span>论文自报；<span class="b b-inf">推断</span>我的推理；<span class="b b-codex">Codex✓</span>Codex 盲分且我已抽查；【代码】我读过官方仓库。</p>
+</blockquote>
+<hr />
+<section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
+<p><strong>今天的判断：</strong> 三篇精读都把「换了一个名字」的东西还原成了一个可以直接对照的旋钮，而三篇都<strong>没跑这个旋钮的朴素对照</strong>：</p>
+<ol>
+<li><strong>SMD</strong>（微软，图像/视频/AV/3D 全做，最大 33B）的「排斥弱预测」项，在梯度上<strong>严格等价于把教师 CFG 从 w 调到 w/(1−λ)</strong>（Qwen-Image 主配置相当于 CFG 5 → 6）<span class="b b-meas">实测：玩具梯度差 3.6e−15；Codex✓ 独立推出同一式子</span>。消融只扫了 λ，没有「直接调大教师 CFG」这一行。它真正的新东西是另一半：<strong>训练时用一个零积分的多项式残差，把「学生直线一步」变成「教师 ODE 的多项式配点解」</strong>，在我的 1 维弯曲场玩具里，一步终点误差从 Euler 的 3.07 降到 0.0001<span class="b b-meas">实测</span>。</li>
+<li><strong>AGF</strong> 用「对历史做一步 FGSM」训练流式学生，240 秒 Q5 84.82，同文最好<span class="b b-orig">原文</span>。但同 RMS 的高斯扰动对照在 5 秒就塌到 71.09（比不扰动的 Self-Forcing 82.21 还低 11 分），说明这个对照没调好，<strong>「对抗选择 +9.71」不能全记在机制上</strong><span class="b b-orig">原文 Tab.2(a)，推断</span>。</li>
+<li><strong>LongForcing</strong> 把 Causal Forcing 的 DMD real score 换成「在 UltraVideo-Long 真实长视频上微调过的 321 帧双向教师」。它同时改了三件事：rollout 长度、打分窗口、教师见过的真实长数据，消融把三者<strong>绑在一起</strong>扫。30 秒 VBench-Long Total 82.83 vs LongLive 82.80，只领先 0.03<span class="b b-orig">原文 Tab.3</span>。</li>
+</ol>
+<p><strong>对我们训练的含义：</strong></p>
+<ul>
+<li><strong>任何带「负参考 / 排斥」的蒸馏 loss，先换算成等效 CFG，再和「直接调教师 CFG」比。</strong> 这是零成本的对照，SMD、以及以后同类论文都该先过这一关。</li>
+<li>图像/视频/AV 想要「无 critic、纯回归」的 on-policy 蒸馏：SMD 的 Pivot 可以单独拿来试。它和 PTD（10-10）同格，区别是<strong>多项式头只在训练时用，推理完全不变</strong>。但要注意：代码未公开；AV 上的音频分数是 PAM 与 Audiobox-Aesthetics 自动分，没有 WER、同步和人评。</li>
+<li>流式长时：AGF 给出了一个<strong>便宜</strong>的方向（5 秒 rollout，364 GPU·h，少于 Self-Forcing 的 432）<span class="b b-orig">原文</span>，代码和配置齐全。值得在我们的流式底座上跑一个对照：「AGF vs 同 ε 随机方向 + 同一致性正则」，看增益是来自「对抗方向」还是来自「一致性正则」（无正则时 240 秒 Q5 只有 82.75，与 Self-Forcing 的 82.47 几乎一样）。</li>
+</ul>
+</section><section class="layer1"><h2 id="30-秒速览每篇一行评级-一句新知识-相对谁">30 秒速览（每篇一行：评级 · 一句新知识 · 相对谁）<span class="layer-tag">第一层 · 框架</span></h2>
+<ul>
+<li><strong>值得读 · SMD <a href="https://arxiv.org/abs/2610.18472">2610.18472</a></strong>（新机制（中）× 存疑；不可直接用，没代码）：on-policy 速度回归 + 训练期零积分多项式残差 = 学习教师 ODE 的多项式配点终点；排斥项 = 等效 CFG 放大。4 步 FLUX GenEval 0.715 vs π-Flow 0.675；Wan2.1 与 AnyFlow/PDD 持平；H3 AV 4 步音频 Clarity 3.49 vs LightX2V-DMD 1.83（PAM 自动分）。相对 PTD/PDD/π-Flow：同样「在学生路径上查教师速度」，但<strong>推理时不留任何多项式头或子步</strong>。</li>
+<li><strong>值得读 · AGF <a href="https://arxiv.org/abs/2610.14553">2610.14553</a></strong>（新机制（弱）× 存疑；可直接用，代码+配置齐全）：对历史块做单步 FGSM（方向 = 未来块 DMD 梯度回传到历史，RMS 归一化 ε=0.05），干净/扰动两路都做 DMD。60 秒 Total 81.47（SF 79.56、OPSD-V 80.06）；240 秒 Q5 84.82。相对 Salt / Stable Video Infinity：它们的历史扰动是预设的或复用误差；AGF 是<strong>按「最伤未来 DMD」选</strong>。</li>
+<li><strong>值得读（弱）· LongForcing <a href="https://arxiv.org/abs/2610.18289">2610.18289</a></strong>（新机制（弱）× 存疑；只放了 README）：Causal Forcing DMD 阶段把 real/fake score 都换成 321 帧双向长教师，学生 rollout 也拉到 321 帧。世界模型第一人称 60 秒动作分 64.39 → 88.26（81 → 321 帧监督）。相对 Self-Forcing++ / LongLive：它们用短教师在长 rollout 上滑窗打分；LongForcing 让<strong>一个长教师看整段</strong>，但没有和滑窗做同协议对照。</li>
+<li><strong>重做（增量小）· WorldRIDE</strong>（ICLR'27 匿名，OpenReview VhOfSK33iK）：奖励加权 DMD，M=2 时权重 w=2σ(ΔA/β)；去掉奖励 76.9 vs 完整 77.1，单种子。和 RL 同事判断一致。完整卡片附在文末。</li>
+<li>同格补一条（摘要级）· <strong>FlashVSR+ <a href="https://arxiv.org/abs/2610.17552">2610.17552</a></strong>：Ry-DMD「用奖励加权的教师 rollout 把黑盒奖励放进 DMD」，代码、权重、训练数据都放了。和 WorldRIDE、Reward Forcing 同属「奖励加权 DMD」子格。<strong>一天两篇，这一格的关键对照（同数据、无奖励、多种子）仍没人做</strong>。</li>
+</ul>
+<hr />
+</section><section class="layer1"><h2 id="一屏框架今天的论文挂在哪一格">一屏框架：今天的论文挂在哪一格<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>轴1 训练信号 \ 轴2 问题位置</th>
+<th>单步去噪（图像 / 视频 / 3D）</th>
+<th>流式时间轴</th>
+<th>AV 跨模态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>轨迹匹配 L1</strong></td>
+<td><strong>SMD</strong>（on-policy 状态 × 配点终点）；Channel Match（3D sCM，摘要级）</td>
+<td>SMD §5.3 因果压缩（附带）</td>
+<td><strong>SMD</strong>（H3 33B，同一 loss 作用两模态）</td>
+</tr>
+<tr>
+<td><strong>分数差分布匹配 L2</strong></td>
+<td>—</td>
+<td><strong>AGF</strong>（换「历史从哪来」）；<strong>LongForcing</strong>（轴 C：打分窗口变长）</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>对抗 L3</strong></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>额外真实数据 / reward</strong></td>
+<td>FlashVSR+ Ry-DMD（摘要级）</td>
+<td>WorldRIDE（奖励加权 DMD）；LongForcing 的长教师吃了真实长视频（隐含）</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文</th>
+<th>我归的格（按等价形式）</th>
+<th>Codex 盲分</th>
+<th>按这一格预判它会在哪里出问题（读结果前写）</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SMD</td>
+<td><strong>L1 × on-policy 状态</strong>（回归教师速度；排斥 ≡ CFG 放大）</td>
+<td>轨迹匹配 ✓</td>
+<td>L1 偏软：多样性保住，但画面偏软、对比度低</td>
+<td><strong>命中</strong>：作者自述 14B 视频「饱和度和对比度更低、光照更软」；FLUX 多样性 0.209 &gt; SenseFlow 0.156</td>
+</tr>
+<tr>
+<td>AGF</td>
+<td><strong>L2 × 流式</strong>，改的是「历史样本从哪来」</td>
+<td>分布匹配 ✓（Codex 也指出「对抗」只指选扰动，训练信号仍是 DMD）</td>
+<td>L2 锐利但塌缩：动态度不会升</td>
+<td><strong>命中</strong>：DD 62.54 vs SF 63.19</td>
+</tr>
+<tr>
+<td>LongForcing</td>
+<td><strong>轴 C × L2</strong>（打分上下文从 81 帧变 321 帧）</td>
+<td>分布匹配 ✓</td>
+<td>轴 C / K1：双向整段打分在弱条件（文生视频）下会伤语义</td>
+<td><strong>半命中</strong>：5 秒 Semantic 80.72 &lt; CF 81.84；30 秒反而升到 78.19（但仍低于 LongLive 81.17）</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Codex 盲分 3/3 与我一致<span class="b b-codex">Codex✓，只给方法段，我逐条对过；它独立推出 w_eff = w/(1−λ)</span>。</li>
+<li>论文级预测今日 <strong>11/14</strong>（SMD 3/4、AGF 2/4、LongForcing 3/3、WorldRIDE 3/3），<strong>累计 47/61 = 77%</strong>。按格预判今日 3 条：2 中 1 半中，周五一起统计。</li>
+<li>今天两次没中都是 AGF，方向一致：<strong>低估了它的长时增益</strong>（60 秒 +1.91，预测 &lt;1），<strong>高估了它的训练成本</strong>（实际比 SF 还省）。和 Q3 的规律一样：我对「改样本来源」类方法的先验偏保守。</li>
+</ul>
+<hr />
+</section><section class=""><div class="cardtools">详细条目：<button data-act="open">全部展开</button><button data-act="close">全部收起</button></div><h2 id="详细条目3-篇">详细条目（3 篇）</h2>
+<details class="card" open="open">
+<summary id="①-smd纯回归的-on-policy-蒸馏其实是学配点解放大-cfg值得读">① SMD：纯回归的 on-policy 蒸馏，其实是「学配点解」+「放大 CFG」（值得读）</summary>
+<div class="body">
+<p><strong>关键操作（一个粗步 t → t−Δ）：</strong></p>
+<ol>
+<li>学生在自己 rollout 到的状态 x_t 上只出<strong>一个</strong>速度 v_θ。</li>
+<li>Pivot（3 个 Transformer 块，从学生倒数第 K 层取特征）输出 P 个系数 a_m，组成残差 r(τ)=Σ a_m b_m(τ)，基函数满足 ∫₀¹ b_m = 0（多项式基 b_m = B_m′，B_m = τ(1−τ)(2τ−1)^{m−1}）。</li>
+<li>代理路径 x_τ = x_t − Δ[τ v_θ + Σ a_m B_m(τ)]：起点 x_t，终点恰好是 x_t − Δv_θ（零积分保证终点不动）。</li>
+<li>随机取 τ（每个粗步 2 个查询点），冻结教师在 (x_τ, t−τΔ) 给速度 v_T（带 CFG）和弱预测 ṽ_T（无条件或条件分支）。</li>
+<li>loss = ‖v_θ + r(τ) − v_T‖² − λ‖v_θ + r(τ) − ṽ_T‖²，同时更新学生 LoRA 和 Pivot；状态在粗步之间 stopgrad。</li>
+<li>推理：丢掉 Pivot 和教师，学生照常 4 步 Euler。</li>
+</ol>
+<p><strong>等价形式（推断 + 实测玩具）：</strong></p>
+<ul>
+<li>排斥项：∇[‖v−a‖² − λ‖v−b‖²] = 2(1−λ)(v − (a−λb)/(1−λ))。所以它<strong>严格等于</strong>「回归到 (v_T − λṽ_T)/(1−λ)，学习率乘 (1−λ)」。ṽ 取无条件分支时，目标就是 CFG 尺度 w/(1−λ) 的教师；取条件分支时是 (w−λ)/(1−λ)。数字：Qwen-Image 主配置 target 5.0 / ref 1.0（条件分支）/ λ=0.2 → <strong>等效 CFG 6.0</strong>；Wan 配置 5.0 / 0.0 / 0.1 → <strong>5.56</strong><span class="b b-orig">由原文 Tab.15/18 计算</span>。</li>
+<li>去掉排斥后，训练的不动点是：学生速度 = 教师速度沿「学生自己这条路径」的平均。没有 Pivot 时路径是直线（直线弦上的配点）；有 Pivot 时路径是 P 次多项式，等于在教师 ODE 上做<strong>多项式配点（隐式 Runge-Kutta 那一类）</strong>，学生学的是这个配点解的终点。</li>
+<li>玩具（<code>daily/toys/smd_toy.py</code>，1 维弯曲场 dx/d(−t)=x+3sin5t，一步从 t=1 到 0）：教师 ODE 终点 −0.1895；Euler 一步 2.8768；SMD 无 Pivot 的不动点 0.0499；<strong>SMD + Pivot（P=4）−0.1896</strong><span class="b b-meas">实测</span>。即 Pivot 不只是论文说的「稳定训练」，它是让回归的不动点<strong>对准教师 ODE 终点</strong>的那一步。</li>
+</ul>
+<p><strong>因果逻辑：</strong> 因为只在学生自己的状态上查教师（on-policy），所以没有离线轨迹匹配的暴露偏差 → 不需要 fake score，没有 DMD 的反向 KL 塌缩 → 多样性保住（FLUX OneIG Diversity 0.209 vs DMD 系 SenseFlow 0.156）<span class="b b-orig">原文 Tab.1</span>。又因为是回归教师（L1），上限仍是教师加上放大后的 CFG → GenEval「超过教师」（0.715 vs 50 步 0.664）很可能主要来自等效 CFG 更高，而不是蒸馏本身<span class="b b-inf">推断，未拆</span>。</p>
+<p><strong>与最接近论文的核心差别（只写操作）：</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文</th>
+<th>操作差别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PTD <a href="https://arxiv.org/abs/2610.11498">2610.11498</a>（10-10 读过）</td>
+<td>同样在多项式曲线上查教师速度；PTD 的学生<strong>推理时就输出多项式系数</strong>，SMD 只输出一个速度，多项式头训练后丢掉</td>
+</tr>
+<tr>
+<td>PDD</td>
+<td>学并行输出头、推理时融合；SMD 原输出头不变。PDD 自报 batch 2048，SMD 只用 16</td>
+</tr>
+<tr>
+<td>π-Flow</td>
+<td>学生出一个策略、推理时做子步积分；SMD 推理就是普通 Euler</td>
+</tr>
+<tr>
+<td>DMD2 / LightX2V-DMD</td>
+<td>需要在线 fake score；SMD 全回归，排斥项 ≈ CFG 放大，不是 fake score</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>证据（原文自报）：</strong></p>
+<ul>
+<li>图像 4 步：FLUX GenEval 0.715 / DPG 84.8（π-Flow 0.675 / 84.3，教师 0.664 / 84.2）；Qwen-Image 0.873 / 88.7（PDD† 0.860 / 88.5，Lightning 0.852 / 88.3）。PDD 是抄论文数，其余为公开权重同设置重测。</li>
+<li>视频 4 步 VBench：Wan 1.3B Quality 85.64（PDD 85.99、AnyFlow 85.40），Semantic 78.97 <strong>低于</strong> AnyFlow 81.47；14B Quality 85.72 vs AnyFlow 85.78。即<strong>持平，不是赢</strong>。</li>
+<li>AV（MiniMax H3 33B，100 prompt）：4 步音频 Clarity 3.486 vs LightX2V-DMD 1.829、Quality 3.514 vs 3.133；Prompt 对齐反而更低（3.609 vs 3.797）。Clarity = PAM×5，Quality = Audiobox-Aesthetics PQ/2，视频四项由 GPT-5.6 Sol 打分。<strong>没有 WER、DeSync、人评</strong>。</li>
+<li>消融：全部「每设置一次运行」<span class="b b-orig">原文附录 D</span>。Wan 上 ref=无条件 vs ref=条件（同 λ=0.2）Total 84.18 vs 82.85，两者等效 CFG 只差 6.25 vs 6.0<span class="b b-orig">由原文计算</span>。0.25 的 CFG 差就能差 1.3 分不太可信，更可能是单次评测的噪声，所以 Pivot 的 +1.0（83.09 → 84.14）也可能在噪声里<span class="b b-inf">推断</span>。</li>
+<li>因果视频压缩（§5.3）：Total 83.95 vs 自己训的 DMD* 83.48，但不如发布的 Causal Forcing 84.04；双向教师「校正」项 λ=0 时 Total 反而最高（84.22）。</li>
+</ul>
+<p><strong>扎实度 / 疑点：</strong> ①没有「直接调大教师 CFG」的对照（这是我的预测 ①，命中）；②主配置 Qwen 用的是条件分支作参考，但它自己的消融说无条件分支更好，不一致；③无代码；④AV 只有自动分。</p>
+<p><strong>迁移到 AV / 流式：</strong> 同一个 loss 直接作用在 AV 联合潜变量上，不需要给音频单独设计 critic，这对 AV 是实打实的便利。流式（§5.3）它没赢过 DMD 系的 Causal Forcing，所以流式暂时还用 DMD。</p>
+<p><strong>对我们训练的含义：</strong></p>
+<ul>
+<li>图像：可以试「on-policy 速度回归 + 零积分多项式残差」替代 DMD，先跑的对照：<strong>同等效 CFG 的纯模仿（λ=0、教师 CFG 设成 w/(1−λ)）vs SMD</strong>。</li>
+<li>视频：与现有 4 步方法持平，不改变决定。</li>
+<li>AV：值得作为「不训 critic」的 AV 蒸馏备选；先补 WER、DeSync，并用 ffmpeg 实测响度和频谱，再决定。</li>
+<li>流式 AR：无（§5.3 没赢 DMD）。</li>
+</ul>
+<hr />
+</div>
+</details>
+<details class="card" open="open">
+<summary id="②-agf对历史做一步-fgsm-的流式-dmd值得读可直接用">② AGF：对历史做一步 FGSM 的流式 DMD（值得读，可直接用）</summary>
+<div class="body">
+<p><strong>关键操作：</strong></p>
+<ol>
+<li>4 步因果学生（Wan2.1-1.3B，从 Self-Forcing 的 ODE 初始化开始）无梯度地 rollout 5 秒，所有块用同一个去噪步 t*，记下噪声块和干净块。</li>
+<li>随机选一个历史块 j，加零初始化扰动 δ；带梯度并行重算 j 之后各块的预测。</li>
+<li>在整段上算 DMD 梯度（fake − real，教师 Wan2.1-14B、CFG 3.0【代码 configs/train.yaml】），只把 j 之后的部分回传到 δ，得到 u_j = J_jᵀ g_{&gt;j}。</li>
+<li>在帧维上平均成一个共享方向，按 RMS 归一化到 ε=0.05：δ<em> = sg(ε·ũ/RMS(ũ))。这是</em><em>单步</em>*攻击（代码里 <code>attack_steps</code> 只允许 1）【代码 model/adversarial_history_dmd.py 第 55、376–383 行】。</li>
+<li>干净历史、扰动历史两路各重算一次，各自做 DMD：L = ½·DMD(干净, 全部块) + ½·DMD(扰动, j 之后的块)；fake score 用两路样本各一半训练。</li>
+<li>前 200 次迭代加「首步速度一致性」正则：MSE(v_adv, sg(v_clean))，只作用在第一个去噪步；后 200 次去掉。</li>
+</ol>
+<p><strong>因果逻辑：</strong> 因为 Self-Forcing 只见过「自己正常生成的历史」→ 历史稍有偏差，误差就被后续块放大（作者叫 local history robustness gap）→ 按「最伤未来 DMD」的方向造偏差，并在偏差历史上也拉回教师分布 → 学生学会把偏差「吸收掉」。证据：240 秒内 Q5 首尾变化 +0.03 pp，5 个基线都下降 0.96–2.61 pp<span class="b b-orig">原文 §4.3</span>。</p>
+<p><strong>与最接近论文的核心差别（只写操作）：</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文</th>
+<th>操作差别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Self-Forcing</td>
+<td>只在干净自生成历史上做 DMD；AGF 多一条「扰动历史」分支</td>
+</tr>
+<tr>
+<td>Salt / Stable Video Infinity / BAgger</td>
+<td>历史扰动是预设的（cache 扰动、复用误差、漂移 rollout）；AGF 用未来 DMD 梯度<strong>选</strong>扰动方向</td>
+</tr>
+<tr>
+<td>SGF</td>
+<td>改的是梯度怎么从未来传回历史生成；AGF 不改梯度路径，只改历史输入</td>
+</tr>
+<tr>
+<td>OPSD-V</td>
+<td>用真实长视频作上下文、45 秒 rollout；AGF 只用文本和 5 秒 rollout</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>证据（原文自报，同推理设置：3 sink + 9 rolling 潜帧）：</strong></p>
+<ul>
+<li>5 秒 Total 82.03（SF 82.21，持平）；60 秒 Total <strong>81.47</strong>（SF 79.56、CF 79.83、LongLive 79.81、SGF 79.67（他们复现的）、OPSD-V 80.06）；240 秒 Q5 <strong>84.82</strong>（SGF 84.07、LongLive 83.62）。人评 12 人 × 20 组，平均名次 2.23（LongLive 2.85）。</li>
+<li>换底座：在 Causal Forcing 的 ODE 初始化上也复现，240 秒 Q5 81.79 → 84.60；但 5 秒从 82.94 掉到 81.74。</li>
+<li>训练成本 364.4 GPU·h（8×H20），SF 431.6，LongLive 2774.4。</li>
+<li>消融（240 秒 Q5）：完整 84.82；<strong>高斯扰动 75.11，且 5 秒只有 71.09</strong>；无正则 82.75；正则作用在 1–4 步时 78.19。</li>
+</ul>
+<p><strong>扎实度 / 疑点：</strong></p>
+<ul>
+<li>高斯对照在 5 秒就比不扰动还差 11 分，说明同样的 ε 对高斯方向太大或没调。所以「对抗选择 +9.71 pp」<strong>混进了「高斯对照坏掉」</strong>。真正该比的「不扰动 + 同训练步数」这一行没有，只能拿发布的 SF 82.47 近似<span class="b b-inf">推断</span>。</li>
+<li>无正则时 82.75 ≈ SF 82.47：说明<strong>单靠对抗扰动几乎没有长时增益，增益大部分要配合首步一致性正则才出现</strong>。正则本身也许是主要机制，需要「随机方向 + 同正则」的对照来拆开（我的推断，未验证）。</li>
+<li>每个配置一次运行，没有方差。</li>
+</ul>
+<p><strong>迁移到 AV：</strong> 历史扰动方向如果也覆盖音频 token，可以直接检验「历史里的声音偏差会不会被放大」。这正对应开放问题「因果化造成的声音能量损失」。没有实验，属于推断。</p>
+<p><strong>对我们训练的含义：</strong></p>
+<ul>
+<li>流式 AR：<strong>改变一个决定的候选</strong>。长时漂移先试 AGF（代码齐全、5 秒 rollout，便宜），先跑的对照：「AGF」vs「同 ε 随机方向 + 同首步正则」vs「只加首步正则」，各 ≥2 个种子。</li>
+<li>图像 / 视频 / AV：无（AV 只是可以顺带测）。</li>
+</ul>
+<hr />
+</div>
+</details>
+<details class="card" open="open">
+<summary id="③-longforcing换一个看整段的长教师值得读弱">③ LongForcing：换一个看整段的长教师（值得读（弱））</summary>
+<div class="body">
+<p><strong>关键操作：</strong></p>
+<ol>
+<li>前两阶段照搬 Causal Forcing：短窗（81 帧）teacher forcing 训因果模型 → 用它做因果 ODE 蒸馏初始化学生。</li>
+<li>另把 Wan2.1-1.3B 双向模型在 <strong>UltraVideo-Long</strong> 上微调 3 个 epoch，得到 321 帧双向教师（长教师）<span class="b b-orig">原文附录 A</span>。</li>
+<li>DMD 阶段：学生自回归 rollout 321 帧（约 20 秒）；整段加噪；real score = 长教师、fake score 从长教师初始化，<strong>都双向看整段</strong>；标准 DMD 梯度更新学生。</li>
+<li>世界模型版本：给定整段动作计划，同样做。</li>
+</ol>
+<p><strong>因果逻辑：</strong> 短窗打分只管前 81 帧，第 81 帧之后才出现的漂移拿不到任何梯度（论文式 2：延长窗口恰好暴露 H₁&lt;τ≤H₂ 这部分失败）→ 让教师看 321 帧，晚出现的漂移也能被拉回。数字：文生视频 59 秒处平均漂移分 67.46 → 31.91（81 → 321 帧监督）；世界模型 60 秒动作分 64.39 → 88.26<span class="b b-orig">原文 Fig.3、Tab.5</span>。</p>
+<p><strong>与最接近论文的核心差别（只写操作）：</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文</th>
+<th>操作差别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Causal Forcing</td>
+<td>同样三阶段；只把 DMD 的 real/fake score 换成 321 帧长教师，学生 rollout 同步拉长</td>
+</tr>
+<tr>
+<td>Self-Forcing++ / LongLive</td>
+<td>长 rollout，但用<strong>短教师</strong>滑窗或截窗打分；LongForcing 是一个长教师看整段</td>
+</tr>
+<tr>
+<td>OPSD-V</td>
+<td>用真实长视频作<strong>学生上下文</strong>；LongForcing 把真实长视频放进<strong>教师微调</strong>（隐含的「额外真实数据」）</td>
+</tr>
+<tr>
+<td>CMD（Q3）</td>
+<td>把打分上下文换成<strong>因果前缀</strong>；LongForcing 换成<strong>更长的双向窗口</strong>，方向正好相反</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>证据（原文自报）：</strong></p>
+<ul>
+<li>5 秒 VBench Total 84.56（CF 84.04、SF 83.74）；30 秒 VBench-Long Total 82.83 / Quality 83.99（<strong>LongLive 82.80 / 83.21</strong>，CF 81.05）。</li>
+<li>监督窗口消融（文生视频，30 秒 Total）：81 帧 81.87 / 161 帧 <strong>78.02</strong> / 241 帧 79.18 / 321 帧 82.83，<strong>不单调</strong>；世界模型动作分 64.39 / <strong>56.16</strong> / 83.39 / 88.26，同样在 161 帧掉下去。</li>
+<li>世界模型（WorldRoamBench 60 秒第三人称，按控制率加权）：LongForcing-5B 动作 76.81 / 视觉 57.89，高于 LingBot-World v2 14B 的 36.09 / 28.42。但加权方式把「控制率」乘进了所有分数，差距主要来自控制率 87.88% vs 40.40%。</li>
+</ul>
+<p><strong>扎实度 / 疑点：</strong></p>
+<ul>
+<li>每个窗口长度用的是<strong>各自单独训的教师 checkpoint</strong><span class="b b-orig">原文附录 A</span>，所以「窗口长度」「教师质量」「真实长数据」三者绑在一起变；161 帧那一档掉下去很可能是那个教师训得差，而不是窗口规律（推断）。</li>
+<li>没有「321 帧 rollout + 原 81 帧教师滑窗打分」的对照（预测 ③ 命中），也没有报长教师的微调成本（预测 ② 命中）。</li>
+<li>仓库目前只有 README<span class="b b-meas">实测：GitHub 列目录</span>。</li>
+<li>和 Q3 的 K1 对照：K1 说双向整段打分对弱条件因果学生会错位。LongForcing 用<strong>更长</strong>的双向整段打分，5 秒 Semantic 掉了 1.1（80.72 vs 81.84），和 K1 一致；30 秒 Semantic 上升，可能是长教师的真实长数据在起作用（推断，未拆）。</li>
+</ul>
+<p><strong>旁证（放不进框架那一节也提到）：</strong> 论文 Fig.2 发现长 rollout 的漂移在 VAE 潜变量里表现为<strong>按通道的均值偏移、方向稳定</strong>；同一天 Channel Match（3D）也报告少步采样造成的<strong>逐通道潜变量分布漂移</strong>。两篇是不同模态，但现象一样（推断，可做诊断指标）。</p>
+<p><strong>对我们训练的含义：</strong></p>
+<ul>
+<li>流式 AR / 世界模型：不改变决定，先补对照。要跑的是 2×2：{短教师滑窗, 长教师整段} × {原数据, 加真实长视频}，固定 321 帧 rollout，看增益在哪一格。</li>
+<li>流式 AV：长教师意味着要有长的 AV 双向教师，成本未知，暂不跟。</li>
+<li>图像 / 视频（双向）：无。</li>
+</ul>
+<hr />
+</div>
+</details>
+</section><section class=""><h2 id="摘要级未精读各一句">摘要级（未精读，各一句）</h2>
+<ul>
+<li><strong>FlashVSR+ <a href="https://arxiv.org/abs/2610.17552">2610.17552</a></strong>（额外 reward × 单步）：Ry-DMD 把黑盒奖励通过「奖励加权的教师 rollout」放进 DMD，不回传奖励梯度；声称可推广到 T2I。代码、权重、训练数据都放了 → 观察名单，明天看 Ry-DMD 是加权 real 侧还是 fake 侧。</li>
+<li><strong>Channel Match <a href="https://arxiv.org/abs/2610.15321">2610.15321</a></strong>（L1 × 3D）：TRELLIS.2 上连续时间自一致性（sCM 类）+ 解析速度回归，2 步；发现「几何对了，但潜变量分布漂移让下游 PBR 纹理阶段出错」，用免训练的逐通道校准修复。这是<strong>级联模型里少步阶段伤害下一阶段</strong>的发现，挂到「放不进框架」。</li>
+<li><strong>Prime-EVC <a href="https://arxiv.org/abs/2610.16036">2610.16036</a></strong>（音频单模态，一步语音情感转换）：把转换工作挪到条件端，让 CFM 解码器剩下的残差一步就能走完。和 10-13 UniGVC 的结论同向：<strong>条件越强，越少步就够</strong>。</li>
+<li><strong>Prospective Forcing <a href="https://arxiv.org/abs/2610.14654">2610.14654</a></strong>（流式）：多头预测未来 chunk + 学习的验证器，接受则跳过整窗前向，属于推测解码式加速，不是蒸馏。转文献追踪。</li>
+<li><strong>TGuide <a href="https://arxiv.org/abs/2610.14657">2610.14657</a> / Frequency-Step Cache <a href="https://arxiv.org/abs/2610.15922">2610.15922</a></strong>（流式推理缓存）：在 4 步 AR 视频上再做特征复用，属于推理加速旁支。</li>
+<li><strong>TraceSampler <a href="https://arxiv.org/abs/2610.14332">2610.14332</a></strong>：冻结模型，学一个低步采样终点误差的预测与校正，属于学习型求解器，挂「放不进框架」。</li>
+<li><strong>Unbalanced W-Flow <a href="https://arxiv.org/abs/2610.18552">2610.18552</a></strong>：Wasserstein drifting 的非平衡版本，只到 ImageNet-100，观察。</li>
+<li><strong>1Step-WAM <a href="https://arxiv.org/abs/2610.15625">2610.15625</a></strong>：世界-动作模型里动作去噪轨迹近似直线 → 首步速度 + 校准器一步出动作；机器人动作，范围外。</li>
+<li><strong>MFlowHOI <a href="https://arxiv.org/abs/2610.16252">2610.16252</a></strong>：MeanFlow 一步生成人-物交互动作，重做。</li>
+<li>替换版留意：VDOT++ <a href="https://arxiv.org/abs/2610.03221">2610.03221</a>（非平衡 OT 少步视频蒸馏）、Safe Few-Step Generation via Velocity Editing <a href="https://arxiv.org/abs/2606.23267">2606.23267</a>、Ultra Flash <a href="https://arxiv.org/abs/2606.09150">2606.09150</a>。</li>
+</ul>
+</section><section class=""><h2 id="放不进框架的">放不进框架的</h2>
+<ul>
+<li><strong>「少步阶段的潜变量逐通道漂移」</strong>：Channel Match（3D 级联）和 LongForcing Fig.2（长 rollout）各自观察到。挂在 L1/L2 共同的前提「学生只要在自己这一阶段匹配教师就够了」上：在级联或长 rollout 里，这个前提不成立，下游阶段 / 后续 chunk 会受「看起来合格」的分布偏移伤害（推断）。</li>
+<li><strong>TraceSampler</strong>：不训学生，只学求解器校正。挂在「步数压缩必须改生成器」这个隐含前提上，提供反例。</li>
+</ul>
+</section><section class=""><h2 id="当前最强基线变化">当前最强基线变化</h2>
+<ul>
+<li>流式视频 · 长（≥60 秒）：同协议（3 sink + 9 rolling）下 <strong>AGF 60 秒 Total 81.47、240 秒 Q5 84.82</strong> 超过同文的 SGF、LongLive、OPSD-V，并报了动态度；替换 Q3 的「RMD / SGF」行（RMD 的 SF 基线没有 sink、偏弱）。注意：单次运行，Rolling Forcing / CMD 不在对比里。</li>
+<li>图像 · 轨迹（Q3 空格）：<strong>SMD</strong> FLUX 4 步 GenEval 0.715 / Qwen-Image 0.873，暂填，但协议是 GenEval/DPG，不是 FID，且部分增益可能来自等效 CFG。</li>
+</ul>
+</section><section class=""><h2 id="观察名单更新">观察名单（更新）</h2>
+<ul>
+<li>等 SMD 代码；等 LongForcing 训练代码与长教师权重；FlashVSR+ 的 Ry-DMD 细节；AGF 仓库可以在 CPU 上读完 <code>adversarial_history_dmd.py</code> 的 fake score 混合部分（今天只核了攻击步）。</li>
+<li>没覆盖的来源：X 未查（防限流）；OpenReview 照旧暂缺；GitHub 未匿名 API 限流，已改用只读的 <code>gh</code>。</li>
+</ul>
+</section><section class=""><h2 id="转发摘要级已发给队友">转发（摘要级，已发给队友）</h2>
+<ul>
+<li>给 <strong>多模态文献追踪</strong>：AGF <a href="https://arxiv.org/abs/2610.14553">2610.14553</a>、LongForcing <a href="https://arxiv.org/abs/2610.18289">2610.18289</a>（流式长时 / 世界模型）、SMD <a href="https://arxiv.org/abs/2610.18472">2610.18472</a>（H3 33B AV 联合少步）、World-T3 <a href="https://arxiv.org/abs/2610.17434">2610.17434</a>（TTT 记忆的实时世界模型）、Prospective Forcing <a href="https://arxiv.org/abs/2610.14654">2610.14654</a>、SyncReward <a href="https://arxiv.org/abs/2610.16338">2610.16338</a>（AV 同步人评数据与奖励模型）。</li>
+<li>给 <strong>多模态强化学习进展跟踪</strong>：FlashVSR+ Ry-DMD <a href="https://arxiv.org/abs/2610.17552">2610.17552</a>（奖励加权 DMD）、SMD §5.2（奖励专精 LoRA 教师按 prompt 路由蒸进一个 4 步学生）、Self-Verifier Capture <a href="https://arxiv.org/abs/2610.16500">2610.16500</a>（统一生成器自奖励被刷）、SyncReward <a href="https://arxiv.org/abs/2610.16338">2610.16338</a>（AV 同步奖励，含 RL 后训练）。</li>
+</ul>
+<hr />
+</section><section class=""><h2 id="附worldride-卡片10-14-预备今天发布">附：WorldRIDE 卡片（10-14 预备，今天发布）</h2>
+<h3 id="worldrideiclr27-匿名投稿openreview-vhofsk33ik奖励引导的-ar-世界模型-4-步蒸馏">WorldRIDE（ICLR'27 匿名投稿，OpenReview VhOfSK33iK）：奖励引导的 AR 世界模型 4 步蒸馏</h3>
+<p><strong>结论</strong>：独立核对后同意 RL 同事的「重做」判定，还要再严一点。去掉奖励后它就是普通 Self-Forcing DMD（"w/o Action+Geometry"），WBench Overall 76.9；完整方法 77.1，<strong>奖励只带来 +0.2</strong>，而且只有 seed 42 一个种子。论文里显眼的 75.7→77.1，主要差在「自己重训的 DMD」和「SANA-WM 发布的 Streaming」之间，不是奖励的贡献。唯一像真信号的是 Perspective Consistency 62.6→67.0（单种子）。</p>
+<p><strong>格子</strong>：L2 分布匹配 × 在线（on-policy）× 轴 C 不变（打分上下文和 Self-Forcing 一样），子格「奖励加权 DMD」，与 Reward Forcing 同格。评级：<strong>重做（增量小）</strong>。</p>
+<h4 id="改的是-7-步循环里哪一步">改的是 7 步循环里哪一步</h4>
+<ul>
+<li>第 2 步（采样）：多锚点。一条无梯度的 AR spine 走 N 个 clip，选 K=3 个锚点，每个锚点从同一前缀换噪声多采 1 个候选（M=2）。只有目标 clip 的 exit step 带梯度重算。</li>
+<li>第 7 步（loss）：每个候选的 DMD 方向 d 乘一个分离梯度的权重 w。fake score 仍用不加权的样本训练，critic:student 是 5:1（原文自报，和基线一致）。</li>
+<li>第 5、6 步不变：real/fake 打分和上下文都和 Self-Forcing 一样。</li>
+</ul>
+<h4 id="等价-loss">等价 loss</h4>
+<p>L = 1/(2KM) Σ‖x − sg[x − w·d]‖²，其中 w_kj = M·softmax_j(A_kj/β)，A = g_Q·r_A·(1+0.25·v_G·r_G)。
+M=2 时 <strong>w = 2σ(ΔA/β)，同组两个权重之和恒为 2</strong>。这就是 Reward Forcing 的奖励加权 DMD，只是把权重换成组内两两 sigmoid（推断，由式 2 直接推出）。质量门不过时 A=0，退化成 w=1 的普通 DMD。</p>
+<h4 id="数字例子推断">数字例子（推断）</h4>
+<p>同一前缀出两个候选，动作奖励 r_A 分别是 0.8 和 0.5，β=0.15，ΔA=0.3 → w = 2σ(2) = 1.76 和 0.24。也就是好候选的 DMD 步长放大 1.76 倍，差候选几乎不更新。注意 d 仍然指向教师分布：奖励只改「哪个样本往教师拉得更快」，不会把学生推到教师分布之外。所以奖励带来的收益上限仍是教师。只有 Perspective 这类由样本选择决定的指标可能动。</p>
+<h4 id="与最接近论文的核心差别只写操作">与最接近论文的核心差别（只写操作）</h4>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文</th>
+<th>操作差别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reward Forcing</td>
+<td>同样用分离梯度的奖励权重乘 DMD 更新。WorldRIDE 把绝对奖励权重换成组内 softmax（M=2），加了门控的分级奖励</td>
+</tr>
+<tr>
+<td>Self-Forcing</td>
+<td>去掉奖励后完全等同（自回归 rollout + DMD）。多锚点只是复用前缀、多出 K 个目标</td>
+</tr>
+<tr>
+<td>WorldCompass / DreamX-World</td>
+<td>两阶段：先蒸馏再做 RL。WorldRIDE 把 RL 合进蒸馏，但用的是加权 DMD，不是策略梯度</td>
+</tr>
+<tr>
+<td>Reward-Aware Trajectory Shaping</td>
+<td>奖励作用在轨迹监督上；WorldRIDE 作用在 DMD 步长上</td>
+</tr>
+</tbody>
+</table></div>
+<h4 id="证据原文自报wbench-158-例overall">证据（原文自报，WBench 158 例，Overall）</h4>
+<ul>
+<li>60 步 Chunk-Causal 教师（带 refiner）<strong>79.7</strong>：这是同协议下的最强基线，4 步学生仍差 2.6。LingBot-World Fast 77.4（官方榜）也高于 77.1。</li>
+<li>SANA-WM Streaming 75.7 → +WorldCompass RL 76.0 → WorldRIDE 77.1。</li>
+<li>消融（seed 42，step 3000）：full 77.1 / w/o Geo 76.7 / w/o Action+Geo <strong>76.9</strong>。w/o Geo 比 w/o 全部还低，说明单动作奖励 ≤ 噪声。Navigation 82.6 vs 82.9、Geometric Consistency 87.4 vs 87.8，full 反而更低。只有 Perspective 67.0 vs 62.7。</li>
+<li>VBench-I2V（5 个种子，5590 个视频）：Total 88.219 vs Streaming 87.552、vs 60 步 87.692；I2V 97.055 &lt; Streaming 97.728。这组没有「w/o 奖励」消融，所以 +0.67 无法归因到奖励（推断）。</li>
+<li>没有报告 Streaming 是否和他们用同样的数据重训。论文说 "3,000-step Self Forcing distillation"，但 76.9 与 75.7 的差（数据、多锚点？）没有解释。</li>
+<li>没有多种子，没有方差，没有 wall-clock 和卡时。</li>
+</ul>
+<h4 id="扎实度-疑点">扎实度 / 疑点</h4>
+<ul>
+<li>核对 RL 同事的说法：「等价于 Reward Forcing + 组内 softmax」✔（论文 §2.1、§3.4 自己写了 "Following Reward Forcing"）。「消融 77.1 vs 76.7 单种子」✔，而且真正该比的是 76.9（无奖励），差距只有 0.2。</li>
+<li>门控和 M=2 让大量组退化成 w=1：质量门要求两个候选都过，几何要求动作匹配。论文没报门控通过率（疑点）。</li>
+</ul>
+<h4 id="按这一格预判它会在哪里出问题读结果前写">按这一格预判它会在哪里出问题（读结果前写）</h4>
+<p>奖励加权 DMD 的方向仍是教师分数 → 预测：①总分增益落在单种子噪声内 ✔ 命中；②动作类指标不涨 ✔ 命中（Navigation 没涨）；③仍低于多步教师 ✔ 命中。3/3。</p>
+<h4 id="可迁移原理">可迁移原理</h4>
+<ul>
+<li>门控和组内归一化本身便宜，「质量不过就退化成普通 DMD」是安全的默认。但要证明有用，必须有「无奖励、同数据、同步数」的多种子对照。</li>
+<li>多锚点复用前缀：KM 个目标只需 N+K(M−1) 次 clip 采样，对长 rollout 的流式蒸馏有省采样的价值，和奖励无关，可以单独拿来用。</li>
+</ul>
+<h4 id="对我们训练的含义">对我们训练的含义</h4>
+<ul>
+<li>图像：无。</li>
+<li>视频：无新东西；奖励加权 DMD 已在 Reward Forcing 格内。</li>
+<li>AV：无（没有音频奖励，也没有 AV 实验）。</li>
+<li>流式 AR：不改变决定。想在 DMD 里加奖励，先跑「同数据普通 Self-Forcing DMD vs 加权 DMD，≥3 个种子」，看增益是否超过种子方差。多锚点复用前缀可以作为省采样的工程选项单独评估。</li>
+</ul>
+<p>来源：原文自报（表 1、2、3、A3，附录 F）；等价式和数字例子为推断；没有我测；没做 Codex 盲分（本次跳过）。</p></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-15 09:26 (UTC+8)</div></main></div>
+<script>
+(function(){
+ // 详情卡片全部展开/收起
+ document.querySelectorAll('[data-act]').forEach(function(b){b.addEventListener('click',function(){
+   var o=b.getAttribute('data-act')==='open';document.querySelectorAll('details.card').forEach(function(d){d.open=o;});});});
+ // 点击目录中位于折叠卡片内的锚点时自动展开
+ function openFor(id){var el=document.getElementById(id);if(!el)return;var d=el.closest('details');if(d)d.open=true;}
+ if(location.hash)openFor(decodeURIComponent(location.hash.slice(1)));
+ window.addEventListener('hashchange',function(){openFor(decodeURIComponent(location.hash.slice(1)));});
+ // 目录高亮
+ var links=[].slice.call(document.querySelectorAll('nav.toc a'));
+ var heads=links.map(function(a){return document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));});
+ function hl(){var y=window.scrollY+80,k=-1;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top+window.scrollY<=y&&h.offsetParent!==null)k=i;});
+   links.forEach(function(a,i){a.classList.toggle('on',i===k);});}
+ window.addEventListener('scroll',hl,{passive:true});hl();
+})();
+</script><script>if(document.querySelector('code.language-mermaid')){var s=document.createElement('script');
+s.src='https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';s.onload=function(){document.querySelectorAll('code.language-mermaid').forEach(function(c){var d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentNode.replaceWith(d);});mermaid.initialize({startOnLoad:false});mermaid.run();};document.head.appendChild(s);}</script></body></html>
