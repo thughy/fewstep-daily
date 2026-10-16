@@ -1,0 +1,791 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>少步蒸馏 · 本周认知变化 2026-10-16（首期周报）</title>
+<style>
+:root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--side:#f6f8fa;--line:#d1d9e0;--acc:#0b57d0;--l1:#fff8e6;--l1b:#f0c36d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--fg);background:var(--bg);font:15.5px/1.75 "Noto Sans CJK SC","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.top{position:sticky;top:0;z-index:5;background:#24292f;color:#fff;padding:8px 20px;display:flex;gap:18px;align-items:center;font-size:14px}
+.top a{color:#fff;opacity:.9} .top .brand{font-weight:700;opacity:1}
+.wrap{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1400px;margin:0 auto}
+nav.toc{position:sticky;top:40px;align-self:start;height:calc(100vh - 40px);overflow:auto;background:var(--side);border-right:1px solid var(--line);padding:14px 10px 40px 14px;font-size:13.5px;line-height:1.5}
+nav.toc .tt{font-weight:700;color:var(--muted);margin:2px 0 8px}
+nav.toc ul{list-style:none;margin:0;padding-left:10px} nav.toc>div>ul{padding-left:0}
+nav.toc li{margin:3px 0} nav.toc a{color:#333;display:block;padding:1px 4px;border-radius:4px}
+nav.toc a:hover,nav.toc a.on{background:#dde7f7;text-decoration:none}
+main{padding:22px 40px 80px;min-width:0}
+h1{font-size:26px;margin:.2em 0 .6em;border-bottom:2px solid var(--line);padding-bottom:.3em}
+h2{font-size:21px;margin:1.8em 0 .6em;border-bottom:1px solid var(--line);padding-bottom:.25em}
+h3{font-size:17.5px;margin:1.4em 0 .5em}
+h4{font-size:15.5px}
+blockquote{margin:0 0 1em;padding:8px 16px;border-left:4px solid #8c959f;background:#f6f8fa;color:#3d444d;font-size:14px}
+blockquote p{margin:.3em 0}
+code{font-family:"JetBrains Mono","DejaVu Sans Mono",Menlo,Consolas,monospace;font-size:.88em;background:#eff1f3;padding:.1em .35em;border-radius:4px}
+pre{background:#f6f8fa;border:1px solid var(--line);border-radius:6px;padding:10px 14px;overflow:auto} pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:.6em 0 1.1em}
+table{border-collapse:collapse;font-size:13.8px;line-height:1.55;min-width:60%}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left}
+th{background:#eef2f6;font-weight:700;position:sticky;top:0}
+tr:nth-child(even) td{background:#fafbfc}
+td strong{color:#8a1c1c}
+hr{border:0;border-top:1px solid var(--line);margin:1.6em 0}
+section.layer1{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:2px 22px 10px;margin:18px 0 26px}
+section.layer1>h2{border-bottom-color:var(--l1b)}
+section.layer1 .tw table{background:#fff}
+.layer-tag{display:inline-block;font-size:12px;font-weight:700;color:#7a4b00;background:#ffe2a8;border-radius:10px;padding:0 9px;margin-left:8px;vertical-align:middle}
+details.card{border:1px solid var(--line);border-radius:8px;margin:12px 0;background:#fff}
+details.card>summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:16.5px;background:#f3f6fa;border-radius:8px;list-style:none}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary:before{content:"▸ ";color:var(--acc)} details.card[open]>summary:before{content:"▾ "}
+details.card[open]>summary{border-bottom:1px solid var(--line);border-radius:8px 8px 0 0}
+details.card>.body{padding:4px 18px 10px}
+.cardtools{font-size:13px;margin:6px 0 2px} .cardtools button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:#fff;border-radius:5px;padding:1px 8px;cursor:pointer;margin-right:6px}
+.b{display:inline-block;font-size:11.5px;line-height:1.5;padding:0 6px;border-radius:9px;margin:0 2px;font-weight:600;white-space:nowrap;vertical-align:1px;border:1px solid transparent}
+.b-meas{background:#dafbe1;color:#116329;border-color:#a8e6b5}
+.b-orig{background:#ddf4ff;color:#0a4b8c;border-color:#a6d4f5}
+.b-team{background:#fff1e5;color:#953800;border-color:#ffc89a}
+.b-inf{background:#eef0f2;color:#4a535c;border-color:#cfd5db}
+.b-codex{background:#fbefff;color:#6e2b91;border-color:#e3b8f5}
+.b-oth{background:#f6f8fa;color:#4a535c;border-color:#d1d9e0}
+.idx{max-width:900px;margin:0 auto;padding:30px 30px 80px}
+.idx .hero{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:12px 22px;margin:14px 0 24px;font-size:16.5px}
+.idx .cards a{display:block;border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:10px 0;color:var(--fg)}
+.idx .cards a:hover{border-color:var(--acc);text-decoration:none;background:#f6f9ff}
+.idx .cards .t{font-weight:700;color:var(--acc)} .idx .cards .d{font-size:13.5px;color:var(--muted)}
+.foot{color:var(--muted);font-size:12.5px;margin-top:40px;border-top:1px solid var(--line);padding-top:8px}
+@media (max-width:900px){.wrap{grid-template-columns:1fr} nav.toc{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)} main{padding:16px}}
+@media print{nav.toc,.top,.cardtools{display:none}.wrap{display:block} details.card{break-inside:avoid}}
+</style></head><body>
+<div class="top"><a class="brand" href="../index.html">多模态少步蒸馏 · 前沿调研</a><a href="../baseline.html">2026Q3 基线</a><a href="../index.html#dailies">每日</a><a href="../index.html#weeklies">每周</a></div>
+<div class="wrap"><nav class="toc"><div class="tt">目录</div><div><div class="toc">
+<ul>
+<li><a href="#结论先行">结论先行</a></li>
+<li><a href="#一屏框架taxonomy-map">一屏框架：taxonomy map</a></li>
+<li><a href="#本周认知变化按格子">本周认知变化（按格子）</a><ul><li><a href="#l1-单步去噪ptd-smd-dsi-velocity-corrector">L1 × 单步去噪：PTD / SMD / DSI / Velocity Corrector</a></li><li><a href="#l2-单步去噪pmdd">L2 × 单步去噪：PMDD</a></li><li><a href="#l2-流式时间轴agf-csf-longforcing-glancerepforcing">L2 × 流式时间轴：AGF / CSF / LongForcing / Glance·RepForcing</a></li><li><a href="#l3-对抗-facegan-dmad">L3 × 对抗 / FaceGAN / DMAD</a></li><li><a href="#额外真实数据-单步priming">额外真实数据 × 单步：Priming</a></li><li><a href="#轴-c-边界unigvc">轴 C 边界：UniGVC</a></li></ul></li>
+<li><a href="#预测命中率">预测命中率</a></li>
+<li><a href="#原创性分层与重做比例按方向">原创性分层与重做比例（按方向）</a></li>
+<li><a href="#最近工作是否真读了审计">最近工作是否真读了：审计</a></li>
+<li><a href="#放不进框架的">放不进框架的</a></li>
+<li><a href="#各线最强基线变化vs-lineage-l1l5">各线最强基线变化（vs lineage L1–L5）</a></li>
+<li><a href="#开放问题进展">开放问题进展</a></li>
+<li><a href="#下周要先跑的对照便宜可排期">下周要先跑的对照（便宜、可排期）</a></li>
+<li><a href="#本周日报链接">本周日报链接</a></li>
+</ul>
+</div>
+</div></nav>
+<main><h1 id="少步蒸馏-本周认知变化-2026-10-16首期周报">少步蒸馏 · 本周认知变化 2026-10-16（首期周报）</h1>
+<blockquote>
+<p>覆盖周：<strong>2026-10-10 → 2026-10-16</strong>。日报：10、12、13、14、15、16（14 为 arXiv 静默日）。本周是例行周报第一次跑。
+数字全部来自本周日报 / read-log / lineage / Q3 基线；未复现。标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】<span class="b b-inf">推断</span><span class="b b-codex">Codex✓</span>。</p>
+</blockquote>
+<hr />
+<section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
+<p><strong>本周主判断：</strong> 我们学到的不是「又多了几条 loss 名字」，而是把几条训练旋钮从叙事里拆出来了——而且有好几条和原先的直觉相反。最重要的三件事：(1) <strong>一步生成不一定要教师</strong>——Priming 用固定噪声去噪初始化 + 冻结特征 Sinkhorn OT 对真实数据，IN-256 一步 FID 1.19<span class="b b-orig">原文</span>；(2) <strong>流式 / 多步里「前缀从哪来」比「散度叫什么」更要紧</strong>——PMDD 的增益来自冻结上一阶段学生造前缀，不是「每阶段专门 fake score」<span class="b b-orig">原文 App.D.5/D.6</span>，这和 Self-Forcing「历史必须 on-policy」的直觉在另一条轴上相反；(3) <strong>K1（双向教师对因果学生打分是错的）有边界</strong>——条件把未来钉死时（codec），双向教师可以直接用<span class="b b-orig">原文 UniGVC</span>。另：FaceGAN 的因果+iid 噪声谱界，解释了流式「一致性↑、动态度↓」可能是同一机制<span class="b b-inf">推断</span>；AGF 升为必读·先跑，但相对 SGF 底座 240s 只 +0.75，主张要收窄<span class="b b-orig">原文+代码更正</span>；DMAD 升必读·先跑，但 AV 同步低于 DMD2，先跑同步对照。</p>
+<p><strong>对我们训练的含义：</strong></p>
+<ul>
+<li><strong>图像：</strong> 有真实数据又要一步时，把「去噪初始化 + 特征 OT」（Priming）当作和蒸馏平行的路线；已有少步学生可试「+几千步 Sinkhorn 后训练」vs「+同步数 DMD2 GAN 头」。DSI 提示少步可不调时间表，直接在数据空间迭代。</li>
+<li><strong>视频（双向）：</strong> 4 步多样性硬需求时 PTD / SMD（纯轨迹 / on-policy 速度回归）是低成本候选；先把 SMD 排斥项换成「同等效 CFG 的纯模仿」做零成本对照。</li>
+<li><strong>AV：</strong> critic 选型候选：DMAD（双头判别器+真实 AV）vs DMD2 score 相减；同步分 DMAD 更低（49.1 vs 56.7）<span class="b b-orig">原文</span>，<strong>必须先跑同步对照</strong>。SMD / PTD 作「不训 critic」的 AV 备选，但都缺 WER/DeSync。</li>
+<li><strong>流式 AR：</strong> (a) 报一致性时必须同时报动态度（FaceGAN / CSF）；(b) 试「历史由当前学生 / 冻结快照 / EMA」三选一（PMDD 旋钮迁到时间轴）；(c) AGF 值得跑，但对照要换成「SGF + 正则 / AGF 无正则 / 完整 AGF」，不要信已崩的高斯对照；(d) 条件弱时仍换因果打分（K1），条件强（口型区域等）可保留双向。</li>
+</ul>
+<hr />
+</section><section class="layer1"><h2 id="一屏框架taxonomy-map">一屏框架：taxonomy map<span class="layer-tag">第一层 · 框架</span></h2>
+<p>轴：<strong>① 学生训练信号</strong>（轨迹 L1 / 分数差分布 L2 / 对抗 L3 / 额外真实数据·reward）× <strong>② 问题位置</strong>（单步去噪 / 流式时间轴 / AV 跨模态）。只挂本周「值得读+」论文；格子内写「相对 Q3 基线 / 周初，我们理解变了什么」。</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>轴1 \ 轴2</th>
+<th>单步去噪（图像/视频）</th>
+<th>流式时间轴</th>
+<th>AV 跨模态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>轨迹匹配 L1</strong></td>
+<td><strong>SMD</strong>（on-policy 配点 + 排斥≡CFG）；<strong>PTD</strong>（学生曲线上查教师速度）；<strong>DSI</strong>（数据空间迭代，DMD 不变）；<strong>Velocity Corrector</strong>（冻结主干 + on-policy 残差）</td>
+<td>Glance / RepForcing（只改 DMD 前初始化，值得看）</td>
+<td><strong>SMD</strong>、<strong>PTD</strong>（同一 loss 作用联合潜变量；缺客观音频）</td>
+</tr>
+<tr>
+<td><strong>分数差分布 L2</strong></td>
+<td><strong>PMDD</strong>（真正旋钮=冻结前缀，非专门 fake score）</td>
+<td><strong>AGF</strong>（必读·先跑，增益收窄）；<strong>CSF</strong> / <strong>LongForcing</strong>（轴 C：梯度路由 / 打分窗口变长）</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>对抗 L3</strong></td>
+<td><strong>DMAD</strong>（logit 梯度≡score 差；≡朝教师×真实几何混合的 DMD）</td>
+<td>—</td>
+<td><strong>DMAD</strong>（H3；同步弱于 DMD2）；<strong>FaceGAN</strong>（无蒸馏，motion latent 谱界）</td>
+</tr>
+<tr>
+<td><strong>额外真实数据 / reward</strong></td>
+<td><strong>Priming</strong>（无教师；固定特征 OT）</td>
+<td>WorldRIDE（奖励加权 DMD，重做）；LongForcing 长教师隐含吃了真实长视频</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L4 混合 / 权重级</strong></td>
+<td>—</td>
+<td><strong>Avatar-Forever v2</strong>（DMD + RRT-LoRA 权重合并）</td>
+<td><strong>UniGVC</strong>（DMD+GAN；强条件边界）</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>相对 Q3 / 周初，每格理解变化（一句话）：</strong></p>
+<ul>
+<li>L1×单步：从「轨迹偏软、单独不够」→ 出现<strong>纯回归 on-policy</strong>路径（PTD/SMD），且 SMD 排斥项可严格化成 CFG 旋钮<span class="b b-meas">实测玩具</span>。</li>
+<li>L2×单步：多了 data-free 多步配方；<strong>前缀策略（冻结 vs on-policy）是独立旋钮</strong><span class="b b-orig">原文</span>。</li>
+<li>L2×流式：AGF / CSF / LongForcing 都是 L2 变体；一致性↑常伴随动态度↓（CSF λ、SGF、Q6）；AGF 主张收窄到「组合增益」。</li>
+<li>L3×AV：FaceGAN 给出谱界机制；DMAD 从「值得读」升「必读·先跑」，同步短板坐实。</li>
+<li>额外真实×单步：<strong>无教师一步</strong>从空格变成有最强基线（Priming FID 1.19）。</li>
+<li>轴 C：K1 从「一律错」变成「错位大小≈条件留给未来的不确定性」<span class="b b-inf">推断，UniGVC</span>。</li>
+</ul>
+<hr />
+</section><section class="layer1"><h2 id="本周认知变化按格子">本周认知变化（按格子）<span class="layer-tag">第一层 · 框架</span></h2>
+<details class="card" open="open">
+<summary id="l1-单步去噪ptd-smd-dsi-velocity-corrector">L1 × 单步去噪：PTD / SMD / DSI / Velocity Corrector</summary>
+<div class="body">
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>周初相信</strong></td>
+<td>轨迹匹配覆盖好但偏软；单独用画质不足（Q3：DUET 里 sCM-only 质量 81.51 vs DMD 84.38）<span class="b b-orig">原文</span>。</td>
+</tr>
+<tr>
+<td><strong>现在相信</strong></td>
+<td>存在<strong>纯轨迹 / on-policy 速度回归</strong>路径：PTD 在学生多项式曲线上查教师速度；SMD = 配点（Pivot 零积分残差）+ 排斥项≡等效 CFG 放大。少步<strong>可以不要时间表</strong>（DSI：数据空间迭代，4 NFE FID 2.46 vs renoise DMD 2.75）<span class="b b-orig">原文</span>。Velocity Corrector：冻结少步主干 + 在校正后状态上重算桥目标，可补指令跟随。</td>
+</tr>
+<tr>
+<td><strong>证据</strong></td>
+<td>PTD <a href="https://arxiv.org/abs/2610.11498">2610.11498</a>：H3 Astra 多样性 2.81 vs DMD 1.55<span class="b b-orig">原文</span>。SMD <a href="https://arxiv.org/abs/2610.18472">2610.18472</a>：玩具梯度差 3.6e−15；Pivot 配点终点 −0.1896≈ODE −0.1895<span class="b b-meas">实测</span>；Wan 上与 AnyFlow/PDD 持平。DSI <a href="https://arxiv.org/abs/2610.12102">2610.12102</a> Tab.3。Velocity Corrector <a href="https://arxiv.org/abs/2610.12899">2610.12899</a>：NetWin +17.60 vs SFT+LoRA +3.83<span class="b b-orig">原文</span>。</td>
+</tr>
+<tr>
+<td><strong>训练含义</strong></td>
+<td>图像：试 SMD「同等效 CFG 纯模仿 vs 完整 SMD」。视频：多样性硬需求用 PTD/SMD。AV：不训 critic 的备选，先补 WER/DeSync。</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="l2-单步去噪pmdd">L2 × 单步去噪：PMDD</summary>
+<div class="body">
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>周初相信</strong></td>
+<td>多步 DMD 关键是 fake score 容量与同时训练（DMD2）。Self-Forcing 侧坚信历史必须 on-policy。</td>
+</tr>
+<tr>
+<td><strong>现在相信</strong></td>
+<td>PMDD 广告「每阶段专门 fake score」；消融显示专门 fake 只差 0.05，<strong>冻结上一阶段学生造前缀</strong>才把 IN64 两步 FID 从 8.01→2.12<span class="b b-orig">原文 App.D.5/D.6</span>。</td>
+</tr>
+<tr>
+<td><strong>证据</strong></td>
+<td><a href="https://arxiv.org/abs/2610.19305">2610.19305</a>；同 loss 下 2.12 vs DF-DMDv2 2.49；SD1.5 三步 FID 7.76 vs 9.02<span class="b b-orig">原文</span>。</td>
+</tr>
+<tr>
+<td><strong>训练含义</strong></td>
+<td>流式上先跑「历史=当前学生 / 冻结快照 / EMA」；图像多步要「一模型多步数」时用冻结前缀+不遗忘。</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="l2-流式时间轴agf-csf-longforcing-glancerepforcing">L2 × 流式时间轴：AGF / CSF / LongForcing / Glance·RepForcing</summary>
+<div class="body">
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>周初相信</strong></td>
+<td>SGF / RMD / CMD 各有主张；长程一致性提升即质量提升；Self-Forcing 循环里改打分上下文收益最大（K1）。</td>
+</tr>
+<tr>
+<td><strong>现在相信</strong></td>
+<td>(1) CSF λ 消融：跨 chunk 梯度减半 → DD 0.598→0.848、Avg(6) 0.8589→0.8429，<strong>一致性与动态度互换</strong><span class="b b-orig">原文</span>。(2) AGF：对抗历史+首步正则组合；240s 只比 SGF +0.75；fake score 也从 replay（含对抗分支）取样；高斯对照作废【代码更正】。(3) LongForcing：窗口/教师/真实长数据三者耦合，30s 仅领先 LongLive 0.03<span class="b b-orig">原文</span>。(4) Glance/RepForcing：只换初始化，DMD 不动，+0.2~0.6。</td>
+</tr>
+<tr>
+<td><strong>证据</strong></td>
+<td>CSF <a href="https://arxiv.org/abs/2610.12156">2610.12156</a>；AGF <a href="https://arxiv.org/abs/2610.14553">2610.14553</a> + agf-deep report；LongForcing <a href="https://arxiv.org/abs/2610.18289">2610.18289</a>；Glance <a href="https://arxiv.org/abs/2610.20220">2610.20220</a>【代码】/ RepForcing <a href="https://arxiv.org/abs/2610.20111">2610.20111</a>。</td>
+</tr>
+<tr>
+<td><strong>训练含义</strong></td>
+<td>长时先跑更新后的 AGF 四组对照；报一致性必报动态度；初始化规模可大幅压缩。</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="l3-对抗-facegan-dmad">L3 × 对抗 / FaceGAN / DMAD</summary>
+<div class="body">
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>周初相信</strong></td>
+<td>DMAD = 教师头+真实头越过教师（Q3 K5）；流式数字人默认走扩散蒸馏。</td>
+</tr>
+<tr>
+<td><strong>现在相信</strong></td>
+<td>FaceGAN：因果+每步 iid 噪声 ⇒ σ²∞≤ε^δ；噪声通路非因果可绕开。流式 chunk 级「一致性↔动态度」<strong>可能就是这个界</strong><span class="b b-inf">推断=Q6</span>。DMAD：最优 logit 梯度≡score 差；≡朝教师×真实几何混合的 DMD；代码有<strong>论文未写的谱归一化</strong>【代码】；升必读·先跑，但 AV 同步 49.1 &lt; DMD2 56.7<span class="b b-orig">原文</span>。</td>
+</tr>
+<tr>
+<td><strong>证据</strong></td>
+<td>FaceGAN <a href="https://arxiv.org/abs/2610.11070">2610.11070</a>；玩具阻带 −7→−75 dB 时 σ²∞ 1.1e−2→1.9e−7<span class="b b-meas">实测</span>。DMAD <a href="https://arxiv.org/abs/2610.02188">2610.02188</a> 代码 e63a61d。</td>
+</tr>
+<tr>
+<td><strong>训练含义</strong></td>
+<td>AV critic 候选换 DMAD，<strong>先跑同步对照</strong>。流式 chunk 噪声试「预采后平滑 vs iid」。</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="额外真实数据-单步priming">额外真实数据 × 单步：Priming</summary>
+<div class="body">
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>周初相信</strong></td>
+<td>越过教师几乎只靠真实数据 GAN 头（Q3 Q5）；一步生成默认走蒸馏。</td>
+</tr>
+<tr>
+<td><strong>现在相信</strong></td>
+<td><strong>可以完全不要教师</strong>：固定 t=0.8 去噪预训练 + 冻结 ConvNeXt/MAE 上 Sinkhorn OT；IN-256 一步 FID 1.19、recall 0.649；算力 1/6 of Drifting-L<span class="b b-orig">原文+代码</span>。</td>
+</tr>
+<tr>
+<td><strong>证据</strong></td>
+<td><a href="https://arxiv.org/abs/2610.20331">2610.20331</a>；loss 链已核【代码】。</td>
+</tr>
+<tr>
+<td><strong>训练含义</strong></td>
+<td>图像平行路线；AV/流式需自选编码器且测长漂移（世界模型实验每 8 帧重锚定，未测漂移）。</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="轴-c-边界unigvc">轴 C 边界：UniGVC</summary>
+<div class="body">
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>周初相信</strong></td>
+<td>K1：双向整段打分对因果学生一律错位（CMD/Salt++/RMD）。</td>
+</tr>
+<tr>
+<td><strong>现在相信</strong></td>
+<td>错位大小取决于<strong>条件留给未来的不确定性</strong>。codec 强条件时，1 步因果 vs 50 步双向 BD-LPIPS 只差 0.001<span class="b b-orig">原文</span>；弱条件（文生视频、数字人整体）K1 仍成立。</td>
+</tr>
+<tr>
+<td><strong>证据</strong></td>
+<td>UniGVC <a href="https://arxiv.org/abs/2610.13023">2610.13023</a> Tab.2<span class="b b-orig">原文</span>；无同协议因果教师对照 → 边界判断为<span class="b b-inf">推断</span>。</td>
+</tr>
+<tr>
+<td><strong>训练含义</strong></td>
+<td>强条件子任务可保留双向打分；弱条件仍换因果前缀。</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</div>
+</details>
+</section><section class="layer1"><h2 id="预测命中率">预测命中率<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>日</th>
+<th>论文级</th>
+<th>累计</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q3 基线（计入）</td>
+<td>22/28</td>
+<td>—</td>
+<td>6 次未中均为低估</td>
+</tr>
+<tr>
+<td>10-10</td>
+<td><strong>8/11</strong></td>
+<td>30/39=77%</td>
+<td>CSF 污染不计</td>
+</tr>
+<tr>
+<td>10-12 / 10-14</td>
+<td>—</td>
+<td>—</td>
+<td>无精读</td>
+</tr>
+<tr>
+<td>10-13</td>
+<td><strong>6/8</strong></td>
+<td>—</td>
+<td></td>
+</tr>
+<tr>
+<td>10-15</td>
+<td><strong>11/14</strong></td>
+<td><strong>47/61=77%</strong></td>
+<td>AGF 2/4 低估长时、高估成本</td>
+</tr>
+<tr>
+<td>10-16</td>
+<td><strong>11/18</strong></td>
+<td><strong>58/79=73%</strong></td>
+<td>7 条未中里 <strong>5 条低估</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>累计：58/79 ≈ 73%。</strong></p>
+<p><strong>未中模式（本周）：</strong></p>
+<ol>
+<li><strong>低估为主（10-16 最明显）</strong>：押「不会报多样性 / 没关键消融 / 没代码」——DMAD 有客观指标且有代码；PMDD 有前缀消融与 P/R；Priming recall 与保留特征 FD 更好。教训：少押「漏报」，多押机制失效点。</li>
+<li><strong>「改样本来源」类仍偏保守</strong>（延续 Q3）：AGF 60s +1.91（预测 &lt;1）、成本反而低。</li>
+<li><strong>按格预判</strong>：有记录的可判条目里，命中与半中占多数（如 SMD L1 偏软✓、AGF 动态度不升✓、UniGVC 强条件差距小✓）；失手主要在 PMDD（recall 更高）、Priming（保留特征领先更大）——两格典型失效「塌缩 / 讨好特征」本周被证伪或削弱。</li>
+<li><strong>AGF 教训 → method v1.4</strong>：低估当天复评；必读·先跑 = (a) 改 AV/流式训练决定且代码配置齐 <strong>或</strong> (b) 同协议超最强基线；核完整 loss 链，不只核攻击步。</li>
+</ol>
+<hr />
+</section><section class=""><h2 id="原创性分层与重做比例按方向">原创性分层与重做比例（按方向）</h2>
+<p>只计本周日报里明确评级的条目（摘要级「重做」应用另计）。</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>必读·先跑</th>
+<th>必读</th>
+<th>值得读</th>
+<th>值得看</th>
+<th>重做</th>
+<th>摘要级/旁支</th>
+<th>重做占比（粗）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>图像</strong></td>
+<td>Priming；DMAD（图像侧）</td>
+<td>—</td>
+<td>SMD；DSI；Velocity Corrector；PMDD</td>
+<td>—</td>
+<td>—</td>
+<td>MeanFlow 跨度解耦等</td>
+<td>低（精读多为新机制/发现）</td>
+</tr>
+<tr>
+<td><strong>视频（双向）</strong></td>
+<td>DMAD（14B）</td>
+<td>—</td>
+<td>PTD；SMD；PMDD</td>
+<td>Glance；RepForcing</td>
+<td>—</td>
+<td>—</td>
+<td>低</td>
+</tr>
+<tr>
+<td><strong>AV</strong></td>
+<td><strong>DMAD</strong>；<strong>Priming</strong>（候选，未直接测 AV）</td>
+<td><strong>FaceGAN</strong>（motion latent）</td>
+<td>PTD；SMD（缺客观音频）</td>
+<td>—</td>
+<td>—</td>
+<td>Kandinsky S2V（π-Flow 重做但可直接用）</td>
+<td>应用向重做出现在音频驱动数字人配方</td>
+</tr>
+<tr>
+<td><strong>流式 AR</strong></td>
+<td><strong>AGF</strong></td>
+<td>—</td>
+<td>CSF；UniGVC；LongForcing（弱）；ForcingBooster（存疑）</td>
+<td>Glance；RepForcing</td>
+<td>WorldRIDE；LidarVerse/SonoWorld/StreamErase（摘要）</td>
+<td>Speculative Sampling（非蒸馏）</td>
+<td><strong>摘要/应用侧重做比例最高</strong>；精读层仍有机制增量</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>本周必读·先跑清单：</strong> Priming Models <a href="https://arxiv.org/abs/2610.20331">2610.20331</a>；DMAD <a href="https://arxiv.org/abs/2610.02188">2610.02188</a>；AGF <a href="https://arxiv.org/abs/2610.14553">2610.14553</a>（主张已收窄）。</p>
+<hr />
+</section><section class=""><h2 id="最近工作是否真读了审计">最近工作是否真读了：审计</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>精读论文</th>
+<th>自称对照的 2–3 篇最近工作</th>
+<th>实际阅读深度</th>
+<th>缺口</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FaceGAN</td>
+<td>Fallingwater / DiffPoseTalk；一般时序 GAN</td>
+<td>对比数字读了<span class="b b-orig">原文 Tab</span>；1805.09313 <strong>未读</strong></td>
+<td>缺「因果彩色噪声+同平滑正则」对照（Codex 提醒）</td>
+</tr>
+<tr>
+<td>PTD</td>
+<td>FMM、PDD、rCM</td>
+<td>PDD/rCM 数字与机制<span class="b b-orig">原文</span>；<strong>FMM 正文未读</strong>（作者称式 5=FMM Lagrangian）</td>
+<td>FMM 原文</td>
+</tr>
+<tr>
+<td>DSI</td>
+<td>DMD renoise、Phased DMD</td>
+<td>表内对照<span class="b b-orig">原文</span></td>
+<td>Phased DMD 全文深度一般</td>
+</tr>
+<tr>
+<td>CSF</td>
+<td>SGF</td>
+<td>SGF 在 Q3 精读【read-log】</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>UniGVC</td>
+<td>CausVid、CMD/Salt++、DMD2</td>
+<td>CausVid/CMD/Salt++/DMD2 均 Q3 或已知；<strong>无因果教师同协议对照</strong>（作者也没做）</td>
+<td>边界结论依赖<span class="b b-inf">推断</span></td>
+</tr>
+<tr>
+<td>ForcingBooster</td>
+<td>DSA、HSA</td>
+<td>主要依原文表；DSA/HSA <strong>未精读原文</strong></td>
+<td>最近工作偏「表内引用」</td>
+</tr>
+<tr>
+<td>Velocity Corrector</td>
+<td>D-OPSD、SFT+LoRA、ReFlow</td>
+<td>对照数字<span class="b b-orig">原文</span>；D-OPSD 全文未独立精读</td>
+<td>D-OPSD</td>
+</tr>
+<tr>
+<td>SMD</td>
+<td>PTD（本周已读）、PDD、π-Flow、DMD2</td>
+<td>PTD✓；π-Flow 偏摘要/表</td>
+<td>π-Flow 方法段</td>
+</tr>
+<tr>
+<td>AGF</td>
+<td>SF、Salt、SVI、SGF、OPSD-V</td>
+<td>SF/SGF 代码+Q3；<strong>同事 agf-deep 代码精读已吸收</strong>【代码】</td>
+<td>Salt/SVI/OPSD-V 非全文</td>
+</tr>
+<tr>
+<td>LongForcing</td>
+<td>CF、SF++、LongLive、OPSD-V、CMD</td>
+<td>CF/CMD Q3；仓库仅 README<span class="b b-meas">实测</span></td>
+<td>缺滑窗同协议对照（论文也缺）</td>
+</tr>
+<tr>
+<td>Priming</td>
+<td>Drifting、W-Flow、D2O/FD-loss、DMD2</td>
+<td><strong>代码 loss 链已核</strong>【代码】；Drifting/W-Flow 依原文对比表</td>
+<td>Drifting 正文深度有限</td>
+</tr>
+<tr>
+<td>PMDD</td>
+<td>DMD2、FS-SiD、Self-Forcing、Phased DMD</td>
+<td>消融<span class="b b-orig">原文</span>；<strong>未引用 Phased DMD</strong>；无代码</td>
+<td>Phased DMD；需自实现才能迁流式</td>
+</tr>
+<tr>
+<td>DMAD</td>
+<td>DMD2、SiD/SiDA</td>
+<td><strong>代码整条 loss 链已核</strong>【代码】；DMD2 Q3</td>
+<td>OK（本周最扎实之一）</td>
+</tr>
+<tr>
+<td>Glance/RepForcing</td>
+<td>Causal Forcing、Self-Forcing</td>
+<td>Glance <strong>开源代码已核</strong>【代码】；RepForcing 无代码</td>
+<td>RepForcing 感知 loss vs latent MSE 缺对照</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>总评：</strong> 机制核（等价 loss、代码链）本周明显加强（SMD 玩具、AGF/DMAD/Priming/Glance 代码）。短板是若干「最近工作」仍停在表内数字或 Q3 记忆（FMM、DSA/HSA、π-Flow、Phased DMD），未全部回原文章节——周五后补读清单见「下周对照」外的阅读债。</p>
+<hr />
+</section><section class=""><h2 id="放不进框架的">放不进框架的</h2>
+<p>发现类挂到所触及的前提上；方法类标明为何挂不上三轴。</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>条目</th>
+<th>类型</th>
+<th>挂哪条前提 / 为何放不下</th>
+<th>一句话</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FaceGAN 谱界</strong></td>
+<td>发现</td>
+<td>轴 C「因果化只损失依赖未来的信号」→ <strong>补充</strong>新损失：即使不依赖未来，因果+每步新噪声也有平滑↔新信息上限</td>
+<td>σ²∞≤ε^δ；Q6</td>
+</tr>
+<tr>
+<td><strong>CSF λ 消融</strong></td>
+<td>发现</td>
+<td>「长程方法提升了质量」→ <strong>部分推翻</strong>（用动态度换一致性）</td>
+<td>第 3 个同向数据点（SGF/RMD/CSF）</td>
+</tr>
+<tr>
+<td><strong>CRP / Optica</strong></td>
+<td>发现（非蒸馏）</td>
+<td>「因果教师只能从双向模型来」→ <strong>推翻</strong></td>
+<td>VBench 82.78；转文献追踪</td>
+</tr>
+<tr>
+<td><strong>Omni-Diffusion-Distill</strong></td>
+<td>方法（离散）</td>
+<td>连续扩散三轴放不下</td>
+<td>再出现 1–2 篇则开「离散」格</td>
+</tr>
+<tr>
+<td><strong>Seq-Drifting / ReSFlow</strong></td>
+<td>方法（离散一步）</td>
+<td>同左；挂 L2「DMD=核均值漂移」前提旁</td>
+<td>摘要级</td>
+</tr>
+<tr>
+<td><strong>ForcingBooster</strong></td>
+<td>停止策略</td>
+<td>不训生成器；挂「流式推理计算」</td>
+<td>打不过等时间均匀 2 步</td>
+</tr>
+<tr>
+<td><strong>Channel Match</strong></td>
+<td>发现</td>
+<td>「学生匹配本阶段教师就够」→ 级联/长 rollout 中<strong>潜变量逐通道漂移</strong>伤下游</td>
+<td>与 LongForcing Fig.2 同向</td>
+</tr>
+<tr>
+<td><strong>TraceSampler</strong></td>
+<td>求解器校正</td>
+<td>「步数压缩必须改生成器」的反例</td>
+<td>冻结模型、学校正</td>
+</tr>
+<tr>
+<td><strong>Speculative Sampling</strong></td>
+<td>推理范式</td>
+<td>「流式必须做因果蒸馏」前提的挑战</td>
+<td>噪声占位+缓存；未精读</td>
+</tr>
+<tr>
+<td><strong>Velocity Corrector</strong></td>
+<td>边界</td>
+<td>可挂 L1×on-policy×外部目标；若强调「不改主干」则像外挂求解器</td>
+<td>已挂 L1，此处备忘</td>
+</tr>
+<tr>
+<td><strong>Sonic-AMG</strong></td>
+<td>非蒸馏</td>
+<td>rehearsal=短 self-rollout 监督</td>
+<td>转文献追踪</td>
+</tr>
+<tr>
+<td><strong>WorldRIDE</strong></td>
+<td>重做</td>
+<td>奖励加权 DMD，+0.2 单种子</td>
+<td>不改决定</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class=""><h2 id="各线最强基线变化vs-lineage-l1l5">各线最强基线变化（vs lineage L1–L5）</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>线</th>
+<th>Q3 / 周初最强（lineage）</th>
+<th>本周更新</th>
+<th>协议注意</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L1 轨迹</strong></td>
+<td>多样性来源（DUET 高噪专家）；单独画质不足</td>
+<td><strong>PTD</strong> Wan-14B VBench 84.57（PDD 复现 83.67 偏弱⚠️）；<strong>SMD</strong> FLUX GenEval 0.715 / Qwen-Image 0.873（部分或来自等效 CFG）<span class="b b-orig">原文</span></td>
+<td>协议不可与 VBench 直接混比</td>
+</tr>
+<tr>
+<td><strong>L2 分布·双向视频</strong></td>
+<td>PDMD 83.73 / DMAD 84.70（协议不同⚠️）</td>
+<td><strong>DMAD 14B VBench 85.15</strong><span class="b b-orig">原文</span>；PMDD data-free SD1.5 三步 FID 7.76</td>
+<td>DMAD 升必读·先跑</td>
+</tr>
+<tr>
+<td><strong>L2 流式长时</strong></td>
+<td>无同协议；RMD/SGF 各说各话</td>
+<td><strong>AGF</strong> 同协议（3 sink+9 rolling）60s Total 81.47、240s Q5 84.82；但相对 <strong>SGF 底座仅 +0.75</strong><span class="b b-orig">原文+更正</span></td>
+<td>单次运行；CMD/Rolling 不在对比</td>
+</tr>
+<tr>
+<td><strong>L3 对抗</strong></td>
+<td>DMAD（教师头+真实头）</td>
+<td>机制澄清 + 代码谱归一化；AV 同步短板坐实</td>
+<td>FaceGAN 为无蒸馏并行线（motion latent）</td>
+</tr>
+<tr>
+<td><strong>额外真实 / 无教师一步</strong></td>
+<td>（空；越过教师靠 GAN）</td>
+<td><strong>Priming-L IN-256 一步 FID 1.19</strong> / recall 0.649（vs WF-XL/2 1.33）<span class="b b-orig">原文</span></td>
+<td>像素空间；T2I 未与 4 步蒸馏比</td>
+</tr>
+<tr>
+<td><strong>轴 C / K1</strong></td>
+<td>双向打分一律错</td>
+<td><strong>边界</strong>：强条件（UniGVC）可保留双向</td>
+<td>弱条件仍换因果</td>
+</tr>
+<tr>
+<td><strong>FaceGAN / Q6</strong></td>
+<td>新增于 10-10</td>
+<td>谱界 + 玩具验证维持；chunk 级迁移仍⚠️</td>
+<td>需「平滑噪声 vs iid」对照</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class=""><h2 id="开放问题进展">开放问题进展</h2>
+<p>对照 primer §9 / lineage Q1–Q6：</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>编号</th>
+<th>进展</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Q1 / S3</strong>（打分上下文）</td>
+<td><strong>边界更新</strong>：UniGVC 表明强条件下双向教师可接受；弱条件证据链（CMD/Salt++/RMD）不变。仍缺同协议三方对比。</td>
+</tr>
+<tr>
+<td><strong>Q6</strong>（一致性↔动态度）</td>
+<td><strong>机制候选坐实</strong>：FaceGAN 谱界 + CSF λ + SGF DD；chunk 级迁移仍为<span class="b b-inf">推断</span>。</td>
+</tr>
+<tr>
+<td><strong>Q5 / A5</strong>（真实数据越过教师）</td>
+<td>Priming：无教师也能一步强；DMAD：AV Total 升但<strong>同步未超</strong>教师/DMD2 → A5 仍部分。</td>
+</tr>
+<tr>
+<td><strong>Q2 / S4</strong>（多样性首步决定）</td>
+<td>Glance「1 条轨迹够用」侧面支持初始化只定几何、质量由 DMD 定<span class="b b-inf">推断</span>。</td>
+</tr>
+<tr>
+<td><strong>Q3</strong>（少步本身不贵）</td>
+<td>PAC 仍是主证据；本周无新冲击。</td>
+</tr>
+<tr>
+<td><strong>Q4</strong>（critic 误差）</td>
+<td>PMDD：前缀分布固定降低 fake 方差，与「critic 追移动靶」同向；AGF：fake 吃 replay。</td>
+</tr>
+<tr>
+<td><strong>A1</strong>（反向 KL 先伤哪模态）</td>
+<td>无新受控实验。</td>
+</tr>
+<tr>
+<td><strong>A6</strong>（谱界迁扩散少步）</td>
+<td>问题提出并挂 Q6；<strong>未做视频对照</strong>。</td>
+</tr>
+<tr>
+<td><strong>S1</strong>（窗口边际约束长时）</td>
+<td>LongForcing 用长教师整段，未回答反例；RMD 反向答法仍在。</td>
+</tr>
+<tr>
+<td><strong>S5</strong>（截断梯度）</td>
+<td>CSF 把梯度送回历史生成；λ 显示动态度代价。</td>
+</tr>
+<tr>
+<td><strong>G1</strong>（超教师来源分解）</td>
+<td>SMD/Priming/DMAD 均提示需拆 CFG / 真实数据 / 讨好指标；本周无干净分解实验。</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class=""><h2 id="下周要先跑的对照便宜可排期">下周要先跑的对照（便宜、可排期）</h2>
+<ol>
+<li><strong>PMDD 旋钮 → 流式：</strong> 同 Self-Forcing 底座，历史 = ①当前学生 / ②每 N 步冻结快照 / ③EMA；量 fake loss 方差、5s 质量、60s 漂移。<span class="b b-inf">推断迁移</span></li>
+<li><strong>Priming 后训练 vs DMD2 GAN 头：</strong> 已有少步学生上，+几千步特征 Sinkhorn（真实数据）vs +同步数 DMD2 GAN；量 FD-DINOv2 + recall。</li>
+<li><strong>DMAD AV 同步：</strong> 同 H3、4 步：①DMD2 ②DMAD 仅教师头 ③完整 DMAD；量 WER、SyncNet/AV 同步、Lip、人评。</li>
+<li><strong>AGF 收窄主张：</strong> 同 init≥2 种子：①SGF 底座 ②①+首步正则（高斯同 RMS）③①+对抗历史无正则 ④完整 AGF；或先做一次 VJP 诊断定向扰动是否更伤。</li>
+<li><strong>UniGVC 边界：</strong> 强/弱条件分组，双向打分 vs 因果前缀（口型区域 vs 文生视频）。</li>
+<li><strong>FaceGAN→chunk：</strong> 同样采样预算，iid chunk 噪声 vs 预采后平滑；报 DD + Subject Consistency。</li>
+<li><strong>SMD CFG 对照：</strong> λ=0 且教师 CFG=w/(1−λ) vs 完整 SMD（零成本）。</li>
+</ol>
+<hr />
+</section><section class=""><h2 id="本周日报链接">本周日报链接</h2>
+<ul>
+<li><a href="../daily/2026-10-10.html">2026-10-10</a> — FaceGAN / PTD / DSI / CSF；预测 8/11</li>
+<li><a href="../daily/2026-10-12.html">2026-10-12</a> — 无新公告</li>
+<li><a href="../daily/2026-10-13.html">2026-10-13</a> — UniGVC / ForcingBooster / Velocity Corrector；6/8</li>
+<li><a href="../daily/2026-10-14.html">2026-10-14</a> — arXiv 静默</li>
+<li><a href="../daily/2026-10-15.html">2026-10-15</a> — SMD / AGF / LongForcing / WorldRIDE；11/14，累计 47/61</li>
+<li><a href="../daily/2026-10-16.html">2026-10-16</a> — Priming / PMDD / DMAD 复评 / AGF 更正；11/18，累计 <strong>58/79</strong></li>
+</ul>
+<p>相关：<code>method.md</code> v1.4；<code>lineage.md</code>；<a href="../baseline.html">Q3 基线</a>。</p></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-16 17:20 (UTC+8)</div></main></div>
+<script>
+(function(){
+ // 详情卡片全部展开/收起
+ document.querySelectorAll('[data-act]').forEach(function(b){b.addEventListener('click',function(){
+   var o=b.getAttribute('data-act')==='open';document.querySelectorAll('details.card').forEach(function(d){d.open=o;});});});
+ // 点击目录中位于折叠卡片内的锚点时自动展开
+ function openFor(id){var el=document.getElementById(id);if(!el)return;var d=el.closest('details');if(d)d.open=true;}
+ if(location.hash)openFor(decodeURIComponent(location.hash.slice(1)));
+ window.addEventListener('hashchange',function(){openFor(decodeURIComponent(location.hash.slice(1)));});
+ // 目录高亮
+ var links=[].slice.call(document.querySelectorAll('nav.toc a'));
+ var heads=links.map(function(a){return document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));});
+ function hl(){var y=window.scrollY+80,k=-1;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top+window.scrollY<=y&&h.offsetParent!==null)k=i;});
+   links.forEach(function(a,i){a.classList.toggle('on',i===k);});}
+ window.addEventListener('scroll',hl,{passive:true});hl();
+})();
+</script><script>if(document.querySelector('code.language-mermaid')){var s=document.createElement('script');
+s.src='https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';s.onload=function(){document.querySelectorAll('code.language-mermaid').forEach(function(c){var d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentNode.replaceWith(d);});mermaid.initialize({startOnLoad:false});mermaid.run();};document.head.appendChild(s);}</script></body></html>
