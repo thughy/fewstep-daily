@@ -73,6 +73,10 @@ details.card>.body{padding:4px 18px 10px}
 <li><a href="#需要主-bot-做的事我改不了">需要主 bot 做的事（我改不了）</a></li>
 </ul>
 </li>
+<li><a href="#补扫10-18-下午北京时间批次台账-f6-回放-fri-16-精读-or-积压分诊-召回重算">补扫（10-18 下午，北京时间）：批次台账 · F6 回放 · Fri 16 精读 · OR 积压分诊 · 召回重算</a><ul><li><a href="#①-批次台账batchesmd按-arxiv-实际公告日回填">① 批次台账（`batches.md`，按 arXiv 实际公告日回填）</a></li><li><a href="#②-f6screenpy-v2-金标回放">② F6：screen.py v2 金标回放</a></li><li><a href="#③-fri-16-批次卡片">③ Fri 16 批次卡片</a></li><li><a href="#④-精读-one-forcing必读先跑">④ 精读 · One-Forcing（必读·先跑）</a></li><li><a href="#⑤-精读-routed-forcing必读先跑">⑤ 精读 · Routed Forcing（必读·先跑）</a></li><li><a href="#⑥-or-积压分诊全表-or-triage-2026-10-18md">⑥ OR 积压分诊（全表 `or-triage-2026-10-18.md`）</a></li><li><a href="#⑦-召回重算rl-同事回转-17-条-文献同事转来-14-条">⑦ 召回重算（RL 同事回转 17 条 + 文献同事转来 14 条）</a></li><li><a href="#⑧-对我们训练的含义">⑧ 对我们训练的含义</a></li><li><a href="#⑨-缺口-未核实">⑨ 缺口 / 未核实</a></li>
+<li><a href="#结论先行_2">结论先行</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div></nav>
@@ -467,7 +471,7 @@ details.card>.body{padding:4px 18px 10px}
 <li>ReState <a href="https://arxiv.org/abs/2610.21287">2610.21287</a>（少步扩散的免训练物体移除，应用类）、FlowBudget <a href="https://arxiv.org/abs/2610.20636">2610.20636</a>（流匹配采样预算估计，外围）→ 摘要级</li>
 </ul>
 </li>
-<li><strong>10-12 到 10-15 的 arXiv 批次</strong>：拿文献同事的 shortlist 和 recall-report、RL 同事 read-log、HF Daily（我和同事抓的）合起来对账。没在我任何文件里出现、但标题像「范围内」的共 28 条，人工看过后<strong>都不是少步蒸馏</strong>（LLM OPD、agent 自蒸馏、GUI 等），只有 LightVAE <a href="https://arxiv.org/abs/2610.14726">2610.14726</a>（流式延迟相关的 VAE，不是蒸馏）和 Demiurge <a href="https://arxiv.org/abs/2610.14685">2610.14685</a>（AR 视频重渲染，归文献同事）擦边。<strong>这 4 天 arXiv 的外部召回没有发现漏检</strong>。</li>
+<li><strong>10-12 到 10-15 的 arXiv 批次</strong>：拿文献同事的 shortlist 和 recall-report、RL 同事 read-log、HF Daily（我和同事抓的）合起来对账。没在我任何文件里出现、但标题像「范围内」的共 28 条，人工看过后<strong>都不是少步蒸馏</strong>（LLM OPD、agent 自蒸馏、GUI 等），只有 LightVAE <a href="https://arxiv.org/abs/2610.14726">2610.14726</a>（流式延迟相关的 VAE，不是蒸馏）和 Demiurge <a href="https://arxiv.org/abs/2610.14685">2610.14685</a>（AR 视频重渲染，归文献同事）擦边。~~这 4 天 arXiv 的外部召回没有发现漏检~~ <strong>这句不对，已在下文「补扫 · 召回重算」中更正：Wed 14 批有 2 条范围内漏检（17080、18607），丢在「命中但没留痕」这一步</strong>。</li>
 <li>
 <p><strong>OpenReview ICLR'27（结构性盲区，规模最大）</strong>：文献同事 10-16 抓到的 690 条里，按「少步 / Forcing / DMD / 蒸馏」关键词筛出 <strong>113 条</strong>。按名称粗比对，<strong>我的文件里只出现过约 21 条</strong>，约 90 条从没见过。很多可能早就上了 arXiv，只是我按 ID 记、没按名字记，所以这个数字偏高。蒸馏核心、最该先排查的有：</p>
 <ul>
@@ -550,8 +554,305 @@ details.card>.body{padding:4px 18px 10px}
 <ul>
 <li><strong>例行任务提示词</strong>（automation-1791627156478）不在 box 上，我没读到也没改。请把 F1、F2、F4、F5 写进日报和周报两个例行任务：先做批次台账和完整性检查，再读 OR 和同事候选单，最后补扫。</li>
 <li>请把 F5 的转发请求带给文献同事和 RL 同事（凡是 Forcing、少步、DMD、蒸馏的条目，摘要级也转）。</li>
-</ul></section>
-<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-18 11:13 (UTC+8)</div></main></div>
+</ul>
+<hr />
+</section><section class=""><h2 id="补扫10-18-下午北京时间批次台账-f6-回放-fri-16-精读-or-积压分诊-召回重算">补扫（10-18 下午，北京时间）：批次台账 · F6 回放 · Fri 16 精读 · OR 积压分诊 · 召回重算</h2>
+<h3 id="结论先行_2">结论先行</h3>
+<ul>
+<li><strong>今天新增 2 篇「必读·先跑」，都是 AV / 流式训练侧</strong>：<ul>
+<li><strong>One-Forcing</strong>（arXiv <a href="https://arxiv.org/abs/2605.23458">2605.23458</a> / OR <code>37O3twXHM5</code>）：逐帧 1 步 Self-Forcing + DMD，再加真实数据 GAN 头，VBench 83.76，高于 SF 4 步的 83.46（含 FFE），代码和权重都已开源。</li>
+<li><strong>Routed Forcing</strong>（<a href="https://arxiv.org/abs/2609.30963">2609.30963</a>）：DFD（real score 改在真实视频上查询）只在「非嘴部人体区域 × 高噪声段」生效。同协议下，两套测试集 10 项指标全部超过 DynaForcing、Reward Forcing、DFD，RAFT 动态度 +39% / +46%。没有代码。</li>
+</ul>
+</li>
+<li><strong>跨篇规律（今天第三次独立出现）</strong>：真实数据或特征监督只在高噪声段有用，低噪声段会糊或者有害（FocusOPD Front-20/40%、DUET、Routed Forcing）。</li>
+<li><strong>F6 回放</strong>：金标召回 v1 和 v2 都是 11/11。最差情况进前 30：v1 10/11，v2 11/11。Speculative Forcing 在 v1 排 29–84/143，v2 排 1/78。属于样本内结果，留出集排名见下。</li>
+<li><strong>OR 积压</strong>：共 186 条（OR 168 个唯一标题 + 两位同事转来的条目，去重后）。<strong>必读候选 8／值得看 100／不相关 78</strong>。8 条里能精读的只有 2 条（One-Forcing、Routed Forcing），其余 6 条只有 OR 版，PDF 被 Cloudflare 挡住，已进观察名单。</li>
+<li><strong>召回更正</strong>：之前说「10-12～10-15 没有漏检」，这不对。Wed 14 批有 2 条范围内漏检（<a href="https://arxiv.org/abs/2610.17080">2610.17080</a>、<a href="https://arxiv.org/abs/2610.18607">2610.18607</a>，都是外围，丢在「正则命中但没留痕」这一步）。10-12～10-16 外部召回在周报时点是 9/13 = 69%，补扫之后 13/13。新增修复 F8：日报写「已读未收」清单。</li>
+<li><strong>预测累计</strong>：78/106 = 74%（今天 FocusOPD 5/5、flow map 4/5、One-Forcing 4/5、Routed Forcing 3/6）。One-Forcing 和 Routed 都有低估，当天已复评上调。</li>
+</ul>
+<details class="card" open="open">
+<summary id="①-批次台账batchesmd按-arxiv-实际公告日回填">① 批次台账（`batches.md`，按 arXiv 实际公告日回填）</summary>
+<div class="body">
+<div class="tw"><table>
+<thead>
+<tr>
+<th>列表日</th>
+<th>抓取（北京时间）</th>
+<th>去重条数</th>
+<th>v1 命中</th>
+<th>v2 命中</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fri 9 Oct</td>
+<td>10-10 18:32</td>
+<td>1,059</td>
+<td>161*</td>
+<td>90</td>
+<td>done（10-10）</td>
+</tr>
+<tr>
+<td>Mon 12 Oct</td>
+<td>10-13 09:17</td>
+<td>786</td>
+<td>137*</td>
+<td>76</td>
+<td>done（10-13）</td>
+</tr>
+<tr>
+<td>Tue 13 Oct</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>当天没有列表（/recent 只有 12 和 14）</td>
+</tr>
+<tr>
+<td>Wed 14 Oct</td>
+<td>10-15 09:19</td>
+<td>2,827</td>
+<td>432*</td>
+<td>193</td>
+<td>done（10-15）</td>
+</tr>
+<tr>
+<td>Thu 15 Oct</td>
+<td>10-16 09:21</td>
+<td>988</td>
+<td>150*</td>
+<td>76</td>
+<td>done（10-16）</td>
+</tr>
+<tr>
+<td>Fri 16 Oct</td>
+<td>10-18 11:06</td>
+<td>970</td>
+<td>143*</td>
+<td>78</td>
+<td><strong>done（迟到，10-18 补扫）</strong>，延迟约 51 h</td>
+</tr>
+</tbody>
+</table></div>
+<p>* v1 的 <code>NFE</code> 没有加词边界，会误命中 inference / conference，所以命中数偏高。结构性问题：列表实际上线时间晚于 09:12 的运行时间（Fri 16 是 10:33 上线），所以每份日报报的其实是前一天的批次；而周五批次后面没有下一次运行。修复方案二选一：改到 11:00 以后跑，或者保留 09:12、改成以台账驱动。</p>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="②-f6screenpy-v2-金标回放">② F6：screen.py v2 金标回放</summary>
+<div class="body">
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文</th>
+<th>批次</th>
+<th>v1 排名</th>
+<th>v2 排名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Speculative Forcing</td>
+<td>Fri 16</td>
+<td>29–84 / 143</td>
+<td><strong>1 / 78</strong></td>
+</tr>
+<tr>
+<td>AGF</td>
+<td>Wed 14</td>
+<td>8–23 / 432</td>
+<td>2–3 / 193</td>
+</tr>
+<tr>
+<td>SMD</td>
+<td>Wed 14</td>
+<td>5–7</td>
+<td>5–9</td>
+</tr>
+<tr>
+<td>DMAD</td>
+<td>Thu 15</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>PMDD</td>
+<td>Thu 15</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Priming</td>
+<td>Thu 15</td>
+<td>9–25</td>
+<td>9–11</td>
+</tr>
+<tr>
+<td>PAC</td>
+<td>Fri 9</td>
+<td>9–13</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Uncertainty DMD / DynaForcing / PDMD / DUET（Q3 必读，注入 Fri 16 批）</td>
+<td>—</td>
+<td>1 / 1–5 / 1–5 / 1</td>
+<td>1 / 1 / 2–5 / 2–5</td>
+</tr>
+</tbody>
+</table></div>
+<p>排名写成区间，是因为同分并列。召回 11/11 → 11/11；最差情况进前 30：10/11 → 11/11。<strong>注意：这是样本内结果</strong>，金标集参与了选词。留出集（v2）：ForcingBooster 1、RepForcing 1、LongForcing 4、Glance 4、UniGVC 4–6、MB-DMD 4–6、Velocity Corrector 7–10、FocusOPD / flow map 7–10。v2 新召回：Speculative Sampling <a href="https://arxiv.org/abs/2610.20556">2610.20556</a>、SoftCache <a href="https://arxiv.org/abs/2610.22369">2610.22369</a>、Dino Forcing Flow Models <a href="https://arxiv.org/abs/2610.11751">2610.11751</a>、Heuristics caching <a href="https://arxiv.org/abs/2610.16545">2610.16545</a>、TrajCFG <a href="https://arxiv.org/abs/2610.14153">2610.14153</a>。v2 去掉的 74 条全部是 NFE 子串误命中。另外，<strong>Routed Forcing 能被 v2 的 <code>\w+ forcing</code> 召回</strong>；Q3 调研就是因为正则太窄漏掉了它。</p>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="③-fri-16-批次卡片">③ Fri 16 批次卡片</summary>
+<div class="body">
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文</th>
+<th>格</th>
+<th>评级</th>
+<th>一句话</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FocusOPD <a href="https://arxiv.org/abs/2610.21250">2610.21250</a></td>
+<td>O（on-policy 回归，不减步）</td>
+<td><strong>值得看（外围）</strong>：新发现（弱）× 存疑；v1.4 不满足</td>
+<td>多教师 OPD，加上「后 12 块 × 前 40% 步」的特征对齐（λ=0.3）。GenEval 0.953→0.967，但在 dev 集上 Pick / ImgR / OCR 反而略降。全轨迹做特征监督没有增益，Front-20% 是 0.959。Z-Image 的 DanceOPD 基线看起来没训够。没有代码<span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td>Flow map 稳定性 <a href="https://arxiv.org/abs/2610.20674">2610.20674</a></td>
+<td>L1（分析已有目标）</td>
+<td><strong>值得看</strong>：新发现（理论）× 站得住（小尺度）</td>
+<td>MeanFlow / Lagrangian 的梯度流收敛，但普通 GD 可能发散；用 p≥0.5 的归一化可以让更新有界。CIFAR 1 步 FID：p=0 是 10.62，p=0.75 是 5.46；最优 p 在 6 个设置里有 5 个落在 [0.75, 1]。p=1.5 在 FFHQ 上发散。MeanFlow 优于 Lagrangian。3 个种子，没有代码。和 <a href="https://arxiv.org/abs/2609.16222">2609.16222</a> 的定理 1 有重叠<span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td>ReState <a href="https://arxiv.org/abs/2610.21287">2610.21287</a></td>
+<td>应用</td>
+<td>值得看·应用（摘要级）</td>
+<td>少步模型第一次前向就在 mask 内把内容定型，后续步改不动。和 Uncertainty DMD 的首 chunk 前提同向</td>
+</tr>
+<tr>
+<td>FlowBudget <a href="https://arxiv.org/abs/2610.20636">2610.20636</a></td>
+<td>外围</td>
+<td>不相关（摘要级）</td>
+<td>多步求解器的 NFE 预算估计</td>
+</tr>
+<tr>
+<td>TRAC <a href="https://arxiv.org/abs/2610.02779">2610.02779</a>（替换版）</td>
+<td>推理格</td>
+<td>值得看</td>
+<td>见「回复文献同事」：调度本体迁移不到少步，「首 chunk 加预算」和 SSC 可以迁移</td>
+</tr>
+</tbody>
+</table></div>
+<p>Codex 盲分类 2/2 一致：FocusOPD = O，flow map = L1<span class="b b-codex">Codex✓</span>。预测：FocusOPD 5/5，flow map 4/5，两篇按格都 ✓。</p>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="④-精读-one-forcing必读先跑">④ 精读 · One-Forcing（必读·先跑）</summary>
+<div class="body">
+<ul>
+<li><strong>等价形式</strong>：在 Self-Forcing 上套 DMD2 配方。critic 是 fake-score 主干，在第 21、29 层接序列级判别头，对比真实数据 latent 和学生 rollout（softplus GAN）。generator 损失 = DMD（14B teacher，CFG 5）+ 0.03 × GAN，更新比 5:1。逐帧 1 步（<code>denoising_step_list [1000]</code>），<strong>不需要 R1/R2</strong>（chunkwise 配置才需要 r1 1.0 / r2 0.001）。初始化用 Causal Forcing ODE，训练 200 步，8×H100 约 1 h【代码 <code>model/one_forcing.py</code> c9a2350】。</li>
+<li><strong>证据</strong>：VBench 83.76，对比 ASD 79.12、CF 1 步 78.39、SF 1 步 77.18、SF 4 步 83.46。去掉 FFE（首块走 4 步）后是 80.69。只用 DMD 时 75.27 vs 80.36。20 s 时 78.52 vs 75.30。recall 0.457→0.711。端到端含 VAE 提速 1.87×（H200，4.13 s vs 7.72 s）。CD 初始化 Dynamic 23.61，ODE 初始化 52.76<span class="b b-orig">原文</span>。</li>
+<li><strong>和最接近工作的差别</strong>：APT2 / 对抗后训练是<strong>用对抗替代 DMD</strong>，这里是 DMD 加上真实数据判别头；Self-Forcing 1 步没有真实数据项，并且是 chunkwise。</li>
+<li><strong>预测</strong> 4/5（①低估）。按格 ✗：我原以为逐帧 1 步训练会不稳定，实际很稳。Codex：L4 = L2 + L3<span class="b b-codex">Codex✓</span>。</li>
+<li><strong>评级</strong>：必读·先跑，满足 v1.4 (a)+(b)。原创性：新发现（中）。可信度：「超过 4 步」这一条存疑（协议混用、含 FFE、单样本）。</li>
+</ul>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="⑤-精读-routed-forcing必读先跑">⑤ 精读 · Routed Forcing（必读·先跑）</summary>
+<div class="body">
+<ul>
+<li><strong>等价形式</strong>：d = x̂_fake(z_s) − [(1−A)·x̂_T(z_s) + A·x̂_T(z_r)]，其中 A = M_person·1[t≥τ]，z_r 是<strong>同一个 ε</strong> 加噪的条件匹配真实视频。从 SF 训练 1000 步的检查点出发，再训练 200 步。OmniAvatar-14B → LiveTalk-1.3B，4 步，块大小 3<span class="b b-orig">原文 §3–4</span>。</li>
+<li><strong>因果逻辑</strong>：DMD 的 reverse KL 偏向找众数（mode-seeking）→ 多样性损失集中在非嘴部的人体区域（−37.9%，嘴部 −10.4%，背景 −1.4%）。高噪声段 ‖z_s − z_r‖/σ = √SNR·‖x_s − x_r‖ 很小，所以用真实视频注入运动模式；低噪声段两者布局差异大，会糊，因此低噪声段交还给 DMD。</li>
+<li><strong>证据</strong>：同初始化、同数据、同种子（表 1）。SpeakerVid 上 FID 27.17→25.43，RAFT 5.62→7.80，Sync-C 4.03→4.07；全局 DFD 的 RAFT 是 5.47，反而低于 SF。消融：只加噪声路由就到 RAFT 7.50（但 Sync-D 变差到 11.02），只加区域路由 6.27，两者叠加最好。τ 扫了 Top-25/50/75%，Top-75% 后期质量崩溃<span class="b b-orig">原文</span>。没有代码。</li>
+<li><strong>和最接近工作的差别</strong>：DFD 是全局、50% 随机混合；DUET 按噪声时间分工覆盖和锐化，但不用真实视频；DynaForcing 把真实片段放在 rollout 起点，打分仍在学生样本上。</li>
+<li><strong>预测</strong> 3/6（①②③ 都低估），按格无法判定（只测了 5 s）。Codex：主类 L2，我判的是 L4；分歧只在真实数据项要不要单独算一个分量。</li>
+<li><strong>评级</strong>：必读·先跑，满足 v1.4 (b)：同协议打赢最强基线。原创性：新发现（中）。可信度：基本站得住（单次训练，每套测试集 100 条视频）。</li>
+</ul>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="⑥-or-积压分诊全表-or-triage-2026-10-18md">⑥ OR 积压分诊（全表 `or-triage-2026-10-18.md`）</summary>
+<div class="body">
+<p>口径：4 个 OR 文件合并后共 864 条，按关键词去重得到 168 个唯一标题，再加 RL 同事回转的 17 条、文献同事转来的 14 条，去重后共 186 条。第一遍用 Codex CLI 批量判（只读、不给凭据），我抽查后做最终定级，和 Codex 一致 174/185。arXiv 孪生版：168 条里匹配到 95 条。
+<strong>必读候选 8／值得看 100／不相关 78。</strong></p>
+<ul>
+<li>必读候选：One-Forcing ✔精读、Routed Forcing ✔精读；On-Policy Forcing、ViDA、Rethinking SF-DMD、Mass Forcing、RaMP、History Dropout（这 6 条只有 OR 版，等 arXiv）。</li>
+<li>Henry 点名的 5 条：One-Forcing → 必读·先跑；RaMP、Rethinking SF-DMD → 必读候选（只有 OR）；Aligning the Clocks → 值得看（摘要自称初步结果，证据弱）；OmniOPD → 值得看（O 格：把 AV 的 RL 教师 OPD 合并，不减步，和 RL 同事交叉）。</li>
+<li>我改动 Codex 判定的地方：One-Forcing、Routed 由 WORTH 升级（摘要里没写对比，全文才有）；Mass Forcing、RaMP 升级；Elastic / Causal Forcing 是已覆盖的基线，降级；OmniOPD、17080、Kandinsky S2V、Wave Forcing 由 NO 改为值得看。</li>
+<li>不相关的去向：KV / 量化 / 注意力 / 记忆类 → 文献同事；RL 类 → RL 同事；其余是非视频或非生成的。</li>
+</ul>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="⑦-召回重算rl-同事回转-17-条-文献同事转来-14-条">⑦ 召回重算（RL 同事回转 17 条 + 文献同事转来 14 条）</summary>
+<div class="body">
+<ul>
+<li>RL 同事的 17 条里，<strong>9 条其实已经在我的日报里</strong>（14654、14657、16036、16252、17434、18552、19290、19327、20556）。真正没有记录的 8 条：<ul>
+<li><strong>范围内 2 条（漏检）</strong>：17080（UMM 少步 self-rollout）、18607（PrismCodec 一步 DiT 解码器）。都在 Wed 14 批，v1 已经命中（排名 52 / 15），丢在 <strong>S3：读了标题但没留判定</strong>。</li>
+<li><strong>按分工不属于我 4 条</strong>：14568 FrameFold、15324 TempoKV、17914 LinMorph、17141 MARS（同样没留痕）。</li>
+<li><strong>Fri 16 批 2 条</strong>：22369 SoftCache（v1 正则漏）、21657 CMF。今天补扫已覆盖。</li>
+</ul>
+</li>
+<li><strong>10-12～10-16 外部召回：周报时点 9/13 = 69%（目标 ≥ 95%），补扫之后 13/13。</strong> 正则阶段漏了 2 条（20556、22369），v2 都能召回。</li>
+<li>另外两个召回缺口：Routed Forcing（Q3 只按标题筛 + 正则太窄）、One-Forcing（Q3 没筛 replacement 版本）。</li>
+<li><strong>新增 F8</strong>：日报末尾写「已读未收」清单（ID｜理由｜归属）；周度对账时，同事回转清单逐条进 <code>batches.md</code>。详见 postmortem 文末。</li>
+</ul>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="⑧-对我们训练的含义">⑧ 对我们训练的含义</summary>
+<div class="body">
+<div class="tw"><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>含义</th>
+<th>要跑的对照</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>流式 AR</td>
+<td>①One-Forcing：逐帧 1 步 + 真实数据 GAN 头，可能让我们不再需要 4 步部署。②Speculative Forcing 的逐 token 早停，可以和「首块多给步数」组合（One-Forcing 的 FFE、TRAC 的首 chunk 预算，三篇结论一致）</td>
+<td>One-Forcing 1 步 vs SF 4 步，等墙钟（含 VAE），分别测有 / 无 FFE，60 s 漂移，2 个种子</td>
+</tr>
+<tr>
+<td>AV / 数字人</td>
+<td>Routed Forcing 可以直接搬到我们的 AV 学生上：训练片段本身就是条件匹配的真实视频，加上人体 / 嘴部 mask，从 SF 检查点再训 200 步。One-Forcing 的判别器需要 AV 真实数据，要盯住音画同步</td>
+<td>①只加噪声路由（不要 mask，更通用）vs ②噪声 + 区域路由 vs ③SF，测 RAFT、Sync-C / D、FID，并补上 60 s 漂移（论文只测了 5 s）</td>
+</tr>
+<tr>
+<td>图像</td>
+<td>flow map 训练的自适应权重取 p∈[0.5, 1]，MeanFlow 优于 Lagrangian；有界不等于收敛</td>
+<td>我们的 sCM / MeanFlow 设置下扫 p，单次实验</td>
+</tr>
+<tr>
+<td>通用</td>
+<td>真实数据或特征监督只放在高噪声段（今天三篇独立印证）</td>
+<td>在现有 DMD 加真实数据项的实验里，加一个按噪声段开关的消融</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="⑨-缺口-未核实">⑨ 缺口 / 未核实</summary>
+<div class="body">
+<ul>
+<li>只有 OR 版的 6 条必读候选没法精读：OR 的 PDF 返回 403 ChallengeRequired，没有绕过。</li>
+<li>Routed Forcing 没有代码，核心损失链无法在代码里核对；FocusOPD 和 flow map 也都没有代码。</li>
+<li>已经在 <code>backlog-2026-10-18/answers-to-lit.md</code> 里回复了文献同事的问题（Speculative Forcing 对 rCM / CD 学生是否成立、TRAC 能否迁移、Delta / Mass / DeForcing / TempoTrack / CAVC / Aligning the Clocks 的定级），由父 agent 转发；我没有给任何人发消息。</li>
+</ul>
+</div>
+</details></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-18 11:46 (UTC+8)</div></main></div>
 <script>
 (function(){
  // 详情卡片全部展开/收起
