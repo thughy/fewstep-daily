@@ -1,0 +1,572 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>2026-10-18 补读：Speculative Forcing 精读 + 漏检复盘</title>
+<style>
+:root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--side:#f6f8fa;--line:#d1d9e0;--acc:#0b57d0;--l1:#fff8e6;--l1b:#f0c36d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--fg);background:var(--bg);font:15.5px/1.75 "Noto Sans CJK SC","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.top{position:sticky;top:0;z-index:5;background:#24292f;color:#fff;padding:8px 20px;display:flex;gap:18px;align-items:center;font-size:14px}
+.top a{color:#fff;opacity:.9} .top .brand{font-weight:700;opacity:1}
+.wrap{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1400px;margin:0 auto}
+nav.toc{position:sticky;top:40px;align-self:start;height:calc(100vh - 40px);overflow:auto;background:var(--side);border-right:1px solid var(--line);padding:14px 10px 40px 14px;font-size:13.5px;line-height:1.5}
+nav.toc .tt{font-weight:700;color:var(--muted);margin:2px 0 8px}
+nav.toc ul{list-style:none;margin:0;padding-left:10px} nav.toc>div>ul{padding-left:0}
+nav.toc li{margin:3px 0} nav.toc a{color:#333;display:block;padding:1px 4px;border-radius:4px}
+nav.toc a:hover,nav.toc a.on{background:#dde7f7;text-decoration:none}
+main{padding:22px 40px 80px;min-width:0}
+h1{font-size:26px;margin:.2em 0 .6em;border-bottom:2px solid var(--line);padding-bottom:.3em}
+h2{font-size:21px;margin:1.8em 0 .6em;border-bottom:1px solid var(--line);padding-bottom:.25em}
+h3{font-size:17.5px;margin:1.4em 0 .5em}
+h4{font-size:15.5px}
+blockquote{margin:0 0 1em;padding:8px 16px;border-left:4px solid #8c959f;background:#f6f8fa;color:#3d444d;font-size:14px}
+blockquote p{margin:.3em 0}
+code{font-family:"JetBrains Mono","DejaVu Sans Mono",Menlo,Consolas,monospace;font-size:.88em;background:#eff1f3;padding:.1em .35em;border-radius:4px}
+pre{background:#f6f8fa;border:1px solid var(--line);border-radius:6px;padding:10px 14px;overflow:auto} pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:.6em 0 1.1em}
+table{border-collapse:collapse;font-size:13.8px;line-height:1.55;min-width:60%}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left}
+th{background:#eef2f6;font-weight:700;position:sticky;top:0}
+tr:nth-child(even) td{background:#fafbfc}
+td strong{color:#8a1c1c}
+hr{border:0;border-top:1px solid var(--line);margin:1.6em 0}
+section.layer1{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:2px 22px 10px;margin:18px 0 26px}
+section.layer1>h2{border-bottom-color:var(--l1b)}
+section.layer1 .tw table{background:#fff}
+.layer-tag{display:inline-block;font-size:12px;font-weight:700;color:#7a4b00;background:#ffe2a8;border-radius:10px;padding:0 9px;margin-left:8px;vertical-align:middle}
+details.card{border:1px solid var(--line);border-radius:8px;margin:12px 0;background:#fff}
+details.card>summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:16.5px;background:#f3f6fa;border-radius:8px;list-style:none}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary:before{content:"▸ ";color:var(--acc)} details.card[open]>summary:before{content:"▾ "}
+details.card[open]>summary{border-bottom:1px solid var(--line);border-radius:8px 8px 0 0}
+details.card>.body{padding:4px 18px 10px}
+.cardtools{font-size:13px;margin:6px 0 2px} .cardtools button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:#fff;border-radius:5px;padding:1px 8px;cursor:pointer;margin-right:6px}
+.b{display:inline-block;font-size:11.5px;line-height:1.5;padding:0 6px;border-radius:9px;margin:0 2px;font-weight:600;white-space:nowrap;vertical-align:1px;border:1px solid transparent}
+.b-meas{background:#dafbe1;color:#116329;border-color:#a8e6b5}
+.b-orig{background:#ddf4ff;color:#0a4b8c;border-color:#a6d4f5}
+.b-team{background:#fff1e5;color:#953800;border-color:#ffc89a}
+.b-inf{background:#eef0f2;color:#4a535c;border-color:#cfd5db}
+.b-codex{background:#fbefff;color:#6e2b91;border-color:#e3b8f5}
+.b-oth{background:#f6f8fa;color:#4a535c;border-color:#d1d9e0}
+.idx{max-width:900px;margin:0 auto;padding:30px 30px 80px}
+.idx .hero{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:12px 22px;margin:14px 0 24px;font-size:16.5px}
+.idx .cards a{display:block;border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:10px 0;color:var(--fg)}
+.idx .cards a:hover{border-color:var(--acc);text-decoration:none;background:#f6f9ff}
+.idx .cards .t{font-weight:700;color:var(--acc)} .idx .cards .d{font-size:13.5px;color:var(--muted)}
+.foot{color:var(--muted);font-size:12.5px;margin-top:40px;border-top:1px solid var(--line);padding-top:8px}
+@media (max-width:900px){.wrap{grid-template-columns:1fr} nav.toc{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)} main{padding:16px}}
+@media print{nav.toc,.top,.cardtools{display:none}.wrap{display:block} details.card{break-inside:avoid}}
+</style></head><body>
+<div class="top"><a class="brand" href="../index.html">多模态少步蒸馏 · 前沿调研</a><a href="../baseline.html">2026Q3 基线</a><a href="../index.html#dailies">每日</a><a href="../index.html#weeklies">每周</a></div>
+<div class="wrap"><nav class="toc"><div class="tt">目录</div><div><div class="toc">
+<ul>
+<li><a href="#结论先行">结论先行</a></li>
+<li><a href="#精读-speculative-forcing结论">精读 · Speculative Forcing：结论</a></li>
+<li><a href="#精读-一屏框架它挂在哪一格">精读 · 一屏框架：它挂在哪一格</a></li>
+<li><a href="#精读-细节">精读 · 细节</a><ul><li><a href="#①-关键操作逐步">① 关键操作（逐步）</a></li><li><a href="#②-因果逻辑和数字例子">② 因果逻辑和数字例子</a></li><li><a href="#③-和最接近的工作差在哪里只写操作上的差别">③ 和最接近的工作差在哪里（只写操作上的差别）</a></li><li><a href="#④-证据和扎实度">④ 证据和扎实度</a></li><li><a href="#⑤-读结果前写的预测与命中">⑤ 读结果前写的预测与命中</a></li><li><a href="#⑥-评级">⑥ 评级</a></li><li><a href="#⑦-对我们训练的含义">⑦ 对我们训练的含义</a></li><li><a href="#⑧-未核实-疑点">⑧ 未核实 / 疑点</a></li></ul></li>
+<li><a href="#漏检复盘-speculative-forcing261022347为什么没进日报">漏检复盘 · Speculative Forcing（2610.22347）为什么没进日报</a><ul>
+<li><a href="#结论先行_1">结论先行</a></li>
+<li><a href="#时间线北京时间">时间线（北京时间）</a></li>
+<li><a href="#逐阶段排查是哪一步丢的">逐阶段排查：是哪一步丢的</a></li>
+<li><a href="#系统性检查还有什么用同样的方式漏了">系统性检查：还有什么用同样的方式漏了</a></li>
+<li><a href="#每种失效方式对应的修复以及怎么知道它有效">每种失效方式对应的修复，以及怎么知道它有效</a></li>
+<li><a href="#需要主-bot-做的事我改不了">需要主 bot 做的事（我改不了）</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div></nav>
+<main><h1 id="2026-10-18-补读speculative-forcing-精读-漏检复盘">2026-10-18 补读：Speculative Forcing 精读 + 漏检复盘</h1>
+<section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
+<ul>
+<li><strong>Speculative Forcing（<a href="https://arxiv.org/abs/2610.22347">2610.22347</a>）评为必读·先跑。</strong> 4 步因果学生的中间 x̂0 当草稿，逐 token 判断是否收敛，收敛的就定稿，不再去噪。在世界模型上，它比均匀 3 步更快，质量又不低于 4 步<span class="b b-orig">原文 Tab.3</span>。代码目前只有 README。</li>
+<li><strong>例行任务没抓到它。</strong> 它在 arXiv Fri 16 Oct 批次里，这一批北京时间 10-16 约 10:30 才出现，比我 09:12 的运行晚，之后也没有补扫。<strong>取数阶段缺「批次台账 + 迟到补扫」</strong>，正则其实能命中。OpenReview（10-16 06:46 文献同事已看到）和同事对账两条补救路径也都没接上。</li>
+<li>系统性检查：Fri 16 Oct 整批是唯一的 arXiv 缺口，补出 FocusOPD、Flow Map 稳定性等 5 篇相关论文；10-12 到 10-15 的外部对账没发现漏检；OpenReview ICLR'27 里约 90 条范围内标题我从没见过，是最大的盲区。修复 F1–F7 和召回指标见下文。</li>
+</ul>
+</section><section class=""><h2 id="精读-speculative-forcing结论">精读 · Speculative Forcing：结论</h2>
+<p><strong>Speculative Forcing（<a href="https://arxiv.org/abs/2610.22347">2610.22347</a>，KAIST + NAVER AI Lab）评级：必读·先跑。</strong> 原创性是新机制（中），可信度在效率–质量曲线上站得住，但 VBench 差距落在噪声内，代码也还没放出来。</p>
+<ul>
+<li><strong>它做了什么</strong>：不改生成器的权重，把 4 步因果学生每一步的中间 x̂0 当成「草稿」，逐 token 判断草稿是否已经收敛。收敛的 token 当场定稿，不再去噪，它的 KV 留给其余 token 注意；没收敛的继续去噪。每个 chunk 生成完后，用 t=0 的干净前向刷新整块 KV 缓存。</li>
+<li><strong>为什么值得先跑</strong>：它是我目前见到的第一个在<strong>等吞吐</strong>下打赢「均匀少步」的逐 token 早停方法。3 天前读的 ForcingBooster（<a href="https://arxiv.org/abs/2610.12625">2610.12625</a>）在 4 个底座里只赢了 1 个。在 Lingbot-World 2.0 上，它<strong>比均匀 3 步快</strong>（24.5 vs 22.8 fps），<strong>质量又不低于 4 步</strong>（Quality 82.65 vs 82.62，Drift 2.839 vs 3.094）<span class="b b-orig">原文 Tab.3</span>。</li>
+<li><strong>对我们训练的含义（一句话）</strong>：用 Self-Forcing 式「随机出口步」DMD 训出来的流式学生，中间步的 x̂0 本身就是被监督过的样本，所以这份加速几乎是免费的，而且训练无关版只需要标定两个阈值。反过来，如果我们换成只监督最后一步的目标（例如 causal rCM / 一致性类），这条路可能就断了。所以要先测一下自己学生的中间步 x̂0 质量。<span class="b b-inf">推断</span></li>
+<li><strong>先跑的对照</strong>：在我们的 4 步流式学生上跑三组：训练无关 verifier（冗余度 + 稳定性），对照等<strong>墙钟（含 VAE）</strong>的均匀 2 步和 3 步，再加一个 oracle verifier 作上界。rollout 60 s，测漂移，至少 2 个种子。只花推理算力。</li>
+</ul>
+</section><section class="layer1"><h2 id="精读-一屏框架它挂在哪一格">精读 · 一屏框架：它挂在哪一格<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>轴</th>
+<th>位置</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A 目标怎么构造</td>
+<td><strong>不适用</strong>（不训生成器）</td>
+<td>生成器冻结。唯一的训练是 4.11M 参数的 verifier 头，回归每个 token 的「剩余差距」</td>
+</tr>
+<tr>
+<td>B 样本从哪来</td>
+<td>生成器自己的满步 rollout（离线采集，供 verifier 训练）</td>
+<td>on-policy 训练 verifier 没有更好（Tab.B 82.67 vs 82.65）</td>
+</tr>
+<tr>
+<td>C 打分上下文</td>
+<td>不适用</td>
+<td>—</td>
+</tr>
+<tr>
+<td>归格</td>
+<td><strong>放不进框架 → 「流式时间轴 × 推理计算分配」</strong></td>
+<td>和 ForcingBooster（<a href="https://arxiv.org/abs/2610.12625">2610.12625</a>）、DSA、Surprise Forcing、HSA 同格</td>
+</tr>
+<tr>
+<td>改的是 7 步 Self-Forcing 循环里的哪一步</td>
+<td>训练循环一步都没改。它<strong>利用</strong>的是第 2 步：Self-Forcing 训练时随机选出口步，对中间 x̂0 做 DMD 监督，所以中间 x̂0 是合法样本。推理时它把「每个 token 走几步」从全局常数 K 改成逐 token 的 k*(i)</td>
+<td><span class="b b-orig">原文 §3.1</span>+<span class="b b-inf">推断</span></td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>框架层面的提醒：「放不进框架」这一格以前被我当成低优先级（ForcingBooster 只给了「值得读·存疑」）。这篇说明，推理时的步数分配在流式上也能改变部署决定，所以这一格要升成正式格：<strong>「推理时逐 token 步数分配」</strong>。它的前提是「中间 x̂0 已经被训练成合法样本」。</p>
+</blockquote>
+</section><section class=""><h2 id="精读-细节">精读 · 细节</h2>
+<details class="card" open="open">
+<summary id="①-关键操作逐步">① 关键操作（逐步）</summary>
+<div class="body">
+<ol>
+<li><strong>底座</strong>：冻结的 4 步因果学生（LongLive 1.3B、Lingbot-World 2.0 Causal-Fast 1.3B）。时间步沿用原调度 [1000, 937.5, 833.3, 625]。在第 k 步停下的 token，恰好走完这个调度的前 k 步，所以均匀 k 步基线用的是同一条前缀<span class="b b-orig">原文 App.A</span>。</li>
+<li><strong>第 1 步</strong>：每个 token 都去噪一次，得到草稿 x̂0^(1)。</li>
+<li><strong>验证</strong>（每步 k&lt;K，只验证仍然活跃的 token）：<ul>
+<li>训练无关版：k=1 时算<strong>冗余度</strong> s_red(i) = min_h‖x̂0^(1)(i) − h‖，h 取注意力窗口内历史 chunk、参考帧和 sink 里所有空间位置的干净 token；k≥2 时算<strong>稳定性</strong> s_stab(i) = ‖x̂0^(k)(i) − x̂0^(k−1)(i)‖。分数先过一遍时空平滑 S（空间 9×9 高斯，σ=1 token；时间上对当前和后续潜帧做高斯平均），再和阈值 τ_red、τ_stab 比，低于阈值就接受<span class="b b-orig">原文 §3.3.1、App.A</span>。</li>
+<li>学习版：取生成器最后一个 transformer block 的隐状态，过 LayerNorm 和三层 3D 卷积（1536→96→48→1），预测 r̂_k(i)，平滑后 ≤ε 就接受<span class="b b-orig">原文 §3.3.2、App.A</span>。</li>
+</ul>
+</li>
+<li><strong>定稿</strong>：被接受的 token 输出固定为 x̂0^(k)(i)，之后的前向不再计算它，但它在接受那一步的逐层 KV 保留，供活跃 token 注意。被拒绝的 token 重新加噪到下一个噪声级，继续去噪。到第 K 步还活跃的 token 一律定稿<span class="b b-orig">原文 §3.2</span>。</li>
+<li><strong>chunk 完成后</strong>：拼好的 c_t（各 token 来自不同步）再用 t=0 做一次干净前向，刷新整块 KV，后续 chunk 看到的历史统一来自干净输出<span class="b b-orig">原文 App.A</span>。这一步把「混合步 KV」挡在了 chunk 内部。</li>
+<li><strong>学习版的训练</strong>（只训头）：冻结生成器跑满 K 步，收集中间隐状态和 oracle 差距 rel_k(i) = ‖x̂0^(k)(i) − x̂0^(K)(i)‖ / σ_t（σ_t 是该 chunk 满步输出 token 范数的中位数）。</li>
+</ol>
+<p><strong>等价形式</strong>：生成器侧没有 loss。verifier 的 loss 是 L(φ) = mean_{i,k&lt;K} smoothL1(r̂_k(i), rel_k(i))（式 2）。推理规则是 k<em>(i) = min{k : S<a href="i">r̂_k</a> ≤ ε}，找不到就取 K；输出 c_t(i) = x̂0^(k</em>(i))(i)。也就是把 ‖x̂0^(k) − x̂0^(K)‖ 当作一个可以提前预测的「剩余去噪量」，在逐 token 上做早退出（early exit）。这一点和投机解码不同：投机解码的验证是无损的（拒绝采样保证分布不变），这里的验证是<strong>有损阈值</strong>，论文也说没有采用投机解码的接受规则<span class="b b-orig">原文 §2</span>。</p>
+</div>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="②-因果逻辑和数字例子">② 因果逻辑和数字例子</summary>
+<div class="body">
+<ul>
+<li><strong>因为</strong>：蒸馏后的少步学生在中间步就给出接近终点的 x̂0，而且不同 token 收敛速度差很多。和历史重复的背景收敛早，新出现的区域要走到最后（Fig.2）。<strong>所以</strong>：逐 token 早停能省掉大半 token 前向。<strong>证据</strong>：5 s LongLive 平均 1.68 步/token（4 步基线是 4.0）<span class="b b-orig">原文 Tab.1</span>。</li>
+<li><strong>Amdahl 账</strong>（用原文吞吐反推，5 s LongLive，H100，不含 VAE）<span class="b b-orig">由原文 Tab.1/C 计算</span>：<ul>
+<li>每帧耗时：1 步 14.71 ms、2 步 22.45 ms、3 步 30.17 ms、4 步 37.88 ms。每多一步约 +7.73 ms，非常线性；和步数无关的固定部分约 6.98 ms，主要是干净刷新前向。</li>
+<li>照这个线性模型，k̄=1.68 应该是 6.98 + 1.68×7.73 ≈ 19.97 ms（约 50 fps，1.90×），和论文给的理想值 5/(k̄+1)=1.87× 一致。实测是 41.74 fps，即 23.96 ms（1.58×）。</li>
+<li>差出来的约 4.0 ms/帧（约半步），来自「chunk 要一直跑到最后一个活跃 token 被接受」：每一步都要付一次前向的固定开销，开销由 max_i k*(i) 决定，不由平均值决定<span class="b b-orig">原文 D.2</span>，再加上 verifier 和 gather 的开销。</li>
+</ul>
+</li>
+<li><strong>等时间对比</strong>（这是关键证据）：<ul>
+<li>5 s：均匀 2 步 44.54 fps、Total 82.46；OursH 41.74 fps、83.21。按耗时在 2 步和 3 步之间线性插值，同耗时的均匀基线约 82.58，OursH 高 <strong>+0.63</strong>。对 3 步（33.15 fps，83.08）是又快 26%、又高 0.13<span class="b b-orig">由原文计算</span>。</li>
+<li>30 s：均匀 2 步 40.9 fps、82.32、Drift 1.992；OursH 37.8 fps、82.81、Drift 1.707<span class="b b-orig">原文 Tab.2</span>。</li>
+<li>世界模型：均匀 3 步 22.8 fps、82.38、Drift 3.361；OursH 24.5 fps、82.65、Drift 2.839，<strong>速度和质量同时占优</strong><span class="b b-orig">原文 Tab.3</span>。</li>
+</ul>
+</li>
+<li><strong>逐 token vs 逐 chunk</strong>：用同一个 verifier，改成整个 chunk 一起接受，在相同平均步数（2.61）下 Quality 82.54、Drift 3.214，逐 token 是 82.65、2.839<span class="b b-orig">原文 Tab.5</span>。所以粒度本身有贡献。不过两者的 Quality 只差 0.11。</li>
+<li><strong>verifier 准不准</strong>：学习版头的 AUROC 在 0.87–0.94，稳定性信号 0.71–0.89，冗余度 0.61–0.85，运动差分（MotionCache 式）0.54–0.72<span class="b b-orig">原文 Tab.A</span>。oracle verifier 在 2.46 步时 Quality 82.61，学习版 82.65，已经到天花板<span class="b b-orig">原文 Tab.5</span>。</li>
+</ul>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="③-和最接近的工作差在哪里只写操作上的差别">③ 和最接近的工作差在哪里（只写操作上的差别）</summary>
+<div class="body">
+<div class="tw"><table>
+<thead>
+<tr>
+<th>工作</th>
+<th>操作上的差别</th>
+<th>改变了什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ForcingBooster <a href="https://arxiv.org/abs/2610.12625">2610.12625</a></strong>（我 10-13 读过；本文没比）</td>
+<td>都冻结 4 步因果学生、逐 patch/token 早停、停掉的保留 KV。ForcingBooster 的路由器用「停止概率 × 质量误差 + 步数代价」做 on-policy 训练，<strong>目标是步数–质量的折中</strong>。本文 verifier 直接<strong>回归到满步输出的剩余差距</strong>，再加时空平滑，chunk 结束后<strong>干净前向刷新 KV</strong>，另外还有一个不用训练的版本</td>
+<td>ForcingBooster 等时间下只在 1/4 个底座赢均匀 2 步；本文在 LongLive 和 Lingbot 上都赢等时间的均匀基线。差别具体来自哪一处没法确认，不同底座（Causal Forcing vs LongLive）也可能是原因<span class="b b-inf">推断</span></td>
+</tr>
+<tr>
+<td><strong>Surprise Forcing / DSA</strong>（逐 chunk 选深度）</td>
+<td>整个 chunk 用同一个步数。本文逐 token，同一 chunk 里步数可以不同</td>
+<td>本文复现的 Surprise Forcing 在 LongLive 5 s 上 3.59 步、27.38 fps、83.11；OursH 1.68 步、41.74 fps、83.21<span class="b b-orig">原文 Tab.C</span></td>
+</tr>
+<tr>
+<td><strong>Self-Forcing / Causal Forcing</strong>（训练侧）</td>
+<td>训练时对随机出口步的中间 x̂0 做 DMD 监督。本文不训练，只在推理时利用这一点</td>
+<td>前提依赖：如果学生只监督最后一步，中间 x̂0 可能不能直接用（本文 D.1 也说「对减步敏感的底座加速有限」）</td>
+</tr>
+<tr>
+<td><strong>投机解码（Leviathan 2023 / Chen 2023）</strong></td>
+<td>大模型做无损验证，被拒绝的从验证点重采样。本文没有验证模型，用阈值做有损接受，被拒绝的只是多走一步</td>
+<td>名字是类比，没有分布保持的保证</td>
+</tr>
+<tr>
+<td><strong>HSA / RAS / 缓存类</strong></td>
+<td>所有 token 都要走到调度终点，靠周期性全量更新压误差。本文的 token 会「定稿」，之后不再计算</td>
+<td>被定稿的 token 不再有误差累积，代价是草稿错了就收不回来</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="④-证据和扎实度">④ 证据和扎实度</summary>
+<div class="body">
+<ul>
+<li><strong>强的地方</strong>：有均匀 1/2/3/4 步基线，且用同一条调度前缀；复现了 Surprise Forcing；做了逐 chunk 和逐 token 的对照；有 oracle 上界、AUROC 分析和 ε 扫描（Tab.4：ε 在 0.20–0.24 时质量不降、Drift 最低）；覆盖了短视频、30 s 长视频和世界模型（含相机位姿误差 RPE），一共两个底座<span class="b b-orig">原文</span>。</li>
+<li><strong>弱的地方</strong>：<ol>
+<li>VBench 相对 4 步只差 +0.13 Total，没有置信区间，也没有人评。「保持质量」能站住，「更好」站不住。</li>
+<li>吞吐不含 VAE，也不含文本编码，算上 VAE 后实际加速比 1.58× 小<span class="b b-orig">原文 B.1</span>+<span class="b b-inf">推断</span>。</li>
+<li>没和 ForcingBooster 比。</li>
+<li>最长只测到 30 s（Lingbot 253 帧），没有 60 s 以上的漂移。</li>
+<li>只覆盖 1.3B 底座。</li>
+<li>Aesthetic 在 5 s 上低 0.88（66.33 vs 67.21），30 s 上低 0.48，可能是早定稿的 token 偏软<span class="b b-orig">原文 Tab.C/E</span>+<span class="b b-inf">推断</span>。</li>
+<li>Dynamic Degree 反而升了（43.61 vs 37.78）。早停的 token 少走几步、更接近 1–2 步输出（1 步 45.0），所以动态度这个变化不一定是好事<span class="b b-inf">推断</span>。</li>
+</ol>
+</li>
+<li><strong>代码</strong>：仓库 eenrue/Speculative-Forcing 目前只有 README（"under internal review"，commit 3d33f02）【代码】，核心链路<strong>无法在代码里核对</strong>。本卡所有机制描述都来自原文 §3 和 App.A。</li>
+</ul>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="⑤-读结果前写的预测与命中">⑤ 读结果前写的预测与命中</summary>
+<div class="body">
+<div class="tw"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>预测（2026-10-18 11:2x 写，读实验前；摘要头条数字已看过，不下注）</th>
+<th>结果</th>
+<th>判定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td>没有等时间的均匀少步对照，或者有的话短视频领先 &lt;0.3</td>
+<td>有均匀 1–4 步；同耗时插值领先 +0.63</td>
+<td>✗（低估）</td>
+</tr>
+<tr>
+<td>②</td>
+<td>理想 2.35× vs 实测 1.5×，非步数开销 ≥30%，论文不拆账</td>
+<td>非步数和调度开销约 46%（由原文算出）；D.2 定性拆了账，没给 ms</td>
+<td>半中，按未中计</td>
+</tr>
+<tr>
+<td>③</td>
+<td>不和 ForcingBooster 比</td>
+<td>没比</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>④</td>
+<td>学习版比训练无关版只好一点（&lt;0.3 Total）</td>
+<td>0.09 / 0.06 / 0.07</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>⑤</td>
+<td>没有 60 s+ 的专门漂移曲线</td>
+<td>最长 30 s</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>⑥</td>
+<td>代码没开或只有 README</td>
+<td>只有 README</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>按格预判</td>
+<td>早定稿的 token 偏软，误差经 KV 复合</td>
+<td>Aesthetic −0.5 到 −0.9（弱支持）；KV 复合被干净刷新挡住</td>
+<td>✗</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>本篇 4/6（按格 0/1）。累计 62/85 = 73%。</strong> 预测 ① 是低估，按 v1.4 当天复评，结论是升为「必读·先跑」，依据是条件 (b)：同协议下等吞吐打赢均匀步数基线和 Surprise Forcing。条件 (a) 只满足一半，因为代码没开；但训练无关版只需要两个阈值，自己实现的成本可以估出来。</p>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="⑥-评级">⑥ 评级</summary>
+<div class="body">
+<ul>
+<li><strong>原创性：新机制（中）</strong>。逐 token 早停的思路和 ForcingBooster、HSA 是同族。新的是三处：直接回归「到满步的剩余差距」、chunk 后干净刷新 KV、训练无关的冗余度加稳定性双信号，并且第一次给出了等吞吐下胜出的证据。</li>
+<li><strong>可信度：站得住（效率–质量曲线）/ 存疑（「质量更好」这一说）</strong>。</li>
+<li><strong>决策影响：必读·先跑</strong>（v1.4 条件 (b)）。</li>
+</ul>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="⑦-对我们训练的含义">⑦ 对我们训练的含义</summary>
+<div class="body">
+<div class="tw"><table>
+<thead>
+<tr>
+<th>模态</th>
+<th>含义</th>
+<th>先跑的对照</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>图像</td>
+<td>无直接含义。少步图像学生（如 4 步 DMD2）没有历史冗余，只剩稳定性信号能用。注意力里已定稿的 token 照样要参与，所以省下的计算有限<span class="b b-inf">推断</span></td>
+<td>无</td>
+</tr>
+<tr>
+<td>纯视频（双向少步）</td>
+<td>弱。没有 chunk 和 KV 的结构，定稿 token 每一步还要作为 KV 重新计算，除非缓存它<span class="b b-inf">推断</span></td>
+<td>无</td>
+</tr>
+<tr>
+<td>AV</td>
+<td>有潜力。数字人背景和身体大部分静止（论文 D.3 自己也提了），视频 token 可以大量早停。风险在音频：如果视频 token 早定稿，嘴部区域的细化可能被截断，同步会受影响。音频 token 是否适用还不清楚<span class="b b-inf">推断</span></td>
+<td>只对视频 token 开 verifier，音频 token 全步。测 LSE、Sync、嘴部区域 LPIPS 和 WER，对照等墙钟的均匀 2/3 步</td>
+</tr>
+<tr>
+<td>流式 AR</td>
+<td><strong>直接可用，而且可能改变训练决定</strong>：①部署时用逐 token 早停替代「直接降到 2 步」；②训练侧，继续保留 Self-Forcing 的随机出口步 DMD 监督，因为它让中间 x̂0 可以直接当输出。换成只监督最后一步的目标前，先测中间 x̂0</td>
+<td>在我们的 4 步流式学生上，训练无关 verifier（按 oracle ε=0.24 标定 τ）vs 等墙钟（含 VAE）的均匀 2 步、3 步 vs oracle 上界。60 s rollout，测 Drift、Dynamic、Aesthetic，至少 2 个种子</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="⑧-未核实-疑点">⑧ 未核实 / 疑点</summary>
+<div class="body">
+<ul>
+<li>代码没放出，干净刷新前向和下一个 chunk 首步的合并实现（App.A）无法核对。</li>
+<li>Lingbot 的 Quality 是 6 维聚合，排除了 temporal flickering。</li>
+<li>Codex 盲分没做。</li>
+</ul>
+</div>
+</details>
+</section><section class=""><h2 id="漏检复盘-speculative-forcing261022347为什么没进日报">漏检复盘 · Speculative Forcing（<a href="https://arxiv.org/abs/2610.22347">2610.22347</a>）为什么没进日报</h2>
+<h3 id="结论先行_1">结论先行</h3>
+<p><strong>没抓到。</strong> 它在 arXiv 的 <strong>Fri 16 Oct</strong> 批次里。这一批 arXiv 上周五晚发，到北京时间 10-16 约 10:30 才出现，比我 09:12 的例行任务晚了 1 个多小时。我当天扫的是 Thu 15 Oct 批次，周五周报没有重新扫描，下一次例行任务（周一 10-19 09:12）抓 <code>/new</code> 只会拿到周一批次。<strong>按现在的做法，整个 Fri 16 Oct 批次（去重 970 条，正则命中 143 条）大概率会被跳过</strong>。10-14 那次我用 <code>/recent</code> 补扫过，但补扫不是固定步骤。</p>
+<p>所以根因不在正则，也不在评级，而在<strong>取数阶段</strong>：我的例行任务按「到点就跑、<code>/new</code> 给什么就扫什么」工作，没有「批次台账 + 完整性检查 + 迟到批次补扫」。次要原因有两个：OpenReview 一直是我的盲区；文献同事和 RL 同事当天都已经接触到这篇，但我没有和他们的候选单对账。</p>
+<h3 id="时间线北京时间">时间线（北京时间）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>时间</th>
+<th>事件</th>
+<th>证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10-13 06:49</td>
+<td>文献同事抓 OpenReview ICLR'27（188 条），里面没有这篇</td>
+<td><code>/workspace/paper-digest/2026-10-13/raw/openreview/iclr27.json</code></td>
+</tr>
+<tr>
+<td><strong>10-16 01:57</strong>（Thu 15 Oct 17:57 UTC）</td>
+<td>arXiv v1 提交，cs.CV 单类，比当天截止（14:00 EDT = 18:00 UTC）早 3 分钟，因此进了 <strong>Fri 16 Oct</strong> 批次</td>
+<td>arXiv abs 页 Submission history</td>
+</tr>
+<tr>
+<td>10-16 06:46</td>
+<td>文献同事抓 OpenReview ICLR'27（690 条）。里面有 <code>KOxYqUAFpT</code> Speculative Forcing（只有摘要），定为 P1 观察，备注「name-adjacent to Speculative Sampling」，PDF 被 Cloudflare 挡住，<strong>没转给我</strong></td>
+<td><code>paper-digest/2026-10-16/recall-report.md:85</code>、<code>watchlist.md:62</code></td>
+</tr>
+<tr>
+<td>10-16 08:20–10:21</td>
+<td>RL 同事每 10 分钟轮询一次，<code>/new</code> 一直显示「Thursday, 15 October」</td>
+<td><code>/workspace/genrl-digest/2026-10-16/batch/lists/poll.log</code></td>
+</tr>
+<tr>
+<td><strong>10-16 09:12–09:56</strong></td>
+<td><strong>我的例行任务运行</strong>，抓到 Thu 15 Oct 批次（988 条），日报写的是「覆盖 Thu 15 Oct 这一批」。<strong>没有记下「Fri 16 批未出、待补」</strong>，后面也没有安排补扫</td>
+<td><code>daily/raw/1016/new_cs.CV.html</code> 页头；<code>daily/2026-10-16.md:3</code></td>
+</tr>
+<tr>
+<td>10-16 09:41</td>
+<td>RL 同事按 ID 区间直接拉 abs 页，抓到 <a href="https://arxiv.org/abs/2610.22347">2610.22347</a>（它在 RL 同事的 1,760 篇里），但不在 RL 的范围内，没有转发</td>
+<td><code>genrl-digest/2026-10-16/batch/abs/2610.22347.html</code></td>
+</tr>
+<tr>
+<td><strong>10-16 10:33</strong></td>
+<td><code>/new</code> 第一次显示「Friday, 16 October」（cs.CV 新提交 135 条）</td>
+<td><code>poll.log</code></td>
+</tr>
+<tr>
+<td>10-16 12:32</td>
+<td>arXiv API 和 RSS 索引完整，RL 同事的完整性检查 G9 通过</td>
+<td><code>poll.log</code></td>
+</tr>
+<tr>
+<td>10-16 17:12</td>
+<td>我的周报运行，只做汇总，没有重新取数</td>
+<td><code>weekly/2026-10-16.md</code></td>
+</tr>
+<tr>
+<td>10-18 11:0x</td>
+<td>Henry 点名这篇；我补抓 Fri 16 Oct 全部 8 类 <code>/new</code></td>
+<td><code>daily/raw/1016fri/</code></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="逐阶段排查是哪一步丢的">逐阶段排查：是哪一步丢的</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>这篇在这一步的状态</th>
+<th>结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① 来源覆盖</td>
+<td>arXiv cs.CV 在我的 8 类里；OpenReview 是已知盲区（<code>sources.md</code>）</td>
+<td>arXiv 本来能覆盖；OpenReview 那一路本可以提前 3 小时发现</td>
+</tr>
+<tr>
+<td>② <strong>取数</strong></td>
+<td>10-16 那次 <code>/new</code> 是 Thu 15 批次；Fri 16 批次在 10:33 才出现；之后没有任何一次运行抓 Fri 16 批次</td>
+<td><strong>丢在这一步（主因）</strong></td>
+</tr>
+<tr>
+<td>③ 正则粗筛</td>
+<td>补跑我当天的 <code>screen.py</code>：<strong>命中</strong>（摘要里有 "few-step"、"autoregressive video"）。但得分只有 1，在 143 条里排第 60（得分只数蒸馏词，推理时减步的论文分数天然低）</td>
+<td>能过，但排名靠后有风险</td>
+</tr>
+<tr>
+<td>④ 标题/摘要阅读</td>
+<td>没到这一步</td>
+<td>—</td>
+</tr>
+<tr>
+<td>⑤ 评级</td>
+<td>没到这一步。<strong>潜在风险</strong>：10-13 我把同格的 ForcingBooster 评成「值得读·存疑 / 放不进框架」。如果当时读到这篇摘要，可能会先入为主当成 ForcingBooster 变体</td>
+<td>隐患（次要）</td>
+</tr>
+<tr>
+<td>⑥ 转发/对账</td>
+<td>文献同事 06:46 看到 OR 版（P1 观察），RL 同事 09:41 拉到 abs，都没转给我；我也不读他们的候选单</td>
+<td>两条补救路径都没接上</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="系统性检查还有什么用同样的方式漏了">系统性检查：还有什么用同样的方式漏了</h3>
+<ol>
+<li><strong>arXiv Fri 16 Oct 整批（唯一的 arXiv 缺口）</strong>：970 条去重，正则命中 143 条，我此前都没见过。其中和范围相关的：<ul>
+<li><strong>Speculative Forcing <a href="https://arxiv.org/abs/2610.22347">2610.22347</a></strong>（这次已补精读，必读·先跑）</li>
+<li>FocusOPD <a href="https://arxiv.org/abs/2610.21250">2610.21250</a>（扩散模型多教师 on-policy 蒸馏，看特征错位；RL 同事已读全文）→ 我要补读蒸馏机制</li>
+<li>On the Stability and Convergence of Flow Map Training <a href="https://arxiv.org/abs/2610.20674">2610.20674</a>（stopgrad 和自适应权重的训练动力学；和观察名单里的 <a href="https://arxiv.org/abs/2609.16222">2609.16222</a> 同题）→ 补读</li>
+<li>Noise-Space Reward Alignment for Few-Step Generative Models（NPO）<a href="https://arxiv.org/abs/2610.21125">2610.21125</a>（归 RL，RL 同事已读）→ 只做交叉核对</li>
+<li>ReState <a href="https://arxiv.org/abs/2610.21287">2610.21287</a>（少步扩散的免训练物体移除，应用类）、FlowBudget <a href="https://arxiv.org/abs/2610.20636">2610.20636</a>（流匹配采样预算估计，外围）→ 摘要级</li>
+</ul>
+</li>
+<li><strong>10-12 到 10-15 的 arXiv 批次</strong>：拿文献同事的 shortlist 和 recall-report、RL 同事 read-log、HF Daily（我和同事抓的）合起来对账。没在我任何文件里出现、但标题像「范围内」的共 28 条，人工看过后<strong>都不是少步蒸馏</strong>（LLM OPD、agent 自蒸馏、GUI 等），只有 LightVAE <a href="https://arxiv.org/abs/2610.14726">2610.14726</a>（流式延迟相关的 VAE，不是蒸馏）和 Demiurge <a href="https://arxiv.org/abs/2610.14685">2610.14685</a>（AR 视频重渲染，归文献同事）擦边。<strong>这 4 天 arXiv 的外部召回没有发现漏检</strong>。</li>
+<li>
+<p><strong>OpenReview ICLR'27（结构性盲区，规模最大）</strong>：文献同事 10-16 抓到的 690 条里，按「少步 / Forcing / DMD / 蒸馏」关键词筛出 <strong>113 条</strong>。按名称粗比对，<strong>我的文件里只出现过约 21 条</strong>，约 90 条从没见过。很多可能早就上了 arXiv，只是我按 ID 记、没按名字记，所以这个数字偏高。蒸馏核心、最该先排查的有：</p>
+<ul>
+<li>Rethinking Self-forcing DMD from a Score Sharpness Perspective（<code>iTW34Jng8k</code>）</li>
+<li>One-Forcing：一步自回归视频（<code>37O3twXHM5</code>）</li>
+<li>RaMP：Rollout-Aware Mode Preconditioning for Video Distillation（<code>daKyMsmLVO</code>）</li>
+<li>ViDA（<code>VJFxZoloNm</code>）</li>
+<li>On-Policy Forcing：不做双向蒸馏（<code>AlPtNEYCnw</code>）</li>
+<li>Mass Forcing（<code>rSq3KMUQBT</code>）</li>
+<li>Delta Forcing（<code>LdiUXwvOPm</code>）</li>
+<li><strong>OmniOPD：联合音视频的稳定 on-policy 蒸馏（<code>SkOgWzmxMC</code>）</strong></li>
+<li><strong>Aligning the Clocks：流式音频驱动数字人的对齐感知因果蒸馏（<code>WOy8RcwI08</code>）</strong></li>
+<li>DeForcing（<code>225TN4s58Y</code>）</li>
+<li>Clean Forcing（<code>6cVOrqYuGm</code>）</li>
+<li>Wave Forcing（<code>Hs2ElW8OhC</code>）</li>
+<li>Fork-Ready World Models（<code>kEU0L0Wtzs</code>）</li>
+<li>FADA（<code>P1aJ9Ko0m8</code>）</li>
+<li>UnStep（<code>Dg2V9jzHe8</code>，免训练、步数比蒸馏还少）</li>
+<li>Step Forcing（<code>QRxeOQr0bJ</code>）</li>
+</ul>
+<p>这些都没核实是否已有 arXiv 版。<strong>周一（10-19）例行任务第一件事就做这件</strong>。</p>
+</li>
+</ol>
+<h3 id="每种失效方式对应的修复以及怎么知道它有效">每种失效方式对应的修复，以及怎么知道它有效</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>失效方式</th>
+<th>修复（可验证）</th>
+<th>指标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F1</td>
+<td><strong>按钟点跑，不按批次跑</strong></td>
+<td>新建 <code>batches.md</code> 批次台账：每个 arXiv 公告日一行，记列表日期、抓取时间、条数、状态（done/pending）。每次运行先算「应出的最新列表日」：工作日北京时间 08:00 起，对应 ET 公告。如果 <code>/new</code> 页头日期 ≠ 应出日期，就记 pending，在 13:00 前每 30 分钟重查一次（参考 RL 同事的 G9：API 条数加 RSS pubDate 双检）。下一次运行先清掉所有 pending（用 <code>/pastweek</code> 或 API 按提交时间段拉）</td>
+<td><strong>批次覆盖率</strong> = done 的公告日 / 实际公告日，每周五周报列出，目标 100%；<strong>发现延迟</strong> = 公告到入日报的小时数，目标 ≤ 24 h（周末批次 ≤ 72 h）</td>
+</tr>
+<tr>
+<td>F2</td>
+<td>周五迟到批次和周末没有补扫</td>
+<td>周五 17:12 周报先补扫当天批次。周一例行任务固定扫「上周五 + 本周一」两个列表日，以台账为准</td>
+<td>每周一台账里不能有上周的 pending</td>
+</tr>
+<tr>
+<td>F3</td>
+<td>列表页延迟时完全看不到新论文</td>
+<td>学 RL 同事按 ID 区间直接拉：从上批最大 ID 往后，用 API <code>id_list</code> 拉到当前最大 ID，按提交时间判断归属批次</td>
+<td>按 ID 拉到的 ∩ 范围内，最终都必须出现在某一批里（交叉核对数，周报列出）</td>
+</tr>
+<tr>
+<td>F4</td>
+<td>OpenReview 盲区</td>
+<td>每次运行只读文献同事最新的 <code>raw/or_iclr27*.json</code>（只读，不自己抓），用我的 screen 加上述「蒸馏核心」词过一遍。命中的条目按标题搜 arXiv 孪生版，有孪生版就进当天筛选，没有就进观察名单并标「仅 OR 摘要」</td>
+<td><strong>OR 范围内条目的分诊率</strong>：已分诊 / 总数，两次运行内到 100%。本周先清完上面的约 90 条</td>
+</tr>
+<tr>
+<td>F5</td>
+<td>不和同事对账</td>
+<td>每次运行读文献同事近 48 h 的 <code>recall-report.md</code> 和 <code>shortlist.json</code>、RL 同事的 <code>read-log.md</code>，求和我的「已见集」的差集。差集里属于范围的，记为「召回漏检」并写明丢在哪一步。另外请两位同事：凡是标题含 Forcing、少步、DMD、蒸馏的条目，<strong>只要摘要级也转给我</strong>（包括 OR-only 的）</td>
+<td><strong>外部召回</strong> = 我在 1 次运行内覆盖的 /（Henry 点名 ∪ 同事候选里范围内的），每周统计，目标 ≥ 95%；每一次漏检都写进 read-log</td>
+</tr>
+<tr>
+<td>F6</td>
+<td>正则排序偏向「训练侧蒸馏」</td>
+<td>screen.py 打分加上推理侧减步词：denoising steps、early exit、speculative、adaptive step、token-wise、step allocation、forcing。另外<strong>所有正则命中都要读标题，不设分数截断</strong></td>
+<td>每周用金标集（Henry 点名的 + 我的必读）回放 screen，<strong>金标召回 = 100%</strong>，排名进前 30</td>
+</tr>
+<tr>
+<td>F7</td>
+<td>评级先入为主（「ForcingBooster 变体」）</td>
+<td>方法 v1.5：推理时步数分配是正式格，不是「放不进框架」。凡是同格方法，先看「等时间的均匀少步对照」：赢了就按 v1.4 (b) 升为必读·先跑，不看原创性</td>
+<td>每周统计「复评上调次数」，持续 &gt; 0 就说明初评偏保守</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="需要主-bot-做的事我改不了">需要主 bot 做的事（我改不了）</h3>
+<ul>
+<li><strong>例行任务提示词</strong>（automation-1791627156478）不在 box 上，我没读到也没改。请把 F1、F2、F4、F5 写进日报和周报两个例行任务：先做批次台账和完整性检查，再读 OR 和同事候选单，最后补扫。</li>
+<li>请把 F5 的转发请求带给文献同事和 RL 同事（凡是 Forcing、少步、DMD、蒸馏的条目，摘要级也转）。</li>
+</ul></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-18 11:13 (UTC+8)</div></main></div>
+<script>
+(function(){
+ // 详情卡片全部展开/收起
+ document.querySelectorAll('[data-act]').forEach(function(b){b.addEventListener('click',function(){
+   var o=b.getAttribute('data-act')==='open';document.querySelectorAll('details.card').forEach(function(d){d.open=o;});});});
+ // 点击目录中位于折叠卡片内的锚点时自动展开
+ function openFor(id){var el=document.getElementById(id);if(!el)return;var d=el.closest('details');if(d)d.open=true;}
+ if(location.hash)openFor(decodeURIComponent(location.hash.slice(1)));
+ window.addEventListener('hashchange',function(){openFor(decodeURIComponent(location.hash.slice(1)));});
+ // 目录高亮
+ var links=[].slice.call(document.querySelectorAll('nav.toc a'));
+ var heads=links.map(function(a){return document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));});
+ function hl(){var y=window.scrollY+80,k=-1;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top+window.scrollY<=y&&h.offsetParent!==null)k=i;});
+   links.forEach(function(a,i){a.classList.toggle('on',i===k);});}
+ window.addEventListener('scroll',hl,{passive:true});hl();
+})();
+</script><script>if(document.querySelector('code.language-mermaid')){var s=document.createElement('script');
+s.src='https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';s.onload=function(){document.querySelectorAll('code.language-mermaid').forEach(function(c){var d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentNode.replaceWith(d);});mermaid.initialize({startOnLoad:false});mermaid.run();};document.head.appendChild(s);}</script></body></html>
