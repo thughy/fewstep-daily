@@ -757,7 +757,7 @@ details.card>.body{padding:4px 18px 10px}
 <div class="body">
 <ul>
 <li><strong>等价形式</strong>：在 Self-Forcing 上套 DMD2 配方。critic 是 fake-score 主干，在第 21、29 层接序列级判别头，对比真实数据 latent 和学生 rollout（softplus GAN）。generator 损失 = DMD（14B teacher，CFG 5）+ 0.03 × GAN，更新比 5:1。逐帧 1 步（<code>denoising_step_list [1000]</code>），<strong>不需要 R1/R2</strong>（chunkwise 配置才需要 r1 1.0 / r2 0.001）。初始化用 Causal Forcing ODE，训练 200 步，8×H100 约 1 h【代码 <code>model/one_forcing.py</code> c9a2350】。</li>
-<li><strong>证据</strong>：VBench 83.76，对比 ASD 79.12、CF 1 步 78.39、SF 1 步 77.18、SF 4 步 83.46。去掉 FFE（首块走 4 步）后是 80.69。只用 DMD 时 75.27 vs 80.36。20 s 时 78.52 vs 75.30。recall 0.457→0.711。端到端含 VAE 提速 1.87×（H200，4.13 s vs 7.72 s）。CD 初始化 Dynamic 23.61，ODE 初始化 52.76<span class="b b-orig">原文</span>。</li>
+<li><strong>证据</strong>：VBench 83.76，对比 ASD 79.12、CF 1 步 78.39、SF 1 步 77.18、SF 4 步 83.46。消融里带 FFE（首块走 4 步）是 83.30，去掉后是 80.69（83.76 是主表数字，10-19 更正）。只用 DMD 时 75.27 vs 80.36。20 s 时 78.52 vs 75.30。recall 0.457→0.711。端到端含 VAE 提速 1.87×（H200，4.13 s vs 7.72 s）。CD 初始化 Dynamic 23.61，ODE 初始化 52.76<span class="b b-orig">原文</span>。</li>
 <li><strong>和最接近工作的差别</strong>：APT2 / 对抗后训练是<strong>用对抗替代 DMD</strong>，这里是 DMD 加上真实数据判别头；Self-Forcing 1 步没有真实数据项，并且是 chunkwise。</li>
 <li><strong>预测</strong> 4/5（①低估）。按格 ✗：我原以为逐帧 1 步训练会不稳定，实际很稳。Codex：L4 = L2 + L3<span class="b b-codex">Codex✓</span>。</li>
 <li><strong>评级</strong>：必读·先跑，满足 v1.4 (a)+(b)。原创性：新发现（中）。可信度：「超过 4 步」这一条存疑（协议混用、含 FFE、单样本）。</li>
@@ -852,7 +852,7 @@ details.card>.body{padding:4px 18px 10px}
 </ul>
 </div>
 </details></section>
-<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-19 09:15 (UTC+8)</div></main></div>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-19 09:17 (UTC+8)</div></main></div>
 <script>
 (function(){
  // 详情卡片全部展开/收起
