@@ -115,20 +115,24 @@ details.card>.body{padding:4px 18px 10px}
 <li><a href="#2-maadhorses-for-coursesgpt7bpei8k-必读候选仅or摘要">2. MAAD：Horses for Courses（GpT7BPei8K）· 必读候选（仅OR摘要）</a></li>
 <li><a href="#两篇放一起看">两篇放一起看</a></li>
 <li><a href="#对我们训练的含义_3">对我们训练的含义</a></li>
+<li><a href="#补扫1342北京时间mon-19-oct-列表批">补扫（13:42，北京时间）：Mon 19 Oct 列表批</a><ul>
+<li><a href="#preciseedit一步编辑的强弱-transport-分工值得看应用">PreciseEdit：一步编辑的强弱 transport 分工（值得看·应用）</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div></nav>
 <main><h1 id="少步蒸馏-每日-2026-10-19周一轻量版">少步蒸馏 · 每日 2026-10-19（周一，轻量版）</h1>
 <blockquote>
-<p><strong>批次覆盖（F1/F2）</strong>：应出列表日 = <strong>Mon 19 Oct</strong>。09:12 查 <code>/new</code> 页头仍是 <strong>Friday, 16 October 2026</strong> → <strong>Mon 19 批 pending</strong>，留给 13:42 补扫。Fri 16 批已在 10-18 补扫 done（含 Speculative Forcing）。周一 F2：上周五已清完；本周一列表批未出。</p>
-<p><strong>F3 ID 区间</strong>：从上批最大 ID <code>2610.22372</code> 拉到当前可见 <code>2610.23383</code>（复用 RL 同事 abs 快照），8 类去重 <strong>348</strong> 条；screen v2 命中 <strong>26</strong>，全部读过标题（F6 无分数截断）<span class="b b-meas">实测</span>。</p>
+<p><strong>批次覆盖（F1/F2）</strong>：应出列表日 = <strong>Mon 19 Oct</strong>。09:12 <code>/new</code> 仍是 Fri 16 → pending；<strong>13:42 补扫</strong> <code>/new</code> 已翻到 <strong>Monday, 19 October 2026</strong> → <strong>Mon 19 批 done</strong>（延迟约 6 h，≤24 h 目标）。Fri 16 已在 10-18 补扫 done。周一 F2：上周五 + 本周一均清完。</p>
+<p><strong>F3 ID 区间</strong>（晨间）：<code>2610.22372</code>→<code>2610.23383</code>，8 类 <strong>348</strong> 条 / v2 <strong>26</strong> 命中（全读标题）。<strong>列表批全量</strong>：8 类去重 <strong>826</strong>（new 375 / cross 119 / repl 332）；v2 <strong>48</strong> 命中全读标题；其中 26 条已在 ID 区间见过，列表新增命中 22 条<span class="b b-meas">实测</span>。</p>
 <p><strong>F4 OpenReview</strong>：读文献同事 <code>paper-digest/2026-10-19/raw/or_iclr27*.json</code>（只读）。转交 81 条 + 召回缺口另 50 条少步相关标题均已分诊；无孪生的标「仅OR摘要」。OR PDF 仍 403，未绕过。</p>
 <p><strong>F5 对账（48h）</strong>：对照 lit <code>recall-report.md</code> / <code>forward-fewstep-*.md</code> 与 RL <code>fewstep_kw_hits.json</code>。Fri 16 核心条已在 10-18 日报；本日新增范围内 arXiv 主要为 FlashControl 等（见下）。无「同事已见、我完全无记录」的关键漏检。
 标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】【仅OR摘要】<span class="b b-team">队友转述</span><span class="b b-inf">推断</span><span class="b b-codex">Codex✓</span></p>
 </blockquote>
 <hr />
 <section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
-<p><strong>今天的判断：</strong> Mon 19 列表批还没上线；实质内容来自 <strong>OR 新增分诊 + ID 区间</strong>。两条会改训练决定的工作都挂在「DMD 之前 / 之外」的旋钮上，而不是换散度：</p>
+<p><strong>今天的判断（09:12）：</strong> Mon 19 列表批当时未上线；实质内容来自 <strong>OR 新增分诊 + ID 区间</strong>。<strong>13:42 补扫</strong>已清列表批，新增范围内 arXiv 仅 PreciseEdit（见文末「补扫」）。两条会改训练决定的工作都挂在「DMD 之前 / 之外」的旋钮上，而不是换散度：</p>
 <ol>
 <li><strong>Drift Forcing（OR <code>Gffoov6YRI</code>，仅OR + 匿名代码）→ 必读·先跑。</strong> 初始化从 ODE/CD 换成「学生自 rollout 上的样本级漂移场」，DMD 一行不动。摘要自报同 DMD 配方下 VBench Total 84.63、领先来自动态度【仅OR摘要】。核心 loss 链已在代码核对【代码】。</li>
 <li><strong>Lost in the Rollout（OR <code>Z8rfnXcQNm</code>）= LiveTalk <a href="https://arxiv.org/abs/2512.23576">2512.23576</a> 的 ICLR 扩展 → 必读·先跑。</strong> 参考图 latent 被贴进 real/fake 打分输入第 0 帧，双向打分同时被坏参考图污染；修法是数据质检 + ODE 训到收敛（4k→20k），不是改 K1。<span class="b b-orig">原文+代码</span>OR 新增的音频能量目标只在摘要里。</li>
@@ -147,6 +151,7 @@ details.card>.body{padding:4px 18px 10px}
 <li><strong>必读候选（仅OR）· Horizon DMD / Memory-Gated Distillation / ARROW / MDD / MAAD</strong>：轴 C 理论、前缀门控、免训练写缓存、AV 模态解耦。</li>
 <li><strong>值得看 · Conditional Mean Flows <a href="https://arxiv.org/abs/2610.21657">2610.21657</a></strong>：少步 MeanFlow 非单调；p=0.25（相对 20674 的 p≥0.5）。昨天「不相关」→ 今天上调。</li>
 <li><strong>值得看·应用 · FlashControl <a href="https://arxiv.org/abs/2610.22537">2610.22537</a></strong>（ID 区间）：单流 DeltaControl 教师 → 一步可控学生。</li>
+<li><strong>值得看·应用 · PreciseEdit <a href="https://arxiv.org/abs/2610.23535">2610.23535</a></strong>（13:42 补扫）：免训练一步编辑；高低噪声分工，不是新蒸馏 loss。</li>
 <li><strong>归 RL · NPO <a href="https://arxiv.org/abs/2610.21125">2610.21125</a></strong>（Fri 批，已见）；<strong>Dual-Support OPO / WoRL / seJjZPgtaO</strong> 等蒸馏后 RL → 转 RL 同事。</li>
 </ul>
 <hr />
@@ -169,7 +174,7 @@ details.card>.body{padding:4px 18px 10px}
 </tr>
 <tr>
 <td><strong>L2 分布匹配</strong></td>
-<td>FlashControl（应用）</td>
+<td>FlashControl；PreciseEdit（编辑应用）</td>
 <td>Horizon DMD（轴 C 理论）；MGD（写记忆门控）；Lost in the Rollout（贴首帧改打分输入）</td>
 <td><strong>MDD / MAAD</strong>（模态解耦 τ / 子步 / SCTA）</td>
 </tr>
@@ -676,8 +681,53 @@ details.card>.body{padding:4px 18px 10px}
 <li>AV：①先跑 τ 解耦：{共享 τ, τ_a 偏低, τ_a 偏高} × 同 DMD，测 VBench、CLAP/FAD、Sync-C，2 种子；②fake score 分支化 loss（按模态分开算 + 分开权重），成本低；③SCTA 的思路先作为 avatar 场景的对照：教师给音频打分时，视觉条件用学生 rollout vs 教师 rollout</li>
 <li>流式 AR：MAAD 的音频子步复用视觉 KV 缓存，可以直接搬到 AV 流式学生（OmniForcing 式双流缓存）上</li>
 <li>等全文：MDD 的 τ_a/τ_v 分布、MAAD 的 DM 目标具体形式和 SCTA 消融</li>
-</ul></section>
-<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-19 09:17 (UTC+8)</div></main></div>
+</ul>
+<hr />
+</section><section class=""><h2 id="补扫1342北京时间mon-19-oct-列表批">补扫（13:42，北京时间）：Mon 19 Oct 列表批</h2>
+<p><strong>台账</strong>：<code>/new</code> 页头已是 Monday, 19 October 2026。8 类去重 <strong>826</strong> 条（new 375 / cross 119 / repl 332）；screen v2 命中 <strong>48</strong>，全部读过标题（F6）。相对晨间 ID 区间：26 条 ALREADY，22 条列表新增。原始：<code>daily/raw/1019mon/</code>（TRIAGE.md）。发现延迟：应出 08:00 → 进日报 ~13:50 ≈ <strong>6 h</strong>。</p>
+<p><strong>范围内新条（列表批才见到）</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>题目</th>
+<th>评级</th>
+<th>挂格</th>
+<th>一句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.23535">2610.23535</a></td>
+<td>PreciseEdit</td>
+<td><strong>值得看·应用</strong></td>
+<td>单步 × 应用</td>
+<td>免训练一步编辑：高噪声出强 transport，低噪声作方向/空间探针；不是新蒸馏 loss</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.06617">2610.06617</a></td>
+<td>RealtimeWAM（repl）</td>
+<td>外围·world-action</td>
+<td>—</td>
+<td>TACD 把动作专家蒸成一步；改的是 action NFE，不是视频少步</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.11362">2610.11362</a></td>
+<td>Bernoulli Flow Models（repl）</td>
+<td>外围·理论</td>
+<td>—</td>
+<td>低 NFE 二值流，<strong>明确不用蒸馏</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>其余 19 条列表新增命中均为 OUT（蛋白扩散少步、LLM/VLM OPD、GUI、理解侧流式等），见 TRIAGE.md。</p>
+<h3 id="preciseedit一步编辑的强弱-transport-分工值得看应用">PreciseEdit：一步编辑的强弱 transport 分工（值得看·应用）</h3>
+<p><strong>结论</strong>：强语义 transport 不必然不稳；不稳是因为方向或空间位置不可靠。双噪声尺度：高噪声负责改，低噪声负责「能不能改、往哪改」。卡片：<code>daily/pending/2026-10-19-preciseedit.md</code><span class="b b-orig">原文摘要</span>。</p>
+<p><strong>关键操作（摘要级）</strong>：①一步 T2I 上源/目标条件前向；②高噪声尺度构造强目标向 transport 做位移；③低噪声尺度作方向一致性 + 空间结构探针；④只在可靠方向×位置释放；⑤对照 = 全局向量差 ± 全局平滑/统一削弱。</p>
+<p><strong>与最接近的核心差别</strong>：vs 全局向量差一步编辑 → 不统一削弱，用低噪声选门后再放强 transport；vs FlashControl → 那边是训练一步可控学生，这边是推理期编辑层。</p>
+<p><strong>对我们训练</strong>：图像一步学生上线后可作编辑层对照；视频 / AV / 流式无。不满足 v1.4 (a)/(b) → 不升必读·先跑。</p>
+<p><strong>补扫结论</strong>：无新的必读·先跑；列表批相对 ID 区间的增量只有 PreciseEdit 进「值得看」。晨间已报的 FlashControl / NFM / DriftTTS 等评级不变。</p></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-19 13:47 (UTC+8)</div></main></div>
 <script>
 (function(){
  // 详情卡片全部展开/收起
