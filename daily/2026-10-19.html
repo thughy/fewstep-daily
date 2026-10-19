@@ -117,6 +117,7 @@ details.card>.body{padding:4px 18px 10px}
 <li><a href="#对我们训练的含义_3">对我们训练的含义</a></li>
 <li><a href="#补扫1342北京时间mon-19-oct-列表批">补扫（13:42，北京时间）：Mon 19 Oct 列表批</a><ul>
 <li><a href="#preciseedit一步编辑的强弱-transport-分工值得看应用">PreciseEdit：一步编辑的强弱 transport 分工（值得看·应用）</a></li>
+<li><a href="#normalizing-flow-maps可逆的-flow-map一步样本带精确似然值得看外围全文已读">Normalizing Flow Maps：可逆的 flow map，一步样本带精确似然（值得看·外围，全文已读）</a></li>
 </ul>
 </li>
 </ul>
@@ -127,7 +128,7 @@ details.card>.body{padding:4px 18px 10px}
 <p><strong>批次覆盖（F1/F2）</strong>：应出列表日 = <strong>Mon 19 Oct</strong>。09:12 <code>/new</code> 仍是 Fri 16 → pending；<strong>13:42 补扫</strong> <code>/new</code> 已翻到 <strong>Monday, 19 October 2026</strong> → <strong>Mon 19 批 done</strong>（延迟约 6 h，≤24 h 目标）。Fri 16 已在 10-18 补扫 done。周一 F2：上周五 + 本周一均清完。</p>
 <p><strong>F3 ID 区间</strong>（晨间）：<code>2610.22372</code>→<code>2610.23383</code>，8 类 <strong>348</strong> 条 / v2 <strong>26</strong> 命中（全读标题）。<strong>列表批全量</strong>：8 类去重 <strong>826</strong>（new 375 / cross 119 / repl 332）；v2 <strong>48</strong> 命中全读标题；其中 26 条已在 ID 区间见过，列表新增命中 22 条<span class="b b-meas">实测</span>。</p>
 <p><strong>F4 OpenReview</strong>：读文献同事 <code>paper-digest/2026-10-19/raw/or_iclr27*.json</code>（只读）。转交 81 条 + 召回缺口另 50 条少步相关标题均已分诊；无孪生的标「仅OR摘要」。OR PDF 仍 403，未绕过。</p>
-<p><strong>F5 对账（48h）</strong>：对照 lit <code>recall-report.md</code> / <code>forward-fewstep-*.md</code> 与 RL <code>fewstep_kw_hits.json</code>。Fri 16 核心条已在 10-18 日报；本日新增范围内 arXiv 主要为 FlashControl 等（见下）。无「同事已见、我完全无记录」的关键漏检。
+<p><strong>F5 对账（48h）</strong>：对照 lit <code>recall-report.md</code> / <code>forward-fewstep-*.md</code> 与 RL <code>fewstep_kw_hits.json</code>。Fri 16 核心条已在 10-18 日报；本日新增范围内 arXiv 主要为 FlashControl 等（见下）。无「同事已见、我完全无记录」的关键漏检。<strong>（13:57 更正：Mon 19 列表批有 6 条同事转交在 13:42 时没进日报，见文末「补扫」）</strong>
 标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】【仅OR摘要】<span class="b b-team">队友转述</span><span class="b b-inf">推断</span><span class="b b-codex">Codex✓</span></p>
 </blockquote>
 <hr />
@@ -168,7 +169,7 @@ details.card>.body{padding:4px 18px 10px}
 <tbody>
 <tr>
 <td><strong>L1 轨迹 / 初始化</strong></td>
-<td>CMF（发现：多步非单调；p=0.25）</td>
+<td>CMF（发现：多步非单调；p=0.25）；NFM-R（可逆骨干上的 MeanFlow）</td>
 <td><strong>Drift Forcing</strong>（初始化换漂移场）</td>
 <td>—</td>
 </tr>
@@ -279,8 +280,8 @@ details.card>.body{padding:4px 18px 10px}
 </tr>
 <tr>
 <td>Mon 19 Oct</td>
-<td><strong>pending</strong></td>
-<td><code>/new</code> 09:12 仍 Fri；13:42 必清</td>
+<td><strong>pending → done（13:42）</strong></td>
+<td><code>/new</code> 09:12 仍 Fri；13:42 已清；13:57 补记 6 条漏记</td>
 </tr>
 <tr>
 <td>ID 22373–23383</td>
@@ -718,16 +719,73 @@ details.card>.body{padding:4px 18px 10px}
 <td>—</td>
 <td>低 NFE 二值流，<strong>明确不用蒸馏</strong></td>
 </tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.22711">2610.22711</a></td>
+<td>Normalizing Flow Maps（NFM）</td>
+<td><strong>值得看·外围（理论 / 似然）</strong>【全文+代码】</td>
+<td>NFM-R：L1（MeanFlow 式回归）× offline；NFM-D：放不进框架·前向 KL 精确似然 × offline</td>
+<td>可逆 flow map，一步样本有精确似然；IN64 一步 FID 3.60（NFM-R，数值上不可逆）/ 4.59（NFM-D，可逆）对 MLE iTARFlow 4.89，只赢同参数 NF，离 EDM 1.36 远；NFM-R 用了 EDM2 ReFlow 配对和 LPIPS+ConvNeXt 感知 loss，基线都没有 → 不同协议</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.22960">2610.22960</a></td>
+<td>DriftTTS</td>
+<td>值得看·外围（音频）【仅摘要】</td>
+<td>L5 样本级漂移场 × 真实数据，无教师</td>
+<td>不用预训练教师的一步 TTS；变长语音改为分段 drifting；LJSpeech 上和 Matcha/RapFlow 多步持平。和 Drift Forcing、Priming 同属「无教师样本级场」，但只有单数据集、基线弱</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.22910">2610.22910</a></td>
+<td>Bridge, Distill, Refine（BDR-BWE）</td>
+<td>外围·音频应用（重做）【仅摘要】</td>
+<td>L4 = L1 渐进 CD + L3 对抗精修 × offline</td>
+<td>语音带宽扩展：flow bridge → 渐进一致性蒸馏到 1 步 → GAN 精修；配方可预测，VCTK LSD SOTA 不改我们的决定</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.23297">2610.23297</a></td>
+<td>FlashReFocus</td>
+<td>不相关·应用外围【仅摘要】</td>
+<td>APP（一步去模糊组件）</td>
+<td>一次一步扩散恢复全焦图，之后用轻量网络渲染景深；少步只是组件，没有新蒸馏 loss</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.23047">2610.23047</a></td>
+<td>DIFFLET</td>
+<td>外围·推理系统【仅摘要】</td>
+<td>推理·步/缓存分配（v1.5）</td>
+<td>Trainium 推理引擎，每步决定跑去噪器还是复用上一步输出；摘要只报 attention 融合 1.2–4.3× 和常驻进程 1.5–3.4×，没有和等时间均匀少步比 → 按 v1.5 不升级；硬件专用</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.23703">2610.23703</a></td>
+<td>Blitz</td>
+<td>不相关·域外（蛋白结构）【仅摘要】</td>
+<td>L1 多步一致性 × offline</td>
+<td>AF3 / Boltz-2 扩散模块 200→8 步：几何噪声调度 + multistep consistency training + 推理物理引导。唯一可借的是「在统一评测协议下比少步方法」</td>
+</tr>
 </tbody>
 </table></div>
-<p>其余 19 条列表新增命中均为 OUT（蛋白扩散少步、LLM/VLM OPD、GUI、理解侧流式等），见 TRIAGE.md。</p>
+<p><strong>粗筛命中但未收录（F8，补 13:42 漏写）</strong>：列表批 v2 命中 48 条，上表 + 晨间正文（FlashControl）已收 10 条，其余 38 条逐条理由：OUT·LLM/VLM 蒸馏或推测解码——<a href="https://arxiv.org/abs/2610.21337">2610.21337</a> STOPD、<a href="https://arxiv.org/abs/2610.18735">2610.18735</a> SP²ec（v2，VLM 自推测解码）、<a href="https://arxiv.org/abs/2610.22543">2610.22543</a> SPOT（扩散 LM）、<a href="https://arxiv.org/abs/2610.23455">2610.23455</a>、<a href="https://arxiv.org/abs/2610.23613">2610.23613</a>、<a href="https://arxiv.org/abs/2610.22512">2610.22512</a>、<a href="https://arxiv.org/abs/2610.23306">2610.23306</a>、<a href="https://arxiv.org/abs/2610.22467">2610.22467</a>、<a href="https://arxiv.org/abs/2607.25182">2607.25182</a>、<a href="https://arxiv.org/abs/2602.13802">2602.13802</a>；OUT·理解 / agent / GUI——<a href="https://arxiv.org/abs/2610.22408">2610.22408</a> ECHOES、<a href="https://arxiv.org/abs/2610.22499">2610.22499</a> JAVIS（转文献）、<a href="https://arxiv.org/abs/2610.22681">2610.22681</a>、<a href="https://arxiv.org/abs/2610.14671">2610.14671</a>、<a href="https://arxiv.org/abs/2610.23194">2610.23194</a>、<a href="https://arxiv.org/abs/2610.23290">2610.23290</a>、<a href="https://arxiv.org/abs/2610.23302">2610.23302</a>、<a href="https://arxiv.org/abs/2610.22797">2610.22797</a>、<a href="https://arxiv.org/abs/2605.10899">2605.10899</a>、<a href="https://arxiv.org/abs/2608.05587">2608.05587</a>、<a href="https://arxiv.org/abs/2610.22907">2610.22907</a>、<a href="https://arxiv.org/abs/2506.03591">2506.03591</a>；OUT·训练或推理效率但不减步——<a href="https://arxiv.org/abs/2610.22945">2610.22945</a>（大扩散模型 EMA，优化器侧，不减步）、<a href="https://arxiv.org/abs/2610.22975">2610.22975</a> Sink-Sparse（稀疏 attention，调度不变）、<a href="https://arxiv.org/abs/2605.25801">2605.25801</a> PixelWizard（高分辨率结构效率，无步数蒸馏）；OUT·非生成媒体 / 域外——<a href="https://arxiv.org/abs/2609.39600">2609.39600</a>、<a href="https://arxiv.org/abs/2610.23039">2610.23039</a>、<a href="https://arxiv.org/abs/2601.01865">2601.01865</a>、<a href="https://arxiv.org/abs/2609.06296">2609.06296</a>、<a href="https://arxiv.org/abs/2608.23215">2608.23215</a>、<a href="https://arxiv.org/abs/2605.24073">2605.24073</a>、<a href="https://arxiv.org/abs/2505.24776">2505.24776</a>、<a href="https://arxiv.org/abs/2610.22523">2610.22523</a>、<a href="https://arxiv.org/abs/2610.22608">2610.22608</a>、<a href="https://arxiv.org/abs/2610.22991">2610.22991</a>、<a href="https://arxiv.org/abs/2610.23377">2610.23377</a>、<a href="https://arxiv.org/abs/2610.23469">2610.23469</a>、<a href="https://arxiv.org/abs/2610.23021">2610.23021</a>（V2A 条件，无少步）。另：晨间 F8 已列的 SCALE <a href="https://arxiv.org/abs/2610.23263">2610.23263</a>（免引导，不减步）不变。</p>
+<p><strong>13:42 补扫的漏记更正（F5 / F8）</strong>：13:42 补扫把晨间 ID 区间里<strong>粗筛命中过</strong>的 26 条一律标成「ALREADY」，当成「已进日报」，并写了「晨间已报的 FlashControl / NFM / DriftTTS 等评级不变」。但晨间日报正文只有 FlashControl；DriftTTS / BDR-BWE 只在 F8 行提了名、没有 ID 和评级；NFM、FlashReFocus、DIFFLET 完全没进日报；Blitz（列表新增）判 OUT 后被并进「其余 19 条」，没有逐条留痕。补扫也<strong>没读两位同事的转交单</strong>（文献同事 10:47 的 14 条、RL 同事 <code>fewstep_kw_hits.json</code>），所以 F5 对账没跑。按「日报里有 ID + 评级」算，Mon 19 批的同事转交在 13:42 时外部召回 <strong>8/14 = 57%</strong>（目标 ≥95%）；本次补齐后 14/14。</p>
 <h3 id="preciseedit一步编辑的强弱-transport-分工值得看应用">PreciseEdit：一步编辑的强弱 transport 分工（值得看·应用）</h3>
 <p><strong>结论</strong>：强语义 transport 不必然不稳；不稳是因为方向或空间位置不可靠。双噪声尺度：高噪声负责改，低噪声负责「能不能改、往哪改」。卡片：<code>daily/pending/2026-10-19-preciseedit.md</code><span class="b b-orig">原文摘要</span>。</p>
 <p><strong>关键操作（摘要级）</strong>：①一步 T2I 上源/目标条件前向；②高噪声尺度构造强目标向 transport 做位移；③低噪声尺度作方向一致性 + 空间结构探针；④只在可靠方向×位置释放；⑤对照 = 全局向量差 ± 全局平滑/统一削弱。</p>
 <p><strong>与最接近的核心差别</strong>：vs 全局向量差一步编辑 → 不统一削弱，用低噪声选门后再放强 transport；vs FlashControl → 那边是训练一步可控学生，这边是推理期编辑层。</p>
 <p><strong>对我们训练</strong>：图像一步学生上线后可作编辑层对照；视频 / AV / 流式无。不满足 v1.4 (a)/(b) → 不升必读·先跑。</p>
-<p><strong>补扫结论</strong>：无新的必读·先跑；列表批相对 ID 区间的增量只有 PreciseEdit 进「值得看」。晨间已报的 FlashControl / NFM / DriftTTS 等评级不变。</p></section>
-<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-19 13:47 (UTC+8)</div></main></div>
+<h3 id="normalizing-flow-maps可逆的-flow-map一步样本带精确似然值得看外围全文已读">Normalizing Flow Maps：可逆的 flow map，一步样本带精确似然（值得看·外围，全文已读）</h3>
+<p><strong>结论</strong>：对少步蒸馏，它最有用的是一个<strong>负面对照</strong>：两种训练里图像质量好的是 NFM-R，而 NFM-R 的损失就是 pMF/iMF 的 MeanFlow 回归，只是骨干换成可逆的 iTARFlow；它的 FID 优势和 ReFlow 配对、感知 loss 混在一起。NFM-D（精确似然版）是新的训练法，但只在 Boltzmann 采样上占优。不满足 v1.4 (a)/(b)：不改我们 AV / 流式的任何训练决定，也没在同协议下赢最强少步基线。卡片：<code>daily/pending/2026-10-19-nfm.md</code>。</p>
+<p><strong>关键操作</strong><span class="b b-orig">原文 §3.3、附录 D.4；代码 francescoshox/NormalizingFlowMaps e0199d3</span>：</p>
+<ol>
+<li>骨干：iTARFlow（因果 Transformer 仿射自回归流），按 (s,t) 双时间条件；三种参数化 (A) 双时间、(B) 去噪器式 x 预测（f_{s,s}=Id）、(C) 用 (s−t) 门控 scale/shift。</li>
+<li><strong>NFM-R</strong>：从 EDM / EDM2 <strong>ReFlow 配对</strong>取 (噪声, 图像)，算 iMF 目标 V = v + (s−t)·sg(∂v/∂s)，回归 sg(v_guided)，再加 LPIPS 0.4 + ConvNeXt 0.1 感知 loss【代码 objectives/nfmr.py:311-331；configs/imagenet64_nfmr_mean_flow.yaml:41-44】。先只训 FM 200 epoch，再 iMF 25 epoch。</li>
+<li><strong>NFM-D 单时间</strong>：x_t = (1−t)x0 + tε，t ~ U[0, 0.15]（IN64），把 x_t 用逆映射推到高斯，loss = ½‖z‖² − log det【代码 objectives/nfmd.py:15-34】。即<strong>按噪声级条件化的加噪 MLE</strong>，采样时直接取 t=0 的映射，不用 Tweedie 去噪。</li>
+<li><strong>NFM-D 两时间</strong>：x_s →(θ) x_t →(冻结 θ̄，梯度穿输入) 高斯，两段 log det 相加；和单时间各占 0.5【代码 nfmd.py:70-82】。</li>
+</ol>
+<p><strong>因果逻辑</strong>：TARFlow 必须在训练数据上加噪才稳定，推理时又要用 Tweedie 去噪，去噪这一步不在变量替换里，所以干净样本没有似然 → NFM 把「加噪 MLE」改成跨噪声级的 flow map，t=0 的端点本身就是可逆映射 → 干净样本有精确似然，可以直接做 REINFORCE / 精确 KL 正则。证据：CIFAR-10 iTARFlow 不加噪 FID 40.83，加噪 + 去噪 6.72 但不可逆；NFM-D 可逆 6.26<span class="b b-orig">原文 表 1a、表 6</span>。</p>
+<p><strong>与最接近的核心差别</strong>：vs pMF / iMF（MeanFlow）→ 损失相同，骨干换成可逆 NF；vs iTARFlow / TARFlow（加噪 MLE + Tweedie）→ NFM-D 让噪声级成为条件，去掉 Tweedie；vs SoftFlow → 同样按噪声级条件化，NFM-D 加了两时间组合映射。</p>
+<p><strong>证据 / 疑点</strong><span class="b b-orig">原文</span>：IN64 一步：NFM-R 3.60（127M，表中归「不可逆」）、NFM-D 4.59（123M）、iTARFlow 4.89、CD 4.70、EDM 1.36；表里没有 sCM / iCT 这类更强的一步基线。NFM-R 要 FP64 推理加噪声退火才保住可逆性。每个模型单独扫 CFG、选最好的 checkpoint，单次训练；RL 只在单个 prompt 上做了 20–40 步更新（NFM-R 报了 10 个种子），没有人评。</p>
+<p><strong>挂格 / Codex 盲分</strong>：NFM-R = L1 × offline；NFM-D = 前向 KL（精确似然）× offline，放进「放不进框架」一节。Codex 盲分（只给方法段）一致<span class="b b-codex">Codex✓</span>。分歧：Codex 说 NFM-R「没有外部教师」，但附录和代码写明用 EDM/EDM2 的 ReFlow 配对，<strong>等于有一个离线教师</strong>。处理：以附录和代码为准。</p>
+<p><strong>对我们训练</strong>：图像：无（我们不用 NF 骨干）；只记一条：MeanFlow 式少步学生如果拿同协议的 FID 做对比，要把 ReFlow 配对和感知 loss 单独当变量。视频 / AV / 流式：无。</p>
+<p><strong>补扫结论（13:57 更新）</strong>：无新的必读·先跑。列表批范围内新增：PreciseEdit 值得看·应用；NFM、DriftTTS 值得看·外围；BDR-BWE、RealtimeWAM、Bernoulli、DIFFLET 外围；FlashReFocus、Blitz 不相关。13:42 版本里「晨间已报的 FlashControl / NFM / DriftTTS 等评级不变」这句不对，已按上表更正。</p></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-19 13:57 (UTC+8)</div></main></div>
 <script>
 (function(){
  // 详情卡片全部展开/收起
