@@ -70,6 +70,13 @@ details.card>.body{padding:4px 18px 10px}
 <li><a href="#cdm-consistent-distribution-matching261009221ubcvector代码-felix-yuxiangcdmd-hf-权重-值得读可用配方原创组合新-可信度存疑">CDM / Consistent Distribution Matching（2610.09221，UBC/Vector；代码 felix-yuxiang/CDMD + HF 权重）· 值得读·可用配方（原创：组合新 × 可信度：存疑）</a></li>
 </ul>
 </li>
+<li><a href="#补扫1348北京时间tue-20-oct-列表批">补扫（13:48，北京时间）：Tue 20 Oct 列表批</a><ul>
+<li><a href="#tritd让流式学生吃带噪-kv省掉每-chunk-的刷新前向值得读流式">TriTD：让流式学生吃带噪 KV，省掉每 chunk 的刷新前向（值得读·流式）</a></li>
+<li><a href="#fréchet-forcing长时漂移不靠教师靠真实数据统计值得读可用配方">Fréchet Forcing：长时漂移不靠教师，靠真实数据统计（值得读·可用配方）</a></li>
+<li><a href="#其余范围内新条一句话">其余范围内新条（一句话）</a></li>
+<li><a href="#同事转交对账f5-f9">同事转交对账（F5 / F9）</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div></nav>
@@ -78,12 +85,13 @@ details.card>.body{padding:4px 18px 10px}
 <p><strong>批次覆盖（F1）</strong>：应出列表日 = <strong>Tue 20 Oct</strong>（北京 08:00）。09:19 <code>/new</code> 8 类页头仍是 <strong>Monday, 19 October 2026</strong> → <strong>Tue 20 pending</strong>，交给 13:42 补扫。Mon 19 已 done（10-19 13:42）。<strong>本页不是 Tue 20 批</strong>：arXiv 内容来自下面的 ID 区间预览。</p>
 <p><strong>F3 ID 区间</strong>：<code>2610.23857</code>（Mon 19 批最大号 23856 之后）→ <code>2610.24892</code>（API 探测 24900 起为空）。全类 1,036 / 8 类 <strong>416</strong> 条；v2 正则 <strong>16</strong> 命中，全读标题；另让 Codex 对 416 条做不靠关键词的语义全量 → IN 2 / 外围 14 / 不相关 400<span class="b b-meas">实测</span><span class="b b-codex">Codex✓</span>。</p>
 <p><strong>F4 OpenReview</strong>：文献同事 10-20 的 <code>or_iclr27.json</code> 是新的大文件（ICLR27 唯一 <strong>1,853</strong> 条）。v2 命中 684 条，其中 <strong>450 条在我所有文件里从没出现过</strong>：105 条在我的 arXiv 语料里有同名孪生（我抽查的 4 条核心孪生 DMAD / LongForcing / TurboT2VA / Simplifying OPD 都已有评级；另 5 条外围孪生此前没进日报，补评见下），<strong>345 条仅 OR、从未分诊</strong> → 今天全部分诊完（Codex 首轮，我按摘要抽查定稿）：必读候选 5 / 值得看（高）9 / 值得看 45 / 归 RL 11 / 外围 102 / 不相关 173。OR PDF 仍 403，全部停在摘要级。</p>
-<p><strong>F5 对账（48h）</strong>：文献同事 10-20 转交 CDM <a href="https://arxiv.org/abs/2610.09221">2610.09221</a> → 今天精读（下 ①）；其 shortlist 其余 4 条均域外。RL 同事 10-19/10-20 <code>fewstep_kw_hits</code> 47 条中我没记录的 15 条全部域外（LLM、机器人、遥感超分）。<strong>无范围内漏检</strong>。
+<p><strong>F5 对账（48h）</strong>：文献同事 10-20 转交 CDM <a href="https://arxiv.org/abs/2610.09221">2610.09221</a> → 今天精读（下 ①）；其 shortlist 其余 4 条均域外。RL 同事 10-19/10-20 <code>fewstep_kw_hits</code> 47 条中我没记录的 15 条全部域外（LLM、机器人、遥感超分）。<strong>无范围内漏检</strong>。</p>
+<p><strong>13:48 补扫（F1）</strong>：<code>/new</code> 8 类页头已是 <strong>Tuesday, 20 October 2026</strong> → <strong>Tue 20 批 done</strong>（应出 08:00 → 进日报约 14:30，延迟 ≈ 6.5 h）。列表批 8 类去重 <strong>1,754</strong> 条（new 883 / cross 233 / repl 638），实际新号到 <code>2610.26863</code>，比晨间 API 探测的上限 24892 多出约 1,970 个号；v2 命中 <strong>120</strong> 全读标题，Codex 对晨间区间外 1,338 条做语义全量。新增：<strong>TriTD <a href="https://arxiv.org/abs/2610.26165">2610.26165</a>、Fréchet Forcing <a href="https://arxiv.org/abs/2610.25666">2610.25666</a> 值得读</strong>，详见文末「补扫」<span class="b b-meas">实测</span>。
 标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】【仅OR摘要】<span class="b b-team">队友转述</span><span class="b b-inf">推断</span><span class="b b-codex">Codex✓</span></p>
 </blockquote>
 <hr />
 <section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
-<p><strong>今天的判断：</strong> 没有新的「必读·先跑」。最有用的是 <strong>F4 盲区本身</strong>：ICLR27 大文件里有 345 条少步相关投稿我此前从没分诊过，其中 5 篇是必读候选，而且好几篇在攻同一个问题——<strong>学生在哪些状态上被监督</strong>（自 rollout 状态、先验噪声状态、还是两者混合），这和今天精读的 CDM 是同一根轴。</p>
+<p><strong>今天的判断：</strong> 没有新的「必读·先跑」。（13:48 补扫后更新：列表批新增两篇值得读，都在流式时间轴上——TriTD 让 4 步流式学生省掉每 chunk 的 KV 刷新前向，Fréchet Forcing 用真实数据统计代替教师去管长时漂移；见文末「补扫」。）最有用的是 <strong>F4 盲区本身</strong>：ICLR27 大文件里有 345 条少步相关投稿我此前从没分诊过，其中 5 篇是必读候选，而且好几篇在攻同一个问题——<strong>学生在哪些状态上被监督</strong>（自 rollout 状态、先验噪声状态、还是两者混合），这和今天精读的 CDM 是同一根轴。</p>
 <ol>
 <li><strong>CDM <a href="https://arxiv.org/abs/2610.09221">2610.09221</a> → 值得读·可用配方（存疑）。</strong> 名字叫 distribution matching，等价形式是 L1：在学生自生成状态上回归教师速度（MeanFlow 恒等式），没有 fake score。"无数据 SOTA" 靠的是作者重跑的 FreeFlow；FreeFlow 自报的同教师、同 100K 迭代成绩 2.24 好于 CDM 的 3.47，表里漏了这一行<span class="b b-orig">原文×2，网页核对</span>。</li>
 <li><strong>OR 必读候选（仅OR）</strong>：AFD（流式 AR，黑盒教师 + Bradley–Terry 判别器优势加权 flow matching）、OPTD（学生 rollout 状态 + 教师积分端点配对 + 同噪声级 GAN）、StateMix（DMD2 下混合先验噪声状态与 rollout 状态）、Revisiting Score Difference（critic 加源噪声级条件 + critic 要和教师同尺寸，含 WAN 自回归）、ReSeed（多样性主要丢在第一步高噪声，只调第一步就找回）。</li>
@@ -104,6 +112,8 @@ details.card>.body{padding:4px 18px 10px}
 <li><strong>必读候选（仅OR）· Revisiting Score Difference <code>xztyadrEYG</code></strong>：critic 加源噪声级条件；critic 要和教师同尺寸。</li>
 <li><strong>必读候选（仅OR）· ReSeed <code>oodc536owR</code></strong>：多样性主要在第一步高噪声丢失；只改第一步找回 DINO 多样性 +48.3%【仅OR摘要】。</li>
 <li><strong>重做·应用 · UMI-WM <a href="https://arxiv.org/abs/2610.23913">2610.23913</a></strong>：双腕 WM 的 CausVid/SF 4 步学生，快 6.9×。</li>
+<li><strong>值得读·流式 · TriTD <a href="https://arxiv.org/abs/2610.26165">2610.26165</a></strong>（13:48 补扫）：单调 exit 步让学生吃带噪 KV、省掉刷新前向；OP-DMD 贡献大部分质量增益；无代码。</li>
+<li><strong>值得读·可用配方 · Fréchet Forcing <a href="https://arxiv.org/abs/2610.25666">2610.25666</a></strong>（13:48 补扫）：无教师，真实统计 FD 管长时漂移，4,000+ 帧；代码 + 权重齐全，但没和 DMD 同协议比。</li>
 </ul>
 <hr />
 </section><section class="layer1"><h2 id="一屏框架今天挂在哪一格">一屏框架：今天挂在哪一格<span class="layer-tag">第一层 · 框架</span></h2>
@@ -332,8 +342,8 @@ details.card>.body{padding:4px 18px 10px}
 </tr>
 <tr>
 <td><strong>Tue 20 Oct</strong></td>
-<td><strong>pending</strong></td>
-<td>09:19 <code>/new</code> 仍是 Mon 19；ID 区间 23857–24892 已预览；13:42 补扫拉列表批（含跨列与替换）并和本页对账</td>
+<td><strong>done（10-20 13:48 补扫）</strong></td>
+<td>09:19 <code>/new</code> 仍是 Mon 19；ID 区间 23857–24892 已预览；13:48 <code>/new</code> 已是 Tue 20，列表批 1,754 条已筛并对账（见文末「补扫」）</td>
 </tr>
 </tbody>
 </table></div>
@@ -393,8 +403,128 @@ details.card>.body{padding:4px 18px 10px}
 <li>视频：无。JVP 在视频 DiT 上的显存与速度未知；仓库带 FA2/FA3 的 JVP kernel，可复用到 MeanFlow 类视频蒸馏。</li>
 <li>AV：无。</li>
 <li>流式 AR：无直接含义；"on-policy 状态 + 速度回归、无 fake score"可以当 Self-Forcing DMD 阶段的一个替代对照，但没有证据，只是推断。</li>
-</ul></section>
-<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-20 09:38 (UTC+8)</div></main></div>
+</ul>
+<hr />
+</section><section class=""><h2 id="补扫1348北京时间tue-20-oct-列表批">补扫（13:48，北京时间）：Tue 20 Oct 列表批</h2>
+<p><strong>台账</strong>：<code>/new</code> 8 类页头均为 Tuesday, 20 October 2026。8 类去重 <strong>1,754</strong> 条（new 883 / cross 233 / repl 638）；新提交号 <code>2610.23857</code>–<code>2610.26863</code>。screen v2 命中 <strong>120</strong>，全部读过标题（F6）；其中 16 条是晨间 ID 区间已在本页有 ID + 评级的（F9 核对通过）。另让 Codex 对晨间区间之外的 <strong>1,338</strong> 条做不靠关键词的语义全量 → IN 8 / 外围 46 / 不相关 1,284，我逐条复核了 IN 与外围（分歧 1 条：Codex 把 Fréchet Forcing 判外围，因为它不减步；我按「流式时间轴的训练信号」收为值得读），并读了 6 篇全文（Codex 先读、我抽查关键数字）。原始：<code>daily/raw/1020tue/</code>。发现延迟：应出 08:00 → 进日报约 14:30 ≈ <strong>6.5 h</strong>。</p>
+<p><strong>一屏框架（只放范围内的新条）</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>格子（训练信号 × 问题出在哪）</th>
+<th>论文</th>
+<th>评级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>分布匹配 × 流式时间轴</td>
+<td>TriTD <a href="https://arxiv.org/abs/2610.26165">2610.26165</a></td>
+<td><strong>值得读·流式</strong>（无代码）</td>
+</tr>
+<tr>
+<td>真实数据统计 × 流式时间轴（不减步）</td>
+<td>Fréchet Forcing <a href="https://arxiv.org/abs/2610.25666">2610.25666</a></td>
+<td><strong>值得读·可用配方</strong></td>
+</tr>
+<tr>
+<td>分布匹配 × 单步（学生内部容量）</td>
+<td>DeMoE <a href="https://arxiv.org/abs/2610.25742">2610.25742</a></td>
+<td>值得看（新机制 × 存疑）</td>
+</tr>
+<tr>
+<td>修正器 × 流式时间轴（不减步）</td>
+<td>Clean Forcing <a href="https://arxiv.org/abs/2610.25634">2610.25634</a></td>
+<td>值得看·流式外围（负面结果有用）</td>
+</tr>
+<tr>
+<td>分布匹配 × 多轮编辑（AR 扩散）</td>
+<td>MT Forcing <a href="https://arxiv.org/abs/2610.25404">2610.25404</a></td>
+<td>重做·应用</td>
+</tr>
+<tr>
+<td>推理侧 / 应用</td>
+<td>TamedFlow 26025、LEAP 25918、StreamingSwap 26681、MixiSpeech 25394、OT-MeanFlow3D <a href="https://arxiv.org/abs/2509.22592">2509.22592</a></td>
+<td>外围</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="tritd让流式学生吃带噪-kv省掉每-chunk-的刷新前向值得读流式">TriTD：让流式学生吃带噪 KV，省掉每 chunk 的刷新前向（值得读·流式）</h3>
+<p><strong>结论</strong>：三处改动里真正改训练决定的是 CGN——训练时把各 chunk 的 exit 步排成单调不减、首 chunk 干净，学生就能直接用最后一步的带噪 KV 往下生成，每 chunk 4 NFE 而不是 Self Forcing 的 5 NFE。质量增益主要来自 OP-DMD，它的等价形式是「DMD + 对教师 x̂0 的正交方向 L1 回归」。卡片：<code>daily/pending/2026-10-20-tritd.md</code><span class="b b-orig">原文</span>。</p>
+<p><strong>关键操作</strong><span class="b b-codex">原文 §3.3、表1/3；Codex✓</span>：</p>
+<ol>
+<li>学生 Wan2.1-1.3B 因果化（832×480，每 chunk 4 步），real score = Wan2.1 14B，fake score 在线训练。</li>
+<li>NTD：ODE 初始化不再回归干净终点，而是用 L1 回归教师 48 步轨迹的下一保存节点。</li>
+<li>CGN：首 chunk σ=0；后续 chunk 的起点步 / exit 步满足 t_c ≥ t_{c−1}。推理时跳过 KV 刷新：扩散耗时 4.79 s → 3.65 s（未 compile），H100 26.8 vs 20.3 FPS（均 compile、不含 VAE）。</li>
+<li>OP-DMD：δ = x̂0_student − x̂0_real，按 DMD 方向拆平行 / 正交分量，加 L1 惩罚（λ⊥=0.01、λ∥=0.0001）。</li>
+</ol>
+<p><strong>与最接近的核心差别</strong>：vs Self Forcing → 同样自 rollout + DMD，但 exit 步不再独立随机，推理少一次前向；vs CausVid → 初始化回归下一节点而不是终点；vs Causal Forcing → 仍用双向教师打分，改的是噪声排程和 DMD 的附加项。</p>
+<p><strong>证据 / 疑点</strong><span class="b b-orig">原文</span>：VBench Quality 83.59 vs Causal Forcing 82.91 / Self Forcing 82.33（128 prompt，单次训练）；消融 81.82 → 83.59 里 <strong>+1.49 来自 OP-DMD</strong>，CGN 只 +0.03（它的价值在速度）。盲评成对胜 Self Forcing 64.6%、Causal Forcing 70.8%。60 s Quality 82.64 vs 80.35。缺 Rolling / LongLive / AGF 同协议对照；无代码、无配置。论文没做「同权重普通 L1 回归」这个朴素对照。</p>
+<p><strong>对我们训练</strong>：流式——CGN 和正交 L1 两条都能在我们现有 Self-Forcing 学生上直接做消融，不用等代码；AV——无音频实验。不升必读·先跑：(a) 缺代码配置，(b) 没和流式候选最强（AGF）同协议比。代码放出当天复评。</p>
+<h3 id="fréchet-forcing长时漂移不靠教师靠真实数据统计值得读可用配方">Fréchet Forcing：长时漂移不靠教师，靠真实数据统计（值得读·可用配方）</h3>
+<p><strong>结论</strong>：超出训练视野的漂移，可以不用教师打分，用短片段的真实统计去约束 rollout 尾部。MiniWorld-1B 只微调 225 步（≤36 GPU 时），4,000+ 帧不崩。它不减步，但它对「长时段用什么训练信号」给了一个能直接跑的配方。卡片：<code>daily/pending/2026-10-20-frechet.md</code><span class="b b-orig">原文 + 代码</span>。</p>
+<p><strong>关键操作</strong>【原文 §3–4；代码 <code>train_selfroll.py</code> L535–691、<code>scripts/train_selfroll_droid.sh</code>】：</p>
+<ol>
+<li>L_anc：自生成历史加噪到 t=0.7、用部署的 staircase 采样器重渲染并 detach，<strong>紧邻的上一 chunk 换成真值</strong>，再对后 4 个真实 chunk 做 flow-matching。</li>
+<li>L_ctx：从 1 个真实 latent 自由 rollout 40 chunk，<strong>只有最后 8 chunk 留梯度</strong>，对 clip 自身 latent 窗口的均值 / 二阶矩做 EMA Fréchet 距离。</li>
+<li>L_real：尾部解码 4 chunk、隔帧取样，冻结 DINOv2 ViT-B/14 特征对训练帧统计做 FD。</li>
+<li>三项等权，各自 backward；没有教师、fake score、判别器或 reward。</li>
+</ol>
+<p><strong>与最接近的核心差别</strong>：vs Self Forcing / 长时 DMD → 打分者从「教师 − fake score」换成真实数据的一 / 二阶统计，不受教师视野和动作条件的限制；vs Elastic Forcing（MMD）→ 同为无 score 的样本级匹配，但目标统计来自真实数据而不是教师样本；vs RMD → 都不靠上下文打分，这里用帧级感知 FD 实现。</p>
+<p><strong>证据 / 疑点</strong><span class="b b-orig">原文 表2/5</span>：末段 2,997–4,001 帧，DROID CLIP-FD 44 vs FM-only 401、FVD 81 vs 1,873；Sekai 226 vs 564、441 vs 1,181。去掉 L_real，CLIP-FD 248 → 395。<strong>没有 DMD 类基线数值</strong>（作者说试过的 DMD 配置都没超过底座，所以省略）；32 条 rollout 的 bootstrap，不是多训练种子；底座是 1B 动作条件世界模型（240×320）。</p>
+<p><strong>对我们训练</strong>：流式——在已 DMD 少步的学生上，只对长时段加 L_ctx + L_real（尾部留梯度），对照长时 DMD，看 60 s+ 漂移和动态度；代码、HF 权重、训练脚本都在，成本可估。AV——帧级边际统计管不住音画同步，要给音频 latent 单独的 FD 和一个联合同步统计<span class="b b-inf">推断</span>。<strong>v1.4 边界</strong>：(a) 代码齐全、可能改「长时段用什么信号」，但它不减步、底座不同、没有 DMD 同协议对照，所以暂不升必读·先跑；如果我们流式底座当前的瓶颈就是 60 s 漂移，它就是第一个先跑候选。</p>
+<h3 id="其余范围内新条一句话">其余范围内新条（一句话）</h3>
+<ul>
+<li><strong>值得看（新机制 × 存疑）· DeMoE <a href="https://arxiv.org/abs/2610.25742">2610.25742</a></strong>：FLUX.2-klein 4B 一步 DMD2 学生，把 13 层图像 FFN 改成「常驻共享专家 + 路由残差切片」，损失不变。GenEval 0.8220 vs 自训 dense DMD2 0.7865、COCO FID 14.85 vs 17.84，接近 50 步教师 0.8245；但延迟 0.2256 s vs 0.1858 s、显存 39.96 vs 16.68 GB，算力不对齐；论文里的代码地址 <code>toffeecat/demoe-ttt-router</code> 14:10 查是 404<span class="b b-meas">原文 + 实测</span>。</li>
+<li><strong>值得看·流式外围 · Clean Forcing <a href="https://arxiv.org/abs/2610.25634">2610.25634</a></strong>：冻结 20 步底座，5.9M LoRA 回归「同一带噪状态下，生成历史 vs 干净历史的速度差」，Δ-drift 从 +11.27 降到 +1.65。对我们有用的是负面结果：<strong>直接套到 Self Forcing 4 步学生上会变差</strong>（MUSIQ 69.3 → 47.5、Δ +1.08 → +8.3），因为少步学生的速度差小一个量级、系统性只占 65–80%<span class="b b-orig">原文 附录 E</span>。别把这类修正器加到已蒸馏的学生上。</li>
+<li><strong>重做·应用 · MT Forcing <a href="https://arxiv.org/abs/2610.25404">2610.25404</a></strong>：多轮编辑的 Self-Forcing——学生逐轮自 rollout，教师和 fake score 都以「原图 + 合并后的全部指令」为条件打 DMD 分，再加 teacher-forcing FM 正则。第 8 轮 IF 9.17 vs 4.52（Qwen 评委，无人评、无种子、步数未报）。可借鉴的一点：只做边际 DMD 管不住历史依赖，保留 teacher-forced 轨迹项。</li>
+<li><strong>外围·推理 · TamedFlow <a href="https://arxiv.org/abs/2610.26025">2610.26025</a></strong>：压缩学生起草 + 学习的轨迹估计器决定是否跳过教师；ImageNet FID 2.58 vs FoCa 2.65（近同延迟），仍保留教师，不是少步学生。</li>
+<li><strong>外围·推理 · LEAP <a href="https://arxiv.org/abs/2610.25918">2610.25918</a></strong>：免训练求解器，局部轨迹子空间里最小二乘外推未来状态；代码仓库 <code>zju-pi/LEAP</code> 目前为空。</li>
+<li><strong>外围·应用 · StreamingSwap <a href="https://arxiv.org/abs/2610.26681">2610.26681</a></strong>：实时流式换脸，省的是 token 和上下文，不减步。</li>
+<li><strong>外围·音频 · MixiSpeech <a href="https://arxiv.org/abs/2610.25394">2610.25394</a></strong>：越南语 TTS 渐进蒸馏 10→4→2→1，重做。</li>
+<li><strong>外围·3D · OT-MeanFlow3D <a href="https://arxiv.org/abs/2509.22592">2509.22592</a></strong>（替换版）：MeanFlow + 点级 OT 配对，一步点云。</li>
+</ul>
+<h3 id="同事转交对账f5-f9">同事转交对账（F5 / F9）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>来源</th>
+<th>今天的条目</th>
+<th>13:48 前已在日报（ID + 评级）</th>
+<th>本次处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文献同事 <code>forward-fewstep-2026-10-20.md</code></td>
+<td>CDM <a href="https://arxiv.org/abs/2610.09221">2610.09221</a>；Mass Forcing <code>rSq3KMUQBT</code>、Token Forcing <code>MeX9roZY1l</code>、Speculative Forcing <a href="https://arxiv.org/abs/2610.22347">2610.22347</a> 的续期状态</td>
+<td>3/4（CDM 本页 ①；Mass Forcing、Speculative Forcing 在 10-18 页）</td>
+<td><strong>Token Forcing <code>MeX9roZY1l</code></strong> 只在我的 OR 分诊表里判过「不相关」，从没上过日报 → 补评：<strong>不相关（少步）</strong>，几何引导的 token 保留 + KV 记忆选择，不减步、不改蒸馏信号；流式记忆归文献同事。Mass Forcing、Speculative Forcing 评级不变（仍无 arXiv 孪生 / 代码只有 README），跟随续期到 10-22</td>
+</tr>
+<tr>
+<td>RL 同事 <code>genrl-digest/2026-10-20/batch/lists/fewstep_kw_hits.json</code>（08:25，只覆盖晨间 ID 区间）</td>
+<td>9 条</td>
+<td>8/9</td>
+<td><strong><a href="https://arxiv.org/abs/2610.23972">2610.23972</a></strong> Super-resolution as Spatial Downscaling → 不相关（气候降尺度，"forcing" 是气候强迫项）。RL 同事 read-log 里还没有 10-20 的条目</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>外部召回</strong>：13:48 前 11/13 = 85%，本次补齐后 13/13。两条漏记都在范围外，没有范围内漏检；但按 F9 都算「没留痕」。</p>
+<p><strong>粗筛命中但未收录</strong>（v2 正则命中 + Codex 语义外围，晨间区间外，逐条理由）：</p>
+<ul>
+<li>外围·应用（拿现成一步模型做修复 / 翻译）：<a href="https://arxiv.org/abs/2610.25832">2610.25832</a> Hihaze 一步去雾；<a href="https://arxiv.org/abs/2505.18469">2505.18469</a> HonestFace 一步人脸修复；<a href="https://arxiv.org/abs/2609.31378">2609.31378</a> ContraFM-S2O 一步 SAR→光学；<a href="https://arxiv.org/abs/2509.23480">2509.23480</a> RestoRect 修复 + 特征蒸馏；<a href="https://arxiv.org/abs/2606.16241">2606.16241</a> 视觉错觉图（复用已对抗蒸馏模型并行去噪）；<a href="https://arxiv.org/abs/2602.09510">2602.09510</a> 深度提示补全（按不确定度选起始步）。</li>
+<li>外围（缓存 / 稀疏 / 量化，不减步）：<a href="https://arxiv.org/abs/2610.26244">2610.26244</a> RECAP；<a href="https://arxiv.org/abs/2610.26262">2610.26262</a> DASA；<a href="https://arxiv.org/abs/2610.26837">2610.26837</a> SpecKCast；<a href="https://arxiv.org/abs/2610.25664">2610.25664</a> PoSTCache；<a href="https://arxiv.org/abs/2602.13515">2602.13515</a> SpargeAttention2；<a href="https://arxiv.org/abs/2602.12675">2602.12675</a> SLA2。</li>
+<li>替换版，此前已评：<a href="https://arxiv.org/abs/2606.09150">2606.09150</a> Ultra Flash；<a href="https://arxiv.org/abs/2610.11756">2610.11756</a> Memory Forcing；<a href="https://arxiv.org/abs/2610.18735">2610.18735</a> SP²ec。</li>
+<li>外围·机器人：<a href="https://arxiv.org/abs/2610.25043">2610.25043</a> VLA-Rolling（动作 flow 复用尾部减步，非媒体生成）。</li>
+<li>不相关·世界模型 / 3D，无步数削减：<a href="https://arxiv.org/abs/2610.26855">2610.26855</a> Ropedia W0；<a href="https://arxiv.org/abs/2610.25861">2610.25861</a> ActionRoPE；<a href="https://arxiv.org/abs/2603.24581">2603.24581</a> Latent-WAM；<a href="https://arxiv.org/abs/2610.25959">2610.25959</a>；<a href="https://arxiv.org/abs/2610.26844">2610.26844</a>；<a href="https://arxiv.org/abs/2610.26845">2610.26845</a>；<a href="https://arxiv.org/abs/2610.25296">2610.25296</a>；<a href="https://arxiv.org/abs/2608.09537">2608.09537</a>；<a href="https://arxiv.org/abs/2610.03079">2610.03079</a>；<a href="https://arxiv.org/abs/2603.17808">2603.17808</a>；<a href="https://arxiv.org/abs/2603.28887">2603.28887</a>；<a href="https://arxiv.org/abs/2604.16405">2604.16405</a>；<a href="https://arxiv.org/abs/2608.25572">2608.25572</a>；<a href="https://arxiv.org/abs/2609.14073">2609.14073</a>；<a href="https://arxiv.org/abs/2609.22332">2609.22332</a>；<a href="https://arxiv.org/abs/2610.18697">2610.18697</a>；<a href="https://arxiv.org/abs/2610.25223">2610.25223</a>；<a href="https://arxiv.org/abs/2610.25414">2610.25414</a>；<a href="https://arxiv.org/abs/2610.26179">2610.26179</a>；<a href="https://arxiv.org/abs/2610.26564">2610.26564</a>；<a href="https://arxiv.org/abs/2610.26585">2610.26585</a>；<a href="https://arxiv.org/abs/2610.26811">2610.26811</a>；<a href="https://arxiv.org/abs/2610.26813">2610.26813</a>；<a href="https://arxiv.org/abs/2610.25874">2610.25874</a>；<a href="https://arxiv.org/abs/2602.09878">2602.09878</a>；<a href="https://arxiv.org/abs/2610.07609">2610.07609</a>；<a href="https://arxiv.org/abs/2610.20693">2610.20693</a>；<a href="https://arxiv.org/abs/2610.25013">2610.25013</a>；<a href="https://arxiv.org/abs/2610.25360">2610.25360</a>；<a href="https://arxiv.org/abs/2606.25430">2606.25430</a> PRISM（前馈 3D 重建）。</li>
+<li>不相关·生成但不减步：<a href="https://arxiv.org/abs/2610.25273">2610.25273</a> GeoART（测试时扩展）；<a href="https://arxiv.org/abs/2610.25533">2610.25533</a> Modaliff；<a href="https://arxiv.org/abs/2610.25844">2610.25844</a> SWIFT（弱到强引导）；<a href="https://arxiv.org/abs/2610.26749">2610.26749</a> Trajectory Replay（终身学习）；<a href="https://arxiv.org/abs/2606.22304">2606.22304</a> 幂等生成；<a href="https://arxiv.org/abs/2610.03873">2610.03873</a> 流式动作生成；<a href="https://arxiv.org/abs/2610.26740">2610.26740</a> CheckDistill（RM 蒸馏）；<a href="https://arxiv.org/abs/2610.26194">2610.26194</a> GeoEdit；<a href="https://arxiv.org/abs/2610.25565">2610.25565</a> 骨支架拓扑优化（rectified flow 生成）。</li>
+<li>归 RL（奖励对齐，不减步）：<a href="https://arxiv.org/abs/2610.25502">2610.25502</a> Steered Not Stirred；<a href="https://arxiv.org/abs/2605.11347">2605.11347</a> 无梯度噪声优化。</li>
+<li>不相关·语言（dLLM / LLM 蒸馏 / OPD / 推测解码 / 推理压缩）：<a href="https://arxiv.org/abs/2610.25723">2610.25723</a>；<a href="https://arxiv.org/abs/2610.25835">2610.25835</a>；<a href="https://arxiv.org/abs/2610.25359">2610.25359</a> CD-OPD；<a href="https://arxiv.org/abs/2610.25693">2610.25693</a> ToolOPD；<a href="https://arxiv.org/abs/2610.25842">2610.25842</a>；<a href="https://arxiv.org/abs/2610.25880">2610.25880</a>；<a href="https://arxiv.org/abs/2610.13521">2610.13521</a>；<a href="https://arxiv.org/abs/2610.19439">2610.19439</a>；<a href="https://arxiv.org/abs/2609.08798">2609.08798</a>；<a href="https://arxiv.org/abs/2605.02971">2605.02971</a>；<a href="https://arxiv.org/abs/2605.09346">2605.09346</a> RuPLaR；<a href="https://arxiv.org/abs/2607.28418">2607.28418</a> WIDE；<a href="https://arxiv.org/abs/2608.28138">2608.28138</a>；<a href="https://arxiv.org/abs/2609.33243">2609.33243</a>；<a href="https://arxiv.org/abs/2605.30861">2605.30861</a>；<a href="https://arxiv.org/abs/2607.23394">2607.23394</a>；<a href="https://arxiv.org/abs/2609.37633">2609.37633</a>；<a href="https://arxiv.org/abs/2610.26311">2610.26311</a>；<a href="https://arxiv.org/abs/2610.25470">2610.25470</a>；<a href="https://arxiv.org/abs/2610.25640">2610.25640</a>；<a href="https://arxiv.org/abs/2610.25384">2610.25384</a>；<a href="https://arxiv.org/abs/2610.26410">2610.26410</a>；<a href="https://arxiv.org/abs/2610.25978">2610.25978</a>；<a href="https://arxiv.org/abs/2610.25134">2610.25134</a>；<a href="https://arxiv.org/abs/2610.26059">2610.26059</a>；<a href="https://arxiv.org/abs/2601.21839">2601.21839</a>；<a href="https://arxiv.org/abs/2510.15914">2510.15914</a>。</li>
+<li>不相关·非生成（检测 / 预测 / 系统 / 医学 / 理论等，"distill""early exit""real-time"类词误命中）：<a href="https://arxiv.org/abs/2609.36671">2609.36671</a>；<a href="https://arxiv.org/abs/2605.14285">2605.14285</a> ForcingDAS；<a href="https://arxiv.org/abs/2603.22908">2603.22908</a>；<a href="https://arxiv.org/abs/2610.25256">2610.25256</a>；<a href="https://arxiv.org/abs/2610.25797">2610.25797</a>；<a href="https://arxiv.org/abs/2609.13194">2609.13194</a>；<a href="https://arxiv.org/abs/2610.22155">2610.22155</a>；<a href="https://arxiv.org/abs/2610.25495">2610.25495</a>；<a href="https://arxiv.org/abs/2610.25887">2610.25887</a>；<a href="https://arxiv.org/abs/2610.26351">2610.26351</a>；<a href="https://arxiv.org/abs/2610.26660">2610.26660</a>；<a href="https://arxiv.org/abs/2512.18255">2512.18255</a>；<a href="https://arxiv.org/abs/2604.08625">2604.08625</a>；<a href="https://arxiv.org/abs/2604.23903">2604.23903</a>；<a href="https://arxiv.org/abs/2605.14389">2605.14389</a>；<a href="https://arxiv.org/abs/2605.24423">2605.24423</a>；<a href="https://arxiv.org/abs/2606.02877">2606.02877</a>；<a href="https://arxiv.org/abs/2610.25121">2610.25121</a>；<a href="https://arxiv.org/abs/2610.25551">2610.25551</a>；<a href="https://arxiv.org/abs/2610.25929">2610.25929</a>；<a href="https://arxiv.org/abs/2610.25970">2610.25970</a>；<a href="https://arxiv.org/abs/2610.26816">2610.26816</a>；<a href="https://arxiv.org/abs/2311.13263">2311.13263</a>；<a href="https://arxiv.org/abs/2505.13175">2505.13175</a>；<a href="https://arxiv.org/abs/2508.03411">2508.03411</a>；<a href="https://arxiv.org/abs/2603.03279">2603.03279</a>；<a href="https://arxiv.org/abs/2605.18431">2605.18431</a>；<a href="https://arxiv.org/abs/2608.21234">2608.21234</a>；<a href="https://arxiv.org/abs/2610.16177">2610.16177</a>；<a href="https://arxiv.org/abs/2610.25385">2610.25385</a>；<a href="https://arxiv.org/abs/2610.25460">2610.25460</a>；<a href="https://arxiv.org/abs/2610.25904">2610.25904</a>；<a href="https://arxiv.org/abs/2610.26105">2610.26105</a>；<a href="https://arxiv.org/abs/2610.26258">2610.26258</a>；<a href="https://arxiv.org/abs/2610.26418">2610.26418</a>；<a href="https://arxiv.org/abs/2610.26468">2610.26468</a>；<a href="https://arxiv.org/abs/2610.25604">2610.25604</a>；<a href="https://arxiv.org/abs/2610.26747">2610.26747</a>。</li>
+</ul>
+<p><strong>过程问题（记一条）</strong>：晨间 F3 用 API 探测「24900 起为空」来定 ID 区间上限，但今天这批实际编号到 26863——探测为空只说明还没公告，不说明这批到此为止。晨间预览因此只覆盖了这批约三分之一的新提交。两篇值得读（26165、25666）都在 24892 之后，所以 09:12 版本漏掉它们是批次时间造成的，补扫已收回。</p>
+<p><strong>补扫结论</strong>：Tue 20 批 done。无新的必读·先跑；值得读 2 篇（TriTD、Fréchet Forcing），都在流式时间轴上；同事转交 13/13 已留痕。</p></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-20 14:00 (UTC+8)</div></main></div>
 <script>
 (function(){
  // 详情卡片全部展开/收起
