@@ -1,0 +1,415 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>少步蒸馏 · 每日 2026-10-20（周二，轻量版）</title>
+<style>
+:root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--side:#f6f8fa;--line:#d1d9e0;--acc:#0b57d0;--l1:#fff8e6;--l1b:#f0c36d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--fg);background:var(--bg);font:15.5px/1.75 "Noto Sans CJK SC","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.top{position:sticky;top:0;z-index:5;background:#24292f;color:#fff;padding:8px 20px;display:flex;gap:18px;align-items:center;font-size:14px}
+.top a{color:#fff;opacity:.9} .top .brand{font-weight:700;opacity:1}
+.wrap{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1400px;margin:0 auto}
+nav.toc{position:sticky;top:40px;align-self:start;height:calc(100vh - 40px);overflow:auto;background:var(--side);border-right:1px solid var(--line);padding:14px 10px 40px 14px;font-size:13.5px;line-height:1.5}
+nav.toc .tt{font-weight:700;color:var(--muted);margin:2px 0 8px}
+nav.toc ul{list-style:none;margin:0;padding-left:10px} nav.toc>div>ul{padding-left:0}
+nav.toc li{margin:3px 0} nav.toc a{color:#333;display:block;padding:1px 4px;border-radius:4px}
+nav.toc a:hover,nav.toc a.on{background:#dde7f7;text-decoration:none}
+main{padding:22px 40px 80px;min-width:0}
+h1{font-size:26px;margin:.2em 0 .6em;border-bottom:2px solid var(--line);padding-bottom:.3em}
+h2{font-size:21px;margin:1.8em 0 .6em;border-bottom:1px solid var(--line);padding-bottom:.25em}
+h3{font-size:17.5px;margin:1.4em 0 .5em}
+h4{font-size:15.5px}
+blockquote{margin:0 0 1em;padding:8px 16px;border-left:4px solid #8c959f;background:#f6f8fa;color:#3d444d;font-size:14px}
+blockquote p{margin:.3em 0}
+code{font-family:"JetBrains Mono","DejaVu Sans Mono",Menlo,Consolas,monospace;font-size:.88em;background:#eff1f3;padding:.1em .35em;border-radius:4px}
+pre{background:#f6f8fa;border:1px solid var(--line);border-radius:6px;padding:10px 14px;overflow:auto} pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:.6em 0 1.1em}
+table{border-collapse:collapse;font-size:13.8px;line-height:1.55;min-width:60%}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left}
+th{background:#eef2f6;font-weight:700;position:sticky;top:0}
+tr:nth-child(even) td{background:#fafbfc}
+td strong{color:#8a1c1c}
+hr{border:0;border-top:1px solid var(--line);margin:1.6em 0}
+section.layer1{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:2px 22px 10px;margin:18px 0 26px}
+section.layer1>h2{border-bottom-color:var(--l1b)}
+section.layer1 .tw table{background:#fff}
+.layer-tag{display:inline-block;font-size:12px;font-weight:700;color:#7a4b00;background:#ffe2a8;border-radius:10px;padding:0 9px;margin-left:8px;vertical-align:middle}
+details.card{border:1px solid var(--line);border-radius:8px;margin:12px 0;background:#fff}
+details.card>summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:16.5px;background:#f3f6fa;border-radius:8px;list-style:none}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary:before{content:"▸ ";color:var(--acc)} details.card[open]>summary:before{content:"▾ "}
+details.card[open]>summary{border-bottom:1px solid var(--line);border-radius:8px 8px 0 0}
+details.card>.body{padding:4px 18px 10px}
+.cardtools{font-size:13px;margin:6px 0 2px} .cardtools button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:#fff;border-radius:5px;padding:1px 8px;cursor:pointer;margin-right:6px}
+.b{display:inline-block;font-size:11.5px;line-height:1.5;padding:0 6px;border-radius:9px;margin:0 2px;font-weight:600;white-space:nowrap;vertical-align:1px;border:1px solid transparent}
+.b-meas{background:#dafbe1;color:#116329;border-color:#a8e6b5}
+.b-orig{background:#ddf4ff;color:#0a4b8c;border-color:#a6d4f5}
+.b-team{background:#fff1e5;color:#953800;border-color:#ffc89a}
+.b-inf{background:#eef0f2;color:#4a535c;border-color:#cfd5db}
+.b-codex{background:#fbefff;color:#6e2b91;border-color:#e3b8f5}
+.b-oth{background:#f6f8fa;color:#4a535c;border-color:#d1d9e0}
+.idx{max-width:900px;margin:0 auto;padding:30px 30px 80px}
+.idx .hero{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:12px 22px;margin:14px 0 24px;font-size:16.5px}
+.idx .cards a{display:block;border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:10px 0;color:var(--fg)}
+.idx .cards a:hover{border-color:var(--acc);text-decoration:none;background:#f6f9ff}
+.idx .cards .t{font-weight:700;color:var(--acc)} .idx .cards .d{font-size:13.5px;color:var(--muted)}
+.foot{color:var(--muted);font-size:12.5px;margin-top:40px;border-top:1px solid var(--line);padding-top:8px}
+@media (max-width:900px){.wrap{grid-template-columns:1fr} nav.toc{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)} main{padding:16px}}
+@media print{nav.toc,.top,.cardtools{display:none}.wrap{display:block} details.card{break-inside:avoid}}
+</style></head><body>
+<div class="top"><a class="brand" href="../index.html">多模态少步蒸馏 · 前沿调研</a><a href="../baseline.html">2026Q3 基线</a><a href="../index.html#dailies">每日</a><a href="../index.html#weeklies">每周</a></div>
+<div class="wrap"><nav class="toc"><div class="tt">目录</div><div><div class="toc">
+<ul>
+<li><a href="#结论先行">结论先行</a></li>
+<li><a href="#30-秒速览">30 秒速览</a></li>
+<li><a href="#一屏框架今天挂在哪一格">一屏框架：今天挂在哪一格</a></li>
+<li><a href="#详细条目3-条">详细条目（3 条）</a><ul><li><a href="#①-cdmon-policy-状态上的-flow-map-回归不是分布匹配值得读可用配方">① CDM：on-policy 状态上的 flow-map 回归，不是分布匹配（值得读·可用配方）</a></li><li><a href="#②-or-盲区里的-5-篇必读候选都在改监督落在哪些状态上仅or摘要">② OR 盲区里的 5 篇必读候选：都在改「监督落在哪些状态上」（仅OR摘要）</a></li><li><a href="#③-umi-wm双腕世界模型的-self-forcing-4-步学生重做应用">③ UMI-WM：双腕世界模型的 Self-Forcing 4 步学生（重做·应用）</a></li></ul></li>
+<li><a href="#id-区间全部命中与语义补充f9每条有-id-评级">ID 区间全部命中与语义补充（F9：每条有 ID + 评级）</a></li>
+<li><a href="#批次与召回台账">批次与召回台账</a></li>
+<li><a href="#附精读卡片">附：精读卡片</a><ul>
+<li><a href="#cdm-consistent-distribution-matching261009221ubcvector代码-felix-yuxiangcdmd-hf-权重-值得读可用配方原创组合新-可信度存疑">CDM / Consistent Distribution Matching（2610.09221，UBC/Vector；代码 felix-yuxiang/CDMD + HF 权重）· 值得读·可用配方（原创：组合新 × 可信度：存疑）</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div></nav>
+<main><h1 id="少步蒸馏-每日-2026-10-20周二轻量版">少步蒸馏 · 每日 2026-10-20（周二，轻量版）</h1>
+<blockquote>
+<p><strong>批次覆盖（F1）</strong>：应出列表日 = <strong>Tue 20 Oct</strong>（北京 08:00）。09:19 <code>/new</code> 8 类页头仍是 <strong>Monday, 19 October 2026</strong> → <strong>Tue 20 pending</strong>，交给 13:42 补扫。Mon 19 已 done（10-19 13:42）。<strong>本页不是 Tue 20 批</strong>：arXiv 内容来自下面的 ID 区间预览。</p>
+<p><strong>F3 ID 区间</strong>：<code>2610.23857</code>（Mon 19 批最大号 23856 之后）→ <code>2610.24892</code>（API 探测 24900 起为空）。全类 1,036 / 8 类 <strong>416</strong> 条；v2 正则 <strong>16</strong> 命中，全读标题；另让 Codex 对 416 条做不靠关键词的语义全量 → IN 2 / 外围 14 / 不相关 400<span class="b b-meas">实测</span><span class="b b-codex">Codex✓</span>。</p>
+<p><strong>F4 OpenReview</strong>：文献同事 10-20 的 <code>or_iclr27.json</code> 是新的大文件（ICLR27 唯一 <strong>1,853</strong> 条）。v2 命中 684 条，其中 <strong>450 条在我所有文件里从没出现过</strong>：105 条在我的 arXiv 语料里有同名孪生（我抽查的 4 条核心孪生 DMAD / LongForcing / TurboT2VA / Simplifying OPD 都已有评级；另 5 条外围孪生此前没进日报，补评见下），<strong>345 条仅 OR、从未分诊</strong> → 今天全部分诊完（Codex 首轮，我按摘要抽查定稿）：必读候选 5 / 值得看（高）9 / 值得看 45 / 归 RL 11 / 外围 102 / 不相关 173。OR PDF 仍 403，全部停在摘要级。</p>
+<p><strong>F5 对账（48h）</strong>：文献同事 10-20 转交 CDM <a href="https://arxiv.org/abs/2610.09221">2610.09221</a> → 今天精读（下 ①）；其 shortlist 其余 4 条均域外。RL 同事 10-19/10-20 <code>fewstep_kw_hits</code> 47 条中我没记录的 15 条全部域外（LLM、机器人、遥感超分）。<strong>无范围内漏检</strong>。
+标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】【仅OR摘要】<span class="b b-team">队友转述</span><span class="b b-inf">推断</span><span class="b b-codex">Codex✓</span></p>
+</blockquote>
+<hr />
+<section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
+<p><strong>今天的判断：</strong> 没有新的「必读·先跑」。最有用的是 <strong>F4 盲区本身</strong>：ICLR27 大文件里有 345 条少步相关投稿我此前从没分诊过，其中 5 篇是必读候选，而且好几篇在攻同一个问题——<strong>学生在哪些状态上被监督</strong>（自 rollout 状态、先验噪声状态、还是两者混合），这和今天精读的 CDM 是同一根轴。</p>
+<ol>
+<li><strong>CDM <a href="https://arxiv.org/abs/2610.09221">2610.09221</a> → 值得读·可用配方（存疑）。</strong> 名字叫 distribution matching，等价形式是 L1：在学生自生成状态上回归教师速度（MeanFlow 恒等式），没有 fake score。"无数据 SOTA" 靠的是作者重跑的 FreeFlow；FreeFlow 自报的同教师、同 100K 迭代成绩 2.24 好于 CDM 的 3.47，表里漏了这一行<span class="b b-orig">原文×2，网页核对</span>。</li>
+<li><strong>OR 必读候选（仅OR）</strong>：AFD（流式 AR，黑盒教师 + Bradley–Terry 判别器优势加权 flow matching）、OPTD（学生 rollout 状态 + 教师积分端点配对 + 同噪声级 GAN）、StateMix（DMD2 下混合先验噪声状态与 rollout 状态）、Revisiting Score Difference（critic 加源噪声级条件 + critic 要和教师同尺寸，含 WAN 自回归）、ReSeed（多样性主要丢在第一步高噪声，只调第一步就找回）。</li>
+<li><strong>ID 区间</strong>：唯一范围内的是 <strong>UMI-WM <a href="https://arxiv.org/abs/2610.23913">2610.23913</a></strong>（双腕世界模型，按 CausVid/Self-Forcing 30→4 步）→ 重做·应用；它的步数消融（2 步动作保真度 BAF 53.82 vs 4 步 71.55）是一条可用的数据点。</li>
+</ol>
+<p><strong>对我们训练的含义：</strong></p>
+<ul>
+<li><strong>流式 AR</strong>：Revisiting Score Difference 给了一个零成本对照：<strong>critic 加「源噪声级」条件</strong>、critic 尺寸与教师对齐（摘要称在 WAN 自回归上也成立）。等全文；如果代码出来，这是最便宜的一刀。AFD 是"只有黑盒教师视频"时的路线，暂不改决定。</li>
+<li><strong>AV</strong>：今天无新的 AV 少步论文。</li>
+<li><strong>图像 / 视频</strong>：把「训练状态来源」当独立变量：{自 rollout, 先验噪声, 混合}×同一 DMD2，测多样性（同 prompt 多种子）+ precision/recall。CDM 的 m=0.5、StateMix 的混合比例、OPTD 的 rollout 状态都指向同一个实验。ReSeed 的「只调第一步」对多样性塌缩是一个便宜的事后补丁候选。</li>
+</ul>
+</section><section class="layer1"><h2 id="30-秒速览">30 秒速览<span class="layer-tag">第一层 · 框架</span></h2>
+<ul>
+<li><strong>值得读·可用配方 · CDM <a href="https://arxiv.org/abs/2610.09221">2610.09221</a></strong>：on-policy 状态上的 flow-map 回归，两网络一优化器；同教师 1-NFE 输给 FreeFlow 自报数。</li>
+<li><strong>必读候选（仅OR）· AFD <code>IHNez3jh9i</code></strong>：流式 AR 黑盒教师蒸馏，判别器优势加权 FM；相对 Self-Forcing 不需要教师 score。</li>
+<li><strong>必读候选（仅OR）· OPTD <code>QVj8y1y17Q</code></strong>：rollout 状态 + 教师积分端点配对；相对 DMD 用配对目标、相对 CD 用自访问状态。</li>
+<li><strong>必读候选（仅OR）· StateMix <code>mQ16eoxrAH</code></strong>：DMD2 训练状态混入先验噪声起点；SDXL / Qwen-Image。</li>
+<li><strong>必读候选（仅OR）· Revisiting Score Difference <code>xztyadrEYG</code></strong>：critic 加源噪声级条件；critic 要和教师同尺寸。</li>
+<li><strong>必读候选（仅OR）· ReSeed <code>oodc536owR</code></strong>：多样性主要在第一步高噪声丢失；只改第一步找回 DINO 多样性 +48.3%【仅OR摘要】。</li>
+<li><strong>重做·应用 · UMI-WM <a href="https://arxiv.org/abs/2610.23913">2610.23913</a></strong>：双腕 WM 的 CausVid/SF 4 步学生，快 6.9×。</li>
+</ul>
+<hr />
+</section><section class="layer1"><h2 id="一屏框架今天挂在哪一格">一屏框架：今天挂在哪一格<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>轴1 训练信号 \ 轴2 问题位置</th>
+<th>单步去噪</th>
+<th>流式时间轴</th>
+<th>AV 跨模态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L1 轨迹 / flow map</strong></td>
+<td><strong>CDM</strong>（on-policy 状态，无 fake score）；PACT（高，仅OR）</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L2 分布匹配</strong></td>
+<td>StateMix；Revisiting Score Difference；ReSeed（发现类：多样性丢在第一步）</td>
+<td>Revisiting Score Difference（WAN 自回归）；UMI-WM（重做）</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L3 对抗</strong></td>
+<td>—</td>
+<td><strong>AFD</strong>（BT 判别器优势加权 FM）</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L4 混合</strong></td>
+<td>OPTD（配对端点 + GAN）</td>
+<td>OPTD（声称支持因果视频）</td>
+<td>CaDiS（流式语音，高，仅OR）</td>
+</tr>
+<tr>
+<td><strong>推理·步数分配</strong></td>
+<td>DS-Flow / ENCORE / MSIS 等（值得看，仅OR）</td>
+<td>StreamCeption / FLUID-Omni（值得看·高，仅OR）</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>额外真实数据 / 奖励</strong></td>
+<td>11 条归 RL（见 F4 表）</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>放不进框架的</strong>：今天 CDM 和 StateMix 在同一个前提上给出证据——<strong>训练状态的来源本身是一个旋钮</strong>，和用什么散度无关。这条挂在轴「样本从哪来」上，作为它的支持证据，不是新格。</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文</th>
+<th>归格</th>
+<th>Codex 盲分</th>
+<th>按格预判（读结果前）</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CDM</td>
+<td>L1 × on-policy 状态</td>
+<td>L1 ✓（"Fisher 散度动机不让它成为 L2"）</td>
+<td>学生路径离教师远时监督偏</td>
+<td>✓ 图 6a：w=2.0 多步反而变差</td>
+</tr>
+<tr>
+<td>UMI-WM</td>
+<td>L2 × 流式（重做）</td>
+<td>IN ✓</td>
+<td>少步伤动作跟随</td>
+<td>✓ 2 步 BAF 53.82 vs 4 步 71.55<span class="b b-orig">原文</span></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>今日预测</strong>：CDM 5/6；累计 <strong>99/130 = 76%</strong>。没有低估型未中，不触发当天复评。</p>
+<hr />
+</section><section class=""><div class="cardtools">详细条目：<button data-act="open">全部展开</button><button data-act="close">全部收起</button></div><h2 id="详细条目3-条">详细条目（3 条）</h2>
+<details class="card" open="open">
+<summary id="①-cdmon-policy-状态上的-flow-map-回归不是分布匹配值得读可用配方">① CDM：on-policy 状态上的 flow-map 回归，不是分布匹配（值得读·可用配方）</summary>
+<div class="body">
+<p><strong>结论</strong>：v1.4 (a)(b) 都不满足 → 不升先跑。代码和 ImageNet 权重齐全【代码 felix-yuxiang/CDMD，最后提交 10-14】。</p>
+<p><strong>关键操作</strong>【代码 <code>losses.py</code> L111–141】：①噪声 z → 学生一步样本再用新噪声加噪到 t，或学生从 1 直接跳到 t，两种状态按 m=0.5 混合，整体 sg；②冻结教师在该状态给 CFG 速度 v；③以 v 为切向做 JVP 得 du/dt（detach）；④目标 = u − clip(u − v − (r−t)·du/dt, ±1)，自适应加权 MSE + 常开的对角 FM+cos 项；⑤推理任意区间可跳，1/2/4 步共用一个学生。</p>
+<p><strong>因果逻辑</strong>：因为状态取自学生自己的路径 → 教师只在学生会去的地方纠偏，不要数据、不要教师 rollout → 因为回归的是速度而不是 score 差 → 不要 fake score → 证据：SANA-1.6B 4 步约 7 GPU·h，作者在同一硬件测的 DMD2 是 30、MFD 是 25<span class="b b-orig">原文 表 3/7</span>。代价：w=2.0 时多步变差（图 6a）；endpoint 条件注入深度 D=0 FID 17.60 → D=5 2.80（表 8）→ 结构超参非常敏感<span class="b b-orig">原文</span>。</p>
+<p><strong>与最接近的核心差别</strong>：vs FreeFlow（只从先验出发 + fake-score 纠偏项）→ CDM 去掉 fake score、允许任意 (t,r)；vs MeanFlow/AYF 蒸馏（同一恒等式，状态来自真实数据加噪）→ CDM 换成学生自生成状态；vs SiD/DMD2（梯度穿过生成样本，要 fake score）→ CDM 是回归式，梯度不穿样本。</p>
+<p><strong>证据</strong>：ImageNet256 1/2/4-NFE FID 2.04 / 1.62 / 1.37（LightningDiT 教师 1.35）；SiT-XL/2 教师 3.47<span class="b b-orig">原文 表 1</span>。<strong>漏掉的最强一行</strong>：FreeFlow 自报 SiT-XL/2 教师 1-NFE 2.24（100K 迭代 ≈ 20 epoch）/ 1.69（300 epoch）；SiT-XL/2+REPA 1.45<span class="b b-orig">原文 FreeFlow 表 2</span>。CDM 表里 FreeFlow 写的是 4.13，FreeFlow 原文里找不到这个数，应该是作者重跑的（但没打 † 号）<span class="b b-inf">推断</span>。CDM 只报 FID/IS，没有 precision/recall，单种子。代码和论文式 7 有三处出入：残差裁剪、自适应权重、对角 FM+cos 项【代码 L76–87】。</p>
+<p><strong>对我们训练</strong>：图像上如果要对私有教师做无数据少步，<strong>在同 GPU·h 下把 CDM、FreeFlow、DMD2 并排跑一次</strong>，加 precision/recall。视频 / AV 无。流式：无直接含义（推断：可作为 SF 的 DMD 阶段的一个无 fake score 对照）。仓库里有支持 JVP 的 FA2/FA3 kernel，可复用到 MeanFlow 类视频蒸馏。</p>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="②-or-盲区里的-5-篇必读候选都在改监督落在哪些状态上仅or摘要">② OR 盲区里的 5 篇必读候选：都在改「监督落在哪些状态上」（仅OR摘要）</summary>
+<div class="body">
+<p><strong>结论</strong>：全部无 arXiv 孪生（arXiv 标题检索 5 次均无，检索本身已用 "Self Forcing" 验证可用）、无 PDF（403）→ 不评先跑，进观察名单，等 arXiv 版。</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>OR id</th>
+<th>关键操作（摘要）</th>
+<th>与最接近的核心差别</th>
+<th>按格预判</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AFD <code>IHNez3jh9i</code></td>
+<td>用教师视频和学生 rollout 训练同 prompt 配对的 Bradley–Terry 判别器；用每条 rollout 的优势去加权学生加噪状态上的 flow-matching 更新</td>
+<td>vs Self-Forcing/CausVid：不需要教师 score 或轨迹，黑盒教师即可；vs 纯 GAN：给去噪步级的稠密信号</td>
+<td>判别器奖励被钻空子；画质换动态</td>
+</tr>
+<tr>
+<td>OPTD <code>QVj8y1y17Q</code></td>
+<td>学生先 rollout 到推理状态，再让冻结教师在同一区间积分得到端点，回归这一粗步；另加同噪声级、教师特征空间的 GAN</td>
+<td>vs CD：状态是学生访问的；vs DMD：目标是配对端点，不是分布反馈</td>
+<td>教师积分开销大；因果视频上的长时漂移未知</td>
+</tr>
+<tr>
+<td>StateMix <code>mQ16eoxrAH</code></td>
+<td>DMD2 监督不变，训练状态混入「先验噪声直接当中间时刻状态」</td>
+<td>vs DMD2 rollout 状态：多了条件响应；和 CDM 的 m 混合同构</td>
+<td>混合比例 = 偏好分 vs 教师相似度的权衡（摘要已承认）</td>
+</tr>
+<tr>
+<td>Revisiting Score Difference <code>xztyadrEYG</code></td>
+<td>critic 额外输入每个学生预测的源噪声级；critic 尺寸跟教师走，学生单独小</td>
+<td>vs DMD2 默认 critic：只看评估时刻；涵盖 WAN 双向 + 自回归</td>
+<td>尺寸规律只在 2–3 个尺寸点上验证</td>
+</tr>
+<tr>
+<td>ReSeed <code>oodc536owR</code></td>
+<td>定位多样性丢失在第一步高噪声；只给第一步加种子响应 adapter，对齐教师第一区间割线速度</td>
+<td>vs 全量多样性正则：学生冻结，参数 +0.00196%，8k 对 prompt-noise</td>
+<td>多样性回升、画质轻微下降</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>对我们训练</strong>：Revisiting Score Difference 的「critic 加源噪声级」改动只有几行代码，SF 流式蒸馏可以直接加一个对照（等全文确认实现）。</p>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="③-umi-wm双腕世界模型的-self-forcing-4-步学生重做应用">③ UMI-WM：双腕世界模型的 Self-Forcing 4 步学生（重做·应用）</summary>
+<div class="body">
+<p><strong>关键操作</strong><span class="b b-orig">原文 §4.2、附录 B.3</span>：双腕两路流 + hub token 交换场景信息 → 改成 block-causal → 按 CausVid / Self-Forcing 蒸馏 30 步教师到 4 步。</p>
+<p><strong>证据</strong>：4 步 BAF 71.55、1.81 对帧/s；2 步 3.31 帧/s 但 BAF 掉到 53.82；8 步 BAF 76.12；学生比教师快 6.9×<span class="b b-orig">原文</span>。</p>
+<p><strong>含义</strong>：少步首先伤的是<strong>动作跟随</strong>，不是画质——在我们流式底座上评少步学生时，除了 VBench 也要测条件跟随。蒸馏方法本身是重做。转文献同事（世界模型，ownership 见下）。</p>
+<hr />
+</div>
+</details>
+</section><section class=""><h2 id="id-区间全部命中与语义补充f9每条有-id-评级">ID 区间全部命中与语义补充（F9：每条有 ID + 评级）</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>题目</th>
+<th>评级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.23913">2610.23913</a></td>
+<td>UMI-WM</td>
+<td>重做·应用（见 ③）</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.24750">2610.24750</a></td>
+<td>CorrFlow: Self-Correcting Flow Matching</td>
+<td>外围：轻量 refiner 修正每步速度，不减步（视频实验 50 步）</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.24173">2610.24173</a></td>
+<td>SERO: single-step object removal</td>
+<td>外围·应用（bridge matching 一步去物体）</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.24604">2610.24604</a></td>
+<td>SCOPE-VSR / GraCo-VSR</td>
+<td>外围·应用（一步视频修复，主要是数据集；OR <code>7HpKzk9OZm</code> 同篇）</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.23935">2610.23935</a></td>
+<td>DScout: diffusion-drafted speculative decoding</td>
+<td>外围（语言）</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.24738">2610.24738</a></td>
+<td>LayerEditor（编辑先验蒸馏）</td>
+<td>不相关（不减步）</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.24349">2610.24349</a></td>
+<td>FlashRT-PAI</td>
+<td>外围（WAM 推理引擎，不减步）</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.24036">2610.24036</a> / 23864 / 24286 / 23998 / 24516 / 24744 / 23906 / 24001 / 24199 / 24229</td>
+<td>早退 ViT 联邦学习 / VLM 集成 / HOI 生成 / 流式视频问答 / 时空预测 / 化学智能体 / AI 视频检测 / 心脏解剖 / 化学推理蒸馏 / RL 提示选择</td>
+<td>不相关</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.23894">2610.23894</a> / 23896 / 23968 / 23982 / 23984 / 24122 / 24177 / 24372 / 24534 / 24619</td>
+<td>各类世界模型 / JEPA / 视频规划（Codex 语义补充）</td>
+<td>不相关（无步数削减）</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>F4 外围孪生补评</strong>（arXiv 语料里见过，但此前日报没有 ID+评级）：OneFixer <a href="https://arxiv.org/abs/2609.32175">2609.32175</a> 外围·应用（一步 3DGS 修复）；ReCaVSR <a href="https://arxiv.org/abs/2609.37831">2609.37831</a> 外围·应用（一步流式 VSR）；Solver-Aware Cache <a href="https://arxiv.org/abs/2610.03577">2610.03577</a> 外围（缓存，不减步）；DeCoPrune <a href="https://arxiv.org/abs/2609.39096">2609.39096</a> 外围（AR 视频 KV 剪枝）；AREX <a href="https://arxiv.org/abs/2610.03483">2610.03483</a> 值得看·推理（少步指数积分器）。</p>
+<p><strong>F4 仅OR 345 条</strong>：完整表见 <code>daily/pending/2026-10-20-or-gap345.md</code>。值得看（高）9 条：PACT <code>wldu663IIA</code>、Temporal Re-Distillation <code>fMLtNPrk34</code>、CaDiS <code>Rv0EbNpVx3</code>、MultiLive <code>Zr8MSV01KG</code>、图像→视频 OPD <code>TGFT9c6e8W</code>、MultiWorld <code>TtzUhUFcz2</code>、VoxelMem <code>y0bA9L8q9m</code>、StreamCeption <code>3jkKjpv2AX</code>、FLUID-Omni <code>qr24TlSE3X</code>。</p>
+<hr />
+</section><section class=""><h2 id="批次与召回台账">批次与召回台账</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>列表日</th>
+<th>状态</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mon 19 Oct</td>
+<td>done（10-19 13:42）</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Tue 20 Oct</strong></td>
+<td><strong>pending</strong></td>
+<td>09:19 <code>/new</code> 仍是 Mon 19；ID 区间 23857–24892 已预览；13:42 补扫拉列表批（含跨列与替换）并和本页对账</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>F4 盲区说明</strong>：10-18 清完的「约 90 条积压」是按 10-16 那份 690 条的 OR 文件算的；10-20 文献同事的新文件扩到 1,853 条，多出的部分我此前没有任何分诊。今天已全部分诊到摘要级。<strong>修复建议（F10，新增）</strong>：每次运行按 OR id 对<strong>整份</strong>最新 <code>or_iclr27.json</code> 做差集，不只看 <code>_new.json</code>。</p>
+<p><strong>转发</strong>：</p>
+<ul>
+<li>→ 多模态文献追踪：UMI-WM <a href="https://arxiv.org/abs/2610.23913">2610.23913</a>（重做·应用；少步部分归我、世界模型部分归你）；OR 流式条目 AFD / MultiWorld / VoxelMem / StreamCeption / FLUID-Omni（我主评：AFD 必读候选，其余值得看；ownership = 少步）。</li>
+<li>→ 多模态强化学习进展跟踪：OR 归 RL 11 条（RISE-DMD <code>qLvIIWHL23</code>、ReDiF <code>9NdLv66ygS</code>、DualHeads <code>drdT6PdTfc</code>、STEP <code>8spVEv7vOf</code>、<code>8YY2YCROXo</code>、<code>SAuycm49Dr</code>、<code>r4LVH0wwRB</code>、<code>x8nY8Bk0gr</code>、<code>d1W8ic466x</code>、TempAct <code>EEl17yDdA8</code>、<code>G8314PXr5q</code>）；我方：归 RL 主评，蒸馏侧有问题再回转。</li>
+</ul>
+<p>卡片原文：<code>daily/pending/2026-10-20-cdm.md</code>、<code>daily/pending/2026-10-20-or-gap345.md</code>。</p>
+<hr />
+</section><section class=""><h2 id="附精读卡片">附：精读卡片</h2>
+<h3 id="cdm-consistent-distribution-matching261009221ubcvector代码-felix-yuxiangcdmd-hf-权重-值得读可用配方原创组合新-可信度存疑">CDM / Consistent Distribution Matching（<a href="https://arxiv.org/abs/2610.09221">2610.09221</a>，UBC/Vector；代码 <a href="https://github.com/felix-yuxiang/CDMD">felix-yuxiang/CDMD</a> + HF 权重）· 值得读·可用配方（原创：组合新 × 可信度：存疑）</h3>
+<p><strong>结论</strong>：名字叫 distribution matching，<strong>等价形式其实是 L1</strong>：在学生自己生成的状态上，用 MeanFlow 恒等式回归教师瞬时速度；梯度不穿过生成样本，没有 fake score<span class="b b-orig">原文 式 7 + 代码 losses.py</span><span class="b b-codex">Codex✓ 盲分一致</span>。"无数据蒸馏 SOTA" 的说法靠的是作者自己重跑的 FreeFlow（4.13）；FreeFlow 论文自报的同教师、同 100K 迭代成绩是 <strong>2.24</strong>，比 CDMD 的 <strong>3.47</strong> 好 1.2 FID，这一行表 1 里没有<span class="b b-orig">原文 CDM 表 1 + 原文 FreeFlow 表 2，网页核对</span>。v1.4：(a) 不满足（只有 ImageNet/SANA 图像，视频无实验，JVP 成本在视频 DiT 上未知）；(b) 不满足 → 不升必读·先跑。</p>
+<p><strong>关键操作</strong>（以代码为准，<code>losses.py</code> L111–141）：</p>
+<ol>
+<li>采噪声 z；学生一次前向 → 一步样本 x̂0，再用新噪声加噪到 t（xt_new）；另一次前向 → 学生从 1 跳到 t 的点（xt_same）；按 m=0.5 随机二选一。全部 <code>no_grad</code>，即 sg。</li>
+<li>冻结教师在 x̂t 上给带 CFG 的瞬时速度 v（t∈[0.125,1] 用 1.75，其余 1.0）。</li>
+<li>用 v 作切向做一次 JVP，得 du/dt（detach）。</li>
+<li>目标 = u − clip(u − v − (r−t)·du/dt, ±1)；loss = 自适应加权 MSE(u, 目标) + 对角项（r=t 时学生速度回归教师速度的 MSE + cos）。</li>
+<li>推理：u(x,t,r) 任意区间可跳，1/2/4 步共用一个学生。</li>
+</ol>
+<p><strong>因果逻辑</strong>：因为状态来自学生自己的路径（on-policy）→ 教师只在学生会去的地方给纠偏速度，不需要真实数据也不需要教师 rollout → 因为目标是速度而不是 score 差，不需要 fake score，只剩两个网络、一个优化器 → 证据：显存/算力图 1<span class="b b-orig">原文，未核</span>；SANA-1.6B 4 步约 7 GPU·h，对比 DMD2 30、MFD 25<span class="b b-orig">原文 表 3/7，作者测</span>。</p>
+<p><strong>代价</strong>：状态离教师路径越远，监督越偏（定理 3.1 要求 contiguity）。w=2.0 时多步反而变差（图 6a）；endpoint 条件注入层数 D=0 时 FID 17.60、D=5 时 2.80（表 8，25K 迭代）→ 结构超参极敏感<span class="b b-orig">原文</span>。</p>
+<p><strong>与最接近工作的核心差别（只写操作）</strong>：</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文</th>
+<th>哪一步不同</th>
+<th>后果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FreeFlow（<a href="https://arxiv.org/abs/2511.19428">2511.19428</a>）</td>
+<td>只从先验 t=1 出发预测教师路径 + 一个 fake-score 纠偏项</td>
+<td>CDM 去掉 fake score、允许任意 (t,r) → 可多步；但同教师 1-NFE 输给 FreeFlow 自报数</td>
+</tr>
+<tr>
+<td>MeanFlow / AYF 蒸馏</td>
+<td>同一个恒等式回归，但状态来自真实数据加噪</td>
+<td>CDM 把状态换成学生自生成 → 无数据</td>
+</tr>
+<tr>
+<td>SiD / DMD2</td>
+<td>无数据（SiD）/ 学生样本加噪，但梯度穿过样本、需要 fake score</td>
+<td>CDM 回归式，无梯度穿样本，无 fake score</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>证据</strong>：ImageNet256 1/2/4-NFE FID 2.04/1.62/1.37（LightningDiT，教师 1.35）；SiT-XL/2 3.47，VA-REPA 2.93<span class="b b-orig">原文 表 1</span>。只报 FID/IS，无 precision/recall，单种子。代码与论文式 7 有三处出入：残差裁剪 ±1、自适应权重、常开的对角 FM+cos 项【代码 losses.py L76–87】。</p>
+<p><strong>预测命中</strong>：①✓（不赢 FreeFlow 自报最好一行）②✓（4-NFE 贴近教师）③✓（无 P/R）④✓（m 比例、r=t 比例、注入深度都敏感）⑤✗（T2I 基线不弱：DMD2/SenseFlow/AYF/MFD）⑥✓（无视频）；按格预判（学生路径离教师远时出问题）✓（图 6a w=2.0 多步变差）→ <strong>5/6</strong>。不是低估型未中，不触发复评。</p>
+<p><strong>对我们训练的含义</strong>：</p>
+<ul>
+<li>图像：如果要在私有教师上做无数据少步，CDM 比 DMD2 少一个 fake score、单优化器，<strong>值得在同 GPU·h 下和 FreeFlow、DMD2 并排跑一次</strong>（ImageNet 或我们自己的图像底座），并补 precision/recall。</li>
+<li>视频：无。JVP 在视频 DiT 上的显存与速度未知；仓库带 FA2/FA3 的 JVP kernel，可复用到 MeanFlow 类视频蒸馏。</li>
+<li>AV：无。</li>
+<li>流式 AR：无直接含义；"on-policy 状态 + 速度回归、无 fake score"可以当 Self-Forcing DMD 阶段的一个替代对照，但没有证据，只是推断。</li>
+</ul></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-20 09:38 (UTC+8)</div></main></div>
+<script>
+(function(){
+ // 详情卡片全部展开/收起
+ document.querySelectorAll('[data-act]').forEach(function(b){b.addEventListener('click',function(){
+   var o=b.getAttribute('data-act')==='open';document.querySelectorAll('details.card').forEach(function(d){d.open=o;});});});
+ // 点击目录中位于折叠卡片内的锚点时自动展开
+ function openFor(id){var el=document.getElementById(id);if(!el)return;var d=el.closest('details');if(d)d.open=true;}
+ if(location.hash)openFor(decodeURIComponent(location.hash.slice(1)));
+ window.addEventListener('hashchange',function(){openFor(decodeURIComponent(location.hash.slice(1)));});
+ // 目录高亮
+ var links=[].slice.call(document.querySelectorAll('nav.toc a'));
+ var heads=links.map(function(a){return document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));});
+ function hl(){var y=window.scrollY+80,k=-1;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top+window.scrollY<=y&&h.offsetParent!==null)k=i;});
+   links.forEach(function(a,i){a.classList.toggle('on',i===k);});}
+ window.addEventListener('scroll',hl,{passive:true});hl();
+})();
+</script><script>if(document.querySelector('code.language-mermaid')){var s=document.createElement('script');
+s.src='https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';s.onload=function(){document.querySelectorAll('code.language-mermaid').forEach(function(c){var d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentNode.replaceWith(d);});mermaid.initialize({startOnLoad:false});mermaid.run();};document.head.appendChild(s);}</script></body></html>
