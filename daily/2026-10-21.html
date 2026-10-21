@@ -1,0 +1,628 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>少步蒸馏 · 每日 2026-10-21（周三，轻量版）</title>
+<style>
+:root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--side:#f6f8fa;--line:#d1d9e0;--acc:#0b57d0;--l1:#fff8e6;--l1b:#f0c36d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--fg);background:var(--bg);font:15.5px/1.75 "Noto Sans CJK SC","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.top{position:sticky;top:0;z-index:5;background:#24292f;color:#fff;padding:8px 20px;display:flex;gap:18px;align-items:center;font-size:14px}
+.top a{color:#fff;opacity:.9} .top .brand{font-weight:700;opacity:1}
+.wrap{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1400px;margin:0 auto}
+nav.toc{position:sticky;top:40px;align-self:start;height:calc(100vh - 40px);overflow:auto;background:var(--side);border-right:1px solid var(--line);padding:14px 10px 40px 14px;font-size:13.5px;line-height:1.5}
+nav.toc .tt{font-weight:700;color:var(--muted);margin:2px 0 8px}
+nav.toc ul{list-style:none;margin:0;padding-left:10px} nav.toc>div>ul{padding-left:0}
+nav.toc li{margin:3px 0} nav.toc a{color:#333;display:block;padding:1px 4px;border-radius:4px}
+nav.toc a:hover,nav.toc a.on{background:#dde7f7;text-decoration:none}
+main{padding:22px 40px 80px;min-width:0}
+h1{font-size:26px;margin:.2em 0 .6em;border-bottom:2px solid var(--line);padding-bottom:.3em}
+h2{font-size:21px;margin:1.8em 0 .6em;border-bottom:1px solid var(--line);padding-bottom:.25em}
+h3{font-size:17.5px;margin:1.4em 0 .5em}
+h4{font-size:15.5px}
+blockquote{margin:0 0 1em;padding:8px 16px;border-left:4px solid #8c959f;background:#f6f8fa;color:#3d444d;font-size:14px}
+blockquote p{margin:.3em 0}
+code{font-family:"JetBrains Mono","DejaVu Sans Mono",Menlo,Consolas,monospace;font-size:.88em;background:#eff1f3;padding:.1em .35em;border-radius:4px}
+pre{background:#f6f8fa;border:1px solid var(--line);border-radius:6px;padding:10px 14px;overflow:auto} pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:.6em 0 1.1em}
+table{border-collapse:collapse;font-size:13.8px;line-height:1.55;min-width:60%}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left}
+th{background:#eef2f6;font-weight:700;position:sticky;top:0}
+tr:nth-child(even) td{background:#fafbfc}
+td strong{color:#8a1c1c}
+hr{border:0;border-top:1px solid var(--line);margin:1.6em 0}
+section.layer1{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:2px 22px 10px;margin:18px 0 26px}
+section.layer1>h2{border-bottom-color:var(--l1b)}
+section.layer1 .tw table{background:#fff}
+.layer-tag{display:inline-block;font-size:12px;font-weight:700;color:#7a4b00;background:#ffe2a8;border-radius:10px;padding:0 9px;margin-left:8px;vertical-align:middle}
+details.card{border:1px solid var(--line);border-radius:8px;margin:12px 0;background:#fff}
+details.card>summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:16.5px;background:#f3f6fa;border-radius:8px;list-style:none}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary:before{content:"▸ ";color:var(--acc)} details.card[open]>summary:before{content:"▾ "}
+details.card[open]>summary{border-bottom:1px solid var(--line);border-radius:8px 8px 0 0}
+details.card>.body{padding:4px 18px 10px}
+.cardtools{font-size:13px;margin:6px 0 2px} .cardtools button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:#fff;border-radius:5px;padding:1px 8px;cursor:pointer;margin-right:6px}
+.b{display:inline-block;font-size:11.5px;line-height:1.5;padding:0 6px;border-radius:9px;margin:0 2px;font-weight:600;white-space:nowrap;vertical-align:1px;border:1px solid transparent}
+.b-meas{background:#dafbe1;color:#116329;border-color:#a8e6b5}
+.b-orig{background:#ddf4ff;color:#0a4b8c;border-color:#a6d4f5}
+.b-team{background:#fff1e5;color:#953800;border-color:#ffc89a}
+.b-inf{background:#eef0f2;color:#4a535c;border-color:#cfd5db}
+.b-codex{background:#fbefff;color:#6e2b91;border-color:#e3b8f5}
+.b-oth{background:#f6f8fa;color:#4a535c;border-color:#d1d9e0}
+.idx{max-width:900px;margin:0 auto;padding:30px 30px 80px}
+.idx .hero{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:12px 22px;margin:14px 0 24px;font-size:16.5px}
+.idx .cards a{display:block;border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:10px 0;color:var(--fg)}
+.idx .cards a:hover{border-color:var(--acc);text-decoration:none;background:#f6f9ff}
+.idx .cards .t{font-weight:700;color:var(--acc)} .idx .cards .d{font-size:13.5px;color:var(--muted)}
+.foot{color:var(--muted);font-size:12.5px;margin-top:40px;border-top:1px solid var(--line);padding-top:8px}
+@media (max-width:900px){.wrap{grid-template-columns:1fr} nav.toc{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)} main{padding:16px}}
+@media print{nav.toc,.top,.cardtools{display:none}.wrap{display:block} details.card{break-inside:avoid}}
+</style></head><body>
+<div class="top"><a class="brand" href="../index.html">多模态少步蒸馏 · 前沿调研</a><a href="../baseline.html">2026Q3 基线</a><a href="../index.html#dailies">每日</a><a href="../index.html#weeklies">每周</a></div>
+<div class="wrap"><nav class="toc"><div class="tt">目录</div><div><div class="toc">
+<ul>
+<li><a href="#结论先行">结论先行</a></li>
+<li><a href="#30-秒速览">30 秒速览</a></li>
+<li><a href="#一屏框架今天挂在哪一格">一屏框架：今天挂在哪一格</a></li>
+<li><a href="#详细条目3-条">详细条目（3 条）</a><ul><li><a href="#①-matrix-game-40每-chunk-12-步的流式渲染器蒸馏照搬-causal-forcing重做应用可用资源">① Matrix-Game 4.0：每 chunk 1–2 步的流式渲染器，蒸馏照搬 Causal Forcing++（重做·应用，可用资源）</a></li><li><a href="#②-primflow把步内动力学换成一个可学的累计位移原函数值得看">② PRIMFLOW：把「步内动力学」换成一个可学的累计位移原函数（值得看）</a></li><li><a href="#③-f5-补回worldplay2仅or和-edenlive技术报告">③ F5 补回：WorldPlay2（仅OR）和 EdenLive（技术报告）</a></li></ul></li>
+<li><a href="#id-区间预览全部命中与语义补充f9每条都有-id-评级">ID 区间预览：全部命中与语义补充（F9：每条都有 ID + 评级）</a></li>
+<li><a href="#f4openreview-积压清零">F4：OpenReview 积压清零</a></li>
+<li><a href="#f5同事对账48h">F5：同事对账（48h）</a><ul>
+<li><a href="#文献同事请你定级回执蒸馏侧评级归我流式-wm-主评级归他">文献同事「请你定级」回执（蒸馏侧评级归我，流式 / WM 主评级归他）</a></li>
+</ul>
+</li>
+<li><a href="#批次与召回台账">批次与召回台账</a></li>
+</ul>
+</div>
+</div></nav>
+<main><h1 id="少步蒸馏-每日-2026-10-21周三轻量版">少步蒸馏 · 每日 2026-10-21（周三，轻量版）</h1>
+<blockquote>
+<p><strong>批次覆盖（F1）</strong>：应出列表日 = <strong>Wed 21 Oct</strong>（北京 08:00）。09:19 和 09:36 两次查 <code>/new</code>，8 类页头都还是 <strong>Tuesday, 20 October 2026</strong>；RSS pubDate 也只有 <code>Tue, 20 Oct 2026</code> → <strong>Wed 21 记 pending</strong>，留给 13:42 补扫。<strong>本页不是 Wed 21 批</strong>，arXiv 部分是下面的 ID 区间预览。Tue 20 已 done（10-20 13:48 补扫，台账已核）。</p>
+<p><strong>F3 ID 区间（只是预览，不能把批次标 done）</strong>：从 Tue 20 批最大号之后的 <code>2610.26864</code> 起。我自己的 arXiv API 拉取第一块就 429，已停（免得和同事一起压 arXiv）；改为只读复用 RL 同事 09:36 正在逐号抓的 abs 快照（<code>genrl-digest/2026-10-21/batch/lists/abs.json</code>）。覆盖 <code>2610.26864</code>–<code>2610.28570</code>：全类 1,699 条，8 类 <strong>589</strong> 条。上限 28570 只是同事当时抓到的位置，<strong>不是本批上限</strong>；上限以 13:42 的 <code>/new</code> 为准。正则 v2.1 命中 <strong>49</strong> 条，全部读了标题（F6）；另外 Codex 对 589 条做不靠关键词的语义全量（489 + 100 增量）<span class="b b-meas">实测</span><span class="b b-codex">Codex✓</span>。</p>
+<p><strong>F4 OpenReview</strong>：文献同事 10-21 06:43 的 <code>or_iclr27.json</code> 有 1,851 条（比 10-20 少 2 条，新增 2 条都是域外）。按 F10 用整份文件按 OR id 做差集：v2 命中 682 条<strong>全部</strong>在我的文件里有 ID 或标题留痕（10-18 / 10-20 已分诊）；<strong>v2 没命中的 1,160 条以前从没做过语义分诊</strong> → 今天 Codex 全量过一遍，我复核了 IN + 外围的全部条目，OUT 里和生成相关的 721 条按标题抽查 → IN 6 / 归 RL 16 / 外围 61 / 不相关 1,077。另外补查 10-20 那 105 条「有 arXiv 孪生」的条目，按 F9（日报里要有 ID + 评级）有 <strong>87 条没留痕</strong> → 今天全部补评级（见 F4 节）。<strong>积压现在是 0</strong>；还剩 28 条核心区条目只有 OR 摘要，在等 arXiv 版或 PDF。</p>
+<p><strong>F5 对账（48h）</strong>：发现 <strong>1 条范围内漏检：WorldPlay2 <code>rK38d8xJlc</code></strong>（值得看·高，仅OR）。文献同事 10-19 在 <code>forward-fewstep-all-2026-10-19.md</code> 里标过它是 P1 / 少步；我 10-19 只读了主转交单，没读 <code>-all</code> 文件，而且 v2 正则的 GEN 门把它挡掉了（摘要里没有 video / diffusion / generat 这几个词）。已修正则（v2.1，F11）。另外 EdenLive（X 上的技术报告，没有 arXiv）今天补评。详见 F5 节。
+标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】【仅OR摘要】<span class="b b-team">队友转述</span><span class="b b-inf">推断</span><span class="b b-codex">Codex✓</span></p>
+</blockquote>
+<hr />
+<section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
+<p><strong>今天的判断：</strong> 没有新的「必读·先跑」。ID 区间预览里范围内的只有两类：</p>
+<ul>
+<li><strong>流式蒸馏的工程配方</strong>（Matrix-Game 4.0、EdenLive）。两篇都放了权重和推理代码，没放训练代码，蒸馏本身是 Causal Forcing++ / Self Forcing + DMD 的重做。</li>
+<li><strong>单步去噪的参数化变体</strong>：PRIMFLOW。</li>
+</ul>
+<p>真正影响判断的是 F5 补回来的 <strong>WorldPlay2</strong>。它把长 rollout 的 DMD 打分换成「压缩记忆 token + 逐 clip 打分」：teacher 和 student 共用同一套压缩历史，real score 只看一个 clip 加记忆，不用吃整段长 rollout。这直接动到轴 C（打分时给 critic 什么上下文），但现在只有 OR 摘要。</p>
+<ol>
+<li><strong>Matrix-Game 4.0 <a href="https://arxiv.org/abs/2610.27999">2610.27999</a> → 重做·应用（可用资源）。</strong> 三段蒸馏：因果 teacher → 因果 CD → 非对称 DMD。学生每 chunk 用 1–2 步，RTX 5090 单卡 1 步 83 FPS。<strong>质量没有任何定量评测</strong>，1 步和 2 步的画质差多少论文没给。有一个可借鉴的细节：DMD 阶段让学生在 80% 的步里吃部署时用的 TAEHV 编码控制，两个 score 一直吃 Wan-VAE 编码<span class="b b-orig">原文 §4.3；代码仓库只有推理</span>。</li>
+<li><strong>PRIMFLOW <a href="https://arxiv.org/abs/2610.27146">2610.27146</a> → 值得看（参数化变体 × 证据不足）。</strong> 学的是轨迹的「累计位移原函数」，用有限差分对齐局部教师速度；1-NFE T-FID 20.92 vs 自己复现的 ArcFlow 23.55。单种子，只和一个复现基线比，没有代码<span class="b b-orig">原文 表1/2</span>。</li>
+<li><strong>WorldPlay2 <code>rK38d8xJlc</code> → 值得看（高，仅OR）</strong>；<strong>EdenLive（VAST 技术报告）→ 重做·应用（可用资源）</strong>。</li>
+</ol>
+<p><strong>对我们训练的含义：</strong></p>
+<ul>
+<li><strong>流式 AR</strong>：①Matrix-Game 4.0 和 EdenLive 都在做同一件事：<strong>让蒸馏时看到的输入和部署时一模一样</strong>（TAEHV 控制编码、rolling cache + sink、按 cache 槽位重排 RoPE）。我们的 SF 学生要是部署时换了 VAE 或 cache 策略，就该在 DMD 阶段把这些也放进学生输入（score 那边不动）。这个对照很便宜：{学生输入 = 训练 VAE, = 部署 VAE 80%} × 同 DMD，测部署端画质。这一条是推断。②WorldPlay2 的「clip 级 + 记忆条件打分」如果站得住，长 rollout DMD 的打分成本会从 O(整段) 降到 O(clip)。等 arXiv 版。</li>
+<li><strong>AV</strong>：无新的 AV 少步论文。</li>
+<li><strong>图像 / 视频</strong>：PRIMFLOW 不改决定。它和 CDM（10-20）都说明 L1 这一格的增量现在主要来自「中间量怎么参数化」，而不是新的监督原理。</li>
+<li><strong>推理·步数分配（F7）</strong>：今天没有达标条目。ThinkWAM <code>hVQ2ezBTWz</code>（OR）按决策状态分配预测强度，是机器人 WAM，归外围。</li>
+</ul>
+</section><section class="layer1"><h2 id="30-秒速览">30 秒速览<span class="layer-tag">第一层 · 框架</span></h2>
+<ul>
+<li><strong>重做·应用（可用资源）· Matrix-Game 4.0 <a href="https://arxiv.org/abs/2610.27999">2610.27999</a></strong>：因果 CD 初始化 + 非对称 DMD，每 chunk 1–2 步，单卡 5090 上 1 步 83 FPS；没有质量定量；只有推理代码和权重。</li>
+<li><strong>值得看 · PRIMFLOW <a href="https://arxiv.org/abs/2610.27146">2610.27146</a></strong>：轨迹原函数 + 有限差分监督 + endpoint absorption。比复现的 ArcFlow 好 2.6 T-FID；单种子，无代码。</li>
+<li><strong>值得看（高，仅OR）· WorldPlay2 <code>rK38d8xJlc</code></strong>（F5 补回）：压缩记忆 token 让 teacher 和 student 共享历史，DMD 改成逐 clip、带记忆条件地打分；Stable Forcing = 少步初始化 + 全 rollout 重放。</li>
+<li><strong>重做·应用（可用资源）· EdenLive</strong>（VAST 技术报告，无 arXiv；文献同事今天转交）：teacher-forcing SFT → SF rollout + SGF 重放 → DMD。H100 上 5B 1280×704 29.8 FPS；蒸馏没有消融。</li>
+<li><strong>值得看·外围 · Beckmann World Models <a href="https://arxiv.org/abs/2610.26903">2610.26903</a></strong>：无教师的一步动作条件预测，用 terminal-map 守恒律 + 端点监督 + 在生成历史上训练恢复。</li>
+<li><strong>外围</strong>：DirectWAM 28122（一步 WAM，用下游动作误差监督预测的未来）、MoDDiT 28086（token 路由，不减步）、CALM 28192（AR 视频 KV 合并）、ReCam 27986（全上下文记忆 + 双指针去噪）、StreamEval 28402（流式生成评测）、DStill 27379（语言）。</li>
+</ul>
+<hr />
+</section><section class="layer1"><h2 id="一屏框架今天挂在哪一格">一屏框架：今天挂在哪一格<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>轴1 训练信号 \ 轴2 问题位置</th>
+<th>单步去噪</th>
+<th>流式时间轴</th>
+<th>AV 跨模态</th>
+<th>世界模型 / WAM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L1 轨迹 / flow map</strong></td>
+<td><strong>PRIMFLOW</strong>（累计位移原函数）</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L2 分布匹配</strong></td>
+<td>PhoenixSR（补评·外围）</td>
+<td><strong>EdenLive</strong>（SF + SGF 重放 + DMD，重做）；<strong>WorldPlay2</strong>（clip 级、记忆条件打分，仅OR）</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L4 混合（CD → DMD）</strong></td>
+<td>—</td>
+<td><strong>Matrix-Game 4.0</strong>（因果 CD → 非对称 DMD，重做）</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L5 无教师 / 直接映射</strong></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td><strong>Beckmann WM</strong>（terminal map）</td>
+</tr>
+<tr>
+<td><strong>任务损失蒸馏</strong></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>DirectWAM（动作误差反传，外围）</td>
+</tr>
+<tr>
+<td><strong>推理·步数分配（F7）</strong></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>ThinkWAM <code>hVQ2ezBTWz</code>（OR，外围；没有和等时间均匀少步对比）</td>
+</tr>
+<tr>
+<td><strong>额外真实数据 / 奖励</strong></td>
+<td>—</td>
+<td>—</td>
+<td>归 RL 16 条 OR（AV 奖励 4 条，见 F4）</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>放不进框架的</strong>：今天两篇流式配方（Matrix-Game 4.0、EdenLive）都给同一个前提提供了证据：<strong>蒸馏时学生的输入要和部署时一致，score 网络的输入保持训练分布</strong>。这是「样本从哪来」这根轴上的工程版，不开新格。它挂在「学生 rollout 状态 = 部署状态」这条前提下面，算支持证据，但两篇都没做消融，所以只能算弱证据。</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文</th>
+<th>归格（我）</th>
+<th>Codex 盲分（只给方法段）</th>
+<th>按格预判（会在哪出问题）</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PRIMFLOW</td>
+<td>L1 × 单步</td>
+<td>L1 ✓（「参数化 / 训练变体，没有新的监督原理」）</td>
+<td>和最强 L1 基线比没优势，只赢复现基线</td>
+<td>✓ 只比复现的 ArcFlow，单种子（读结果后才判，不计分）</td>
+</tr>
+<tr>
+<td>Matrix-Game 4.0</td>
+<td>L4（CD → DMD）× 流式</td>
+<td>L4 顺序 L1 → L2 ✓（「没写 GAN，引 DMD2 不等于有对抗项」）</td>
+<td>1 步伤画质 / 动作跟随，但不报</td>
+<td>✓ 没有质量定量（不计分）</td>
+</tr>
+<tr>
+<td>EdenLive</td>
+<td>L2 × 流式</td>
+<td>L2 ✓（「重放只改梯度路由，不改目标分布」）</td>
+<td>蒸馏没有消融</td>
+<td>✓（不计分）</td>
+</tr>
+<tr>
+<td>Beckmann WM</td>
+<td>L5 × WM</td>
+<td>L4 = L5 + L6 配对回归（分歧：Codex 把端点 / 感知监督算作配对数据项）</td>
+<td>源锚定压多样性</td>
+<td>未核：论文没报多样性。处理：按主信号归 L5，备注「含配对回归」</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>今日预测</strong>：今天定级的条目都是在读到结果之后才定的，不计分。累计仍 <strong>99/130 = 76%</strong>。WorldPlay2 的预测已写进 read-log，等 arXiv 版计分。没有低估型未中，不触发当天复评。</p>
+<hr />
+</section><section class=""><div class="cardtools">详细条目：<button data-act="open">全部展开</button><button data-act="close">全部收起</button></div><h2 id="详细条目3-条">详细条目（3 条）</h2>
+<details class="card" open="open">
+<summary id="①-matrix-game-40每-chunk-12-步的流式渲染器蒸馏照搬-causal-forcing重做应用可用资源">① Matrix-Game 4.0：每 chunk 1–2 步的流式渲染器，蒸馏照搬 Causal Forcing++（重做·应用，可用资源）</summary>
+<div class="body">
+<p><strong>结论</strong>：v1.4 (a)(b) 都不满足 → 不升先跑。(a) 训练代码没放（<code>SkyworkAI/Matrix-Game/Matrix-Game-4</code> 只有 <code>matrix_game/inference/</code>，最后提交 10-16 20:12 北京时间<span class="b b-meas">代码，sparse clone 实测</span>）；(b) 没有任何质量对照。</p>
+<p><strong>关键操作</strong><span class="b b-orig">原文 §4.3</span>：</p>
+<ol>
+<li>从 Wan2.2-Fun-5B Control 微调一个双向 v2v 渲染器：条件是 low-poly 代理视频 + 动态 caption + 最多 3 帧按相机位姿检索的空间记忆帧。</li>
+<li>Stage 1 因果 teacher：每个 latent 帧各自加噪，只看前面的干净真值帧，同样用 FM 损失，训 20k 步。</li>
+<li>Stage 2 因果 CD：在 48 级网格上，冻结的因果 teacher 带 CFG 3 走一步 Euler，到低一级；在线学生从高一级预测干净 chunk，去对齐 EMA 学生从低一级给的预测。5k 步后 EMA 学生能 4 步出一个 chunk。</li>
+<li>Stage 3 非对称 DMD：学生做自 rollout，长度在 21 / 41 / 61 / 121 个 latent 帧里抽，cache = 首帧 + 最近 20 帧；real score = 带 CFG 的冻结双向模型，fake score 在线训练，两个 score 都只评最后 21 帧。学生每 chunk 2 步，首帧 4 步；fake score 每步更新，学生每 5 步更新一次；跑 1,000 步。</li>
+<li><strong>部署对齐</strong>：学生 80% 的步吃 TAEHV 编码的控制，20% 吃 Wan-VAE 编码；两个 score 一直吃 Wan-VAE 编码。</li>
+</ol>
+<p><strong>因果逻辑</strong>：因为部署端为了速度把控制编码器换成了 TAEHV → 学生训练时要是只见过 Wan-VAE 编码，部署就会有输入偏移 → 所以把偏移放进学生输入，score 的输入不动，打分基准就不跟着漂。证据：论文没有做「去掉这一项」的消融，只是作为「最新配方」写进去的<span class="b b-orig">原文</span>。</p>
+<p><strong>与最接近的核心差别</strong>：</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文</th>
+<th>哪一步不同</th>
+<th>后果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Causal Forcing++</td>
+<td>同样三段（因果 teacher → 因果 CD → DMD）。这里多了长 rollout 加尾部 21 帧打分、空间记忆检索、学生侧混合控制编码</td>
+<td>配方级改动，没有消融</td>
+</tr>
+<tr>
+<td>Self Forcing</td>
+<td>SF 直接 ODE 初始化 + DMD；这里先做因果 CD 初始化</td>
+<td>能做到 1–2 步（SF 是 4 步）</td>
+</tr>
+<tr>
+<td>EdenLive（同期）</td>
+<td>EdenLive 4 步、SGF 重放、无 CFG；这里 1–2 步、带 CFG 的 real score</td>
+<td>两者都没放训练代码</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>证据</strong>：RTX 5090 单卡 480p：1 步 83 FPS / 2 步 57 FPS，峰值显存 18.2 GiB，按键到出帧 112 ms。表 2 逐项累加：从 4 步完整 VAE 的 4.5 FPS 起，「+1 步蒸馏」把 24.2 FPS 提到 51.2 FPS（2.1×）<span class="b b-orig">原文 表2/3</span>。<strong>质量只有图 7 的定性对比</strong>（40 s held-out rollout，2 步）；1 步和 2 步没有任何画质、动作跟随数字<span class="b b-orig">原文</span>。</p>
+<p><strong>对我们训练</strong>：流式——把「学生侧混合部署编码、score 侧固定」当一个便宜对照（见结论先行）。另一个可记的点是长 rollout（最长 121 帧）只评尾部 21 帧，这和 Self-Forcing++ 的长 rollout 打分是一个思路。图像 / 视频 / AV：无。</p>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="②-primflow把步内动力学换成一个可学的累计位移原函数值得看">② PRIMFLOW：把「步内动力学」换成一个可学的累计位移原函数（值得看）</summary>
+<div class="body">
+<p><strong>结论</strong>：L1 格里的参数化变体。证据只有一个复现基线加单种子，不改决定。</p>
+<p><strong>关键操作</strong><span class="b b-codex">原文 §3.3–3.4；Codex✓ 盲分一致</span>：</p>
+<ol>
+<li>学生在步首做一次骨干前向得到特征 h；一个小分支（8 个门控残差块，25.8M 参数）输出原函数 P(τ)，表示从源点沿教师轨迹累计走了多远，并且构造上保证 P(源点) = 0。</li>
+<li>训练时在 128 个子步里随机取跨 3 个子步的小窗，要求 [P(b) − P(a)]/(b − a) 等于教师在高噪声端点的速度。训练状态前 250 步由教师推进，之后逐步换成 detach 掉的学生推进。</li>
+<li>推理时一步走完整个区间，位移 = P(终点) − P(起点)。</li>
+<li>Endpoint absorption：冻结带原函数分支的模型，只训原生输出头（norm + 投影）去拟合它的端点平均速度，然后丢掉分支，仍是 1 NFE。</li>
+</ol>
+<p><strong>因果逻辑</strong>：因为 ArcFlow / π-Flow / PDD 都事先规定了步内动力学的函数族或网格 → 函数族一错，局部监督就拼不出准确的全局位移 → PRIMFLOW 不规定函数族，直接学累计量，命题 1 用局部误差加 Lipschitz 项给全局误差上界 → 证据：T-FID 23.55 → 20.92，HPSv2 27.71 → 28.35<span class="b b-orig">原文 表1</span>。</p>
+<p><strong>与最接近的核心差别</strong>：</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文</th>
+<th>哪一步不同</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ArcFlow</td>
+<td>用 16 个高斯动量模态做解析可积的速度参数化 → PRIMFLOW 改成自由形式的原函数</td>
+</tr>
+<tr>
+<td>MeanFlow / AYF</td>
+<td>平均速度恒等式，配合 JVP → PRIMFLOW 用有限差分，不用 JVP</td>
+</tr>
+<tr>
+<td>PDD</td>
+<td>并行预测离散子区间量 → PRIMFLOW 在连续时间上任意查询</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>证据 / 疑点</strong><span class="b b-orig">原文</span>：FLUX.2 [klein] 9B，rank-256 LoRA，32 GPU 训 2,500 步。GenEval 两者都是 0.80，DPG 84.98 vs 85.36（略低）。T-FID 是对 50 步教师算的（3,200 张）。<strong>只有 seed 1</strong>，没有 ArcFlow 自报数字作对照，没有 DMD 类基线，没有代码。</p>
+<p><strong>对我们训练</strong>：图像——无，等代码再看。视频 / AV / 流式：无。迁移推断：原函数分支是逐 token 的小网络，搬到视频上成本低；但它解决的是轨迹蒸馏「步内形状」的问题，而我们流式这条线用的是 DMD，用不上。</p>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="③-f5-补回worldplay2仅or和-edenlive技术报告">③ F5 补回：WorldPlay2（仅OR）和 EdenLive（技术报告）</summary>
+<div class="body">
+<p><strong>WorldPlay2 <code>rK38d8xJlc</code> → 值得看（高，仅OR）</strong>【仅OR摘要】</p>
+<ul>
+<li>关键操作（摘要）：①把历史压缩成紧凑的记忆 token，<strong>AR 学生和双向 teacher 共用</strong>；②于是 DMD 打分可以逐 clip 做，每次带记忆条件，不用把整段长 rollout 喂给 score 网络，蒸馏开销大降；③Stable Forcing：学生先用一个少步策略初始化，再用全 rollout 重放保住长时质量。</li>
+<li>与最接近的核心差别：vs Self-Forcing++ / LongLive（长 rollout 加窗口打分，窗口外的历史 score 看不到）→ 这里 score 通过共享记忆看得到压缩后的全历史；vs RMD / Horizon DMD（换打分的边际或视野）→ 这里换的是打分上下文的表示方式；vs SGF / EdenLive（rollout 重放）→ Stable Forcing 也用重放，但重放的是全 rollout。</li>
+<li>按格预判（读全文前）：①teacher 也要带记忆 token 重训，隐藏成本大；②只和 WorldPlay v1 及自家消融比，没有和 SF / LongLive 同协议比；③clip 级打分对跨 clip 的一致性约束弱，长时漂移指标好、单 clip 动态度会掉。</li>
+<li>arXiv 孪生：export API 按标题和 <code>all:WorldPlay</code> 检索都没有（只有 v1 <a href="https://arxiv.org/abs/2512.14614">2512.14614</a>）→ 进观察名单。</li>
+<li>按 Henry 10-20 的口径，长时漂移不是主瓶颈；但这篇的价值在<strong>打分成本</strong>，不在漂移，所以排在高优先级。</li>
+</ul>
+<p><strong>EdenLive（VAST，技术报告 PDF，代码 VAST-AI-Research/EdenLive）→ 重做·应用（可用资源）</strong><span class="b b-orig">原文 §4.3.2 式 9 读过；队友转述 Table 2</span></p>
+<ul>
+<li>关键操作：teacher-forcing SFT（「干净副本 | 带噪副本」双拷贝，一次前向，mask 对齐流式 cache 的可见性）→ 学生按 SF 自 rollout，rollout 状态 detach 后按推理时的 cache 可见性和 RoPE 可微重放（SGF）→ DMD（real = §4.3.1 双向模型，fake 在线训练），首帧不进损失。推理时每 chunk 4 步、无 CFG，sink + 滚动窗口，RoPE 按 cache 槽位重排。</li>
+<li>Codex 盲分 L2 ✓。蒸馏没有消融；README 写了 5B / 14B 的双向和少步权重以及实时推理代码，<strong>没有训练代码</strong>。</li>
+<li>对我们训练：「RoPE 按 cache 槽位重排」可以直接用到 sink + 滚动窗口的流式学生上（推理改动，不用重训）。转文献同事：配方和权重归他们跟进，蒸馏侧评级归我。</li>
+</ul>
+<hr />
+</div>
+</details>
+</section><section class=""><h2 id="id-区间预览全部命中与语义补充f9每条都有-id-评级">ID 区间预览：全部命中与语义补充（F9：每条都有 ID + 评级）</h2>
+<p>覆盖 <code>2610.26864</code>–<code>2610.28570</code>（8 类 589 条；同事抓取仍在进行，不是本批上限）。v2.1 命中 49 条 + Codex 语义 IN / 外围 / RL。</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>题目</th>
+<th>评级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.27999">2610.27999</a></td>
+<td>Matrix-Game 4.0</td>
+<td>重做·应用（可用资源，见 ①）</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.27146">2610.27146</a></td>
+<td>PRIMFLOW</td>
+<td>值得看（见 ②）</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.26903">2610.26903</a></td>
+<td>Beckmann World Models</td>
+<td>值得看·外围（L5 无教师一步 WM；PushT 64 帧 MSE 比同骨干回归降 68%；比 DriftWorld 吞吐高 3.3×；没有代码链接）</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.28122">2610.28122</a></td>
+<td>De-Diffusing WAMs / DirectWAM</td>
+<td>外围·机器人（一步 WAM：把动作误差经冻结专家反传给预测的未来；LIBERO 97.1%；同 1 次评估比 Flash-WAM 好）</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.28086">2610.28086</a></td>
+<td>MoDDiT</td>
+<td>外围（token 路由降每步计算，不减步；附带把稠密双向视频蒸成稀疏 AR 学生）</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.28192">2610.28192</a></td>
+<td>CALM: Calibrated Cache Compression</td>
+<td>外围（AR 视频 KV 分层分头合并，不减步）</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.27986">2610.27986</a></td>
+<td>ReCam: Recast the Past（= OR <code>UNnZrfbY9n</code>）</td>
+<td>外围（全上下文块记忆 + 近期上下文 / 目标帧分开的噪声调度，不减步；漂移类，按 Henry 口径不升）</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.28402">2610.28402</a></td>
+<td>StreamEval</td>
+<td>外围（流式交互生成评测，留作评测参考）</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.28003">2610.28003</a></td>
+<td>Dancing Diffusion</td>
+<td>外围（按时间段分配条件块，不减步）</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.27444">2610.27444</a></td>
+<td>LoRASpace</td>
+<td>外围（多 LoRA 共享计算）</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.27379">2610.27379</a></td>
+<td>DStill</td>
+<td>外围·语言（块扩散推测解码的一步 drafter）</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.28559">2610.28559</a></td>
+<td>Large Flow Language Models</td>
+<td>外围·语言</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.28035">2610.28035</a> / <a href="https://arxiv.org/abs/2610.28195">2610.28195</a></td>
+<td>LoCA（AR flow-matching TTS 的 RL）/ 吸引力偏差影响 T2I 奖励模型</td>
+<td>归 RL（不减步）</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.27418">2610.27418</a> TokenFlow / <a href="https://arxiv.org/abs/2610.28257">2610.28257</a> SplatFlux / <a href="https://arxiv.org/abs/2610.28521">2610.28521</a> Latent Bridge / <a href="https://arxiv.org/abs/2610.26881">2610.26881</a> AuRA</td>
+<td>3D 点云 RF / 4DGS 重建 / 视频 latent→3D / 音频 RAE</td>
+<td>不相关（不减步）</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.27280">2610.27280</a> VPFlow / <a href="https://arxiv.org/abs/2610.27890">2610.27890</a> EndoWorld-JEPA / <a href="https://arxiv.org/abs/2610.27793">2610.27793</a> TerraNostra / <a href="https://arxiv.org/abs/2610.28523">2610.28523</a> 人形交互 / <a href="https://arxiv.org/abs/2610.26915">2610.26915</a> / <a href="https://arxiv.org/abs/2610.28323">2610.28323</a> PACE</td>
+<td>规划 / 表征 / 遥感 / 机器人 / 动作检测 / 流式理解</td>
+<td>不相关</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.28048">2610.28048</a> OPTD（LLM）/ 26950 / 27450 / 27467 / 27555 / 27993 / 28194 / 27847 / 28500 / 28355 / 28540 / 28223 / 27259</td>
+<td>LLM 的 OPD / 蒸馏 / 推测解码 / MTP</td>
+<td>不相关·语言</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.27756">2610.27756</a> / 28211 / 26891 / 26910 / 27298 / 27515 / 28103 / 28255 / 27079 / 27206 / 27491 / 27534 / 27713 / 27863 / 28434 / 27327 / 27603</td>
+<td>VLM 评测 / 筛查 / 剪枝 / 理解 / 增量学习 / 因果推断 / MRI / 水印 / 理论 / 音频表征 / 归因 / 分类 / 代码检测 / 指纹 / 智能体</td>
+<td>不相关（关键词误命中）</td>
+</tr>
+</tbody>
+</table></div>
+<p>Codex 语义全量（589 条）：前 489 条 IN 4（26903、27146、27379、28122）/ 外围 6 / RL 2 / 其余 OUT；09:36 增量 100 条 IN 0 / 外围 2（28402 StreamEval、28559）/ 其余 OUT（<code>raw/1021/codex/delta.out</code>）。我和它的分歧：Codex 把 Matrix-Game 4.0 判为外围，理由是「减步不是主要贡献」；我按「流式蒸馏配方」收为重做·应用。</p>
+<hr />
+</section><section class=""><h2 id="f4openreview-积压清零">F4：OpenReview 积压清零</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>部分</th>
+<th>条数</th>
+<th>处理</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v2 命中</td>
+<td>682</td>
+<td>10-18 / 10-20 已分诊；今天按 F10 用整份文件核对</td>
+<td>682/682 有 ID 或标题留痕</td>
+</tr>
+<tr>
+<td>v2 没命中（以前从没语义分诊）</td>
+<td><strong>1,160</strong></td>
+<td>今天 Codex 全量（只读，<code>raw/1021/or/codex_labels.tsv</code>）；我复核 IN 6 + 外围 61 的全部，抽查 OUT 里生成相关的 721 条标题</td>
+<td>IN 6 / RL 16 / 外围 61 / OUT 1,077</td>
+</tr>
+<tr>
+<td>10-20 记为「有 arXiv 孪生、已见」但日报里没有 ID + 评级的</td>
+<td><strong>87</strong></td>
+<td>今天 Codex 一轮 + 我按摘要定稿（<code>raw/1021/or/twins87</code>）</td>
+<td>见下</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>v2 没命中的 IN 6 条（我终稿）</strong>：</p>
+<ul>
+<li><strong>WorldPlay2 <code>rK38d8xJlc</code> → 值得看（高，仅OR）</strong>（见 ③）。</li>
+<li>CNP-Flow <code>bbgYeL02GH</code> → 外围（时序 flow matching 学条件源分布，同质量下 NFE 更少；视频预测 / 插帧，不是蒸馏）。</li>
+<li>ThinkWAM <code>hVQ2ezBTWz</code> → 外围·推理分配（WAM 按状态决定预测强度；没有和等时间均匀少步对比）。</li>
+<li>DiffuPlex <code>rxPWc7mo7b</code> → 外围·语言 / 语音（滚动掩码扩散，全双工对话）。</li>
+<li>FastOPD <code>ccYdNI4WnD</code> → 外围·机器人（flow map 自一致，1–2 步 VLA）。</li>
+<li>Hash-guided Diffusion <code>T5EVcaJOwN</code> → 不相关（服装细节残差，500 → 10 步，不是生成模型蒸馏）。</li>
+</ul>
+<p>外围里和我们最近的几条（都不减步，只记录）：AsymRefresh <code>fni1boV4Dr</code>（AV 模态非对称特征缓存）、Commit-One <code>T5WKXrFmTk</code>（交互视频的生成和提交解耦）、StreamAccel <code>5j9ZlR4BJH</code>、S2PD <code>Zf68SX9abN</code>、R-DiT <code>mffDk4xhj4</code>（步内递归深度）、Vorch-Director <code>wfwXH7uf9X</code>。归 RL 16 条（AV 奖励 SyncReward <code>tKBF2XBXVx</code>、OmniNFT <code>LTKo6SB1AV</code>、AV-GRPO <code>aOtP9Z4QtM</code>、Adaptive Reward Routing <code>vW2hr4Awpk</code>；视频 / WM：FlowCred、Video-Rubrics、LoGo、PhysForce、WorldAlign、PAVXploreRL、DreamTamer、R²-WAM、ACWM-RM、ActForge；另有 RelayVSR、VEFX-Bench 两条，Codex 判归 RL，我看是外围）——都不是少步上的 RL，只列给 RL 同事参考。</p>
+<p><strong>87 条孪生补评（F9，按 arXiv id）</strong>：</p>
+<ul>
+<li>值得看·流式（摘要级）：<strong>EditStream <a href="https://arxiv.org/abs/2608.21424">2608.21424</a></strong>——两段蒸馏：在学生到达的中间状态上做 Velocity Moment Matching，再做 AR 展开。这和 CDM「on-policy 状态上的速度回归」是同一个想法，用在了流式编辑上。<strong>这是 Q3 调研时就漏掉的</strong>：Q3 语料只按标题筛，它的标题里没有少步关键词（见 F5）。</li>
+<li>值得看·外围：Improved Distributional Diffusion Models <a href="https://arxiv.org/abs/2609.37147">2609.37147</a>（分布式去噪器，IN256 4 步 FID 4.48，不强）；IDU <a href="https://arxiv.org/abs/2609.36099">2609.36099</a>（一步蒸馏和数据遗忘写进同一个 min-max）。</li>
+<li>外围·应用：PhoenixSR <a href="https://arxiv.org/abs/2609.30988">2609.30988</a>（用 DMD 把扩散先验转进异构前馈 SR 网络）；CyFM <a href="https://arxiv.org/abs/2609.14171">2609.14171</a>（复值 / 柱坐标 FM 少步，MRI / 音频）。</li>
+<li>外围·语言：<a href="https://arxiv.org/abs/2609.40235">2609.40235</a>（连续扩散 LM 的 DMD）、<a href="https://arxiv.org/abs/2608.22244">2608.22244</a>、<a href="https://arxiv.org/abs/2609.33947">2609.33947</a>、<a href="https://arxiv.org/abs/2609.06324">2609.06324</a>、<a href="https://arxiv.org/abs/2607.03788">2607.03788</a>。</li>
+<li>归 RL：<a href="https://arxiv.org/abs/2608.09233">2608.09233</a> DreOPD、<a href="https://arxiv.org/abs/2608.26872">2608.26872</a> Self-OPD、<a href="https://arxiv.org/abs/2609.07137">2609.07137</a> Flow3D-OPD、<a href="https://arxiv.org/abs/2609.32056">2609.32056</a>。</li>
+<li>外围（缓存 / 稀疏 / 量化 / 记忆 / 以少步模型为组件，不减步）：<a href="https://arxiv.org/abs/2609.38562">2609.38562</a> LongTake、<a href="https://arxiv.org/abs/2608.25479">2608.25479</a>、<a href="https://arxiv.org/abs/2609.31050">2609.31050</a>、<a href="https://arxiv.org/abs/2609.12036">2609.12036</a>、<a href="https://arxiv.org/abs/2609.34697">2609.34697</a>、<a href="https://arxiv.org/abs/2607.27036">2607.27036</a>、<a href="https://arxiv.org/abs/2610.08941">2610.08941</a>、<a href="https://arxiv.org/abs/2607.21594">2607.21594</a>、<a href="https://arxiv.org/abs/2610.00317">2610.00317</a>、<a href="https://arxiv.org/abs/2610.08760">2610.08760</a>、<a href="https://arxiv.org/abs/2610.01034">2610.01034</a>、<a href="https://arxiv.org/abs/2609.24788">2609.24788</a>、<a href="https://arxiv.org/abs/2607.20125">2607.20125</a> HeadCast、<a href="https://arxiv.org/abs/2610.08777">2610.08777</a> CtrlCache、<a href="https://arxiv.org/abs/2610.03664">2610.03664</a>、<a href="https://arxiv.org/abs/2608.20910">2608.20910</a>、<a href="https://arxiv.org/abs/2608.05070">2608.05070</a>、<a href="https://arxiv.org/abs/2610.02323">2610.02323</a>、<a href="https://arxiv.org/abs/2610.02153">2610.02153</a> MosaiChunk、<a href="https://arxiv.org/abs/2610.09785">2610.09785</a>、<a href="https://arxiv.org/abs/2609.38984">2609.38984</a>、<a href="https://arxiv.org/abs/2610.00686">2610.00686</a> SemanTok、<a href="https://arxiv.org/abs/2609.05588">2609.05588</a>、<a href="https://arxiv.org/abs/2609.33269">2609.33269</a>、<a href="https://arxiv.org/abs/2610.10457">2610.10457</a> MORCA、<a href="https://arxiv.org/abs/2609.08230">2609.08230</a>、<a href="https://arxiv.org/abs/2610.17926">2610.17926</a>、<a href="https://arxiv.org/abs/2610.05816">2610.05816</a>。</li>
+<li>不相关（理解 / LLM / 基准等）：<a href="https://arxiv.org/abs/2609.06498">2609.06498</a>、<a href="https://arxiv.org/abs/2609.36581">2609.36581</a>、<a href="https://arxiv.org/abs/2609.34388">2609.34388</a>、<a href="https://arxiv.org/abs/2608.30692">2608.30692</a>、<a href="https://arxiv.org/abs/2610.00894">2610.00894</a>、<a href="https://arxiv.org/abs/2609.35553">2609.35553</a>、<a href="https://arxiv.org/abs/2609.36803">2609.36803</a>、<a href="https://arxiv.org/abs/2610.13045">2610.13045</a>、<a href="https://arxiv.org/abs/2609.11699">2609.11699</a>、<a href="https://arxiv.org/abs/2609.36687">2609.36687</a>、<a href="https://arxiv.org/abs/2610.18001">2610.18001</a>、<a href="https://arxiv.org/abs/2608.05703">2608.05703</a>、<a href="https://arxiv.org/abs/2610.11617">2610.11617</a>、<a href="https://arxiv.org/abs/2609.39490">2609.39490</a>、<a href="https://arxiv.org/abs/2609.24197">2609.24197</a>、<a href="https://arxiv.org/abs/2609.23601">2609.23601</a>、<a href="https://arxiv.org/abs/2607.06855">2607.06855</a>、<a href="https://arxiv.org/abs/2610.01762">2610.01762</a>、<a href="https://arxiv.org/abs/2610.24286">2610.24286</a>、<a href="https://arxiv.org/abs/2609.38342">2609.38342</a>、<a href="https://arxiv.org/abs/2607.13031">2607.13031</a>、<a href="https://arxiv.org/abs/2608.08888">2608.08888</a>、<a href="https://arxiv.org/abs/2609.39021">2609.39021</a>、<a href="https://arxiv.org/abs/2610.02815">2610.02815</a>、<a href="https://arxiv.org/abs/2609.40048">2609.40048</a>、<a href="https://arxiv.org/abs/2609.31571">2609.31571</a>、<a href="https://arxiv.org/abs/2607.28312">2607.28312</a>、<a href="https://arxiv.org/abs/2609.02780">2609.02780</a>、<a href="https://arxiv.org/abs/2610.23998">2610.23998</a>、<a href="https://arxiv.org/abs/2610.03833">2610.03833</a>、<a href="https://arxiv.org/abs/2610.09665">2610.09665</a>、<a href="https://arxiv.org/abs/2609.37559">2609.37559</a>、<a href="https://arxiv.org/abs/2610.06297">2610.06297</a>、<a href="https://arxiv.org/abs/2610.00757">2610.00757</a>、<a href="https://arxiv.org/abs/2608.11191">2608.11191</a>、<a href="https://arxiv.org/abs/2609.04131">2609.04131</a>、<a href="https://arxiv.org/abs/2608.13040">2608.13040</a>、<a href="https://arxiv.org/abs/2610.04864">2610.04864</a>、<a href="https://arxiv.org/abs/2608.09745">2608.09745</a>、<a href="https://arxiv.org/abs/2608.01247">2608.01247</a>、<a href="https://arxiv.org/abs/2610.12837">2610.12837</a>、<a href="https://arxiv.org/abs/2610.19849">2610.19849</a>、<a href="https://arxiv.org/abs/2609.39227">2609.39227</a>、<a href="https://arxiv.org/abs/2609.34106">2609.34106</a>、<a href="https://arxiv.org/abs/2607.24507">2607.24507</a>。</li>
+</ul>
+<p><strong>还剩的</strong>：0 条没分诊。28 条核心区条目只有 OR 摘要（OR PDF 仍被 Cloudflare 挡，我们不绕过），等 arXiv 版。</p>
+<hr />
+</section><section class=""><h2 id="f5同事对账48h">F5：同事对账（48h）</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>来源</th>
+<th>条目</th>
+<th>已在我日报（ID + 评级）</th>
+<th>本次处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文献同事 <code>forward-fewstep-2026-10-21.md</code>（06:55）</td>
+<td>7 条新条目 / 新证据 + 状态更新</td>
+<td>6/7 有评级（MultiWorld、VoxelMem、StreamCeption、FLUID-Omni、DeForcing、AURA 都在 10-18 / 10-20 的分诊表里）</td>
+<td><strong>EdenLive 补评</strong>：重做·应用（可用资源）。6 条「请你定级」逐条回执见下表</td>
+</tr>
+<tr>
+<td>文献同事 <code>raw/shortlist.json</code>（38 条）</td>
+<td>核心 23 条</td>
+<td>19/23</td>
+<td>补：EdenLive（上）；ReCam <code>UNnZrfbY9n</code> = <a href="https://arxiv.org/abs/2610.27986">2610.27986</a> 外围；SteadyTalk <code>cvN3HTK4Xr</code> 外围（AV 长时记忆，不减步，归文献同事）；<a href="https://arxiv.org/abs/2610.23542">2610.23542</a> Execution Before Memory 不相关（WM 记忆诊断）。其余 15 条非核心（HF 语料外、蛋白、NativeCodec）全部不相关</td>
+</tr>
+<tr>
+<td>文献同事 <code>forward-fewstep-all-2026-10-19.md</code>（<strong>我 10-19 没读这个文件</strong>）</td>
+<td>797 行</td>
+<td>按 ID 或标题留痕 498</td>
+<td>299 条没留痕 → 209 条 OR 里有 134 条被今天的 1,160 条语义全量覆盖，75 条属于上面 87 条孪生补评；90 条 arXiv id 全部是 LLM / 智能体 / 机器人 / 理解（我逐条读了标题，生成相关的 20 条也都不减步）。<strong>范围内的漏检：WorldPlay2</strong></td>
+</tr>
+<tr>
+<td>RL 同事 <code>genrl-digest/2026-10-20/.../fewstep_kw_hits.json</code>（10-21 08:17 更新，42 条）</td>
+<td>42</td>
+<td>30/42 按完整 ID；另有 5 条在 10-20 日报里是缩写 ID</td>
+<td>7 条 cs.CL（FlashMap 24365、24424、24722、24854、24993、25087、25768）：不相关·语言</td>
+</tr>
+<tr>
+<td>RL 同事 10-21 转发草稿 <code>forward_fewstep_draft.txt</code>（16 条）</td>
+<td>16</td>
+<td>12/16</td>
+<td><strong><a href="https://arxiv.org/abs/2610.26183">2610.26183</a> HP-PnP-Flow</strong> → 外围（PnP 复原的时间调度，减少的是复原迭代次数；Tue 20 批 Codex 判 OUT，日报里没留痕）；<a href="https://arxiv.org/abs/2610.26531">2610.26531</a> ReAnchor → 不相关·语言（不在我的 8 类）；26903 / 27146 / 27379 / 27280 见上表</td>
+</tr>
+<tr>
+<td>RL 同事 read-log（<code>sand-data/genrl-digest/read-log.md</code>，10-20 / 10-21 行）</td>
+<td>DFR、NR-SMC、MARTINI、CheckDistill、RoboJudge 等</td>
+<td>—</td>
+<td>都是 RL / 评测，不在少步范围</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>漏检记录（按丢失阶段）</strong>：</p>
+<ul>
+<li><strong>WorldPlay2 <code>rK38d8xJlc</code></strong>：①S1 正则——GEN 门要求出现 diffusion / flow match / generat / video / image / audio / speech / synthes 中的一个，WorldPlay2 摘要一个都没有（它写的是「world model」「real time」「rollout」）；②F5——文献同事 10-19 把它放在 <code>-all</code> 转交文件（标了 P1 / 少步），我 10-19 只对了主转交单。<strong>修复 F11</strong>：<code>tools/screen.py</code> v2.1 的 GEN 门加入 world model / interactive / real-time / rollout / avatar / talking / render（v2.0 备份为 <code>screen_v2_0.py</code>）。在 10-12 以来所有 arXiv 原始批次上回放：命中数 +8%～+17%，新增的全部是 LLM / 智能体，arXiv 侧<strong>没有</strong>发现新的范围内漏检；OR 侧这次漏掉的只有这一条。<strong>F12</strong>：F5 要读同事当天<strong>所有</strong> <code>forward-fewstep*.md</code>（包括 <code>-all</code>、<code>-catchup</code>），不只读主单。</li>
+<li><strong>EditStream <a href="https://arxiv.org/abs/2608.21424">2608.21424</a></strong>：Q3 调研阶段丢的——当时语料只有标题，标题里没有少步词。今天由 OR 孪生补评收回。<strong>建议</strong>：周五周报前，对 Q3 语料里的流式 / 世界模型 / 视频编辑标题做一次摘要级 Codex 语义扫（只读）。</li>
+<li><a href="https://arxiv.org/abs/2610.26183">2610.26183</a> HP-PnP-Flow：Tue 20 批 Codex 语义判 OUT，但没写进日报（F8 规则要求逐条写）。外围，不影响结论。</li>
+</ul>
+<h3 id="文献同事请你定级回执蒸馏侧评级归我流式-wm-主评级归他">文献同事「请你定级」回执（蒸馏侧评级归我，流式 / WM 主评级归他）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>条目</th>
+<th>我的蒸馏侧评级</th>
+<th>一句理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EdenLive</td>
+<td>重做·应用（可用资源）</td>
+<td>SF + SGF 重放 + DMD，蒸馏没有消融；有权重和推理代码，没有训练代码</td>
+</tr>
+<tr>
+<td>MultiWorld <code>TtzUhUFcz2</code></td>
+<td>值得看（高）→ <strong>重做·应用（仅OR）</strong></td>
+<td>arXiv v2 没有蒸馏内容；OR 摘要里的「Causal Teacher Distillation」只有一句，没有机制描述</td>
+</tr>
+<tr>
+<td>VoxelMem <code>y0bA9L8q9m</code></td>
+<td>值得看（高）→ <strong>重做·应用（仅OR）</strong></td>
+<td>「把双向模型蒸成因果生成器」是标准流程，摘要里没有新的蒸馏信号</td>
+</tr>
+<tr>
+<td>StreamCeption <code>3jkKjpv2AX</code></td>
+<td>值得看（高）→ <strong>值得看（仅OR，推理·步数分配格）</strong></td>
+<td>学出来的重加噪 / 修复门控 = 按 latent 自适应追加去噪；F7 要看它和「等时间均匀多 1 步」比如何，摘要里没有</td>
+</tr>
+<tr>
+<td>FLUID-Omni <code>qr24TlSE3X</code></td>
+<td>值得看（高）→ <strong>外围（仅OR）</strong></td>
+<td>离散扩散 omni（文本 + 语音），commit / repair 接近 dLLM 的置信度重掩码，没有视频</td>
+</tr>
+<tr>
+<td>DeForcing <code>225TN4s58Y</code></td>
+<td><strong>值得看（仅OR，新机制 × 证据不足）</strong>——维持 10-18，和文献同事判的「重做」有分歧</td>
+<td>「免 rollout 的 DMD」动到了我们训练的一个决定（要不要做顺序自 rollout），所以蒸馏侧值得看；但摘要只和自家双向教师比，没和 Self Forcing 比 → 证据不足。分歧带到周五对账</td>
+</tr>
+<tr>
+<td>AURA <code>RhoDP829cX</code></td>
+<td>重做（同意出名单）</td>
+<td>CausVid 式两段蒸馏</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class=""><h2 id="批次与召回台账">批次与召回台账</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>列表日</th>
+<th>状态</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tue 20 Oct</td>
+<td>done（10-20 13:48 补扫）</td>
+<td>台账核对通过</td>
+</tr>
+<tr>
+<td><strong>Wed 21 Oct</strong></td>
+<td><strong>pending</strong></td>
+<td>09:19 / 09:36 <code>/new</code> 和 RSS 都还是 Tue 20；ID 区间预览 26864–28570（不完整），13:42 补扫以 <code>/new</code> 为准</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>转发（草稿，未发送，由父 agent 决定）</strong>：</p>
+<ul>
+<li>→ 多模态文献追踪：WorldPlay2 <code>rK38d8xJlc</code>、Matrix-Game 4.0 <a href="https://arxiv.org/abs/2610.27999">2610.27999</a>、EdenLive 回执、Beckmann WM <a href="https://arxiv.org/abs/2610.26903">2610.26903</a>、定级回执表。</li>
+<li>→ 多模态强化学习进展跟踪：今天没有「少步上的 RL」新条目；OR 里 16 条生成 RL（含 4 条 AV 奖励）只作 FYI。</li>
+</ul>
+<p>原始：<code>daily/raw/1021/</code>（<code>hits_v2_preview.txt</code>、<code>codex/</code>、<code>or/codex_labels.tsv</code>、<code>or/twins87.tsv</code>、<code>or/twins.out</code>、<code>blind/blind.out</code>、<code>full/*.txt</code>）。</p></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-21 09:40 (UTC+8)</div></main></div>
+<script>
+(function(){
+ // 详情卡片全部展开/收起
+ document.querySelectorAll('[data-act]').forEach(function(b){b.addEventListener('click',function(){
+   var o=b.getAttribute('data-act')==='open';document.querySelectorAll('details.card').forEach(function(d){d.open=o;});});});
+ // 点击目录中位于折叠卡片内的锚点时自动展开
+ function openFor(id){var el=document.getElementById(id);if(!el)return;var d=el.closest('details');if(d)d.open=true;}
+ if(location.hash)openFor(decodeURIComponent(location.hash.slice(1)));
+ window.addEventListener('hashchange',function(){openFor(decodeURIComponent(location.hash.slice(1)));});
+ // 目录高亮
+ var links=[].slice.call(document.querySelectorAll('nav.toc a'));
+ var heads=links.map(function(a){return document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));});
+ function hl(){var y=window.scrollY+80,k=-1;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top+window.scrollY<=y&&h.offsetParent!==null)k=i;});
+   links.forEach(function(a,i){a.classList.toggle('on',i===k);});}
+ window.addEventListener('scroll',hl,{passive:true});hl();
+})();
+</script><script>if(document.querySelector('code.language-mermaid')){var s=document.createElement('script');
+s.src='https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';s.onload=function(){document.querySelectorAll('code.language-mermaid').forEach(function(c){var d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentNode.replaceWith(d);});mermaid.initialize({startOnLoad:false});mermaid.run();};document.head.appendChild(s);}</script></body></html>
