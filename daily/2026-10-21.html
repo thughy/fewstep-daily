@@ -71,6 +71,12 @@ details.card>.body{padding:4px 18px 10px}
 </ul>
 </li>
 <li><a href="#补扫1348北京时间wed-21-批-同事转交对账">补扫（13:48，北京时间）：Wed 21 批 + 同事转交对账</a><ul><li><a href="#①-solarrenderer给已有的四步-lora-换控制条件后用沿结构条件外推的-teacher重做-dmd值得读可用配方">① SolarRenderer：给已有的四步 LoRA 换控制条件后，用「沿结构条件外推的 teacher」重做 DMD（值得读·可用配方）</a></li><li><a href="#②-预览之外的其他新号">② 预览之外的其他新号</a></li><li><a href="#③-f5-f9-同事转交对账今天全部转交">③ F5 / F9 同事转交对账（今天全部转交）</a></li></ul></li>
+<li><a href="#组织追踪1403-北京时间fasth3-omnifastvideo-hao-ai-lab-nuva-labmultilivevastcosmos3-h-dreamsnvidia">组织追踪（14:03 北京时间）：FastH3 Omni（FastVideo / Hao AI Lab × Nuva Lab）、MultiLive（VAST）、Cosmos3-H-Dreams（NVIDIA）</a><ul>
+<li><a href="#fasth3-omni-卡片">FastH3 Omni 卡片</a></li>
+<li><a href="#两条短评">两条短评</a></li>
+<li><a href="#f9rl-同事-10-21-终版转交23-个-id">F9：RL 同事 10-21 终版转交（23 个 ID）</a></li>
+</ul>
+</li>
 <li><a href="#批次与召回台账">批次与召回台账</a></li>
 </ul>
 </div>
@@ -81,7 +87,8 @@ details.card>.body{padding:4px 18px 10px}
 <p><strong>F3 ID 区间（只是预览，不能把批次标 done）</strong>：从 Tue 20 批最大号之后的 <code>2610.26864</code> 起。我自己的 arXiv API 拉取第一块就 429，已停（免得和同事一起压 arXiv）；改为只读复用 RL 同事 09:36 正在逐号抓的 abs 快照（<code>genrl-digest/2026-10-21/batch/lists/abs.json</code>）。覆盖 <code>2610.26864</code>–<code>2610.28570</code>：全类 1,699 条，8 类 <strong>589</strong> 条。上限 28570 只是同事当时抓到的位置，<strong>不是本批上限</strong>；上限以 13:42 的 <code>/new</code> 为准。正则 v2.1 命中 <strong>49</strong> 条，全部读了标题（F6）；另外 Codex 对 589 条做不靠关键词的语义全量（489 + 100 增量）<span class="b b-meas">实测</span><span class="b b-codex">Codex✓</span>。</p>
 <p><strong>F4 OpenReview</strong>：文献同事 10-21 06:43 的 <code>or_iclr27.json</code> 有 1,851 条（比 10-20 少 2 条，新增 2 条都是域外）。按 F10 用整份文件按 OR id 做差集：v2 命中 682 条<strong>全部</strong>在我的文件里有 ID 或标题留痕（10-18 / 10-20 已分诊）；<strong>v2 没命中的 1,160 条以前从没做过语义分诊</strong> → 今天 Codex 全量过一遍，我复核了 IN + 外围的全部条目，OUT 里和生成相关的 721 条按标题抽查 → IN 6 / 归 RL 16 / 外围 61 / 不相关 1,077。另外补查 10-20 那 105 条「有 arXiv 孪生」的条目，按 F9（日报里要有 ID + 评级）有 <strong>87 条没留痕</strong> → 今天全部补评级（见 F4 节）。<strong>积压现在是 0</strong>；还剩 28 条核心区条目只有 OR 摘要，在等 arXiv 版或 PDF。</p>
 <p><strong>F5 对账（48h）</strong>：发现 <strong>1 条范围内漏检：WorldPlay2 <code>rK38d8xJlc</code></strong>（值得看·高，仅OR）。文献同事 10-19 在 <code>forward-fewstep-all-2026-10-19.md</code> 里标过它是 P1 / 少步；我 10-19 只读了主转交单，没读 <code>-all</code> 文件，而且 v2 正则的 GEN 门把它挡掉了（摘要里没有 video / diffusion / generat 这几个词）。已修正则（v2.1，F11）。另外 EdenLive（X 上的技术报告，没有 arXiv）今天补评。详见 F5 节。</p>
-<p><strong>13:48 补扫（北京时间）</strong>：<code>/new</code> 已翻到 <strong>Wednesday, 21 October 2026</strong> → <strong>Wed 21 done</strong>。新增范围内 1 条：<strong>SolarRenderer <a href="https://arxiv.org/abs/2610.28630">2610.28630</a> → 值得读·可用配方（训练代码 + 配置 + 权重齐全，底座 MiniMax-H3）</strong>。同事转交召回（按 F9 留痕）50/97 → 97/97，范围内没有漏检。详见文末「补扫」节。
+<p><strong>13:48 补扫（北京时间）</strong>：<code>/new</code> 已翻到 <strong>Wednesday, 21 October 2026</strong> → <strong>Wed 21 done</strong>。新增范围内 1 条：<strong>SolarRenderer <a href="https://arxiv.org/abs/2610.28630">2610.28630</a> → 值得读·可用配方（训练代码 + 配置 + 权重齐全，底座 MiniMax-H3）</strong>。同事转交召回（按 F9 留痕）50/97 → 97/97，范围内没有漏检。详见文末「补扫」节。</p>
+<p><strong>组织追踪（14:03 北京时间）</strong>：FastH3 Omni（FastVideo × Nuva Lab，H3 Ref2VA，8 次前向，DMPDD 训练代码公开）→ <strong>值得读·可用配方（高）</strong>，没有质量定量数字，所以不是必读·先跑；MultiLive → 值得看（高，仅OR）；Cosmos3-H-Dreams → 重做·应用（可用资源）。RL 同事 10-21 终版 23 个 ID：23/23 已留痕。见文末「组织追踪」。
 标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】【仅OR摘要】<span class="b b-team">队友转述</span><span class="b b-inf">推断</span><span class="b b-codex">Codex✓</span></p>
 </blockquote>
 <hr />
@@ -689,6 +696,71 @@ details.card>.body{padding:4px 18px 10px}
 <hr />
 </div>
 </details>
+</section><section class=""><h2 id="组织追踪1403-北京时间fasth3-omnifastvideo-hao-ai-lab-nuva-labmultilivevastcosmos3-h-dreamsnvidia">组织追踪（14:03 北京时间）：FastH3 Omni（FastVideo / Hao AI Lab × Nuva Lab）、MultiLive（VAST）、Cosmos3-H-Dreams（NVIDIA）</h2>
+<p><strong>结论先行：</strong> FastH3 Omni 评 <strong>值得读·可用配方（高）</strong>，不是必读·先跑。它是目前公开的、<strong>在我们同一个底座 MiniMax-H3 上</strong>最完整的少步训练栈：DMPDD（PDD + DMD）训练代码和 Ref2VA 配置都在 FastVideo 里，Apache-2.0【代码】。但质量方面<strong>没有任何定量数字</strong>，官方自己说示例「not a quantitative quality evaluation」<span class="b b-orig">原文</span>；也没有和 H3 教师、DMAD 或别的 H3 少步基线做同协议对比。对我们最有用的是代码里写死的一个<strong>模态不对称</strong>：audio 和 video 共用一个基础时间 u，但各走各的 shift（video 12、audio 3），所以 DMD 打分时 audio 的噪声始终比 video 低；DMD 梯度也按模态<strong>分开归一化</strong>。这正是我们「τ_a ≠ τ_v」那个对照现成能用的实现。</p>
+<h3 id="fasth3-omni-卡片">FastH3 Omni 卡片</h3>
+<p><strong>发布物</strong>：BF16 <code>FastVideo/FastVideo-FastH3-Omni-8-Step-V1</code>（Ref2VA，8 次 transformer 前向，guidance 1.0），NVFP4 QAD 版 <code>FastH3-Omni-NVFP4-QAD</code>（用于 Blackwell 本地推理：RTX 5090 / DGX Spark / RTX PRO 6000），另有 FP8 / ComfyUI 版；T2VA 线有 <code>FastVideo-FastH3-8-Step-V2</code>（data-free DMD2，step 1300）和它的 NVFP4 版 <code>FastH3-QAD-v2</code>。权重许可：MiniMax-H3 Community License；代码：Apache-2.0<span class="b b-orig">原文 / 代码</span>。HF 10-17 建库，10-20 发布（博客 10-20）。</p>
+<p><strong>到底蒸了什么（关键操作，一步一步）</strong></p>
+<ol>
+<li><strong>学生结构（PDD）</strong>：H3 的 <code>transformer_ref</code> 输出头从 1 个速度扩成 <strong>32 个 fine-grid 区间头</strong>；推理时按 4 个一组融合，得到 <strong>8 次前向</strong>（<code>pdd_steps: 32</code>，<code>pdd_step_indices</code> 0,4,…,32）【代码：dmpdd_ref2va.yaml；HF fastvideo_inference.json】。PDD 方法来自 NVIDIA FastGen 的 Parallel Decoding Distillation <a href="https://arxiv.org/abs/2607.26004">2607.26004</a>（read-log 里原评「值得读候选」）。</li>
+<li><strong>DMD 那一路</strong>：每次学生前向，把剩下的所有头积分到干净端点，得到 x̂0（<code>dmpdd.py:139–147</code>），再对它做 DMD2：teacher（冻结 H3 ref2va，dense attention）和 critic（可训练 H3，dense）都在 <strong>x0 空间</strong>预测；teacher 和 critic 都做 CFG，guidance 都是 <strong>2.0</strong>，uncond = 文本 / presentation 置零、参考 latent 保留（<code>packed_dmd.py:692–734</code>；yaml <code>real_score_guidance_scale / fake_score_guidance_scale: 2.0</code>，<code>cfg_uncond: text: zero</code>）【代码】。</li>
+<li><strong>核心梯度（按模态分开）</strong>：对 video、audio 各自取切片，<code>grad = (fake − real) / (mean|gen − real| + 1e-6)</code>，<code>loss_m = 0.5·MSE(gen, sg(gen − grad))</code>，再按 <code>modality_loss_weights</code>（默认都是 1）相加（<code>packed_dmd.py:754–764</code>）【代码】。和 Self-Forcing <code>model/dmd.py:113</code> 一样是 fake − real，不同在于<strong>归一化分母按模态各算一次</strong>，所以 audio 的梯度量级不会被 video 吃掉。</li>
+<li><strong>打分时间（模态时钟）</strong>：先按 <code>score_timestep_shift: 2.4</code> 抽一个基础时间 u，然后 <code>σ_v = shift₁₂(u)</code>、<code>σ_a = shift₃(u)</code>（<code>packed_dmd.py:466–483</code>；<code>minimax_h3_dmd.py:353–363</code>；<code>pdd.py:77–90</code>）【代码】。算出来【我测】：u=0.25 → σ_v 0.63 / σ_a 0.29；u=0.5 → 0.83 / 0.56；u=0.75 → 0.94 / 0.79。也就是<strong>固定耦合的 τ_a &lt; τ_v</strong>，不是独立采样，也没有消融。</li>
+<li><strong>Critic</strong>：在学生 x̂0 上加噪后做 x0 回归（<code>packed_dmd.py:565–604</code>），条件 dropout 0.1，<strong>4 次 critic 更新配 1 次学生更新</strong>（<code>generator_update_interval: 5</code>）；学生做梯度裁剪 1.0，critic 不裁剪<span class="b b-orig">代码 / 原文 omniref_dmpdd.md</span>。</li>
+<li><strong>PDD 辅助项</strong>：随机挑一个窗口内的头，监督目标是教师在该区间上的 Euler 均值速度（teacher CFG 2.0），按模态分别算 MSE 再相加；学生总 loss = <strong>DMD + 0.3 × PDD</strong>（<code>pdd.py:386–436</code>；<code>dmpdd.py:164–174</code>）【代码】。</li>
+<li><strong>学生状态从哪来</strong>：公开 yaml 写的是 <code>rollout_mode: data_latent</code>，也就是<strong>把真实数据加噪到某个块起点</strong>，而不是 DMD2 那种 backward simulation；<code>simulate</code> 是可选模式（<code>dmpdd.py:84–88</code>）【代码】。发布的 checkpoint 实际用的是哪种模式，原文没写<span class="b b-inf">推断：Nuva 说「更多高质量数据」，大概率是 data_latent</span>。</li>
+<li><strong>稀疏 + 规模</strong>：学生训练和推理都用 VSA（sparsity 0.9，tile 128，参考 token keep rate 0.1），teacher 和 critic 是 dense；<strong>64 张 B300、3,500 步、约 7,800 GPU 小时</strong><span class="b b-orig">原文 博客</span>。示例 yaml 是 8 卡 SP8 / FSDP8、lr 5e-6、1,000 步；数据（omni reference dataset，Nuva 整理）<strong>不公开</strong><span class="b b-orig">代码 / 原文</span>。</li>
+</ol>
+<p><strong>QAD（NVFP4）怎么做</strong>：只有 T2VA 的 <code>FastH3-QAD-v2</code> 卡片写了做法：学生用部署时的 NVFP4 W4A4（attention q/k/v/out 和 MLP 线性层），对着冻结的 BF16 <strong>8 步蒸馏模型自己</strong>作 teacher，沿 teacher 的 8 步轨迹训；只用文本 prompt，<strong>300 步，lr 5e-6，25% 的样本行走学生自己的轨迹</strong>；只训量化线性层，VSA gate 和 norm 冻结（改 gate 会改 attend 到哪些 tile）<span class="b b-orig">原文 HF 卡</span>。结果只有一张表：30 个 held-out prompt 上 x0 预测相对 BF16 teacher 的相对 L2，<strong>均值 0.351（video 0.382、audio 0.319）</strong><span class="b b-orig">原文</span>；没有 PTQ（不训练直接量化）对照，也没有感知指标，所以 0.35 是好是坏无法判断<span class="b b-inf">推断</span>。Omni 版的 QAD 卡片<strong>没有写任何训练细节或数字</strong><span class="b b-orig">原文</span>。H3 的 QAD 训练代码和 loss <strong>仓库里没有</strong>，只有通用的 NVFP4 STE 线性层（<code>nvfp4_qat_train_config.py</code>）、推理和转换脚本，以及 Wan2.1 的 Attn-QAT + DMD2 示例<span class="b b-codex">代码，Codex 检索 + 我抽查</span>。一个量化相关的实测数据：如果把 text / 参考 / 音频这段 attention prefix 也放进 FP4，同一段 480p 5 s 视频相对 bf16 attention 参考的 PSNR 从 25.26 掉到 20.96 dB，SSIM 从 0.852 掉到 0.785。所以发布配置把这段 prefix 留在 FP8 / bf16，代价是在 Spark 上多花约 24% 的去噪时间<span class="b b-orig">原文 docs/inference/fasth3_omniref.md</span>。</p>
+<p><strong>证据（有什么数，没有什么数）</strong></p>
+<ul>
+<li><strong>速度（站得住）</strong>：8 张 GB200，27 组参考组合 × 时长，三种子均值，端到端 <strong>5.6–11.9×</strong>（例：1 image 5 s，35.44 → 5.67 s；1 short clip 15 s，140.29 → 11.76 s）。但这是<strong>整套 runtime 对比</strong>（Base 用 SGLang lossless、dense FA；学生用 VSA、8-way Ulysses），不是单独的蒸馏消融<span class="b b-orig">原文 博客 methodology</span>。</li>
+<li><strong>质量：没有定量数字。</strong> 没有 VBench / FD / Sync / WER / 人评，也没有和 H3 教师、DMAD 或 PTD 的对比；官方明说 gallery「not evidence of output parity」<span class="b b-orig">原文</span>；文档里也写了 FP4 路径「have not yet been A/B-compared … on the H3 audio/video metrics」<span class="b b-orig">原文 fasth3_rtx_pro_6000.md:250</span>。</li>
+<li><strong>唯一的第三方数字</strong>（不是 Omni，是 FastH3 <strong>4 步 Preview v1 LoRA</strong>）：SolarRenderer（<a href="https://arxiv.org/abs/2610.28630">2610.28630</a>）表 3 把加速 LoRA 直接拼到控制 LoRA 上、不再后训练，Gemini Elo <strong>FastH3 1053 / DMAD 1006 / LongLive-Plug 922</strong>；自动分数 71.9 / 72.1 / 72.1，基本持平。这是视频 only 的结构控制任务<span class="b b-orig">原文 SolarRenderer 表 3 / 表 10</span>。</li>
+</ul>
+<p><strong>和最接近的 3 个工作比</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>工作</th>
+<th>关键区别</th>
+<th>对我们意味着什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PDD 原文 <a href="https://arxiv.org/abs/2607.26004">2607.26004</a></td>
+<td>纯轨迹蒸馏，LTX-2.3 AV 上 video / audio <strong>CFG 分开设</strong>（4.5 / 7），只有定性结果</td>
+<td>FastH3 加了 DMD，但 <strong>CFG 共用 2.0</strong>、没有分模态 guidance</td>
+</tr>
+<tr>
+<td>DMAD（必读·先跑，H3 4 步 LoRA）</td>
+<td>DMAD 用判别器 logit 加真实数据头；FastH3 是标准 DMD2 + PDD 头，没有真实数据判别</td>
+<td>两边从没在同协议下比过。只有 SolarRenderer 那个拼接场景下 FastH3 v1 比 DMAD 高 47 Elo</td>
+</tr>
+<tr>
+<td>SolarRenderer（H3，值得读·可用配方）</td>
+<td>SolarRenderer <code>audio_loss_weight: 0</code>，音频不蒸；FastH3 <strong>audio 和 video 都蒸</strong>，分模态归一化、加噪 shift 3</td>
+<td>FastH3 是目前唯一公开的、<strong>真正蒸了 H3 音频分支</strong>的训练代码</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>评级：值得读·可用配方（高）</strong>。原创性：组合 / 工程（DMPDD 是 FastGen 的方法，FastH3 第一个公开在 H3 Ref2VA 上做了，再加 VSA 和 QAD）。可信度：速度站得住，质量证据不足。按 v1.4：(b) 不满足，没有任何同协议质量对比；(a) 只满足一半：DMPDD 的训练代码和配置齐全，但数据、T2VA 的 DMD2 配置和 H3 的 QAD 训练代码都没放出来，而且没有消融能证明「分模态时钟或分模态归一化」改变了结果，所以它还不足以改变我们的训练决定。<strong>升级条件</strong>：只要出现同协议的 AV 指标对比（对 H3 教师或 DMAD），或者我们决定做 Ref2VA 或消费级 NVFP4 部署，当天升到必读·先跑。</p>
+<p><strong>预测</strong>：读 HF 卡片之前没有登记，不计分。</p>
+<p><strong>对我们训练的含义（先跑的对照）</strong></p>
+<ol>
+<li><strong>最便宜、只跑推理（几十 GPU 小时）</strong>：在我们的 H3 评测 prompt 上比较 4 路：H3 50 步、DMAD 4 步 LoRA、FastH3 4 步 <strong>Dense / Data-Free</strong> LoRA（用 dense 这版是为了排除 VSA 稀疏的干扰）、FastH3 8 步 V2。测 FD-DINOv2 和 VBench、audio 的 CLAP / FAD（相对教师）、WER、ffmpeg 测响度、Sync-C，同一 prompt 跑 4 个种子看多样性。这一步补上所有人都缺的同协议数字，决定 FastH3 能不能当我们的 H3 少步基线。</li>
+<li><strong>训练对照（τ_a ≠ τ_v）</strong>：在 FastVideo 的 packed DMD 里只改<strong>打分时</strong>的 audio 时钟（<code>minimax_h3_dmd.py:_noise_amounts</code>），sampler 不动。三组：audio shift 3（FastH3 默认，τ_a &lt; τ_v）、12（和 video 同噪声，即对称 DMD）、1（更低）。DMD 其余设置相同，测 audio 指标和 Sync-C，2 个种子。顺手加一组「分模态归一化 vs 联合归一化」（<code>packed_dmd.py:761</code>），因为我们自己的 DMD 如果是联合归一化，audio 梯度可能被 video 压住<span class="b b-inf">推断</span>。</li>
+</ol>
+<h3 id="两条短评">两条短评</h3>
+<ul>
+<li><strong>MultiLive（VAST，仅OR <code>Zr8MSV01KG</code>）· 值得看（高，仅OR）</strong>，组合 × 证据不足。双教师 on-policy DMD：video 先验教师和多视角先验教师给<strong>同一个</strong>学生样本打分，4 步出同步多视角视频，不需要多视角视频数据<span class="b b-orig">原文 README / OR 摘要</span>。<a href="https://github.com/VAST-AI-Research/MultiLive">GitHub 仓库</a> 只有 README 和两张图（10-07 建库，「Code coming soon」，没有许可证）【我测】。迁移到 AV 时<span class="b b-inf">推断</span>：「两个模态各有一个 teacher、对同一个学生样本打分」的结构，和 AV 分模态的 real score 是同一类问题，等全文出来看两个 score 怎么加权、冲突时怎么办。挂观察名单。</li>
+<li><strong>Cosmos3-H-Dreams（NVIDIA，HF 10-19 / 10-20）· 重做·应用（可用资源；流式 / WM 主评归文献同事）</strong>。15.17B MoT（Cosmos3-Nano），手术机器人动作条件世界模型。蒸馏是标准两段：causal teacher forcing（1,000 iter）→ Self-Forcing + DMD（300 iter），teacher 是固定的双向 72 帧模型（35 步）；学生块因果、KV cache，4 步或 2 步<span class="b b-orig">原文 HF 卡</span>。RTX PRO 6000 上 832×480 跑 30.0 FPS（4 步）/ 43.2 FPS（2 步）；<strong>卡片里没有质量指标</strong>（只说用了 48 个质量 case + 12 个动作控制 case 的评测面板，没给数）<span class="b b-orig">原文</span>。权重：NVIDIA Open Model License；GitHub 代码 Apache-2.0，只有推理（没找到训练或蒸馏代码）【我测：仓库树】。</li>
+</ul>
+<h3 id="f9rl-同事-10-21-终版转交23-个-id">F9：RL 同事 10-21 终版转交（23 个 ID）</h3>
+<p><strong>23/23 在 10-20 或 10-21 日报里有 ID + 评级，本次补 0 条。</strong> 分布：10-20 日报 9 条（25832 外围·应用；25918 / 26025 外围·推理；26165 值得读·流式；26244 / 26837 外围；26262 值得看·外围；26749 / 26855 不相关）；10-21 日报 14 条（26183 外围；26531 不相关·语言；26903 值得看·外围；27146 值得看；27280 不相关；27379 外围·语言；27736 外围；27999 重做·应用；28074 不相关；28086 外围；28122 外围·机器人；28521 不相关；28559 外围·语言；28630 值得读·可用配方）。</p>
+<p>原始：<code>daily/raw/1021org/</code>；代码核对：<code>repos/FastVideo</code> @ cdda1b7（10-20 "Add H3 PDD/DMPDD training"），<code>repos/fasth3/</code>（HF 卡片 + 推理 contract），Codex 检索报告 <code>repos/fasth3/codex_report.md</code>（我抽查了 3 处，都对）。</p>
+<hr />
 </section><section class=""><h2 id="批次与召回台账">批次与召回台账</h2>
 <div class="tw"><table>
 <thead>
@@ -718,7 +790,7 @@ details.card>.body{padding:4px 18px 10px}
 </ul>
 <p>补扫原始：<code>daily/raw/1021wed/</code>（<code>items.json</code>、<code>hits_v2.txt</code>、<code>f5_real_missing.json</code>、<code>f8_line.txt</code>、<code>pdf/2610.28630.txt</code>、<code>solar/</code>）。</p>
 <p>原始：<code>daily/raw/1021/</code>（<code>hits_v2_preview.txt</code>、<code>codex/</code>、<code>or/codex_labels.tsv</code>、<code>or/twins87.tsv</code>、<code>or/twins.out</code>、<code>blind/blind.out</code>、<code>full/*.txt</code>）。</p></section>
-<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-21 13:52 (UTC+8)</div></main></div>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-21 14:04 (UTC+8)</div></main></div>
 <script>
 (function(){
  // 详情卡片全部展开/收起
