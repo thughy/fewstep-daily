@@ -70,6 +70,7 @@ details.card>.body{padding:4px 18px 10px}
 <li><a href="#文献同事请你定级回执蒸馏侧评级归我流式-wm-主评级归他">文献同事「请你定级」回执（蒸馏侧评级归我，流式 / WM 主评级归他）</a></li>
 </ul>
 </li>
+<li><a href="#补扫1348北京时间wed-21-批-同事转交对账">补扫（13:48，北京时间）：Wed 21 批 + 同事转交对账</a><ul><li><a href="#①-solarrenderer给已有的四步-lora-换控制条件后用沿结构条件外推的-teacher重做-dmd值得读可用配方">① SolarRenderer：给已有的四步 LoRA 换控制条件后，用「沿结构条件外推的 teacher」重做 DMD（值得读·可用配方）</a></li><li><a href="#②-预览之外的其他新号">② 预览之外的其他新号</a></li><li><a href="#③-f5-f9-同事转交对账今天全部转交">③ F5 / F9 同事转交对账（今天全部转交）</a></li></ul></li>
 <li><a href="#批次与召回台账">批次与召回台账</a></li>
 </ul>
 </div>
@@ -79,7 +80,8 @@ details.card>.body{padding:4px 18px 10px}
 <p><strong>批次覆盖（F1）</strong>：应出列表日 = <strong>Wed 21 Oct</strong>（北京 08:00）。09:19 和 09:36 两次查 <code>/new</code>，8 类页头都还是 <strong>Tuesday, 20 October 2026</strong>；RSS pubDate 也只有 <code>Tue, 20 Oct 2026</code> → <strong>Wed 21 记 pending</strong>，留给 13:42 补扫。<strong>本页不是 Wed 21 批</strong>，arXiv 部分是下面的 ID 区间预览。Tue 20 已 done（10-20 13:48 补扫，台账已核）。</p>
 <p><strong>F3 ID 区间（只是预览，不能把批次标 done）</strong>：从 Tue 20 批最大号之后的 <code>2610.26864</code> 起。我自己的 arXiv API 拉取第一块就 429，已停（免得和同事一起压 arXiv）；改为只读复用 RL 同事 09:36 正在逐号抓的 abs 快照（<code>genrl-digest/2026-10-21/batch/lists/abs.json</code>）。覆盖 <code>2610.26864</code>–<code>2610.28570</code>：全类 1,699 条，8 类 <strong>589</strong> 条。上限 28570 只是同事当时抓到的位置，<strong>不是本批上限</strong>；上限以 13:42 的 <code>/new</code> 为准。正则 v2.1 命中 <strong>49</strong> 条，全部读了标题（F6）；另外 Codex 对 589 条做不靠关键词的语义全量（489 + 100 增量）<span class="b b-meas">实测</span><span class="b b-codex">Codex✓</span>。</p>
 <p><strong>F4 OpenReview</strong>：文献同事 10-21 06:43 的 <code>or_iclr27.json</code> 有 1,851 条（比 10-20 少 2 条，新增 2 条都是域外）。按 F10 用整份文件按 OR id 做差集：v2 命中 682 条<strong>全部</strong>在我的文件里有 ID 或标题留痕（10-18 / 10-20 已分诊）；<strong>v2 没命中的 1,160 条以前从没做过语义分诊</strong> → 今天 Codex 全量过一遍，我复核了 IN + 外围的全部条目，OUT 里和生成相关的 721 条按标题抽查 → IN 6 / 归 RL 16 / 外围 61 / 不相关 1,077。另外补查 10-20 那 105 条「有 arXiv 孪生」的条目，按 F9（日报里要有 ID + 评级）有 <strong>87 条没留痕</strong> → 今天全部补评级（见 F4 节）。<strong>积压现在是 0</strong>；还剩 28 条核心区条目只有 OR 摘要，在等 arXiv 版或 PDF。</p>
-<p><strong>F5 对账（48h）</strong>：发现 <strong>1 条范围内漏检：WorldPlay2 <code>rK38d8xJlc</code></strong>（值得看·高，仅OR）。文献同事 10-19 在 <code>forward-fewstep-all-2026-10-19.md</code> 里标过它是 P1 / 少步；我 10-19 只读了主转交单，没读 <code>-all</code> 文件，而且 v2 正则的 GEN 门把它挡掉了（摘要里没有 video / diffusion / generat 这几个词）。已修正则（v2.1，F11）。另外 EdenLive（X 上的技术报告，没有 arXiv）今天补评。详见 F5 节。
+<p><strong>F5 对账（48h）</strong>：发现 <strong>1 条范围内漏检：WorldPlay2 <code>rK38d8xJlc</code></strong>（值得看·高，仅OR）。文献同事 10-19 在 <code>forward-fewstep-all-2026-10-19.md</code> 里标过它是 P1 / 少步；我 10-19 只读了主转交单，没读 <code>-all</code> 文件，而且 v2 正则的 GEN 门把它挡掉了（摘要里没有 video / diffusion / generat 这几个词）。已修正则（v2.1，F11）。另外 EdenLive（X 上的技术报告，没有 arXiv）今天补评。详见 F5 节。</p>
+<p><strong>13:48 补扫（北京时间）</strong>：<code>/new</code> 已翻到 <strong>Wednesday, 21 October 2026</strong> → <strong>Wed 21 done</strong>。新增范围内 1 条：<strong>SolarRenderer <a href="https://arxiv.org/abs/2610.28630">2610.28630</a> → 值得读·可用配方（训练代码 + 配置 + 权重齐全，底座 MiniMax-H3）</strong>。同事转交召回（按 F9 留痕）50/97 → 97/97，范围内没有漏检。详见文末「补扫」节。
 标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】【仅OR摘要】<span class="b b-team">队友转述</span><span class="b b-inf">推断</span><span class="b b-codex">Codex✓</span></p>
 </blockquote>
 <hr />
@@ -579,6 +581,114 @@ details.card>.body{padding:4px 18px 10px}
 </tbody>
 </table></div>
 <hr />
+</section><section class=""><h2 id="补扫1348北京时间wed-21-批-同事转交对账">补扫（13:48，北京时间）：Wed 21 批 + 同事转交对账</h2>
+<p><strong>批次</strong>：8 类 <code>/new</code> 页头都是 Wednesday, 21 October 2026。去重 971 条（new 468 / cross 162 / 替换 341），new 编号 <code>2610.26866</code>–<code>2610.28632</code>。晨间预览覆盖到 28570，所以本批在预览之外只多了 <strong>41 条</strong>（new + cross）。正则 v2.1 命中 76 条，全部读了标题：56 条已在晨间预览里留痕，剩下 20 条是预览之后的新号或替换版，逐条处理见下面的 F8 行。预览外的 41 条我逐条读了标题，生成相关的 6 条读了摘要；数量少，这次没有调用 Codex<span class="b b-meas">实测</span>。</p>
+<details class="card" open="open">
+<summary id="①-solarrenderer给已有的四步-lora-换控制条件后用沿结构条件外推的-teacher重做-dmd值得读可用配方">① SolarRenderer：给已有的四步 LoRA 换控制条件后，用「沿结构条件外推的 teacher」重做 DMD（值得读·可用配方）</summary>
+<div class="body">
+<p><a href="https://arxiv.org/abs/2610.28630">2610.28630</a>。底座是 <strong>MiniMax-H3 33B</strong>（就是 PAC / DMAD / PDMD 做 AV 实验用的那个），结构视频（游戏引擎 block-out、语义图、骨架、手绘等）作为参考输入，渲染成真实视频。代码、四份 LoRA 权重和数据都放了：<a href="https://github.com/Enderfga/SolarRenderer">GitHub 仓库</a>（训练 + 推理 + 评测，10-21 09:45 北京时间最后一次 push），<a href="https://huggingface.co/Enderfga/SolarRenderer">HF 权重</a>【代码】。</p>
+<p><strong>做法，一步一步：</strong></p>
+<ol>
+<li><strong>Stage 1</strong>：冻结 H3，训练一个控制 LoRA φ。结构视频走 H3 原生的 reference 通路，放在它描述的那几帧的位置上，不加类型标记。50 步采样能跟住结构，但画面偏糊。</li>
+<li><strong>Stage 2 起点</strong>：直接拿公开的 DMAD 四步加速 LoRA（rank 128）作为 rank-384 LoRA 的前 128 个秩，剩下的秩从零更新开始，权重写成 W = W0 + ΔW_ctrl + ΔW_acc。这时组合模型已经能四步出图，而且<strong>比 50 步 teacher 更锐</strong>。</li>
+<li><strong>只训加速 LoRA ψ，控制 LoRA φ 冻结。</strong> 学生四步生成，critic（fake score，rank-128 LoRA，从 teacher 初始化，每次学生更新前更新 5 次）给学生样本打分，teacher 是 Stage 1 的 50 步模型。</li>
+<li><strong>关键改动（式 6）</strong>：teacher 的干净预测改成 ẑ0^w = ẑ0(C) + (w−1)[ẑ0(C) − ẑ0(C∅)]。C∅ 只把结构视频 token 去掉，首帧和文本都保留。w = 1.5，800 步。也就是说，CFG 外推作用在<strong>结构条件</strong>上，而不是文本条件上。代价是每次学生更新多一次 teacher 前向。</li>
+<li><strong>流式变体</strong>：先用 teacher forcing 把控制 LoRA 改成块因果的（每块 ≤5 个 latent 帧，往回看 5 块），然后冻结它；再从双向四步 LoRA 初始化一个新的加速 LoRA，在学生自己的逐块 rollout 上做同样的结构引导 DMD。rollout 本身不带梯度，之后按 teacher-forced 序列重放（就是 Self-Gradient Forcing），teacher 用双向控制模型。推理时固定窗口 KV cache，配流式 VAE，768p 最高 28 FPS<span class="b b-orig">原文 §3.3–3.4</span>。</li>
+</ol>
+<p><strong>为什么要改 teacher（因果逻辑）</strong>：起点学生比 teacher 锐，普通 DMD 的方向是「把学生分布拉向 teacher 分布」，所以会把学生往糊的方向拉。表 2：DMAD 起点 1024 → w=1 之后 <strong>820</strong>；LongLive-Plug 起点 1028 → <strong>798</strong>。沿结构方向外推，teacher 的目标就比它自己更锐、更贴结构：w=1.5 时 DMAD 起点到 <strong>1156</strong>，LongLive-Plug 起点 w=2 时到 1107，自蒸馏（训控制 LoRA）从 949 到 1066。引导只在 σ ≥ 0.9 时开，效果和全程开差不多（1107 vs 1096），说明它主要在决定布局的高噪声段起作用。训练更久反而变差（1,200 步 992），两步 961，八步 1080，没有增益<span class="b b-orig">原文 表2/表3，Gemini Elo</span>。</p>
+<p><strong>和最近的 3 篇比，具体哪个操作不同：</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>改了什么</th>
+<th>后果</th>
+<th>证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DMD2 / Decoupled DMD（CFG 增强）</td>
+<td>同样是 DMD 加 teacher 侧 CFG 外推，但它们外推的是<strong>文本</strong>条件，学生是从 teacher 初始化的</td>
+<td>SolarRenderer 外推的是<strong>新加的控制条件</strong>，学生是一个<strong>已经比 teacher 锐</strong>的现成四步 LoRA → 外推是为了防止被 teacher 拉糊，而不是为了提质</td>
+<td>同起点 w=1 vs 1.5：820 vs 1156<span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td>直接把加速 LoRA 和控制 LoRA 拼起来（LongLive-Plug / DMAD / FastH3）</td>
+<td>不做后训练，直接组合</td>
+<td>加速 LoRA 训的时候没见过控制 adapter，输出会偏</td>
+<td>组合 922 / 1006 / 1053 vs 本文 1096（同一次 Elo 拟合）<span class="b b-orig">原文 表3</span></td>
+</tr>
+<tr>
+<td>EdenLive / Self Forcing（流式）</td>
+<td>同样是 SF rollout + SGF 重放 + DMD</td>
+<td>流式部分没有新信号，新的只是结构引导的 teacher</td>
+<td>因果版 1191 / 1199 vs 双向 1441 / 1510，vs Streaming CWM 1075 / 988<span class="b b-orig">原文 表1</span></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>代码核对（AGF 规则：整条核心 loss 链）</strong>：<code>omni_dmd.py</code> 里 <code>structure_guided(real, free, w) = real + (w−1)(real−free)</code>；<code>teacher_answer</code> 去掉结构视频算出 <code>free</code>，σ 低于 cutoff 时 w 退回 1。<code>omni_dmd_runtime.py::_dmd_gradient</code> 把 critic 的 <code>fake</code>、引导后的 <code>real</code> 和学生输出一起送进 <code>compute_sgf_kl_gradient</code>（可选 PDMD 投影）。<code>configs/structure_guided_4step.yaml</code>：<code>mode: adapt_plug</code>，<code>init_lora_rank: 128</code>，<code>structure_guidance: 1.5</code>，<code>critic_updates_per_student: 5</code>，800 步，8 卡。另外：<strong><code>audio_loss_weight: 0.0</code></strong>，音频 latent 只按 shift 3 加噪陪跑，不参与训练，所以这是<strong>视频 only</strong> 的蒸馏，H3 的音频分支没有被蒸。这几行我对着原文读过【代码】。</p>
+<p><strong>评级：值得读·可用配方</strong>（原创性：组合新，就是把 DMD 的 CFG 增强挪到控制条件上 × 可信度：存疑）。</p>
+<ul>
+<li>存疑的原因：主要证据是 Gemini 当裁判的 Elo，而且每张表单独拟合、只在表内可比；只有一次运行，没有种子方差；人评只有「方向一致」的盲评；最强对手 LynnReal-Omni 在泛化集上和它打平（都是 1441）。</li>
+<li><strong>为什么不是必读·先跑</strong>：(b) 不满足，同协议下没有超过最强基线（和 LynnReal-Omni 打平）。(a) 只在一种情况下成立：我们要在 H3 上给现成的少步 LoRA 加新的控制条件，或者换条件。那时「普通 DMD 会把锐学生拉糊、要沿新条件外推 teacher」就是一个要改的训练决定，而且代码和配置齐全，成本可估（8 卡，800 步）。如果我们手上有这种做法，这条请直接升级。</li>
+<li>预测没有事先登记（补扫时先看到了表 2）。</li>
+<li>可用资源：H3 上<strong>完整的四步 + 块因果四步训练配方</strong>，是目前我见过的第一份公开的 H3 少步训练代码（DMAD / LongLive-Plug 只放了 LoRA）。<span class="b b-inf">推断</span>我们在 H3 上做流式时，可以直接拿 <code>causal_structure_guided_4step.yaml</code> 当起点。</li>
+</ul>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="②-预览之外的其他新号">② 预览之外的其他新号</summary>
+<div class="body">
+<ul>
+<li><a href="https://arxiv.org/abs/2610.28632">2610.28632</a> Joints, Camera, Action!（视频 + 3D 动作联合生成）、<a href="https://arxiv.org/abs/2610.28594">2610.28594</a> VPM（多视角世界模型 + 点轨迹）：不减步，<strong>外围（WM / 视频生成，归文献同事）</strong>。<a href="https://arxiv.org/abs/2610.28584">2610.28584</a> CoRAL：语言扩散加推理，不相关·语言。其余 35 条都是 LLM、智能体、机器人或 3D 重建，不相关。</li>
+</ul>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="③-f5-f9-同事转交对账今天全部转交">③ F5 / F9 同事转交对账（今天全部转交）</summary>
+<div class="body">
+<div class="tw"><table>
+<thead>
+<tr>
+<th>来源</th>
+<th>arXiv ID 数</th>
+<th>补扫前已在日报（ID + 评级，含缩写形式）</th>
+<th>补扫处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文献同事 <code>forward-fewstep-2026-10-21.md</code>（06:55）</td>
+<td>4 个 arXiv ID + 6 个 OR</td>
+<td>2/4；OR 6/6</td>
+<td><strong><a href="https://arxiv.org/abs/2604.18564">2604.18564</a></strong>（MultiWorld 的 arXiv 孪生）晨间只用 OR id 写了 → 补 ID；<strong><a href="https://arxiv.org/abs/2610.24791">2610.24791</a> UniAVC</strong> 只在方向卡状态里出现过，10-20 晨间 Codex 判 OUT，没写进日报 → 补评：外围</td>
+</tr>
+<tr>
+<td>文献同事 <code>forward-fewstep-catchup-2026-10-21.md</code> + <code>catchup/fewstep_hits.json</code>（11:00，81 条）</td>
+<td>81</td>
+<td>36/81（19 条完整 ID + 17 条缩写）</td>
+<td>45 条补进下面的 F8 行；其中范围内的只有 SolarRenderer（上面 ①）</td>
+</tr>
+<tr>
+<td>RL 同事 <code>forward_fewstep.txt</code>（11:23 终版，24 条）</td>
+<td>24</td>
+<td>21/24</td>
+<td>27736 AWLS、28074 Slot-JEPA、28630 SolarRenderer → 补</td>
+</tr>
+<tr>
+<td>RL 同事 <code>batch/lists/fewstep_kw_hits.json</code>（10-21）</td>
+<td>—</td>
+<td>—</td>
+<td>13:48 时文件<strong>还没生成</strong>（只有 <code>codex_all.tsv</code> 等），下次补扫再对</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>召回（按 F9 留痕）：补扫前 50/97 = 52%，补扫后 97/97。</strong> 47 条差集里，45 条是 11:00 / 11:23 才落盘的转交，在晨间日报定稿（09:40）之后，属于时间先后，不是规则漏洞。真正的留痕缺口是 06:55 那份转交里的 2 条（<a href="https://arxiv.org/abs/2604.18564">2604.18564</a>、<a href="https://arxiv.org/abs/2610.24791">2610.24791</a>），晨间只对了 OR id 和标题，没有对 arXiv ID。<strong>范围内漏检：0</strong>（UniAVC 不减步，MultiWorld 的 arXiv 版没有蒸馏内容）。修法不变：F9 要按 arXiv ID 求差集，标题或 OR id 匹配上不算。</p>
+<p><strong>粗筛命中但未收录（F8，逐条）</strong>：<a href="https://arxiv.org/abs/2410.13925">2410.13925</a> FiTv2 替换版，DiT 架构，不减步；<a href="https://arxiv.org/abs/2512.10570">2512.10570</a> 生存分析，不相关；<a href="https://arxiv.org/abs/2602.03182">2602.03182</a> LSGQuant 替换版：一步 VSR 的量化，不改步数 → 外围·应用；<a href="https://arxiv.org/abs/2602.11590">2602.11590</a> 自纠错掩码扩散（语言），不相关·语言；<a href="https://arxiv.org/abs/2602.22293">2602.22293</a> 河流水动力，不相关；<a href="https://arxiv.org/abs/2604.18564">2604.18564</a> MultiWorld arXiv 孪生（OR TtzUhUFcz2）：v2 全文无蒸馏 → 重做·应用（仅OR），沿用晨间回执；<a href="https://arxiv.org/abs/2605.00675">2605.00675</a> 医学开集分类（DMDSC 撞词），不相关；<a href="https://arxiv.org/abs/2605.10641">2605.10641</a> VLM 知识蒸馏，不相关·理解；<a href="https://arxiv.org/abs/2605.11165">2605.11165</a> 联邦学习，不相关；<a href="https://arxiv.org/abs/2605.20708">2605.20708</a> DiT 跨层路由替换版，不减步；<a href="https://arxiv.org/abs/2605.23451">2605.23451</a> 一步复原模型的 token 压缩 + 线性注意力替换版 → 外围·应用；<a href="https://arxiv.org/abs/2605.26772">2605.26772</a> LLM 拒答 steering，不相关；<a href="https://arxiv.org/abs/2605.30251">2605.30251</a> 多轮 OPD（语言），不相关·语言；<a href="https://arxiv.org/abs/2606.07000">2606.07000</a> 多模态策略 OPD，不相关·理解；<a href="https://arxiv.org/abs/2607.14807">2607.14807</a> 虚拟试穿 token 稀疏适配，不减步；<a href="https://arxiv.org/abs/2608.24212">2608.24212</a> 具身仿真场景编程，不相关；<a href="https://arxiv.org/abs/2609.33848">2609.33848</a> 长程智能体 RL 框架，不相关；<a href="https://arxiv.org/abs/2609.35694">2609.35694</a> 连续 latent 扩散推理（语言）替换版，不相关·语言；<a href="https://arxiv.org/abs/2609.35954">2609.35954</a> LLM 自生成 rollout 再学习，不相关·语言；<a href="https://arxiv.org/abs/2610.10460">2610.10460</a> 多教师 OPD（语言），不相关·语言；<a href="https://arxiv.org/abs/2610.14539">2610.14539</a> 业务交付评测，不相关；<a href="https://arxiv.org/abs/2610.14594">2610.14594</a> 脉冲网络语音指令识别，不相关；<a href="https://arxiv.org/abs/2610.14698">2610.14698</a> 前馈 3D 重建后训练，不相关；<a href="https://arxiv.org/abs/2610.21403">2610.21403</a> 多模态分布偏移学习，不相关；<a href="https://arxiv.org/abs/2610.22236">2610.22236</a> 免训练 OPD（语言），不相关·语言；<a href="https://arxiv.org/abs/2610.24791">2610.24791</a> UniAVC：AV 联合生成，模态解耦噪声调度（视频/音频 shift 不同），不减步 → 外围（AV 方向卡证据，归文献同事）；<a href="https://arxiv.org/abs/2610.27157">2610.27157</a> scaffold 计算分离理论，不相关；<a href="https://arxiv.org/abs/2610.27220">2610.27220</a> LLM 稀疏 RL，不相关·语言；<a href="https://arxiv.org/abs/2610.27230">2610.27230</a> 计算化学智能体，不相关；<a href="https://arxiv.org/abs/2610.27293">2610.27293</a> 多智能体 RL 安全，不相关；<a href="https://arxiv.org/abs/2610.27353">2610.27353</a> 对抗鲁棒性，不相关；<a href="https://arxiv.org/abs/2610.27468">2610.27468</a> 多模态预测持续学习，不相关；<a href="https://arxiv.org/abs/2610.27495">2610.27495</a> 智能体特权回溯蒸馏，不相关·语言；<a href="https://arxiv.org/abs/2610.27562">2610.27562</a> 热成像肿瘤切除速度优化，不相关；<a href="https://arxiv.org/abs/2610.27568">2610.27568</a> 车辆路由一致性，不相关；<a href="https://arxiv.org/abs/2610.27574">2610.27574</a> 子智能体攻击，不相关；<a href="https://arxiv.org/abs/2610.27594">2610.27594</a> 单目 4D 重建，不相关；<a href="https://arxiv.org/abs/2610.27638">2610.27638</a> 蛋白编码器，不相关；<a href="https://arxiv.org/abs/2610.27736">2610.27736</a> AWLS：一步生成式机器人策略的 latent 引导 → 外围（机器人一步策略）；<a href="https://arxiv.org/abs/2610.27815">2610.27815</a> LLM 提议-验证解码，不相关·语言；<a href="https://arxiv.org/abs/2610.27904">2610.27904</a> 日文金融文档持续适配，不相关；<a href="https://arxiv.org/abs/2610.27952">2610.27952</a> 联邦 split computing，不相关；<a href="https://arxiv.org/abs/2610.28019">2610.28019</a> PACT-VLA：VLA 动作块投机校验 → 外围（机器人，非生成减步）；<a href="https://arxiv.org/abs/2610.28074">2610.28074</a> Slot-JEPA 物体 latent 世界模型，不减步，不相关；<a href="https://arxiv.org/abs/2610.28190">2610.28190</a> 无 COLMAP 3DGS 位姿，不相关；<a href="https://arxiv.org/abs/2610.28315">2610.28315</a> LLM 智能体隐私，不相关；<a href="https://arxiv.org/abs/2610.28480">2610.28480</a> SuperMimic 人形全身控制，不相关；<a href="https://arxiv.org/abs/2610.28565">2610.28565</a> 聚类联邦学习，不相关；<a href="https://arxiv.org/abs/2610.28576">2610.28576</a> LLM 解码能耗，不相关；<a href="https://arxiv.org/abs/2610.28586">2610.28586</a> 智能体 OPD 教师修复，不相关·语言；<a href="https://arxiv.org/abs/2610.28602">2610.28602</a> 时间序列基础模型，不相关；<a href="https://arxiv.org/abs/2610.28631">2610.28631</a> AEON：视频 latent → 4DGS 世界模型，蒸馏的是 VAE 域适配，不减步 → 外围（WM，归文献同事）。</p>
+<hr />
+</div>
+</details>
 </section><section class=""><h2 id="批次与召回台账">批次与召回台账</h2>
 <div class="tw"><table>
 <thead>
@@ -596,8 +706,8 @@ details.card>.body{padding:4px 18px 10px}
 </tr>
 <tr>
 <td><strong>Wed 21 Oct</strong></td>
-<td><strong>pending</strong></td>
-<td>09:19 / 09:36 <code>/new</code> 和 RSS 都还是 Tue 20；ID 区间预览 26864–28570（不完整），13:42 补扫以 <code>/new</code> 为准</td>
+<td><strong>done（10-21 13:48 补扫）</strong></td>
+<td>晨间 pending；13:48 <code>/new</code> 已翻到 Wed 21，8 类去重 971 / v2.1 命中 76 全读标题；预览外新增 41 条逐条读标题；new 编号 26866–28632</td>
 </tr>
 </tbody>
 </table></div>
@@ -606,8 +716,9 @@ details.card>.body{padding:4px 18px 10px}
 <li>→ 多模态文献追踪：WorldPlay2 <code>rK38d8xJlc</code>、Matrix-Game 4.0 <a href="https://arxiv.org/abs/2610.27999">2610.27999</a>、EdenLive 回执、Beckmann WM <a href="https://arxiv.org/abs/2610.26903">2610.26903</a>、定级回执表。</li>
 <li>→ 多模态强化学习进展跟踪：今天没有「少步上的 RL」新条目；OR 里 16 条生成 RL（含 4 条 AV 奖励）只作 FYI。</li>
 </ul>
+<p>补扫原始：<code>daily/raw/1021wed/</code>（<code>items.json</code>、<code>hits_v2.txt</code>、<code>f5_real_missing.json</code>、<code>f8_line.txt</code>、<code>pdf/2610.28630.txt</code>、<code>solar/</code>）。</p>
 <p>原始：<code>daily/raw/1021/</code>（<code>hits_v2_preview.txt</code>、<code>codex/</code>、<code>or/codex_labels.tsv</code>、<code>or/twins87.tsv</code>、<code>or/twins.out</code>、<code>blind/blind.out</code>、<code>full/*.txt</code>）。</p></section>
-<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-21 09:40 (UTC+8)</div></main></div>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-21 13:52 (UTC+8)</div></main></div>
 <script>
 (function(){
  // 详情卡片全部展开/收起
