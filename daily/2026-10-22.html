@@ -464,7 +464,7 @@ details.card>.body{padding:4px 18px 10px}
 <details class="card" open="open">
 <summary id="①-issfmimproved-training-of-strong-stochastic-flow-maps让随机-flow-map也能用-meanflow-类导数-loss值得看高">① iSSFM（Improved Training of Strong Stochastic Flow Maps）：让「随机 flow map」也能用 MeanFlow 类导数 loss（值得看·高）</summary>
 <div class="body">
-<p><a href="https://arxiv.org/abs/2610.29605">2610.29605</a>，AITHYRA / TU Wien / TUM（Alexander Tong 组）。L1 轨迹 / flow map 格，图像。论文写了代码和 HF 权重链接，但 14:0x 查时 GitHub <strong>404</strong>、HF <strong>401</strong>（还没公开）<span class="b b-meas">实测</span>。</p>
+<p><a href="https://arxiv.org/abs/2610.29605">2610.29605</a>，AITHYRA / TU Wien / TUM（Alexander Tong 组）。L1 轨迹 / flow map 格，图像。论文写了代码和 HF 权重链接，但 13:4x 查时 GitHub <strong>404</strong>、HF <strong>401</strong>（还没公开）<span class="b b-meas">实测</span>。</p>
 <p><strong>做法，一步一步</strong><span class="b b-orig">原文 §3–4</span>：</p>
 <ol>
 <li><strong>要学的对象</strong>：SDE 的「强解映射」Ψ_{s,t}(x, W)：给定起点和<strong>同一条</strong> Brownian 路径，一步跳到 t 时刻的样本。确定性 flow map（MeanFlow、AYF）跳的是 ODE；这里跳的是 SDE，所以网络还要吃一个噪声路径的表示。</li>
@@ -561,7 +561,7 @@ details.card>.body{padding:4px 18px 10px}
 <summary id="③-预览之外的其他新号77-条中除-①②-外生成相关的逐条">③ 预览之外的其他新号（77 条中除 ①② 外，生成相关的逐条）</summary>
 <div class="body">
 <ul>
-<li><a href="https://arxiv.org/abs/2610.30129">2610.30129</a> <strong>CADRE</strong>（Kyutai，WM 用因果扩散表示自编码器族）：扩散解码器按 Shortcut / 自蒸馏 flow map 的方式「一大步对齐两小步」，1–2 步解码；单步比 MIRA 式感知回归 FVD 低 1.4–2.5×，第二步 FID 再降至多 23%<span class="b b-orig">原文</span>。正文的 GitHub 链接 14:0x 是 <strong>404</strong><span class="b b-meas">实测</span>→ <strong>外围·可用资源</strong>（被蒸的是解码器，不是生成器），归文献同事。</li>
+<li><a href="https://arxiv.org/abs/2610.30129">2610.30129</a> <strong>CADRE</strong>（Kyutai，WM 用因果扩散表示自编码器族）：扩散解码器按 Shortcut / 自蒸馏 flow map 的方式「一大步对齐两小步」，1–2 步解码；单步比 MIRA 式感知回归 FVD 低 1.4–2.5×，第二步 FID 再降至多 23%<span class="b b-orig">原文</span>。正文的 GitHub 链接 13:4x 是 <strong>404</strong><span class="b b-meas">实测</span>→ <strong>外围·可用资源</strong>（被蒸的是解码器，不是生成器），归文献同事。</li>
 <li><a href="https://arxiv.org/abs/2609.23010">2609.23010</a> <strong>MixiMotion</strong>（替换版，一步 text-to-motion）：离线 teacher 样本库 + 非对称双向集合匹配（teacher→student 管覆盖、student→teacher 压掉不受支持的样本），ViMoGen 0.835 vs 50 步 teacher 0.858<span class="b b-orig">原文 摘要</span>→ <strong>值得看·外围（动作模态，不在四类主模态里）</strong>。<span class="b b-inf">推断</span>「集合级双向匹配」可以看作一种离线、可控 mode coverage / precision 权衡的分布匹配，迁移到 AV 时可以作为少样本离线蒸馏的选项；没有读全文。</li>
 <li><a href="https://arxiv.org/abs/2610.29989">2610.29989</a> Looking Ahead（= OR <code>GM9LePOwrX</code>，arXiv 正式版）：FCP 未来块预测辅助目标，teacher-forced 训练，非少步 → <strong>外围</strong>（方向卡归文献同事）。</li>
 <li><a href="https://arxiv.org/abs/2610.30120">2610.30120</a> ALPS（WM 视觉编码器）、<a href="https://arxiv.org/abs/2610.30125">2610.30125</a> PhysiCalWorld（WM 物理校准）、<a href="https://arxiv.org/abs/2610.30023">2610.30023</a> RealMe（体视频 2K 扩散增强）、<a href="https://arxiv.org/abs/2610.30107">2610.30107</a> Velocity Ambiguity Profiles（FM 按时间的 Bayes 风险诊断，不减步）、<a href="https://arxiv.org/abs/2610.28943">2610.28943</a> MODS（蛋白扩散推理时引导）、<a href="https://arxiv.org/abs/2610.30086">2610.30086</a> Orbitol（晶体扩散）、<a href="https://arxiv.org/abs/2610.30009">2610.30009</a> Dreaming Learning（模型崩塌）、<a href="https://arxiv.org/abs/2610.30066">2610.30066</a> / 30068 / 26542（扩散语言模型）：都不减步 → 不相关或外围。其余 50 多条是 LLM、智能体、机器人、医学或理论，不相关。</li>
