@@ -1,0 +1,503 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>少步蒸馏 · 每日 2026-10-22（周四）</title>
+<style>
+:root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--side:#f6f8fa;--line:#d1d9e0;--acc:#0b57d0;--l1:#fff8e6;--l1b:#f0c36d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--fg);background:var(--bg);font:15.5px/1.75 "Noto Sans CJK SC","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.top{position:sticky;top:0;z-index:5;background:#24292f;color:#fff;padding:8px 20px;display:flex;gap:18px;align-items:center;font-size:14px}
+.top a{color:#fff;opacity:.9} .top .brand{font-weight:700;opacity:1}
+.wrap{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1400px;margin:0 auto}
+nav.toc{position:sticky;top:40px;align-self:start;height:calc(100vh - 40px);overflow:auto;background:var(--side);border-right:1px solid var(--line);padding:14px 10px 40px 14px;font-size:13.5px;line-height:1.5}
+nav.toc .tt{font-weight:700;color:var(--muted);margin:2px 0 8px}
+nav.toc ul{list-style:none;margin:0;padding-left:10px} nav.toc>div>ul{padding-left:0}
+nav.toc li{margin:3px 0} nav.toc a{color:#333;display:block;padding:1px 4px;border-radius:4px}
+nav.toc a:hover,nav.toc a.on{background:#dde7f7;text-decoration:none}
+main{padding:22px 40px 80px;min-width:0}
+h1{font-size:26px;margin:.2em 0 .6em;border-bottom:2px solid var(--line);padding-bottom:.3em}
+h2{font-size:21px;margin:1.8em 0 .6em;border-bottom:1px solid var(--line);padding-bottom:.25em}
+h3{font-size:17.5px;margin:1.4em 0 .5em}
+h4{font-size:15.5px}
+blockquote{margin:0 0 1em;padding:8px 16px;border-left:4px solid #8c959f;background:#f6f8fa;color:#3d444d;font-size:14px}
+blockquote p{margin:.3em 0}
+code{font-family:"JetBrains Mono","DejaVu Sans Mono",Menlo,Consolas,monospace;font-size:.88em;background:#eff1f3;padding:.1em .35em;border-radius:4px}
+pre{background:#f6f8fa;border:1px solid var(--line);border-radius:6px;padding:10px 14px;overflow:auto} pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:.6em 0 1.1em}
+table{border-collapse:collapse;font-size:13.8px;line-height:1.55;min-width:60%}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left}
+th{background:#eef2f6;font-weight:700;position:sticky;top:0}
+tr:nth-child(even) td{background:#fafbfc}
+td strong{color:#8a1c1c}
+hr{border:0;border-top:1px solid var(--line);margin:1.6em 0}
+section.layer1{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:2px 22px 10px;margin:18px 0 26px}
+section.layer1>h2{border-bottom-color:var(--l1b)}
+section.layer1 .tw table{background:#fff}
+.layer-tag{display:inline-block;font-size:12px;font-weight:700;color:#7a4b00;background:#ffe2a8;border-radius:10px;padding:0 9px;margin-left:8px;vertical-align:middle}
+details.card{border:1px solid var(--line);border-radius:8px;margin:12px 0;background:#fff}
+details.card>summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:16.5px;background:#f3f6fa;border-radius:8px;list-style:none}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary:before{content:"▸ ";color:var(--acc)} details.card[open]>summary:before{content:"▾ "}
+details.card[open]>summary{border-bottom:1px solid var(--line);border-radius:8px 8px 0 0}
+details.card>.body{padding:4px 18px 10px}
+.cardtools{font-size:13px;margin:6px 0 2px} .cardtools button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:#fff;border-radius:5px;padding:1px 8px;cursor:pointer;margin-right:6px}
+.b{display:inline-block;font-size:11.5px;line-height:1.5;padding:0 6px;border-radius:9px;margin:0 2px;font-weight:600;white-space:nowrap;vertical-align:1px;border:1px solid transparent}
+.b-meas{background:#dafbe1;color:#116329;border-color:#a8e6b5}
+.b-orig{background:#ddf4ff;color:#0a4b8c;border-color:#a6d4f5}
+.b-team{background:#fff1e5;color:#953800;border-color:#ffc89a}
+.b-inf{background:#eef0f2;color:#4a535c;border-color:#cfd5db}
+.b-codex{background:#fbefff;color:#6e2b91;border-color:#e3b8f5}
+.b-oth{background:#f6f8fa;color:#4a535c;border-color:#d1d9e0}
+.idx{max-width:900px;margin:0 auto;padding:30px 30px 80px}
+.idx .hero{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:12px 22px;margin:14px 0 24px;font-size:16.5px}
+.idx .cards a{display:block;border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:10px 0;color:var(--fg)}
+.idx .cards a:hover{border-color:var(--acc);text-decoration:none;background:#f6f9ff}
+.idx .cards .t{font-weight:700;color:var(--acc)} .idx .cards .d{font-size:13.5px;color:var(--muted)}
+.foot{color:var(--muted);font-size:12.5px;margin-top:40px;border-top:1px solid var(--line);padding-top:8px}
+@media (max-width:900px){.wrap{grid-template-columns:1fr} nav.toc{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)} main{padding:16px}}
+@media print{nav.toc,.top,.cardtools{display:none}.wrap{display:block} details.card{break-inside:avoid}}
+</style></head><body>
+<div class="top"><a class="brand" href="../index.html">多模态少步蒸馏 · 前沿调研</a><a href="../baseline.html">2026Q3 基线</a><a href="../index.html#dailies">每日</a><a href="../index.html#weeklies">每周</a></div>
+<div class="wrap"><nav class="toc"><div class="tt">目录</div><div><div class="toc">
+<ul>
+<li><a href="#结论先行">结论先行</a></li>
+<li><a href="#30-秒速览">30 秒速览</a></li>
+<li><a href="#一屏框架今天挂在哪一格">一屏框架：今天挂在哪一格</a></li>
+<li><a href="#详细条目3-条">详细条目（3 条）</a><ul><li><a href="#①-worldplay2让-teacher-和-student-共用压缩记忆长-rollout-dmd-只给-critic-看一个-clip值得读流式">① WorldPlay2：让 teacher 和 student 共用压缩记忆，长 rollout DMD 只给 critic 看一个 clip（值得读·流式）</a></li><li><a href="#②-radian在-ar-dmd-上加冻结-dinov2-多层特征的判别器值得看高">② Radian：在 AR DMD 上加冻结 DINOv2 多层特征的判别器（值得看·高）</a></li><li><a href="#③-advfidelity-dualheads少步生成器上的判别器当-reward值得看rl-侧归-rl-同事">③ AdvFidelity / DualHeads：少步生成器上的「判别器当 reward」（值得看；RL 侧归 RL 同事）</a></li></ul></li>
+<li><a href="#id-区间预览全部命中与语义补充f9每条都有-id-评级">ID 区间预览：全部命中与语义补充（F9：每条都有 ID + 评级）</a></li>
+<li><a href="#f4openreview">F4：OpenReview</a></li>
+<li><a href="#f5同事对账与请你定级回执文献同事-10-22-早报-11-条">F5：同事对账与「请你定级」回执（文献同事 10-22 早报 11 条）</a></li>
+<li><a href="#批次与召回台账">批次与召回台账</a></li>
+</ul>
+</div>
+</div></nav>
+<main><h1 id="少步蒸馏-每日-2026-10-22周四">少步蒸馏 · 每日 2026-10-22（周四）</h1>
+<blockquote>
+<p><strong>批次覆盖（F1）</strong>：应出列表日 = <strong>Thu 22 Oct</strong>（北京 08:00）。09:20 和 09:24 两次查 <code>/new</code>（含 no-cache），页头都还是 <strong>Wednesday, 21 October 2026</strong>，RSS pubDate 也是 <code>Wed, 21 Oct 2026</code> → <strong>Thu 22 记 pending</strong>，留给 13:42 补扫。<strong>本页不是 Thu 22 批</strong>，arXiv 部分是下面的 ID 区间预览。Wed 21 已 done（10-21 13:48 补扫，台账已核）。</p>
+<p><strong>F3 ID 区间（只是预览，不能把批次标 done）</strong>：起点 <code>2610.28633</code>（Wed 21 批 new 最大号 28632 之后）。<code>28633–29002</code> 只读复用 RL 同事 08:23 的 abs 快照（367 条）；<code>29003–30000</code> 我自己逐号抓 abs 页（908 条存在；二分探测到 29961 之后基本为空，29963 零星存在）。合计全类 <strong>1,275</strong> 条、8 类 <strong>432</strong> 条。上限仍以 13:42 的 <code>/new</code> 为准。正则 v2.2 命中 <strong>53</strong> 条，全部读了标题（F6）；Codex 对 432 条做不靠关键词的语义全量 → IN 4 / RL 4 / 外围 13 / OUT 411，我复核了全部非 OUT 条目，并把 Codex 判外围的 <strong>LiveAct</strong> 改判为范围内（摘要里写了 rollout-aware DMD）<span class="b b-meas">实测</span><span class="b b-codex">Codex✓</span>。</p>
+<p><strong>F4 OpenReview</strong>：文献同事 10-22 06:42 的 <code>or_iclr27.json</code> 1,851 条，相对 10-21 文件按 OR id 差集新增 <strong>3</strong> 条：Radian <code>usS4ezuqQp</code>（= arXiv <a href="https://arxiv.org/abs/2609.40037">2609.40037</a>，今天全文精读）、SANA-Video 2.0 <code>c4eh9PW3da</code>（混合线性注意力底座，外围）、ReView <code>sko7pDWv3n</code>（新视角视频 + RL，域外，已由文献同事转 RL）。<strong>积压 0</strong>。</p>
+<p><strong>F5 对账（48h）</strong>：文献同事 10-22 转交 11 条（下面逐条有 ID + 评级）；RL 同事 10-22 <code>fewstep_kw_hits.json</code> 6 条 6/6 已留痕；RL <code>read-log.md</code> 10-20/21 的 18 个 ID 里我没留痕的 11 条全部是多步扩散的 reward 微调 / 评测 / LLM，<strong>范围内漏检 0</strong>。<strong>发现 1 处筛选缺口</strong>：ArcFlow <a href="https://arxiv.org/abs/2610.28788">2610.28788</a> 摘要写的是 “Flow-matching”（连字符），v2.1 的 GEN 门只认 “flow match” → 被挡。它本身是机器人 flow policy（域外），但缺口是真的 → 已修成 <strong>screen v2.2</strong>（GEN 门 <code>flow[- ]match</code>，STRONG 加 <code>solver steps/budget</code>），回放今天全量只多出 ArcFlow 1 条。
+标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】【仅OR摘要】<span class="b b-team">队友转述</span><span class="b b-inf">推断</span><span class="b b-codex">Codex✓</span></p>
+</blockquote>
+<hr />
+<section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
+<p><strong>今天没有新的「必读·先跑」；有一条升级：WorldPlay2 <a href="https://arxiv.org/abs/2609.35560">2609.35560</a> 从「值得看（高，仅OR）」升为「值得读·流式」。</strong> arXiv 全文给出了我昨天最想看的证据：用压缩记忆做 clip 级 DMD 打分，WBench 83.1，和「teacher 吃全上下文」的 82.3 基本持平，但每步训练 167 s vs 261 s，而且全上下文 teacher 在 320 latent 时直接 OOM<span class="b b-orig">原文 表8、§4.2</span>。只放了推理代码和权重，没有训练代码，所以不到「先跑」。</p>
+<ol>
+<li><strong>WorldPlay2 → 值得读·流式（推理代码 + 权重，无训练代码）。</strong> 长 rollout DMD 的打分上下文问题（轴 C）第一次有「压缩记忆 ≈ 全上下文」的对照。但 Table 8 缺「只加初始化、不加 replay」这一行，所以 Stable Forcing 的增益我判断主要来自 PDD 初始化（+7.9 Avg），整段 rollout replay 单独只值 +1.3<span class="b b-orig">原文 表8，算术差</span>。</li>
+<li><strong>Radian <a href="https://arxiv.org/abs/2609.40037">2609.40037</a> → 值得看（高）。</strong> 在 AR 视频 DMD 上加一个冻结 DINOv2 多层特征的 hinge GAN（真实视频做正样本）。4 步 VideoAlign 0.4995 → 0.8033（vs Self Forcing），但 VBench 只 +0.005；而且 Radian 是在 Self Forcing 的 checkpoint 上再训 800 步，基线是官方 checkpoint 重测，<strong>没有同预算的 DMD-only 续训对照</strong>；没有代码。</li>
+<li><strong>AdvFidelity <a href="https://arxiv.org/abs/2610.29380">2610.29380</a> → 值得看（RL 侧归 RL 同事）。</strong> 判别器负样本 = 「把参考图加噪到 t∈{0.3,0.5}，再让当前少步生成器 1–2 步重建」，内容对齐、只暴露伪影。消融里这一步单独 HPSv2 0.3920 → 0.4125<span class="b b-orig">原文 表4</span>。</li>
+<li>其余：StyleStream 2.0（音频流式，值得看·高）、DualHeads（值得看·证据不足）、LiveAct（重做·应用）、Density-Level Backward Error（推理步数分配格，值得看·理论）。</li>
+</ol>
+<p><strong>对我们训练的含义：</strong></p>
+<ul>
+<li><strong>流式 AR</strong>：①如果我们的 SF/DMD 要拉长 rollout，WorldPlay2 给了一个省显存的选项：teacher 和 student 都吃同一份压缩历史，fake/real score 只看当前 clip + 记忆。值得做的便宜对照是 {全上下文打分, 压缩记忆打分} × 同 DMD × 同步数，测长视频一致性和每步耗时。这一条是推断。②WorldPlay2 Table 8 再次说明 <strong>初始化比 rollout 方式更重要</strong>（无初始化 75.2 → 有 83.1），和 10-15 AGF、10-21 Matrix-Game 4.0 的「先 CD/PDD 再 DMD」一致。③Radian 的 VFM-GAN 是一个可以直接加到我们 DMD 上的辅助项，成本是每个 rollout 解码 8 帧；但它的 VBench 增益很小，VideoAlign 是 reward 模型打分，要防它只是在讨好评估器。</li>
+<li><strong>AV</strong>：StyleStream 2.0 在音频侧证明了「用自己生成的上一 chunk 做上下文、回归 loss 不变」的 AR 微调能把流式 WER 从 19.54 降到 12.03<span class="b b-orig">原文 表5</span>，不需要 DMD。我们 AV 流式里音频支路如果暴露偏差明显，这是比 DMD 便宜的第一步。推断。</li>
+<li><strong>图像 / 视频</strong>：AdvFidelity 和 Radian 是同一周的两篇「冻结 DINO 特征判别器」：一个在图像 RL，一个在视频 DMD。这一格（L3 对抗）的增量现在集中在 <strong>判别器的负样本怎么造</strong>，而不是判别器结构。</li>
+<li><strong>推理·步数分配（F7）</strong>：Density-Level Backward Error 是同 NFE 下重新分配步长（等 NFE 即等时），但只在 CIFAR-10 EDM 上验证，不改决定。Next Forcing 的「2× 加速」没有和等时的均匀少步比，不进这一格。</li>
+</ul>
+<hr />
+</section><section class="layer1"><h2 id="30-秒速览">30 秒速览<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文</th>
+<th>评级</th>
+<th>一句话</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WorldPlay2 <a href="https://arxiv.org/abs/2609.35560">2609.35560</a></td>
+<td><strong>值得读·流式</strong>（↑ 从值得看·高）</td>
+<td>压缩记忆 clip 级 DMD 打分 ≈ 全上下文 teacher，省 36% 每步时间</td>
+<td><span class="b b-orig">原文</span>【代码：仅推理】</td>
+</tr>
+<tr>
+<td>Radian <a href="https://arxiv.org/abs/2609.40037">2609.40037</a></td>
+<td>值得看（高）</td>
+<td>AR DMD + 冻结 DINOv2 多层 hinge GAN</td>
+<td><span class="b b-orig">原文</span>无代码</td>
+</tr>
+<tr>
+<td>AdvFidelity <a href="https://arxiv.org/abs/2610.29380">2610.29380</a></td>
+<td>值得看</td>
+<td>RL 里加在线对抗保真 reward，负样本 = 当前生成器重建的加噪参考</td>
+<td><span class="b b-orig">原文</span><span class="b b-codex">Codex✓</span></td>
+</tr>
+<tr>
+<td>StyleStream 2.0 <a href="https://arxiv.org/abs/2610.28940">2610.28940</a></td>
+<td>值得看（高·音频流式）</td>
+<td>pixel MeanFlow 4 步 + 自回归自 rollout 微调</td>
+<td><span class="b b-orig">原文</span><span class="b b-codex">Codex✓</span></td>
+</tr>
+<tr>
+<td>DualHeads <a href="https://arxiv.org/abs/2610.28858">2610.28858</a></td>
+<td>值得看（证据不足）</td>
+<td>冻结骨干上 reward 头 + 参考判别头做 reward 倾斜，同 NFE 落后 TDM-R1</td>
+<td><span class="b b-orig">原文</span><span class="b b-codex">Codex✓</span></td>
+</tr>
+<tr>
+<td>LiveAct <a href="https://arxiv.org/abs/2610.29408">2610.29408</a></td>
+<td>重做·应用</td>
+<td>多智能体 WM，teacher forcing → rollout-aware DMD，17.7 FPS</td>
+<td><span class="b b-orig">原文 摘要</span></td>
+</tr>
+<tr>
+<td>Density-Level Backward Error <a href="https://arxiv.org/abs/2610.29475">2610.29475</a></td>
+<td>值得看（理论·推理格）</td>
+<td>用密度层面的后向误差分配固定 NFE 的步长</td>
+<td><span class="b b-orig">原文 摘要</span></td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class="layer1"><h2 id="一屏框架今天挂在哪一格">一屏框架：今天挂在哪一格<span class="layer-tag">第一层 · 框架</span></h2>
+<p>按 baseline.md 的两轴（训练信号 × 问题出在哪）：</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>单步去噪</th>
+<th>流式时间轴</th>
+<th>AV 跨模态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L1 轨迹 / 一致性 / flow map</strong></td>
+<td>StyleStream 2.0（pMF，音频单模态）</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L2 分数差分布匹配（DMD）</strong></td>
+<td>—</td>
+<td><strong>WorldPlay2</strong>（压缩记忆打分）、LiveAct、Radian 的 DMD 主干</td>
+<td>Sound Follows Contact（仅OR）</td>
+</tr>
+<tr>
+<td><strong>L3 对抗</strong></td>
+<td>AdvFidelity（作为 reward）、DualHeads 参考头</td>
+<td><strong>Radian</strong>（VFM 特征 GAN）</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L4 额外真实数据 / reward</strong></td>
+<td>AdvFidelity、DualHeads → 转 RL 同事</td>
+<td>StyleStream 2.0 的自 rollout 微调（回归 loss，非 reward）</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>推理时步数分配（F7）</strong></td>
+<td>Density-Level Backward Error（等 NFE）</td>
+<td>Next Forcing（未做等时对照，不达标）</td>
+<td>CAVC（仅OR，未做等时对照）</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class=""><div class="cardtools">详细条目：<button data-act="open">全部展开</button><button data-act="close">全部收起</button></div><h2 id="详细条目3-条">详细条目（3 条）</h2>
+<details class="card" open="open">
+<summary id="①-worldplay2让-teacher-和-student-共用压缩记忆长-rollout-dmd-只给-critic-看一个-clip值得读流式">① WorldPlay2：让 teacher 和 student 共用压缩记忆，长 rollout DMD 只给 critic 看一个 clip（值得读·流式）</summary>
+<div class="body">
+<p><strong>它在做什么（按顺序）</strong><span class="b b-orig">原文 §3.2–3.3、C.2、Alg.1</span></p>
+<ol>
+<li><strong>记忆</strong>：历史用低分辨率、低帧率的 VAE latent，经 TinyHistory 式卷积 + 注意力压缩成记忆 token；条件 = sink token + 相邻 chunk + 压缩历史。</li>
+<li><strong>初始化</strong>：把 PDD（分块预测相邻区间的平均速度）扩到带记忆的 AR 学生，得到 <strong>4 步</strong>学生。</li>
+<li><strong>Stable Forcing</strong>：学生无梯度地完整生成整段 rollout（<strong>320 latent，切成 10 个 clip</strong>）；每个 chunk 随机缓存一个中间去噪步。</li>
+<li><strong>打分</strong>：对每个 clip，前面已生成的 chunk 变成记忆；real / fake score（双向 teacher，同样用压缩记忆训练过）只看「这个 clip + 记忆」。</li>
+<li><strong>回传</strong>：打分后用缓存的那一步带梯度重算，累计各 chunk 梯度更新一次学生；fake score 按 DMD2 更新。</li>
+</ol>
+<p><strong>因果逻辑</strong>：长 rollout DMD 的瓶颈是 critic 要吃整段上下文（显存和时间随长度涨）。如果 critic 本来就是在压缩记忆条件下训练的，那 student 和 critic 对「过去」的理解是同一种表示，打分只需 O(clip) 的上下文。代价是 critic 看不到全分辨率历史。</p>
+<p><strong>证据</strong><span class="b b-orig">原文 表8、§4.2</span></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>变体（WBench）</th>
+<th>Avg</th>
+<th>Quality</th>
+<th>Setting</th>
+<th>Consistency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>无初始化、无整段 rollout</td>
+<td>73.9</td>
+<td>74.4</td>
+<td>64.6</td>
+<td>82.6</td>
+</tr>
+<tr>
+<td>无初始化</td>
+<td>75.2</td>
+<td>76.2</td>
+<td>68.0</td>
+<td>83.3</td>
+</tr>
+<tr>
+<td>全上下文 teacher</td>
+<td>82.3</td>
+<td>81.6</td>
+<td>79.5</td>
+<td>89.4</td>
+</tr>
+<tr>
+<td><strong>完整方法</strong></td>
+<td><strong>83.1</strong></td>
+<td>81.8</td>
+<td>81.5</td>
+<td>90.0</td>
+</tr>
+</tbody>
+</table></div>
+<p>全上下文 teacher 训练 261 s/iter vs 167 s/iter，320 latent 时 OOM。表 7（重访一致性，96 latent）压缩记忆 vs 全上下文 PSNR 18.80 vs 18.47，SSIM 0.653 vs 0.688，<strong>有升有降</strong>。主表 WBench 83.1 vs Alaya-Evoke-Turbo 82.0，checkpoint 和分辨率是否对齐没写。推理 16 FPS 需要 <strong>8×H20</strong>。</p>
+<p><strong>和最接近工作的核心差别</strong></p>
+<ul>
+<li><strong>vs Self Forcing</strong>：SF 的 critic 打分时看的是学生整段生成；WorldPlay2 把 critic 的条件换成压缩记忆、按 clip 打分。同一个 DMD loss，<strong>换了 critic 的上下文</strong>。后果：可以把 rollout 拉到 320 latent 而不 OOM。</li>
+<li><strong>vs SGF / RELIC 的 rollout–replay</strong>：「无梯度整段生成 + 随机一步带梯度重算」这部分是重做；表 8 里它单独只贡献 +1.3（73.9 → 75.2）。</li>
+<li><strong>vs 昨天的 Matrix-Game 4.0</strong>：两者都先蒸一个少步初始化再 DMD；Matrix-Game 用 CD，WorldPlay2 用 PDD。WorldPlay2 给了「无初始化」的量化代价（−7.9 Avg），Matrix-Game 没给。</li>
+</ul>
+<p><strong>为什么不是必读·先跑</strong>：仓库 <a href="https://github.com/WorldPlay2/WorldPlay2">WorldPlay2/WorldPlay2</a> 只有推理（<code>reactor/inference/pdd.py</code>、<code>generate.py</code>、A14B 配置）和权重，<strong>没有训练代码</strong>，(a) 条不满足；WBench +1.1 不是同协议对最强基线，(b) 不满足【代码：我用 GitHub API 列了文件树】。</p>
+<p><strong>和文献同事的分歧</strong>：他判「可用资源（重做 × 存疑）」，理由是 replay 部分是 SGF 的重做、表 8 缺 init-only 行。这两点我同意；我升级的理由是表 8 第 3、4 行给出了「压缩记忆打分 ≈ 全上下文打分」这个<strong>对我们有用的对照</strong>，这是 replay 之外的那部分。流式 / WM 主评级归他，蒸馏侧评级归我。</p>
+<p><strong>预测</strong>：如果后续有人补 init-only 行，Stable Forcing 的 replay 增益会 &lt; +1 Avg；压缩记忆打分会被别的长视频 DMD 工作采用。等训练代码或第二篇独立复现。</p>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="②-radian在-ar-dmd-上加冻结-dinov2-多层特征的判别器值得看高">② Radian：在 AR DMD 上加冻结 DINOv2 多层特征的判别器（值得看·高）</summary>
+<div class="body">
+<p><strong>操作</strong><span class="b b-orig">原文 §3、A.5–A.6</span>：学生 4 步 chunk 生成（Wan2.1-1.3B）；每个 rollout 随机解码 21 个 latent 里的 8 帧，梯度穿过冻结 VAE 和冻结 DINOv2-S/14；DINOv2 第 6/8/10/11 层 + patch 输入共 5 个轻量头做 hinge GAN，正样本是 40K 未公开来源的真实视频；生成器 loss = DMD + adv，权重都是 1；先 200 步只训判别器，再 600 步联合（8×B300）。</p>
+<p><strong>证据</strong><span class="b b-codex">原文 表1/2；Codex 抽取 + 我核了 0.4995 / 0.8033 / 0.7805 / 0.8041</span></p>
+<ul>
+<li>4 步：VBench Total Self Forcing 0.8393 → Radian 0.8444；VideoAlign 0.4995 → 0.8033。</li>
+<li>1 步：VideoAlign One-Forcing 0.0448 → 0.2563。</li>
+<li>长视频：VBench-Long Rolling Forcing 0.7805（5 步）→ 0.8041（4 步）。</li>
+<li>特征空间对照：VFM GAN 比本地实现的 DiT 特征 GAN VideoAlign 高 0.37。</li>
+</ul>
+<p><strong>和最接近工作的差别</strong></p>
+<ul>
+<li><strong>vs ADD</strong>：ADD 已经用冻结 DINO 特征判别器；Radian 把它搬到 AR 视频 DMD，并且是<strong>稀疏解码帧</strong>而不是整段。</li>
+<li><strong>vs DMD2 / One-Forcing</strong>：DMD2 / One-Forcing 的判别器在扩散内部特征上；Radian 的对照显示换成外部 VFM 特征后 VideoAlign 明显更高，但 VBench 只差 0.003。</li>
+<li><strong>vs Salt</strong>：同 4 步，VBench 0.8434 vs 0.8444，几乎一样。</li>
+</ul>
+<p><strong>为什么只是值得看</strong>：基线都是官方 checkpoint 重测，没有「同预算 DMD 续训」的对照，所以 +0.30 VideoAlign 里有多少来自额外 600 步训练说不清；没有人评；没有代码。<strong>预测</strong>：同预算续训对照下 VBench 差距会缩到噪声内，VideoAlign 差距会保留一部分。</p>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="③-advfidelity-dualheads少步生成器上的判别器当-reward值得看rl-侧归-rl-同事">③ AdvFidelity / DualHeads：少步生成器上的「判别器当 reward」（值得看；RL 侧归 RL 同事）</summary>
+<div class="body">
+<p><strong>AdvFidelity 的关键一步</strong><span class="b b-orig">原文 §3.4、Eq.4、表4</span>：判别器 = 冻结 DINOv2-L [CLS] + MLP；正样本是参考图，负样本是<strong>把同一张参考图加噪到 t∈{0.3,0.5}，用当前生成器剩下的 1–2 步重建</strong>。这样正负样本内容、构图一样，判别器只能看伪影。生成器（FLUX.1-dev LoRA，4/8 步，无 CFG）按 LeapAlign 直接把 HPSv2 + λ·D 的梯度沿少步轨迹回传。</p>
+<ul>
+<li>消融（8 步 HPDv2）：+在线判别器 0.3416 → 0.3558；+目标域参考 → 0.3920；<strong>+内容对齐负样本 → 0.4125</strong>。</li>
+<li>同步数对比：8 步 HPSv2 0.4125 vs 同 8 步重训 RTDMD 0.3923；GenEval 0.7759 vs 0.7236<span class="b b-orig">原文 表1/2，RTDMD 是作者用官方代码重训</span>。</li>
+<li>「先 LeapAlign 再 DMD」会把 HPSv2 从 0.4096 拉到 0.3978，作者用这个说明分阶段会吃掉 RL 收益。</li>
+<li>没有代码声明。</li>
+</ul>
+<p><strong>DualHeads</strong><span class="b b-orig">原文 表1/2</span>：reward 头 + 参考判别头都挂在冻结 teacher 特征上，生成器只回传单步重算。同 4 NFE 下 GenEval 0.90 / OCR 0.92，落后 TDM-R1 的 0.92 / 0.95；Z-Image HPSv3 13.93 vs TDM-R1 12.67，但分辨率 512² vs 1024²，不对等。论文承诺发表后放代码。</p>
+<p><strong>和最接近工作的差别</strong>：AdvFidelity vs Adv-GRPO：同样是在线对抗 reward，差别只在<strong>负样本是内容对齐的重建</strong>；DualHeads vs TDM-R1：不要 teacher / fake score 的轨迹匹配，只用两个二分类头，代价是同 NFE 分数更低。</p>
+<p><strong>对我们的含义</strong>：Radian 和 AdvFidelity 指向同一个便宜实验：如果我们给 DMD 加对抗项，负样本用「真实片段加噪 + 学生少步重建」，而不是学生从纯噪声生成的结果。推断，未实测。</p>
+<hr />
+</div>
+</details>
+</section><section class=""><h2 id="id-区间预览全部命中与语义补充f9每条都有-id-评级">ID 区间预览：全部命中与语义补充（F9：每条都有 ID + 评级）</h2>
+<p><strong>范围内 / 需定级</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>标题</th>
+<th>评级</th>
+<th>归属</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.28940">2610.28940</a></td>
+<td>StyleStream 2.0</td>
+<td>值得看（高·音频流式）</td>
+<td>我；转文献（AV/流式音频）</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.29380">2610.29380</a></td>
+<td>AdvFidelity</td>
+<td>值得看</td>
+<td>蒸馏侧我；RL 侧转 RL</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.28858">2610.28858</a></td>
+<td>DualHeads</td>
+<td>值得看（证据不足）</td>
+<td>蒸馏侧我；RL 同事精读</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.29408">2610.29408</a></td>
+<td>LiveAct</td>
+<td>重做·应用（Codex 判外围，我改判）</td>
+<td>我；转文献（WM）</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.29475">2610.29475</a></td>
+<td>Density-Level Backward Error for Low-NFE Generative Flows</td>
+<td>值得看（理论·推理格，等 NFE）</td>
+<td>我</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>外围（读了标题 + 摘要）</strong>：ALLOT <a href="https://arxiv.org/abs/2610.29441">2610.29441</a>（视频 DiT 稀疏注意力的层×步分配，等墙钟对照，外围·值得看）；ER-Chord <a href="https://arxiv.org/abs/2610.29248">2610.29248</a>（一步编辑，免训练）；MuseFlow-TSE <a href="https://arxiv.org/abs/2610.29119">2610.29119</a>（目标说话人提取，1–4 步自适应 Euler）；DewHand <a href="https://arxiv.org/abs/2610.29936">2610.29936</a>（2 步 CFM 手部运动重建）；<a href="https://arxiv.org/abs/2610.29361">2610.29361</a> 红外 / <a href="https://arxiv.org/abs/2610.29569">2610.29569</a> 水下（一步扩散复原）；Relational Geometry Forcing <a href="https://arxiv.org/abs/2610.29282">2610.29282</a>（WAM 表征，非少步）；Second Thoughts 28779 / WorldStream 28827 / 29088 / 29168 / DepState-JEPA 29246 / Events Not Pixels 29435（WM 理解或规划，非少步）；RubatoCodec 29434；SAKURA 29733；ArcFlow <a href="https://arxiv.org/abs/2610.28788">2610.28788</a>（机器人 flow policy 跨求解步数训练，域外；见 F5 缺口）；Value-Rectified Distillation 29075（离线 RL，域外）；GRAFT 29136（扩散语言模型，域外）。</p>
+<p><strong>正则 v2.2 其余 37 条</strong>：全部读标题，均为 LLM 投机解码 / 知识蒸馏 / 物理 / 机器人等误命中，OUT。清单在 <code>raw/1022thu/hits_v22.txt</code>。</p>
+<hr />
+</section><section class=""><h2 id="f4openreview">F4：OpenReview</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>OR id</th>
+<th>标题</th>
+<th>处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>usS4ezuqQp</td>
+<td>Radian</td>
+<td>= <a href="https://arxiv.org/abs/2609.40037">2609.40037</a>，见 ②，值得看（高）</td>
+</tr>
+<tr>
+<td>c4eh9PW3da</td>
+<td>SANA-Video 2.0</td>
+<td>外围（效率底座，非少步），仅OR</td>
+</tr>
+<tr>
+<td>sko7pDWv3n</td>
+<td>ReView</td>
+<td>域外（新视角 + RL），已由文献同事转 RL</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class=""><h2 id="f5同事对账与请你定级回执文献同事-10-22-早报-11-条">F5：同事对账与「请你定级」回执（文献同事 10-22 早报 11 条）</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>条目</th>
+<th>我的评级（蒸馏侧）</th>
+<th>归属 / 说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Radian <code>usS4ezuqQp</code> = <a href="https://arxiv.org/abs/2609.40037">2609.40037</a></td>
+<td>值得看（高）</td>
+<td>我主评。「CD init」行是把 Radian 接在 Causal Forcing（AR teacher 的 ODE/CD 初始化）checkpoint 上续训：VideoAlign 0.2663 → 0.3979；接在 Self Forcing 上：0.4995 → 0.8033<span class="b b-orig">原文 表1(a)、§4.2</span>。两者起点不同，所以这<strong>不是</strong>「CD 初始化伤动态」的干净证据，只能说 Radian 在两种起点上都有增益</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Mass Forcing <code>rSq3KMUQBT</code></td>
+<td>值得看（仅OR 摘要·最终），出观察名单</td>
+<td>我；有 arXiv 版或代码时重开</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Token Forcing <code>MeX9roZY1l</code></td>
+<td>外围（免训练），出名单</td>
+<td>—</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Sound Follows Contact <code>YXeYwb5EYf</code></td>
+<td>值得看（仅OR 摘要·最终）</td>
+<td>AV 主评归文献同事</td>
+</tr>
+<tr>
+<td>5</td>
+<td>CAVC <code>eXi9xDxcDo</code></td>
+<td>外围·推理格不达标（没有等时的均匀少步对照）</td>
+<td>挂「AV 模态不对称」方向卡</td>
+</tr>
+<tr>
+<td>6</td>
+<td>WorldPlay2 <code>rK38d8xJlc</code> = <a href="https://arxiv.org/abs/2609.35560">2609.35560</a></td>
+<td><strong>值得读·流式</strong>（↑）</td>
+<td>见 ①；流式 / WM 主评归文献同事，分歧已写明</td>
+</tr>
+<tr>
+<td>7</td>
+<td>MultiLive</td>
+<td>值得看（高，仅OR），不变</td>
+<td>—</td>
+</tr>
+<tr>
+<td>8</td>
+<td>FastH3 Omni</td>
+<td>值得读·可用配方（高），不变；新增 MLX 版，记一笔</td>
+<td>—</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Cosmos3-H-Dreams</td>
+<td>重做·应用，不变</td>
+<td>—</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Next Forcing <a href="https://arxiv.org/abs/2606.11187">2606.11187</a></td>
+<td>外围·值得看（底座训练的未来块辅助损失）；<strong>不进推理格</strong>：「保留第一层 MCP 一次出两块、2× 加速」没有和等时的均匀少步对比</td>
+<td>方向卡归文献同事</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Speculative Forcing <a href="https://arxiv.org/abs/2610.22347">2610.22347</a></td>
+<td><strong>必读·先跑 → 必读·待代码</strong>：<code>naver-ai/speculative-forcing</code> 仍只有 README（最后 push 10-16），「先跑」的前提不成立，代码放出后恢复</td>
+<td>我；周五对账保留与文献同事（值得看）的分歧</td>
+</tr>
+</tbody>
+</table></div>
+<p>另：Looking-Ahead <code>GM9LePOwrX</code>（TencentARC，FCP 未来块预测，50 步 UniPC 推理）→ 外围，非少步。RL 同事 10-22 关键词命中 6 条：DualHeads、StyleStream 2.0、ArcFlow 已定级；SpecEvo / LADDER / HorizonComposer / Real2Sem2Real 域外。</p>
+<hr />
+</section><section class=""><h2 id="批次与召回台账">批次与召回台账</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>列表日</th>
+<th>状态</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wed 21 Oct</td>
+<td>done</td>
+<td>10-21 13:48 补扫</td>
+</tr>
+<tr>
+<td><strong>Thu 22 Oct</strong></td>
+<td><strong>pending</strong></td>
+<td>09:24 <code>/new</code> 仍为 Wed 21；ID 预览 28633–30000 已过（1,275 / 8 类 432），交 13:42 补扫以 <code>/new</code> 定上限</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>筛选：screen v2.2（新增 GEN 门 <code>flow[- ]match</code>、STRONG <code>solver steps/budget</code>）。</li>
+<li>发现延迟：Thu 22 批待 13:42。</li>
+</ul></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-22 09:37 (UTC+8)</div></main></div>
+<script>
+(function(){
+ // 详情卡片全部展开/收起
+ document.querySelectorAll('[data-act]').forEach(function(b){b.addEventListener('click',function(){
+   var o=b.getAttribute('data-act')==='open';document.querySelectorAll('details.card').forEach(function(d){d.open=o;});});});
+ // 点击目录中位于折叠卡片内的锚点时自动展开
+ function openFor(id){var el=document.getElementById(id);if(!el)return;var d=el.closest('details');if(d)d.open=true;}
+ if(location.hash)openFor(decodeURIComponent(location.hash.slice(1)));
+ window.addEventListener('hashchange',function(){openFor(decodeURIComponent(location.hash.slice(1)));});
+ // 目录高亮
+ var links=[].slice.call(document.querySelectorAll('nav.toc a'));
+ var heads=links.map(function(a){return document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));});
+ function hl(){var y=window.scrollY+80,k=-1;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top+window.scrollY<=y&&h.offsetParent!==null)k=i;});
+   links.forEach(function(a,i){a.classList.toggle('on',i===k);});}
+ window.addEventListener('scroll',hl,{passive:true});hl();
+})();
+</script><script>if(document.querySelector('code.language-mermaid')){var s=document.createElement('script');
+s.src='https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';s.onload=function(){document.querySelectorAll('code.language-mermaid').forEach(function(c){var d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentNode.replaceWith(d);});mermaid.initialize({startOnLoad:false});mermaid.run();};document.head.appendChild(s);}</script></body></html>
