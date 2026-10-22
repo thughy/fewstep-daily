@@ -67,7 +67,7 @@ details.card>.body{padding:4px 18px 10px}
 <li><a href="#id-区间预览全部命中与语义补充f9每条都有-id-评级">ID 区间预览：全部命中与语义补充（F9：每条都有 ID + 评级）</a></li>
 <li><a href="#f4openreview">F4：OpenReview</a></li>
 <li><a href="#f5同事对账与请你定级回执文献同事-10-22-早报-11-条">F5：同事对账与「请你定级」回执（文献同事 10-22 早报 11 条）</a></li>
-<li><a href="#补扫1358北京时间thu-22-批-同事转交对账">补扫（13:58，北京时间）：Thu 22 批 + 同事转交对账</a><ul><li><a href="#①-issfmimproved-training-of-strong-stochastic-flow-maps让随机-flow-map也能用-meanflow-类导数-loss值得看高">① iSSFM（Improved Training of Strong Stochastic Flow Maps）：让「随机 flow map」也能用 MeanFlow 类导数 loss（值得看·高）</a></li><li><a href="#②-attn-forcing在-longlive-式长-rollout-dmd-上加被逐出-kv-的注意力代理和注意力匹配-loss值得看流式记忆">② Attn-Forcing：在 LongLive 式长 rollout DMD 上，加「被逐出 KV 的注意力代理」和注意力匹配 loss（值得看·流式记忆）</a></li><li><a href="#③-预览之外的其他新号77-条中除-①②-外生成相关的逐条">③ 预览之外的其他新号（77 条中除 ①② 外，生成相关的逐条）</a></li><li><a href="#④-f5-f9-同事转交对账今天全部转交">④ F5 / F9 同事转交对账（今天全部转交）</a></li></ul></li>
+<li><a href="#补扫1350北京时间thu-22-批-同事转交对账">补扫（13:50，北京时间）：Thu 22 批 + 同事转交对账</a><ul><li><a href="#①-issfmimproved-training-of-strong-stochastic-flow-maps让随机-flow-map也能用-meanflow-类导数-loss值得看高">① iSSFM（Improved Training of Strong Stochastic Flow Maps）：让「随机 flow map」也能用 MeanFlow 类导数 loss（值得看·高）</a></li><li><a href="#②-attn-forcing在-longlive-式长-rollout-dmd-上加被逐出-kv-的注意力代理和注意力匹配-loss值得看流式记忆">② Attn-Forcing：在 LongLive 式长 rollout DMD 上，加「被逐出 KV 的注意力代理」和注意力匹配 loss（值得看·流式记忆）</a></li><li><a href="#③-预览之外的其他新号77-条中除-①②-外生成相关的逐条">③ 预览之外的其他新号（77 条中除 ①② 外，生成相关的逐条）</a></li><li><a href="#④-f5-f9-同事转交对账今天全部转交">④ F5 / F9 同事转交对账（今天全部转交）</a></li></ul></li>
 <li><a href="#批次与召回台账">批次与召回台账</a></li>
 </ul>
 </div>
@@ -78,7 +78,7 @@ details.card>.body{padding:4px 18px 10px}
 <p><strong>F3 ID 区间（只是预览，不能把批次标 done）</strong>：起点 <code>2610.28633</code>（Wed 21 批 new 最大号 28632 之后）。<code>28633–29002</code> 只读复用 RL 同事 08:23 的 abs 快照（367 条）；<code>29003–30000</code> 我自己逐号抓 abs 页（908 条存在；二分探测到 29961 之后基本为空，29963 零星存在）。合计全类 <strong>1,275</strong> 条、8 类 <strong>432</strong> 条。上限仍以 13:42 的 <code>/new</code> 为准。正则 v2.2 命中 <strong>53</strong> 条，全部读了标题（F6）；Codex 对 432 条做不靠关键词的语义全量 → IN 4 / RL 4 / 外围 13 / OUT 411，我复核了全部非 OUT 条目，并把 Codex 判外围的 <strong>LiveAct</strong> 改判为范围内（摘要里写了 rollout-aware DMD）<span class="b b-meas">实测</span><span class="b b-codex">Codex✓</span>。</p>
 <p><strong>F4 OpenReview</strong>：文献同事 10-22 06:42 的 <code>or_iclr27.json</code> 1,851 条，相对 10-21 文件按 OR id 差集新增 <strong>3</strong> 条：Radian <code>usS4ezuqQp</code>（= arXiv <a href="https://arxiv.org/abs/2609.40037">2609.40037</a>，今天全文精读）、SANA-Video 2.0 <code>c4eh9PW3da</code>（混合线性注意力底座，外围）、ReView <code>sko7pDWv3n</code>（新视角视频 + RL，域外，已由文献同事转 RL）。<strong>积压 0</strong>。</p>
 <p><strong>F5 对账（48h）</strong>：文献同事 10-22 转交 11 条（下面逐条有 ID + 评级）；RL 同事 10-22 <code>fewstep_kw_hits.json</code> 6 条 6/6 已留痕；RL <code>read-log.md</code> 10-20/21 的 18 个 ID 里我没留痕的 11 条全部是多步扩散的 reward 微调 / 评测 / LLM，<strong>范围内漏检 0</strong>。<strong>发现 1 处筛选缺口</strong>：ArcFlow <a href="https://arxiv.org/abs/2610.28788">2610.28788</a> 摘要写的是 “Flow-matching”（连字符），v2.1 的 GEN 门只认 “flow match” → 被挡。它本身是机器人 flow policy（域外），但缺口是真的 → 已修成 <strong>screen v2.2</strong>（GEN 门 <code>flow[- ]match</code>，STRONG 加 <code>solver steps/budget</code>），回放今天全量只多出 ArcFlow 1 条。</p>
-<p><strong>13:58 补扫</strong>：Thu 22 批已出并扫完（808 条，Thu 22 done），新进范围 iSSFM <a href="https://arxiv.org/abs/2610.29605">2610.29605</a>（值得看·高）、Attn-Forcing <a href="https://arxiv.org/abs/2610.30036">2610.30036</a>（值得看），无新必读 / 值得读，见文末「补扫」段。
+<p><strong>13:50 补扫</strong>：Thu 22 批已出并扫完（808 条，Thu 22 done），新进范围 iSSFM <a href="https://arxiv.org/abs/2610.29605">2610.29605</a>（值得看·高）、Attn-Forcing <a href="https://arxiv.org/abs/2610.30036">2610.30036</a>（值得看），无新必读 / 值得读，见文末「补扫」段。
 标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】【仅OR摘要】<span class="b b-team">队友转述</span><span class="b b-inf">推断</span><span class="b b-codex">Codex✓</span></p>
 </blockquote>
 <hr />
@@ -458,7 +458,7 @@ details.card>.body{padding:4px 18px 10px}
 </table></div>
 <p>另：Looking-Ahead <code>GM9LePOwrX</code>（TencentARC，FCP 未来块预测，50 步 UniPC 推理）→ 外围，非少步。RL 同事 10-22 关键词命中 6 条：DualHeads、StyleStream 2.0、ArcFlow 已定级；SpecEvo / LADDER / HorizonComposer / Real2Sem2Real 域外。</p>
 <hr />
-</section><section class=""><h2 id="补扫1358北京时间thu-22-批-同事转交对账">补扫（13:58，北京时间）：Thu 22 批 + 同事转交对账</h2>
+</section><section class=""><h2 id="补扫1350北京时间thu-22-批-同事转交对账">补扫（13:50，北京时间）：Thu 22 批 + 同事转交对账</h2>
 <p><strong>批次</strong>：13:43 抓 8 类 <code>/new</code>（cs.CV / cs.LG / cs.AI / stat.ML / cs.SD / eess.AS / cs.MM / eess.IV），页头都是 <strong>Thursday, 22 October 2026</strong>，每页 <code>Total of N entries</code> 与解析条数一致（CV 212 / LG 379 / AI 370 / stat.ML 67 / SD 25 / AS 17 / MM 7 / IV 7）。去重 <strong>808</strong> 条（new 362 / cross 147 / 替换 299），new 编号 <code>2610.28637</code>–<code>2610.30129</code> → <strong>Thu 22 done</strong>。晨间 ID 区间预览的 8 类 432 条<strong>全部在本批里</strong>，本批在预览之外多了 <strong>77 条</strong>（new 42 / cross 35）：其中 22 条编号落在预览区间 29003–29961 <strong>内部</strong>（09:2x 抓 abs 时还是 404，比如 iSSFM 29605、Looking Ahead 29989），其余是 29961 之后的新号（最大 30129）和旧号跨列。正则 v2.2 在全批命中 <strong>72</strong> 条，全部读了标题：41 条已在晨间预览命中单里，31 条是新的（预览外 10 + 替换版 21），逐条处理见文末 F8 行。预览外的 77 条我逐条读了标题，生成相关的 20 条读了摘要，2 篇读全文（iSSFM PDF、Attn-Forcing HTML），CADRE 读了方法段；数量不到 100，这次没有调 Codex 做语义分诊<span class="b b-meas">实测</span>。</p>
 <p><strong>结论</strong>：本批没有新的「必读·先跑」或「值得读」。新进范围的两篇：<strong>iSSFM <a href="https://arxiv.org/abs/2610.29605">2610.29605</a> → 值得看（高·新机制，图像）</strong>，<strong>Attn-Forcing <a href="https://arxiv.org/abs/2610.30036">2610.30036</a> → 值得看（流式·记忆，蒸馏信号没变）</strong>。同事转交里范围内漏检 0。</p>
 <details class="card" open="open">
@@ -615,7 +615,7 @@ details.card>.body{padding:4px 18px 10px}
 <td>RL 同事 10-21 <code>fewstep_kw_hits.json</code></td>
 <td>—</td>
 <td>—</td>
-<td>13:58 仍<strong>不存在</strong>（10-21 <code>batch/lists/</code> 只有 <code>codex_all.tsv</code> 等）；10-21 终版 <code>forward_fewstep.txt</code> 23 个 ID 已在 10-21 组织追踪段 23/23 对过 → 视为关闭，不再等</td>
+<td>13:50 仍<strong>不存在</strong>（10-21 <code>batch/lists/</code> 只有 <code>codex_all.tsv</code> 等）；10-21 终版 <code>forward_fewstep.txt</code> 23 个 ID 已在 10-21 组织追踪段 23/23 对过 → 视为关闭，不再等</td>
 </tr>
 <tr>
 <td>RL <code>read-log.md</code> 近 48 h</td>
@@ -650,7 +650,7 @@ RL 同事今天报了一个事故：10-15～10-20 有 138 篇「编号早、公�
 </tr>
 <tr>
 <td><strong>Thu 22 Oct</strong></td>
-<td><strong>done（10-22 13:58 补扫）</strong></td>
+<td><strong>done（10-22 13:50 补扫）</strong></td>
 <td>晨间 pending（09:24 <code>/new</code> 仍为 Wed 21）；13:43 <code>/new</code> 已翻到 Thu 22，8 类去重 808（new 362 / cross 147 / 替换 299），new 编号 28637–30129；预览外 77 条逐条读标题；v2.2 命中 72 全读标题</td>
 </tr>
 </tbody>
@@ -660,7 +660,7 @@ RL 同事今天报了一个事故：10-15～10-20 有 138 篇「编号早、公�
 <li>发现延迟：Thu 22 批应出 08:00 → 进日报 ~14:00，≈ 6 h。</li>
 <li>F5/F9：同事转交 arXiv ID 并集 91，补扫前 24/91 = 26% → 补扫后 91/91；范围内漏检 0。</li>
 </ul></section>
-<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-22 13:50 (UTC+8)</div></main></div>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-22 13:51 (UTC+8)</div></main></div>
 <script>
 (function(){
  // 详情卡片全部展开/收起
