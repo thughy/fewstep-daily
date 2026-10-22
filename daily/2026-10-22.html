@@ -67,6 +67,7 @@ details.card>.body{padding:4px 18px 10px}
 <li><a href="#id-区间预览全部命中与语义补充f9每条都有-id-评级">ID 区间预览：全部命中与语义补充（F9：每条都有 ID + 评级）</a></li>
 <li><a href="#f4openreview">F4：OpenReview</a></li>
 <li><a href="#f5同事对账与请你定级回执文献同事-10-22-早报-11-条">F5：同事对账与「请你定级」回执（文献同事 10-22 早报 11 条）</a></li>
+<li><a href="#补扫1358北京时间thu-22-批-同事转交对账">补扫（13:58，北京时间）：Thu 22 批 + 同事转交对账</a><ul><li><a href="#①-issfmimproved-training-of-strong-stochastic-flow-maps让随机-flow-map也能用-meanflow-类导数-loss值得看高">① iSSFM（Improved Training of Strong Stochastic Flow Maps）：让「随机 flow map」也能用 MeanFlow 类导数 loss（值得看·高）</a></li><li><a href="#②-attn-forcing在-longlive-式长-rollout-dmd-上加被逐出-kv-的注意力代理和注意力匹配-loss值得看流式记忆">② Attn-Forcing：在 LongLive 式长 rollout DMD 上，加「被逐出 KV 的注意力代理」和注意力匹配 loss（值得看·流式记忆）</a></li><li><a href="#③-预览之外的其他新号77-条中除-①②-外生成相关的逐条">③ 预览之外的其他新号（77 条中除 ①② 外，生成相关的逐条）</a></li><li><a href="#④-f5-f9-同事转交对账今天全部转交">④ F5 / F9 同事转交对账（今天全部转交）</a></li></ul></li>
 <li><a href="#批次与召回台账">批次与召回台账</a></li>
 </ul>
 </div>
@@ -76,7 +77,8 @@ details.card>.body{padding:4px 18px 10px}
 <p><strong>批次覆盖（F1）</strong>：应出列表日 = <strong>Thu 22 Oct</strong>（北京 08:00）。09:20 和 09:24 两次查 <code>/new</code>（含 no-cache），页头都还是 <strong>Wednesday, 21 October 2026</strong>，RSS pubDate 也是 <code>Wed, 21 Oct 2026</code> → <strong>Thu 22 记 pending</strong>，留给 13:42 补扫。<strong>本页不是 Thu 22 批</strong>，arXiv 部分是下面的 ID 区间预览。Wed 21 已 done（10-21 13:48 补扫，台账已核）。</p>
 <p><strong>F3 ID 区间（只是预览，不能把批次标 done）</strong>：起点 <code>2610.28633</code>（Wed 21 批 new 最大号 28632 之后）。<code>28633–29002</code> 只读复用 RL 同事 08:23 的 abs 快照（367 条）；<code>29003–30000</code> 我自己逐号抓 abs 页（908 条存在；二分探测到 29961 之后基本为空，29963 零星存在）。合计全类 <strong>1,275</strong> 条、8 类 <strong>432</strong> 条。上限仍以 13:42 的 <code>/new</code> 为准。正则 v2.2 命中 <strong>53</strong> 条，全部读了标题（F6）；Codex 对 432 条做不靠关键词的语义全量 → IN 4 / RL 4 / 外围 13 / OUT 411，我复核了全部非 OUT 条目，并把 Codex 判外围的 <strong>LiveAct</strong> 改判为范围内（摘要里写了 rollout-aware DMD）<span class="b b-meas">实测</span><span class="b b-codex">Codex✓</span>。</p>
 <p><strong>F4 OpenReview</strong>：文献同事 10-22 06:42 的 <code>or_iclr27.json</code> 1,851 条，相对 10-21 文件按 OR id 差集新增 <strong>3</strong> 条：Radian <code>usS4ezuqQp</code>（= arXiv <a href="https://arxiv.org/abs/2609.40037">2609.40037</a>，今天全文精读）、SANA-Video 2.0 <code>c4eh9PW3da</code>（混合线性注意力底座，外围）、ReView <code>sko7pDWv3n</code>（新视角视频 + RL，域外，已由文献同事转 RL）。<strong>积压 0</strong>。</p>
-<p><strong>F5 对账（48h）</strong>：文献同事 10-22 转交 11 条（下面逐条有 ID + 评级）；RL 同事 10-22 <code>fewstep_kw_hits.json</code> 6 条 6/6 已留痕；RL <code>read-log.md</code> 10-20/21 的 18 个 ID 里我没留痕的 11 条全部是多步扩散的 reward 微调 / 评测 / LLM，<strong>范围内漏检 0</strong>。<strong>发现 1 处筛选缺口</strong>：ArcFlow <a href="https://arxiv.org/abs/2610.28788">2610.28788</a> 摘要写的是 “Flow-matching”（连字符），v2.1 的 GEN 门只认 “flow match” → 被挡。它本身是机器人 flow policy（域外），但缺口是真的 → 已修成 <strong>screen v2.2</strong>（GEN 门 <code>flow[- ]match</code>，STRONG 加 <code>solver steps/budget</code>），回放今天全量只多出 ArcFlow 1 条。
+<p><strong>F5 对账（48h）</strong>：文献同事 10-22 转交 11 条（下面逐条有 ID + 评级）；RL 同事 10-22 <code>fewstep_kw_hits.json</code> 6 条 6/6 已留痕；RL <code>read-log.md</code> 10-20/21 的 18 个 ID 里我没留痕的 11 条全部是多步扩散的 reward 微调 / 评测 / LLM，<strong>范围内漏检 0</strong>。<strong>发现 1 处筛选缺口</strong>：ArcFlow <a href="https://arxiv.org/abs/2610.28788">2610.28788</a> 摘要写的是 “Flow-matching”（连字符），v2.1 的 GEN 门只认 “flow match” → 被挡。它本身是机器人 flow policy（域外），但缺口是真的 → 已修成 <strong>screen v2.2</strong>（GEN 门 <code>flow[- ]match</code>，STRONG 加 <code>solver steps/budget</code>），回放今天全量只多出 ArcFlow 1 条。</p>
+<p><strong>13:58 补扫</strong>：Thu 22 批已出并扫完（808 条，Thu 22 done），新进范围 iSSFM <a href="https://arxiv.org/abs/2610.29605">2610.29605</a>（值得看·高）、Attn-Forcing <a href="https://arxiv.org/abs/2610.30036">2610.30036</a>（值得看），无新必读 / 值得读，见文末「补扫」段。
 标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】【仅OR摘要】<span class="b b-team">队友转述</span><span class="b b-inf">推断</span><span class="b b-codex">Codex✓</span></p>
 </blockquote>
 <hr />
@@ -456,6 +458,181 @@ details.card>.body{padding:4px 18px 10px}
 </table></div>
 <p>另：Looking-Ahead <code>GM9LePOwrX</code>（TencentARC，FCP 未来块预测，50 步 UniPC 推理）→ 外围，非少步。RL 同事 10-22 关键词命中 6 条：DualHeads、StyleStream 2.0、ArcFlow 已定级；SpecEvo / LADDER / HorizonComposer / Real2Sem2Real 域外。</p>
 <hr />
+</section><section class=""><h2 id="补扫1358北京时间thu-22-批-同事转交对账">补扫（13:58，北京时间）：Thu 22 批 + 同事转交对账</h2>
+<p><strong>批次</strong>：13:43 抓 8 类 <code>/new</code>（cs.CV / cs.LG / cs.AI / stat.ML / cs.SD / eess.AS / cs.MM / eess.IV），页头都是 <strong>Thursday, 22 October 2026</strong>，每页 <code>Total of N entries</code> 与解析条数一致（CV 212 / LG 379 / AI 370 / stat.ML 67 / SD 25 / AS 17 / MM 7 / IV 7）。去重 <strong>808</strong> 条（new 362 / cross 147 / 替换 299），new 编号 <code>2610.28637</code>–<code>2610.30129</code> → <strong>Thu 22 done</strong>。晨间 ID 区间预览的 8 类 432 条<strong>全部在本批里</strong>，本批在预览之外多了 <strong>77 条</strong>（new 42 / cross 35）：其中 22 条编号落在预览区间 29003–29961 <strong>内部</strong>（09:2x 抓 abs 时还是 404，比如 iSSFM 29605、Looking Ahead 29989），其余是 29961 之后的新号（最大 30129）和旧号跨列。正则 v2.2 在全批命中 <strong>72</strong> 条，全部读了标题：41 条已在晨间预览命中单里，31 条是新的（预览外 10 + 替换版 21），逐条处理见文末 F8 行。预览外的 77 条我逐条读了标题，生成相关的 20 条读了摘要，2 篇读全文（iSSFM PDF、Attn-Forcing HTML），CADRE 读了方法段；数量不到 100，这次没有调 Codex 做语义分诊<span class="b b-meas">实测</span>。</p>
+<p><strong>结论</strong>：本批没有新的「必读·先跑」或「值得读」。新进范围的两篇：<strong>iSSFM <a href="https://arxiv.org/abs/2610.29605">2610.29605</a> → 值得看（高·新机制，图像）</strong>，<strong>Attn-Forcing <a href="https://arxiv.org/abs/2610.30036">2610.30036</a> → 值得看（流式·记忆，蒸馏信号没变）</strong>。同事转交里范围内漏检 0。</p>
+<details class="card" open="open">
+<summary id="①-issfmimproved-training-of-strong-stochastic-flow-maps让随机-flow-map也能用-meanflow-类导数-loss值得看高">① iSSFM（Improved Training of Strong Stochastic Flow Maps）：让「随机 flow map」也能用 MeanFlow 类导数 loss（值得看·高）</summary>
+<div class="body">
+<p><a href="https://arxiv.org/abs/2610.29605">2610.29605</a>，AITHYRA / TU Wien / TUM（Alexander Tong 组）。L1 轨迹 / flow map 格，图像。论文写了代码和 HF 权重链接，但 14:0x 查时 GitHub <strong>404</strong>、HF <strong>401</strong>（还没公开）<span class="b b-meas">实测</span>。</p>
+<p><strong>做法，一步一步</strong><span class="b b-orig">原文 §3–4</span>：</p>
+<ol>
+<li><strong>要学的对象</strong>：SDE 的「强解映射」Ψ_{s,t}(x, W)：给定起点和<strong>同一条</strong> Brownian 路径，一步跳到 t 时刻的样本。确定性 flow map（MeanFlow、AYF）跳的是 ODE；这里跳的是 SDE，所以网络还要吃一个噪声路径的表示。</li>
+<li><strong>路径怎么喂给网络</strong>：把 [s, t] 上的 Brownian 路径用<strong>平移 Legendre 多项式</strong>展开成 N 个系数（N=3），和输入拼接。对照组是 Pan et al. 的全局 KL 系数 + 一阶增量。玩具实验里只有 Legendre 能让网络真正用到一阶以上的信息<span class="b b-orig">原文 图3a</span>。</li>
+<li><strong>loss 怎么能求导</strong>：Brownian 路径处处不可导，MeanFlow / AYF 的 Eulerian（对 t 求导）loss 原本用不了。做法是 <strong>Wong–Zakai</strong> 化：用光滑的多项式路径 W^(N) 代替真实路径，SDE 变成一个可以对时间求导的随机 ODE，再套 iMF loss。Doss–Sussmann 变换版本的 1-NFE 模型完全不用系数<span class="b b-orig">原文 图3b</span>。</li>
+<li><strong>参数化（三处改动）</strong>：指数提升（exponential lift）、Brownian 路径的闭式鞅项（Itô 积分精确算，不用数值积分）、瞬时漂移匹配（代替 SSFM 那种回归一小步 Euler–Maruyama）。没有指数提升时，闭式鞅项会发散成纯噪声<span class="b b-orig">原文 §4.2</span>。</li>
+<li><strong>从确定性模型微调</strong>：起点是 DMF-XL/2+（Decoupled MeanFlow，本身蒸自 SiT-XL/2+REPA），加一个小 diffusion head 和 Brownian 系数输入，微调 100k iter。</li>
+</ol>
+<p><strong>为什么有效（因果逻辑）</strong>：SSFM 只能用 semigroup loss（「一大步 = 两小步」，自洽型），而确定性 flow map 的经验是导数型 loss 更强 → 难点在路径不可导 → 用光滑多项式路径 + WZ 化以后导数型 loss 可用 → 同参数化下 semigroup 换成 WZ-iMF，4 NFE FID 14.67 → <strong>5.96</strong>，FD-DINOv2 288.1 → <strong>143.0</strong>（相对原版 SSFM 475.1 约 3.3×）<span class="b b-orig">原文 表3</span>。代价：semigroup 训出来的模型路径一致性（strong 性质）更好，iSSFM 换来的是分布指标<span class="b b-orig">原文 图5b</span>。</p>
+<p><strong>和最近的 3 篇比：</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>改了什么</th>
+<th>后果</th>
+<th>证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SSFM（McCallum et al. 2026）</td>
+<td>同样学 SDE 强解映射、同样用 Legendre 系数，但只能用 semigroup loss</td>
+<td>iSSFM 把 loss 换成 WZ-iMF、加三处参数化</td>
+<td>4 NFE FD-DINOv2 475.1 → 143.0；16 NFE 135.6 → 55.1<span class="b b-orig">原文 表3</span></td>
+</tr>
+<tr>
+<td>Pan et al. 2026（KL 系数 + 求积）</td>
+<td>全局 KL 系数 + 局部增量，Itô 积分用数值求积</td>
+<td>Legendre 表示在 2D 玩具上 N&gt;1 时更好；同 loss 下 ImageNet 4 NFE FID 14.68 vs 24.92</td>
+<td><span class="b b-orig">原文 图3a、表2</span></td>
+</tr>
+<tr>
+<td>确定性 flow map（DMF / iMF / AYF）</td>
+<td>只学 ODE，loss 同为导数型</td>
+<td>iSSFM 4 NFE FID 5.96 <strong>仍明显落后</strong>确定性少步模型；作者在 Limitations 里自己承认</td>
+<td><span class="b b-orig">原文 §5</span></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>评级：值得看（高）</strong>。原创性：新机制（WZ 化让导数型 loss 用到随机 flow map 上），可信度：存疑（只和自己复现的 SSFM 比，单次运行，没有种子方差；4 NFE 的绝对质量远不如确定性少步）。按 v1.4：(a) 不满足，不改变我们 AV / 流式底座的训练决定；(b) 不满足，同协议最强的少步图像基线是确定性模型，iSSFM 没超过。</p>
+<p><strong>为什么还值得留意</strong>：强随机少步映射是「少步 + Feynman–Kac 校正 / 粒子重采样」的前提（权重沿粒子自己的路径积分，必须是强解）。论文只在 40 个高斯的 2D 例子上演示了 4 NFE + FKC<span class="b b-orig">原文 §4.3</span>。<span class="b b-inf">推断</span>如果以后我们要在少步学生上做推理时 reward 倾斜（SMC / FK steering），这条线比「先蒸成 ODE 再加噪」更干净。迁移到 AV / 流式：目前无。代码放出后，我会核对 WZ-iMF 的目标构造。</p>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="②-attn-forcing在-longlive-式长-rollout-dmd-上加被逐出-kv-的注意力代理和注意力匹配-loss值得看流式记忆">② Attn-Forcing：在 LongLive 式长 rollout DMD 上，加「被逐出 KV 的注意力代理」和注意力匹配 loss（值得看·流式记忆）</summary>
+<div class="body">
+<p><a href="https://arxiv.org/abs/2610.30036">2610.30036</a>，没有代码链接<span class="b b-meas">实测：HTML 与 abs 页都没有</span>。文献同事判「新机制(局部) × 存疑」；RL 同事也转了。</p>
+<p><strong>做法，一步一步</strong><span class="b b-orig">原文 §3.2–3.3、Alg.1</span>：</p>
+<ol>
+<li>底座是 Self-Forcing 的因果初始化，4 步 [1000, 750, 500, 250]，frame sink 3 帧 + 局部窗口 9 帧。先做 700 步短 DMD，再按 LongLive 做 60 s streaming long tuning 2,300 步。</li>
+<li><strong>代理</strong>：K=3 个可学习 latent P。每次有帧被挤出局部窗口，P 就用 cross-attention 读这些被逐出的 latent，再经门控更新（Proxy Update Module）。更新后的 P 走一遍 DiT，得到逐层 KV，插在 sink 和局部 KV 之间。所以推理时<strong>每块多一次 DiT 前向</strong>，H20 上端到端多约 13%。</li>
+<li><strong>监督目标</strong>：用 Performer 式正随机特征（M=128）在线累加被逐出 KV 的统计量 S = Σφ(k)vᵀ、z = Σφ(k)，近似出「如果还保留全部历史，当前 query 会得到的注意力输出」Â_hist。</li>
+<li><strong>loss</strong>：L = L_DMD + λ·MSE(A_proxy, sg(Â_hist))，只加在最后 6 层。DMD 那一项完全不变（teacher 是双向 Wan，critic 照常），注意力匹配只更新代理相关参数。</li>
+<li>推理时不用 Â_hist；直接拿 Â_hist 生成会越来越糊<span class="b b-orig">原文 图5</span>。</li>
+</ol>
+<p><strong>因果逻辑</strong>：DMD 只匹配输出分布，没有任何信号要求代理记住被逐出的内容 → 只加代理几乎没用（60 s VBench total 80.03 → 80.16）→ 加注意力级监督后到 82.37，主要是 dynamic degree 46.8 → <strong>72.1</strong><span class="b b-orig">原文 表3</span>。</p>
+<p><strong>和最近的工作比：</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>改了什么</th>
+<th>后果</th>
+<th>证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LongLive</td>
+<td>同样是 sink + 局部窗口 + 长 rollout DMD，但被逐出的就丢了</td>
+<td>Attn-Forcing 多了代理 KV 和一项非蒸馏的辅助 loss</td>
+<td>60 s total 79.26 vs 82.37，但 background 96.60 vs 95.84、smoothness 98.85 vs 98.56 反而低<span class="b b-orig">原文 表2</span></td>
+</tr>
+<tr>
+<td>WorldPlay2（今天 ①，压缩记忆打分）</td>
+<td>WorldPlay2 改的是 <strong>DMD 打分时</strong> teacher / critic 看什么上下文</td>
+<td>Attn-Forcing 不动打分，只改学生的记忆结构</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Rolling / Reward Forcing 等改 DMD 信号的流式方法</td>
+<td>改的是训练信号</td>
+<td>Attn-Forcing 的蒸馏信号与 Self Forcing 相同</td>
+<td><span class="b b-orig">原文 §3.1</span></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>评级：值得看（流式·记忆；蒸馏侧无新信号）</strong>，记忆结构的主评归文献同事。可信度存疑：增益几乎全在 dynamic degree 一项，而这一项对超参非常敏感（M 从 128 降到 64，dynamic 就从 72.1 掉到 47.1；L=3 时 45.1）；60 s 评测只有 128 条 prompt，没有种子方差，也没有人评；没有代码。按 v1.4：(a) 不满足，Henry 10-20 说过 60 s 以上的长程漂移不是我们流式底座的主要瓶颈；(b) 不满足，没有同预算对比最强流式基线，只比了 LongLive 官方权重，自己的同配方 baseline（80.03）已经比 LongLive 高。
+<span class="b b-inf">推断</span>对我们训练的含义：如果我们的流式 DMD 需要更长的有效上下文，「代理 KV + 注意力级蒸馏」可以作为一项辅助 loss 单独开关试，便宜的对照是 {无代理, 代理, 代理 + L_AM} × 同 DMD，同时看 dynamic degree 和主体一致性，别只看 total。</p>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="③-预览之外的其他新号77-条中除-①②-外生成相关的逐条">③ 预览之外的其他新号（77 条中除 ①② 外，生成相关的逐条）</summary>
+<div class="body">
+<ul>
+<li><a href="https://arxiv.org/abs/2610.30129">2610.30129</a> <strong>CADRE</strong>（Kyutai，WM 用因果扩散表示自编码器族）：扩散解码器按 Shortcut / 自蒸馏 flow map 的方式「一大步对齐两小步」，1–2 步解码；单步比 MIRA 式感知回归 FVD 低 1.4–2.5×，第二步 FID 再降至多 23%<span class="b b-orig">原文</span>。正文的 GitHub 链接 14:0x 是 <strong>404</strong><span class="b b-meas">实测</span>→ <strong>外围·可用资源</strong>（被蒸的是解码器，不是生成器），归文献同事。</li>
+<li><a href="https://arxiv.org/abs/2609.23010">2609.23010</a> <strong>MixiMotion</strong>（替换版，一步 text-to-motion）：离线 teacher 样本库 + 非对称双向集合匹配（teacher→student 管覆盖、student→teacher 压掉不受支持的样本），ViMoGen 0.835 vs 50 步 teacher 0.858<span class="b b-orig">原文 摘要</span>→ <strong>值得看·外围（动作模态，不在四类主模态里）</strong>。<span class="b b-inf">推断</span>「集合级双向匹配」可以看作一种离线、可控 mode coverage / precision 权衡的分布匹配，迁移到 AV 时可以作为少样本离线蒸馏的选项；没有读全文。</li>
+<li><a href="https://arxiv.org/abs/2610.29989">2610.29989</a> Looking Ahead（= OR <code>GM9LePOwrX</code>，arXiv 正式版）：FCP 未来块预测辅助目标，teacher-forced 训练，非少步 → <strong>外围</strong>（方向卡归文献同事）。</li>
+<li><a href="https://arxiv.org/abs/2610.30120">2610.30120</a> ALPS（WM 视觉编码器）、<a href="https://arxiv.org/abs/2610.30125">2610.30125</a> PhysiCalWorld（WM 物理校准）、<a href="https://arxiv.org/abs/2610.30023">2610.30023</a> RealMe（体视频 2K 扩散增强）、<a href="https://arxiv.org/abs/2610.30107">2610.30107</a> Velocity Ambiguity Profiles（FM 按时间的 Bayes 风险诊断，不减步）、<a href="https://arxiv.org/abs/2610.28943">2610.28943</a> MODS（蛋白扩散推理时引导）、<a href="https://arxiv.org/abs/2610.30086">2610.30086</a> Orbitol（晶体扩散）、<a href="https://arxiv.org/abs/2610.30009">2610.30009</a> Dreaming Learning（模型崩塌）、<a href="https://arxiv.org/abs/2610.30066">2610.30066</a> / 30068 / 26542（扩散语言模型）：都不减步 → 不相关或外围。其余 50 多条是 LLM、智能体、机器人、医学或理论，不相关。</li>
+</ul>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="④-f5-f9-同事转交对账今天全部转交">④ F5 / F9 同事转交对账（今天全部转交）</summary>
+<div class="body">
+<div class="tw"><table>
+<thead>
+<tr>
+<th>来源</th>
+<th>arXiv ID 数</th>
+<th>补扫前已在日报（ID + 评级）</th>
+<th>补扫处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文献同事 <code>forward-fewstep-2026-10-22.md</code>（早报 11 条）</td>
+<td>5（另 6 个 OR / HF）</td>
+<td>5/5</td>
+<td>晨间已全部回执</td>
+</tr>
+<tr>
+<td>文献同事 <code>forward-fewstep-catchup-2026-10-22.md</code>（10:50 补扫，13 条 + 4 条域外）</td>
+<td>17</td>
+<td>10/17</td>
+<td>补：Attn-Forcing、CADRE、Looking Ahead、iSSFM、MixiMotion、Sphinx <a href="https://arxiv.org/abs/2511.18672">2511.18672</a>、29013</td>
+</tr>
+<tr>
+<td>文献同事 <code>catchup/kw_hits.json</code>（75 条关键词命中）</td>
+<td>75</td>
+<td>13/75</td>
+<td>62 条补评，见下面的 F8 行和「转交补评」行；没有 <code>catchup/fewstep_hits.json</code></td>
+</tr>
+<tr>
+<td>RL 同事 <code>forward_fewstep.txt</code>（11:4x 终版）</td>
+<td>19</td>
+<td>12/19</td>
+<td>补：29605、30036、30129、29989、28829、28990、30136</td>
+</tr>
+<tr>
+<td>RL 同事 <code>batch/lists/fewstep_kw_hits.json</code>（10-22）</td>
+<td>42</td>
+<td>13/42</td>
+<td>29 条补评</td>
+</tr>
+<tr>
+<td>RL 同事 10-21 <code>fewstep_kw_hits.json</code></td>
+<td>—</td>
+<td>—</td>
+<td>13:58 仍<strong>不存在</strong>（10-21 <code>batch/lists/</code> 只有 <code>codex_all.tsv</code> 等）；10-21 终版 <code>forward_fewstep.txt</code> 23 个 ID 已在 10-21 组织追踪段 23/23 对过 → 视为关闭，不再等</td>
+</tr>
+<tr>
+<td>RL <code>read-log.md</code> 近 48 h</td>
+<td>14 个 ID</td>
+<td>6/14</td>
+<td>8 条未留痕全部域外：<a href="https://arxiv.org/abs/2610.28990">2610.28990</a> DoobPO（机器人扩散策略 RL）、<a href="https://arxiv.org/abs/2610.26685">2610.26685</a> LLM rubric hacking、<a href="https://arxiv.org/abs/2610.26850">2610.26850</a> GenOlympiad 评测、<a href="https://arxiv.org/abs/2610.27782">2610.27782</a> RoboJudge、<a href="https://arxiv.org/abs/2610.28829">2610.28829</a> HorizonComposer（驾驶视频编辑 + RL，多步）、<a href="https://arxiv.org/abs/2610.29590">2610.29590</a> CineEvolve（多镜头视频智能体）、<a href="https://arxiv.org/abs/2610.29086">2610.29086</a> Internal Guidance（倾斜扩散采样理论，多步）、<a href="https://arxiv.org/abs/2610.28849">2610.28849</a> RL 微调的高斯先验几何，都不相关</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>召回（按 F9，arXiv ID 并集，不含 read-log）：补扫前 24/91 = 26%，补扫后 91/91 = 100%。</strong> 67 条差集全部是 10:50 / 11:4x 才落盘的转交（晚于晨间日报定稿）。按来源拆：7 条是晨间预览拿不到的号（预览外新号，abs 当时 404），16 条是替换版（预览只抓新号），8 条不在我的 8 个分类里（cs.RO / cs.GR / cs.CL），<strong>21 条是晨间 v2.2 命中、但只写进了 <code>hits_v22.txt</code></strong>（晨间「正则 v2.2 其余 37 条……OUT」那句没有逐条写 ID），15 条是晨间 Codex 判 OUT、没有进日报的非命中条目。后两类共 36 条是<strong>留痕缺口</strong>：判断本身没错（全部不相关），但按 F9 不算覆盖。本段已逐条补齐。修法：晨间段也要按 F8 逐条写 ID，「其余 N 条见文件」不再允许。<strong>范围内漏检：0</strong>。新进范围的 iSSFM、Attn-Forcing 都是本批才公开的论文，不是之前漏掉的。
+RL 同事今天报了一个事故：10-15～10-20 有 138 篇「编号早、公告晚」或旧号跨列的论文没进它的逐号筛选。我这边的列表批是按 <code>/new</code> 页走的，公告了就会出现，不受这个问题影响；它回补出的两篇少步相关论文 DeMoE <a href="https://arxiv.org/abs/2610.25742">2610.25742</a>（10-20 日报，值得看）、Correction Training <a href="https://arxiv.org/abs/2610.14136">2610.14136</a>（10-16 日报，非少步）我都已经有评级。但<strong>晨间 ID 预览</strong>也有同样的盲区（今天 29003–29961 区间里就有 22 个号当时是 404），所以再次确认：预览永远不能标 done。</p>
+<p><strong>转交补评（不在 v2.2 命中里的转交 ID，逐条）</strong>：<a href="https://arxiv.org/abs/2505.24255">2505.24255</a> LLM 心智理论，不相关；<a href="https://arxiv.org/abs/2511.18672">2511.18672</a> Sphinx：NVS 服务系统，回归结果 + 选择性扩散精修，不蒸馏 → 外围·推理；<a href="https://arxiv.org/abs/2603.05754">2603.05754</a> 热成像 VLA（cs.RO），不相关；<a href="https://arxiv.org/abs/2605.01642">2605.01642</a> 多元对齐，不相关；<a href="https://arxiv.org/abs/2610.21449">2610.21449</a> 急诊 LLM RL，不相关；<a href="https://arxiv.org/abs/2610.28787">2610.28787</a> LLM 市场合谋，不相关；<a href="https://arxiv.org/abs/2610.28895">2610.28895</a> 跨 tokenizer 蒸馏（LLM），不相关·语言；<a href="https://arxiv.org/abs/2610.28948">2610.28948</a> COWBOY 全身操作（cs.RO），不相关；<a href="https://arxiv.org/abs/2610.28997">2610.28997</a> 时序 tokenization，不相关；<a href="https://arxiv.org/abs/2610.29054">2610.29054</a> 学习动力学理论，不相关；<a href="https://arxiv.org/abs/2610.29063">2610.29063</a> 时序异常检测多教师蒸馏，不相关；<a href="https://arxiv.org/abs/2610.29183">2610.29183</a> 卫星 VLM 推理续跑，不相关；<a href="https://arxiv.org/abs/2610.29283">2610.29283</a> 养蜂视觉，不相关；<a href="https://arxiv.org/abs/2610.29302">2610.29302</a> 航天机器人 LM 压缩，不相关；<a href="https://arxiv.org/abs/2610.29416">2610.29416</a> Bradley–Terry 主动学习，不相关；<a href="https://arxiv.org/abs/2610.29432">2610.29432</a> PRISM 深度噪声（cs.RO），不相关；<a href="https://arxiv.org/abs/2610.29439">2610.29439</a> 喷注标记蒸馏，不相关；<a href="https://arxiv.org/abs/2610.29456">2610.29456</a> Rego 策略修复，不相关；<a href="https://arxiv.org/abs/2610.29508">2610.29508</a> 长尾识别 CAM 蒸馏，不相关；<a href="https://arxiv.org/abs/2610.29527">2610.29527</a> RCSD 推测解码（cs.CL），不相关·语言；<a href="https://arxiv.org/abs/2610.29665">2610.29665</a> 宫颈细胞学，不相关；<a href="https://arxiv.org/abs/2610.29702">2610.29702</a> CausGround 具身规划（cs.RO），不相关；<a href="https://arxiv.org/abs/2610.29749">2610.29749</a> DSL 解码，不相关；<a href="https://arxiv.org/abs/2610.29965">2610.29965</a> CORD 智能体 RL + 蒸馏，不相关·语言；<a href="https://arxiv.org/abs/2610.30033">2610.30033</a> RLMuscle 角色动画 RL（cs.GR），不相关；<a href="https://arxiv.org/abs/2610.30067">2610.30067</a> GoiBERT 越南语蒸馏（cs.CL），不相关；<a href="https://arxiv.org/abs/2610.30105">2610.30105</a> 非对称 OPD（智能体），不相关·语言；<a href="https://arxiv.org/abs/2610.30136">2610.30136</a> Agentic World Action Models（cs.RO，RL 转交里写的是批次上限号），不相关。</p>
+<p><strong>粗筛命中但未收录（F8，逐条，v2.2 全批 72 条命中）</strong>：<a href="https://arxiv.org/abs/2610.28940">2610.28940</a> StyleStream 2.0 → 值得看（高·音频流式，晨间已评）；<a href="https://arxiv.org/abs/2610.25404">2610.25404</a> MT Forcing 替换版 → 重做·应用（10-20 已评，替换版没有新的蒸馏内容）；<a href="https://arxiv.org/abs/2610.29380">2610.29380</a> AdvFidelity → 值得看（晨间）；<a href="https://arxiv.org/abs/2610.29408">2610.29408</a> LiveAct → 重做·应用（晨间）；<a href="https://arxiv.org/abs/2610.29989">2610.29989</a> Looking Ahead → 外围（FCP，非少步）；<a href="https://arxiv.org/abs/2609.23010">2609.23010</a> MixiMotion 替换版 → 值得看·外围（动作模态）；<a href="https://arxiv.org/abs/2610.28858">2610.28858</a> DualHeads → 值得看（证据不足，晨间）；<a href="https://arxiv.org/abs/2610.29605">2610.29605</a> iSSFM → 值得看（高），见 ①；<a href="https://arxiv.org/abs/2606.05737">2606.05737</a> Let It Be Simple 替换版：VLA 一步动作，只偏置训练时间步分布，不蒸馏 → 外围·机器人；<a href="https://arxiv.org/abs/2609.35407">2609.35407</a> BiMoGen 替换版：掩码离散扩散的动作-文本互生成，不减步，不相关；<a href="https://arxiv.org/abs/2610.28706">2610.28706</a> SpecEvo，不相关·语言；<a href="https://arxiv.org/abs/2610.28788">2610.28788</a> ArcFlow：机器人 flow 策略多求解预算 → 域外（晨间）；<a href="https://arxiv.org/abs/2610.29361">2610.29361</a> 红外一步去噪 → 外围·应用；<a href="https://arxiv.org/abs/2610.30129">2610.30129</a> CADRE → 外围·可用资源（解码器自蒸馏），见 ③；<a href="https://arxiv.org/abs/2609.19104">2609.19104</a> rMuscle 替换版：VLA 推理复用，不相关；<a href="https://arxiv.org/abs/2609.39953">2609.39953</a> OmniLLM 压缩上下文自蒸馏，不相关·理解；<a href="https://arxiv.org/abs/2610.25043">2610.25043</a> VLA-Rolling 替换版 → 外围·机器人（10-20 已评）；<a href="https://arxiv.org/abs/2610.28650">2610.28650</a> CIDOC CRM，不相关；<a href="https://arxiv.org/abs/2610.29013">2610.29013</a> 推测解码目标，不相关·语言；<a href="https://arxiv.org/abs/2610.29061">2610.29061</a> OccJEPA 遮挡分割，不相关；<a href="https://arxiv.org/abs/2610.29385">2610.29385</a> 并行隐式推理，不相关·语言；<a href="https://arxiv.org/abs/2610.29569">2610.29569</a> 水下增强一步扩散 → 外围·应用；<a href="https://arxiv.org/abs/2610.29933">2610.29933</a> RAG，不相关；<a href="https://arxiv.org/abs/2610.29936">2610.29936</a> DewHand：2 步 CFM 手部运动重建 → 外围；<a href="https://arxiv.org/abs/2610.30036">2610.30036</a> Attn-Forcing → 值得看，见 ②；<a href="https://arxiv.org/abs/2602.21889">2602.21889</a> 2-Step Agent 决策支持，不相关；<a href="https://arxiv.org/abs/2604.00626">2604.00626</a> LLM OPD 综述，不相关·语言；<a href="https://arxiv.org/abs/2607.06763">2607.06763</a> 自回归 drafting 先验，不相关·语言；<a href="https://arxiv.org/abs/2608.14590">2608.14590</a> LLM 智能体安全综述，不相关；<a href="https://arxiv.org/abs/2609.06779">2609.06779</a> DrugReason，不相关；<a href="https://arxiv.org/abs/2609.29768">2609.29768</a> Looped TTS 替换版：flow-matching TTS 的层复用，32 步，不减步 → 外围（音频）；<a href="https://arxiv.org/abs/2609.32755">2609.32755</a> SAGE 音频 VAE（蒸的是语义嵌入），不相关；<a href="https://arxiv.org/abs/2610.04108">2610.04108</a> 混沌动力学一致性算子：一致性学习用在物理时间上，不是生成 → 不相关；<a href="https://arxiv.org/abs/2610.05195">2610.05195</a> Long-MDR，不相关；<a href="https://arxiv.org/abs/2610.26950">2610.26950</a> 多教师 OPD 替换版，不相关·语言；<a href="https://arxiv.org/abs/2610.27317">2610.27317</a> 谱方法 PDE 求解器，不相关；<a href="https://arxiv.org/abs/2610.28785">2610.28785</a> MCP 智能体 rollout 预算，不相关；<a href="https://arxiv.org/abs/2610.28829">2610.28829</a> HorizonComposer：驾驶视频编辑 + RL，多步，不相关（RL 同事已读）；<a href="https://arxiv.org/abs/2610.28914">2610.28914</a> D-Skill，不相关·语言；<a href="https://arxiv.org/abs/2610.28990">2610.28990</a> DoobPO：机器人扩散策略 RL → 域外；<a href="https://arxiv.org/abs/2610.29075">2610.29075</a> Value-Rectified Distillation：离线 RL → 域外；<a href="https://arxiv.org/abs/2610.29126">2610.29126</a> Two for One 特权学习，不相关；<a href="https://arxiv.org/abs/2610.29136">2610.29136</a> GRAFT：连续扩散语言模型 → 域外；<a href="https://arxiv.org/abs/2610.29167">2610.29167</a> TeachBack，不相关·语言；<a href="https://arxiv.org/abs/2610.29248">2610.29248</a> ER-Chord：一步编辑，免训练 → 外围（晨间）；<a href="https://arxiv.org/abs/2610.29378">2610.29378</a> Right On Q 量化推理，不相关·语言；<a href="https://arxiv.org/abs/2610.29435">2610.29435</a> Events, Not Pixels：WM 评测 → 外围（晨间）；<a href="https://arxiv.org/abs/2610.29441">2610.29441</a> ALLOT 稀疏注意力分配 → 外围·值得看（晨间）；<a href="https://arxiv.org/abs/2610.29475">2610.29475</a> Density-Level Backward Error → 值得看（理论·推理格，晨间）；<a href="https://arxiv.org/abs/2610.29740">2610.29740</a> APED-CXR，不相关；<a href="https://arxiv.org/abs/2610.30044">2610.30044</a> SP-HLM：人形动作生成的两阶段蒸馏，用于全身控制 → 外围·机器人；<a href="https://arxiv.org/abs/2610.30066">2610.30066</a> Looped UDLM，不相关·语言；<a href="https://arxiv.org/abs/2610.30068">2610.30068</a> LAW 纯自条件语言扩散，不相关·语言；<a href="https://arxiv.org/abs/2610.30120">2610.30120</a> ALPS WM 编码器（自蒸馏指表征），不相关；<a href="https://arxiv.org/abs/2607.00272">2607.00272</a> ASPIRE 机器人技能，不相关；<a href="https://arxiv.org/abs/2609.29166">2609.29166</a> HarnessPAI，不相关；<a href="https://arxiv.org/abs/2610.02044">2610.02044</a> DiDE 替换版：免训练 3D 风格化，不相关；<a href="https://arxiv.org/abs/2610.28773">2610.28773</a> LADDER 剪枝，不相关·语言；<a href="https://arxiv.org/abs/2610.28880">2610.28880</a> Real2Sem2Real，不相关；<a href="https://arxiv.org/abs/2610.29003">2610.29003</a> T-DIG 提示多样性（多步）→ 外围；<a href="https://arxiv.org/abs/2610.29008">2610.29008</a> 香蕉分类自蒸馏，不相关；<a href="https://arxiv.org/abs/2610.29229">2610.29229</a> 流式视频理解缓存，不相关·理解；<a href="https://arxiv.org/abs/2610.29472">2610.29472</a> OmniSimulator，不相关·语言；<a href="https://arxiv.org/abs/2610.29498">2610.29498</a> 过程监督 MoE，不相关·语言；<a href="https://arxiv.org/abs/2610.29523">2610.29523</a> pplx-embed，不相关；<a href="https://arxiv.org/abs/2610.29663">2610.29663</a> 因子挖掘，不相关；<a href="https://arxiv.org/abs/2610.29680">2610.29680</a> TraceForge，不相关·语言；<a href="https://arxiv.org/abs/2610.29961">2610.29961</a> 法律决策，不相关；<a href="https://arxiv.org/abs/2510.13643">2510.13643</a> 少样本异常检测替换版，不相关；<a href="https://arxiv.org/abs/2610.28966">2610.28966</a> 多智能体红队，不相关；<a href="https://arxiv.org/abs/2610.29060">2610.29060</a> 音乐分析推理，不相关；<a href="https://arxiv.org/abs/2610.30018">2610.30018</a> ExGrad 对抗训练，不相关。</p>
+<p>补扫原始：<code>daily/raw/1022thu-list/</code>（<code>new_*.html</code>、<code>items.json</code>、<code>outside.json</code>、<code>hits_v22.txt</code>、<code>f9.py</code>、<code>f9_before.json</code>、<code>f9_after.json</code>、<code>full/</code>）。</p>
+<hr />
+</div>
+</details>
 </section><section class=""><h2 id="批次与召回台账">批次与召回台账</h2>
 <div class="tw"><table>
 <thead>
@@ -473,16 +650,17 @@ details.card>.body{padding:4px 18px 10px}
 </tr>
 <tr>
 <td><strong>Thu 22 Oct</strong></td>
-<td><strong>pending</strong></td>
-<td>09:24 <code>/new</code> 仍为 Wed 21；ID 预览 28633–30000 已过（1,275 / 8 类 432），交 13:42 补扫以 <code>/new</code> 定上限</td>
+<td><strong>done（10-22 13:58 补扫）</strong></td>
+<td>晨间 pending（09:24 <code>/new</code> 仍为 Wed 21）；13:43 <code>/new</code> 已翻到 Thu 22，8 类去重 808（new 362 / cross 147 / 替换 299），new 编号 28637–30129；预览外 77 条逐条读标题；v2.2 命中 72 全读标题</td>
 </tr>
 </tbody>
 </table></div>
 <ul>
 <li>筛选：screen v2.2（新增 GEN 门 <code>flow[- ]match</code>、STRONG <code>solver steps/budget</code>）。</li>
-<li>发现延迟：Thu 22 批待 13:42。</li>
+<li>发现延迟：Thu 22 批应出 08:00 → 进日报 ~14:00，≈ 6 h。</li>
+<li>F5/F9：同事转交 arXiv ID 并集 91，补扫前 24/91 = 26% → 补扫后 91/91；范围内漏检 0。</li>
 </ul></section>
-<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-22 09:37 (UTC+8)</div></main></div>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-22 13:50 (UTC+8)</div></main></div>
 <script>
 (function(){
  // 详情卡片全部展开/收起
