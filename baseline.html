@@ -69,6 +69,7 @@ details.card>.body{padding:4px 18px 10px}
 <li><a href="#现在就能用的配方按成本排序每条先跑的对照写在前面">现在就能用的配方（按成本排序，每条先跑的对照写在前面）</a></li>
 <li><a href="#逐篇对我们训练的含义改哪个决定-先跑哪个对照">逐篇：对我们训练的含义（改哪个决定 · 先跑哪个对照）</a></li>
 <li><a href="#放不进框架的发现挂到它证实或推翻的那一格的前提上">放不进框架的（发现挂到它证实或推翻的那一格的前提上）</a></li>
+<li><a href="#10-23-q3-复扫补标题语义漏检摘要级">【10-23 Q3 复扫补】标题语义漏检（摘要级）</a></li>
 <li><a href="#开放问题短">开放问题（短）</a></li>
 <li><a href="#盲区短">盲区（短）</a></li>
 </ul>
@@ -877,6 +878,88 @@ details.card>.body{padding:4px 18px 10px}
 <li><strong>CRP <a href="https://arxiv.org/abs/2610.11479">2610.11479</a></strong>：不做蒸馏，只是不用双向教师直接训练因果底座。它挂在轴 C 的前提「因果教师从哪来」上，提供了一个新来源（详见每日）。</li>
 <li><strong>没有格子的方法</strong>：PAC 式「权重组合」暂时挂在 L4；如果再出现一篇，就单开一格。</li>
 </ul>
+</section><section class=""><h2 id="10-23-q3-复扫补标题语义漏检摘要级">【10-23 Q3 复扫补】标题语义漏检（摘要级）</h2>
+<blockquote>
+<p>触发：EditStream <a href="https://arxiv.org/abs/2608.21424">2608.21424</a> 是 Q3 标题 KW（S1）漏检。2026-10-23 对 Jul–Sep 流式/世界模型/视频编辑等软标题做摘要级 Codex 语义复扫；下列为确认入围、且基线正文此前未挂格的补挂。评级仅摘要级，<strong>无 必读·先跑</strong>。</p>
+</blockquote>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文</th>
+<th>我归的格</th>
+<th>评级</th>
+<th>关键操作（摘要）</th>
+<th>与最接近工作的差别</th>
+<th>对我们训练的含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EditStream <a href="https://arxiv.org/abs/2608.21424">2608.21424</a></td>
+<td>流式编辑 × 轨迹匹配（中间态）</td>
+<td>值得看·流式（已于 10-21 日更收回）</td>
+<td>在学生到达的中间状态上做 Velocity Moment Matching，再 AR 展开；面向交互式视频生成与编辑统一框架</td>
+<td>相对 CDM：同样是 on-policy 中间态速度回归，落点从流式生成换成流式编辑</td>
+<td>流式编辑底座可试「中间态 VMM → AR」两段式；先对照 Self-Forcing/CDM 同损失是否可直接迁</td>
+</tr>
+<tr>
+<td>LeapTalk <a href="https://arxiv.org/abs/2608.00079">2608.00079</a></td>
+<td>L1/桥蒸馏（data-to-data）× 流式 AV</td>
+<td>值得读·流式AV</td>
+<td>单步 Brownian bridge 蒸馏：data-to-data 传输 + 持久参考锚定；SNR 对齐的 Φ(τ) 做异构建教师→学生；音频驱动 CFG</td>
+<td>相对噪声→数据的一步蒸馏 / 普通 AR talking-head：改成桥式 data-to-data，且显式对准异构建时间</td>
+<td>数字人实时单步：先对照「标准一步 distill vs Brownian bridge」；看身份漂移与唇同步</td>
+</tr>
+<tr>
+<td>Mage-Flow Turbo <a href="https://arxiv.org/abs/2607.19064">2607.19064</a></td>
+<td>L3 对抗感知少步（图像）</td>
+<td>值得看·图像</td>
+<td>在原生分辨率 DiT 栈上做 few-step distillation + adversarial perceptual guidance → 4-step Turbo</td>
+<td>相对 DMD2/APT 类图像少步：栈级工程（VAE+DiT+NFT）为主，蒸馏机制非新</td>
+<td>图像侧可作 4-step 配方参考；AV/流式迁移点主要在对抗感知头，不在新散度</td>
+</tr>
+<tr>
+<td>SolarWM <a href="https://arxiv.org/abs/2609.02886">2609.02886</a></td>
+<td>流式 WM 配方（含 DMD 第三阶段）</td>
+<td>值得看·流式</td>
+<td>开源数据引擎 + 三阶段：双向适配 → TF 自回归初始化 → distribution matching distillation；多底座 5B–33B</td>
+<td>相对单篇 DMD 方法文：贡献在可复现配方与数据契约，蒸馏本身是标准 DMD 段</td>
+<td>若做视频 WM：可直接跟其第三阶段 DMD 配方做对照；先确认因果 rollout 协议</td>
+</tr>
+<tr>
+<td>WorldCrafter <a href="https://arxiv.org/abs/2609.24984">2609.24984</a></td>
+<td>流式 WM 记忆 × 少步</td>
+<td>值得看·流式</td>
+<td>相机可查询的隐式 3D memory + few-step distillation，支持分钟级流式探索</td>
+<td>相对 LongLive/记忆类 forcing：核心是 3D-aware memory，少步是配套</td>
+<td>长程一致性优先改 memory，少步作部署配套；非新蒸馏信号</td>
+</tr>
+<tr>
+<td>AptAvatar <a href="https://arxiv.org/abs/2607.24013">2607.24013</a></td>
+<td>L2 端点锚定分布蒸馏 × 数字人</td>
+<td>值得读·流式AV（S3 短名单未挂评级）</td>
+<td>Endpoint-Anchored Distribution Distillation：用冻结 4-step bridge 的轨迹端点分布训 Anchor Score Estimator，再蒸馏 2-step 学生；Self-Generated History Replay</td>
+<td>相对普通 DMD2 两步：多一个可达到的端点锚，缓解教师多步↔学生两步鸿沟</td>
+<td>AV 数字人两步：先消融「有无 endpoint anchor」</td>
+</tr>
+<tr>
+<td>Omni-LiveAvatar <a href="https://arxiv.org/abs/2608.13602">2608.13602</a></td>
+<td>轴C × 渐进 AR 蒸馏（联合 AV）</td>
+<td>值得读·流式AV（S3）</td>
+<td>渐进自回归蒸馏：双向联合 AV 教师 → few-step AR 学生；同步长短时记忆；层次滚动 prompt</td>
+<td>相对 LiveAvatar/流式 AV：强调无辅助稳定器的分钟级实时联合音视频</td>
+<td>流式 AV 分钟级：对照 progressive AR distill 课程是否可迁到我们底座</td>
+</tr>
+<tr>
+<td>ForgeWM <a href="https://arxiv.org/abs/2608.14022">2608.14022</a></td>
+<td>轴C × CCD+OPD（动作条件 WM）</td>
+<td>值得读·流式（S3）</td>
+<td>域适应 → TF 因果 → causal consistency distillation → on-policy distribution matching；1/2/4-step 学生 + 双路径部署</td>
+<td>相对 Self-Forcing/CMD：动作条件（键鼠）与预算特化学生</td>
+<td>交互 WM：因果一致性蒸馏与 OPD 分段是否必要，先做 1-step vs 4-step</td>
+</tr>
+</tbody>
+</table></div>
 </section><section class=""><h2 id="开放问题短">开放问题（短）</h2>
 <ol>
 <li>因果打分的三种替代（因果前缀 / 同前缀 / 无前缀）谁最好？还没有同协议比较。</li>
@@ -886,12 +969,12 @@ details.card>.body{padding:4px 18px 10px}
 </ol>
 </section><section class=""><h2 id="盲区短">盲区（短）</h2>
 <ul>
-<li>召回只用了标题关键词，系统报告里的蒸馏章节会漏；没用 OpenAlex、OpenReview、会议。</li>
+<li>召回原只用了标题关键词（EditStream 即 S1 漏检）。<strong>【10-23】</strong> 已对 Q3 Jul–Sep 流式/WM/视频编辑软标题做摘要级语义复扫（见 <code>raw/q3-rescan-2026-10-23/REPORT.md</code>）；OpenAlex/会议仍未系统用。</li>
 <li>没有 GPU，任何结论都没有复现；AV 测量只有 3 个单 clip。</li>
 <li>118 篇只读了摘要。FaceGAN <a href="https://arxiv.org/abs/2610.11070">2610.11070</a>、CRP <a href="https://arxiv.org/abs/2610.11479">2610.11479</a>、PTD <a href="https://arxiv.org/abs/2610.11498">2610.11498</a>、Data-Space Iteration <a href="https://arxiv.org/abs/2610.12102">2610.12102</a>、CSF <a href="https://arxiv.org/abs/2610.12156">2610.12156</a> 已在 <a href="daily/2026-10-10.html">10-10 每日</a> 精读；其中 FaceGAN 的谱界给出一个可能的机制，解释流式里的「一致性 vs 动态度」（每日 Q6）。</li>
 <li>精读的 14 篇里只有 Mask Forcing 公开了仓库，而且只有推理代码。</li>
 </ul></section>
-<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-23 13:58 (UTC+8)</div></main></div>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-23 17:39 (UTC+8)</div></main></div>
 <script>
 (function(){
  // 详情卡片全部展开/收起
