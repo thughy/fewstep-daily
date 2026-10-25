@@ -1,5 +1,5 @@
 <!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"><title>多模态少步蒸馏 · 2026Q3 基线（2026-07-01 → 2026-10-10）</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>多模态少步蒸馏 · 基线（Q3 起稿 → 更新至 2026-10-25）</title>
 <style>
 :root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--side:#f6f8fa;--line:#d1d9e0;--acc:#0b57d0;--l1:#fff8e6;--l1b:#f0c36d}
 *{box-sizing:border-box}
@@ -69,45 +69,45 @@ details.card>.body{padding:4px 18px 10px}
 <li><a href="#现在就能用的配方按成本排序每条先跑的对照写在前面">现在就能用的配方（按成本排序，每条先跑的对照写在前面）</a></li>
 <li><a href="#逐篇对我们训练的含义改哪个决定-先跑哪个对照">逐篇：对我们训练的含义（改哪个决定 · 先跑哪个对照）</a></li>
 <li><a href="#放不进框架的发现挂到它证实或推翻的那一格的前提上">放不进框架的（发现挂到它证实或推翻的那一格的前提上）</a></li>
+<li><a href="#10-25-更新近两周关键论文清晰度顺序">【10-25 更新】近两周关键论文（清晰度顺序）</a><ul>
+<li><a href="#direct-forcing-261030861-l5-流式-必读先跑训练代码已齐权重未公开10-25-升级">Direct Forcing 2610.30861 · L5 × 流式 · 必读·先跑（训练代码已齐；权重未公开）【10-25 升级】</a></li>
+<li><a href="#speculative-forcing-261022347-f7-必读待代码">Speculative Forcing 2610.22347 · F7 · 必读·待代码</a></li>
+<li><a href="#其它近两周必读-值得读摘要详-weekly">其它近两周必读 / 值得读（摘要，详 weekly）</a></li>
+<li><a href="#taxonomy-v15-一屏训练信号-问题位置-f7">Taxonomy v1.5 一屏（训练信号 × 问题位置 + F7）</a></li>
+</ul>
+</li>
 <li><a href="#10-23-q3-复扫补标题语义漏检摘要级">【10-23 Q3 复扫补】标题语义漏检（摘要级）</a></li>
 <li><a href="#开放问题短">开放问题（短）</a></li>
 <li><a href="#盲区短">盲区（短）</a></li>
 </ul>
 </div>
 </div></nav>
-<main><h1 id="多模态少步蒸馏-2026q3-基线2026-07-01-2026-10-10">多模态少步蒸馏 · 2026Q3 基线（2026-07-01 → 2026-10-10）</h1>
+<main><h1 id="多模态少步蒸馏-基线q3-起稿-更新至-2026-10-25">多模态少步蒸馏 · 基线（Q3 起稿 → 更新至 2026-10-25）</h1>
 <blockquote>
 <p>给 Henry。读法分两层：<strong>上层</strong>是一屏的分类框架，用来导航；<strong>下层</strong>是每个格子的细节，包括操作步骤、因果链、与最接近工作的差别、证据，细到能照着复现关键一步。
-召回范围：arXiv 月度全量列表（cs.CV、cs.LG、stat.ML、cs.SD、eess.AS、cs.MM，共 41,887 条）→ 标题关键词命中 609 → 入围 132（都读了摘要）→ 精读 14 篇，另有 3 篇 primer 补读了方法段。克隆了 2 个仓库读代码（Self-Forcing、Mask-Forcing）。
+召回范围：Q3 月度全量（见下）+ 2026-10-10 起每日 / 每周；<strong>2026-10-25 周末全面更新</strong>见 <code>deep/2026-10-25-refresh</code>。
 <strong>论文数字全部是原文自报，没有复现</strong>（盒子无 GPU）。我自己跑的只有 CPU 玩具、读代码和 ffmpeg 单 clip 测量。
-标签：<span class="b b-meas">实测</span>盒子上跑的或读代码 ·<span class="b b-orig">原文</span>读过原文 ·<span class="b b-team">队友</span>队友转述 ·<span class="b b-inf">推断</span>·<span class="b b-codex">Codex✓</span>Codex 产出且已抽查。arXiv 链接全部在 2026-10-10 逐个打开核过。
-详细卡片见 <code>survey.md</code>；方法谱系见 <code>/home/box/agent-data/fewstep-digest/lineage.md</code>；理论底座见 <code>primer/foundations.md</code>。</p>
+标签：<span class="b b-meas">实测</span>盒子上跑的或读代码 ·<span class="b b-orig">原文</span>读过原文 ·【代码】核对仓库 ·<span class="b b-team">队友</span>队友转述 ·<span class="b b-inf">推断</span>·【仅OR】·<span class="b b-codex">Codex✓</span>Codex 产出且已抽查。
+详细卡片见 <code>survey.md</code>；方法谱系见 <code>/home/box/agent-data/fewstep-digest/lineage.md</code>；理论底座见 <code>primer/foundations.md</code>；本周认知见 <a href="weekly/2026-10-23.html">weekly/2026-10-23</a>。</p>
 </blockquote>
 <hr />
 <section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
-<p><strong>一句话：本季的进展不在「换散度」，而是把 DMD 的每一个输入摆正——打分上下文要和生成时一致，条件要有真实锚点，多样性要在开头保住，critic 误差要过滤，越过教师要靠真实数据。少步本身几乎没有代价，真正的代价在因果化和目标分布选错。</strong></p>
-<p><strong>对我们训练的含义（按要做的决定排列）：</strong></p>
+<p><strong>一句话：少步化的主战场不在「换散度」，而在摆正 DMD 的输入，并管好推理时步数分配、初始化、要不要 online score；少步几乎免费，贵的是因果化和目标选错，AV 还要处理模态不对称。</strong></p>
+<p><strong>对我们训练的含义（按要做的决定排列，2026-10-25）：</strong></p>
 <ol>
-<li><strong>流式视频 / 流式 AV：</strong> DMD 阶段第一个消融做<strong>打分上下文</strong>（双向整段 vs 因果前缀 vs 无前缀），不要先去换散度。<ul>
-<li>先跑的对照：双向教师在同一批数据上微调，所有组的 CFG 保持一致。</li>
+<li><strong>流式视频 / 流式 AV：</strong> DMD 阶段第一个消融仍是<strong>打分上下文</strong>（双向整段 vs 因果前缀 vs 无前缀 / 压缩记忆），不要先去换散度。<ul>
+<li>先跑：双向教师同数据微调；CFG 一致；可选 WorldPlay2 式压缩记忆 vs 全上下文。</li>
 </ul>
 </li>
-<li><strong>流式 AV：</strong> 先单独测「只因果化、不减步」的 WER 和 RMS。如果它已经掉了，问题在因果化，减步不是原因。<ul>
-<li>少步部分可以直接复用双向 LoRA（PAC）。</li>
-</ul>
-</li>
-<li><strong>所有模态的 DMD：</strong> 加 PDMD 一行投影，训练曲线拉到 ≥5K 步。<ul>
-<li>先跑的对照：等范数缩步。我的玩具里，在没有过冲的区间，缩步反而更好。</li>
-</ul>
-</li>
-<li><strong>流式 / 视频：</strong> 多样性只在<strong>首 chunk 首步</strong>处理（timestep 扰动，或换成轨迹专家），其余交给 DMD。<ul>
-<li>先跑的对照：同量的额外噪声；同 prompt 采 ≥8 个 seed，看 precision/coverage。</li>
-</ul>
-</li>
-<li><strong>图像 / 视频（AV 待验证）：</strong> 想越过教师就接入真实数据判别头（DMAD）。<ul>
-<li>先跑的对照：去掉真实头的版本，并把预生成教师样本的算力计入成本。</li>
-</ul>
-</li>
+<li><strong>流式：初始化是独立因子。</strong> {ODE, CD/rCM, Drift 缩小版} × 同一套 DMD；报 Dynamic + Quality + 60 s。<span class="b b-orig">原文 / 仅OR</span></li>
+<li><strong>流式：有强参考视频时，问还要不要 ODE→DMD 两阶段。</strong> 对照 {SF/CF, Elastic/ViRDM 式 MMD, <strong>Direct Forcing CCA+MMD</strong>}；Direct 训练代码已齐、学生权重未公开 → 必读·先跑。【代码 10-25】</li>
+<li><strong>流式：想白嫖推理早停</strong> → 训练保留随机出口（中间 x̂0 当合法样本）；等 Speculative 代码。<span class="b b-orig">原文</span></li>
+<li><strong>流式 AV：</strong> 先单独测「只因果化、不减步」的 WER/RMS；少步可复用双向 LoRA（PAC）。参考图进打分输入要质检（Lost/LiveTalk）。<span class="b b-orig">原文</span></li>
+<li><strong>AV 不对称：</strong> 打分/缓存可分模态（MDD/MAAD/FastH3/CAVC 同向）；Direct 当前是 T2V，不能直接当 AV 配方。<span class="b b-orig">仅OR / 原文</span></li>
+<li><strong>所有模态的 DMD：</strong> 加 PDMD 一行投影，曲线拉到 ≥5K；先对照等范数缩步。<span class="b b-meas">原文 + 实测玩具</span></li>
+<li><strong>多样性：</strong> 只在首 chunk 首步处理（扰动或轨迹专家）；其余交 DMD。<span class="b b-orig">原文</span></li>
+<li><strong>越过教师：</strong> 图像/视频加真实数据判别头（DMAD）；AV 客观指标仍不足。<span class="b b-orig">原文</span></li>
+<li><strong>Routed / 高噪真实监督：</strong> 真实视频打分优先放在高噪声段（第三次独立证据）。<span class="b b-orig">原文</span></li>
 </ol>
 <hr />
 </section><section class="layer1"><h2 id="先懂这三件事">先懂这三件事<span class="layer-tag">第一层 · 框架</span></h2>
@@ -174,9 +174,21 @@ details.card>.body{padding:4px 18px 10px}
 </tr>
 <tr>
 <td>L5 样本级 MMD</td>
-<td>on-policy + 教师样本集</td>
-<td>无 score 模型，但仍受教师上限所限</td>
-<td>Elastic Forcing（值得读，存疑）</td>
+<td>on-policy + 教师样本集 / 自 rollout 特征</td>
+<td>无 online score，仍受参考/教师上限；Semantic 可能偏低</td>
+<td>Elastic / ViRDM；<strong>Direct Forcing（必读·先跑，代码 10-25）</strong></td>
+</tr>
+<tr>
+<td><strong>F7 推理时步数分配</strong>（v1.5）</td>
+<td>冻结少步学生 + 逐 token/块早停</td>
+<td>中间 x̂0 未经随机出口监督则早停伤质量</td>
+<td><strong>Speculative Forcing（必读·待代码）</strong></td>
+</tr>
+<tr>
+<td><strong>初始化旋钮</strong>（v1.5，横切）</td>
+<td>ODE / CD·rCM / 漂移场 / 原底座</td>
+<td>CD 可砸动态度；Drift 可只改 init 不动 DMD</td>
+<td>One-Forcing；Drift Forcing；WorldPlay2</td>
 </tr>
 <tr>
 <td><strong>轴 C（流式/AV）</strong></td>
@@ -878,6 +890,154 @@ details.card>.body{padding:4px 18px 10px}
 <li><strong>CRP <a href="https://arxiv.org/abs/2610.11479">2610.11479</a></strong>：不做蒸馏，只是不用双向教师直接训练因果底座。它挂在轴 C 的前提「因果教师从哪来」上，提供了一个新来源（详见每日）。</li>
 <li><strong>没有格子的方法</strong>：PAC 式「权重组合」暂时挂在 L4；如果再出现一篇，就单开一格。</li>
 </ul>
+</section><section class=""><h2 id="10-25-更新近两周关键论文清晰度顺序">【10-25 更新】近两周关键论文（清晰度顺序）</h2>
+<blockquote>
+<p>写法：白话背景 → 具体问题 → 怎么做 → 为什么 → 几个数字 → 限制 → 对我们。完整周报见 weekly/2026-10-23；本页只收训练决策相关。</p>
+</blockquote>
+<h3 id="direct-forcing-261030861-l5-流式-必读先跑训练代码已齐权重未公开10-25-升级">Direct Forcing <a href="https://arxiv.org/abs/2610.30861">2610.30861</a> · L5 × 流式 · <strong>必读·先跑（训练代码已齐；权重未公开）</strong>【10-25 升级】</h3>
+<ul>
+<li><strong>白话：</strong> 常见少步流式要先 ODE 暖场再 DMD；贵，且初始化会伤动态度。</li>
+<li><strong>问题：</strong> 有参考视频时，能否单阶段直接蒸到 4 步？</li>
+<li><strong>怎么做：</strong> ①原始 Wan 初始化；②CCA：参考历史下续写，VideoMAE L24 token cosine（目标 stop-grad）；③RDM：自 rollout 上 Nyström MMD（VideoMAE L16+DiT L9+SigLIP2）；④GNM+REW 只调两种梯度权重；⑤250 更新。【代码】<span class="b b-codex">Codex✓</span></li>
+<li><strong>为什么：</strong> 用参考对齐代替 ODE 阶段，用冻结特征 MMD 代替 online score。</li>
+<li><strong>数字：</strong> Total 84.63 / Quality 86.01 / Semantic 79.08（Semantic 偏低）。<span class="b b-orig">原文</span></li>
+<li><strong>限制：</strong> 学生权重未公开；发布是 <strong>T2V 不是 AV</strong>；未实跑。<span class="b b-orig">原文</span>【我测】</li>
+<li><strong>对我们：</strong> 流式必跑对照 {ODE→DMD, ODE→MMD, CCA+MMD}；AV 暂用。<strong>注意与 Drift（同 Total 84.63、仍用 DMD）不要混。</strong></li>
+</ul>
+<h3 id="speculative-forcing-261022347-f7-必读待代码">Speculative Forcing <a href="https://arxiv.org/abs/2610.22347">2610.22347</a> · F7 · 必读·待代码</h3>
+<ul>
+<li><strong>白话：</strong> 4 步里很多 token 其实早就收敛，却仍被强迫跑满。</li>
+<li><strong>问题：</strong> 能否在等吞吐下按 token 早停，还不掉点？</li>
+<li><strong>怎么做：</strong> 中间 x̂0 当草稿；训练无关或轻量 verifier 决定是否定稿；定稿停去噪但留 KV。<span class="b b-orig">原文</span></li>
+<li><strong>数字：</strong> LongLive 等时 Total +0.63；Lingbot ~24.5 fps。<span class="b b-orig">原文</span></li>
+<li><strong>限制：</strong> 官方代码仍未放（README only）。【我测 10-25】</li>
+<li><strong>对我们：</strong> 训练保留随机出口；有代码后再跑等墙钟（含 VAE）对照。</li>
+</ul>
+<h3 id="其它近两周必读-值得读摘要详-weekly">其它近两周必读 / 值得读（摘要，详 weekly）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文</th>
+<th>格</th>
+<th>评级</th>
+<th>一句话对我们</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>One-Forcing</td>
+<td>L4 流式</td>
+<td>必读·先跑</td>
+<td>逐帧 1 步 + 真实 GAN；<strong>CD 初始化伤动态</strong> → init 进因子表</td>
+</tr>
+<tr>
+<td>Routed Forcing</td>
+<td>L4 AV</td>
+<td>必读·先跑</td>
+<td>高噪段改真实视频打分；可从 SF 检查点短训</td>
+</tr>
+<tr>
+<td>Drift Forcing</td>
+<td>L5→L2 流式</td>
+<td>必读·先跑（仅OR+代码）</td>
+<td>只改初始化漂移场，DMD 不动</td>
+</tr>
+<tr>
+<td>Lost / LiveTalk</td>
+<td>L2 AV</td>
+<td>必读·先跑</td>
+<td>坏参考图进打分输入；质检参考 + ODE 训够</td>
+</tr>
+<tr>
+<td>WorldPlay2</td>
+<td>轴C 流式</td>
+<td>值得读</td>
+<td>压缩记忆打分≈全上下文；增益多来自 init</td>
+</tr>
+<tr>
+<td>Clean Forcing</td>
+<td>发现类</td>
+<td>值得读</td>
+<td>多步底座漂移修正；原样套 SF 4 步变差</td>
+</tr>
+<tr>
+<td>TriTD / SolarRenderer / FastH3 / Fréchet</td>
+<td>各格</td>
+<td>值得读</td>
+<td>KV；H3 结构引导；τ 不对称；真实 FD 管长漂</td>
+</tr>
+<tr>
+<td>CrossDistill <code>ZcopBchZYe</code></td>
+<td>L4</td>
+<td>值得看·高（仅OR，10-25）</td>
+<td>轨迹级高噪轨迹/低噪 DMD；等 arXiv</td>
+</tr>
+<tr>
+<td>Pyramid Forcing <code>7nPfzKKfZ4</code></td>
+<td>记忆</td>
+<td>值得看（仅OR，10-25）</td>
+<td>按头类型分 KV；信号不变</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="taxonomy-v15-一屏训练信号-问题位置-f7">Taxonomy v1.5 一屏（训练信号 × 问题位置 + F7）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>轴1 \ 轴2</th>
+<th>单步去噪</th>
+<th>流式时间轴</th>
+<th>AV 跨模态</th>
+<th><strong>推理时步数分配（F7）</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L1 轨迹</strong></td>
+<td>CDM；iSSFM</td>
+<td>EditStream VMM</td>
+<td>LeapTalk</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L2 分数差</strong></td>
+<td>—</td>
+<td>TriTD；WorldPlay2；Attn-Forcing</td>
+<td>Lost/LiveTalk；Solar；FastH3</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L3 对抗</strong></td>
+<td>DMAD</td>
+<td>—</td>
+<td>Radian</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L4 混合</strong></td>
+<td>CrossDistill（仅OR）</td>
+<td>One-Forcing</td>
+<td>Routed Forcing</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L5 / 特征场</strong></td>
+<td>—</td>
+<td><strong>Direct Forcing</strong>；Drift（init）；Fréchet</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>修正/其它</strong></td>
+<td>—</td>
+<td>Clean Forcing</td>
+<td>—</td>
+<td><strong>Speculative Forcing</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>横切：初始化</strong>（ODE / CD·rCM / Drift / 原底座）不改变轴 A 的等价形式，但动态度可以差一截——单独记账。</p>
+<hr />
 </section><section class=""><h2 id="10-23-q3-复扫补标题语义漏检摘要级">【10-23 Q3 复扫补】标题语义漏检（摘要级）</h2>
 <blockquote>
 <p>触发：EditStream <a href="https://arxiv.org/abs/2608.21424">2608.21424</a> 是 Q3 标题 KW（S1）漏检。2026-10-23 对 Jul–Sep 流式/世界模型/视频编辑等软标题做摘要级 Codex 语义复扫；下列为确认入围、且基线正文此前未挂格的补挂。评级仅摘要级，<strong>无 必读·先跑</strong>。</p>
@@ -974,7 +1134,7 @@ details.card>.body{padding:4px 18px 10px}
 <li>118 篇只读了摘要。FaceGAN <a href="https://arxiv.org/abs/2610.11070">2610.11070</a>、CRP <a href="https://arxiv.org/abs/2610.11479">2610.11479</a>、PTD <a href="https://arxiv.org/abs/2610.11498">2610.11498</a>、Data-Space Iteration <a href="https://arxiv.org/abs/2610.12102">2610.12102</a>、CSF <a href="https://arxiv.org/abs/2610.12156">2610.12156</a> 已在 <a href="daily/2026-10-10.html">10-10 每日</a> 精读；其中 FaceGAN 的谱界给出一个可能的机制，解释流式里的「一致性 vs 动态度」（每日 Q6）。</li>
 <li>精读的 14 篇里只有 Mask Forcing 公开了仓库，而且只有推理代码。</li>
 </ul></section>
-<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-23 17:39 (UTC+8)</div></main></div>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-25 14:32 (UTC+8)</div></main></div>
 <script>
 (function(){
  // 详情卡片全部展开/收起
