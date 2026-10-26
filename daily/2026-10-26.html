@@ -68,21 +68,26 @@ details.card>.body{padding:4px 18px 10px}
 <li><a href="#f4-or-孪生对账今日关闭假新">F4 OR 孪生对账（今日关闭「假新」）</a></li>
 <li><a href="#f5-队友转交定级">F5 队友转交定级</a></li>
 <li><a href="#批次台账动作">批次台账动作</a></li>
-<li><a href="#补扫占位1342">补扫占位（13:42）</a></li>
+<li><a href="#补扫1349北京时间mon-26-oct-列表批">补扫（13:49，北京时间）：Mon 26 Oct 列表批</a><ul>
+<li><a href="#列表批相对晨间-hits-的新增15多为-replacement">列表批相对晨间 hits 的新增（15，多为 replacement）</a></li>
+<li><a href="#f5-队友转交召回补扫复核">F5 队友转交召回（补扫复核）</a></li>
+<li><a href="#粗筛命中但未收录f845-命中-1-条值得看表内-44">粗筛命中但未收录（F8，45 命中 − 1 条值得看表内 = 44）</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div></nav>
 <main><h1 id="少步蒸馏-每日-2026-10-26周一">少步蒸馏 · 每日 2026-10-26（周一）</h1>
 <blockquote>
-<p><strong>批次覆盖（F1）</strong>：应出列表日 = <strong>Mon 26 Oct</strong>（北京 08:00）。09:18–09:2x <code>/new</code>（cs.CV/LG/SD/AS/MM）仍是 <strong>Friday, 23 October 2026</strong>；RSS <code>cs.CV</code> 无 Mon pubDate；API G9 与 RL 同事一致 <strong>FAIL</strong> → <strong>Mon 26 = pending</strong>（<strong>不能把 Fri 23 当成今天</strong>）。<strong>13:42 补扫</strong>再查 <code>/new</code>；若仍未出则继续 pending。Fri 23 已 done（10-23 13:51）。Sat/Sun <strong>none</strong>。</p>
+<p><strong>批次覆盖（F1）</strong>：应出列表日 = <strong>Mon 26 Oct</strong>（北京 08:00）。09:18–09:2x <code>/new</code> 仍 Fri 23 → 晨间 <strong>pending</strong>；<strong>13:49 补扫</strong> <code>/new</code>（cs.CV/LG/stat.ML/SD/AS/MM/eess.IV）页头已是 <strong>Monday, 26 October 2026</strong> → <strong>Mon 26 = done</strong>（去重 <strong>523</strong> / v2.2 命中 <strong>45</strong>；见文末「补扫」）。Fri 23 已 done（10-23 13:51）。Sat/Sun <strong>none</strong>。</p>
 <p><strong>F3 ID 区间预览（不能标 done）</strong>：起点 <code>2610.31673</code>（Fri 23 最大号 31671 之后）→ 当前探针上限 <code>2610.32982</code>。只读复用 RL 同事逐号 abs（<code>/workspace/genrl-digest/2026-10-26/batch/abs/</code>，09:20 冻结 <strong>1300</strong> 篇）。落在我方 8 类约 <strong>322</strong>；正则 v2.2 命中 <strong>39</strong>，<strong>全部读了标题（F6）</strong>；Codex 语义分诊 IN 1 / PERIPH 2 / OUT 36，我复核全部非 OUT<span class="b b-meas">实测</span><span class="b b-codex">Codex✓</span>。</p>
 <p><strong>F4 OpenReview</strong>：文献 10-25 <code>or_core.json</code> 115 + <code>or_iclr27_search</code> 387（只读）。标题检索把「看起来新」的 OR id 对上已评 arXiv 孪生（PTD / Memory Forcing / FlashRender / OPSD-V / ForgeWM / UACD / PFM）；<strong>积压实质 0 条新机制漏评</strong>。新增仅OR观察：<code>wFQzMvMv16</code> Anamora（流式 AV 实体记忆，无孪生）→ 转文献。【仅OR摘要】</p>
-<p><strong>F5 对账（48h）</strong>：文献 10-26 shortlist/forward（JetSpec、<a href="https://arxiv.org/abs/2610.30644">2610.30644</a>、Hy-Nomas）+ RL <code>forward_fewstep.txt</code> 5 条全部定级；范围内漏检 <strong>0</strong>。
+<p><strong>F5 对账（48h）</strong>：文献晨报（JetSpec、<a href="https://arxiv.org/abs/2610.30644">2610.30644</a>、Hy-Nomas）+ 文献 10:48 catch-up forward（<a href="https://arxiv.org/abs/2610.31819">2610.31819</a>、<a href="https://arxiv.org/abs/2610.32512">2610.32512</a>）+ RL <code>forward_fewstep.txt</code> 6 条<strong>全部</strong>在本日报有 ID+评级；补扫后范围内漏检 <strong>0</strong>（召回 11/11）。
 标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】【HF】【仅OR摘要】<span class="b b-team">队友转述</span><span class="b b-inf">推断</span><span class="b b-codex">Codex✓</span></p>
 </blockquote>
 <hr />
 <section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
-<p><strong>周一列表批尚未上线；ID 区间预览没有新的「必读 / 值得读」机制论文。今天真正要改训练预期的，是观察名单上的资源状态：PTD 在 MiniMax-H3 Ref2VA 上放出了可跑的 4/6/8 步 LoRA（含 PTD+RefAsymOPD 升级包）。</strong></p>
+<p><strong>周一列表批已于 13:49 补扫上线；列表批 + ID 预览均没有新的「必读 / 值得读」机制论文（相对晨间）。今天真正要改训练预期的，是观察名单上的资源状态：PTD 在 MiniMax-H3 Ref2VA 上放出了可跑的 4/6/8 步 LoRA（含 PTD+RefAsymOPD 升级包）。</strong></p>
 <ol>
 <li><strong>PTD <a href="https://arxiv.org/abs/2610.11498">2610.11498</a> → 升「必读·先跑（H3 Ref2VA 推理权重+脚本已齐；训练代码未开源）」</strong>。【HF】<code>taobao-content-ai/MiniMax-H3-PTD-LoRAs</code>（4/8 步，约 10-20 建、10-25 仍更新）与 sibling <code>…-PTD-RefAsymOPD-LoRAs</code>（6/8 步，约 10-22）。触发 v1.4 <strong>(a)</strong>：会改变「H3 AV 少步先跑哪条轨迹蒸馏」的决定，且推理入口/配置/权重齐全、成本可估。相对 10-10「值得读 / 可直接用」：当时只有论文数字，现在能直接对照跑。</li>
 <li><strong>RefAsymOPD（仅 HF README 名，无独立 arXiv）→ 值得看·HF 配方</strong>。自称 PTD + Reference-Asymmetric On-Policy Distillation，demo 列宣称 8 步优于裸 PTD，甚至相对教师 40 NFE 更sharper——<strong>无论文公式、无训练代码</strong> → 不当新格子，只当 H3 对照包；出论文再开格。</li>
@@ -448,14 +453,104 @@ details.card>.body{padding:4px 18px 10px}
 </tr>
 <tr>
 <td><strong>Mon 26 Oct</strong></td>
-<td><strong>pending</strong>（<code>/new</code> 未翻页；F3 预览已写入本日报；<strong>13:42 补扫</strong>）</td>
+<td><strong>done</strong>（13:49 <code>/new</code> Monday；去重 523 / hits 45；见「补扫」）</td>
 </tr>
 </tbody>
 </table></div>
 <hr />
-</section><section class=""><h2 id="补扫占位1342">补扫占位（13:42）</h2>
-<p>若 <code>/new</code> 变为 Monday, 26 October 2026：全量 8 类重筛 → 与本预览 ID 区间并集去重 → 新命中补评 → 更新 batches.md 为 done → 必要时改本页并重发 publish。若仍 Fri 23：保持 pending，记发现延迟。</p></section>
-<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-26 09:26 (UTC+8)</div></main></div>
+</section><section class=""><h2 id="补扫1349北京时间mon-26-oct-列表批">补扫（13:49，北京时间）：Mon 26 Oct 列表批</h2>
+<p><strong>台账</strong>：<code>/new</code> 页头已是 <strong>Monday, 26 October 2026</strong>（fresh curl 13:49 Asia/Shanghai；与文献 10:48 catch-up HTML 同批）。7 类去重 <strong>523</strong>（raw 635 → dedup 523；new/cross/repl 以 items 为准）；screen.py <strong>v2.2</strong> 命中 <strong>45</strong>，<strong>全部读过标题（F6）</strong><span class="b b-meas">实测</span>。相对晨间 F3 ID 区间 hits（39）：列表批新增命中 <strong>15</strong>（多为 replacement / 晨间 ID 窗外）；晨间命中有 9 条不在今日 <code>/new</code> 8 类并集（属更宽 API 尾扫，评级仍以晨间 F3 表为准）。原始：<code>daily/raw/1026/catchup/</code>（items.json / hits_v22.txt / triage_final.json）。发现延迟：应出 08:00 → 进日报 ~13:5x ≈ <strong>6 h</strong>。</p>
+<p><strong>补扫结论：无新的「必读 / 值得读」。</strong> 晨间 PTD→必读·先跑（H3 LoRA）不变，不是补扫新发现。Codex 焦点包把 Vorch-Streamer 判 IN（摘要写 SF+DMD 四步），<strong>我复核 arXiv 页为 Withdrawn（信息泄露，10-16 1KB 桩）→ 强制 OUT·withdrawn，不升格</strong><span class="b b-meas">实测</span><span class="b b-codex">Codex✓分歧</span>。</p>
+<h3 id="列表批相对晨间-hits-的新增15多为-replacement">列表批相对晨间 hits 的新增（15，多为 replacement）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>题目</th>
+<th>评级</th>
+<th>一句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.10429">2610.10429</a></td>
+<td>SGF+（repl v3）</td>
+<td><strong>值得看·流式 AR 参数化</strong></td>
+<td>去噪 / 写 KV 分参；相对 SGF 长程一致性小幅↑、动态度↓；<strong>1.4B→2.8B 无 matched-param 基线</strong> → 不升值得读；非新蒸馏 loss。文献侧「一行·维持」对齐。<span class="b b-team">队友转述+摘要</span></td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.28402">2610.28402</a></td>
+<td>StreamEval（repl）</td>
+<td>外围·流式评测</td>
+<td>维持 10-21：交互流式生成 bench，无减步方法</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2608.05663">2608.05663</a> / <a href="https://arxiv.org/abs/2609.26117">2609.26117</a></td>
+<td>Vorch-Streamer / Vorch-Human</td>
+<td><strong>OUT·withdrawn</strong></td>
+<td>摘要仍写 SF+DMD / 统一人像 AV，但 arXiv 已撤；<strong>不作训练信号</strong></td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2607.02220">2607.02220</a></td>
+<td>DetailAnywhere</td>
+<td>外围·应用蒸馏</td>
+<td>时尚细节特征对齐，不减采样步</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2607.01202">2607.01202</a></td>
+<td>World from Motion</td>
+<td>外围·3DGS</td>
+<td>生成进动态高斯，非扩散减步</td>
+</tr>
+<tr>
+<td>其余 9 条 repl</td>
+<td><a href="https://arxiv.org/abs/2603.02604">2603.02604</a> HACRL / <a href="https://arxiv.org/abs/2607.06957">2607.06957</a> Flow-ERD / <a href="https://arxiv.org/abs/2607.25815">2607.25815</a> Freq-RemoteVAR / <a href="https://arxiv.org/abs/2610.10623">2610.10623</a> LoopOPD / <a href="https://arxiv.org/abs/2510.18795">2510.18795</a> ProCLIP / <a href="https://arxiv.org/abs/2604.01361">2604.01361</a> IGLOSS / <a href="https://arxiv.org/abs/2606.18273">2606.18273</a> CoAT / <a href="https://arxiv.org/abs/2605.18971">2605.18971</a> O'Prior / <a href="https://arxiv.org/abs/2610.30843">2610.30843</a> LeanFinder</td>
+<td>OUT</td>
+<td>见下 F8</td>
+</tr>
+</tbody>
+</table></div>
+<p>晨间已命中、今日补 ID+评级留痕（非新增）：TileShare <a href="https://arxiv.org/abs/2610.32233">2610.32233</a> → 外围·解码加速；UniWorld <a href="https://arxiv.org/abs/2610.32381">2610.32381</a> → 外围·世界模型（归文献一行）。</p>
+<h3 id="f5-队友转交召回补扫复核">F5 队友转交召回（补扫复核）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>来源</th>
+<th>转发 ID</th>
+<th>本日报 ID+评级</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文献晨报</td>
+<td>JetSpec <a href="https://arxiv.org/abs/2606.18394">2606.18394</a> / <a href="https://arxiv.org/abs/2610.30644">2610.30644</a> / Hy-Nomas</td>
+<td>OUT·LLM / OUT·LLM / 值得看·待报告</td>
+<td>covered</td>
+</tr>
+<tr>
+<td>文献 catch-up 10:48</td>
+<td><a href="https://arxiv.org/abs/2610.31819">2610.31819</a> / <a href="https://arxiv.org/abs/2610.32512">2610.32512</a></td>
+<td>OUT·dLLM 投机 / 外围·图像应用</td>
+<td>covered</td>
+</tr>
+<tr>
+<td>RL <code>forward_fewstep.txt</code></td>
+<td>31819 / 32096 / 31840 / 31918 / 32102 / 32103</td>
+<td>均已在晨间 F5 表</td>
+<td>covered</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>召回：covered 11 / forwarded 11 = 100%；gap 0；无召回漏检。</strong></p>
+<h3 id="粗筛命中但未收录f845-命中-1-条值得看表内-44">粗筛命中但未收录（F8，45 命中 − 1 条值得看表内 = 44）</h3>
+<p><strong>OUT·withdrawn</strong>（2）——<a href="https://arxiv.org/abs/2608.05663">2608.05663</a> Vorch-Streamer（OUT·withdrawn：arxiv 页标注 Withdrawn due to information disclosure ）, <a href="https://arxiv.org/abs/2609.26117">2609.26117</a> Vorch-Human（OUT·withdrawn：与 Vorch-Streamer 同批撤回桩；统一人像 AV 生成，无少步主张可核）；</p>
+<p><strong>OUT·LLM/投机/深度/agent</strong>（11）——<a href="https://arxiv.org/abs/2610.31819">2610.31819</a> Speculative Diffusion is a Tale of Two T（OUT·dLLM 投机：晨间/F5 已关）, <a href="https://arxiv.org/abs/2610.32492">2610.32492</a> Accordion（OUT·LLM 深度：Accordion 层深，非扩散步）, <a href="https://arxiv.org/abs/2603.02604">2603.02604</a> Heterogeneous Agent Collaborative Reinfo（OUT·LLM/RL：异构 agent 协作 RL）, <a href="https://arxiv.org/abs/2607.06957">2607.06957</a> Flow-ERD（OUT·交通仿真：Flow-ERD 交通仿真蒸馏）, <a href="https://arxiv.org/abs/2607.25815">2607.25815</a> Next-Frequency Autoregressive Modeling f（OUT·遥感：频域自回归变化检测）, <a href="https://arxiv.org/abs/2610.10623">2610.10623</a> Recurrent Self-Improvement（OUT·LLM：LoopLM 跨环 OPD）, <a href="https://arxiv.org/abs/2610.32103">2610.32103</a> ReMedI（OUT·分子：F5 已关）, <a href="https://arxiv.org/abs/2610.32770">2610.32770</a> On-Policy Self-Training（OUT·LLM：On-Policy Self-Training LLM）, <a href="https://arxiv.org/abs/2610.31945">2610.31945</a> Kolibri（OUT·LLM：Kolibri 欧陆 LLM）, <a href="https://arxiv.org/abs/2610.32113">2610.32113</a> REACT（OUT·LLM：CoT 表征早期干预）, <a href="https://arxiv.org/abs/2610.32246">2610.32246</a> Do Halting Heads Really Save Compute in （OUT·LLM：Looped LM 停机头）；</p>
+<p><strong>OUT·理解/非生成</strong>（4）——<a href="https://arxiv.org/abs/2610.32132">2610.32132</a> SyncPro（OUT·理解：流式视频理解同步推理，非生成）, <a href="https://arxiv.org/abs/2606.18273">2606.18273</a> Continuous Audio Thinking for Large Audi（OUT·理解：LALM 连续音频思考蒸馏）, <a href="https://arxiv.org/abs/2610.31734">2610.31734</a> DirCast（OUT·理解：DirCast 电竞导播+解说流式 VLM）, <a href="https://arxiv.org/abs/2610.32784">2610.32784</a> Video-MemComp（OUT·理解：流式视频理解记忆压缩）；</p>
+<p><strong>OUT·域外/其他</strong>（19）——<a href="https://arxiv.org/abs/2610.32059">2610.32059</a> Concept Acupuncturist（OUT：扩散概念擦除，无少步/减步）, <a href="https://arxiv.org/abs/2610.32414">2610.32414</a> When Does Dynamics Randomization Test Co（OUT：动力学随机化的上下文推断，非生成减步）, <a href="https://arxiv.org/abs/2610.32910">2610.32910</a> Recommender regret for improving regular（OUT：bandit/MCTS RL 估计，非生成）, <a href="https://arxiv.org/abs/2610.32943">2610.32943</a> Knowledge Distillation across Item and C（OUT：推荐 item/code 蒸馏，非扩散少步）, <a href="https://arxiv.org/abs/2610.31845">2610.31845</a> EgoForesight（OUT：机器人 egocentric 策略，无少步生成）, <a href="https://arxiv.org/abs/2610.31889">2610.31889</a> Scaling Transformer Energy-based Models （OUT：Transformer EBM 图像合成；摘要未立少步蒸馏）, <a href="https://arxiv.org/abs/2610.31950">2610.31950</a> LOCI（OUT：多主体图像编辑空间控制，无减步）, <a href="https://arxiv.org/abs/2610.32214">2610.32214</a> DIAL-S2ST（OUT：同传语音发射时延控制蒸馏）, <a href="https://arxiv.org/abs/2610.32256">2610.32256</a> Representation Learning via Composite Su（OUT：复合子空间 flow matching 表征学习）, <a href="https://arxiv.org/abs/2610.32442">2610.32442</a> Learning Fine-Grained Visual Classificat（OUT：细粒度分类多模态蒸馏）, <a href="https://arxiv.org/abs/2610.32768">2610.32768</a> SCDM-HTD（OUT：高光谱目标检测条件扩散，无减步）, <a href="https://arxiv.org/abs/2510.18795">2510.18795</a> ProCLIP（OUT：ProCLIP VL 对齐（10-23 已判不相关））, <a href="https://arxiv.org/abs/2604.01361">2604.01361</a> IGLOSS（OUT：激光雷达分割用生成原型）, <a href="https://arxiv.org/abs/2610.31991">2610.31991</a> REDAR（OUT：类增量学习蒸馏正则）, <a href="https://arxiv.org/abs/2610.32511">2610.32511</a> Augmentation Strategy for DINO in Glauco（OUT：医学分类 DINO 增强）, <a href="https://arxiv.org/abs/2610.32566">2610.32566</a> Reuse, Don't Retrain（OUT：地理空间特征蒸馏）, <a href="https://arxiv.org/abs/2610.32884">2610.32884</a> VTRL-Med（OUT：医学聚类表征精炼）, <a href="https://arxiv.org/abs/2605.18971">2605.18971</a> Shaping the Prior（OUT：表格基础模型合成先验）, <a href="https://arxiv.org/abs/2610.30843">2610.30843</a> Lean Finder V2（OUT：Lean Finder 数学检索（10-23 已判））；</p>
+<p><strong>外围（已定级，未升格）</strong>（8）——<a href="https://arxiv.org/abs/2610.32964">2610.32964</a> Flownomaly（外围·异常检测：单步 flow 特征恢复，非生成少步）, <a href="https://arxiv.org/abs/2607.02220">2607.02220</a> DetailAnywhere（外围·应用蒸馏：时尚细节生成特征对齐蒸馏，不减采样步）, <a href="https://arxiv.org/abs/2610.28402">2610.28402</a> StreamEval（外围·流式评测：维持 10-21：交互流式生成 bench，无减步方法主张）, <a href="https://arxiv.org/abs/2610.32161">2610.32161</a> MG-REPA（外围·音频 REPA：加速 MeanFlow-TSE 训练收敛，无新少步采样信号）, <a href="https://arxiv.org/abs/2610.32233">2610.32233</a> TileShare（外围·解码加速：TileShare：H3 tiled ViT decode 共享，不改采样步；转文献可用资源）, <a href="https://arxiv.org/abs/2610.32381">2610.32381</a> UniWorld（外围·世界模型：UniWorld 实时视觉世界模拟；摘要无少步蒸馏主张 → 一行观察，归文献）, <a href="https://arxiv.org/abs/2610.32512">2610.32512</a> Fast and Useful（外围·图像应用：晨间已定：改已蒸学生首步 LoRA 服务分类器数据，非新少步信号）, <a href="https://arxiv.org/abs/2607.01202">2607.01202</a> World from Motion（外围·3DGS：单目视频蒸馏进动态 3DGS，非扩散减步）。</p>
+<p>（晨间 F3 已点名的 32512 / 32964 / 32161 / 31819 等也重复列入上表，保证「列表批命中 → 本日报必有 ID+理由」。）</p></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-26 13:54 (UTC+8)</div></main></div>
 <script>
 (function(){
  // 详情卡片全部展开/收起
