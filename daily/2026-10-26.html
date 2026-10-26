@@ -1,0 +1,476 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>少步蒸馏 · 每日 2026-10-26（周一）</title>
+<style>
+:root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--side:#f6f8fa;--line:#d1d9e0;--acc:#0b57d0;--l1:#fff8e6;--l1b:#f0c36d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--fg);background:var(--bg);font:15.5px/1.75 "Noto Sans CJK SC","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.top{position:sticky;top:0;z-index:5;background:#24292f;color:#fff;padding:8px 20px;display:flex;gap:18px;align-items:center;font-size:14px}
+.top a{color:#fff;opacity:.9} .top .brand{font-weight:700;opacity:1}
+.wrap{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1400px;margin:0 auto}
+nav.toc{position:sticky;top:40px;align-self:start;height:calc(100vh - 40px);overflow:auto;background:var(--side);border-right:1px solid var(--line);padding:14px 10px 40px 14px;font-size:13.5px;line-height:1.5}
+nav.toc .tt{font-weight:700;color:var(--muted);margin:2px 0 8px}
+nav.toc ul{list-style:none;margin:0;padding-left:10px} nav.toc>div>ul{padding-left:0}
+nav.toc li{margin:3px 0} nav.toc a{color:#333;display:block;padding:1px 4px;border-radius:4px}
+nav.toc a:hover,nav.toc a.on{background:#dde7f7;text-decoration:none}
+main{padding:22px 40px 80px;min-width:0}
+h1{font-size:26px;margin:.2em 0 .6em;border-bottom:2px solid var(--line);padding-bottom:.3em}
+h2{font-size:21px;margin:1.8em 0 .6em;border-bottom:1px solid var(--line);padding-bottom:.25em}
+h3{font-size:17.5px;margin:1.4em 0 .5em}
+h4{font-size:15.5px}
+blockquote{margin:0 0 1em;padding:8px 16px;border-left:4px solid #8c959f;background:#f6f8fa;color:#3d444d;font-size:14px}
+blockquote p{margin:.3em 0}
+code{font-family:"JetBrains Mono","DejaVu Sans Mono",Menlo,Consolas,monospace;font-size:.88em;background:#eff1f3;padding:.1em .35em;border-radius:4px}
+pre{background:#f6f8fa;border:1px solid var(--line);border-radius:6px;padding:10px 14px;overflow:auto} pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:.6em 0 1.1em}
+table{border-collapse:collapse;font-size:13.8px;line-height:1.55;min-width:60%}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left}
+th{background:#eef2f6;font-weight:700;position:sticky;top:0}
+tr:nth-child(even) td{background:#fafbfc}
+td strong{color:#8a1c1c}
+hr{border:0;border-top:1px solid var(--line);margin:1.6em 0}
+section.layer1{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:2px 22px 10px;margin:18px 0 26px}
+section.layer1>h2{border-bottom-color:var(--l1b)}
+section.layer1 .tw table{background:#fff}
+.layer-tag{display:inline-block;font-size:12px;font-weight:700;color:#7a4b00;background:#ffe2a8;border-radius:10px;padding:0 9px;margin-left:8px;vertical-align:middle}
+details.card{border:1px solid var(--line);border-radius:8px;margin:12px 0;background:#fff}
+details.card>summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:16.5px;background:#f3f6fa;border-radius:8px;list-style:none}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary:before{content:"▸ ";color:var(--acc)} details.card[open]>summary:before{content:"▾ "}
+details.card[open]>summary{border-bottom:1px solid var(--line);border-radius:8px 8px 0 0}
+details.card>.body{padding:4px 18px 10px}
+.cardtools{font-size:13px;margin:6px 0 2px} .cardtools button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:#fff;border-radius:5px;padding:1px 8px;cursor:pointer;margin-right:6px}
+.b{display:inline-block;font-size:11.5px;line-height:1.5;padding:0 6px;border-radius:9px;margin:0 2px;font-weight:600;white-space:nowrap;vertical-align:1px;border:1px solid transparent}
+.b-meas{background:#dafbe1;color:#116329;border-color:#a8e6b5}
+.b-orig{background:#ddf4ff;color:#0a4b8c;border-color:#a6d4f5}
+.b-team{background:#fff1e5;color:#953800;border-color:#ffc89a}
+.b-inf{background:#eef0f2;color:#4a535c;border-color:#cfd5db}
+.b-codex{background:#fbefff;color:#6e2b91;border-color:#e3b8f5}
+.b-oth{background:#f6f8fa;color:#4a535c;border-color:#d1d9e0}
+.idx{max-width:900px;margin:0 auto;padding:30px 30px 80px}
+.idx .hero{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:12px 22px;margin:14px 0 24px;font-size:16.5px}
+.idx .cards a{display:block;border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:10px 0;color:var(--fg)}
+.idx .cards a:hover{border-color:var(--acc);text-decoration:none;background:#f6f9ff}
+.idx .cards .t{font-weight:700;color:var(--acc)} .idx .cards .d{font-size:13.5px;color:var(--muted)}
+.foot{color:var(--muted);font-size:12.5px;margin-top:40px;border-top:1px solid var(--line);padding-top:8px}
+@media (max-width:900px){.wrap{grid-template-columns:1fr} nav.toc{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)} main{padding:16px}}
+@media print{nav.toc,.top,.cardtools{display:none}.wrap{display:block} details.card{break-inside:avoid}}
+</style></head><body>
+<div class="top"><a class="brand" href="../index.html">多模态少步蒸馏 · 前沿调研</a><a href="../baseline.html">2026Q3 基线</a><a href="../index.html#dailies">每日</a><a href="../index.html#weeklies">每周</a></div>
+<div class="wrap"><nav class="toc"><div class="tt">目录</div><div><div class="toc">
+<ul>
+<li><a href="#结论先行">结论先行</a></li>
+<li><a href="#30-秒速览">30 秒速览</a></li>
+<li><a href="#一屏框架今天挂在哪一格">一屏框架：今天挂在哪一格</a></li>
+<li><a href="#详细条目2-条">详细条目（2 条）</a><ul><li><a href="#①-ptd-在-h3-上可跑了多项式轨迹蒸馏从论文数字变成对照入口必读先跑推理权重">① PTD 在 H3 上可跑了：多项式轨迹蒸馏从「论文数字」变成「对照入口」（必读·先跑·推理权重）</a></li><li><a href="#②-fast-and-useful已经蒸好的生成器怎么当更好的数据引擎外围图像">② Fast and Useful：已经蒸好的生成器，怎么当更好的数据引擎（外围·图像）</a></li></ul></li>
+<li><a href="#f3-预览命中定级3939">F3 预览命中定级（39/39）</a></li>
+<li><a href="#f4-or-孪生对账今日关闭假新">F4 OR 孪生对账（今日关闭「假新」）</a></li>
+<li><a href="#f5-队友转交定级">F5 队友转交定级</a></li>
+<li><a href="#批次台账动作">批次台账动作</a></li>
+<li><a href="#补扫占位1342">补扫占位（13:42）</a></li>
+</ul>
+</div>
+</div></nav>
+<main><h1 id="少步蒸馏-每日-2026-10-26周一">少步蒸馏 · 每日 2026-10-26（周一）</h1>
+<blockquote>
+<p><strong>批次覆盖（F1）</strong>：应出列表日 = <strong>Mon 26 Oct</strong>（北京 08:00）。09:18–09:2x <code>/new</code>（cs.CV/LG/SD/AS/MM）仍是 <strong>Friday, 23 October 2026</strong>；RSS <code>cs.CV</code> 无 Mon pubDate；API G9 与 RL 同事一致 <strong>FAIL</strong> → <strong>Mon 26 = pending</strong>（<strong>不能把 Fri 23 当成今天</strong>）。<strong>13:42 补扫</strong>再查 <code>/new</code>；若仍未出则继续 pending。Fri 23 已 done（10-23 13:51）。Sat/Sun <strong>none</strong>。</p>
+<p><strong>F3 ID 区间预览（不能标 done）</strong>：起点 <code>2610.31673</code>（Fri 23 最大号 31671 之后）→ 当前探针上限 <code>2610.32982</code>。只读复用 RL 同事逐号 abs（<code>/workspace/genrl-digest/2026-10-26/batch/abs/</code>，09:20 冻结 <strong>1300</strong> 篇）。落在我方 8 类约 <strong>322</strong>；正则 v2.2 命中 <strong>39</strong>，<strong>全部读了标题（F6）</strong>；Codex 语义分诊 IN 1 / PERIPH 2 / OUT 36，我复核全部非 OUT<span class="b b-meas">实测</span><span class="b b-codex">Codex✓</span>。</p>
+<p><strong>F4 OpenReview</strong>：文献 10-25 <code>or_core.json</code> 115 + <code>or_iclr27_search</code> 387（只读）。标题检索把「看起来新」的 OR id 对上已评 arXiv 孪生（PTD / Memory Forcing / FlashRender / OPSD-V / ForgeWM / UACD / PFM）；<strong>积压实质 0 条新机制漏评</strong>。新增仅OR观察：<code>wFQzMvMv16</code> Anamora（流式 AV 实体记忆，无孪生）→ 转文献。【仅OR摘要】</p>
+<p><strong>F5 对账（48h）</strong>：文献 10-26 shortlist/forward（JetSpec、<a href="https://arxiv.org/abs/2610.30644">2610.30644</a>、Hy-Nomas）+ RL <code>forward_fewstep.txt</code> 5 条全部定级；范围内漏检 <strong>0</strong>。
+标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】【HF】【仅OR摘要】<span class="b b-team">队友转述</span><span class="b b-inf">推断</span><span class="b b-codex">Codex✓</span></p>
+</blockquote>
+<hr />
+<section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
+<p><strong>周一列表批尚未上线；ID 区间预览没有新的「必读 / 值得读」机制论文。今天真正要改训练预期的，是观察名单上的资源状态：PTD 在 MiniMax-H3 Ref2VA 上放出了可跑的 4/6/8 步 LoRA（含 PTD+RefAsymOPD 升级包）。</strong></p>
+<ol>
+<li><strong>PTD <a href="https://arxiv.org/abs/2610.11498">2610.11498</a> → 升「必读·先跑（H3 Ref2VA 推理权重+脚本已齐；训练代码未开源）」</strong>。【HF】<code>taobao-content-ai/MiniMax-H3-PTD-LoRAs</code>（4/8 步，约 10-20 建、10-25 仍更新）与 sibling <code>…-PTD-RefAsymOPD-LoRAs</code>（6/8 步，约 10-22）。触发 v1.4 <strong>(a)</strong>：会改变「H3 AV 少步先跑哪条轨迹蒸馏」的决定，且推理入口/配置/权重齐全、成本可估。相对 10-10「值得读 / 可直接用」：当时只有论文数字，现在能直接对照跑。</li>
+<li><strong>RefAsymOPD（仅 HF README 名，无独立 arXiv）→ 值得看·HF 配方</strong>。自称 PTD + Reference-Asymmetric On-Policy Distillation，demo 列宣称 8 步优于裸 PTD，甚至相对教师 40 NFE 更sharper——<strong>无论文公式、无训练代码</strong> → 不当新格子，只当 H3 对照包；出论文再开格。</li>
+<li><strong>ID 区间正则命中</strong>：Fast and Useful <a href="https://arxiv.org/abs/2610.32512">2610.32512</a> → <strong>外围·图像应用</strong>（改已蒸馏生成器的首步 LoRA，服务合成数据分类器，不是新少步蒸馏信号）。其余 38 条 OUT/外围（投机 LLM、VLA 采样深度、异常检测单步 flow、音频 REPA 等）。</li>
+<li><strong>观察维持</strong>：Speculative Forcing 必读·待代码；Direct Forcing 必读·先跑（周末已升，学生权重仍未公开）；Hy-Nomas 值得看·待报告；UnStep 值得看·流式推理加速（维持，不因 lit 仓库更新改级）。</li>
+</ol>
+<p><strong>对我们训练的含义：</strong></p>
+<ul>
+<li><strong>AV / H3：</strong> 今天起把「H3 Ref2VA 少步对照」写成可执行项：{教师 40 NFE, PDD-系加速（若有）, PTD 4/8, PTD+RefAsymOPD 6/8}，固定参考图短边 768（HF README 警告默认 2048 会喂多 ~5× token）。先报画质/同步/多样性，再决定要不要自己复训 PTD。【HF】<span class="b b-inf">推断</span></li>
+<li><strong>流式 AR：</strong> 预览无新；继续周末对照表 {ODE→DMD, ODE→MMD, CCA+MMD(Direct)}。</li>
+<li><strong>图像：</strong> Fast and Useful 提醒——少步学生若当数据引擎，首步落点比「再多跑几步」更影响下游分类器；不改我们的蒸馏 loss。【外围】</li>
+<li><strong>推理·步数分配（F7）：</strong> 本预览无达标（无等时均匀少步对照）。</li>
+</ul>
+<hr />
+</section><section class="layer1"><h2 id="30-秒速览">30 秒速览<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文 / 资源</th>
+<th>评级</th>
+<th>一句话</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PTD <a href="https://arxiv.org/abs/2610.11498">2610.11498</a> + H3 LoRA</td>
+<td><strong>必读·先跑（推理权重齐）</strong></td>
+<td>H3 Ref2VA 4/8 步 per-hop LoRA 可跑；升自值得读</td>
+<td>【HF】<span class="b b-orig">原文 10-10</span></td>
+</tr>
+<tr>
+<td>PTD+RefAsymOPD（HF）</td>
+<td>值得看·HF 配方</td>
+<td>6/8 步 sibling；无独立论文</td>
+<td>【HF】</td>
+</tr>
+<tr>
+<td>Fast and Useful <a href="https://arxiv.org/abs/2610.32512">2610.32512</a></td>
+<td>外围·图像应用</td>
+<td>首步 LoRA 对齐教师中间态，改合成数据质量</td>
+<td>【摘要】<span class="b b-codex">Codex✓</span></td>
+</tr>
+<tr>
+<td>Flownomaly <a href="https://arxiv.org/abs/2610.32964">2610.32964</a> / MG-REPA <a href="https://arxiv.org/abs/2610.32161">2610.32161</a></td>
+<td>外围</td>
+<td>异常单步 flow / 音频多粒度 REPA</td>
+<td>【摘要】</td>
+</tr>
+<tr>
+<td>JetSpec / <a href="https://arxiv.org/abs/2610.30644">2610.30644</a> / RL 5 条 FEWSTEP</td>
+<td>OUT·LLM 或外围</td>
+<td>F5 全关</td>
+<td><span class="b b-team">队友转述</span></td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class="layer1"><h2 id="一屏框架今天挂在哪一格">一屏框架：今天挂在哪一格<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>单步去噪</th>
+<th>流式时间轴</th>
+<th>AV 跨模态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L1 轨迹 / 一致性 / flow map</strong></td>
+<td>Fast and Useful（外围·用已蒸学生）；PFM/UACD 维持观察</td>
+<td>—</td>
+<td><strong>PTD</strong>（多项式轨迹；H3 LoRA 可跑）</td>
+</tr>
+<tr>
+<td><strong>L2 分数差分布匹配（DMD）</strong></td>
+<td>—</td>
+<td>—</td>
+<td>RefAsymOPD（HF 自称 OPD 混合，证据不足）</td>
+</tr>
+<tr>
+<td><strong>L3 对抗</strong></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L4 额外真实数据 / reward</strong></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L5 样本级 / 表征分布场</strong></td>
+<td>—</td>
+<td>Direct Forcing（维持必读·先跑）</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>推理时步数分配（F7）</strong></td>
+<td>—</td>
+<td>UnStep（维持值得看）</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<p>放不进框架的：Anamora（仅OR·流式系统）、Accordion/Speculative Diffusion（LLM 深度/投机）、VLA 采样深度耦合、WM 评测集。</p>
+<hr />
+</section><section class=""><div class="cardtools">详细条目：<button data-act="open">全部展开</button><button data-act="close">全部收起</button></div><h2 id="详细条目2-条">详细条目（2 条）</h2>
+<details class="card" open="open">
+<summary id="①-ptd-在-h3-上可跑了多项式轨迹蒸馏从论文数字变成对照入口必读先跑推理权重">① PTD 在 H3 上可跑了：多项式轨迹蒸馏从「论文数字」变成「对照入口」（必读·先跑·推理权重）</summary>
+<div class="body">
+<p><strong>白话背景。</strong> 少步蒸馏两条常见路：轨迹匹配（学生学教师去噪路径）和分布匹配（DMD 等）。轨迹法在大视频模型上常「学不动」高噪段的弯折，细节掉、多样性掉。</p>
+<p><strong>具体问题。</strong> 10-10 我们读过 PTD：学生把教师轨迹段参数化成多项式，并在<strong>自己预测的曲线</strong>上查教师速度，推理丢掉曲率头。论文报 Wan2.1-14B 四步超 PDD、H3 上 LoRA 四步多样性高于 LightX2V Turbo（Astra 2.81 vs 1.55）。当时缺公开学生权重 → 只能当「值得读 / 可直接用（配方可估）」。<span class="b b-orig">原文 10-10</span></p>
+<p><strong>今天多了什么（按顺序）。</strong>【HF】</p>
+<ol>
+<li><strong>Plain PTD LoRA</strong>：<code>MiniMax-H3-Ref2VA-PTD-{4,8}Step.safetensors</code>——每推理步一个独立 LoRA（per-hop），叠在 PDD 的 per-interval 输出头上。</li>
+<li><strong>推理脚本 / ComfyUI</strong>：<code>apply_ptd_lora</code> + <code>predict_ref2v.py</code>；NFE 从 checkpoint metadata 读出。</li>
+<li><strong>Sibling RefAsymOPD</strong>：同结构 6/8 步权重；README 称背景合理性/锐度更好，并展示相对教师 40 步列；<strong>无公式、无训练码</strong>。</li>
+<li><strong>部署坑</strong>：参考图短边需 768（训练口径）；Diffusers 默认 2048 会让学生看到约 5× conditioning token。</li>
+</ol>
+<p><strong>为什么可能改变决定。</strong> 以前「要不要在 H3 上试 PTD」只能信论文表；现在能在同一 Ref2VA 协议下直接比 4/6/8 步与教师 40 步，再决定是否投入复训。<span class="b b-inf">推断</span></p>
+<p><strong>几个数字（仍抄论文；HF 未给新表）。</strong><span class="b b-orig">原文</span>H3 上相对 LightX2V Turbo：多样性 2.81 vs 1.55；盲测偏好 PTD 63.4% vs Turbo、55.1% vs PDD。HF demo 为定性网格，<strong>未核墙钟</strong>。【HF】<span class="b b-meas">未实测</span></p>
+<p><strong>限制。</strong></p>
+<ul>
+<li>训练代码仍未开源；RefAsymOPD 机制不可复核。</li>
+<li>任务是 <strong>Ref2VA</strong>（参考图→音视频），不是纯 T2V，也不是我们的流式 AR 底座。</li>
+<li>License：MiniMax-H3 community。</li>
+</ul>
+<p><strong>与最接近工作的核心差别</strong></p>
+<ul>
+<li><strong>vs PDD</strong>：PDD 并行区间头；PTD 再加 per-hop LoRA + 多项式轨迹监督（训练时）。</li>
+<li><strong>vs LightX2V Turbo（DMD）</strong>：同是 H3 四步加速，信号是轨迹而非 score 差 → 论文称多样性更高。</li>
+<li><strong>vs Direct Forcing</strong>：Direct 是流式 T2V、CCA+MMD、无 DMD；PTD 是双向/Ref2VA 轨迹多项式。不要混用数字。</li>
+</ul>
+<p><strong>按格预判：</strong> L1 轨迹 → 高噪曲率仍可能伤细节；有权重后应先看动态与多样性是否复现 Astra 表，而不是只看静态。</p>
+<p><strong>对我们训练：</strong> AV 先跑上面对照表；流式/图像无直接迁移。出 RefAsymOPD 论文或训练码再升级该 sibling。</p>
+<p><strong>预测（写结果前）：</strong> 我们复现对照时，PTD 8 步相对教师 40 步的静态差距会小于多样性差距；RefAsymOPD 相对 plain PTD 的「更锐」若主要来自 OPD，可能伴随多样性回落。</p>
+<hr />
+</div>
+</details>
+<details class="card" open="open">
+<summary id="②-fast-and-useful已经蒸好的生成器怎么当更好的数据引擎外围图像">② Fast and Useful：已经蒸好的生成器，怎么当更好的数据引擎（外围·图像）</summary>
+<div class="body">
+<p><strong>白话背景。</strong> 蒸馏 T2I（SD-Turbo、FLUX.2-klein 等）很快，但用它们合成 ImageNet 式数据训分类器，精度往往远差于慢教师。</p>
+<p><strong>问题。</strong> 不是再发明一种少步蒸馏，而是：<strong>固定已发布学生</strong>，只改它产生的训练图像分布。</p>
+<p><strong>做法（摘要）。</strong>【摘要】给师生的<strong>第一次</strong>预测加低秩更新，使首步落到「无引导教师」的某个中间态，然后关掉更新、让原学生走完。教师只提供训练目标，推理不在。消融：引导目标或更短跳跃 → 下游分类器更差。</p>
+<p><strong>数字（抄录）。</strong> 全 ImageNet-1k、类名模板：ResNet-50 top-1，FLUX.2-klein 8.4%→34.2%（2 次 denoiser eval/图）；SD-Turbo 12.7%→32.1%（3 eval）。【摘要】</p>
+<p><strong>为何外围。</strong> 不改少步训练信号；挂「已蒸馏学生的应用」。对我们：若用少步学生做数据增强，优先调首步落点，而不是盲目加 NFE。</p>
+<hr />
+</div>
+</details>
+</section><section class=""><h2 id="f3-预览命中定级3939">F3 预览命中定级（39/39）</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>短题</th>
+<th>评级</th>
+<th>格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.32512">2610.32512</a></td>
+<td>Fast and Useful</td>
+<td>外围·图像应用</td>
+<td>L1 旁支</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.32964">2610.32964</a></td>
+<td>Flownomaly</td>
+<td>外围·异常检测</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.32161">2610.32161</a></td>
+<td>MG-REPA</td>
+<td>外围·音频 REPA</td>
+<td>L5 旁支</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.32102">2610.32102</a></td>
+<td>Horizon×采样深度 VLA</td>
+<td>外围·机器人</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.31819">2610.31819</a> / 32492 / 32881 / 30644 类</td>
+<td>投机/深度 LLM</td>
+<td>OUT·LLM</td>
+<td>—</td>
+</tr>
+<tr>
+<td>其余 30+</td>
+<td>见 <code>daily/raw/1026/hits_v22.txt</code> + Codex 行</td>
+<td>OUT</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class=""><h2 id="f4-or-孪生对账今日关闭假新">F4 OR 孪生对账（今日关闭「假新」）</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>OR id</th>
+<th>题目</th>
+<th>孪生</th>
+<th>处置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>jwOwDYFrW8</code></td>
+<td>Parametric Trajectory Distillation</td>
+<td><strong><a href="https://arxiv.org/abs/2610.11498">2610.11498</a></strong></td>
+<td>已评；今日升权重级</td>
+</tr>
+<tr>
+<td><code>BtDTA3Ws0h</code></td>
+<td>Memory Forcing</td>
+<td><strong><a href="https://arxiv.org/abs/2610.11756">2610.11756</a></strong></td>
+<td>已转文献；维持</td>
+</tr>
+<tr>
+<td><code>mYfMacZ4WG</code></td>
+<td>FlashRender</td>
+<td><strong><a href="https://arxiv.org/abs/2609.03563">2609.03563</a></strong></td>
+<td>观察·应用</td>
+</tr>
+<tr>
+<td><code>FlnhnuM3qO</code></td>
+<td>On-Policy Self-Distillation…</td>
+<td><strong><a href="https://arxiv.org/abs/2607.08766">2607.08766</a></strong> OPSD-V</td>
+<td>观察名单优先精读（维持）</td>
+</tr>
+<tr>
+<td><code>LjT2Bez1xh</code></td>
+<td>ForgeWM</td>
+<td><strong><a href="https://arxiv.org/abs/2608.14022">2608.14022</a></strong></td>
+<td>已评值得读·流式 WM</td>
+</tr>
+<tr>
+<td><code>2D3yFJhKsI</code></td>
+<td>UACD</td>
+<td><strong><a href="https://arxiv.org/abs/2609.39132">2609.39132</a></strong></td>
+<td>观察</td>
+</tr>
+<tr>
+<td><code>8CyhoGNtCj</code></td>
+<td>Perceptual Flow Matching</td>
+<td><strong><a href="https://arxiv.org/abs/2607.03524">2607.03524</a></strong></td>
+<td>观察</td>
+</tr>
+<tr>
+<td><code>wFQzMvMv16</code></td>
+<td>Anamora</td>
+<td><strong>无</strong></td>
+<td><strong>仅OR·流式 AV</strong> → 转文献；我方外围</td>
+</tr>
+<tr>
+<td>其余 NEW 名</td>
+<td>理解/WM bench/编辑</td>
+<td>—</td>
+<td>OUT 或转文献</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class=""><h2 id="f5-队友转交定级">F5 队友转交定级</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>来源</th>
+<th>ID</th>
+<th>评级</th>
+<th>归属</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文献</td>
+<td>JetSpec / <a href="https://arxiv.org/abs/2606.18394">2606.18394</a></td>
+<td>OUT·LLM speculative</td>
+<td>关闭</td>
+</tr>
+<tr>
+<td>文献</td>
+<td><a href="https://arxiv.org/abs/2610.30644">2610.30644</a></td>
+<td>OUT·LLM（周末已判）</td>
+<td>关闭</td>
+</tr>
+<tr>
+<td>文献</td>
+<td>Hy-Nomas</td>
+<td>值得看·待报告（维持）</td>
+<td>我主评·资源</td>
+</tr>
+<tr>
+<td>文献 10-25</td>
+<td>UnStep <a href="https://arxiv.org/abs/2609.32518">2609.32518</a></td>
+<td>值得看·流式推理加速（维持）</td>
+<td>我主评</td>
+</tr>
+<tr>
+<td>RL</td>
+<td><a href="https://arxiv.org/abs/2610.31819">2610.31819</a> Speculative Diffusion</td>
+<td>OUT·dLLM 投机</td>
+<td>关闭</td>
+</tr>
+<tr>
+<td>RL</td>
+<td><a href="https://arxiv.org/abs/2610.32096">2610.32096</a> DELA</td>
+<td>OUT·DLM 编辑</td>
+<td>关闭</td>
+</tr>
+<tr>
+<td>RL</td>
+<td><a href="https://arxiv.org/abs/2610.31840">2610.31840</a> SPECMEM</td>
+<td>外围·agent 投机</td>
+<td>关闭</td>
+</tr>
+<tr>
+<td>RL</td>
+<td><a href="https://arxiv.org/abs/2610.31918">2610.31918</a> Agent Distill</td>
+<td>OUT·LLM agent</td>
+<td>关闭</td>
+</tr>
+<tr>
+<td>RL</td>
+<td><a href="https://arxiv.org/abs/2610.32102">2610.32102</a> VLA 采样深度</td>
+<td>外围·机器人</td>
+<td>关闭</td>
+</tr>
+<tr>
+<td>RL</td>
+<td><a href="https://arxiv.org/abs/2610.32103">2610.32103</a> ReMedI</td>
+<td>OUT·分子</td>
+<td>关闭</td>
+</tr>
+</tbody>
+</table></div>
+<p>范围内漏检：<strong>0</strong>。</p>
+<hr />
+</section><section class=""><h2 id="批次台账动作">批次台账动作</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>列表日</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fri 23 Oct</td>
+<td>done（不变）</td>
+</tr>
+<tr>
+<td>Sat 24 / Sun 25</td>
+<td>none</td>
+</tr>
+<tr>
+<td><strong>Mon 26 Oct</strong></td>
+<td><strong>pending</strong>（<code>/new</code> 未翻页；F3 预览已写入本日报；<strong>13:42 补扫</strong>）</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class=""><h2 id="补扫占位1342">补扫占位（13:42）</h2>
+<p>若 <code>/new</code> 变为 Monday, 26 October 2026：全量 8 类重筛 → 与本预览 ID 区间并集去重 → 新命中补评 → 更新 batches.md 为 done → 必要时改本页并重发 publish。若仍 Fri 23：保持 pending，记发现延迟。</p></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-26 09:26 (UTC+8)</div></main></div>
+<script>
+(function(){
+ // 详情卡片全部展开/收起
+ document.querySelectorAll('[data-act]').forEach(function(b){b.addEventListener('click',function(){
+   var o=b.getAttribute('data-act')==='open';document.querySelectorAll('details.card').forEach(function(d){d.open=o;});});});
+ // 点击目录中位于折叠卡片内的锚点时自动展开
+ function openFor(id){var el=document.getElementById(id);if(!el)return;var d=el.closest('details');if(d)d.open=true;}
+ if(location.hash)openFor(decodeURIComponent(location.hash.slice(1)));
+ window.addEventListener('hashchange',function(){openFor(decodeURIComponent(location.hash.slice(1)));});
+ // 目录高亮
+ var links=[].slice.call(document.querySelectorAll('nav.toc a'));
+ var heads=links.map(function(a){return document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));});
+ function hl(){var y=window.scrollY+80,k=-1;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top+window.scrollY<=y&&h.offsetParent!==null)k=i;});
+   links.forEach(function(a,i){a.classList.toggle('on',i===k);});}
+ window.addEventListener('scroll',hl,{passive:true});hl();
+})();
+</script><script>if(document.querySelector('code.language-mermaid')){var s=document.createElement('script');
+s.src='https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';s.onload=function(){document.querySelectorAll('code.language-mermaid').forEach(function(c){var d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentNode.replaceWith(d);});mermaid.initialize({startOnLoad:false});mermaid.run();};document.head.appendChild(s);}</script></body></html>
