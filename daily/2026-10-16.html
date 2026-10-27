@@ -542,7 +542,7 @@ details.card>.body{padding:4px 18px 10px}
 <p>另外两个代码细节：扰动是 L2/RMS 归一化，<strong>不是 sign</strong>，也就不是经典的 FGSM；历史用的是 exit 步的 x0 预测，不是最终的干净块【代码 :148-156; pipeline:239-242】。</p>
 <h4 id="对我们先跑的对照更新替换-10-15-版">对我们：先跑的对照更新（替换 10-15 版）</h4>
 <p>同 init、同步数、至少 2 种子：① SGF 式底座；② ① + 首步一致性正则（扰动换成同 RMS 高斯）；③ ① + AGF 对抗历史（无正则）；④ 完整 AGF。④ vs ② 回答「方向有没有用」，② vs ① 回答「正则有没有用」。更便宜的先行诊断：用现有 ckpt 一次 VJP，比较「DMD 梯度方向 vs 高斯方向」扰动历史后的长窗漂移；如果定向扰动不比高斯更伤，就不必上 AGF<span class="b b-inf">文献同事 §8 + 推断</span>。</p></section>
-<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-26 13:54 (UTC+8)</div></main></div>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-27 09:23 (UTC+8)</div></main></div>
 <script>
 (function(){
  // 详情卡片全部展开/收起

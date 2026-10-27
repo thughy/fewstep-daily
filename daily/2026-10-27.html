@@ -1,0 +1,319 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>少步蒸馏 · 每日 2026-10-27（周二）</title>
+<style>
+:root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--side:#f6f8fa;--line:#d1d9e0;--acc:#0b57d0;--l1:#fff8e6;--l1b:#f0c36d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--fg);background:var(--bg);font:15.5px/1.75 "Noto Sans CJK SC","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.top{position:sticky;top:0;z-index:5;background:#24292f;color:#fff;padding:8px 20px;display:flex;gap:18px;align-items:center;font-size:14px}
+.top a{color:#fff;opacity:.9} .top .brand{font-weight:700;opacity:1}
+.wrap{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1400px;margin:0 auto}
+nav.toc{position:sticky;top:40px;align-self:start;height:calc(100vh - 40px);overflow:auto;background:var(--side);border-right:1px solid var(--line);padding:14px 10px 40px 14px;font-size:13.5px;line-height:1.5}
+nav.toc .tt{font-weight:700;color:var(--muted);margin:2px 0 8px}
+nav.toc ul{list-style:none;margin:0;padding-left:10px} nav.toc>div>ul{padding-left:0}
+nav.toc li{margin:3px 0} nav.toc a{color:#333;display:block;padding:1px 4px;border-radius:4px}
+nav.toc a:hover,nav.toc a.on{background:#dde7f7;text-decoration:none}
+main{padding:22px 40px 80px;min-width:0}
+h1{font-size:26px;margin:.2em 0 .6em;border-bottom:2px solid var(--line);padding-bottom:.3em}
+h2{font-size:21px;margin:1.8em 0 .6em;border-bottom:1px solid var(--line);padding-bottom:.25em}
+h3{font-size:17.5px;margin:1.4em 0 .5em}
+h4{font-size:15.5px}
+blockquote{margin:0 0 1em;padding:8px 16px;border-left:4px solid #8c959f;background:#f6f8fa;color:#3d444d;font-size:14px}
+blockquote p{margin:.3em 0}
+code{font-family:"JetBrains Mono","DejaVu Sans Mono",Menlo,Consolas,monospace;font-size:.88em;background:#eff1f3;padding:.1em .35em;border-radius:4px}
+pre{background:#f6f8fa;border:1px solid var(--line);border-radius:6px;padding:10px 14px;overflow:auto} pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:.6em 0 1.1em}
+table{border-collapse:collapse;font-size:13.8px;line-height:1.55;min-width:60%}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left}
+th{background:#eef2f6;font-weight:700;position:sticky;top:0}
+tr:nth-child(even) td{background:#fafbfc}
+td strong{color:#8a1c1c}
+hr{border:0;border-top:1px solid var(--line);margin:1.6em 0}
+section.layer1{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:2px 22px 10px;margin:18px 0 26px}
+section.layer1>h2{border-bottom-color:var(--l1b)}
+section.layer1 .tw table{background:#fff}
+.layer-tag{display:inline-block;font-size:12px;font-weight:700;color:#7a4b00;background:#ffe2a8;border-radius:10px;padding:0 9px;margin-left:8px;vertical-align:middle}
+details.card{border:1px solid var(--line);border-radius:8px;margin:12px 0;background:#fff}
+details.card>summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:16.5px;background:#f3f6fa;border-radius:8px;list-style:none}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary:before{content:"▸ ";color:var(--acc)} details.card[open]>summary:before{content:"▾ "}
+details.card[open]>summary{border-bottom:1px solid var(--line);border-radius:8px 8px 0 0}
+details.card>.body{padding:4px 18px 10px}
+.cardtools{font-size:13px;margin:6px 0 2px} .cardtools button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:#fff;border-radius:5px;padding:1px 8px;cursor:pointer;margin-right:6px}
+.b{display:inline-block;font-size:11.5px;line-height:1.5;padding:0 6px;border-radius:9px;margin:0 2px;font-weight:600;white-space:nowrap;vertical-align:1px;border:1px solid transparent}
+.b-meas{background:#dafbe1;color:#116329;border-color:#a8e6b5}
+.b-orig{background:#ddf4ff;color:#0a4b8c;border-color:#a6d4f5}
+.b-team{background:#fff1e5;color:#953800;border-color:#ffc89a}
+.b-inf{background:#eef0f2;color:#4a535c;border-color:#cfd5db}
+.b-codex{background:#fbefff;color:#6e2b91;border-color:#e3b8f5}
+.b-oth{background:#f6f8fa;color:#4a535c;border-color:#d1d9e0}
+.idx{max-width:900px;margin:0 auto;padding:30px 30px 80px}
+.idx .hero{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:12px 22px;margin:14px 0 24px;font-size:16.5px}
+.idx .cards a{display:block;border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:10px 0;color:var(--fg)}
+.idx .cards a:hover{border-color:var(--acc);text-decoration:none;background:#f6f9ff}
+.idx .cards .t{font-weight:700;color:var(--acc)} .idx .cards .d{font-size:13.5px;color:var(--muted)}
+.foot{color:var(--muted);font-size:12.5px;margin-top:40px;border-top:1px solid var(--line);padding-top:8px}
+@media (max-width:900px){.wrap{grid-template-columns:1fr} nav.toc{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)} main{padding:16px}}
+@media print{nav.toc,.top,.cardtools{display:none}.wrap{display:block} details.card{break-inside:avoid}}
+</style></head><body>
+<div class="top"><a class="brand" href="../index.html">多模态少步蒸馏 · 前沿调研</a><a href="../baseline.html">2026Q3 基线</a><a href="../index.html#dailies">每日</a><a href="../index.html#weeklies">每周</a></div>
+<div class="wrap"><nav class="toc"><div class="tt">目录</div><div><div class="toc">
+<ul>
+<li><a href="#结论先行">结论先行</a></li>
+<li><a href="#30-秒速览">30 秒速览</a></li>
+<li><a href="#一屏框架今天挂在哪一格">一屏框架：今天挂在哪一格</a></li>
+<li><a href="#详细条目2-条">详细条目（2 条）</a><ul><li><a href="#①-mix-forcing少步之前因果化别把视觉先验弄丢值得读">① Mix Forcing：少步之前，因果化别把视觉先验弄丢（值得读）</a></li><li><a href="#②-hy-nomas报告齐了少步仍是可抄的组合拳值得看流式少步配方">② Hy-Nomas：报告齐了，少步仍是「可抄的组合拳」（值得看·流式少步配方）</a></li></ul></li>
+<li><a href="#f3-命中其余f6-全读标题">F3 命中其余（F6 全读标题）</a></li>
+<li><a href="#f5-补关rl-forward-昨日未显式落-id">F5 补关（RL forward 昨日未显式落 ID）</a></li>
+<li><a href="#转交">转交</a></li>
+<li><a href="#未覆盖-下步">未覆盖 / 下步</a></li>
+</ul>
+</div>
+</div></nav>
+<main><h1 id="少步蒸馏-每日-2026-10-27周二">少步蒸馏 · 每日 2026-10-27（周二）</h1>
+<blockquote>
+<p><strong>批次覆盖（F1）</strong>：应出列表日 = <strong>Tue 27 Oct</strong>（北京 08:00）。09:17 <code>/new</code>（cs.CV 等）页头仍是 <strong>Monday, 26 October 2026</strong> → <strong>Tue 27 = pending</strong>（交 13:42 补扫）。Mon 26 已 done（10-26 13:49）。Sat/Sun <strong>none</strong>。<strong>今日不以 Mon 批冒充今日列表。</strong></p>
+<p><strong>F3 ID 区间预览（不能标列表 done）</strong>：<code>2610.32983</code>→<code>2610.34029</code>（相对昨日上限 32982）。复用 RL <code>batch/abs</code> + API 补洞；落我方类约 <strong>389</strong>；v2.2 命中 <strong>25</strong>，<strong>全部读了标题（F6）</strong>；Codex+自核：IN/值得读 <strong>1</strong>（Mix Forcing）、外围/转文献 <strong>1</strong>（DTTD）、其余 OUT<span class="b b-meas">实测</span><span class="b b-codex">Codex✓</span>。</p>
+<p><strong>F4 OpenReview</strong>：文献 10-27 <code>or_iclr27_2026-10-27.json</code> 509 notes（只读）。正则命中 167；高分条目多数已有 arXiv 孪生或历史已评。<strong>新孪生</strong>：Mix Forcing OR <code>nS97QKfsvR</code> ↔ <strong><a href="https://arxiv.org/abs/2610.33589">2610.33589</a></strong>（今日主文）。积压无新增「仅OR、无孪生、新机制」必清项；Anamora 等维持观察。</p>
+<p><strong>F5 对账（48h）</strong>：文献 forward（Hy-Nomas）+ shortlist 7 条 + RL <code>forward_fewstep</code> 补关 32881/32802/32933 → <strong>全部</strong>有 ID+评级；范围内漏检 <strong>0</strong>。Mix Forcing 未进文献晨报是因为 STALE+未上列表，由 <strong>F3 捕回</strong>（记 read-log，非 F5 漏检）。
+标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】【HF】【仅OR摘要】<span class="b b-team">队友转述</span><span class="b b-inf">推断</span><span class="b b-codex">Codex✓</span></p>
+</blockquote>
+<hr />
+<section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
+<p><strong>周二列表批未出（pending）。F3 预览里今天真正要改训练预期的，是 Mix Forcing：因果预训练用 MoBA 混 teacher forcing + 双向注意力，再走同一套 CD→DMD，四步质量明显高于纯 TF 初始化。Hy-Nomas 技术报告落地，少步维持「值得看·流式少步配方」，不升必读。</strong></p>
+<ol>
+<li><strong>Mix Forcing <a href="https://arxiv.org/abs/2610.33589">2610.33589</a>（OR <code>nS97QKfsvR</code>）→ 值得读</strong>。<span class="b b-orig">原文</span><span class="b b-codex">Codex✓</span>问题是：双向视频先验直接 TF 因果化会伤画质，拖累后续少步。做法：MoBA 自注意力联合 TF（学 next-chunk）与 BID（保先验）；chunk-wise 交叉注意力（环境提示 + 当前局部提示，不看未来指令）；因果预训练后再 <strong>CD + DMD → 4 步</strong> KV-cache AR。同管线消融（Tab.5）：Mix→CD→DMD 四步 Quality <strong>70.9</strong> / EA <strong>55.1</strong> / OT1.5s <strong>64.3</strong>，相对 TF-only→CD→DMD 的 <strong>64.1 / 33.7 / 19.8</strong>。<span class="b b-orig">原文</span>项目页链到 <a href="https://github.com/robbyant/lingbot-world-v2">LingBot-World-V2</a> 与 HF <code>robbyant/lingbot-world-v2-14b-causal-fast</code>（默认 <strong>4 steps/chunk</strong>）【HF】——推理可跑；<strong>MoBA 训练脚本是否完整开源未核到 loss 链路</strong> → 不够 v1.4「必读·先跑」，先 <strong>值得读</strong>。若下午核到训练入口齐，可当天升。</li>
+<li><strong>Hy-Nomas（技术报告，无 arXiv）→ 维持 值得看·流式少步配方</strong>。<span class="b b-orig">原文</span>PCM init → hybrid forcing 下 DDMD（只监督最终段）+ adversarial hinge；报告 <strong>4 NFE/段</strong>，发布默认 <code>infer_steps_video=8</code>，权重写 4/6/8；解码器另路 DMD2 一步。无 PCM / +DDMD / +adv 组件消融 → 不升必读。权重/代码开【HF】【代码】。</li>
+<li><strong>DTTD <a href="https://arxiv.org/abs/2610.33566">2610.33566</a> → 外围·WM 相机（转文献）</strong>。密轨迹自教师 + 几何偏好优化扩大幅相机运动；<strong>不是</strong>去噪少步信号。【摘要】<span class="b b-codex">Codex✓</span></li>
+<li><strong>观察维持</strong>：Speculative Forcing 必读·待代码；Direct Forcing 必读·先跑（学生权重仍未公开）；PTD 必读·先跑（H3 LoRA）；UnStep 值得看·流式推理加速。</li>
+</ol>
+<p><strong>对我们训练的含义：</strong></p>
+<ul>
+<li><strong>流式 AR / 交互 WM：</strong> 今天起把「因果预训练」写成可执行对照：{纯 TF, TF+BID(MoBA), （可选）TF+DF} → 同一 CD→DMD 四步；先看 InBench 式事件跟随与末段 IQ，再决定是否把 MoBA 写进底座配方。<span class="b b-inf">推断</span>可先跑 HF <code>causal-fast</code> 作四步参照，不必等自训。</li>
+<li><strong>AV：</strong> Mix/Hy-Nomas 皆视频（+相机/文本），无音轨联合；迁移时只借「因果化怎么保先验」和「段级 DDMD 只打最后一段」，音画同步另测。<span class="b b-inf">推断</span></li>
+<li><strong>图像：</strong> 本预览无新少步机制。</li>
+<li><strong>推理·步数分配（F7）：</strong> 无达标（Mix/Hy 都是固定少步，不是等时均匀对照）。</li>
+</ul>
+<hr />
+</section><section class="layer1"><h2 id="30-秒速览">30 秒速览<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文 / 资源</th>
+<th>评级</th>
+<th>一句话</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mix Forcing <a href="https://arxiv.org/abs/2610.33589">2610.33589</a></td>
+<td><strong>值得读</strong></td>
+<td>MoBA 混 TF+BID 做因果预训练，再 CD→DMD 四步；Tab.5 明显强于纯 TF 初始化</td>
+<td><span class="b b-orig">原文</span>【HF】</td>
+</tr>
+<tr>
+<td>Hy-Nomas 技术报告</td>
+<td>值得看·流式少步配方</td>
+<td>PCM→DDMD+adv；4 NFE/段 vs 默认 8；无组件消融</td>
+<td><span class="b b-orig">原文</span>【HF】</td>
+</tr>
+<tr>
+<td>DTTD <a href="https://arxiv.org/abs/2610.33566">2610.33566</a></td>
+<td>外围·WM 相机</td>
+<td>密轨迹自蒸馏 + 偏好扩运动；转文献</td>
+<td>【摘要】</td>
+</tr>
+<tr>
+<td>NgramRL / Frontier-OPD / Yalda</td>
+<td>OUT·LLM</td>
+<td>F5 补关</td>
+<td>【摘要】</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class="layer1"><h2 id="一屏框架今天挂在哪一格">一屏框架：今天挂在哪一格<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>单步去噪</th>
+<th>流式时间轴</th>
+<th>AV 跨模态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L1 轨迹 / 一致性 / flow map</strong></td>
+<td>—</td>
+<td>Mix：后训练 CD；Hy：PCM init</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L2 分数差分布匹配（DMD）</strong></td>
+<td>—</td>
+<td>Mix：DMD 精修；Hy：DDMD（仅末段）</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L3 对抗</strong></td>
+<td>—</td>
+<td>Hy：hinge（与 DDMD 联用）</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L4 额外真实数据 / reward</strong></td>
+<td>—</td>
+<td>DTTD（相机偏好·外围）</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L5 样本级 / 表征分布场</strong></td>
+<td>—</td>
+<td>Direct Forcing（维持）</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>因果预训练配方（挂 L1/L2 前置）</strong></td>
+<td>—</td>
+<td><strong>Mix Forcing / MoBA</strong>（今日主格）</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>推理时步数分配（F7）</strong></td>
+<td>—</td>
+<td>UnStep（维持）</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<p>放不进框架的：LLM 投机/OPD/检索蒸馏；Hy-Nomas 的结构化 caption / 相机控制（归文献 WM 系统，少步只取蒸馏段）。</p>
+<hr />
+</section><section class=""><div class="cardtools">详细条目：<button data-act="open">全部展开</button><button data-act="close">全部收起</button></div><h2 id="详细条目2-条">详细条目（2 条）</h2>
+<details class="card" open="open">
+<summary id="①-mix-forcing少步之前因果化别把视觉先验弄丢值得读">① Mix Forcing：少步之前，因果化别把视觉先验弄丢（值得读）</summary>
+<div class="body">
+<p><strong>白话背景。</strong> 交互世界模型要 KV-cache 自回归往前滚，通常先把双向视频扩散改成因果，再压成少步。少步损失（CD/DMD）大家会抄；<strong>因果预训练这一段</strong>更容易被当成「先 TF 一下」。</p>
+<p><strong>具体问题。</strong> 纯 teacher forcing 的注意力模式和双向预训练不一致，视觉先验被拧歪，后面再怎么 DMD 也从差的初始化出发。作者用同管线消融说明了这一点（见下）。<span class="b b-orig">原文</span></p>
+<p><strong>做法（按顺序）。</strong><span class="b b-orig">原文</span></p>
+<ol>
+<li><strong>MoBA 自注意力</strong>：同一套参数上联合优化 TF loss 与 BID loss（λ=1）；TF 学因果 next-chunk，BID 保先验。消融里 TF+BID 的 SIQ 58.4，末窗 IQ 升到 61.0；纯 TF 末窗掉到 48.3（Tab.3）。加 Diffusion Forcing 反而伤画质（训练噪历史 vs 推理干净 KV 不匹配）。</li>
+<li><strong>Chunk-wise 交叉注意力</strong>：共享环境提示 + 当前块局部提示，不把未来指令暴露给当前块；相对全局提示，EA 23.4→50.0、OT1.5s 18.3→62.1（Tab.4）。</li>
+<li><strong>少步后训练</strong>：因果 checkpoint 上 CD（LPIPS）再 DMD（跟 LingBot-World-Fast 设定），得到 <strong>4 步/chunk</strong> 生成器。</li>
+</ol>
+<p><strong>为什么可能改变决定。</strong> 在<strong>同一 CD→DMD</strong>下，Mix 初始化的四步 Quality 70.9 vs TF-only 64.1，事件跟随差距更大（EA 55.1 vs 33.7）。这说明瓶颈经常在「因果化」，不在再调一点 DMD 权重。<span class="b b-orig">原文</span></p>
+<p><strong>几个数字。</strong><span class="b b-orig">原文</span>InBench 主模型 Quality 75.1、EA 94.4、OT1.5s 96.8；SANA-WM-Bench 60s Quality≈74.8/74.7，SIQ 66.7/66.4（LingBot-World-Fast 简单轨 IQ 从 63.2 掉到 52.0）。一小时 rollout 为附录定性+每五分钟均质。<span class="b b-meas">未实测墙钟</span></p>
+<p><strong>限制。</strong> 自建 InBench；相机误差在 SANA 上不是最优（提示协议不一致）；训练 256×H20，成本高；<strong>训练代码是否含完整 MoBA 未核 loss 文件行号</strong>——今日不触发必读·先跑。</p>
+<p><strong>与最接近工作的核心差别</strong></p>
+<ul>
+<li><strong>vs Causal Forcing / ++：</strong> 那些强调因果教师或因果一致性蒸馏；Mix 动的是<strong>蒸馏前</strong>的 MoBA 混合注意力预训练。</li>
+<li><strong>vs 直接 ODE→DMD（无因果预训练）：</strong> 双向教师轨迹含未来信息，因果学生难贴 flow map；Mix 先造成功初始化再 CD/DMD。</li>
+<li><strong>vs Hy-Nomas：</strong> Hy 是段 forcing + PCM→DDMD+adv 的系统配方；Mix 是「TF+BID 混合因果预训练」这一刀，后训练仍是经典 CD+DMD。</li>
+</ul>
+<p><strong>按格预判：</strong> 挂在「流式 × 因果预训练 → L1/L2」；风险是 BID 分支若推理关不干净，或 chunk 提示协议与评测不一致（已在 SANA 相机误差上露头）。</p>
+<p><strong>对我们训练：</strong> 流式底座先跑 {TF, MoBA} × 同一四步蒸馏；AV 暂借注意力混合思路，音轨条件另设。图像无。</p>
+<p><strong>预测（写结果前）：</strong> 我们复现时，MoBA 相对 TF 的收益会主要出现在<strong>长 rollout 末段 IQ 与在线改提示的 OT</strong>，静态首段差距较小。</p>
+<hr />
+</div>
+</details>
+<details class="card" open="open">
+<summary id="②-hy-nomas报告齐了少步仍是可抄的组合拳值得看流式少步配方">② Hy-Nomas：报告齐了，少步仍是「可抄的组合拳」（值得看·流式少步配方）</summary>
+<div class="body">
+<p><strong>白话背景。</strong> 腾讯混元交互世界模型；文献侧已定「可用资源」。我们要的是蒸馏段是否改变少步训练决定。</p>
+<p><strong>问题。</strong> 段级因果 AR 要从约 100 NFE 压到可交互；需要初始化 + on-policy 分布匹配 + 一点真视频对抗。</p>
+<p><strong>做法。</strong><span class="b b-orig">原文 tech report §5.5</span></p>
+<ol>
+<li>因果 <strong>PCM</strong> 初始化（教师=段 forcing AR）。</li>
+<li><strong>Hybrid forcing</strong> 下 <strong>DDMD</strong>（CFG/噪声解耦；<strong>只监督最后生成段</strong>，前段 stop-grad）+ <strong>adversarial hinge</strong>（真视频）。</li>
+<li>推理报告 <strong>4 NFE/段</strong>；仓库默认 <strong>8</strong> 步；HF 写明 4/6/8。解码器 PixelUMM 路径另做 <strong>DMD2 一步</strong>。【HF】【代码】</li>
+</ol>
+<p><strong>为什么不升必读。</strong> 无 PCM-only / +DDMD / +adv 组件消融；组合从 Self-Forcing / Relic hybrid / DMD 系可预期。权重开、能跑，但是「系统报告」不是「新少步机制站得住」。<span class="b b-inf">推断</span><span class="b b-team">队友转述</span></p>
+<p><strong>对我们训练：</strong> 可作「段级 DDMD 只打末段 + hinge」的对照配方；与 Mix 的「先 MoBA 再 CD+DMD」并列观察，勿混数字。AV 无直接协议。</p>
+<hr />
+</div>
+</details>
+</section><section class=""><h2 id="f3-命中其余f6-全读标题">F3 命中其余（F6 全读标题）</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>标题</th>
+<th>定级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.33566">2610.33566</a></td>
+<td>DTTD</td>
+<td>外围·WM 相机 → 转文献</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.33008">2610.33008</a> TraceQuery / 33379 One Call Ahead / 33391 dLLM / 33599 H-GLow / 33650 TAD / 33811 ReLF / 33129 Speculative Forking / 33941 TurboWAM / 34005 ST-OPSD 等</td>
+<td>见 hits_v2</td>
+<td><strong>OUT</strong>（dLLM/图/机器人/LLM OPD/检索等）</td>
+</tr>
+</tbody>
+</table></div>
+<p>完整 25 条见 <code>daily/raw/1027/hits_v2.txt</code>。</p>
+<hr />
+</section><section class=""><h2 id="f5-补关rl-forward-昨日未显式落-id">F5 补关（RL forward 昨日未显式落 ID）</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>定级</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.32881">2610.32881</a> NgramRL</td>
+<td>OUT·LLM</td>
+<td>RL rollout 投机</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.32802">2610.32802</a> Frontier-OPD</td>
+<td>OUT·LLM agent</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.32933">2610.32933</a> Yalda-Embedding</td>
+<td>OUT·检索</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class=""><h2 id="转交">转交</h2>
+<ul>
+<li>→ <strong>多模态文献追踪</strong>：Mix Forcing <a href="https://arxiv.org/abs/2610.33589">2610.33589</a>（我评 <strong>值得读</strong>，归我少步主评；WM/交互系统请你们挂观察）；DTTD <a href="https://arxiv.org/abs/2610.33566">2610.33566</a>（外围·相机，归你们）；Hy-Nomas 少步侧维持值得看（与你们「可用资源」对齐、不抢主评）。</li>
+<li>→ <strong>多模态强化学习进展跟踪</strong>：今日无新 RL-on-few-step；你们 forward 的 LLM/投机条已全部 OUT 关闭。</li>
+</ul>
+<hr />
+</section><section class=""><h2 id="未覆盖-下步">未覆盖 / 下步</h2>
+<ul>
+<li>Tue 27 列表批：<strong>pending</strong> → 13:42 补扫 <code>/new</code>。</li>
+<li>Mix Forcing：核 LingBot-World-V2 训练目录是否含 MoBA loss；齐则升 <strong>必读·先跑</strong>。</li>
+<li>Semantic Scholar 种子引用：STALE 日跳过。</li>
+</ul></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-27 09:23 (UTC+8)</div></main></div>
+<script>
+(function(){
+ // 详情卡片全部展开/收起
+ document.querySelectorAll('[data-act]').forEach(function(b){b.addEventListener('click',function(){
+   var o=b.getAttribute('data-act')==='open';document.querySelectorAll('details.card').forEach(function(d){d.open=o;});});});
+ // 点击目录中位于折叠卡片内的锚点时自动展开
+ function openFor(id){var el=document.getElementById(id);if(!el)return;var d=el.closest('details');if(d)d.open=true;}
+ if(location.hash)openFor(decodeURIComponent(location.hash.slice(1)));
+ window.addEventListener('hashchange',function(){openFor(decodeURIComponent(location.hash.slice(1)));});
+ // 目录高亮
+ var links=[].slice.call(document.querySelectorAll('nav.toc a'));
+ var heads=links.map(function(a){return document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));});
+ function hl(){var y=window.scrollY+80,k=-1;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top+window.scrollY<=y&&h.offsetParent!==null)k=i;});
+   links.forEach(function(a,i){a.classList.toggle('on',i===k);});}
+ window.addEventListener('scroll',hl,{passive:true});hl();
+})();
+</script><script>if(document.querySelector('code.language-mermaid')){var s=document.createElement('script');
+s.src='https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';s.onload=function(){document.querySelectorAll('code.language-mermaid').forEach(function(c){var d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentNode.replaceWith(d);});mermaid.initialize({startOnLoad:false});mermaid.run();};document.head.appendChild(s);}</script></body></html>
