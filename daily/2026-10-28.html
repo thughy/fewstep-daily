@@ -1,0 +1,305 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>少步蒸馏 · 每日 2026-10-28（周三 · 晨间 pending）</title>
+<style>
+:root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--side:#f6f8fa;--line:#d1d9e0;--acc:#0b57d0;--l1:#fff8e6;--l1b:#f0c36d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--fg);background:var(--bg);font:15.5px/1.75 "Noto Sans CJK SC","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.top{position:sticky;top:0;z-index:5;background:#24292f;color:#fff;padding:8px 20px;display:flex;gap:18px;align-items:center;font-size:14px}
+.top a{color:#fff;opacity:.9} .top .brand{font-weight:700;opacity:1}
+.wrap{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1400px;margin:0 auto}
+nav.toc{position:sticky;top:40px;align-self:start;height:calc(100vh - 40px);overflow:auto;background:var(--side);border-right:1px solid var(--line);padding:14px 10px 40px 14px;font-size:13.5px;line-height:1.5}
+nav.toc .tt{font-weight:700;color:var(--muted);margin:2px 0 8px}
+nav.toc ul{list-style:none;margin:0;padding-left:10px} nav.toc>div>ul{padding-left:0}
+nav.toc li{margin:3px 0} nav.toc a{color:#333;display:block;padding:1px 4px;border-radius:4px}
+nav.toc a:hover,nav.toc a.on{background:#dde7f7;text-decoration:none}
+main{padding:22px 40px 80px;min-width:0}
+h1{font-size:26px;margin:.2em 0 .6em;border-bottom:2px solid var(--line);padding-bottom:.3em}
+h2{font-size:21px;margin:1.8em 0 .6em;border-bottom:1px solid var(--line);padding-bottom:.25em}
+h3{font-size:17.5px;margin:1.4em 0 .5em}
+h4{font-size:15.5px}
+blockquote{margin:0 0 1em;padding:8px 16px;border-left:4px solid #8c959f;background:#f6f8fa;color:#3d444d;font-size:14px}
+blockquote p{margin:.3em 0}
+code{font-family:"JetBrains Mono","DejaVu Sans Mono",Menlo,Consolas,monospace;font-size:.88em;background:#eff1f3;padding:.1em .35em;border-radius:4px}
+pre{background:#f6f8fa;border:1px solid var(--line);border-radius:6px;padding:10px 14px;overflow:auto} pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:.6em 0 1.1em}
+table{border-collapse:collapse;font-size:13.8px;line-height:1.55;min-width:60%}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left}
+th{background:#eef2f6;font-weight:700;position:sticky;top:0}
+tr:nth-child(even) td{background:#fafbfc}
+td strong{color:#8a1c1c}
+hr{border:0;border-top:1px solid var(--line);margin:1.6em 0}
+section.layer1{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:2px 22px 10px;margin:18px 0 26px}
+section.layer1>h2{border-bottom-color:var(--l1b)}
+section.layer1 .tw table{background:#fff}
+.layer-tag{display:inline-block;font-size:12px;font-weight:700;color:#7a4b00;background:#ffe2a8;border-radius:10px;padding:0 9px;margin-left:8px;vertical-align:middle}
+details.card{border:1px solid var(--line);border-radius:8px;margin:12px 0;background:#fff}
+details.card>summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:16.5px;background:#f3f6fa;border-radius:8px;list-style:none}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary:before{content:"▸ ";color:var(--acc)} details.card[open]>summary:before{content:"▾ "}
+details.card[open]>summary{border-bottom:1px solid var(--line);border-radius:8px 8px 0 0}
+details.card>.body{padding:4px 18px 10px}
+.cardtools{font-size:13px;margin:6px 0 2px} .cardtools button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:#fff;border-radius:5px;padding:1px 8px;cursor:pointer;margin-right:6px}
+.b{display:inline-block;font-size:11.5px;line-height:1.5;padding:0 6px;border-radius:9px;margin:0 2px;font-weight:600;white-space:nowrap;vertical-align:1px;border:1px solid transparent}
+.b-meas{background:#dafbe1;color:#116329;border-color:#a8e6b5}
+.b-orig{background:#ddf4ff;color:#0a4b8c;border-color:#a6d4f5}
+.b-team{background:#fff1e5;color:#953800;border-color:#ffc89a}
+.b-inf{background:#eef0f2;color:#4a535c;border-color:#cfd5db}
+.b-codex{background:#fbefff;color:#6e2b91;border-color:#e3b8f5}
+.b-oth{background:#f6f8fa;color:#4a535c;border-color:#d1d9e0}
+.idx{max-width:900px;margin:0 auto;padding:30px 30px 80px}
+.idx .hero{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:12px 22px;margin:14px 0 24px;font-size:16.5px}
+.idx .cards a{display:block;border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:10px 0;color:var(--fg)}
+.idx .cards a:hover{border-color:var(--acc);text-decoration:none;background:#f6f9ff}
+.idx .cards .t{font-weight:700;color:var(--acc)} .idx .cards .d{font-size:13.5px;color:var(--muted)}
+.foot{color:var(--muted);font-size:12.5px;margin-top:40px;border-top:1px solid var(--line);padding-top:8px}
+@media (max-width:900px){.wrap{grid-template-columns:1fr} nav.toc{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)} main{padding:16px}}
+@media print{nav.toc,.top,.cardtools{display:none}.wrap{display:block} details.card{break-inside:avoid}}
+</style></head><body>
+<div class="top"><a class="brand" href="../index.html">多模态少步蒸馏 · 前沿调研</a><a href="../baseline.html">2026Q3 基线</a><a href="../index.html#dailies">每日</a><a href="../index.html#weeklies">每周</a></div>
+<div class="wrap"><nav class="toc"><div class="tt">目录</div><div><div class="toc">
+<ul>
+<li><a href="#结论先行">结论先行</a></li>
+<li><a href="#30-秒速览">30 秒速览</a></li>
+<li><a href="#一屏框架今天挂在哪一格">一屏框架：今天挂在哪一格</a></li>
+<li><a href="#详细条目2-条">详细条目（2 条）</a><ul><li><a href="#①-reseed多样性不是再调一点-dmd而是把第一步从学生手里拿回来值得读">① ReSeed：多样性不是再调一点 DMD，而是把「第一步」从学生手里拿回来（值得读）</a></li><li><a href="#②-helixkv流式-ar-的内存墙用按头按龄分比特而不是再砍步数值得看流式kv压缩">② HelixKV：流式 AR 的内存墙，用「按头×按龄」分比特，而不是再砍步数（值得看·流式KV压缩）</a></li></ul></li>
+<li><a href="#批次与漏检">批次与漏检</a></li>
+<li><a href="#转发草稿待-parent-发送">转发（草稿，待 parent 发送）</a></li>
+<li><a href="#原始产物">原始产物</a></li>
+</ul>
+</div>
+</div></nav>
+<main><h1 id="少步蒸馏-每日-2026-10-28周三-晨间-pending">少步蒸馏 · 每日 2026-10-28（周三 · 晨间 pending）</h1>
+<blockquote>
+<p><strong>批次覆盖（F1）</strong>：应出列表日 = <strong>Wed 28 Oct</strong>（北京 08:00）。09:20–09:4x <code>/new</code>（cs.CV/LG/stat.ML/SD/AS/MM/eess.IV）页头仍是 <strong>Tuesday, 27 October 2026</strong> → 晨间 <strong>Wed 28 = pending</strong>。<strong>勿把周二当今日已完成批。</strong> Tue 27 已在 10-27 补扫 <strong>done</strong>（去重 1172 / hits 98）。Mon 26 done。Sat/Sun <strong>none</strong>。13:42 例行补扫。</p>
+<p><strong>F3 ID 区间预览（不能标 done）</strong>：起点 <code>2610.35869</code>（Tue catchup 最大号 ≈35866/35868 之后）→ 内容探针上限 <strong><code>2610.37392</code></strong>。HTTPS API <code>id_list</code> 取到 ≈36951；其余 HTML abs 补齐。合并抓取 <strong>1493</strong>（404 空洞除外）；落我方 7 类 <strong>331</strong>；v2.2 命中 <strong>23</strong>，<strong>全部读了标题（F6）</strong>；Codex 初筛 + 我复核非 OUT。<span class="b b-meas">实测</span><span class="b b-codex">Codex✓</span></p>
+<p><strong>F4 OpenReview</strong>：文献 10-28 <code>or_iclr27_2026-10-28.json</code> 429 notes（只读）。正则命中多；<strong>今日主评 OR-only</strong>：HelixKV / TrajQuant / Paxar（文献转交）。积压无新增「仅OR、无孪生、新机制」必清项（三篇已定级）。Hy-Nomas <strong>arXiv 孪生</strong> <code>2610.36729</code> 由 F3 捕到（文献晨间 twin 仍写无 arXiv）。</p>
+<p><strong>F5 对账（48h）</strong>：文献 forward 3 条 OR + shortlist；RL <code>fewstep_candidates</code> 无 ID&gt;35866。范围内漏检 <strong>0</strong>（3/3 OR 定级）。详见 <code>daily/raw/1028wed/f5_diff.md</code>。
+标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】【HF】【仅OR摘要】<span class="b b-team">队友转述</span><span class="b b-inf">推断</span><span class="b b-codex">Codex✓</span></p>
+</blockquote>
+<hr />
+<section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
+<p><strong>周三列表尚未翻页；本晨只有 F3 ID 预览 + OR 转交定级。真正新进训练预期的是一篇「值得读」：ReSeed（蒸馏后只改首步、用教师首区间割线速度把多样性拉回来）。无新「必读·先跑」。HelixKV 定「值得看·流式 KV 压缩」；Hy-Nomas 孪生落地但评级不升；DICE 作少步安全旁注。</strong></p>
+<ol>
+<li><strong>ReSeed <a href="https://arxiv.org/abs/2610.37110">2610.37110</a> → 值得读</strong>。【摘要】<span class="b b-codex">Codex✓</span>DMD 少步学生同 prompt 多种子塌缩；沿轨迹对比发现<strong>损失主要发生在首个高噪步</strong>；把首步换成教师轨迹、后三步仍用学生，多样性大部回来。方法：冻住学生，只在<strong>第一步</strong>加 seed-response bias adapter，对齐教师首区间 <strong>secant velocity</strong>；无目标图 / 无感知 / 无对抗。FLUX.1-dev 四步学生：DINO 多样性 <strong>+48.3%</strong>，额外可训参数约 <strong>0.00196%</strong>，8k prompt–noise；并报 SD3 / SD3.5 / <strong>Wan2.1-T2V-1.3B</strong>。【摘要】abs 页未见独立 GH/HF 链 → <strong>不升必读·先跑</strong>。</li>
+<li><strong>DICE / Haste Makes Waste <a href="https://arxiv.org/abs/2610.36665">2610.36665</a> → 值得看·少步安全</strong>。【摘要】少步往往比教师更不安全，且步数越少越难擦除；DICE 按蒸馏方式构造擦除与保真损失（FLUX Schnell 不安全率 0.046 vs 先验 ≥0.161）。<strong>不改我们蒸馏主 loss</strong> → 旁注，不升值得读。</li>
+<li><strong>Hy-Nomas <a href="https://arxiv.org/abs/2610.36729">2610.36729</a> → 维持 值得看·流式少步配方</strong>。【摘要】F3 捕到 arXiv 孪生；摘要确认多阶段课程后 <strong>diffusion distillation</strong>、权重/代码释放口径与既有技术报告一致 → <strong>不因上 arXiv 升格</strong>。</li>
+<li><strong>HelixKV OR <code>pGXWVPoQef</code> → 值得看·流式KV压缩</strong>。【仅OR摘要】<span class="b b-team">队友转述</span>训练免费；头×时间龄混合精度 KV；Self-Forcing-1.3B / HY-WorldPlay-5B 约 <strong>7×</strong> KV、VBench Total 保留 <strong>99.9%</strong>。推理/服务侧，非新蒸馏信号；无孪生/未核代码 → 不升必读。挂 F7/推理加速旁格。</li>
+<li><strong>TrajQuant <code>HfjKCjgg09</code> → 外围·WM PTQ</strong>；<strong>Paxar <code>kE40s5BpAk</code> → 外围·长AV分层AR（摘要无蒸馏段）</strong>。【仅OR摘要】同意文献摘要级。</li>
+<li><strong>观察维持</strong>：Direct Forcing 必读·先跑；Speculative Forcing 必读·待代码；PTD 必读·先跑；Mix / SF² / Leta / CMM 值得读；UnStep 值得看·流式推理加速。Live-OPSD 36959 → <strong>OUT·流式助手决策</strong>（标题易混成生成）。</li>
+</ol>
+<p><strong>对我们训练的含义：</strong></p>
+<ul>
+<li><strong>图像 / 视频少步：</strong> 把「多样性掉在哪一步」写成可测项：同 prompt 多种子，分别换掉第 1 / 中间 / 末步为学生或教师轨迹。若复现「首步主导」，再评估是否给已蒸学生加 ReSeed 式首步 adapter，而不是重跑整段 DMD。<span class="b b-inf">推断</span></li>
+<li><strong>流式 AR：</strong> HelixKV 只影响服务侧 KV 预算，不改 CD/DMD；与 UnStep / FreezePlan 并列观察。Hy-Nomas 孪生便于引用，配方仍 PCM→DDMD+adv。</li>
+<li><strong>AV：</strong> ReSeed 含 Wan T2V 但不含音轨；Paxar 无蒸馏段 → 不改 AV 少步主线。</li>
+<li><strong>安全：</strong> 少步部署若过审，DICE 思路（擦除目标对齐蒸馏）值得记一笔；非训练优先。</li>
+<li><strong>F7 步数分配：</strong> 本预览无「等时均匀少步对照」达标项。</li>
+</ul>
+</section><section class="layer1"><h2 id="30-秒速览">30 秒速览<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文 / 资源</th>
+<th>评级</th>
+<th>一句话</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ReSeed <a href="https://arxiv.org/abs/2610.37110">2610.37110</a></strong></td>
+<td><strong>值得读</strong></td>
+<td>蒸馏后只改首步 bias，对齐教师首区间速度；多样性 +48%；未见码</td>
+<td>【摘要】</td>
+</tr>
+<tr>
+<td>DICE <a href="https://arxiv.org/abs/2610.36665">2610.36665</a></td>
+<td>值得看·少步安全</td>
+<td>少步更不安全+更难擦；蒸馏对齐擦除</td>
+<td>【摘要】</td>
+</tr>
+<tr>
+<td>Hy-Nomas <a href="https://arxiv.org/abs/2610.36729">2610.36729</a></td>
+<td>值得看·流式少步配方</td>
+<td><strong>arXiv 孪生落地</strong>；维持不升</td>
+<td>【摘要】</td>
+</tr>
+<tr>
+<td>HelixKV OR</td>
+<td>值得看·流式KV压缩</td>
+<td>训练免费混合精度 KV；~7× / 99.9% VBench</td>
+<td>【仅OR摘要】</td>
+</tr>
+<tr>
+<td>TrajQuant / Paxar OR</td>
+<td>外围</td>
+<td>WM PTQ / 长 AV planner–renderer</td>
+<td>【仅OR摘要】</td>
+</tr>
+<tr>
+<td>Mix / SF² / Leta / CMM</td>
+<td>值得读</td>
+<td>维持 10-27</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Direct / Speculative / PTD</td>
+<td>必读·先跑或待代码</td>
+<td>维持</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class="layer1"><h2 id="一屏框架今天挂在哪一格">一屏框架：今天挂在哪一格<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>单步去噪</th>
+<th>流式时间轴</th>
+<th>AV 跨模态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L1 轨迹 / 一致性 / flow map</strong></td>
+<td><strong>ReSeed</strong>（首步割线速度；后处理）</td>
+<td>Hy：PCM（维持）</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L2 分数差分布匹配（DMD）</strong></td>
+<td>DICE 旁注（安全，非信号）</td>
+<td>Mix/SF²/Leta 维持</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L3 对抗</strong></td>
+<td>—</td>
+<td>Hy：hinge（维持）</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L4 额外真实数据 / reward</strong></td>
+<td>DVOC（外围·端点）</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L5 样本级 / 表征分布场</strong></td>
+<td>—</td>
+<td>Direct Forcing 维持</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>因果预训练 / 系统配方</strong></td>
+<td>—</td>
+<td>Hy-Nomas 孪生；BoxWorld 外围</td>
+<td>Paxar 外围</td>
+</tr>
+<tr>
+<td><strong>推理时步数分配（F7）</strong></td>
+<td>—</td>
+<td>HelixKV（KV 压缩旁格）；UnStep 维持</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<p>放不进框架的：Live-OPSD（流式助手）、NLD-Uni/HiLo-RD/SERF（DLLM/LM）、Rollback（机器人 WM 策略）。</p>
+<hr />
+</section><section class=""><div class="cardtools">详细条目：<button data-act="open">全部展开</button><button data-act="close">全部收起</button></div><h2 id="详细条目2-条">详细条目（2 条）</h2>
+<details class="card" open="open">
+<summary id="①-reseed多样性不是再调一点-dmd而是把第一步从学生手里拿回来值得读">① ReSeed：多样性不是再调一点 DMD，而是把「第一步」从学生手里拿回来（值得读）</summary>
+<div class="body">
+<p><strong>白话背景。</strong> 分布匹配蒸馏（DMD 等）能把图像/视频压到四步左右还像样，但同一句提示换几个初始噪声，学生常常画出几乎一样的图——多样性塌了。</p>
+<p><strong>具体问题。</strong> 作者沿采样轨迹逐步对比师生：对初始噪声的响应，<strong>掉得最狠的是第一个高噪步</strong>。诊断实验：只用教师走第一步、后三步仍用四步学生，多样性大部分回来。说明后面几步并不是主凶。【摘要】</p>
+<p><strong>做法（按顺序）。</strong>【摘要】</p>
+<ol>
+<li>冻住已蒸馏学生全部权重。</li>
+<li>只在<strong>第一步</strong>插入极轻量的 seed-response bias adapter。</li>
+<li>训练目标：让学生第一步的速度，对齐教师在该首区间上的 <strong>secant velocity</strong>（割线速度：区间两端状态差 / 时间差）。</li>
+<li>不需要目标图像、感知损失或对抗损失；数据只需 prompt–noise 对（文称 8k）。</li>
+</ol>
+<p><strong>为什么可能改变决定。</strong> 若多样性瓶颈稳定地在首步，则「整网重蒸」或「再加表征对齐（如 SF²）」之前，应先试<strong>只修首步</strong>——成本差几个数量级。<span class="b b-inf">推断</span></p>
+<p><strong>几个数字。</strong>【摘要】四步 FLUX.1-dev 学生：DINO 多样性 <strong>+48.3%</strong>；可训参数相对底座 <strong>0.00196%</strong>。评测还含 SD3 / SD3.5 与 <strong>Wan2.1-T2V-1.3B</strong>（视频是否同幅度需读全文）。</p>
+<p><strong>限制。</strong> 晨间仅摘要；abs 未见 GH/HF；是<strong>蒸馏后</strong>修补，不替代更好的主蒸馏目标；AV 音轨未涉及。</p>
+<p><strong>与最接近工作的核心差别</strong></p>
+<ul>
+<li><strong>vs 再跑 DMD / 加 GAN：</strong> 不动主损失，只改推理轨迹第一步的局部适配。</li>
+<li><strong>vs SF²（表征强迫）：</strong> SF² 在训练期对齐内部特征；ReSeed 在部署前修首步速度。</li>
+<li><strong>vs Fast and Useful（首步 LoRA 服务合成数据）：</strong> 那边为目标分布（分类器友好）；这边为<strong>同 prompt 多种子多样性</strong>。</li>
+</ul>
+<p><strong>按格预判：</strong> L1/后处理；风险是只抬多样性指标、语义或画质暗伤（摘要称画质可竞争，需全文核）。</p>
+<p><strong>对我们训练：</strong> 先做「换步诊断」再决定是否实现 adapter；流式 chunk 内是否也有「首噪步」效应可对照测。</p>
+<p><strong>预测（写结果前）：</strong> 我们在 Wan/已蒸学生上复现时，换掉第 1 步对多样性的增益会明显大于换掉第 3/4 步；若首步已接近教师，ReSeed 增益应接近零。</p>
+<hr />
+</div>
+</details>
+<details class="card" open="open">
+<summary id="②-helixkv流式-ar-的内存墙用按头按龄分比特而不是再砍步数值得看流式kv压缩">② HelixKV：流式 AR 的内存墙，用「按头×按龄」分比特，而不是再砍步数（值得看·流式KV压缩）</summary>
+<div class="body">
+<p><strong>白话背景。</strong> 自回归视频扩散要靠 KV cache 往前滚；序列一长，显存线性涨，服务先炸在缓存而不是 NFE。</p>
+<p><strong>问题。</strong> 均匀/粗粒度 KV 量化：耐量化的地方浪费比特，敏感处又不够。【仅OR摘要】</p>
+<p><strong>做法。</strong>【仅OR摘要】训练免费；按<strong>注意力头</strong>与<strong>时间龄</strong>做混合精度分配；用输出失真刻画敏感度。报 Self-Forcing-1.3B 与 HY-WorldPlay-5B：<strong>约 7× KV 压缩</strong>，VBench Total <strong>约 99.9%</strong> 保留。</p>
+<p><strong>为什么不升必读。</strong> 无 arXiv 孪生、未核代码；不改变蒸馏训练决策，只改推理服务预算。</p>
+<p><strong>对我们训练：</strong> 与 UnStep / FreezePlan 同挂「推理加速」观察；少步训练对照表不必改。转文献侧可作流式基础设施旁注。<span class="b b-inf">推断</span></p>
+<hr />
+</div>
+</details>
+</section><section class=""><h2 id="批次与漏检">批次与漏检</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>项</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wed 28 <code>/new</code></td>
+<td><strong>pending</strong>（仍 Tue 27）</td>
+</tr>
+<tr>
+<td>F3 <code>2610.35869</code>–<code>2610.37392</code></td>
+<td>fetched≈1493 / ours 331 / hits <strong>23</strong>（F6 全读）</td>
+</tr>
+<tr>
+<td>F4 OR</td>
+<td>HelixKV/TrajQuant/Paxar 已定级；机制积压 0 新</td>
+</tr>
+<tr>
+<td>F5</td>
+<td>漏检 <strong>0</strong></td>
+</tr>
+<tr>
+<td>补扫</td>
+<td><strong>13:42</strong> 等 Wed 列表</td>
+</tr>
+</tbody>
+</table></div>
+</section><section class=""><h2 id="转发草稿待-parent-发送">转发（草稿，待 parent 发送）</h2>
+<p>见 <code>daily/pending/2026-10-28-forwards.md</code>。</p>
+</section><section class=""><h2 id="原始产物">原始产物</h2>
+<p><code>daily/raw/1028wed/</code>：<code>coverage.json</code>、<code>items_idrange.json</code>、<code>hits_v2.txt</code>、<code>triage_final.tsv</code>、<code>f5_diff.md</code>、<code>codex_triage.out</code>。</p></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-28 09:44 (UTC+8)</div></main></div>
+<script>
+(function(){
+ // 详情卡片全部展开/收起
+ document.querySelectorAll('[data-act]').forEach(function(b){b.addEventListener('click',function(){
+   var o=b.getAttribute('data-act')==='open';document.querySelectorAll('details.card').forEach(function(d){d.open=o;});});});
+ // 点击目录中位于折叠卡片内的锚点时自动展开
+ function openFor(id){var el=document.getElementById(id);if(!el)return;var d=el.closest('details');if(d)d.open=true;}
+ if(location.hash)openFor(decodeURIComponent(location.hash.slice(1)));
+ window.addEventListener('hashchange',function(){openFor(decodeURIComponent(location.hash.slice(1)));});
+ // 目录高亮
+ var links=[].slice.call(document.querySelectorAll('nav.toc a'));
+ var heads=links.map(function(a){return document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));});
+ function hl(){var y=window.scrollY+80,k=-1;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top+window.scrollY<=y&&h.offsetParent!==null)k=i;});
+   links.forEach(function(a,i){a.classList.toggle('on',i===k);});}
+ window.addEventListener('scroll',hl,{passive:true});hl();
+})();
+</script><script>if(document.querySelector('code.language-mermaid')){var s=document.createElement('script');
+s.src='https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';s.onload=function(){document.querySelectorAll('code.language-mermaid').forEach(function(c){var d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentNode.replaceWith(d);});mermaid.initialize({startOnLoad:false});mermaid.run();};document.head.appendChild(s);}</script></body></html>
