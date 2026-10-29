@@ -1,5 +1,5 @@
 <!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"><title>少步蒸馏 · 每日 2026-10-29（周四 · 晨间 pending）</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>少步蒸馏 · 每日 2026-10-29（周四 · pending · 含 13:48 补扫）</title>
 <style>
 :root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--side:#f6f8fa;--line:#d1d9e0;--acc:#0b57d0;--l1:#fff8e6;--l1b:#f0c36d}
 *{box-sizing:border-box}
@@ -69,22 +69,26 @@ details.card>.body{padding:4px 18px 10px}
 <li><a href="#命中-triage本预览">命中 triage（本预览）</a></li>
 <li><a href="#下一步闭环">下一步（闭环）</a></li>
 <li><a href="#转发">转发</a></li>
+<li><a href="#补扫1348北京时间-asiashanghai">补扫（13:48，北京时间 / Asia/Shanghai）</a><ul>
+<li><a href="#f5-队友转交召回补扫按-f9-复核">F5 队友转交召回（补扫按 F9 复核）</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div></nav>
-<main><h1 id="少步蒸馏-每日-2026-10-29周四-晨间-pending">少步蒸馏 · 每日 2026-10-29（周四 · 晨间 pending）</h1>
+<main><h1 id="少步蒸馏-每日-2026-10-29周四-pending-含-1348-补扫">少步蒸馏 · 每日 2026-10-29（周四 · pending · 含 13:48 补扫）</h1>
 <blockquote>
-<p><strong>批次覆盖（F1）</strong>：应出列表日 = <strong>Thu 29 Oct</strong>（北京 08:00）。09:21–09:3x <code>/new</code>（cs.CV）页头仍是 <strong>Wednesday, 28 October 2026</strong> → <strong>Thu 29 = pending</strong>；<strong>勿把周三当今天</strong>。完整 <code>/new</code> 等 <strong>13:42 补扫</strong>。Wed 28 <strong>done</strong>（688/47；ReSeed 值得读；LIVE <a href="https://thughy.github.io/fewstep-daily/daily/2026-10-28.html">2026-10-28</a>）。Tue 27 done。Mon 26 done。Sat/Sun <strong>none</strong>。</p>
+<p><strong>批次覆盖（F1）</strong>：应出列表日 = <strong>Thu 29 Oct</strong>（北京 08:00）。09:21 与 <strong>13:48 补扫</strong> <code>/new</code>（cs.CV/LG）页头均仍是 <strong>Wednesday, 28 October 2026</strong> → <strong>Thu 29 = pending</strong>（公告延迟；API max 仍 <strong><a href="https://arxiv.org/abs/2610.37668">2610.37668</a></strong>）。<strong>勿把周三当今天；勿标 done。</strong> Wed 28 <strong>done</strong>（688/47；ReSeed 值得读；LIVE <a href="https://thughy.github.io/fewstep-daily/daily/2026-10-28.html">2026-10-28</a>）。Tue 27 done。Mon 26 done。Sat/Sun <strong>none</strong>。</p>
 <p><strong>F3 ID 预览</strong>：<code>2610.37393</code>→<code>2610.37668</code>（max 内容探针；接 Wed 补扫 max≈37392）。API id_list <strong>276/276</strong>（0 hole）；7 类 ours <strong>57</strong>；v2.2 命中 <strong>3</strong>（F6 全读标题）。<span class="b b-meas">实测</span></p>
 <p><strong>F4 OpenReview</strong>：文献 <code>or_iclr27_2026-10-29.json</code> 75 notes；<code>new_vs_known=0</code>。HelixKV / TrajQuant / Paxar 无孪生，维持昨日评级。机制积压无新增强制项。</p>
-<p><strong>F5 对账（48h）</strong>：文献 shortlist + recall + RL <code>forward_fewstep</code> 25 条 → 范围内 arXiv <strong>31/31 covered</strong>；raw 差集 3 条（ChronoReplay / 机器人 WAM 消融 / Omni-InteractScope）文献已判 <strong>OUT·域外</strong>，<strong>不计漏检</strong>。范围内漏检 <strong>0</strong>。
+<p><strong>F5 对账（48h→补扫复核）</strong>：文献 <strong>无新增待少步定级</strong>。RL <code>forward_fewstep</code> <strong>25</strong> 条：晨间误报全覆盖；<strong>13:48 补扫按 F9（LIVE 日报须含完整 arXiv ID+评级）复核 → 漏检 6</strong>（仅在 pending 回执、未上 LIVE）→ 已补录 OUT（见文末「补扫」）。文献 raw 差集 3 条域外 OUT，<strong>不计漏检</strong>。补录后 RL <strong>25/25 covered</strong>。
 标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】【HF】【仅OR摘要】<span class="b b-team">队友转述</span><span class="b b-inf">推断</span><span class="b b-codex">Codex✓</span></p>
 </blockquote>
 <hr />
 <section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
-<p><strong>周四列表批尚未上线。F3 预览（37393–37668）无新「必读·先跑」/「值得读」/「值得看」——相对周三补扫，训练主文不变（仍以 ReSeed 为首步多样性修补；Direct/PTD/Speculative 维持）。3 条命中均为确认或域外：ALADDIN 外围·一步换脸；ReferStream 外围·免训练主体注入；37413 OUT·采样理论。</strong></p>
+<p><strong>周四列表批仍未上线（13:48 <code>/new</code> 仍 Wed）。F3 预览窗无新「必读·先跑」/「值得读」/「值得看」——训练主文不变（ReSeed 首步多样性；Direct/PTD/Speculative 维持）。补扫无新列表命中可评。F5 发现 6 条 RL 转交仅 pending 未上 LIVE → 全部 OUT 补录（医学/具身/LLM/推荐域外）；不改训练票。</strong></p>
 <ol>
-<li><strong>无新过线项。</strong> F3 命中 3/57；Codex + 自核均未升格。<span class="b b-codex">Codex✓</span></li>
+<li><strong>无新过线项。</strong> F3 命中 3/57；补扫无新列表命中；Codex + 自核均未升格。F5 漏检 6 已补 OUT。<span class="b b-codex">Codex✓</span></li>
 <li><strong>ALADDIN <a href="https://arxiv.org/abs/2610.37503">2610.37503</a> → 维持 外围·一步换脸蒸馏</strong>。【摘要】多步 flow 初始化 + 对抗一步 identity swap；评测协议偏差讨论。<strong>无 AV/流式可迁移新蒸馏目标</strong> → 不进主线。10-28 已定级；RL 今日转交确认。</li>
 <li><strong>ReferStream <a href="https://arxiv.org/abs/2610.37566">2610.37566</a> → 维持 外围·流式主体注入（免训练）</strong>。【摘要】Joint Latent + Cache Restoration；新 bench；<strong>无少步/蒸馏段</strong>。文献 twin 已关；不升。</li>
 <li><strong>Displacement Moments <a href="https://arxiv.org/abs/2610.37413">2610.37413</a> → OUT·采样理论</strong>。【摘要】Brownian interpolant 位移矩与路径/终点 KL；无少步生成方法。</li>
@@ -276,12 +280,12 @@ details.card>.body{padding:4px 18px 10px}
 <tr>
 <td>RL <code>forward_fewstep.txt</code></td>
 <td>25</td>
-<td>全已定级或今日确认（见 pending <code>2026-10-29-forward-rl-*.md</code>）</td>
+<td>补扫前 LIVE 仅 19；<strong>漏检 6</strong> 已于文末「补扫」补录 OUT → <strong>25/25</strong></td>
 </tr>
 <tr>
 <td>文献 shortlist</td>
 <td>14</td>
-<td>Mix/HelixKV/Paxar/TrajQuant 维持；其余文献 OUT</td>
+<td>无新增待少步定级；Mix/HelixKV/Paxar/TrajQuant 维持；其余文献 OUT</td>
 </tr>
 <tr>
 <td>文献 raw 差集 3</td>
@@ -289,9 +293,9 @@ details.card>.body{padding:4px 18px 10px}
 <td><strong>域外 OUT</strong>，非少步漏检</td>
 </tr>
 <tr>
-<td><strong>范围内漏检</strong></td>
-<td><strong>0</strong></td>
-<td>—</td>
+<td><strong>范围内漏检（补扫发现→已补）</strong></td>
+<td><strong>6 → 0</strong></td>
+<td>见文末补扫表</td>
 </tr>
 </tbody>
 </table></div>
@@ -333,22 +337,105 @@ details.card>.body{padding:4px 18px 10px}
 </thead>
 <tbody>
 <tr>
-<td>本 bot · <strong>13:42 补扫</strong></td>
+<td>本 bot · 下一轮（晚间/明日晨）</td>
 <td>Thu <code>/new</code> 页头 = Thursday, 29 October 2026</td>
-<td>batches Thu→done；相对本预览增量 hits 全读标题+定级；若无过线则明示无结果日</td>
+<td>batches Thu→done；相对 F3 预览增量 hits 全读标题+定级；若仍空则明示无结果日</td>
 </tr>
 <tr>
 <td>Henry</td>
-<td>—</td>
-<td><strong>今天无需出手</strong>（预览窗无训练决策变更）</td>
+<td>F5 漏检已补录 OUT</td>
+<td><strong>今天无需改训练</strong>；知悉 F5/F9 漏检 6 条已补 LIVE（全 OUT，无升级）即可</td>
 </tr>
 </tbody>
 </table></div>
 </section><section class=""><h2 id="转发">转发</h2>
 <ul>
-<li><strong>无新 AV/流式/世界模型需新开转发。</strong> ALADDIN/ReferStream/HelixKV 等已在 10-28 账本；RL 今日 25 条回执已写 pending，不重复 ping。</li>
-</ul></section>
-<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-29 09:24 (UTC+8)</div></main></div>
+<li><strong>无新 AV/流式/世界模型需新开转发。</strong> ALADDIN/ReferStream/HelixKV 等已在 10-28 账本；RL 25 条 F9 已补齐 LIVE。</li>
+</ul>
+</section><section class=""><h2 id="补扫1348北京时间-asiashanghai">补扫（13:48，北京时间 / Asia/Shanghai）</h2>
+<p><strong><code>/new</code> 复核</strong>：cs.CV / cs.LG 页头仍 <strong>Wednesday, 28 October 2026</strong>；API <code>2610.37669+</code> 不存在，max 仍 <strong><a href="https://arxiv.org/abs/2610.37668">2610.37668</a></strong>。Thu 公告延迟（接 Wed DB maintenance）→ <strong>batches Thu 维持 pending</strong>；<strong>本补扫无新列表批</strong>。<span class="b b-meas">实测</span></p>
+<p><strong>相对晨间 F3 预览（37393–37668）</strong>：无新列表粗筛命中可评；晨间 v2.2 命中 3（ALADDIN / ReferStream / 37413）已收录于上文。<strong>粗筛命中但未收录</strong>：本补扫无新列表粗筛命中；晨间 F3 3 命中已收录于上文。<span class="b b-meas">实测</span></p>
+<p><strong>结论：无新必读·先跑 / 无新值得读 / 无新值得看。</strong> 训练主文相对晨间不变。</p>
+<h3 id="f5-队友转交召回补扫按-f9-复核">F5 队友转交召回（补扫按 F9 复核）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>来源</th>
+<th>转发条数</th>
+<th>LIVE 已覆盖（补扫前）</th>
+<th>漏检</th>
+<th>补扫后</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文献 <code>forward-fewstep-2026-10-29.md</code></td>
+<td>0 待定级</td>
+<td>—</td>
+<td>0</td>
+<td>—</td>
+</tr>
+<tr>
+<td>RL <code>forward_fewstep.txt</code></td>
+<td><strong>25</strong></td>
+<td><strong>19</strong></td>
+<td><strong>6</strong></td>
+<td><strong>25/25</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>漏检 6（晨间只写 pending 回执、未写入已发布日报完整 ID+评级；F9 不计 covered）→ 本补扫补录：</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>id</th>
+<th>短名</th>
+<th>评级</th>
+<th>排除理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.35961">2610.35961</a></td>
+<td>DR grading KD</td>
+<td><strong>OUT</strong></td>
+<td>糖尿病视网膜分级分类蒸馏；非生成少步</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.36013">2610.36013</a></td>
+<td>OmniBrain-0</td>
+<td><strong>OUT</strong></td>
+<td>具身统一 agent；域外</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.36445">2610.36445</a></td>
+<td>Cognition-Aligned RD</td>
+<td><strong>OUT</strong></td>
+<td>LRM 推理轨迹蒸馏；LLM 非扩散少步</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.37281">2610.37281</a></td>
+<td>RPSD</td>
+<td><strong>OUT</strong></td>
+<td>推荐 OPSD + OT；非媒体生成</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.37584">2610.37584</a></td>
+<td>REGER</td>
+<td><strong>OUT</strong></td>
+<td>生成式推荐 SID；AI-only</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.37157">2610.37157</a></td>
+<td>What Survives Distill</td>
+<td><strong>OUT</strong></td>
+<td>GPT-2 蒸馏机理可解释；域外</td>
+</tr>
+</tbody>
+</table></div>
+<p>文献 shortlist 差集 ChronoReplay 34283 / WAM 34593 / Omni-InteractScope 35439 维持 <strong>OUT·域外</strong>（不计漏检）。HelixKV / Mix / Paxar / TrajQuant 观察维持。</p>
+<p><strong>对我们训练：</strong> 6 条全 OUT → <strong>不改训练计划、不开新票。</strong> Henry 仅需知悉流程漏检已补齐 LIVE。</p></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-29 13:49 (UTC+8)</div></main></div>
 <script>
 (function(){
  // 详情卡片全部展开/收起
