@@ -1,0 +1,369 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>少步蒸馏 · 每日 2026-10-29（周四 · 晨间 pending）</title>
+<style>
+:root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--side:#f6f8fa;--line:#d1d9e0;--acc:#0b57d0;--l1:#fff8e6;--l1b:#f0c36d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--fg);background:var(--bg);font:15.5px/1.75 "Noto Sans CJK SC","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.top{position:sticky;top:0;z-index:5;background:#24292f;color:#fff;padding:8px 20px;display:flex;gap:18px;align-items:center;font-size:14px}
+.top a{color:#fff;opacity:.9} .top .brand{font-weight:700;opacity:1}
+.wrap{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1400px;margin:0 auto}
+nav.toc{position:sticky;top:40px;align-self:start;height:calc(100vh - 40px);overflow:auto;background:var(--side);border-right:1px solid var(--line);padding:14px 10px 40px 14px;font-size:13.5px;line-height:1.5}
+nav.toc .tt{font-weight:700;color:var(--muted);margin:2px 0 8px}
+nav.toc ul{list-style:none;margin:0;padding-left:10px} nav.toc>div>ul{padding-left:0}
+nav.toc li{margin:3px 0} nav.toc a{color:#333;display:block;padding:1px 4px;border-radius:4px}
+nav.toc a:hover,nav.toc a.on{background:#dde7f7;text-decoration:none}
+main{padding:22px 40px 80px;min-width:0}
+h1{font-size:26px;margin:.2em 0 .6em;border-bottom:2px solid var(--line);padding-bottom:.3em}
+h2{font-size:21px;margin:1.8em 0 .6em;border-bottom:1px solid var(--line);padding-bottom:.25em}
+h3{font-size:17.5px;margin:1.4em 0 .5em}
+h4{font-size:15.5px}
+blockquote{margin:0 0 1em;padding:8px 16px;border-left:4px solid #8c959f;background:#f6f8fa;color:#3d444d;font-size:14px}
+blockquote p{margin:.3em 0}
+code{font-family:"JetBrains Mono","DejaVu Sans Mono",Menlo,Consolas,monospace;font-size:.88em;background:#eff1f3;padding:.1em .35em;border-radius:4px}
+pre{background:#f6f8fa;border:1px solid var(--line);border-radius:6px;padding:10px 14px;overflow:auto} pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:.6em 0 1.1em}
+table{border-collapse:collapse;font-size:13.8px;line-height:1.55;min-width:60%}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left}
+th{background:#eef2f6;font-weight:700;position:sticky;top:0}
+tr:nth-child(even) td{background:#fafbfc}
+td strong{color:#8a1c1c}
+hr{border:0;border-top:1px solid var(--line);margin:1.6em 0}
+section.layer1{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:2px 22px 10px;margin:18px 0 26px}
+section.layer1>h2{border-bottom-color:var(--l1b)}
+section.layer1 .tw table{background:#fff}
+.layer-tag{display:inline-block;font-size:12px;font-weight:700;color:#7a4b00;background:#ffe2a8;border-radius:10px;padding:0 9px;margin-left:8px;vertical-align:middle}
+details.card{border:1px solid var(--line);border-radius:8px;margin:12px 0;background:#fff}
+details.card>summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:16.5px;background:#f3f6fa;border-radius:8px;list-style:none}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary:before{content:"▸ ";color:var(--acc)} details.card[open]>summary:before{content:"▾ "}
+details.card[open]>summary{border-bottom:1px solid var(--line);border-radius:8px 8px 0 0}
+details.card>.body{padding:4px 18px 10px}
+.cardtools{font-size:13px;margin:6px 0 2px} .cardtools button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:#fff;border-radius:5px;padding:1px 8px;cursor:pointer;margin-right:6px}
+.b{display:inline-block;font-size:11.5px;line-height:1.5;padding:0 6px;border-radius:9px;margin:0 2px;font-weight:600;white-space:nowrap;vertical-align:1px;border:1px solid transparent}
+.b-meas{background:#dafbe1;color:#116329;border-color:#a8e6b5}
+.b-orig{background:#ddf4ff;color:#0a4b8c;border-color:#a6d4f5}
+.b-team{background:#fff1e5;color:#953800;border-color:#ffc89a}
+.b-inf{background:#eef0f2;color:#4a535c;border-color:#cfd5db}
+.b-codex{background:#fbefff;color:#6e2b91;border-color:#e3b8f5}
+.b-oth{background:#f6f8fa;color:#4a535c;border-color:#d1d9e0}
+.idx{max-width:900px;margin:0 auto;padding:30px 30px 80px}
+.idx .hero{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:12px 22px;margin:14px 0 24px;font-size:16.5px}
+.idx .cards a{display:block;border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:10px 0;color:var(--fg)}
+.idx .cards a:hover{border-color:var(--acc);text-decoration:none;background:#f6f9ff}
+.idx .cards .t{font-weight:700;color:var(--acc)} .idx .cards .d{font-size:13.5px;color:var(--muted)}
+.foot{color:var(--muted);font-size:12.5px;margin-top:40px;border-top:1px solid var(--line);padding-top:8px}
+@media (max-width:900px){.wrap{grid-template-columns:1fr} nav.toc{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)} main{padding:16px}}
+@media print{nav.toc,.top,.cardtools{display:none}.wrap{display:block} details.card{break-inside:avoid}}
+</style></head><body>
+<div class="top"><a class="brand" href="../index.html">多模态少步蒸馏 · 前沿调研</a><a href="../baseline.html">2026Q3 基线</a><a href="../index.html#dailies">每日</a><a href="../index.html#weeklies">每周</a></div>
+<div class="wrap"><nav class="toc"><div class="tt">目录</div><div><div class="toc">
+<ul>
+<li><a href="#结论先行">结论先行</a></li>
+<li><a href="#30-秒速览">30 秒速览</a></li>
+<li><a href="#一屏框架今天挂在哪一格">一屏框架：今天挂在哪一格</a></li>
+<li><a href="#f3-覆盖明细">F3 覆盖明细</a></li>
+<li><a href="#f4-openreview">F4 OpenReview</a></li>
+<li><a href="#f5-对账">F5 对账</a></li>
+<li><a href="#命中-triage本预览">命中 triage（本预览）</a></li>
+<li><a href="#下一步闭环">下一步（闭环）</a></li>
+<li><a href="#转发">转发</a></li>
+</ul>
+</div>
+</div></nav>
+<main><h1 id="少步蒸馏-每日-2026-10-29周四-晨间-pending">少步蒸馏 · 每日 2026-10-29（周四 · 晨间 pending）</h1>
+<blockquote>
+<p><strong>批次覆盖（F1）</strong>：应出列表日 = <strong>Thu 29 Oct</strong>（北京 08:00）。09:21–09:3x <code>/new</code>（cs.CV）页头仍是 <strong>Wednesday, 28 October 2026</strong> → <strong>Thu 29 = pending</strong>；<strong>勿把周三当今天</strong>。完整 <code>/new</code> 等 <strong>13:42 补扫</strong>。Wed 28 <strong>done</strong>（688/47；ReSeed 值得读；LIVE <a href="https://thughy.github.io/fewstep-daily/daily/2026-10-28.html">2026-10-28</a>）。Tue 27 done。Mon 26 done。Sat/Sun <strong>none</strong>。</p>
+<p><strong>F3 ID 预览</strong>：<code>2610.37393</code>→<code>2610.37668</code>（max 内容探针；接 Wed 补扫 max≈37392）。API id_list <strong>276/276</strong>（0 hole）；7 类 ours <strong>57</strong>；v2.2 命中 <strong>3</strong>（F6 全读标题）。<span class="b b-meas">实测</span></p>
+<p><strong>F4 OpenReview</strong>：文献 <code>or_iclr27_2026-10-29.json</code> 75 notes；<code>new_vs_known=0</code>。HelixKV / TrajQuant / Paxar 无孪生，维持昨日评级。机制积压无新增强制项。</p>
+<p><strong>F5 对账（48h）</strong>：文献 shortlist + recall + RL <code>forward_fewstep</code> 25 条 → 范围内 arXiv <strong>31/31 covered</strong>；raw 差集 3 条（ChronoReplay / 机器人 WAM 消融 / Omni-InteractScope）文献已判 <strong>OUT·域外</strong>，<strong>不计漏检</strong>。范围内漏检 <strong>0</strong>。
+标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】【HF】【仅OR摘要】<span class="b b-team">队友转述</span><span class="b b-inf">推断</span><span class="b b-codex">Codex✓</span></p>
+</blockquote>
+<hr />
+<section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
+<p><strong>周四列表批尚未上线。F3 预览（37393–37668）无新「必读·先跑」/「值得读」/「值得看」——相对周三补扫，训练主文不变（仍以 ReSeed 为首步多样性修补；Direct/PTD/Speculative 维持）。3 条命中均为确认或域外：ALADDIN 外围·一步换脸；ReferStream 外围·免训练主体注入；37413 OUT·采样理论。</strong></p>
+<ol>
+<li><strong>无新过线项。</strong> F3 命中 3/57；Codex + 自核均未升格。<span class="b b-codex">Codex✓</span></li>
+<li><strong>ALADDIN <a href="https://arxiv.org/abs/2610.37503">2610.37503</a> → 维持 外围·一步换脸蒸馏</strong>。【摘要】多步 flow 初始化 + 对抗一步 identity swap；评测协议偏差讨论。<strong>无 AV/流式可迁移新蒸馏目标</strong> → 不进主线。10-28 已定级；RL 今日转交确认。</li>
+<li><strong>ReferStream <a href="https://arxiv.org/abs/2610.37566">2610.37566</a> → 维持 外围·流式主体注入（免训练）</strong>。【摘要】Joint Latent + Cache Restoration；新 bench；<strong>无少步/蒸馏段</strong>。文献 twin 已关；不升。</li>
+<li><strong>Displacement Moments <a href="https://arxiv.org/abs/2610.37413">2610.37413</a> → OUT·采样理论</strong>。【摘要】Brownian interpolant 位移矩与路径/终点 KL；无少步生成方法。</li>
+<li><strong>OR 维持</strong>：HelixKV <code>pGXWVPoQef</code> 值得看·流式KV；TrajQuant / Paxar 外围；Mix 值得读观察至 10-31（仍 v1）。</li>
+<li><strong>观察维持（不变）</strong>：Direct Forcing 必读·先跑；Speculative Forcing 必读·待代码；PTD 必读·先跑；Mix / SF² / Leta / CMM / ReSeed 值得读；HelixKV / Hy-Nomas / UnStep / DICE / BoxWorld旁注 / LENS / IBCD 值得看。</li>
+</ol>
+<p><strong>对我们训练的含义：</strong></p>
+<ul>
+<li><strong>今天不用改训练计划。</strong> 预览窗无新蒸馏信号、无新等时少步对照（F7 空）。<span class="b b-inf">推断</span></li>
+<li><strong>13:42 补扫</strong>拉齐 Thu <code>/new</code> 后，再对相对本预览的增量命中做一次同标准定级；若仍空，按无结果日收口，不另开训练票。<span class="b b-inf">推断</span></li>
+<li><strong>AV / 流式：</strong> ReferStream 只动缓存注入，不改 CD/DMD；HelixKV 仍是服务侧 KV 旁格。</li>
+</ul>
+</section><section class="layer1"><h2 id="30-秒速览">30 秒速览<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文 / 资源</th>
+<th>评级</th>
+<th>一句话</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>（本预览无新过线）</td>
+<td>—</td>
+<td>F3 3 命中均确认/域外</td>
+<td><span class="b b-meas">实测</span></td>
+</tr>
+<tr>
+<td>ALADDIN <a href="https://arxiv.org/abs/2610.37503">2610.37503</a></td>
+<td>外围·一步换脸</td>
+<td>对抗蒸馏一步 swap；无 AV 迁移</td>
+<td>【摘要】<span class="b b-codex">Codex✓</span></td>
+</tr>
+<tr>
+<td>ReferStream <a href="https://arxiv.org/abs/2610.37566">2610.37566</a></td>
+<td>外围·免训练注入</td>
+<td>流式主体注入 + Bench；无蒸馏</td>
+<td>【摘要】<span class="b b-codex">Codex✓</span></td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.37413">2610.37413</a></td>
+<td>OUT·理论</td>
+<td>Brownian interpolant KL</td>
+<td>【摘要】<span class="b b-codex">Codex✓</span></td>
+</tr>
+<tr>
+<td>ReSeed / Mix / SF² / Leta / CMM</td>
+<td>值得读</td>
+<td>维持</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Direct / Speculative / PTD</td>
+<td>必读·先跑或待代码</td>
+<td>维持</td>
+<td>—</td>
+</tr>
+<tr>
+<td>HelixKV / Hy-Nomas / DICE / BoxWorld旁注</td>
+<td>值得看</td>
+<td>维持</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class="layer1"><h2 id="一屏框架今天挂在哪一格">一屏框架：今天挂在哪一格<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>单步去噪</th>
+<th>流式时间轴</th>
+<th>AV 跨模态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L1 轨迹 / 一致性 / flow map</strong></td>
+<td>ReSeed 维持</td>
+<td>Hy：PCM 维持</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L2 分数差分布匹配（DMD）</strong></td>
+<td>—</td>
+<td>Mix/SF²/Leta 维持；BoxWorld 旁注</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L3 对抗</strong></td>
+<td>ALADDIN（外围·换脸）</td>
+<td>Hy：hinge 维持</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L4 额外真实数据 / reward</strong></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L5 样本级 / 表征分布场</strong></td>
+<td>—</td>
+<td>Direct Forcing 维持</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>因果预训练 / 系统配方</strong></td>
+<td>—</td>
+<td>Hy-Nomas；Mix 观察</td>
+<td>Paxar 外围</td>
+</tr>
+<tr>
+<td><strong>推理时步数分配（F7）</strong></td>
+<td>—</td>
+<td>HelixKV / UnStep 维持</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<p>放不进框架的：ReferStream（免训练主体注入）、37413（采样理论）、REGER 37584（生成式推荐，AI-only）。</p>
+<hr />
+</section><section class=""><h2 id="f3-覆盖明细">F3 覆盖明细</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>项</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>期望列表日</td>
+<td>Thursday, 29 October 2026</td>
+</tr>
+<tr>
+<td><code>/new</code> 页头</td>
+<td><strong>Wednesday, 28 October 2026</strong>（pending）</td>
+</tr>
+<tr>
+<td>ID 区间</td>
+<td><code>2610.37393</code>–<code>2610.37668</code></td>
+</tr>
+<tr>
+<td>API 拉取</td>
+<td>276 / 276（chunk 40；0 missing）</td>
+</tr>
+<tr>
+<td>HTML 补洞</td>
+<td>不需要</td>
+</tr>
+<tr>
+<td>7 类 ours</td>
+<td><strong>57</strong></td>
+</tr>
+<tr>
+<td>AI/RO-only（记一笔）</td>
+<td>31（REGER 等）</td>
+</tr>
+<tr>
+<td>v2.2 命中</td>
+<td><strong>3</strong>（全读标题）</td>
+</tr>
+<tr>
+<td>产物</td>
+<td><code>daily/raw/1029thu/</code></td>
+</tr>
+</tbody>
+</table></div>
+</section><section class=""><h2 id="f4-openreview">F4 OpenReview</h2>
+<ul>
+<li>文献今日 OR dump 75；相对 known <strong>new=0</strong>。</li>
+<li>开放观察（文献 twin_checks）：Mix→10-31；Paxar/HelixKV/TrajQuant→10-30；均无 arXiv 孪生。</li>
+<li>不新增仅OR 必读候选；不清空历史 watchlist（仍等孪生）。</li>
+</ul>
+</section><section class=""><h2 id="f5-对账">F5 对账</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>来源</th>
+<th>条数</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RL <code>forward_fewstep.txt</code></td>
+<td>25</td>
+<td>全已定级或今日确认（见 pending <code>2026-10-29-forward-rl-*.md</code>）</td>
+</tr>
+<tr>
+<td>文献 shortlist</td>
+<td>14</td>
+<td>Mix/HelixKV/Paxar/TrajQuant 维持；其余文献 OUT</td>
+</tr>
+<tr>
+<td>文献 raw 差集 3</td>
+<td>ChronoReplay 34283 / WAM 34593 / Omni-InteractScope 35439</td>
+<td><strong>域外 OUT</strong>，非少步漏检</td>
+</tr>
+<tr>
+<td><strong>范围内漏检</strong></td>
+<td><strong>0</strong></td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+</section><section class=""><h2 id="命中-triage本预览">命中 triage（本预览）</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>id</th>
+<th>评级</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.37503">2610.37503</a> ALADDIN</td>
+<td>外围·一步换脸蒸馏</td>
+<td>对抗一步；维持 10-28</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.37566">2610.37566</a> ReferStream</td>
+<td>外围·流式主体注入</td>
+<td>免训练；无蒸馏段</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.37413">2610.37413</a> Displacement Moments</td>
+<td>OUT</td>
+<td>采样理论</td>
+</tr>
+</tbody>
+</table></div>
+</section><section class=""><h2 id="下一步闭环">下一步（闭环）</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>谁</th>
+<th>对照什么</th>
+<th>成功标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本 bot · <strong>13:42 补扫</strong></td>
+<td>Thu <code>/new</code> 页头 = Thursday, 29 October 2026</td>
+<td>batches Thu→done；相对本预览增量 hits 全读标题+定级；若无过线则明示无结果日</td>
+</tr>
+<tr>
+<td>Henry</td>
+<td>—</td>
+<td><strong>今天无需出手</strong>（预览窗无训练决策变更）</td>
+</tr>
+</tbody>
+</table></div>
+</section><section class=""><h2 id="转发">转发</h2>
+<ul>
+<li><strong>无新 AV/流式/世界模型需新开转发。</strong> ALADDIN/ReferStream/HelixKV 等已在 10-28 账本；RL 今日 25 条回执已写 pending，不重复 ping。</li>
+</ul></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-29 09:24 (UTC+8)</div></main></div>
+<script>
+(function(){
+ // 详情卡片全部展开/收起
+ document.querySelectorAll('[data-act]').forEach(function(b){b.addEventListener('click',function(){
+   var o=b.getAttribute('data-act')==='open';document.querySelectorAll('details.card').forEach(function(d){d.open=o;});});});
+ // 点击目录中位于折叠卡片内的锚点时自动展开
+ function openFor(id){var el=document.getElementById(id);if(!el)return;var d=el.closest('details');if(d)d.open=true;}
+ if(location.hash)openFor(decodeURIComponent(location.hash.slice(1)));
+ window.addEventListener('hashchange',function(){openFor(decodeURIComponent(location.hash.slice(1)));});
+ // 目录高亮
+ var links=[].slice.call(document.querySelectorAll('nav.toc a'));
+ var heads=links.map(function(a){return document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));});
+ function hl(){var y=window.scrollY+80,k=-1;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top+window.scrollY<=y&&h.offsetParent!==null)k=i;});
+   links.forEach(function(a,i){a.classList.toggle('on',i===k);});}
+ window.addEventListener('scroll',hl,{passive:true});hl();
+})();
+</script><script>if(document.querySelector('code.language-mermaid')){var s=document.createElement('script');
+s.src='https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';s.onload=function(){document.querySelectorAll('code.language-mermaid').forEach(function(c){var d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentNode.replaceWith(d);});mermaid.initialize({startOnLoad:false});mermaid.run();};document.head.appendChild(s);}</script></body></html>
