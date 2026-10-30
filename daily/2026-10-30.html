@@ -1,0 +1,498 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>少步蒸馏 · 每日 2026-10-30（周五 · Thu+Fri pending · F3 ID 覆盖）</title>
+<style>
+:root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--side:#f6f8fa;--line:#d1d9e0;--acc:#0b57d0;--l1:#fff8e6;--l1b:#f0c36d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--fg);background:var(--bg);font:15.5px/1.75 "Noto Sans CJK SC","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.top{position:sticky;top:0;z-index:5;background:#24292f;color:#fff;padding:8px 20px;display:flex;gap:18px;align-items:center;font-size:14px}
+.top a{color:#fff;opacity:.9} .top .brand{font-weight:700;opacity:1}
+.wrap{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1400px;margin:0 auto}
+nav.toc{position:sticky;top:40px;align-self:start;height:calc(100vh - 40px);overflow:auto;background:var(--side);border-right:1px solid var(--line);padding:14px 10px 40px 14px;font-size:13.5px;line-height:1.5}
+nav.toc .tt{font-weight:700;color:var(--muted);margin:2px 0 8px}
+nav.toc ul{list-style:none;margin:0;padding-left:10px} nav.toc>div>ul{padding-left:0}
+nav.toc li{margin:3px 0} nav.toc a{color:#333;display:block;padding:1px 4px;border-radius:4px}
+nav.toc a:hover,nav.toc a.on{background:#dde7f7;text-decoration:none}
+main{padding:22px 40px 80px;min-width:0}
+h1{font-size:26px;margin:.2em 0 .6em;border-bottom:2px solid var(--line);padding-bottom:.3em}
+h2{font-size:21px;margin:1.8em 0 .6em;border-bottom:1px solid var(--line);padding-bottom:.25em}
+h3{font-size:17.5px;margin:1.4em 0 .5em}
+h4{font-size:15.5px}
+blockquote{margin:0 0 1em;padding:8px 16px;border-left:4px solid #8c959f;background:#f6f8fa;color:#3d444d;font-size:14px}
+blockquote p{margin:.3em 0}
+code{font-family:"JetBrains Mono","DejaVu Sans Mono",Menlo,Consolas,monospace;font-size:.88em;background:#eff1f3;padding:.1em .35em;border-radius:4px}
+pre{background:#f6f8fa;border:1px solid var(--line);border-radius:6px;padding:10px 14px;overflow:auto} pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:.6em 0 1.1em}
+table{border-collapse:collapse;font-size:13.8px;line-height:1.55;min-width:60%}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left}
+th{background:#eef2f6;font-weight:700;position:sticky;top:0}
+tr:nth-child(even) td{background:#fafbfc}
+td strong{color:#8a1c1c}
+hr{border:0;border-top:1px solid var(--line);margin:1.6em 0}
+section.layer1{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:2px 22px 10px;margin:18px 0 26px}
+section.layer1>h2{border-bottom-color:var(--l1b)}
+section.layer1 .tw table{background:#fff}
+.layer-tag{display:inline-block;font-size:12px;font-weight:700;color:#7a4b00;background:#ffe2a8;border-radius:10px;padding:0 9px;margin-left:8px;vertical-align:middle}
+details.card{border:1px solid var(--line);border-radius:8px;margin:12px 0;background:#fff}
+details.card>summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:16.5px;background:#f3f6fa;border-radius:8px;list-style:none}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary:before{content:"▸ ";color:var(--acc)} details.card[open]>summary:before{content:"▾ "}
+details.card[open]>summary{border-bottom:1px solid var(--line);border-radius:8px 8px 0 0}
+details.card>.body{padding:4px 18px 10px}
+.cardtools{font-size:13px;margin:6px 0 2px} .cardtools button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:#fff;border-radius:5px;padding:1px 8px;cursor:pointer;margin-right:6px}
+.b{display:inline-block;font-size:11.5px;line-height:1.5;padding:0 6px;border-radius:9px;margin:0 2px;font-weight:600;white-space:nowrap;vertical-align:1px;border:1px solid transparent}
+.b-meas{background:#dafbe1;color:#116329;border-color:#a8e6b5}
+.b-orig{background:#ddf4ff;color:#0a4b8c;border-color:#a6d4f5}
+.b-team{background:#fff1e5;color:#953800;border-color:#ffc89a}
+.b-inf{background:#eef0f2;color:#4a535c;border-color:#cfd5db}
+.b-codex{background:#fbefff;color:#6e2b91;border-color:#e3b8f5}
+.b-oth{background:#f6f8fa;color:#4a535c;border-color:#d1d9e0}
+.idx{max-width:900px;margin:0 auto;padding:30px 30px 80px}
+.idx .hero{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:12px 22px;margin:14px 0 24px;font-size:16.5px}
+.idx .cards a{display:block;border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:10px 0;color:var(--fg)}
+.idx .cards a:hover{border-color:var(--acc);text-decoration:none;background:#f6f9ff}
+.idx .cards .t{font-weight:700;color:var(--acc)} .idx .cards .d{font-size:13.5px;color:var(--muted)}
+.foot{color:var(--muted);font-size:12.5px;margin-top:40px;border-top:1px solid var(--line);padding-top:8px}
+@media (max-width:900px){.wrap{grid-template-columns:1fr} nav.toc{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)} main{padding:16px}}
+@media print{nav.toc,.top,.cardtools{display:none}.wrap{display:block} details.card{break-inside:avoid}}
+</style></head><body>
+<div class="top"><a class="brand" href="../index.html">多模态少步蒸馏 · 前沿调研</a><a href="../baseline.html">2026Q3 基线</a><a href="../index.html#dailies">每日</a><a href="../index.html#weeklies">每周</a></div>
+<div class="wrap"><nav class="toc"><div class="tt">目录</div><div><div class="toc">
+<ul>
+<li><a href="#结论先行">结论先行</a></li>
+<li><a href="#30-秒速览">30 秒速览</a></li>
+<li><a href="#一屏框架今天挂在哪一格">一屏框架：今天挂在哪一格</a></li>
+<li><a href="#pika-h3-flex-定级少步主评-归我">Pika-H3-Flex 定级（少步主评 · 归我）</a><ul>
+<li><a href="#关键操作已披露">关键操作（已披露）</a></li>
+<li><a href="#因果逻辑">因果逻辑</a></li>
+<li><a href="#相对最近工作核心差别">相对最近工作（核心差别）</a></li>
+<li><a href="#对我们训练的含义可执行">对我们训练的含义（可执行）</a></li>
+</ul>
+</li>
+<li><a href="#f3-覆盖明细">F3 覆盖明细</a></li>
+<li><a href="#f4-openreview">F4 OpenReview</a></li>
+<li><a href="#f5-对账">F5 对账</a></li>
+<li><a href="#命中-triagef3-窗">命中 triage（F3 窗）</a></li>
+<li><a href="#下一步闭环">下一步（闭环）</a></li>
+<li><a href="#转发">转发</a></li>
+</ul>
+</div>
+</div></nav>
+<main><h1 id="少步蒸馏-每日-2026-10-30周五-thufri-pending-f3-id-覆盖">少步蒸馏 · 每日 2026-10-30（周五 · Thu+Fri pending · F3 ID 覆盖）</h1>
+<blockquote>
+<p><strong>批次覆盖（F1）</strong>：应出列表日 = <strong>Thu 29 Oct</strong>（从未上线）+ <strong>Fri 30 Oct</strong>（DB maintenance 合并公告约北京 08:00；见 <a href="https://blog.arxiv.org/2026/10/21/scheduled-database-maintenance/">arxiv blog</a>）。09:15–09:2x <code>/new</code>（cs.CV/LG/SD/AS/MM/AI）页头均仍 <strong>Wednesday, 28 October 2026</strong> → <strong>Thu 29 + Fri 30 = pending</strong>。文献 08:45 补扫同判，标「周五批次周一补」。<strong>勿把周三当今天；勿标 done。</strong> Wed 28 <strong>done</strong>（688/47）。Tue/Mon done。Sat/Sun <strong>none</strong>。</p>
+<p><strong>F3 ID 覆盖（强制）</strong>：昨日 max <strong><a href="https://arxiv.org/abs/2610.37668">2610.37668</a></strong>；今日探针 max <strong><a href="https://arxiv.org/abs/2610.38409">2610.38409</a></strong>。拉取 <code>2610.37669</code>→<code>2610.38409</code>（abs HTML；API 429）。got <strong>705</strong> / 区间 741（<strong>36</strong> 真 404 空洞）；7 类 ours <strong>118</strong>；v2.2 命中 <strong>12</strong>（F6 全读标题+非显然摘要）。产物 <code>daily/raw/1030pending/</code>。<span class="b b-meas">实测</span></p>
+<p><strong>F4 OpenReview</strong>：文献 <code>or_iclr27_2026-10-30.json</code>；<code>new_vs_known=0</code>。SLA 到期：Paxar / HelixKV / TrajQuant → <strong>一行·摘要级最终出名单</strong>；Mix Forcing 观察至 <strong>10-31</strong>（仍 v1）。</p>
+<p><strong>F5 对账（48h）</strong>：文献 shortlist 8：新增待定级 <strong>仅 Pika-H3-Flex</strong>；其余维持/OUT。RL <code>forward_fewstep</code> 10-29 <strong>25/25</strong> LIVE 已覆盖；10-30 draft <strong>0 ID</strong>（批次延误空转发）。<strong>范围内漏检 0</strong>。
+标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】【HF】【仅OR摘要】<span class="b b-team">队友转述</span><span class="b b-inf">推断</span><span class="b b-codex">Codex✓</span></p>
+</blockquote>
+<hr />
+<section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
+<p><strong>Thu/Fri 列表批均未上线（<code>/new</code> 仍 Wed）。F3 ID 窗 37669–38409 无新「必读·先跑」。主线变化：文献转交的工业开源 Pika-H3-Flex — 技术深挖文披露 SFT→PDMD→ReFL/DPO，升为「值得读·可用配方（高）」；F3 新窗另有「值得看·有限步几何旁注」<a href="https://arxiv.org/abs/2610.37936">2610.37936</a>。训练票：不新开必读·先跑；把 Flex 六步契约与 PDMD 稳定性叙述并入 H3 少步对照（对照 FastH3 Omni 8-step DMPDD）。</strong></p>
+<ol>
+<li><strong>Pika-Labs/Pika-H3-Flex → 值得读·可用配方（高）</strong>（少步主评·归我）。<span class="b b-orig">原文 deep-dive</span>【代码推理】<span class="b b-team">队友转述晨报</span>非 arXiv。相对 lit 晨报「训练 UNKNOWN」：<strong>深挖文已披露</strong>三阶段——(1) 专有 AV 数据上 SFT，保留 50 步，作 teacher；(2) 标准 DMD 不稳 → 改用 <strong>PDMD</strong>（<a href="https://arxiv.org/abs/2609.35768">2609.35768</a>，我方 Q3 已评必读）50→<strong>6</strong> NFE 联合 AV；(3) ReFL + DPO <strong>两套 LoRA 合并</strong>。开源：推理契约（knots <code>[1000,750,500,250,100,40,0]</code>；video shift12 / audio shift3；fresh re-noise）+ FL2VA/Ref2VA LoRA；<strong>训练代码仍无</strong>。【代码】<span class="b b-orig">原文</span></li>
+<li><strong>Finite-Step Geometry <a href="https://arxiv.org/abs/2610.37936">2610.37936</a> → 值得看·有限步几何旁注</strong>。【摘要】同一连续边缘下不同速度场在有限步离散后不等价；与少步 flow 设计相关；仅高斯/混合实验，无 AV/代码 → 不进主线训练。</li>
+<li><strong>Hierarchical Diffusion / FixAR <a href="https://arxiv.org/abs/2610.37983">2610.37983</a> → 外围·AR相机分层去噪</strong>。【摘要】WanAR+FixAR；warp-inpaint 相机；分层细→粗去噪抑漂移；点名 self-forcing 为贵替代。<strong>无少步/蒸馏段</strong>。</li>
+<li><strong>F3 其余命中</strong>（OPD/分类KD/ASR/SPDE/病理/…）→ <strong>OUT</strong>（见 triage 表）。NAGO 38273 虽写 few-step 谱精度，域为 SPDE → OUT。</li>
+<li><strong>OR / 观察</strong>：HelixKV 值得看·流式KV <strong>出名单维持</strong>；Paxar/TrajQuant 外围出名单；Mix 值得读观察至 10-31。</li>
+<li><strong>观察维持（不变）</strong>：Direct Forcing / PTD 必读·先跑；Speculative 必读·待代码；Mix / SF² / Leta / CMM / ReSeed / FastH3 Omni 值得读；Hy-Nomas / UnStep / DICE / BoxWorld旁注 / LENS / IBCD 值得看。</li>
+</ol>
+<p><strong>对我们训练的含义：</strong></p>
+<ul>
+<li><strong>今天不新开「必读·先跑」训练票。</strong><span class="b b-inf">推断</span></li>
+<li><strong>H3 AV 少步对照扩一列</strong>：在已有 {教师~50, FastH3 Omni 8-step DMPDD, PTD 4/8} 上加 <strong>Flex 精确 6 步</strong>（同 base revision；先 480p/5s）。对照问：PDMD 六步 + ReFL/DPO 合并是否优于 trunc-6 / FastH3-8。<span class="b b-inf">推断</span>【HF】</li>
+<li><strong>PDMD 稳定性叙事再确认</strong>：Pika 原文写「标准 DMD 不稳 → PDMD」——与我方 Q3 PDMD 结论同向；<strong>不要</strong>因 sampling 注释「consistency re-noising」改投 consistency loss。<span class="b b-orig">原文</span><span class="b b-inf">推断</span></li>
+<li><strong>列表批</strong>：Thu+Fri 仍 pending；合并公告若周一才上，再对 <code>/new</code> 增量做同标准定级，本 F3 窗已覆盖到 38409 作基线。<span class="b b-meas">实测</span></li>
+</ul>
+</section><section class="layer1"><h2 id="30-秒速览">30 秒速览<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文 / 资源</th>
+<th>评级</th>
+<th>一句话</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pika-H3-Flex</strong></td>
+<td><strong>值得读·可用配方（高）</strong></td>
+<td>SFT→PDMD→ReFL/DPO；6 步 H3 AV；训码无</td>
+<td><span class="b b-orig">原文</span>【代码】</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.37936">2610.37936</a> Finite-Step Geometry</td>
+<td>值得看·旁注</td>
+<td>有限步≠连续边缘等价</td>
+<td>【摘要】</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.37983">2610.37983</a> FixAR</td>
+<td>外围</td>
+<td>AR 相机分层去噪；无蒸馏</td>
+<td>【摘要】<span class="b b-codex">Codex✓</span></td>
+</tr>
+<tr>
+<td>F3 其余 10 命中</td>
+<td>OUT/外围</td>
+<td>LLM/病理/ASR/SPDE/…</td>
+<td>【摘要】</td>
+</tr>
+<tr>
+<td>FastH3 Omni / PTD / Direct</td>
+<td>值得读或必读·先跑</td>
+<td>维持</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Mix / ReSeed / SF² / Leta / CMM</td>
+<td>值得读</td>
+<td>维持</td>
+<td>—</td>
+</tr>
+<tr>
+<td>HelixKV（OR 出名单）</td>
+<td>值得看·流式KV</td>
+<td>维持旁注</td>
+<td>【仅OR摘要】</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class="layer1"><h2 id="一屏框架今天挂在哪一格">一屏框架：今天挂在哪一格<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>单步去噪</th>
+<th>流式时间轴</th>
+<th>AV 跨模态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L1 轨迹 / 一致性 / flow map</strong></td>
+<td>37936 旁注（有限步几何）</td>
+<td>Hy：PCM 维持</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L2 分数差分布匹配（DMD）</strong></td>
+<td>—</td>
+<td>Mix/SF²/Leta 维持</td>
+<td><strong>Pika：PDMD 50→6</strong>；FastH3 DMPDD 维持</td>
+</tr>
+<tr>
+<td><strong>L3 对抗</strong></td>
+<td>—</td>
+<td>Hy：hinge 维持</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L4 额外真实数据 / reward</strong></td>
+<td>—</td>
+<td>—</td>
+<td><strong>Pika：ReFL+DPO LoRA 合并</strong></td>
+</tr>
+<tr>
+<td><strong>L5 样本级 / 表征分布场</strong></td>
+<td>—</td>
+<td>Direct Forcing 维持</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>因果预训练 / 系统配方</strong></td>
+<td>—</td>
+<td>Mix 观察；FixAR 外围</td>
+<td>Paxar 出名单</td>
+</tr>
+<tr>
+<td><strong>推理时步数分配（F7）</strong></td>
+<td>—</td>
+<td>HelixKV / UnStep 维持</td>
+<td>Flex 固定 6 knots（非自适应）</td>
+</tr>
+</tbody>
+</table></div>
+<p>放不进框架的：病理/LLM OPD/ASR 递归/SPDE NAGO/时间序列 WM 等 OUT。</p>
+<hr />
+</section><section class=""><h2 id="pika-h3-flex-定级少步主评-归我">Pika-H3-Flex 定级（少步主评 · 归我）</h2>
+<p><strong>评级：值得读·可用配方（高）</strong>。ownership = <strong>少步（本 bot）</strong>。不升「必读·先跑」：(a) 会改 H3 少步对照集，但<strong>训练代码/配置未公开</strong>，成本不可按原文复现；(b) 同协议未对 FastH3 Omni / 开源 PDMD-H3 四步基线；其 768p 表胜 MiniMax H3 / Fal / HeyGen 为<strong><span class="b b-orig">原文自评</span></strong>。</p>
+<h3 id="关键操作已披露">关键操作（已披露）</h3>
+<ol>
+<li><strong>SFT</strong>：官方 guidance-distilled MiniMax-H3 → 专有 AV 数据微调，<strong>仍 50 步</strong>，作 teacher。<span class="b b-orig">原文 deep-dive</span></li>
+<li><strong>PDMD 蒸馏</strong>：先试 DMD（Yin 2024）不稳 → <strong>PDMD</strong>（Wang 2026 = <a href="https://arxiv.org/abs/2609.35768">2609.35768</a>）→ <strong>6 NFE</strong> 联合 AV。<span class="b b-orig">原文</span></li>
+<li><strong>后蒸馏对齐</strong>：ReFL 与 DPO <strong>分训两套 LoRA 再合并</strong>；无额外推理步。<span class="b b-orig">原文</span></li>
+<li><strong>推理契约</strong>：knots <code>[1000,750,500,250,100,40,0]</code>；σ 用 shift（V12/A3）；前 5 步 fresh Gaussian re-noise，第 6 步直接 clean。【代码】</li>
+</ol>
+<h3 id="因果逻辑">因果逻辑</h3>
+<p>DMD critic 误差累积 → 训练不稳/过饱和（我方 Q3 已见）→ PDMD 一行投影滤 critic 误差方向 → 工业侧在 H3 AV 上复述同一稳定性叙事并落到 6 步开源权重；再用 ReFL/DPO 补美感与指令，而不加步数。</p>
+<h3 id="相对最近工作核心差别">相对最近工作（核心差别）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>对照</th>
+<th>差别</th>
+<th>后果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FastH3 Omni</strong>（我方 10-21：值得读·可用配方高）</td>
+<td>FastH3 = <strong>PDD 多头 + DMD</strong>（DMPDD），<strong>训码公开</strong>，8 forward；Flex = <strong>PDMD</strong>（无 PDD 头披露）+ ReFL/DPO，<strong>训码无</strong>，6 步 + 开源权重</td>
+<td>训练复现仍以 FastH3 栈为先；Flex 作 <strong>6 步部署对照 + PDMD 工业旁证</strong></td>
+</tr>
+<tr>
+<td><strong>PDMD <a href="https://arxiv.org/abs/2609.35768">2609.35768</a></strong>（Q3 必读）</td>
+<td>论文给投影公式与 Wan/H3 实验；Flex <strong>不公布</strong>超参/数据/训码，只宣称采用 PDMD</td>
+<td>方法族已知；Flex 新增的是 <strong>可跑 6 步 AV 工件</strong> 与 SFT→蒸馏→reward 流水线叙述</td>
+</tr>
+<tr>
+<td><strong>CausVid / Self Forcing</strong></td>
+<td>因果/rollout/KV；Flex 路径为<strong>整段联合去噪</strong></td>
+<td>六步 ≠ 流式 AR；勿把「快于实时」当交互因果</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="对我们训练的含义可执行">对我们训练的含义（可执行）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>谁</th>
+<th>对照什么</th>
+<th>成功标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>训练同学</td>
+<td>同 base <code>MiniMaxAI/MiniMax-H3@42ed227…</code>：原生~50 / trunc-6 / <strong>Flex-6</strong> / FastH3-8；480p/5s 起步</td>
+<td>画质·同步·多样性分桶；归因不混用 sampler</td>
+</tr>
+<tr>
+<td>本 bot</td>
+<td>盯 PDMD 工业复述；不改 loss 族</td>
+<td>深挖文已入库 <code>raw/1030pending/pika_research_clean.txt</code>；训码若开源再评是否升必读·先跑</td>
+</tr>
+</tbody>
+</table></div>
+<p>链接：GitHub <a href="https://github.com/Pika-Labs/Pika-H3-Flex">Pika-Labs/Pika-H3-Flex</a> · HF · Blog deep-dive <code>pika.art/blog/pika-h3-flex-research</code></p>
+<hr />
+</section><section class=""><h2 id="f3-覆盖明细">F3 覆盖明细</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>项</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>期望列表日</td>
+<td>Thu 29 + Fri 30 Oct 2026</td>
+</tr>
+<tr>
+<td><code>/new</code> 页头</td>
+<td><strong>Wednesday, 28 October 2026</strong>（pending×2）</td>
+</tr>
+<tr>
+<td>ID 区间</td>
+<td><code>2610.37669</code>–<code>2610.38409</code>（max 探针）</td>
+</tr>
+<tr>
+<td>拉取</td>
+<td>abs HTML 并发；API 429 弃用</td>
+</tr>
+<tr>
+<td>got / 区间</td>
+<td><strong>705 / 741</strong>（36 真 404）</td>
+</tr>
+<tr>
+<td>7 类 ours</td>
+<td><strong>118</strong></td>
+</tr>
+<tr>
+<td>AI/RO-only（记一笔）</td>
+<td>72（含 SCOPE 38391 等，域外）</td>
+</tr>
+<tr>
+<td>v2.2 命中</td>
+<td><strong>12</strong>（全读标题）</td>
+</tr>
+<tr>
+<td>产物</td>
+<td><code>daily/raw/1030pending/</code></td>
+</tr>
+</tbody>
+</table></div>
+</section><section class=""><h2 id="f4-openreview">F4 OpenReview</h2>
+<ul>
+<li>文献今日 OR dump；相对 known <strong>new=0</strong>。</li>
+<li>SLA ≤10-30：<strong>Paxar / HelixKV / TrajQuant</strong> → 一行·摘要级最终 <strong>出名单</strong>（无 arXiv 孪生）。HelixKV 少步主评 <strong>值得看·流式KV</strong> 维持旁注。</li>
+<li>Mix Forcing <code>2610.33589</code> → 观察至 <strong>10-31</strong>（仍 v1）。</li>
+<li>不新增仅OR 必读候选。</li>
+</ul>
+</section><section class=""><h2 id="f5-对账">F5 对账</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>来源</th>
+<th>条数</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RL <code>forward_fewstep</code> 10-29</td>
+<td>25</td>
+<td><strong>25/25</strong> LIVE（含昨补扫 OUT 6）</td>
+</tr>
+<tr>
+<td>RL 10-30 draft</td>
+<td>0 ID</td>
+<td>批次延误空转发；不计漏检</td>
+</tr>
+<tr>
+<td>文献 shortlist</td>
+<td>8</td>
+<td><strong>Pika 待定级 → 本报已定</strong>；Mix/HelixKV 账本同步；Paxar/TrajQuant/PixelMoE/HF2 → OUT/出名单</td>
+</tr>
+<tr>
+<td><strong>范围内漏检</strong></td>
+<td><strong>0</strong></td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+</section><section class=""><h2 id="命中-triagef3-窗">命中 triage（F3 窗）</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>id</th>
+<th>评级</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pika-H3-Flex（工业）</td>
+<td><strong>值得读·可用配方（高）</strong></td>
+<td>SFT→PDMD→ReFL/DPO；见上卡</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.37936">2610.37936</a></td>
+<td>值得看·有限步几何旁注</td>
+<td>连续边缘≠有限步；理论</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.37983">2610.37983</a></td>
+<td>外围·AR相机分层去噪</td>
+<td>无蒸馏/少步</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.38273">2610.38273</a> NAGO</td>
+<td>OUT·SPDE</td>
+<td>few-step 谱精度但函数空间物理</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.38383">2610.38383</a> Teacher Bridges</td>
+<td>OUT·LLM OPD</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.37937">2610.37937</a> RPKD</td>
+<td>OUT·分类KD</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.38154">2610.38154</a> MASS</td>
+<td>OUT·推理自蒸馏</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.38346">2610.38346</a> GloSAGE</td>
+<td>OUT·病理</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.37833">2610.37833</a> ASR recurrence</td>
+<td>OUT·ASR</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.38238">2610.38238</a> StBR offline RL</td>
+<td>OUT</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.38276">2610.38276</a> MixCards</td>
+<td>外围·音频bench</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.37874">2610.37874</a> PairCLIP-SWA</td>
+<td>OUT·deepfake</td>
+<td>score0 命中</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.38001">2610.38001</a>/037/38335</td>
+<td>OUT</td>
+<td>safety/perf/graph PFN 假阳</td>
+</tr>
+</tbody>
+</table></div>
+<p>AI-only 记一笔：<a href="https://arxiv.org/abs/2610.38391">2610.38391</a> SCOPE（agentic 关键步自蒸馏）→ OUT·非去噪步。</p>
+</section><section class=""><h2 id="下一步闭环">下一步（闭环）</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>谁</th>
+<th>对照什么</th>
+<th>成功标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本 bot · 列表批上线后（或周一补）</td>
+<td><code>/new</code> = Thu 和/或 Fri</td>
+<td>batches 对应行→done；相对本 F3 窗的<strong>列表增量</strong>全读+定级</td>
+</tr>
+<tr>
+<td>训练同学</td>
+<td>Flex-6 vs FastH3-8 vs trunc-6（同 H3 revision）</td>
+<td>480p/5s 跑通；分项指标可归因</td>
+</tr>
+<tr>
+<td>Henry</td>
+<td>本报</td>
+<td><strong>今天无需他出手改训练主文</strong>；知悉 Pika 升值得读·可用配方（高）与 Thu+Fri 仍 pending 即可</td>
+</tr>
+</tbody>
+</table></div>
+</section><section class=""><h2 id="转发">转发</h2>
+<ul>
+<li>→ 多模态文献追踪：Pika-H3-Flex <strong>少步已定级</strong>（值得读·可用配方高 · 归少步）；payload <code>daily/pending/2026-10-30-forward-lit.md</code></li>
+<li>无新 RL-on-few-step 需转发（RL 10-30 空）</li>
+<li>无新 AV/流式世界模型必读需开新转发</li>
+</ul></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-10-30 09:24 (UTC+8)</div></main></div>
+<script>
+(function(){
+ // 详情卡片全部展开/收起
+ document.querySelectorAll('[data-act]').forEach(function(b){b.addEventListener('click',function(){
+   var o=b.getAttribute('data-act')==='open';document.querySelectorAll('details.card').forEach(function(d){d.open=o;});});});
+ // 点击目录中位于折叠卡片内的锚点时自动展开
+ function openFor(id){var el=document.getElementById(id);if(!el)return;var d=el.closest('details');if(d)d.open=true;}
+ if(location.hash)openFor(decodeURIComponent(location.hash.slice(1)));
+ window.addEventListener('hashchange',function(){openFor(decodeURIComponent(location.hash.slice(1)));});
+ // 目录高亮
+ var links=[].slice.call(document.querySelectorAll('nav.toc a'));
+ var heads=links.map(function(a){return document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));});
+ function hl(){var y=window.scrollY+80,k=-1;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top+window.scrollY<=y&&h.offsetParent!==null)k=i;});
+   links.forEach(function(a,i){a.classList.toggle('on',i===k);});}
+ window.addEventListener('scroll',hl,{passive:true});hl();
+})();
+</script><script>if(document.querySelector('code.language-mermaid')){var s=document.createElement('script');
+s.src='https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';s.onload=function(){document.querySelectorAll('code.language-mermaid').forEach(function(c){var d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentNode.replaceWith(d);});mermaid.initialize({startOnLoad:false});mermaid.run();};document.head.appendChild(s);}</script></body></html>
