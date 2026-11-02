@@ -254,8 +254,8 @@ details.card>.body{padding:4px 18px 10px}
 <li><strong>训练免费自适应长记忆</strong>：按全局语义相关 + 局部价值挑历史状态并重映射时间位置，压一步长视频漂移。</li>
 </ol>
 <p><strong>为何有效</strong>：对抗头把「要像真的」和「改步数仍要对齐」绑在同一目标；记忆筛选减少一步 rollout 错误累积。</p>
-<p><strong>关键数字（VBench 480p）</strong><span class="b b-orig">原文</span>：5s 配置 <strong>1*</strong> Total <strong>85.06</strong>（One Forcing 84.35 / Causal Forcing 83.06）；<strong>1†</strong> 84.79 vs One Forcing 84.01；4 步 85.09≈Causal 85.08。30s/60s 一步亦领先 Infinity RoPE / Deep Forcing / Relax Forcing。H100 短/长约 <strong>20.9 / 24.7 FPS</strong>。</p>
-<p><strong>局限</strong>：完整训码/权重未见公开（PDF 仅 Project Page 字样）；「一步」仍对首帧用 4/2 步（1*/1†）；T2V 非音画；4 步几乎打平 Causal。</p>
+<p><strong>关键数字（VBench 480p）</strong><span class="b b-orig">原文</span>：5s 配置 <code>1*</code> Total <strong>85.06</strong>（One Forcing 84.35 / Causal Forcing 83.06）；<strong>1†</strong> 84.79 vs One Forcing 84.01；4 步 85.09≈Causal 85.08。30s/60s 一步亦领先 Infinity RoPE / Deep Forcing / Relax Forcing。H100 短/长约 <strong>20.9 / 24.7 FPS</strong>。</p>
+<p><strong>局限</strong>：完整训码/权重未见公开（PDF 仅 Project Page 字样）；「一步」仍对首帧用 4/2 步（<code>1*</code>/<code>1†</code>）；T2V 非音画；4 步几乎打平 Causal。</p>
 <p><strong>定级说明</strong>：Codex 按 method (b) 同协议胜 One Forcing 倾向「必读·先跑」；我方落 <strong>值得读</strong>——缺训码无法「先跑」、首帧仍多步、非 AV。认知上必须露出，不埋在「无新必读」下。</p>
 <p><strong>对我们</strong>：挂 <strong>流式时间轴 × L3 对抗（+L2 DMD）</strong>；与 Self / Causal / One / Direct Forcing 对照读。执行：<strong>不新开必读票</strong>（等码）。</p>
 <h3 id="better-critic-stac-261042135-值得读">Better Critic / STAC <a href="https://arxiv.org/abs/2610.42135">2610.42135</a> → <strong>值得读</strong></h3>
@@ -667,7 +667,7 @@ details.card>.body{padding:4px 18px 10px}
 <a href="https://arxiv.org/abs/2610.41983">2610.41983</a> → OUT（流式视频理解基准 TwinPast，非生成少步）。</p>
 <h3 id="补扫结论">补扫结论</h3>
 <p>Mon <code>/new</code> <strong>done</strong>（516/43）。<strong>认知</strong>：新挂 Any Forcing + STAC 值得读。<strong>执行</strong>：无新必读·先跑票。F5 漏检 0。LIVE 见发布。</p></section>
-<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-11-02 14:02 (UTC+8)</div></main></div>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-11-02 14:03 (UTC+8)</div></main></div>
 <script>
 (function(){
  // 详情卡片全部展开/收起
