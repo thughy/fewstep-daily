@@ -74,20 +74,26 @@ details.card>.body{padding:4px 18px 10px}
 <li><a href="#下一步闭环">下一步（闭环）</a></li>
 <li><a href="#转发">转发</a></li>
 <li><a href="#附录f3-空窗声明">附录：F3 空窗声明</a></li>
+<li><a href="#补扫1345北京时间-asiashanghai">补扫（13:45，北京时间 / Asia/Shanghai）</a><ul>
+<li><a href="#f5-队友转交召回补扫按-f9-复核">F5 队友转交召回（补扫按 F9 复核）</a></li>
+<li><a href="#粗筛命中但未收录f8">粗筛命中但未收录（F8）</a></li>
+<li><a href="#补扫结论">补扫结论</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div></nav>
 <main><h1 id="少步蒸馏-每日-2026-11-03周二-tue-new-pending">少步蒸馏 · 每日 2026-11-03（周二 · Tue <code>/new</code> <strong>pending</strong>）</h1>
 <blockquote>
-<p><strong>批次覆盖（F1）</strong>：应出列表日 = <strong>Tue 3 Nov</strong>。09:24 curl <code>cs.CV</code>/<code>cs.LG</code> <code>/new</code> 页头仍是 <strong>Monday, 2 November 2026</strong> → <strong>Tue 3 = pending</strong>（公告未翻日）。<strong>勿把周一当今天；勿标 done。</strong> Mon 2 Nov <strong>done</strong>（516/43；LIVE <a href="https://thughy.github.io/fewstep-daily/daily/2026-11-02.html">2026-11-02</a>）。Sat 31 / Sun 1 = <strong>none</strong>。Fri 30 done。</p>
-<p><strong>F3 ID 预览</strong>：接 Mon 列表 max <strong><a href="https://arxiv.org/abs/2610.42152">2610.42152</a></strong>；探针 <code>2610.42153</code>→<code>2610.42192</code>（id_list 40 ids）→ <strong>found=0</strong>（空窗）。API 最新内容仍停在 42152。产物 <code>daily/raw/1103tue/meta.json</code>。<span class="b b-meas">实测</span></p>
+<p><strong>批次覆盖（F1）</strong>：应出列表日 = <strong>Tue 3 Nov</strong>。09:24 与 <strong>13:45 补扫</strong> curl 7 类 <code>/new</code> 页头均仍是 <strong>Monday, 2 November 2026</strong> → <strong>Tue 3 = pending</strong>（公告未翻日）。<strong>勿把周一当今天；勿标 done。</strong> Mon 2 Nov <strong>done</strong>（516/43；LIVE <a href="https://thughy.github.io/fewstep-daily/daily/2026-11-02.html">2026-11-02</a>）。Sat 31 / Sun 1 = <strong>none</strong>。Fri 30 done。</p>
+<p><strong>F3 ID 预览</strong>：接 Mon 列表 max <strong><a href="https://arxiv.org/abs/2610.42152">2610.42152</a></strong>；晨间 id_list + <strong>13:45 abs HEAD</strong> <code>2610.42153</code>→<code>2610.42192</code> → <strong>found=0</strong>（全 404）。产物 <code>daily/raw/1103tue/</code> + <code>daily/raw/1103catchup/meta.json</code>。<span class="b b-meas">实测</span></p>
 <p><strong>F4 OpenReview</strong>：文献 <code>or_iclr27_new_coreish.json</code> 14 条；DSD / DINO Forcing 已 OUT；其余 OuroWorld / RM-OPD / FlexiWorld / FluidJEPA 等域外或 LLM/世界模型 → 全 OUT/不进主线（见 F4）。积压孪生无新强制。</p>
-<p><strong>F5 对账</strong>：文献 forward-fewstep 5 条（STAC/ReCouple/Any + DSD/DINO）→ 已收；RL <code>kw_fewstep</code> 29 + draft 优先条 → 探针 8 候选 + MUON-RT 等全部 OUT 补录；<strong>范围内真漏 0</strong>。
+<p><strong>F5 对账</strong>：文献 forward-fewstep 5 条（STAC/ReCouple/Any + DSD/DINO）→ 已收；RL <code>kw_fewstep</code> 29：补扫按 F9 全量对账 → <strong>漏检 1</strong>（<a href="https://arxiv.org/abs/2610.40847">2610.40847</a>）已 OUT 补录；补录后 <strong>29/29 covered</strong>；范围内机制真漏（少步主线漏评）仍 <strong>0</strong>。
 标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】【HF】【仅OR摘要】<span class="b b-team">队友转述</span><span class="b b-inf">推断</span><span class="b b-codex">Codex✓</span></p>
 </blockquote>
 <hr />
 <section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
-<p><strong>周二列表批仍未上线（<code>/new</code> 仍 Mon）。F3 空窗 0 篇。无新「必读·先跑」；无新「值得读」。认知上维持昨补扫挂出的 Any Forcing / STAC；执行上不开新训练票。文献转来的 DSD / DINO Forcing → OUT 底部收录；F5 8 条 RL/kw 漏挂候选全 OUT 补录（真漏 0）。</strong></p>
+<p><strong>周二列表批仍未上线（13:45 <code>/new</code> 仍 Mon）。F3 空窗 0 篇。无新「必读·先跑」；无新「值得读」。认知/执行维持。补扫 F9 发现 RL kw </strong><a href="https://arxiv.org/abs/2610.40847">2610.40847</a><strong> 未上任一 LIVE 日报 → </strong>OUT·LLM<strong> 补录（召回漏挂；不改训练）。</strong></p>
 <p><strong>认知推荐（该改预期）</strong>：<strong>今天无新认知条目。</strong> 维持锚：① <strong>Any Forcing</strong>（流式 AR 任意步+一步稳；缺训码）② <strong>Better Critic / STAC</strong>（DMD critic 联合扩容+步条件；Code soon）③ Direct/PTD 必读·先跑；sDMD/IDM/ROAD/Pika/Mix 值得读（Pika 可用配方高）。<span class="b b-team">队友转述</span><span class="b b-orig">原文·11-02</span></p>
 <p><strong>执行推荐（开票/先跑）</strong>：<strong>无新「必读·先跑」训练票。</strong> Flex-6 对照 vs trunc-6 / FastH3-8 <strong>仍挂</strong>；DMD 检查清单可记 critic 容量/步条件，<strong>今天不改主 loss</strong>。<span class="b b-inf">推断</span></p>
 <ol>
@@ -339,7 +345,7 @@ details.card>.body{padding:4px 18px 10px}
 <tr>
 <td>RL <code>kw_fewstep.json</code></td>
 <td>29</td>
-<td>SEEN 或今日 OUT 补录；见下</td>
+<td>晨间 SEEN/OUT 28；<strong>补扫 F9 漏检 1</strong>（40847）→ OUT 补录后 <strong>29/29</strong></td>
 </tr>
 <tr>
 <td>RL <code>forward_fewstep.txt</code> 优先</td>
@@ -352,9 +358,14 @@ details.card>.body{padding:4px 18px 10px}
 <td><strong>全 OUT 补录</strong>（下表）</td>
 </tr>
 <tr>
-<td><strong>范围内真漏检</strong></td>
-<td><strong>0</strong>（补录后）</td>
-<td>—</td>
+<td><strong>F9 漏挂（补扫发现→已补）</strong></td>
+<td><strong>1 → 0</strong></td>
+<td><a href="https://arxiv.org/abs/2610.40847">2610.40847</a> → OUT·LLM（见补扫）</td>
+</tr>
+<tr>
+<td><strong>范围内少步主线真漏</strong></td>
+<td><strong>0</strong></td>
+<td>漏挂为 LLM 域外 OUT</td>
 </tr>
 </tbody>
 </table></div>
@@ -512,8 +523,88 @@ details.card>.body{padding:4px 18px 10px}
 </ul>
 <hr />
 </section><section class=""><h2 id="附录f3-空窗声明">附录：F3 空窗声明</h2>
-<p><span class="b b-meas">实测</span>2026-11-03 Asia/Shanghai 晨间：<code>export.arxiv.org</code> <code>id_list=2610.42153…42192</code> 返回 0 entry；内容 API max 仍为 <code>2610.42152v1</code>（GazeRIB，published 2026-10-30T17:59:59Z）。与「Tue <code>/new</code> 仍 Mon」一致——<strong>不是抓取失败，是周二公告尚未释放新 ID。</strong></p></section>
-<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-11-03 09:26 (UTC+8)</div></main></div>
+<p><span class="b b-meas">实测</span>2026-11-03 Asia/Shanghai 晨间：<code>export.arxiv.org</code> <code>id_list=2610.42153…42192</code> 返回 0 entry；内容 API max 仍为 <code>2610.42152v1</code>（GazeRIB，published 2026-10-30T17:59:59Z）。与「Tue <code>/new</code> 仍 Mon」一致——<strong>不是抓取失败，是周二公告尚未释放新 ID。</strong></p>
+<hr />
+</section><section class=""><h2 id="补扫1345北京时间-asiashanghai">补扫（13:45，北京时间 / Asia/Shanghai）</h2>
+<p><strong><code>/new</code> 复核</strong>：7 类（cs.CV/LG/AI/CL/MM/GR/SD）页头均仍 <strong>Monday, 2 November 2026</strong>；abs HEAD <code>2610.42153</code>–<code>2610.42192</code> 全 <strong>404</strong>，max 仍 <strong><a href="https://arxiv.org/abs/2610.42152">2610.42152</a></strong>。Tue 公告未释放 → <strong>batches Tue 维持 pending</strong>；<strong>本补扫无新列表批可筛</strong>（list screen skipped）。产物 <code>daily/raw/1103catchup/meta.json</code>。<span class="b b-meas">实测</span></p>
+<p><strong>相对晨间 F3 空窗</strong>：无增量 ID；无新列表粗筛命中可评。Any Forcing / STAC / ReCouple / Direct / PTD / Speculative / sDMD / IDM / ROAD / Pika / Mix <strong>对账维持</strong>（不重评）。<span class="b b-meas">实测</span></p>
+<h3 id="f5-队友转交召回补扫按-f9-复核">F5 队友转交召回（补扫按 F9 复核）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>来源</th>
+<th>转发/候选</th>
+<th>LIVE 已覆盖（含 ID+评级）</th>
+<th>漏检</th>
+<th>补扫后</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lit <code>forward-fewstep-2026-11-03.md</code></td>
+<td>5（STAC/ReCouple/Any/DSD/DINO）</td>
+<td><strong>5/5</strong> 晨间已收</td>
+<td>0</td>
+<td>维持</td>
+</tr>
+<tr>
+<td>lit catchup 08:45 / 10:48</td>
+<td>noop_same_batch；<strong>无新</strong> forward-fewstep</td>
+<td>—</td>
+<td>0</td>
+<td>—</td>
+</tr>
+<tr>
+<td>RL <code>draft/forward_fewstep.txt</code></td>
+<td>5</td>
+<td><strong>5/5</strong>（42031/42135 值得读·11-02；41104/41307/42128 OUT·11-03）</td>
+<td>0</td>
+<td>维持</td>
+</tr>
+<tr>
+<td>RL <code>lists/kw_fewstep.json</code></td>
+<td><strong>29</strong></td>
+<td>补扫前 <strong>28/29</strong></td>
+<td><strong>1</strong></td>
+<td><strong>29/29</strong></td>
+</tr>
+<tr>
+<td>genrl read-log「待少步定级」新条</td>
+<td>无 11-03 新强制</td>
+<td>—</td>
+<td>0</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>漏检 1（F9：所有已发布日报均无完整 arXiv ID+评级）→ 本补扫补录：</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>id</th>
+<th>短名</th>
+<th>评级</th>
+<th>理由</th>
+<th>stage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.40847">2610.40847</a></td>
+<td>Generative Gap / CDLM vs Speculative Drafter</td>
+<td><strong>OUT·LLM</strong></td>
+<td>连续扩散 LM 与 speculative drafter 无验证对照；纯语言生成效率，非视觉/AV 少步蒸馏</td>
+<td>F5-kw-miss</td>
+</tr>
+</tbody>
+</table></div>
+<p>【摘要】cs.CL/cs.AI；与 Self-Forcing / DMD / 流式 AV 配方无关。</p>
+<p><strong>召回：covered（补录后）；F9 漏挂 1 已补；少步主线真漏 0。</strong> 其余 28 条 kw 已在 <a href="https://thughy.github.io/fewstep-daily/daily/2026-11-02.html">2026-11-02</a> 或本日晨报含评级。</p>
+<h3 id="粗筛命中但未收录f8">粗筛命中但未收录（F8）</h3>
+<p>本补扫 <strong>无新列表粗筛命中</strong>（Tue <code>/new</code> 未上线；F3 空窗 0）。F5 漏挂 <strong><a href="https://arxiv.org/abs/2610.40847">2610.40847</a></strong> 已按上表 OUT·LLM 收录，不计「未收录」。<span class="b b-meas">实测</span></p>
+<h3 id="补扫结论">补扫结论</h3>
+<p>Tue <code>/new</code> <strong>仍 pending</strong>。<strong>认知</strong>：无新条目。<strong>执行</strong>：无新必读·先跑票。F5/F9 漏挂 1（40847 OUT·LLM）已补；不改训练。LIVE 见发布。</p></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-11-03 13:46 (UTC+8)</div></main></div>
 <script>
 (function(){
  // 详情卡片全部展开/收起
