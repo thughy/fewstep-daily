@@ -1,0 +1,534 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>少步蒸馏 · 每日 2026-11-03（周二 · Tue /new pending）</title>
+<style>
+:root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--side:#f6f8fa;--line:#d1d9e0;--acc:#0b57d0;--l1:#fff8e6;--l1b:#f0c36d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--fg);background:var(--bg);font:15.5px/1.75 "Noto Sans CJK SC","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.top{position:sticky;top:0;z-index:5;background:#24292f;color:#fff;padding:8px 20px;display:flex;gap:18px;align-items:center;font-size:14px}
+.top a{color:#fff;opacity:.9} .top .brand{font-weight:700;opacity:1}
+.wrap{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1400px;margin:0 auto}
+nav.toc{position:sticky;top:40px;align-self:start;height:calc(100vh - 40px);overflow:auto;background:var(--side);border-right:1px solid var(--line);padding:14px 10px 40px 14px;font-size:13.5px;line-height:1.5}
+nav.toc .tt{font-weight:700;color:var(--muted);margin:2px 0 8px}
+nav.toc ul{list-style:none;margin:0;padding-left:10px} nav.toc>div>ul{padding-left:0}
+nav.toc li{margin:3px 0} nav.toc a{color:#333;display:block;padding:1px 4px;border-radius:4px}
+nav.toc a:hover,nav.toc a.on{background:#dde7f7;text-decoration:none}
+main{padding:22px 40px 80px;min-width:0}
+h1{font-size:26px;margin:.2em 0 .6em;border-bottom:2px solid var(--line);padding-bottom:.3em}
+h2{font-size:21px;margin:1.8em 0 .6em;border-bottom:1px solid var(--line);padding-bottom:.25em}
+h3{font-size:17.5px;margin:1.4em 0 .5em}
+h4{font-size:15.5px}
+blockquote{margin:0 0 1em;padding:8px 16px;border-left:4px solid #8c959f;background:#f6f8fa;color:#3d444d;font-size:14px}
+blockquote p{margin:.3em 0}
+code{font-family:"JetBrains Mono","DejaVu Sans Mono",Menlo,Consolas,monospace;font-size:.88em;background:#eff1f3;padding:.1em .35em;border-radius:4px}
+pre{background:#f6f8fa;border:1px solid var(--line);border-radius:6px;padding:10px 14px;overflow:auto} pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:.6em 0 1.1em}
+table{border-collapse:collapse;font-size:13.8px;line-height:1.55;min-width:60%}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left}
+th{background:#eef2f6;font-weight:700;position:sticky;top:0}
+tr:nth-child(even) td{background:#fafbfc}
+td strong{color:#8a1c1c}
+hr{border:0;border-top:1px solid var(--line);margin:1.6em 0}
+section.layer1{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:2px 22px 10px;margin:18px 0 26px}
+section.layer1>h2{border-bottom-color:var(--l1b)}
+section.layer1 .tw table{background:#fff}
+.layer-tag{display:inline-block;font-size:12px;font-weight:700;color:#7a4b00;background:#ffe2a8;border-radius:10px;padding:0 9px;margin-left:8px;vertical-align:middle}
+details.card{border:1px solid var(--line);border-radius:8px;margin:12px 0;background:#fff}
+details.card>summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:16.5px;background:#f3f6fa;border-radius:8px;list-style:none}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary:before{content:"▸ ";color:var(--acc)} details.card[open]>summary:before{content:"▾ "}
+details.card[open]>summary{border-bottom:1px solid var(--line);border-radius:8px 8px 0 0}
+details.card>.body{padding:4px 18px 10px}
+.cardtools{font-size:13px;margin:6px 0 2px} .cardtools button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:#fff;border-radius:5px;padding:1px 8px;cursor:pointer;margin-right:6px}
+.b{display:inline-block;font-size:11.5px;line-height:1.5;padding:0 6px;border-radius:9px;margin:0 2px;font-weight:600;white-space:nowrap;vertical-align:1px;border:1px solid transparent}
+.b-meas{background:#dafbe1;color:#116329;border-color:#a8e6b5}
+.b-orig{background:#ddf4ff;color:#0a4b8c;border-color:#a6d4f5}
+.b-team{background:#fff1e5;color:#953800;border-color:#ffc89a}
+.b-inf{background:#eef0f2;color:#4a535c;border-color:#cfd5db}
+.b-codex{background:#fbefff;color:#6e2b91;border-color:#e3b8f5}
+.b-oth{background:#f6f8fa;color:#4a535c;border-color:#d1d9e0}
+.idx{max-width:900px;margin:0 auto;padding:30px 30px 80px}
+.idx .hero{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:12px 22px;margin:14px 0 24px;font-size:16.5px}
+.idx .cards a{display:block;border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:10px 0;color:var(--fg)}
+.idx .cards a:hover{border-color:var(--acc);text-decoration:none;background:#f6f9ff}
+.idx .cards .t{font-weight:700;color:var(--acc)} .idx .cards .d{font-size:13.5px;color:var(--muted)}
+.foot{color:var(--muted);font-size:12.5px;margin-top:40px;border-top:1px solid var(--line);padding-top:8px}
+@media (max-width:900px){.wrap{grid-template-columns:1fr} nav.toc{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)} main{padding:16px}}
+@media print{nav.toc,.top,.cardtools{display:none}.wrap{display:block} details.card{break-inside:avoid}}
+</style></head><body>
+<div class="top"><a class="brand" href="../index.html">多模态少步蒸馏 · 前沿调研</a><a href="../baseline.html">2026Q3 基线</a><a href="../index.html#dailies">每日</a><a href="../index.html#weeklies">每周</a></div>
+<div class="wrap"><nav class="toc"><div class="tt">目录</div><div><div class="toc">
+<ul>
+<li><a href="#结论先行">结论先行</a></li>
+<li><a href="#30-秒速览">30 秒速览</a></li>
+<li><a href="#一屏框架今天挂在哪一格">一屏框架：今天挂在哪一格</a></li>
+<li><a href="#f1-f3-覆盖明细">F1 / F3 覆盖明细</a></li>
+<li><a href="#f4-openreview">F4 OpenReview</a></li>
+<li><a href="#f5-对账">F5 对账</a><ul>
+<li><a href="#f5-out-补录探针-8-相关-draft">F5 OUT 补录（探针 8 + 相关 draft）</a></li>
+</ul>
+</li>
+<li><a href="#命中-triage本窗">命中 triage（本窗）</a></li>
+<li><a href="#预测本窗">预测（本窗）</a></li>
+<li><a href="#下一步闭环">下一步（闭环）</a></li>
+<li><a href="#转发">转发</a></li>
+<li><a href="#附录f3-空窗声明">附录：F3 空窗声明</a></li>
+</ul>
+</div>
+</div></nav>
+<main><h1 id="少步蒸馏-每日-2026-11-03周二-tue-new-pending">少步蒸馏 · 每日 2026-11-03（周二 · Tue <code>/new</code> <strong>pending</strong>）</h1>
+<blockquote>
+<p><strong>批次覆盖（F1）</strong>：应出列表日 = <strong>Tue 3 Nov</strong>。09:24 curl <code>cs.CV</code>/<code>cs.LG</code> <code>/new</code> 页头仍是 <strong>Monday, 2 November 2026</strong> → <strong>Tue 3 = pending</strong>（公告未翻日）。<strong>勿把周一当今天；勿标 done。</strong> Mon 2 Nov <strong>done</strong>（516/43；LIVE <a href="https://thughy.github.io/fewstep-daily/daily/2026-11-02.html">2026-11-02</a>）。Sat 31 / Sun 1 = <strong>none</strong>。Fri 30 done。</p>
+<p><strong>F3 ID 预览</strong>：接 Mon 列表 max <strong><a href="https://arxiv.org/abs/2610.42152">2610.42152</a></strong>；探针 <code>2610.42153</code>→<code>2610.42192</code>（id_list 40 ids）→ <strong>found=0</strong>（空窗）。API 最新内容仍停在 42152。产物 <code>daily/raw/1103tue/meta.json</code>。<span class="b b-meas">实测</span></p>
+<p><strong>F4 OpenReview</strong>：文献 <code>or_iclr27_new_coreish.json</code> 14 条；DSD / DINO Forcing 已 OUT；其余 OuroWorld / RM-OPD / FlexiWorld / FluidJEPA 等域外或 LLM/世界模型 → 全 OUT/不进主线（见 F4）。积压孪生无新强制。</p>
+<p><strong>F5 对账</strong>：文献 forward-fewstep 5 条（STAC/ReCouple/Any + DSD/DINO）→ 已收；RL <code>kw_fewstep</code> 29 + draft 优先条 → 探针 8 候选 + MUON-RT 等全部 OUT 补录；<strong>范围内真漏 0</strong>。
+标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】【HF】【仅OR摘要】<span class="b b-team">队友转述</span><span class="b b-inf">推断</span><span class="b b-codex">Codex✓</span></p>
+</blockquote>
+<hr />
+<section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
+<p><strong>周二列表批仍未上线（<code>/new</code> 仍 Mon）。F3 空窗 0 篇。无新「必读·先跑」；无新「值得读」。认知上维持昨补扫挂出的 Any Forcing / STAC；执行上不开新训练票。文献转来的 DSD / DINO Forcing → OUT 底部收录；F5 8 条 RL/kw 漏挂候选全 OUT 补录（真漏 0）。</strong></p>
+<p><strong>认知推荐（该改预期）</strong>：<strong>今天无新认知条目。</strong> 维持锚：① <strong>Any Forcing</strong>（流式 AR 任意步+一步稳；缺训码）② <strong>Better Critic / STAC</strong>（DMD critic 联合扩容+步条件；Code soon）③ Direct/PTD 必读·先跑；sDMD/IDM/ROAD/Pika/Mix 值得读（Pika 可用配方高）。<span class="b b-team">队友转述</span><span class="b b-orig">原文·11-02</span></p>
+<p><strong>执行推荐（开票/先跑）</strong>：<strong>无新「必读·先跑」训练票。</strong> Flex-6 对照 vs trunc-6 / FastH3-8 <strong>仍挂</strong>；DMD 检查清单可记 critic 容量/步条件，<strong>今天不改主 loss</strong>。<span class="b b-inf">推断</span></p>
+<ol>
+<li><strong>无新过线项。</strong> F3 found=0；无列表增量可评。<span class="b b-meas">实测</span></li>
+<li><strong>文献 forward OUT×2（底部）</strong>：OR:n057WRwQxp DSD → <strong>OUT</strong>（纯 any-order speculative，无训练）；<a href="https://arxiv.org/abs/2610.11751">2610.11751</a> DINO Forcing → <strong>OUT</strong>（表征预测自条件，非 Self-Forcing 谱系）。【仅OR摘要】【摘要】</li>
+<li><strong>对账维持（不重评）</strong>：Any Forcing / STAC <strong>值得读</strong>；ReCouple <strong>值得看·旁注</strong>；Geo-FSRL <strong>OUT·归RL</strong>；Direct/PTD <strong>必读·先跑</strong>；Speculative <strong>必读·待代码</strong>；sDMD/IDM/ROAD/Pika/Mix <strong>值得读</strong>。</li>
+<li><strong>F5 补录 OUT×8</strong>（探针 miss 候选；Codex+自核）：见文末表；另 MUON-RT 41104 / PanoVideo 42082（已在 11-02 F8）一并关口。<strong>真漏 0。</strong><span class="b b-codex">Codex✓</span></li>
+</ol>
+<p><strong>对我们训练的含义：</strong></p>
+<ul>
+<li><strong>今天不用改训练计划；不开新票。</strong><span class="b b-inf">推断</span></li>
+<li><strong>认知上</strong>继续盯 Any Forcing / STAC 训码；码开则同日复评是否升必读。<span class="b b-inf">推断</span></li>
+<li><strong>闭环仍挂</strong>：训练同学 · Flex-6 vs trunc-6 / FastH3-8 —— 成功标准：画质·同步·多样性分桶。<span class="b b-inf">推断</span>【HF】</li>
+<li><strong>下一动作</strong>：等 Tue <code>/new</code> 翻日后再扫相对 42152 的增量；空则按无结果日收口。</li>
+</ul>
+</section><section class="layer1"><h2 id="30-秒速览">30 秒速览<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文 / 资源</th>
+<th>评级</th>
+<th>一句话</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>（本窗无新过线）</td>
+<td>—</td>
+<td>Tue pending；F3 空</td>
+<td><span class="b b-meas">实测</span></td>
+</tr>
+<tr>
+<td>Any Forcing <a href="https://arxiv.org/abs/2610.42031">2610.42031</a></td>
+<td><strong>值得读</strong>（维持）</td>
+<td>流式 AR 任意步+一步稳</td>
+<td><span class="b b-orig">原文·11-02</span></td>
+</tr>
+<tr>
+<td>Better Critic/STAC <a href="https://arxiv.org/abs/2610.42135">2610.42135</a></td>
+<td><strong>值得读</strong>（维持）</td>
+<td>DMD critic 扩容+步条件</td>
+<td><span class="b b-orig">原文·11-02</span></td>
+</tr>
+<tr>
+<td>ReCouple <a href="https://arxiv.org/abs/2610.41269">2610.41269</a></td>
+<td>值得看·旁注（维持）</td>
+<td>粗粒 OT 后训练</td>
+<td>【摘要】</td>
+</tr>
+<tr>
+<td>sDMD / IDM / ROAD / Pika / Mix</td>
+<td><strong>值得读</strong>（维持）</td>
+<td>对账不重评</td>
+<td><span class="b b-team">队友转述</span></td>
+</tr>
+<tr>
+<td>Direct / PTD</td>
+<td>必读·先跑</td>
+<td>维持</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Speculative</td>
+<td>必读·待代码</td>
+<td>维持</td>
+<td>—</td>
+</tr>
+<tr>
+<td>DSD OR:n057WRwQxp</td>
+<td><strong>OUT</strong>（新收）</td>
+<td>纯 speculative 解码</td>
+<td>【仅OR摘要】</td>
+</tr>
+<tr>
+<td>DINO Forcing <a href="https://arxiv.org/abs/2610.11751">2610.11751</a></td>
+<td><strong>OUT</strong>（新收）</td>
+<td>训加速自条件，非少步</td>
+<td>【摘要】</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class="layer1"><h2 id="一屏框架今天挂在哪一格">一屏框架：今天挂在哪一格<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>单步去噪</th>
+<th>流式时间轴</th>
+<th>AV 跨模态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L1 轨迹 / 一致性 / flow map</strong></td>
+<td>ReSeed / CMM 维持</td>
+<td>Hy：PCM 维持；Any 早期 ODE 预热</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L2 分数差分布匹配（DMD）</strong></td>
+<td><strong>IDM / sDMD 维持</strong>；<strong>STAC 维持</strong></td>
+<td>Mix/SF²/Leta 维持；<strong>Any 含 DMD 维持</strong></td>
+<td><strong>Pika PDMD 维持</strong></td>
+</tr>
+<tr>
+<td><strong>L3 对抗</strong></td>
+<td><strong>ROAD 维持</strong></td>
+<td>Hy：hinge；<strong>Any 统一对抗 维持</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L4 额外真实数据 / reward</strong></td>
+<td>—</td>
+<td>—</td>
+<td><strong>Pika ReFL+DPO 维持</strong></td>
+</tr>
+<tr>
+<td><strong>L5 样本级 / 表征分布场</strong></td>
+<td>SRC 外围·精炼</td>
+<td>Direct Forcing 维持</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>因果预训练 / 系统配方</strong></td>
+<td>—</td>
+<td>Mix 值得读维持</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>推理时步数分配（F7）</strong></td>
+<td>—</td>
+<td>HelixKV / UnStep / Focused Forcing 旁注</td>
+<td>Flex 固定 6 knots</td>
+</tr>
+</tbody>
+</table></div>
+<p>放不进框架的：DSD（图像 speculative）；DINO Forcing（表征自条件训加速）；Geo-FSRL→RL；F5 8 条 LLM/生物/量子/安全/稀疏注意力 OUT。</p>
+<hr />
+</section><section class=""><h2 id="f1-f3-覆盖明细">F1 / F3 覆盖明细</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>项</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>期望列表日</td>
+<td>Tuesday, 3 November 2026</td>
+</tr>
+<tr>
+<td><code>/new</code> 页头</td>
+<td><strong>Monday, 2 November 2026</strong>（pending）<span class="b b-meas">实测</span></td>
+</tr>
+<tr>
+<td>列表 max（已知）</td>
+<td><strong><a href="https://arxiv.org/abs/2610.42152">2610.42152</a></strong></td>
+</tr>
+<tr>
+<td>F3 ID 区间</td>
+<td><code>2610.42153</code>–<code>2610.42192</code></td>
+</tr>
+<tr>
+<td>API id_list found</td>
+<td><strong>0 / 40</strong>（空窗）</td>
+</tr>
+<tr>
+<td>7 类 ours / v2.2 hits</td>
+<td><strong>0 / 0</strong>（无纸可筛）</td>
+</tr>
+<tr>
+<td>产物</td>
+<td><code>daily/raw/1103tue/</code>（<code>meta.json</code> + <code>f5_miss_abs.json</code>）</td>
+</tr>
+</tbody>
+</table></div>
+</section><section class=""><h2 id="f4-openreview">F4 OpenReview</h2>
+<p>文献今日 coreish <strong>14</strong>；相对少步主线：</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>OR / 孪生</th>
+<th>题</th>
+<th>少步向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>n057WRwQxp</code> DSD</td>
+<td>Any-order speculative 图像 AR</td>
+<td><strong>OUT</strong>（无训练；非蒸馏）【仅OR摘要】</td>
+</tr>
+<tr>
+<td><code>V1r4op7aVG</code> / <a href="https://arxiv.org/abs/2610.11751">2610.11751</a> DINO Forcing</td>
+<td>DINO 表征预测自条件</td>
+<td><strong>OUT</strong>（非 Self-Forcing 谱系）【摘要】</td>
+</tr>
+<tr>
+<td><code>lcKH15FSIp</code> OuroWorld</td>
+<td>3D cinemagraph 世界</td>
+<td>OUT·域外</td>
+</tr>
+<tr>
+<td><code>CwOZPXu8l4</code> RM-OPD</td>
+<td>奖励模型 on-policy 蒸馏</td>
+<td>OUT·LLM/RL</td>
+</tr>
+<tr>
+<td><code>qoepaU1QMf</code> FlexiWorld</td>
+<td>多时间尺度动作块世界模型</td>
+<td>OUT·世界模型控制</td>
+</tr>
+<tr>
+<td><code>9OflgIyR4s</code> FluidJEPA</td>
+<td>流体 JEPA</td>
+<td>OUT·物理仿真</td>
+</tr>
+<tr>
+<td>其余 coreish（Kuramoto / SGD / ScalSpectra / Ocean / MoE / Tree / LLM-Judge…）</td>
+<td>—</td>
+<td>OUT·域外 / 优化理论</td>
+</tr>
+</tbody>
+</table></div>
+<p>无新「仅OR摘要」值得看升级；不清空历史 watchlist（仍等孪生）。积压：无新强制孪生项。</p>
+</section><section class=""><h2 id="f5-对账">F5 对账</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>来源</th>
+<th>条数</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文献 <code>forward-fewstep-2026-11-03.md</code></td>
+<td>5</td>
+<td>STAC/ReCouple/Any <strong>对账维持</strong>；DSD/DINO <strong>OUT 已收</strong> → <strong>5/5 covered</strong></td>
+</tr>
+<tr>
+<td>文献 shortlist / recall</td>
+<td>15 / Mon FRESH</td>
+<td>高信号已在 11-02 主评；其余域外</td>
+</tr>
+<tr>
+<td>RL <code>kw_fewstep.json</code></td>
+<td>29</td>
+<td>SEEN 或今日 OUT 补录；见下</td>
+</tr>
+<tr>
+<td>RL <code>forward_fewstep.txt</code> 优先</td>
+<td>5</td>
+<td>42135/42031 维持值得读；41104/41307/42128 → <strong>OUT·LLM/安全/重排</strong></td>
+</tr>
+<tr>
+<td>探针 miss 候选</td>
+<td>8</td>
+<td><strong>全 OUT 补录</strong>（下表）</td>
+</tr>
+<tr>
+<td><strong>范围内真漏检</strong></td>
+<td><strong>0</strong>（补录后）</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="f5-out-补录探针-8-相关-draft">F5 OUT 补录（探针 8 + 相关 draft）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>id</th>
+<th>短名</th>
+<th>评级</th>
+<th>理由</th>
+<th>stage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.41025">2610.41025</a></td>
+<td>ReplayRCA</td>
+<td><strong>OUT</strong></td>
+<td>智能体失败反事实回放基准</td>
+<td>F5-miss</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.41307">2610.41307</a></td>
+<td>ERASE</td>
+<td><strong>OUT·安全</strong></td>
+<td>多模态提示注入 on-policy 自蒸馏</td>
+<td>F5-miss</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.41398">2610.41398</a></td>
+<td>GraphMP / Quantum LDPC</td>
+<td><strong>OUT</strong></td>
+<td>量子码解码蒸馏</td>
+<td>F5-miss</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.41399">2610.41399</a></td>
+<td>scAnyOmics</td>
+<td><strong>OUT</strong></td>
+<td>多组学虚拟细胞蒸馏</td>
+<td>F5-miss</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.41769">2610.41769</a></td>
+<td>Stepwise-Querying</td>
+<td><strong>OUT·LLM</strong></td>
+<td>黑盒推理蒸馏（无教师 CoT）</td>
+<td>F5-miss</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.42018">2610.42018</a></td>
+<td>aFMLM</td>
+<td><strong>OUT·语言</strong></td>
+<td>异步 flow map <strong>语言模型</strong>一步并行</td>
+<td>F5-miss</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.42128">2610.42128</a></td>
+<td>DecisionRank</td>
+<td><strong>OUT</strong></td>
+<td>决策重排 OPD，非生成去噪</td>
+<td>F5-miss</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.42147">2610.42147</a></td>
+<td>Latent Sparse Attention</td>
+<td><strong>OUT</strong></td>
+<td>超长上下文稀疏注意力架构</td>
+<td>F5-miss</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.41104">2610.41104</a></td>
+<td>MUON-RT</td>
+<td><strong>OUT·LLM</strong></td>
+<td>LLM 自蒸馏动量复用（RL draft）</td>
+<td>F5-extra</td>
+</tr>
+<tr>
+<td>OR:n057WRwQxp</td>
+<td>DSD</td>
+<td><strong>OUT</strong></td>
+<td>纯 speculative</td>
+<td>lit-forward</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.11751">2610.11751</a></td>
+<td>DINO Forcing</td>
+<td><strong>OUT</strong></td>
+<td>表征自条件训加速</td>
+<td>lit-forward</td>
+</tr>
+</tbody>
+</table></div>
+<p>【摘要】<span class="b b-codex">Codex✓</span>自核标题/摘要一致：无一进入 CM/DMD/对抗/flow-map/流式 AV 少步主线。</p>
+</section><section class=""><h2 id="命中-triage本窗">命中 triage（本窗）</h2>
+<p>本窗 <strong>无 F3/列表命中可评</strong>。新收仅 OUT 底部行（上表）。</p>
+</section><section class=""><h2 id="预测本窗">预测（本窗）</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>预测</th>
+<th>依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tue <code>/new</code> 上线后增量相对 42152 再扫；若仍空则无结果日收口</td>
+<td>F1 pending<span class="b b-inf">推断</span></td>
+</tr>
+<tr>
+<td>Any Forcing / STAC 训码若开 → 同日复评是否升必读·待代码/先跑</td>
+<td>11-02 已挂闸门<span class="b b-inf">推断</span></td>
+</tr>
+</tbody>
+</table></div>
+<p>维持未结算：Direct/PTD/Speculative/Pika Flex-6。</p>
+</section><section class=""><h2 id="下一步闭环">下一步（闭环）</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>谁</th>
+<th>对照什么</th>
+<th>成功标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本 bot · 下一轮</td>
+<td>Tue <code>/new</code> 页头 = Tuesday, 3 November 2026</td>
+<td>batches Tue→done；相对 42152 增量全读标题+定级</td>
+</tr>
+<tr>
+<td>Henry</td>
+<td>双行头条</td>
+<td><strong>认知无新；执行无新必读票</strong>；知悉 F5 8 OUT 补录即可</td>
+</tr>
+<tr>
+<td>训练同学</td>
+<td>Flex-6 对照（挂）</td>
+<td>分桶指标；今日不开新票</td>
+</tr>
+<tr>
+<td>文献 / RL</td>
+<td>DSD·DINO / Geo-FSRL·kw OUT</td>
+<td>ownership 可关本批 fewstep forwarded</td>
+</tr>
+</tbody>
+</table></div>
+</section><section class=""><h2 id="转发">转发</h2>
+<ul>
+<li>文献回执：<code>daily/pending/2026-11-03-forward-lit-reply.md</code>（DSD/DINO OUT + STAC/ReCouple/Any 对账；晨报底部已收）</li>
+<li>RL 回执：<code>daily/pending/2026-11-03-forward-rl.md</code>（主 5 对账维持；无新值得读；F5 kw 漏挂全 OUT）</li>
+<li><strong>无</strong>新 AV 必读票需 Henry 当场拍板。</li>
+</ul>
+<hr />
+</section><section class=""><h2 id="附录f3-空窗声明">附录：F3 空窗声明</h2>
+<p><span class="b b-meas">实测</span>2026-11-03 Asia/Shanghai 晨间：<code>export.arxiv.org</code> <code>id_list=2610.42153…42192</code> 返回 0 entry；内容 API max 仍为 <code>2610.42152v1</code>（GazeRIB，published 2026-10-30T17:59:59Z）。与「Tue <code>/new</code> 仍 Mon」一致——<strong>不是抓取失败，是周二公告尚未释放新 ID。</strong></p></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-11-03 09:26 (UTC+8)</div></main></div>
+<script>
+(function(){
+ // 详情卡片全部展开/收起
+ document.querySelectorAll('[data-act]').forEach(function(b){b.addEventListener('click',function(){
+   var o=b.getAttribute('data-act')==='open';document.querySelectorAll('details.card').forEach(function(d){d.open=o;});});});
+ // 点击目录中位于折叠卡片内的锚点时自动展开
+ function openFor(id){var el=document.getElementById(id);if(!el)return;var d=el.closest('details');if(d)d.open=true;}
+ if(location.hash)openFor(decodeURIComponent(location.hash.slice(1)));
+ window.addEventListener('hashchange',function(){openFor(decodeURIComponent(location.hash.slice(1)));});
+ // 目录高亮
+ var links=[].slice.call(document.querySelectorAll('nav.toc a'));
+ var heads=links.map(function(a){return document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));});
+ function hl(){var y=window.scrollY+80,k=-1;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top+window.scrollY<=y&&h.offsetParent!==null)k=i;});
+   links.forEach(function(a,i){a.classList.toggle('on',i===k);});}
+ window.addEventListener('scroll',hl,{passive:true});hl();
+})();
+</script><script>if(document.querySelector('code.language-mermaid')){var s=document.createElement('script');
+s.src='https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';s.onload=function(){document.querySelectorAll('code.language-mermaid').forEach(function(c){var d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentNode.replaceWith(d);});mermaid.initialize({startOnLoad:false});mermaid.run();};document.head.appendChild(s);}</script></body></html>
