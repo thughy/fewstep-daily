@@ -1,5 +1,5 @@
 <!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"><title>少步蒸馏 · 每日 2026-11-04（周三 · Tue /new done · Wed pending）</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>少步蒸馏 · 每日 2026-11-04（周三 · Tue /new done · Wed /new done）</title>
 <style>
 :root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--side:#f6f8fa;--line:#d1d9e0;--acc:#0b57d0;--l1:#fff8e6;--l1b:#f0c36d}
 *{box-sizing:border-box}
@@ -72,7 +72,10 @@ details.card>.body{padding:4px 18px 10px}
 </ul>
 </li>
 <li><a href="#f1-f3-覆盖明细">F1 / F3 覆盖明细</a></li>
-<li><a href="#f4-openreview">F4 OpenReview</a></li>
+<li><a href="#f4-openreview">F4 OpenReview</a><ul>
+<li><a href="#补扫新值得读短卡-stepx-opd261104386">补扫新值得读短卡 · StepX-OPD（2611.04386）</a></li>
+</ul>
+</li>
 <li><a href="#f5-对账">F5 对账</a><ul>
 <li><a href="#commit-forcing261100937补挂说明">Commit Forcing（2611.00937）补挂说明</a></li>
 </ul>
@@ -85,29 +88,38 @@ details.card>.body{padding:4px 18px 10px}
 <li><a href="#下一步闭环">下一步（闭环）</a></li>
 <li><a href="#转发">转发</a></li>
 <li><a href="#附录批次与命中计数">附录：批次与命中计数</a></li>
+<li><a href="#补扫1358北京时间-asiashanghai">补扫（13:58，北京时间 / Asia/Shanghai）</a><ul>
+<li><a href="#列表批相对晨间的定级要点">列表批相对晨间的定级要点</a></li>
+<li><a href="#f5-队友转交召回补扫按-f9-复核">F5 队友转交召回（补扫按 F9 复核）</a></li>
+<li><a href="#粗筛命中但未收录f840-命中逐条新值得读已详卡">粗筛命中但未收录（F8，40 命中逐条；新值得读已详卡）</a></li>
+<li><a href="#补扫结论">补扫结论</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div></nav>
-<main><h1 id="少步蒸馏-每日-2026-11-04周三-tue-new-done-wed-pending">少步蒸馏 · 每日 2026-11-04（周三 · Tue <code>/new</code> <strong>done</strong> · Wed <strong>pending</strong>）</h1>
+<main><h1 id="少步蒸馏-每日-2026-11-04周三-tue-new-done-wed-new-done">少步蒸馏 · 每日 2026-11-04（周三 · Tue <code>/new</code> <strong>done</strong> · Wed <code>/new</code> <strong>done</strong>）</h1>
 <blockquote>
-<p><strong>批次覆盖（F1）</strong>：应出列表日 = <strong>Wed 4 Nov</strong>。09:20 curl 7+2 类 <code>/new</code> 页头均是 <strong>Tuesday, 3 November 2026</strong> → <strong>Tue 3 = 本跑清完 done</strong>；<strong>Wed 4 = pending</strong>（公告未翻日）。<strong>勿把周二当周三；Wed 未上线。</strong> Mon 2 Nov done。Sat 31 / Sun 1 = none。</p>
+<p><strong>批次覆盖（F1）</strong>：应出列表日 = <strong>Wed 4 Nov</strong>。晨间 09:20 <code>/new</code> 仍 Tue → 先清 Tue；<strong>补扫 13:58</strong> curl 7+2 类页头均为 <strong>Wednesday, 4 November 2026</strong> → <strong>Wed 4 = done</strong>。Tue 3 done。Mon 2 done。Sat 31 / Sun 1 = none。</p>
 <p><strong>Tue <code>/new</code></strong>：7 类 dedup <strong>1426</strong>（new 759 / cross 202 / repl 465）；列表 max <strong><a href="https://arxiv.org/abs/2611.03648">2611.03648</a></strong>；v2.2 hits <strong>95</strong><span class="b b-meas">实测</span></p>
-<p><strong>F3 ID 窗（Wed 预览）</strong>：接 Tue 列表 max <strong><a href="https://arxiv.org/abs/2611.03648">2611.03648</a></strong>；HEAD 扫 <strong><a href="https://arxiv.org/abs/2611.03650">2611.03650</a>–<a href="https://arxiv.org/abs/2611.03960">2611.03960</a></strong> existing <strong>296</strong>（API id_list 500 → abs 抓取）；仅 F3 不在 Tue 列表 <strong>296</strong>；F3 hits <strong>4</strong> 全 OUT。合并 hits <strong>99</strong><span class="b b-meas">实测</span></p>
-<p><strong>F4 OpenReview</strong>：<code>or_iclr27_new_forcing.json</code> 5；Position Forcing 外围·3D；Marine OUT；Pyramid/Future 维持值得看·流式记忆；SimForcing 外围·机器人WM。</p>
-<p><strong>F5 对账</strong>：文献 shortlist must-list + overnight + RESULT commit-forcing(=00937) 全收；RL kw 126∩hits 47 已评；<strong>范围内真漏 0</strong>。
+<p><strong>Wed <code>/new</code>（补扫）</strong>：7 类 dedup <strong>707</strong>（new 324 / cross 98 / repl 285）；列表 max <strong><a href="https://arxiv.org/abs/2611.05377">2611.05377</a></strong>；v2.2 hits <strong>40</strong><span class="b b-meas">实测</span></p>
+<p><strong>F3 ID 窗（晨间 Wed 预览）</strong>：接 Tue max <strong><a href="https://arxiv.org/abs/2611.03648">2611.03648</a></strong>；<strong><a href="https://arxiv.org/abs/2611.03650">2611.03650</a>–<a href="https://arxiv.org/abs/2611.03960">2611.03960</a></strong> existing <strong>296</strong> / hits <strong>4</strong> 全 OUT；补扫列表覆盖并超过该窗（max <strong><a href="https://arxiv.org/abs/2611.05377">2611.05377</a></strong>）。</p>
+<p><strong>F4 OpenReview</strong>：晨间维持；Pyramid/Future 值得看·流式记忆；SimForcing 外围·机器人WM；Position Forcing 外围·3D。</p>
+<p><strong>F5 对账（补扫按 F9 复核）</strong>：文献 forward 17+OR3 → LIVE 曾漏挂 <strong>10</strong> 条 ID（晨间 ratings 有、页面无 ID）已补录；RL kw∩hits 47 → 发布页曾漏 <strong>35</strong> 已补录；补录后 <strong>真漏 0</strong>。
 标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】【HF】【仅OR摘要】<span class="b b-team">队友转述</span><span class="b b-inf">推断</span><span class="b b-codex">Codex✓</span>
-产物：<code>daily/raw/1104tue/</code> + overnight <code>daily/raw/1104forward/</code> + <code>daily/pending/2026-11-04-forward-lit-reply.md</code></p>
+产物：<code>daily/raw/1104tue/</code> + <code>daily/raw/1104catchup/</code> + overnight <code>daily/raw/1104forward/</code></p>
 </blockquote>
 <hr />
 <section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
-<p><strong>周二列表今日上线并筛完；周三仍未出（F3 预览 296 篇、hits 4 全 OUT）。新「必读·先跑」×1：History Forcing。新「值得读」×4：Disen / dKV / TaoMate-HD / GDMD(v2 repl)。认知与执行都要动——History 开 history-guidance 对照票。</strong></p>
-<p><strong>认知推荐（该改预期）</strong>：<strong>History Forcing</strong>——流式少步 DMD 的参考分可以（也值得）加「有历史−无历史」AR teacher 残差，而不必把整段 AR 分布当目标；<strong>Disen-Forcing</strong>——frame sink≠LLM sink，DMD 期拆锚头/工作头路由可救动态度；<strong>dKV Forcing</strong>——生成 KV≠写入未来的 KV，writer LoRA+可微 page 把未来读梯度回传到写；<strong>TaoMate-HD</strong>——流式 AV 可用渐进分辨率 2+1 步 + 生成/蒸馏非对称文本窗；<strong>GDMD</strong>——用 DMD 梯度当 RL 奖励接口，可调和 DMDR 样本级冲突。<span class="b b-orig">原文</span>【代码】<span class="b b-codex">Codex✓</span></p>
-<p><strong>执行推荐（开票/先跑）</strong>：<strong>开 History Forcing 训练票（必读·先跑 a）</strong>：在 Wan2.1-1.3B / 现有 DMD 底座上对照 <code>use_history_guidance</code> / history residual→<code>s_ref</code>（及 OPSD 支路）；码 <code>ziplab/History-Forcing</code> + HF <code>xzxxntxdy/History-Forcing</code> 已 HTTP 200。【代码】【HF】Disen/dKV/TaoMate <strong>不升必读</strong>（Disen 无独立训码；dKV Code soon；TaoMate 仅推理码+preview 权）——记观察/等码复评。Flex-6 对照仍挂，<strong>不与 History 票互斥</strong>。<span class="b b-inf">推断</span></p>
+<p><strong>Tue <code>/new</code> 晨间已清；Wed <code>/new</code> 补扫已翻日（707/40）。全天新「必读·先跑」仍仅 History Forcing（晨间）。补扫新「值得读」×1：StepX-OPD（T2I 多教师 OPD∩四步同训；有训码+LoRA，非 AV → 不升必读）。晨间值得读 Disen/dKV/TaoMate/GDMD 维持。F9 召回漏挂 10+35 已补录（真漏 0）。执行主票仍是 History。</strong></p>
+<p><strong>认知推荐（该改预期）</strong>：<strong>History Forcing</strong>——流式少步 DMD 的参考分可以（也值得）加「有历史−无历史」AR teacher 残差，而不必把整段 AR 分布当目标；<strong>Disen-Forcing</strong>——frame sink≠LLM sink，DMD 期拆锚头/工作头路由可救动态度；<strong>dKV Forcing</strong>——生成 KV≠写入未来的 KV，writer LoRA+可微 page 把未来读梯度回传到写；<strong>TaoMate-HD</strong>——流式 AV 可用渐进分辨率 2+1 步 + 生成/蒸馏非对称文本窗；<strong>GDMD</strong>——用 DMD 梯度当 RL 奖励接口；<strong>StepX-OPD（补扫）</strong>——能力整合（多教师 OPD）与少步蒸馏不必两阶段串行，可在学生自 rollout 态上同时学。<span class="b b-orig">原文</span>【代码】<span class="b b-codex">Codex✓</span></p>
+<p><strong>执行推荐（开票/先跑）</strong>：<strong>开 History Forcing 训练票（必读·先跑 a）</strong>：在 Wan2.1-1.3B / 现有 DMD 底座上对照 <code>use_history_guidance</code> / history residual→<code>s_ref</code>（及 OPSD 支路）；码 <code>ziplab/History-Forcing</code> + HF <code>xzxxntxdy/History-Forcing</code> 已 HTTP 200。【代码】【HF】<strong>StepX-OPD 不另开必读票</strong>（T2I；非 AV/流式闸门 a）——可作图像 OPD 配方旁路观察（码 <code>WinterCCC/StepX-OPD</code> + HF LoRA）。Disen/dKV/TaoMate <strong>不升必读</strong>。Flex-6 对照仍挂，<strong>不与 History 票互斥</strong>。<span class="b b-inf">推断</span></p>
 <ol>
 <li><strong>History Forcing <a href="https://arxiv.org/abs/2611.02782">2611.02782</a> → 必读·先跑 (a)。</strong> 历史对比残差校正 DMD/OPSD；整条 loss 链可在 <code>dmd/model/dmd.py</code> 定位。<span class="b b-orig">原文</span>【代码】【HF】</li>
 <li><strong>值得读×3（流式主线）</strong>：Disen <a href="https://arxiv.org/abs/2611.02822">2611.02822</a> / dKV <a href="https://arxiv.org/abs/2611.01648">2611.01648</a> / TaoMate-HD <a href="https://arxiv.org/abs/2611.03394">2611.03394</a>。<span class="b b-orig">原文</span><span class="b b-codex">Codex✓</span></li>
 <li><strong>值得读×1（图像 DMD+RL repl）</strong>：GDMD <a href="https://arxiv.org/abs/2604.19009">2604.19009</a> v2。<span class="b b-orig">原文</span></li>
-<li><strong>值得看重点</strong>：Commit Forcing <a href="https://arxiv.org/abs/2611.00937">2611.00937</a>（发现·训免）；Wave / VidDub 可用配方；OmniOPD；Hybrid 图像一步；CM 稳定化 / Itô map 理论。<span class="b b-orig">原文</span><span class="b b-team">队友转述</span></li>
+<li><strong>补扫新值得读×1（图像 OPD∩少步）</strong>：StepX-OPD <a href="https://arxiv.org/abs/2611.04386">2611.04386</a>（多教师能力+四步同训；码+LoRA 齐；非 AV → 不升必读）。<span class="b b-orig">原文</span>【代码】【HF】</li>
+<li><strong>值得看重点</strong>：Commit Forcing <a href="https://arxiv.org/abs/2611.00937">2611.00937</a>；Wave / VidDub；OmniOPD；Hybrid；<strong>补扫</strong> Compression Forcing / ReCR / SlotMemory 旁注；StyleForge 可用配方。<span class="b b-orig">原文</span><span class="b b-team">队友转述</span></li>
 <li><strong>维持不重评</strong>：Any Forcing / STAC 值得读；Direct/PTD 必读·先跑；Speculative 必读·待代码；sDMD/IDM/ROAD/Pika/Mix 值得读。</li>
 </ol>
 <p><strong>对我们训练的含义：</strong></p>
@@ -115,7 +127,7 @@ details.card>.body{padding:4px 18px 10px}
 <li><strong>今天要出手的训练决定</strong>：是否在流式 DMD 上加 history residual（History 票）。<span class="b b-inf">推断</span></li>
 <li><strong>认知上</strong>同步改预期：sink 路由（Disen）、写记忆（dKV）、AV 渐进分辨率（TaoMate）。<span class="b b-inf">推断</span></li>
 <li><strong>闭环</strong>：训练同学 · History <code>use_history_guidance</code> on/off · 成功标准：VBench-Long / 主体回现一致性 / 动态度不塌；对照 Self-Forcing / CausVid 同协议。【代码】<span class="b b-orig">原文</span></li>
-<li><strong>下一动作</strong>：等 Wed <code>/new</code> 翻日后再扫；F3 预览已覆盖至 <strong><a href="https://arxiv.org/abs/2611.03960">2611.03960</a></strong>。</li>
+<li><strong>下一动作</strong>：Wed <code>/new</code> 已清（max <strong><a href="https://arxiv.org/abs/2611.05377">2611.05377</a></strong>）；盯 History 票；StepX 仅作图像 OPD 旁路。</li>
 </ul>
 </section><section class="layer1"><h2 id="30-秒速览">30 秒速览<span class="layer-tag">第一层 · 框架</span></h2>
 <div class="tw"><table>
@@ -157,6 +169,12 @@ details.card>.body{padding:4px 18px 10px}
 <td><strong>值得读</strong></td>
 <td>DMD梯度作RL奖励（v2）</td>
 <td><span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td><strong>StepX-OPD <a href="https://arxiv.org/abs/2611.04386">2611.04386</a></strong></td>
+<td><strong>值得读</strong></td>
+<td>多教师OPD∩四步同训；码+LoRA；非AV</td>
+<td><span class="b b-orig">原文</span>【代码】【HF】</td>
 </tr>
 <tr>
 <td>Commit Forcing <a href="https://arxiv.org/abs/2611.00937">2611.00937</a></td>
@@ -210,7 +228,7 @@ details.card>.body{padding:4px 18px 10px}
 </tr>
 <tr>
 <td><strong>L2 分数差分布匹配（DMD）</strong></td>
-<td><strong>GDMD</strong> 值得读；Hybrid 图像一步</td>
+<td><strong>GDMD</strong> 值得读；<strong>StepX-OPD</strong> 值得读（OPD∩少步）；Hybrid 图像一步</td>
 <td><strong>History</strong> 残差校正 <code>s_ref</code>；<strong>Disen</strong> DMD插件；<strong>dKV</strong>；Wave DMD三阶段</td>
 <td>OmniOPD（OPD≠减步）</td>
 </tr>
@@ -420,6 +438,45 @@ details.card>.body{padding:4px 18px 10px}
 </tbody>
 </table></div>
 <p>积压孪生：Pyramid/Future 已有 twin；Position 无视频孪生 → watchlist 仅OR摘要。</p>
+<h3 id="补扫新值得读短卡-stepx-opd261104386">补扫新值得读短卡 · StepX-OPD（<a href="https://arxiv.org/abs/2611.04386">2611.04386</a>）</h3>
+<p><strong>StepX-OPD（<a href="https://arxiv.org/abs/2611.04386">2611.04386</a>）· 值得读</strong></p>
+<p><strong>结论 / 对我们：</strong> 图像侧「先多教师 OPD 攒能力、再少步蒸馏」可合成一阶段——学生在自己的少步 rollout 态上同时吃专家监督。改变两阶段配方预期；<strong>域是 T2I（SD3.5 / FLUX）</strong>，不触发 AV/流式必读·先跑 (a)。有完整训码与 LoRA 权重，可作图像 OPD 旁路对照，不另开流式主票。</p>
+<p><strong>白话背景。</strong> 可部署 T2I 既要指令跟随/文字渲染/偏好，又要少步采样。业界常先训满步多教师 OPD，再拿它当教师做步数蒸馏——两段串行，且满步模型一压缩分数就掉。</p>
+<p><strong>具体问题。</strong> 能否让同一个学生在学少步采样的同时整合多能力，且教师监督落在学生自己会访问的轨迹态上，而不是它从不跑的长轨迹？</p>
+<p><strong>方法逐步。</strong></p>
+<ol>
+<li><strong>合并两阶段</strong>：冻结各能力专家（GenEval / OCR / PickScore 路由），在学生四步 on-policy rollout 态上做多教师 OPD。</li>
+<li><strong>低噪声速度回归</strong>：按 rollout KL 分解，干净端速度误差权重大 → 额外回归低噪声段速度。</li>
+<li><strong>抑制「乱写字」</strong>：能力整合会诱发未要求的文字渲染；给变体压低该症状。</li>
+</ol>
+<p><strong>为什么。</strong> 监督分布对齐学生真实访问态，避免「教师轨迹 ↔ 学生轨迹」错配；能力与少步同优化减少串行损失。<span class="b b-inf">推断</span></p>
+<p><strong>关键数字。<span class="b b-orig">原文</span></strong> SD3.5-M / FLUX.1-dev 四步 normalized Average <strong>0.8901 / 0.8902</strong>（同设定四步最强）；超过四十步 Flow-OPD；SD3.5-M 训练约少 <strong>37%</strong> GPU-hours vs 串行 DiffusionOPD→步蒸馏。</p>
+<p><strong>限制。</strong> 我们未自跑；主结果在 T2I 非 AV/流式；HF 上现见第三方 LoRA（<code>ShimaRinC/StepX-OPD-SD3.5</code>），官方组织仓未稳定解析到。</p>
+<p><strong>代码核验。【代码】</strong> <code>WinterCCC/StepX-OPD</code>：<code>scripts/train_sd35_wb.py</code> + <code>configs/sd35m_wb.yaml</code> + <code>stepx_opd/objective.py</code>；【HF】LoRA 权重可下。</p>
+<p><strong>taxonomy。<span class="b b-codex">Codex✓</span></strong> L2（OPD/分布匹配）+ 少步同训。预判失效处：视频上多教师路由与 chunk rollout 错配 → 动态度/一致性互伤。<span class="b b-inf">推断</span></p>
+<p><strong>与最接近工作的核心差别</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>最接近</th>
+<th>操作差别</th>
+<th>后果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DiffusionOPD / Flow-OPD → 再 TDM/步蒸馏</td>
+<td>两阶段串行</td>
+<td>满步压缩掉分；训练更贵</td>
+</tr>
+<tr>
+<td><strong>StepX-OPD</strong></td>
+<td>少步学生自 rollout 上同时多教师 OPD + 低噪速度头</td>
+<td>能力与少步同训；四步可超四十步 OPD</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
 </section><section class=""><h2 id="f5-对账">F5 对账</h2>
 <div class="tw"><table>
 <thead>
@@ -461,9 +518,9 @@ details.card>.body{padding:4px 18px 10px}
 <td>全 OUT 补录</td>
 </tr>
 <tr>
-<td><strong>范围内少步主线真漏</strong></td>
+<td><strong>范围内少步主线真漏（晨间自称）</strong></td>
 <td><strong>0</strong></td>
-<td>—</td>
+<td>补扫 F9 发现 LIVE 漏挂 ID → 见文末补扫补录后仍 <strong>0</strong></td>
 </tr>
 </tbody>
 </table></div>
@@ -715,13 +772,13 @@ details.card>.body{padding:4px 18px 10px}
 </tr>
 <tr>
 <td>本 bot · 下一轮</td>
-<td>Wed <code>/new</code> = Wednesday, 4 November 2026</td>
-<td>batches Wed→done；相对 03960 增量</td>
+<td>Thu <code>/new</code></td>
+<td>batches Wed→done（本补扫）；盯 History 票</td>
 </tr>
 <tr>
 <td>Henry</td>
 <td>双行头条</td>
-<td><strong>认知：History+Disen/dKV/TaoMate；执行：History 票</strong></td>
+<td><strong>认知：History+Disen/dKV/TaoMate+StepX(图像OPD)；执行：History 票</strong></td>
 </tr>
 <tr>
 <td>文献 / RL</td>
@@ -752,23 +809,318 @@ details.card>.body{padding:4px 18px 10px}
 <td>Tue 3 Nov <code>/new</code></td>
 <td>1426</td>
 <td>95</td>
-<td><strong>done</strong>（本跑）</td>
+<td><strong>done</strong>（晨间）</td>
 </tr>
 <tr>
-<td>Wed 4 Nov</td>
+<td>Wed 4 Nov <code>/new</code></td>
+<td>707</td>
+<td>40</td>
+<td><strong>done</strong>（补扫 13:58）</td>
+</tr>
+<tr>
+<td>F3 Wed 预览（晨间）</td>
+<td>296</td>
+<td>4 OUT</td>
+<td>被 Wed 列表覆盖</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class=""><h2 id="补扫1358北京时间-asiashanghai">补扫（13:58，北京时间 / Asia/Shanghai）</h2>
+<p><strong>台账</strong>：<code>/new</code> 页头已是 <strong>Wednesday, 4 November 2026</strong>（fresh curl；7 类 cs.CV/LG/MM/SD/eess.AS/eess.IV/stat.ML + 可选 AI/CL）。去重 <strong>707</strong>（new 324 / cross 98 / repl 285；<code>raw/1104catchup/meta.json</code>）；screen.py <strong>v2.2</strong> 命中 <strong>40</strong>，<strong>全部读过标题（F6）</strong><span class="b b-meas">实测</span>。相对晨间 F3 窗（至 03960）：列表 max <strong><a href="https://arxiv.org/abs/2611.05377">2611.05377</a></strong>；高信号增量 <strong>StepX-OPD</strong>。发现延迟：应出约 08:00 → 进日报 ~13:58 ≈ <strong>6 h</strong>。</p>
+<p><strong>补扫结论：无新「必读·先跑」；新「值得读」×1（StepX-OPD）；新「值得看·旁注/配方」×若干（Compression Forcing / ReCR / SlotMemory / StyleForge / 语义传输一步）；F9 召回漏挂已补；晨间 History/Disen/dKV/TaoMate/GDMD 维持。</strong><span class="b b-orig">原文</span>【代码】<span class="b b-codex">Codex✓</span>【自核 PDF/仓】</p>
+<h3 id="列表批相对晨间的定级要点">列表批相对晨间的定级要点</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>短名</th>
+<th>kind</th>
+<th>相对晨间</th>
+<th>评级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.04386">2611.04386</a></td>
+<td>StepX-OPD</td>
+<td>new</td>
+<td><strong>列表新（&gt;03960）</strong></td>
+<td><strong>值得读</strong></td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.04028">2611.04028</a></td>
+<td>Compression Forcing</td>
+<td>new</td>
+<td>列表新</td>
+<td>值得看·旁注</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.04164">2611.04164</a></td>
+<td>ReCR / What Remains</td>
+<td>new</td>
+<td>列表新</td>
+<td>值得看·旁注</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2605.31033">2605.31033</a></td>
+<td>SlotMemory</td>
+<td>repl</td>
+<td>列表新</td>
+<td>值得看·旁注</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2606.00514">2606.00514</a></td>
+<td>Semantic Transport 一步</td>
+<td>repl</td>
+<td>列表新</td>
+<td>值得看</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.05066">2610.05066</a></td>
+<td>StyleForge</td>
+<td>repl</td>
+<td>列表新</td>
+<td>值得看·可用配方</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2606.29110">2606.29110</a></td>
+<td>SCALLOP Boltzmann</td>
+<td>repl</td>
+<td>列表新</td>
+<td>外围</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.03953">2611.03953</a></td>
+<td>P²-MOPD</td>
+<td>new</td>
+<td>F3/晨间已评</td>
+<td>OUT·LLM·维持</td>
+</tr>
+<tr>
+<td>其余 Wed hits</td>
 <td>—</td>
-<td>F3 预览 296/4</td>
-<td><strong>pending</strong></td>
+<td>—</td>
+<td>—</td>
+<td>见 F8</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="f5-队友转交召回补扫按-f9-复核">F5 队友转交召回（补扫按 F9 复核）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>来源</th>
+<th>转发/候选</th>
+<th>LIVE 已覆盖（含评级）</th>
+<th>漏检</th>
+<th>补扫后</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lit <code>forward-fewstep-2026-11-04.md</code></td>
+<td>17 arXiv + 3 OR</td>
+<td>晨间页面有 ID 的 7+OR；<strong>缺 10 ID</strong></td>
+<td><strong>10</strong></td>
+<td><strong>已补录下表</strong></td>
 </tr>
 <tr>
-<td>合并</td>
-<td>1426+296</td>
-<td>99</td>
+<td>lit YES（History/Disen/dKV/TaoMate/Wave/OmniOPD/VidDub/Hybrid/Commit）</td>
+<td>9</td>
+<td><strong>9/9</strong> 仍在 LIVE</td>
+<td>0</td>
+<td>维持</td>
+</tr>
+<tr>
+<td>OR Pyramid/Future/SimForcing</td>
+<td>3</td>
+<td><strong>已在 LIVE</strong></td>
+<td>0</td>
+<td>维持</td>
+</tr>
+<tr>
+<td>RL <code>lists/kw_fewstep.json</code> ∩ morning hits</td>
+<td><strong>47</strong></td>
+<td>发布页仅 <strong>12</strong> 带评级</td>
+<td><strong>35</strong></td>
+<td><strong>已补录</strong>（多与 lit 漏挂重叠）</td>
+</tr>
+<tr>
+<td>RL wed ∩ kw</td>
+<td>0</td>
+<td>—</td>
+<td>0</td>
+<td>—</td>
+</tr>
+<tr>
+<td>genrl read-log「待少步定级」</td>
+<td>无 Wed 新条</td>
+<td>—</td>
+<td>0</td>
 <td>—</td>
 </tr>
 </tbody>
-</table></div></section>
-<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-11-04 09:35 (UTC+8)</div></main></div>
+</table></div>
+<h4 id="文献-forward-漏挂补录f9晨间-ratings-有live-无-id">文献 forward 漏挂补录（F9；晨间 ratings 有、LIVE 无 ID）</h4>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>短名</th>
+<th>处置</th>
+<th>评级</th>
+<th>一行理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.01858">2611.01858</a></td>
+<td>Learning-to-Memorize</td>
+<td><strong>漏检→补录</strong></td>
+<td>外围·流式记忆</td>
+<td>学KV路由；不减步</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.01835">2611.01835</a></td>
+<td>ReFrame</td>
+<td><strong>漏检→补录</strong></td>
+<td>OUT·语音推理</td>
+<td>全双工语音投机/折帧；无视频</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.01617">2611.01617</a></td>
+<td>Seeing What Matters</td>
+<td><strong>漏检→补录</strong></td>
+<td>OUT·VLM推理</td>
+<td>负载自适应 VLM speculative</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.02200">2611.02200</a></td>
+<td>ZeroGraph</td>
+<td><strong>漏检→补录</strong></td>
+<td>外围</td>
+<td>块界轨迹蒸馏；未建采样减步</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.02846">2611.02846</a></td>
+<td>SpecOPD</td>
+<td><strong>漏检→补录</strong></td>
+<td>OUT·LLM</td>
+<td>分支并行 OPD 训 speculative drafter</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.02093">2611.02093</a></td>
+<td>Bernoulli OPD</td>
+<td><strong>漏检→补录</strong></td>
+<td>OUT·LLM</td>
+<td>高置信 token 蒸馏修正</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.02112">2611.02112</a></td>
+<td>Order-Only OPD</td>
+<td><strong>漏检→补录</strong></td>
+<td>OUT·LLM</td>
+<td>只监督 token 序</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.02666">2611.02666</a></td>
+<td>Train the Sampler</td>
+<td><strong>漏检→补录</strong></td>
+<td>OUT·语言</td>
+<td>少步 masked diffusion LM</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.02746">2611.02746</a></td>
+<td>Replay multi-teacher OPD</td>
+<td><strong>漏检→补录</strong></td>
+<td>OUT·LLM</td>
+<td>LLM 持续学习多教师 OPD</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.00852">2611.00852</a></td>
+<td>Adaptive-Policy Distillation</td>
+<td><strong>漏检→补录</strong></td>
+<td>OUT·LLM</td>
+<td>信息不对称下知识注入</td>
+</tr>
+</tbody>
+</table></div>
+<h4 id="rl-hits-漏挂补录发布页无-id评级与上表去重后">RL ∩hits 漏挂补录（发布页无 ID+评级；与上表去重后）</h4>
+<p><a href="https://arxiv.org/abs/2611.00040">2611.00040</a> → OUT（手机障碍检测）
+<a href="https://arxiv.org/abs/2611.00061">2611.00061</a> → OUT（数据集蒸馏与分类集成学习闭环，压缩训练集而非生成采样步数。）
+<a href="https://arxiv.org/abs/2611.00120">2611.00120</a> → OUT（特权视频标记辅助时间定位自蒸馏，输出事件边界而非生成视频。）
+<a href="https://arxiv.org/abs/2611.00180">2611.00180</a> → OUT（机器人终身观察、记忆与工具技能蒸馏，不属于媒体生成减步。）
+<a href="https://arxiv.org/abs/2611.00449">2611.00449</a> → OUT（SpBench: An Agent-Native Framework for Cross-Engine Lakehous）
+<a href="https://arxiv.org/abs/2611.00450">2611.00450</a> → OUT（将检索知识压入LLM参数记忆，未涉及图像、视频或AV生成。）
+<a href="https://arxiv.org/abs/2611.00458">2611.00458</a> → OUT（VLM属性蒸馏服务商品检索与特征解耦，不涉及生成器。）
+<a href="https://arxiv.org/abs/2611.00506">2611.00506</a> → OUT（片上驻留权重加速LLM投机解码串行头，与媒体少步蒸馏无关。）
+<a href="https://arxiv.org/abs/2611.00624">2611.00624</a> → OUT（XLA from the Trenches: Correctness on TPU Workloads at Scale）
+<a href="https://arxiv.org/abs/2611.00712">2611.00712</a> → OUT（Personalized Rollout Allocation for Federated LQR Policy Opt）
+<a href="https://arxiv.org/abs/2611.00768">2611.00768</a> → OUT（DADKC: Distribution-Aware Adaptive Differentiated Knowledge ）
+<a href="https://arxiv.org/abs/2611.00908">2611.00908</a> → OUT（零阶数据无关知识蒸馏解决教师训练数据缺失，摘要未涉及少步媒体生成器。）
+<a href="https://arxiv.org/abs/2611.01120">2611.01120</a> → OUT（流式游戏解说LLM通过检索与自蒸馏学习知识，不生成视频或联合AV。）
+<a href="https://arxiv.org/abs/2611.01215">2611.01215</a> → OUT（VLM joint denoise 机器人）
+<a href="https://arxiv.org/abs/2611.01245">2611.01245</a> → OUT（将贝叶斯信息搜寻策略和信念状态蒸馏至语言模型，不属于媒体生成。）
+<a href="https://arxiv.org/abs/2611.01283">2611.01283</a> → OUT·驾驶（DriftingPlanner 轨迹规划一步）
+<a href="https://arxiv.org/abs/2611.01568">2611.01568</a> → OUT（推荐自蒸馏）
+<a href="https://arxiv.org/abs/2611.01607">2611.01607</a> → OUT（红外与可见光融合转向自然外观增强，所给摘要不足以确认生成器减步蒸馏。）
+<a href="https://arxiv.org/abs/2611.01721">2611.01721</a> → OUT（说话人识别的群时延后门攻击，与生成蒸馏无关。）
+<a href="https://arxiv.org/abs/2611.01965">2611.01965</a> → OUT（协调token级正反KL监督的在策略蒸馏，所给摘要未涉及媒体生成减步。）
+<a href="https://arxiv.org/abs/2611.02160">2611.02160</a> → OUT·非生成器（Value Forcing 名碰撞；RL return；非生成器）
+<a href="https://arxiv.org/abs/2611.02204">2611.02204</a> → OUT（用高分辨率2D特权观测改善3D微结构重建，属于跨模态表征蒸馏。）
+<a href="https://arxiv.org/abs/2611.02278">2611.02278</a> → OUT（以最短正确轨迹自训练压缩LLM推理长度，不属于媒体生成减步。）
+<a href="https://arxiv.org/abs/2611.02526">2611.02526</a> → OUT（从驾驶视频学习对象槽动力学并迁移至轨迹规划，未涉及视频生成蒸馏。）
+<a href="https://arxiv.org/abs/2611.02699">2611.02699</a> → OUT（研究机器人动力学滚动训练和不确定性校准，未涉及目标媒体域生成蒸馏。）
+<a href="https://arxiv.org/abs/2611.02780">2611.02780</a> → OUT（用多token预测引导多模态推理的视觉重聚焦，属于VLM理解。）
+<a href="https://arxiv.org/abs/2611.02952">2611.02952</a> → OUT（冻结扩散模型生成数据以改善长尾自监督表征，不训练少步生成器。）
+<a href="https://arxiv.org/abs/2611.03381">2611.03381</a> → OUT（A Geometry-Informed Neural Operator surrogate of LISFLOOD-FP）
+<a href="https://arxiv.org/abs/2611.03465">2611.03465</a> → OUT（从单张LDR与事件重建高帧率HDR视频，所给摘要未出现少步生成或蒸馏机制。）</p>
+<p><strong>召回：补录后 covered；范围内机制真漏（少步主线漏评）仍 0；召回漏挂（有评未上页）本补扫前 = 10 lit + 35 RL∩（有重叠）。</strong></p>
+<h3 id="粗筛命中但未收录f840-命中逐条新值得读已详卡">粗筛命中但未收录（F8，40 命中逐条；新值得读已详卡）</h3>
+<p><a href="https://arxiv.org/abs/2606.29110">2606.29110</a> → 外围（Boltzmann少步似然流图；主战场分子，非AV）
+<a href="https://arxiv.org/abs/2611.04386">2611.04386</a> → 值得读（多教师OPD与四步蒸馏同训；学生自rollout态监督；码 WinterCCC/StepX-OPD + HF LoRA；T2I非AV→不升必读）
+<a href="https://arxiv.org/abs/2608.00232">2608.00232</a> → OUT·医学（手术AR遮挡检测）
+<a href="https://arxiv.org/abs/2611.04028">2611.04028</a> → 值得看·旁注（Compression Forcing：WM历史压缩+分层引导；非少步蒸馏）
+<a href="https://arxiv.org/abs/2611.04392">2611.04392</a> → OUT·机器人（Aero-VPA 两步流匹配飞行动作）
+<a href="https://arxiv.org/abs/2606.00514">2606.00514</a> → 值得看（语义空间Sinkhorn一步匹配；码 Genentech/semantic-transport-generation）
+<a href="https://arxiv.org/abs/2610.05066">2610.05066</a> → 值得看·可用配方（StyleForge：免训练风格提示保留原生少步；码 sunshy-1/StyleForge）
+<a href="https://arxiv.org/abs/2611.04010">2611.04010</a> → OUT·归RL（离线元RL Decision Transformer）
+<a href="https://arxiv.org/abs/2611.04760">2611.04760</a> → 外围（Koopman单步时序预测非媒体生成）
+<a href="https://arxiv.org/abs/2603.07604">2603.07604</a> → 外围（EmbedTalk说话头；非少步蒸馏）
+<a href="https://arxiv.org/abs/2605.21139">2605.21139</a> → OUT·驾驶（驾驶认知-物理RL）
+<a href="https://arxiv.org/abs/2605.31033">2605.31033</a> → 值得看·旁注（SlotMemory 对象槽KV；码 tj12323/SlotMemory；不减步）
+<a href="https://arxiv.org/abs/2609.07108">2609.07108</a> → OUT·LLM（LLM在线草稿共训投机解码）
+<a href="https://arxiv.org/abs/2609.38968">2609.38968</a> → OUT（多模态图像融合）
+<a href="https://arxiv.org/abs/2611.04164">2611.04164</a> → 值得看·旁注（ReCR：免训练表征引导重写可见历史；不改训练）
+<a href="https://arxiv.org/abs/2611.04414">2611.04414</a> → OUT·医学（SphereFlow医学模态补全）
+<a href="https://arxiv.org/abs/2611.04634">2611.04634</a> → OUT·语音（VeriSpoof语音伪造检测）
+<a href="https://arxiv.org/abs/2603.29167">2603.29167</a> → OUT·医学（X光特权模态蒸馏分类）
+<a href="https://arxiv.org/abs/2605.08698">2605.08698</a> → 外围（超采样插值；未减采样步）
+<a href="https://arxiv.org/abs/2609.20267">2609.20267</a> → 外围（CleanVideo概念擦除）
+<a href="https://arxiv.org/abs/2610.13202">2610.13202</a> → OUT·LLM（S3R LLM稀疏投机RL rollout）
+<a href="https://arxiv.org/abs/2610.36460">2610.36460</a> → OUT（长尾识别神经坍缩）
+<a href="https://arxiv.org/abs/2610.41290">2610.41290</a> → OUT（SAT-ACT: Learning CDCL Branching from Outcome-Derived Action）
+<a href="https://arxiv.org/abs/2611.03953">2611.03953</a> → OUT·LLM（P2-MOPD 多教师OPD）
+<a href="https://arxiv.org/abs/2611.04352">2611.04352</a> → OUT·驾驶（ReSMap高精地图）
+<a href="https://arxiv.org/abs/2611.05062">2611.05062</a> → OUT·机器人（FloMo场景流机器人）
+<a href="https://arxiv.org/abs/2611.05193">2611.05193</a> → OUT·VLM（组合图像检索）
+<a href="https://arxiv.org/abs/2509.10080">2509.10080</a> → OUT·驾驶（BEVTraj轨迹预测）
+<a href="https://arxiv.org/abs/2509.21961">2509.21961</a> → OUT·驾驶（FlowDrive轨迹规划）
+<a href="https://arxiv.org/abs/2606.02194">2606.02194</a> → OUT·机器人（机器人off-policy改进）
+<a href="https://arxiv.org/abs/2606.16219">2606.16219</a> → 外围（稀疏数字孪生）
+<a href="https://arxiv.org/abs/2606.18209">2606.18209</a> → OUT（分类数据集蒸馏）
+<a href="https://arxiv.org/abs/2608.19490">2608.19490</a> → OUT·机器人（VLA自示范微调）
+<a href="https://arxiv.org/abs/2610.34033">2610.34033</a> → OUT（Fovea-JEPA相机运动）
+<a href="https://arxiv.org/abs/2611.04003">2611.04003</a> → OUT·LLM（WASP-Mem智能体程序记忆）
+<a href="https://arxiv.org/abs/2611.04887">2611.04887</a> → OUT·LLM（FourSight FP4 RL）
+<a href="https://arxiv.org/abs/2611.03887">2611.03887</a> → OUT（Neural CDE 信息极限）
+<a href="https://arxiv.org/abs/2611.03899">2611.03899</a> → OUT（EpiLoRA serving/RL）
+<a href="https://arxiv.org/abs/2611.04434">2611.04434</a> → OUT·VLM（Sketchpad VLM算术）
+<a href="https://arxiv.org/abs/2611.05286">2611.05286</a> → OUT（VPR对抗微调）</p>
+<h3 id="补扫结论">补扫结论</h3>
+<p>Wed <code>/new</code> <strong>done</strong>（707/40；max <strong><a href="https://arxiv.org/abs/2611.05377">2611.05377</a></strong>）。<strong>认知</strong>：新挂 StepX-OPD 值得读（图像 OPD∩少步同训）。<strong>执行</strong>：无新必读·先跑票；History 票仍挂。F5/F9 漏挂已补 → <strong>真漏 0</strong>。LIVE 见发布。</p></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-11-04 13:58 (UTC+8)</div></main></div>
 <script>
 (function(){
  // 详情卡片全部展开/收起
