@@ -1,0 +1,789 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>少步蒸馏 · 每日 2026-11-04（周三 · Tue /new done · Wed pending）</title>
+<style>
+:root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--side:#f6f8fa;--line:#d1d9e0;--acc:#0b57d0;--l1:#fff8e6;--l1b:#f0c36d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--fg);background:var(--bg);font:15.5px/1.75 "Noto Sans CJK SC","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.top{position:sticky;top:0;z-index:5;background:#24292f;color:#fff;padding:8px 20px;display:flex;gap:18px;align-items:center;font-size:14px}
+.top a{color:#fff;opacity:.9} .top .brand{font-weight:700;opacity:1}
+.wrap{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1400px;margin:0 auto}
+nav.toc{position:sticky;top:40px;align-self:start;height:calc(100vh - 40px);overflow:auto;background:var(--side);border-right:1px solid var(--line);padding:14px 10px 40px 14px;font-size:13.5px;line-height:1.5}
+nav.toc .tt{font-weight:700;color:var(--muted);margin:2px 0 8px}
+nav.toc ul{list-style:none;margin:0;padding-left:10px} nav.toc>div>ul{padding-left:0}
+nav.toc li{margin:3px 0} nav.toc a{color:#333;display:block;padding:1px 4px;border-radius:4px}
+nav.toc a:hover,nav.toc a.on{background:#dde7f7;text-decoration:none}
+main{padding:22px 40px 80px;min-width:0}
+h1{font-size:26px;margin:.2em 0 .6em;border-bottom:2px solid var(--line);padding-bottom:.3em}
+h2{font-size:21px;margin:1.8em 0 .6em;border-bottom:1px solid var(--line);padding-bottom:.25em}
+h3{font-size:17.5px;margin:1.4em 0 .5em}
+h4{font-size:15.5px}
+blockquote{margin:0 0 1em;padding:8px 16px;border-left:4px solid #8c959f;background:#f6f8fa;color:#3d444d;font-size:14px}
+blockquote p{margin:.3em 0}
+code{font-family:"JetBrains Mono","DejaVu Sans Mono",Menlo,Consolas,monospace;font-size:.88em;background:#eff1f3;padding:.1em .35em;border-radius:4px}
+pre{background:#f6f8fa;border:1px solid var(--line);border-radius:6px;padding:10px 14px;overflow:auto} pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:.6em 0 1.1em}
+table{border-collapse:collapse;font-size:13.8px;line-height:1.55;min-width:60%}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left}
+th{background:#eef2f6;font-weight:700;position:sticky;top:0}
+tr:nth-child(even) td{background:#fafbfc}
+td strong{color:#8a1c1c}
+hr{border:0;border-top:1px solid var(--line);margin:1.6em 0}
+section.layer1{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:2px 22px 10px;margin:18px 0 26px}
+section.layer1>h2{border-bottom-color:var(--l1b)}
+section.layer1 .tw table{background:#fff}
+.layer-tag{display:inline-block;font-size:12px;font-weight:700;color:#7a4b00;background:#ffe2a8;border-radius:10px;padding:0 9px;margin-left:8px;vertical-align:middle}
+details.card{border:1px solid var(--line);border-radius:8px;margin:12px 0;background:#fff}
+details.card>summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:16.5px;background:#f3f6fa;border-radius:8px;list-style:none}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary:before{content:"▸ ";color:var(--acc)} details.card[open]>summary:before{content:"▾ "}
+details.card[open]>summary{border-bottom:1px solid var(--line);border-radius:8px 8px 0 0}
+details.card>.body{padding:4px 18px 10px}
+.cardtools{font-size:13px;margin:6px 0 2px} .cardtools button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:#fff;border-radius:5px;padding:1px 8px;cursor:pointer;margin-right:6px}
+.b{display:inline-block;font-size:11.5px;line-height:1.5;padding:0 6px;border-radius:9px;margin:0 2px;font-weight:600;white-space:nowrap;vertical-align:1px;border:1px solid transparent}
+.b-meas{background:#dafbe1;color:#116329;border-color:#a8e6b5}
+.b-orig{background:#ddf4ff;color:#0a4b8c;border-color:#a6d4f5}
+.b-team{background:#fff1e5;color:#953800;border-color:#ffc89a}
+.b-inf{background:#eef0f2;color:#4a535c;border-color:#cfd5db}
+.b-codex{background:#fbefff;color:#6e2b91;border-color:#e3b8f5}
+.b-oth{background:#f6f8fa;color:#4a535c;border-color:#d1d9e0}
+.idx{max-width:900px;margin:0 auto;padding:30px 30px 80px}
+.idx .hero{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:12px 22px;margin:14px 0 24px;font-size:16.5px}
+.idx .cards a{display:block;border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:10px 0;color:var(--fg)}
+.idx .cards a:hover{border-color:var(--acc);text-decoration:none;background:#f6f9ff}
+.idx .cards .t{font-weight:700;color:var(--acc)} .idx .cards .d{font-size:13.5px;color:var(--muted)}
+.foot{color:var(--muted);font-size:12.5px;margin-top:40px;border-top:1px solid var(--line);padding-top:8px}
+@media (max-width:900px){.wrap{grid-template-columns:1fr} nav.toc{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)} main{padding:16px}}
+@media print{nav.toc,.top,.cardtools{display:none}.wrap{display:block} details.card{break-inside:avoid}}
+</style></head><body>
+<div class="top"><a class="brand" href="../index.html">多模态少步蒸馏 · 前沿调研</a><a href="../baseline.html">2026Q3 基线</a><a href="../index.html#dailies">每日</a><a href="../index.html#weeklies">每周</a></div>
+<div class="wrap"><nav class="toc"><div class="tt">目录</div><div><div class="toc">
+<ul>
+<li><a href="#结论先行">结论先行</a></li>
+<li><a href="#30-秒速览">30 秒速览</a></li>
+<li><a href="#一屏框架今天挂在哪一格">一屏框架：今天挂在哪一格</a></li>
+<li><a href="#详细卡片必读-值得读主线">详细卡片（必读 + 值得读主线）</a><ul>
+<li><a href="#1-history-forcing261102782-必读先跑-a">1. History Forcing（2611.02782）· 必读·先跑 (a)</a></li>
+<li><a href="#2-disen-forcing261102822-值得读">2. Disen-Forcing（2611.02822）· 值得读</a></li>
+<li><a href="#3-dkv-forcing261101648-值得读">3. dKV Forcing（2611.01648）· 值得读</a></li>
+<li><a href="#4-taomate-hd261103394-值得读附评">4. TaoMate-HD（2611.03394）· 值得读（附评）</a></li>
+<li><a href="#5-gdmd260419009-v2-值得读repl">5. GDMD（2604.19009 v2）· 值得读（repl）</a></li>
+</ul>
+</li>
+<li><a href="#f1-f3-覆盖明细">F1 / F3 覆盖明细</a></li>
+<li><a href="#f4-openreview">F4 OpenReview</a></li>
+<li><a href="#f5-对账">F5 对账</a><ul>
+<li><a href="#commit-forcing261100937补挂说明">Commit Forcing（2611.00937）补挂说明</a></li>
+</ul>
+</li>
+<li><a href="#命中-triage节选过线-重要旁注">命中 triage（节选：过线 + 重要旁注）</a><ul>
+<li><a href="#外围-out-摘要">外围 / OUT 摘要</a></li>
+</ul>
+</li>
+<li><a href="#预测本窗">预测（本窗）</a></li>
+<li><a href="#下一步闭环">下一步（闭环）</a></li>
+<li><a href="#转发">转发</a></li>
+<li><a href="#附录批次与命中计数">附录：批次与命中计数</a></li>
+</ul>
+</div>
+</div></nav>
+<main><h1 id="少步蒸馏-每日-2026-11-04周三-tue-new-done-wed-pending">少步蒸馏 · 每日 2026-11-04（周三 · Tue <code>/new</code> <strong>done</strong> · Wed <strong>pending</strong>）</h1>
+<blockquote>
+<p><strong>批次覆盖（F1）</strong>：应出列表日 = <strong>Wed 4 Nov</strong>。09:20 curl 7+2 类 <code>/new</code> 页头均是 <strong>Tuesday, 3 November 2026</strong> → <strong>Tue 3 = 本跑清完 done</strong>；<strong>Wed 4 = pending</strong>（公告未翻日）。<strong>勿把周二当周三；Wed 未上线。</strong> Mon 2 Nov done。Sat 31 / Sun 1 = none。</p>
+<p><strong>Tue <code>/new</code></strong>：7 类 dedup <strong>1426</strong>（new 759 / cross 202 / repl 465）；列表 max <strong><a href="https://arxiv.org/abs/2611.03648">2611.03648</a></strong>；v2.2 hits <strong>95</strong><span class="b b-meas">实测</span></p>
+<p><strong>F3 ID 窗（Wed 预览）</strong>：接 Tue 列表 max <strong><a href="https://arxiv.org/abs/2611.03648">2611.03648</a></strong>；HEAD 扫 <strong><a href="https://arxiv.org/abs/2611.03650">2611.03650</a>–<a href="https://arxiv.org/abs/2611.03960">2611.03960</a></strong> existing <strong>296</strong>（API id_list 500 → abs 抓取）；仅 F3 不在 Tue 列表 <strong>296</strong>；F3 hits <strong>4</strong> 全 OUT。合并 hits <strong>99</strong><span class="b b-meas">实测</span></p>
+<p><strong>F4 OpenReview</strong>：<code>or_iclr27_new_forcing.json</code> 5；Position Forcing 外围·3D；Marine OUT；Pyramid/Future 维持值得看·流式记忆；SimForcing 外围·机器人WM。</p>
+<p><strong>F5 对账</strong>：文献 shortlist must-list + overnight + RESULT commit-forcing(=00937) 全收；RL kw 126∩hits 47 已评；<strong>范围内真漏 0</strong>。
+标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】【HF】【仅OR摘要】<span class="b b-team">队友转述</span><span class="b b-inf">推断</span><span class="b b-codex">Codex✓</span>
+产物：<code>daily/raw/1104tue/</code> + overnight <code>daily/raw/1104forward/</code> + <code>daily/pending/2026-11-04-forward-lit-reply.md</code></p>
+</blockquote>
+<hr />
+<section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
+<p><strong>周二列表今日上线并筛完；周三仍未出（F3 预览 296 篇、hits 4 全 OUT）。新「必读·先跑」×1：History Forcing。新「值得读」×4：Disen / dKV / TaoMate-HD / GDMD(v2 repl)。认知与执行都要动——History 开 history-guidance 对照票。</strong></p>
+<p><strong>认知推荐（该改预期）</strong>：<strong>History Forcing</strong>——流式少步 DMD 的参考分可以（也值得）加「有历史−无历史」AR teacher 残差，而不必把整段 AR 分布当目标；<strong>Disen-Forcing</strong>——frame sink≠LLM sink，DMD 期拆锚头/工作头路由可救动态度；<strong>dKV Forcing</strong>——生成 KV≠写入未来的 KV，writer LoRA+可微 page 把未来读梯度回传到写；<strong>TaoMate-HD</strong>——流式 AV 可用渐进分辨率 2+1 步 + 生成/蒸馏非对称文本窗；<strong>GDMD</strong>——用 DMD 梯度当 RL 奖励接口，可调和 DMDR 样本级冲突。<span class="b b-orig">原文</span>【代码】<span class="b b-codex">Codex✓</span></p>
+<p><strong>执行推荐（开票/先跑）</strong>：<strong>开 History Forcing 训练票（必读·先跑 a）</strong>：在 Wan2.1-1.3B / 现有 DMD 底座上对照 <code>use_history_guidance</code> / history residual→<code>s_ref</code>（及 OPSD 支路）；码 <code>ziplab/History-Forcing</code> + HF <code>xzxxntxdy/History-Forcing</code> 已 HTTP 200。【代码】【HF】Disen/dKV/TaoMate <strong>不升必读</strong>（Disen 无独立训码；dKV Code soon；TaoMate 仅推理码+preview 权）——记观察/等码复评。Flex-6 对照仍挂，<strong>不与 History 票互斥</strong>。<span class="b b-inf">推断</span></p>
+<ol>
+<li><strong>History Forcing <a href="https://arxiv.org/abs/2611.02782">2611.02782</a> → 必读·先跑 (a)。</strong> 历史对比残差校正 DMD/OPSD；整条 loss 链可在 <code>dmd/model/dmd.py</code> 定位。<span class="b b-orig">原文</span>【代码】【HF】</li>
+<li><strong>值得读×3（流式主线）</strong>：Disen <a href="https://arxiv.org/abs/2611.02822">2611.02822</a> / dKV <a href="https://arxiv.org/abs/2611.01648">2611.01648</a> / TaoMate-HD <a href="https://arxiv.org/abs/2611.03394">2611.03394</a>。<span class="b b-orig">原文</span><span class="b b-codex">Codex✓</span></li>
+<li><strong>值得读×1（图像 DMD+RL repl）</strong>：GDMD <a href="https://arxiv.org/abs/2604.19009">2604.19009</a> v2。<span class="b b-orig">原文</span></li>
+<li><strong>值得看重点</strong>：Commit Forcing <a href="https://arxiv.org/abs/2611.00937">2611.00937</a>（发现·训免）；Wave / VidDub 可用配方；OmniOPD；Hybrid 图像一步；CM 稳定化 / Itô map 理论。<span class="b b-orig">原文</span><span class="b b-team">队友转述</span></li>
+<li><strong>维持不重评</strong>：Any Forcing / STAC 值得读；Direct/PTD 必读·先跑；Speculative 必读·待代码；sDMD/IDM/ROAD/Pika/Mix 值得读。</li>
+</ol>
+<p><strong>对我们训练的含义：</strong></p>
+<ul>
+<li><strong>今天要出手的训练决定</strong>：是否在流式 DMD 上加 history residual（History 票）。<span class="b b-inf">推断</span></li>
+<li><strong>认知上</strong>同步改预期：sink 路由（Disen）、写记忆（dKV）、AV 渐进分辨率（TaoMate）。<span class="b b-inf">推断</span></li>
+<li><strong>闭环</strong>：训练同学 · History <code>use_history_guidance</code> on/off · 成功标准：VBench-Long / 主体回现一致性 / 动态度不塌；对照 Self-Forcing / CausVid 同协议。【代码】<span class="b b-orig">原文</span></li>
+<li><strong>下一动作</strong>：等 Wed <code>/new</code> 翻日后再扫；F3 预览已覆盖至 <strong><a href="https://arxiv.org/abs/2611.03960">2611.03960</a></strong>。</li>
+</ul>
+</section><section class="layer1"><h2 id="30-秒速览">30 秒速览<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文 / 资源</th>
+<th>评级</th>
+<th>一句话</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>History Forcing <a href="https://arxiv.org/abs/2611.02782">2611.02782</a></strong></td>
+<td><strong>必读·先跑 (a)</strong></td>
+<td>历史残差→DMD <code>s_ref</code>/OPSD；码+HF齐</td>
+<td><span class="b b-orig">原文</span>【代码】【HF】</td>
+</tr>
+<tr>
+<td>Disen-Forcing <a href="https://arxiv.org/abs/2611.02822">2611.02822</a></td>
+<td><strong>值得读</strong></td>
+<td>锚头拆路由救 Dynamic</td>
+<td><span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td>dKV Forcing <a href="https://arxiv.org/abs/2611.01648">2611.01648</a></td>
+<td><strong>值得读</strong></td>
+<td>可微KV+writer；码 soon</td>
+<td><span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td>TaoMate-HD <a href="https://arxiv.org/abs/2611.03394">2611.03394</a></td>
+<td><strong>值得读</strong></td>
+<td>AV 2+1 渐进步+非对称蒸馏</td>
+<td><span class="b b-orig">原文</span>【代码·推理】</td>
+</tr>
+<tr>
+<td>GDMD <a href="https://arxiv.org/abs/2604.19009">2604.19009</a></td>
+<td><strong>值得读</strong></td>
+<td>DMD梯度作RL奖励（v2）</td>
+<td><span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td>Commit Forcing <a href="https://arxiv.org/abs/2611.00937">2611.00937</a></td>
+<td>值得看·发现</td>
+<td>去噪旧史伤 committing；训免</td>
+<td><span class="b b-orig">原文</span><span class="b b-team">队友转述</span></td>
+</tr>
+<tr>
+<td>Wave / VidDub</td>
+<td>值得看·可用配方</td>
+<td>1F1C系统 / 口型2NFE</td>
+<td><span class="b b-orig">原文</span>【代码】</td>
+</tr>
+<tr>
+<td>OmniOPD <a href="https://arxiv.org/abs/2611.02803">2611.02803</a></td>
+<td>值得看</td>
+<td>AV OPD 不减步</td>
+<td><span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td>Any / STAC</td>
+<td>值得读（维持）</td>
+<td>缺训码</td>
+<td><span class="b b-orig">原文·11-02</span></td>
+</tr>
+<tr>
+<td>Direct / PTD</td>
+<td>必读·先跑（维持）</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class="layer1"><h2 id="一屏框架今天挂在哪一格">一屏框架：今天挂在哪一格<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>单步去噪</th>
+<th>流式时间轴</th>
+<th>AV 跨模态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L1 轨迹 / 一致性 / flow map</strong></td>
+<td>CM稳定化/Itô/RIFT 值得看；Hybrid旁注</td>
+<td>History·OPSD 速度支路；TaoMate 渐进轨迹</td>
+<td>TaoMate 2+1；VidDub 轨迹→DMD</td>
+</tr>
+<tr>
+<td><strong>L2 分数差分布匹配（DMD）</strong></td>
+<td><strong>GDMD</strong> 值得读；Hybrid 图像一步</td>
+<td><strong>History</strong> 残差校正 <code>s_ref</code>；<strong>Disen</strong> DMD插件；<strong>dKV</strong>；Wave DMD三阶段</td>
+<td>OmniOPD（OPD≠减步）</td>
+</tr>
+<tr>
+<td><strong>L3 对抗</strong></td>
+<td>Latent Diff-GAN 旁注</td>
+<td>Wave/Any 维持</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L4 额外真实数据 / reward</strong></td>
+<td>GDMD×RM</td>
+<td>History 长一致性历史；dKV 写记忆</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L5 样本级 / 表征分布场</strong></td>
+<td>Kernel-Gradient 值得看</td>
+<td>L2M/SE-Mem/Valid-Time 外围记忆</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>因果预训练 / 系统配方</strong></td>
+<td>—</td>
+<td>Wave 1F1C；Xiaomi WM 旁注</td>
+<td><strong>TaoMate</strong> 渐进分辨率+非对称文本</td>
+</tr>
+<tr>
+<td><strong>推理时步数分配（F7）</strong></td>
+<td>Z-Cache 外围</td>
+<td><strong>Commit Forcing</strong> 训免读链；Pyramid/Future 维持</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<p>放不进框架的：Value Forcing（非生成器）；FORCE/AgiWorld 等 WM 编辑/智能体；LLM/VLM OPD·speculative 一族；化学单步逆合成 F3；Marine tidal forcing OR。</p>
+<hr />
+</section><section class=""><h2 id="详细卡片必读-值得读主线">详细卡片（必读 + 值得读主线）</h2>
+<h3 id="1-history-forcing261102782-必读先跑-a">1. History Forcing（<a href="https://arxiv.org/abs/2611.02782">2611.02782</a>）· 必读·先跑 (a)</h3>
+<p><strong>History Forcing（<a href="https://arxiv.org/abs/2611.02782">2611.02782</a>）· 必读·先跑 (a)</strong></p>
+<p><strong>结论 / 对我们：</strong> 流式少步 DMD 应开一组对照——参考分是否加「有历史−无历史」AR teacher 残差。码+权重齐，先在 Wan2.1-1.3B 复现他们的 <code>use_history_guidance</code>。</p>
+<p><strong>白话背景。</strong> 少步 AR 视频蒸馏（DMD / on-policy 自蒸馏）主要盯当前 chunk 的分布匹配；长程里主体/场景离开又回来时，历史约束进不了参考分。</p>
+<p><strong>具体问题。</strong> 怎样把「更干净的历史」变成对当前预测的校正，同时保留双向教师的画质监督，而不是直接拿漂移更大的 AR 分布当目标？</p>
+<p><strong>方法逐步。</strong></p>
+<ol>
+<li>学生 on-policy rollout，取当前噪声 chunk。</li>
+<li><strong>历史对比</strong>：同一噪声输入与同一 timestep，冻结 AR teacher 各跑一遍——带额外历史 <code>h</code> / 不带；差分 = history residual。</li>
+<li><strong>长视频一致性</strong>：额外历史来自学生更早、漂移更少的 chunk；残差加到双向教师给出的 DMD <code>s_ref</code>（实现里是 x0 空间 <code>pred_real + scale * delta</code>）。</li>
+<li><strong>Out-of-sight</strong>：额外历史来自固定视角教师 rollout（场景仍可见）；残差加到 OPSD 的 EMA 教师速度目标。</li>
+</ol>
+<p><strong>为什么可能成立。</strong> 残差只传递「历史引起的位移」，不把整个 AR 建模误差灌进目标；双向参考仍靠近数据分布。<span class="b b-inf">推断：与 CFG 形 guidance 同构</span></p>
+<p><strong>关键数字。<span class="b b-orig">原文</span></strong> 1.3B：VBench Quality <strong>85.07</strong>（15s）；VBench-Long aggregate <strong>79.82</strong>（60s）；PlayWorld Evolution 2.35→2.70；MemoBench Object Consistency 58.43→62.18。</p>
+<p><strong>限制。</strong> 我们未自跑同协议；OPSD 世界模型支路是 DreamX-World-5B，与 T2V 支路分开；AV 未测。</p>
+<p><strong>代码核验。【代码】</strong> <code>History-Forcing/dmd/model/dmd.py</code>：<code>_history_effect</code> + <code>history_guidance_scale</code>；【HF】<code>xzxxntxdy/History-Forcing</code>（dmd/opsd/ar_teacher）。</p>
+<p><strong>taxonomy。<span class="b b-codex">Codex✓</span></strong> L2（DMD）+ L1（OPSD 速度）+ L4。预判失效处：历史窗口选错或 λ 过大 → 动态度被钉死。<span class="b b-inf">推断</span></p>
+<p><strong>与最接近工作的核心差别</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>最接近</th>
+<th>操作差别</th>
+<th>后果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Self-Forcing / CausVid DMD</td>
+<td>标准 <code>s_ref</code> 无历史差分</td>
+<td>长程回现弱</td>
+</tr>
+<tr>
+<td>Rolling / 朴素 AR teacher 蒸馏</td>
+<td>直接匹配 AR 分布</td>
+<td>把漂移灌进目标</td>
+</tr>
+<tr>
+<td><strong>History</strong></td>
+<td>AR teacher <strong>有/无历史</strong>差分 → 只加残差到双向 <code>s_ref</code>/OPSD</td>
+<td>历史约束进参考分，画质锚仍在双向教师</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>预测（读结果前）</strong>：history scale 中等时 VBench-Long 升、动态度不显著掉；过大则钉死运动。<span class="b b-inf">推断</span>→ 待我们对照结算。</p>
+<h3 id="2-disen-forcing261102822-值得读">2. Disen-Forcing（<a href="https://arxiv.org/abs/2611.02822">2611.02822</a>）· 值得读</h3>
+<p><strong>Disen-Forcing（<a href="https://arxiv.org/abs/2611.02822">2611.02822</a>）· 值得读</strong></p>
+<p><strong>结论 / 对我们：</strong> frame sink 不能当「万能注意力锚」灌进所有头——在 DMD 上会把运动压向教师低动态模式。蒸馏期按锚头/工作头拆上下文，是值得做的插件对照；<strong>暂无独立训码</strong> → 不升必读·先跑。</p>
+<p><strong>白话背景。</strong> 长 rollout 常用 frame sink 钉首帧；一致性升、动态度常掉。</p>
+<p><strong>具体问题。</strong> 首帧在 AR-VDM 里是不是 LLM 式 attention sink？若不是，统一 sink 是否造成蒸馏时运动塌缩？</p>
+<p><strong>方法逐步。</strong></p>
+<ol>
+<li><strong>诊断</strong>：统计头级注意力——稀疏 <strong>anchor heads</strong> 管长程语义，多数 <strong>working heads</strong> 管局部运动。</li>
+<li><strong>Disentangled context routing（蒸馏时）</strong>：仅锚头看初始帧 sink；其余只看滑动窗口。</li>
+<li><strong>Motion-disentangling regularization</strong>：约束锚头不把全局语义泄漏进运动通路（反事实注意图匹配一类）。</li>
+</ol>
+<p><strong>为什么。</strong> 模式寻求的 DMD 下，全头暴露首帧 = 过条件化 → 塌向低方差近静态模式；拆路由对准已有头分工。</p>
+<p><strong>关键数字。<span class="b b-orig">原文</span></strong> Self-Forcing→+Disen：短窗 Total <strong>76.37→82.38</strong>，Dynamic <strong>40.44→73.12</strong>，drift <strong>7.23→4.03</strong>；长窗类似（74.75→82.34；Dynamic 34.70→73.95）。相对纯 Frame Sink：后者 Dynamic 可从 65 砸到 37。</p>
+<p><strong>限制。</strong> 项目页 <code>disen-forcing.github.io</code>；未见独立训练仓库（文中引用 Infinite-Forcing）；锚头识别一次性、底座相关。</p>
+<p><strong>taxonomy。<span class="b b-codex">Codex✓</span></strong> L2+L4。预判失效：锚头集跨底座漂移 / 路由实现与注意力内核耦合。<span class="b b-inf">推断</span></p>
+<p><strong>与最接近工作的核心差别</strong>：相对 Frame Sink / LongLive sink——本文<strong>诊断头分工</strong>并在<strong>蒸馏期</strong>拆路由，而不是推理期统一 sink；相对 dKV（改写）——本文改<strong>读上下文路由</strong>。</p>
+<h3 id="3-dkv-forcing261101648-值得读">3. dKV Forcing（<a href="https://arxiv.org/abs/2611.01648">2611.01648</a>）· 值得读</h3>
+<p><strong>dKV Forcing（<a href="https://arxiv.org/abs/2611.01648">2611.01648</a>）· 值得读</strong></p>
+<p><strong>结论 / 对我们：</strong> 「生成用的 KV」≠「写入 cache 给未来读的 KV」——应学专用写记忆；SGF 式未来读梯度要用可微 page 单遍算。<strong>码未开</strong> → 不升必读·先跑；等 GH 后复评。</p>
+<p><strong>白话背景。</strong> SF/CF++ 的梯度在 cache 写入处截断；模型会生成，却没被教「怎么记」。</p>
+<p><strong>具体问题。</strong> 怎样让未来 chunk 读到的 KV 反传回过去的写操作，又避免可变 cache + checkpoint 炸显存 / 双遍整段图？</p>
+<p><strong>方法逐步。</strong></p>
+<ol>
+<li>共享骨干上加 <strong>writer-only LoRA residual</strong>（只在 cache refresh 启用）。</li>
+<li>训练时用 <strong>persistent differentiable pages</strong> + 局部 rematerialization，单时间遍历算与双遍重构相同的记忆梯度。</li>
+<li>推理：普通 cache；residual 仅写时开、去噪时关。</li>
+</ol>
+<p><strong>为什么。</strong> 预训练里写 KV 与生成 KV 已差一大截；替换会伤续写——说明需要独立写表征。</p>
+<p><strong>关键数字。<span class="b b-orig">原文</span></strong> 相对同目标 SGF：VBench-Long aesthetic <strong>+6.6@60s / +8.5@240s</strong>；单遍相对双遍 <strong>−28% 显存、−20.8% cycle</strong>；写梯度开销约 <strong>+7%</strong> generator update。</p>
+<p><strong>限制。【代码】</strong> <code>ZhiqiLi-CG/dKV-Forcing</code> 目前仅 README「Code coming soon」；底座 Causal Forcing++ 1.3B。</p>
+<p><strong>taxonomy。<span class="b b-codex">Codex✓</span></strong> L2+L4。预判失效：writer 过强 → 记忆与外观不一致；或 page 实现与 FSDP 难复现。<span class="b b-inf">推断</span></p>
+<p><strong>与最接近工作的核心差别</strong>：相对 SGF（未来读、双遍）——可微 page <strong>单遍</strong>；相对 Commit Forcing（训免改读链）——本文改<strong>写表征+训练</strong>。</p>
+<h3 id="4-taomate-hd261103394-值得读附评">4. TaoMate-HD（<a href="https://arxiv.org/abs/2611.03394">2611.03394</a>）· 值得读（附评）</h3>
+<p><strong>结论 / 对我们：</strong> 流式 AV 少步可以走「低分辨率两步打结构 + 高分辨率一步精修」，并用<strong>生成/蒸馏非对称文本窗</strong>做续写；【代码】目前是<strong>推理+preview 权</strong>（<code>TaoLiveAIGC/TaoMate-HD</code>），<strong>无完整训码</strong> → 不升必读·先跑。<span class="b b-orig">原文</span>【代码】【HF】</p>
+<p><strong>关键操作：</strong> ①每 chunk：480p 两步 → 768p 一步，音频同轨迹；②stage-local AV KV 传到下一 chunk 同阶段；③continuation：生成侧看即将到来的对话，蒸馏侧用开头文本评整段。<span class="b b-orig">原文</span></p>
+<p><strong>因果逻辑：</strong> 高分辨率全程去噪贵；先在粗网格定结构再 lift，配合耦合噪声，把算力留给最后一步。<span class="b b-orig">原文</span></p>
+<p><strong>核心差别：</strong> 相对直接高分辨率少步 AR AV——同模型同硬件约 <strong>1.6×</strong>；stage-parallel 部署再约 <strong>1.9×</strong>；CER −11.18pp。<span class="b b-orig">原文</span>相对 Wave（1F1C 系统）——本文主打<strong>空间渐进+非对称蒸馏</strong>，非交错帧流水线。</p>
+<p><strong>taxonomy。<span class="b b-codex">Codex✓</span></strong> 因果PT/AV/少步。预判失效：跨分辨率 lift 伤唇形同步；或非对称窗在强打断对话下不稳。<span class="b b-inf">推断</span></p>
+<h3 id="5-gdmd260419009-v2-值得读repl">5. GDMD（<a href="https://arxiv.org/abs/2604.19009">2604.19009</a> v2）· 值得读（repl）</h3>
+<p><strong>结论：</strong> 把 DMD 梯度重释为隐式目标张量，让奖励模型打分「蒸馏更新」而非噪声样本——缓解 DMDR 样本级冲突。4-step 称超多步教师（GenEval/人偏）。<span class="b b-orig">原文</span>未见公开训练仓 → 不升必读。挂 L2+L4；与 Pika ReFL/DPO、STAC critic 同读。<span class="b b-inf">推断</span></p>
+<hr />
+</section><section class=""><h2 id="f1-f3-覆盖明细">F1 / F3 覆盖明细</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>项</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>期望列表日</td>
+<td>Wednesday, 4 November 2026</td>
+</tr>
+<tr>
+<td><code>/new</code> 页头</td>
+<td><strong>Tuesday, 3 November 2026</strong> → Tue <strong>done</strong>（本跑）；Wed <strong>pending</strong><span class="b b-meas">实测</span></td>
+</tr>
+<tr>
+<td>Tue 7 类 dedup</td>
+<td><strong>1426</strong>（new 759 / cross 202 / repl 465）</td>
+</tr>
+<tr>
+<td>Tue 列表 max</td>
+<td><strong><a href="https://arxiv.org/abs/2611.03648">2611.03648</a></strong>（Mon 曾 max <a href="https://arxiv.org/abs/2610.42152">2610.42152</a>；月已滚 2611）</td>
+</tr>
+<tr>
+<td>Tue v2.2 hits</td>
+<td><strong>95</strong>（F6 全读标题）</td>
+</tr>
+<tr>
+<td>F3 区间</td>
+<td><code>2611.03650</code>–<code>2611.03960</code>（Tue 列表外 Wed 预览）</td>
+</tr>
+<tr>
+<td>F3 existing / hits</td>
+<td><strong>296</strong> / <strong>4</strong>（全 OUT）</td>
+</tr>
+<tr>
+<td>合并 hits</td>
+<td><strong>99</strong></td>
+</tr>
+<tr>
+<td>产物</td>
+<td><code>daily/raw/1104tue/</code>（html/items/hits/f3/ratings/meta）</td>
+</tr>
+</tbody>
+</table></div>
+</section><section class=""><h2 id="f4-openreview">F4 OpenReview</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>OR / 孪生</th>
+<th>题</th>
+<th>少步向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>jMVAvVoNIk</code> Position Forcing</td>
+<td>VecSet 3D 自条件位置</td>
+<td><strong>外围·3D</strong>（非视频少步）【仅OR摘要】</td>
+</tr>
+<tr>
+<td><code>7nPfzKKfZ4</code> Pyramid Forcing</td>
+<td>Head-aware KV</td>
+<td><strong>值得看·流式记忆</strong> 维持；twin <a href="https://arxiv.org/abs/2605.13111">2605.13111</a></td>
+</tr>
+<tr>
+<td><code>z6I3thBB6N</code> Future Forcing</td>
+<td>Future-aware KV 训免</td>
+<td><strong>值得看·流式记忆</strong> 维持；twin <a href="https://arxiv.org/abs/2605.30083">2605.30083</a></td>
+</tr>
+<tr>
+<td><code>uz4t4HHNkD</code> SimForcing</td>
+<td>仿真运动先验→真机 WM</td>
+<td><strong>外围·机器人WM</strong> 维持</td>
+</tr>
+<tr>
+<td><code>7w5VDuMnZV</code> Marine MMFM</td>
+<td>tidal/wind forcing</td>
+<td><strong>OUT</strong>（地球物理）</td>
+</tr>
+</tbody>
+</table></div>
+<p>积压孪生：Pyramid/Future 已有 twin；Position 无视频孪生 → watchlist 仅OR摘要。</p>
+</section><section class=""><h2 id="f5-对账">F5 对账</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>来源</th>
+<th>条数</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文献 <code>forward-fewstep-2026-11-04</code> + overnight 回执</td>
+<td>优先7+快速</td>
+<td>History/Disen/dKV/OmniOPD/VidDub/Wave/L2M 等 <strong>已收</strong></td>
+</tr>
+<tr>
+<td>文献 RESULT <code>commit-forcing</code></td>
+<td>= <strong><a href="https://arxiv.org/abs/2611.00937">2611.00937</a></strong></td>
+<td><strong>值得看·发现</strong> 已挂（防 shortlist 静默缺口）</td>
+</tr>
+<tr>
+<td>文献 shortlist must-list 15 + OR3</td>
+<td>18</td>
+<td><strong>全 log</strong>（OUT/外围/值得看/值得读/必读）</td>
+</tr>
+<tr>
+<td>RL <code>kw_fewstep.json</code></td>
+<td>126</td>
+<td>∩hits 47 全在 ratings；其余关键词噪 → 不逐条假漏</td>
+</tr>
+<tr>
+<td>RL forward-from-lit</td>
+<td>Value OUT；OmniOPD 交叉</td>
+<td>已对齐</td>
+</tr>
+<tr>
+<td>F3 Wed 预览 hits</td>
+<td>4</td>
+<td>全 OUT 补录</td>
+</tr>
+<tr>
+<td><strong>范围内少步主线真漏</strong></td>
+<td><strong>0</strong></td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="commit-forcing261100937补挂说明">Commit Forcing（<a href="https://arxiv.org/abs/2611.00937">2611.00937</a>）补挂说明</h3>
+<p>文献站 RESULT 名 <strong>commit-forcing</strong> = 论文题 <em>What Helps Denoising Can Hurt Memory</em>。训免改 committing 读链（每块只读上一块 KV）。少步侧：<strong>值得看·发现</strong>（不减采样步；与 dKV 写侧正交）。<span class="b b-team">队友转述</span><span class="b b-orig">原文摘要</span></p>
+</section><section class=""><h2 id="命中-triage节选过线-重要旁注">命中 triage（节选：过线 + 重要旁注）</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>id</th>
+<th>短名/题</th>
+<th>评级</th>
+<th>taxonomy</th>
+<th>理由</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.02782">2611.02782</a></td>
+<td>History Forcing: Distilling History-Dependent Continuat</td>
+<td><strong>必读·先跑(a)</strong></td>
+<td>L2+L1+L4</td>
+<td>History residual→DMD/OPSD；码+HF齐</td>
+<td>spot/overnight</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2604.19009">2604.19009</a></td>
+<td>Guiding Distribution Matching Distillation with Gradien</td>
+<td><strong>值得读</strong></td>
+<td>L2+L4</td>
+<td>GDMD：DMD梯度作RL奖励接口；v2 repl；未见公开训码→不升必读</td>
+<td>spot/overnight</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.01648">2611.01648</a></td>
+<td>dKV Forcing: Separating Generation and Memory Represent</td>
+<td><strong>值得读</strong></td>
+<td>L2+L4</td>
+<td>可微KV+writer LoRA；码 coming soon</td>
+<td>spot/overnight</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.02822">2611.02822</a></td>
+<td>Disen-Forcing: Disentangling Semantic Anchoring from Mo</td>
+<td><strong>值得读</strong></td>
+<td>L2+L4</td>
+<td>锚头≠LLM sink；DMD拆路由+动态度正则；无独立训码</td>
+<td>spot/overnight</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.03394">2611.03394</a></td>
+<td>TaoMate-HD: Progressive-Resolution Autoregressive Audio</td>
+<td><strong>值得读</strong></td>
+<td>因果PT/AV</td>
+<td>渐进2+1步AV+非对称蒸馏窗；推理码+preview权；无完整训码→不升必读</td>
+<td>spot/overnight</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2601.22679">2601.22679</a></td>
+<td>Stabilizing Consistency Training: A Flow Map Analysis a</td>
+<td><strong>值得看</strong></td>
+<td>L1</td>
+<td>CM from-scratch 稳定：flow-map分析+自蒸馏目标改写<span class="b b-codex">降Codex值得读</span></td>
+<td>spot/overnight</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2604.09213">2604.09213</a></td>
+<td>SHIFT: Steering Hidden Intermediates in Flow Transforme</td>
+<td><strong>值得看·旁注</strong></td>
+<td>少步模型推理控制</td>
+<td>激活引导兼容蒸馏DiT且支持引导向量迁移，可补充少步模型控制能力，但不改变蒸馏训练。</td>
+<td>codex</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2605.10727">2605.10727</a></td>
+<td>Kernel-Gradient Drifting Models</td>
+<td><strong>值得看</strong></td>
+<td>L5</td>
+<td>Kernel-Gradient Drifting</td>
+<td>spot/overnight</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2606.11156">2606.11156</a></td>
+<td>Itô maps for any-step SDEs</td>
+<td><strong>值得看</strong></td>
+<td>L1</td>
+<td>Itô any-step SDE map；理论/图像<span class="b b-codex">降Codex值得读</span></td>
+<td>spot/overnight</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.38273">2610.38273</a></td>
+<td>NAGO: Noise-Aware Generative Operator via Flow Matching</td>
+<td><strong>值得看·旁注</strong></td>
+<td>L1/域外</td>
+<td>通过源分布频谱匹配降低流场刚性并改善少步采样，仅有随机场实验，可作为噪声源设计旁注。</td>
+<td>codex</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.00859">2611.00859</a></td>
+<td>Wave Forcing: Towards Speed-of-Light Streaming Video Ge</td>
+<td><strong>值得看·可用配方</strong></td>
+<td>L2+L4</td>
+<td>1F1C+三阶段DMD；系统主贡献</td>
+<td>spot/overnight</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.00937">2611.00937</a></td>
+<td>What Helps Denoising Can Hurt Memory: Rethinking Histor</td>
+<td><strong>值得看·发现</strong></td>
+<td>F7/推理</td>
+<td>Commit Forcing：去噪有用旧史伤committing；训免</td>
+<td>spot/overnight</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.01543">2611.01543</a></td>
+<td>GSExplorer: Interactive World Generation with a Persist</td>
+<td><strong>值得看·旁注</strong></td>
+<td>流式记忆</td>
+<td>GSExplorer 3D高斯状态；无少步蒸馏</td>
+<td>spot/overnight</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.01651">2611.01651</a></td>
+<td>Physics-Informed One-Step Generation on Long-short flow</td>
+<td><strong>值得看·旁注</strong></td>
+<td>L1/域外</td>
+<td>长短流映射分解提供直接分布与物理监督，可借鉴一步训练目标设计，但摘要未展示目标媒体域验证。</td>
+<td>codex</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.01677">2611.01677</a></td>
+<td>Xiaomi Auto World Model 2.0: Causal World Models for Re</td>
+<td><strong>值得看·旁注</strong></td>
+<td>因果PT</td>
+<td>Xiaomi Auto WM 2.0</td>
+<td>spot/overnight</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.01791">2611.01791</a></td>
+<td>RIFT: Residual-Informed Flow Transfer for One-Step Gene</td>
+<td><strong>值得看</strong></td>
+<td>L1</td>
+<td>RIFT 一步生成视频压缩复原</td>
+<td>spot/overnight</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.02625">2611.02625</a></td>
+<td>Latent Diffusion-GAN: Adversarial Learning in the Autoe</td>
+<td><strong>值得看·旁注</strong></td>
+<td>L3</td>
+<td>Latent Diffusion-GAN</td>
+<td>spot/overnight</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.02803">2611.02803</a></td>
+<td>OmniOPD: Stable On-Policy Distillation for Joint Audio-</td>
+<td><strong>值得看</strong></td>
+<td>L1 OPD</td>
+<td>AV OPD；不减步；合RL教师</td>
+<td>spot/overnight</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.03017">2611.03017</a></td>
+<td>Efficient Hybrid Distillation: Synergizing Score and Ad</td>
+<td><strong>值得看·图像一步</strong></td>
+<td>L2+L3</td>
+<td>Hybrid score+adv 一步</td>
+<td>spot/overnight</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.03404">2611.03404</a></td>
+<td>VidDub: Replacement-Aware Distillation for Two-Step Vid</td>
+<td><strong>值得看·可用配方</strong></td>
+<td>L1+L2</td>
+<td>口型配音→DMD 2NFE；码齐</td>
+<td>spot/overnight</td>
+</tr>
+<tr>
+<td>OR:7nPfzKKfZ4</td>
+<td>OR:7nPfzKKfZ4</td>
+<td><strong>值得看·流式记忆</strong></td>
+<td>F7</td>
+<td>Pyramid Forcing twin <a href="https://arxiv.org/abs/2605.13111">2605.13111</a> 维持</td>
+<td>OR</td>
+</tr>
+<tr>
+<td>OR:z6I3thBB6N</td>
+<td>OR:z6I3thBB6N</td>
+<td><strong>值得看·流式记忆</strong></td>
+<td>F7</td>
+<td>Future Forcing twin <a href="https://arxiv.org/abs/2605.30083">2605.30083</a> 维持</td>
+<td>OR</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="外围-out-摘要">外围 / OUT 摘要</h3>
+<ul>
+<li><strong>外围×15</strong>（记忆/缓存/理论/WM）：L2M、Valid-Time、SE-Mem、AgiWorld、ZeroGraph、Z-Cache、Position Forcing OR、SimForcing OR 等——详见 <code>raw/1104tue/ratings_final.json</code>。</li>
+<li><strong>OUT×85</strong>：LLM/VLM OPD·speculative、推荐、驾驶规划、化学逆合成、Value Forcing 名碰撞等。F3 四击全在此。</li>
+</ul>
+</section><section class=""><h2 id="预测本窗">预测（本窗）</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>预测</th>
+<th>依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>History history-guidance 对照：长视频一致性升、动态度持平或小幅掉</td>
+<td>卡片预判<span class="b b-inf">推断</span></td>
+</tr>
+<tr>
+<td>Disen 路由插件在我们 DMD 上 Dynamic 回升</td>
+<td>原文 SF 表<span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td>dKV / TaoMate 训码若开 → 同日复评是否升必读·先跑</td>
+<td>闸门同 Any/STAC<span class="b b-inf">推断</span></td>
+</tr>
+<tr>
+<td>Wed <code>/new</code> 上线后相对 03960 增量再扫</td>
+<td>F1 pending</td>
+</tr>
+</tbody>
+</table></div>
+<p>维持未结算：Direct/PTD/Speculative/Pika Flex-6 + <strong>新挂 History</strong>。</p>
+</section><section class=""><h2 id="下一步闭环">下一步（闭环）</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>谁</th>
+<th>对照什么</th>
+<th>成功标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>训练同学</strong></td>
+<td>History <code>use_history_guidance</code> on/off（Wan2.1-1.3B DMD）</td>
+<td>VBench-Long / 回现 / Dynamic 分桶；记录 scale</td>
+</tr>
+<tr>
+<td>训练同学</td>
+<td>Flex-6 对照（挂）</td>
+<td>与 History 票并行，不互斥</td>
+</tr>
+<tr>
+<td>本 bot · 下一轮</td>
+<td>Wed <code>/new</code> = Wednesday, 4 November 2026</td>
+<td>batches Wed→done；相对 03960 增量</td>
+</tr>
+<tr>
+<td>Henry</td>
+<td>双行头条</td>
+<td><strong>认知：History+Disen/dKV/TaoMate；执行：History 票</strong></td>
+</tr>
+<tr>
+<td>文献 / RL</td>
+<td>forward 回执</td>
+<td>ownership：History/Disen/dKV/TaoMate=fewstep；OmniOPD 交叉 RL；Commit 旁注可关</td>
+</tr>
+</tbody>
+</table></div>
+</section><section class=""><h2 id="转发">转发</h2>
+<ul>
+<li>文献：overnight 回执已写 <code>daily/pending/2026-11-04-forward-lit-reply.md</code>；本日报折叠收录 + Commit/TaoMate/GDMD 补记。</li>
+<li>RL：<code>daily/pending/2026-11-04-forward-rl.md</code>（Value OUT 对齐；OmniOPD 交叉；无新 RL-on-few-step 必读票）。</li>
+<li>AV/流式：History/Disen/dKV/TaoMate/Wave 已在主文；无需另开 AV 必读票（History 即主票）。</li>
+</ul>
+<hr />
+</section><section class=""><h2 id="附录批次与命中计数">附录：批次与命中计数</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>批次</th>
+<th>dedup</th>
+<th>hits</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tue 3 Nov <code>/new</code></td>
+<td>1426</td>
+<td>95</td>
+<td><strong>done</strong>（本跑）</td>
+</tr>
+<tr>
+<td>Wed 4 Nov</td>
+<td>—</td>
+<td>F3 预览 296/4</td>
+<td><strong>pending</strong></td>
+</tr>
+<tr>
+<td>合并</td>
+<td>1426+296</td>
+<td>99</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-11-04 09:35 (UTC+8)</div></main></div>
+<script>
+(function(){
+ // 详情卡片全部展开/收起
+ document.querySelectorAll('[data-act]').forEach(function(b){b.addEventListener('click',function(){
+   var o=b.getAttribute('data-act')==='open';document.querySelectorAll('details.card').forEach(function(d){d.open=o;});});});
+ // 点击目录中位于折叠卡片内的锚点时自动展开
+ function openFor(id){var el=document.getElementById(id);if(!el)return;var d=el.closest('details');if(d)d.open=true;}
+ if(location.hash)openFor(decodeURIComponent(location.hash.slice(1)));
+ window.addEventListener('hashchange',function(){openFor(decodeURIComponent(location.hash.slice(1)));});
+ // 目录高亮
+ var links=[].slice.call(document.querySelectorAll('nav.toc a'));
+ var heads=links.map(function(a){return document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));});
+ function hl(){var y=window.scrollY+80,k=-1;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top+window.scrollY<=y&&h.offsetParent!==null)k=i;});
+   links.forEach(function(a,i){a.classList.toggle('on',i===k);});}
+ window.addEventListener('scroll',hl,{passive:true});hl();
+})();
+</script><script>if(document.querySelector('code.language-mermaid')){var s=document.createElement('script');
+s.src='https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';s.onload=function(){document.querySelectorAll('code.language-mermaid').forEach(function(c){var d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentNode.replaceWith(d);});mermaid.initialize({startOnLoad:false});mermaid.run();};document.head.appendChild(s);}</script></body></html>
