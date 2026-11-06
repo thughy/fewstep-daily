@@ -1,0 +1,832 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>少步蒸馏 · 本周认知变化 2026-11-06</title>
+<style>
+:root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--side:#f6f8fa;--line:#d1d9e0;--acc:#0b57d0;--l1:#fff8e6;--l1b:#f0c36d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--fg);background:var(--bg);font:15.5px/1.75 "Noto Sans CJK SC","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.top{position:sticky;top:0;z-index:5;background:#24292f;color:#fff;padding:8px 20px;display:flex;gap:18px;align-items:center;font-size:14px}
+.top a{color:#fff;opacity:.9} .top .brand{font-weight:700;opacity:1}
+.wrap{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1400px;margin:0 auto}
+nav.toc{position:sticky;top:40px;align-self:start;height:calc(100vh - 40px);overflow:auto;background:var(--side);border-right:1px solid var(--line);padding:14px 10px 40px 14px;font-size:13.5px;line-height:1.5}
+nav.toc .tt{font-weight:700;color:var(--muted);margin:2px 0 8px}
+nav.toc ul{list-style:none;margin:0;padding-left:10px} nav.toc>div>ul{padding-left:0}
+nav.toc li{margin:3px 0} nav.toc a{color:#333;display:block;padding:1px 4px;border-radius:4px}
+nav.toc a:hover,nav.toc a.on{background:#dde7f7;text-decoration:none}
+main{padding:22px 40px 80px;min-width:0}
+h1{font-size:26px;margin:.2em 0 .6em;border-bottom:2px solid var(--line);padding-bottom:.3em}
+h2{font-size:21px;margin:1.8em 0 .6em;border-bottom:1px solid var(--line);padding-bottom:.25em}
+h3{font-size:17.5px;margin:1.4em 0 .5em}
+h4{font-size:15.5px}
+blockquote{margin:0 0 1em;padding:8px 16px;border-left:4px solid #8c959f;background:#f6f8fa;color:#3d444d;font-size:14px}
+blockquote p{margin:.3em 0}
+code{font-family:"JetBrains Mono","DejaVu Sans Mono",Menlo,Consolas,monospace;font-size:.88em;background:#eff1f3;padding:.1em .35em;border-radius:4px}
+pre{background:#f6f8fa;border:1px solid var(--line);border-radius:6px;padding:10px 14px;overflow:auto} pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:.6em 0 1.1em}
+table{border-collapse:collapse;font-size:13.8px;line-height:1.55;min-width:60%}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left}
+th{background:#eef2f6;font-weight:700;position:sticky;top:0}
+tr:nth-child(even) td{background:#fafbfc}
+td strong{color:#8a1c1c}
+hr{border:0;border-top:1px solid var(--line);margin:1.6em 0}
+section.layer1{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:2px 22px 10px;margin:18px 0 26px}
+section.layer1>h2{border-bottom-color:var(--l1b)}
+section.layer1 .tw table{background:#fff}
+.layer-tag{display:inline-block;font-size:12px;font-weight:700;color:#7a4b00;background:#ffe2a8;border-radius:10px;padding:0 9px;margin-left:8px;vertical-align:middle}
+details.card{border:1px solid var(--line);border-radius:8px;margin:12px 0;background:#fff}
+details.card>summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:16.5px;background:#f3f6fa;border-radius:8px;list-style:none}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary:before{content:"▸ ";color:var(--acc)} details.card[open]>summary:before{content:"▾ "}
+details.card[open]>summary{border-bottom:1px solid var(--line);border-radius:8px 8px 0 0}
+details.card>.body{padding:4px 18px 10px}
+.cardtools{font-size:13px;margin:6px 0 2px} .cardtools button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:#fff;border-radius:5px;padding:1px 8px;cursor:pointer;margin-right:6px}
+.b{display:inline-block;font-size:11.5px;line-height:1.5;padding:0 6px;border-radius:9px;margin:0 2px;font-weight:600;white-space:nowrap;vertical-align:1px;border:1px solid transparent}
+.b-meas{background:#dafbe1;color:#116329;border-color:#a8e6b5}
+.b-orig{background:#ddf4ff;color:#0a4b8c;border-color:#a6d4f5}
+.b-team{background:#fff1e5;color:#953800;border-color:#ffc89a}
+.b-inf{background:#eef0f2;color:#4a535c;border-color:#cfd5db}
+.b-codex{background:#fbefff;color:#6e2b91;border-color:#e3b8f5}
+.b-oth{background:#f6f8fa;color:#4a535c;border-color:#d1d9e0}
+.idx{max-width:900px;margin:0 auto;padding:30px 30px 80px}
+.idx .hero{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:12px 22px;margin:14px 0 24px;font-size:16.5px}
+.idx .cards a{display:block;border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:10px 0;color:var(--fg)}
+.idx .cards a:hover{border-color:var(--acc);text-decoration:none;background:#f6f9ff}
+.idx .cards .t{font-weight:700;color:var(--acc)} .idx .cards .d{font-size:13.5px;color:var(--muted)}
+.foot{color:var(--muted);font-size:12.5px;margin-top:40px;border-top:1px solid var(--line);padding-top:8px}
+@media (max-width:900px){.wrap{grid-template-columns:1fr} nav.toc{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)} main{padding:16px}}
+@media print{nav.toc,.top,.cardtools{display:none}.wrap{display:block} details.card{break-inside:avoid}}
+</style></head><body>
+<div class="top"><a class="brand" href="../index.html">多模态少步蒸馏 · 前沿调研</a><a href="../baseline.html">2026Q3 基线</a><a href="../index.html#dailies">每日</a><a href="../index.html#weeklies">每周</a></div>
+<div class="wrap"><nav class="toc"><div class="tt">目录</div><div><div class="toc">
+<ul>
+<li><a href="#结论先行">结论先行</a></li>
+<li><a href="#一屏框架taxonomy-map">一屏框架：taxonomy map</a></li>
+<li><a href="#本周认知变化按格子">本周认知变化（按格子）</a><ul><li><a href="#l2-流式history-forcing-必读先跑-a">L2 × 流式：History Forcing → 必读·先跑 (a)</a></li><li><a href="#l3-av兼-l2-桥va-tdm-必读先跑-a">L3 × AV（兼 L2 桥）：VA-TDM → 必读·先跑 (a)</a></li><li><a href="#l3-流式any-forcing值得读">L3 × 流式：Any Forcing（值得读）</a></li><li><a href="#l2-流式stac-disen-dkv值得读簇">L2 × 流式：STAC / Disen / dKV（值得读簇）</a></li><li><a href="#l2-图像stepx-opd-gdmd值得读">L2 × 图像：StepX-OPD / GDMD（值得读）</a></li><li><a href="#l3-图像nitrofusion2-nextgan-camft值得读">L3 × 图像：NitroFusion2 / NextGAN / CAMFT（值得读）</a></li><li><a href="#l1l2-图像-meanflowfsf-dmd-fisherdistill-agavefri-值得读">L1/L2 × 图像 + MeanFlow：FSF-DMD / FisherDistill / AGAVE（Fri 值得读）</a></li>
+<li><a href="#av-系统配方taomate-hd值得读">AV 系统配方：TaoMate-HD（值得读）</a></li>
+<li><a href="#旁注prestp-commit-route-dmd-wave-viddub-or">旁注：PreSTP / Commit / Route-DMD / Wave / VidDub / OR</a></li>
+</ul>
+</li>
+<li><a href="#与文献同事的评级分歧">与文献同事的评级分歧</a></li>
+<li><a href="#预测命中率">预测命中率</a></li>
+<li><a href="#原创性分层与重做比例按方向">原创性分层与重做比例（按方向）</a></li>
+<li><a href="#最近工作是否真读了审计">最近工作是否真读了：审计</a></li>
+<li><a href="#召回审计本周指标">召回审计（本周指标）</a><ul>
+<li><a href="#漏检清单含损失阶段">漏检清单（含损失阶段）</a></li>
+</ul>
+</li>
+<li><a href="#放不进框架的">放不进框架的</a></li>
+<li><a href="#各线最强基线变化">各线最强基线变化</a></li>
+<li><a href="#fri-catch-up-卡片无新必读-live最高值得读3">Fri catch-up 卡片（无新必读 LIVE；最高值得读×3）</a><ul>
+<li><a href="#fsf-dmd-260519256-值得读">FSF-DMD 2605.19256 → 值得读</a></li>
+<li><a href="#fisherdistill-261107604-值得读">FisherDistill 2611.07604 → 值得读</a></li>
+<li><a href="#agave-261107566-live-值得读精核拟必读先跑-b-待折">AGAVE 2611.07566 → LIVE 值得读（精核拟必读·先跑 (b) 待折）</a></li>
+</ul>
+</li>
+<li><a href="#下周要先跑的对照便宜">下周要先跑的对照（便宜）</a></li>
+<li><a href="#本周日报链接">本周日报链接</a></li>
+</ul>
+</div>
+</div></nav>
+<main><h1 id="少步蒸馏-本周认知变化-2026-11-06">少步蒸馏 · 本周认知变化 2026-11-06</h1>
+<blockquote>
+<p>覆盖周：<strong>2026-10-31 → 2026-11-06</strong>（周末无 arXiv 公告；已发布日报：02、03、04、05、06；上周周报 <a href="../daily/2026-10-30.html">2026-10-30</a>）。
+数字来自本周日报 / read-log / batches / Fri 列表实测；未复现。标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】【HF】【仅OR】<span class="b b-inf">推断</span><span class="b b-codex">Codex✓</span><span class="b b-team">队友转述</span>。
+<strong>本周五不做</strong> Q3 摘要级语义复扫（该一次性只在 2026-10-23）。本周五做的是 <strong>Fri <code>/new</code> 清账</strong>（13:52 翻到 Friday；Mon–Fri 全 <strong>done</strong>）+ F5/F9/F10 周报复核。证据：<code>weekly/_gather-2026-11-06/</code>。</p>
+</blockquote>
+<hr />
+<section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
+<p><strong>本周主判断（两根新必读旋钮：历史残差进 DMD 参考分；速度场对抗修中间步错配。其余大多是「DMD/对抗配方补丁 + 缺训码」。）</strong></p>
+<ol>
+<li><strong>History residual 是可跑的 DMD 插件：</strong> History Forcing <a href="https://arxiv.org/abs/2611.02782">2611.02782</a> → <strong>必读·先跑 (a)</strong>——AR teacher「有历史−无历史」差分只加残差到双向 <code>s_ref</code>/OPSD；<code>ziplab</code> 训码 + HF 权重齐。<span class="b b-orig">原文</span>【代码】【HF】</li>
+<li><strong>中间步监督可换速度场对抗：</strong> VA-TDM <a href="https://arxiv.org/abs/2611.06796">2611.06796</a> → <strong>必读·先跑 (a)</strong>——VAD 统一 score/Fisher/矩匹配叙事；MiniMax-H3 4NFE 偏好胜 Fast-H3 <strong>61%</strong>；<code>Luo-Yihong/VA-TDM</code> 训码+config 齐（公开主路径 SD3.5 LoRA）。<span class="b b-orig">原文</span>【代码】</li>
+<li><strong>流式对抗 / critic / 架构旋钮堆了一周值得读：</strong> Any Forcing（任意步+一步稳）、STAC（critic 同扩+步条件）、Disen（锚头路由）、dKV（可微写 KV）、TaoMate（AV 2+1）、StepX-OPD（图像 OPD∩四步同训）、Nitro/NextGAN/CAMFT（图像对抗少步）、FSF-DMD / FisherDistill / AGAVE（去 fake-score / 闭式 Fisher / MeanFlow 引导场）。<strong>多数缺训码 → 不升必读。</strong></li>
+<li><strong>Fri 列表无新必读·先跑；</strong> 13:45 精核拟把 AGAVE 升 <strong>必读·先跑 (b)</strong>、FewStepRL 纠成 <strong>值得读</strong>——<strong>尚未折 LIVE</strong>（见分歧节）。<span class="b b-inf">推断</span><span class="b b-team">队友转述</span></li>
+<li><strong>召回：</strong> Mon–Fri 批次 <strong>5/5 done</strong>；F9 漏挂补录多（发布页缺 ID），<strong>机制真漏 0</strong>。<span class="b b-meas">实测</span></li>
+</ol>
+<p><strong>认知推荐（该改预期；默认向 Henry 推荐读）：</strong></p>
+<ul>
+<li><strong>History</strong>：少步 DMD 的参考分可以（也值得）加历史对比残差，而不必整段匹配 AR 分布。</li>
+<li><strong>VA-TDM</strong>：中间步坏了先怪「score 估错分布」；速度场对抗是可插入现有 DMD/FastH3 栈的替代监督。</li>
+<li><strong>Any / STAC / Disen / dKV / TaoMate / FSF / Fisher / AGAVE / Nitro 族</strong> —— 都改「少步坏了先调 KL 权重」的默认故事；缺码的先改预期、不开票。</li>
+<li><strong>勿埋：</strong> 本周新值得读 <strong>13</strong> 篇；禁止用「Fri 无新必读」淹没它们。</li>
+</ul>
+<p><strong>执行推荐（开票 / 必读·先跑）：</strong></p>
+<ul>
+<li><strong>本周可开（且应挂着）的对照票：</strong> ① History <code>use_history_guidance</code> on/off（Wan2.1-1.3B DMD）；② VA-TDM vs FastH3/DMD（先 SD3.5-M 4 步复现链 → 迁 H3）；③ Flex-6 vs trunc-6 / FastH3-8（与上两票<strong>不互斥</strong>）。</li>
+<li><strong>仍待代码、先别当可复现票：</strong> Speculative（必读·待代码）；Any/STAC/Disen/dKV/NextGAN/CAMFT/FSF/Fisher/AGAVE 训码未齐或仓空。</li>
+<li><strong>Fri catch-up LIVE：无新必读·先跑。</strong> AGAVE (b) 升档待折 LIVE 后再谈执行阻塞（仓仍无训/推/ckpt）。</li>
+</ul>
+<p><strong>对我们训练的含义：</strong></p>
+<ul>
+<li><strong>流式 AR：</strong> (a) History residual 进因子表；(b) Direct 单阶段对照仍挂；(c) Disen/dKV/Any/STAC 作插件菜单，码开再升；(d) Speculative 继续等代码。</li>
+<li><strong>AV / H3：</strong> 对照集扩成 {教师, PTD 4/8, Flex-6, FastH3-8, <strong>VA-TDM-4</strong>, History 若迁 AV}；VAD 与 PDMD/Flex <strong>并行不互斥</strong>。</li>
+<li><strong>图像：</strong> StepX-OPD / Nitro / NextGAN / CAMFT / FSF / Fisher 作 OPD·对抗·去 fake-score 旁注；训码开源前不改主 loss。</li>
+</ul>
+<hr />
+</section><section class="layer1"><h2 id="一屏框架taxonomy-map">一屏框架：taxonomy map<span class="layer-tag">第一层 · 框架</span></h2>
+<p>轴：<strong>① 学生训练信号</strong> × <strong>② 问题位置</strong> + <strong>③ 推理时步数分配（F7）</strong>。</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>轴1 \ 轴2</th>
+<th>单步去噪</th>
+<th>流式时间轴</th>
+<th>AV 跨模态</th>
+<th><strong>推理时步数分配（F7）</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L1 轨迹</strong></td>
+<td><strong>FSF-DMD</strong>（flow-map 去 fake-score）；CMM 维持；Priming 维持</td>
+<td>History·OPSD 速度支路；TaoMate 渐进；Mix：CD</td>
+<td><strong>PTD</strong> 维持；TaoMate 2+1；VidDub</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L2 分数差</strong></td>
+<td><strong>FisherDistill</strong>；<strong>StepX-OPD</strong>；<strong>GDMD</strong>；IDM/sDMD 维持</td>
+<td><strong>History</strong>（残差→<code>s_ref</code>）；<strong>STAC</strong>；<strong>Disen</strong>；<strong>dKV</strong>；SF²/Leta/Mix 维持</td>
+<td>OmniOPD（≠减步）；Pika PDMD 维持</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L3 对抗</strong></td>
+<td><strong>NitroFusion2</strong>；<strong>NextGAN</strong>；<strong>CAMFT</strong>；ROAD 维持；Fisher 替对抗</td>
+<td><strong>Any Forcing</strong>（统一对抗）；Hy hinge 维持</td>
+<td><strong>VA-TDM</strong>（速度对抗；H3）</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L4 混合 / 真实·reward</strong></td>
+<td>Priming / GDMD×RM</td>
+<td>One-Forcing 维持；History 长一致</td>
+<td><strong>Routed</strong> 维持；<strong>Pika ReFL+DPO</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L5 / 样本级场</strong></td>
+<td>—</td>
+<td><strong>Direct</strong> 维持；Drift 维持；ReSeed 维持</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>因果预训练 / 系统配方</strong></td>
+<td>WeLM Turbo 旁注</td>
+<td><strong>Mix MoBA</strong> 维持；Wave 配方</td>
+<td><strong>TaoMate-HD</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>MeanFlow / 引导场</strong></td>
+<td><strong>AGAVE</strong>（区间积分 CFG）；CAMFT</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>修正器 / KV / 其它</strong></td>
+<td>—</td>
+<td>Clean 维持；Focused / Commit / HelixKV；<strong>PreSTP</strong>（少步 AR token 剪枝）</td>
+<td>—</td>
+<td><strong>Speculative</strong>（待代码）；PreSTP / Commit 旁注</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>相对上周，每格理解变化（一句话）：</strong></p>
+<ul>
+<li><strong>L2×流式：</strong> History 把「历史」做成可开关 residual，而不是换整段教师分布；STAC/Disen/dKV 把 critic 容量、读路由、写 KV 拆成独立旋钮。</li>
+<li><strong>L3×AV：</strong> VA-TDM 首次把速度场对抗接到 H3 同协议 4NFE 胜 Fast-H3 → 必读·先跑。</li>
+<li><strong>L3×流式：</strong> Any Forcing 用统一对抗三任务同时做任意步与一步稳（缺码 → 值得读）。</li>
+<li><strong>L2/L3×图像：</strong> StepX 证明 OPD∩少步可同训；Nitro/NextGAN/CAMFT/FSF/Fisher 堆对抗与去 fake-score 配方。</li>
+<li><strong>MeanFlow：</strong> AGAVE 把引导编进单步区间积分（LIVE 值得读；精核拟 (b) 升档待折）。</li>
+<li><strong>F7：</strong> 本周无新等时均匀少步达标；PreSTP/Commit 停在训免剪枝/读链旁注。</li>
+</ul>
+<hr />
+</section><section class="layer1"><h2 id="本周认知变化按格子">本周认知变化（按格子）<span class="layer-tag">第一层 · 框架</span></h2>
+<details class="card" open="open">
+<summary id="l2-流式history-forcing-必读先跑-a">L2 × 流式：History Forcing → 必读·先跑 (a)</summary>
+<div class="body">
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>周初相信</strong></td>
+<td>长程回现弱 → 要么加深 AR 教师匹配，要么加 frame sink；DMD <code>s_ref</code> 仍是双向教师干净分。</td>
+</tr>
+<tr>
+<td><strong>现在相信</strong></td>
+<td>同一噪声/同一 t，AR teacher 有/无额外历史的差分 = history residual，只加到双向 <code>s_ref</code>（及 OPSD 速度目标）；画质锚仍在双向教师。loss 链可在 <code>dmd/model/dmd.py</code> <code>_history_effect</code> 定位；HF <code>xzxxntxdy/History-Forcing</code> 齐。<span class="b b-orig">原文</span>【代码】【HF】</td>
+</tr>
+<tr>
+<td><strong>训练含义</strong></td>
+<td>开 <code>use_history_guidance</code> on/off；报 VBench-Long / 主体回现 / Dynamic；对照 Self-Forcing / CausVid。AV 未测 → 迁 H3 另开。</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>关键数字。<span class="b b-orig">原文</span></strong> 1.3B：VBench Quality <strong>85.07</strong>（15s）；VBench-Long <strong>79.82</strong>（60s）；MemoBench Object Consistency 58.43→62.18。</p>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="l3-av兼-l2-桥va-tdm-必读先跑-a">L3 × AV（兼 L2 桥）：VA-TDM → 必读·先跑 (a)</summary>
+<div class="body">
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>周初相信</strong></td>
+<td>H3 少步对照 = PTD / Flex-6 / FastH3；中间步坏了继续调 DMD/PDMD 权重。</td>
+</tr>
+<tr>
+<td><strong>现在相信</strong></td>
+<td>中间步 score 常估错「正在更新的分布」；用 <strong>VAD</strong>（师生速度场对抗 + 双形 + 转移时刻）可统一 score/Fisher/矩匹配，并在 H3 4NFE 上偏好胜 Fast-H3 <strong>61.33%</strong>。公开实现主路径 SD3.5 LoRA；<code>loss_fake</code> / <code>loss_vad_*</code> + <code>lambda_b/moment/reg_r2</code> 可核。<span class="b b-orig">原文</span>【代码】</td>
+</tr>
+<tr>
+<td><strong>训练含义</strong></td>
+<td>开 VA-TDM vs FastH3/DMD 票（先 SD3.5-M 4 步 → 迁 H3）；与 History / Flex-6 <strong>不互斥</strong>。</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="l3-流式any-forcing值得读">L3 × 流式：Any Forcing（值得读）</summary>
+<div class="body">
+<p>统一对抗三任务（RA/CA/FE）+ 自适应记忆；一步短视频 VBench 超 One/Causal Forcing；<strong>训码未见</strong> → 不升必读。Codex 曾按 (b) 倾向必读，我方因缺码落值得读。<span class="b b-orig">原文</span><span class="b b-codex">Codex✓</span></p>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="l2-流式stac-disen-dkv值得读簇">L2 × 流式：STAC / Disen / dKV（值得读簇）</summary>
+<div class="body">
+<ul>
+<li><strong>STAC：</strong> critic 跟教师同扩 + 条件化生成步 k；Wan2.1；<strong>Code soon</strong>。<span class="b b-orig">原文</span></li>
+<li><strong>Disen：</strong> frame sink≠LLM sink；蒸馏期锚头/工作头拆路由 → Dynamic 大幅回升；<strong>无独立训码</strong>。<span class="b b-orig">原文</span></li>
+<li><strong>dKV：</strong> writer LoRA + 可微 page 单遍回传写梯度；GH「coming soon」。<span class="b b-orig">原文</span></li>
+<li><strong>含义：</strong> 三条独立插件；等码再开票。</li>
+</ul>
+</div>
+</details>
+<h3 id="av-系统配方taomate-hd值得读">AV 系统配方：TaoMate-HD（值得读）</h3>
+<p>渐进分辨率 2+1 步 + 生成/蒸馏非对称文本窗；推理码+preview 权；<strong>无完整训码</strong> → 不升必读。<span class="b b-orig">原文</span>【代码】【HF】</p>
+<details class="card" open="open">
+<summary id="l2-图像stepx-opd-gdmd值得读">L2 × 图像：StepX-OPD / GDMD（值得读）</summary>
+<div class="body">
+<ul>
+<li><strong>StepX：</strong> 多教师 OPD 与四步蒸馏同训（学生自 rollout 态）；码+LoRA 齐；<strong>T2I 非 AV</strong> → 不升必读·先跑 (a)。<span class="b b-orig">原文</span>【代码】【HF】</li>
+<li><strong>GDMD v2：</strong> DMD 梯度当 RL 奖励接口；未见公开训码。<span class="b b-orig">原文</span></li>
+</ul>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="l3-图像nitrofusion2-nextgan-camft值得读">L3 × 图像：NitroFusion2 / NextGAN / CAMFT（值得读）</summary>
+<div class="body">
+<p>文本流对抗 / 特征位移回归判别器 / 连续对抗 MeanFlow 迁移；Nitro 有 HF 权缺训码；NextGAN GH 404；CAMFT 未见训码 → 均不升必读。<span class="b b-orig">原文</span>【HF】</p>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="l1l2-图像-meanflowfsf-dmd-fisherdistill-agavefri-值得读">L1/L2 × 图像 + MeanFlow：FSF-DMD / FisherDistill / AGAVE（Fri 值得读）</summary>
+<div class="body">
+<ul>
+<li><strong>FSF-DMD：</strong> flow-map 上去掉 fake-score 网络的 DMD。<span class="b b-orig">原文</span></li>
+<li><strong>FisherDistill：</strong> 闭式 Fisher 判别补少步残差；无视频实验。<span class="b b-orig">原文</span></li>
+<li><strong>AGAVE：</strong> 区间积分 CFG→MeanFlow 单步引导场；仓仅方法文档。LIVE <strong>值得读</strong>；13:45 精核拟按 (b) 升 <strong>必读·先跑</strong>（Wan 1-NFE 超 iMF/rCM-1）——<strong>未折 LIVE</strong>，执行仍阻塞。<span class="b b-orig">原文</span>【代码】</li>
+</ul>
+</div>
+</details>
+<h3 id="旁注prestp-commit-route-dmd-wave-viddub-or">旁注：PreSTP / Commit / Route-DMD / Wave / VidDub / OR</h3>
+<ul>
+<li>PreSTP：少步 AR 免训 token 剪枝 → <strong>F7 旁注</strong>。</li>
+<li>Commit Forcing：训免改 committing 读链 → <strong>值得看·发现</strong>。</li>
+<li>Route-DMD：语音任务路由 DMD → 值得看·旁注。</li>
+<li>Wave / VidDub：值得看·可用配方（维持）。</li>
+<li>OR Pyramid/Future：孪生已闭；值得看·流式记忆。</li>
+</ul>
+<hr />
+</section><section class=""><h2 id="与文献同事的评级分歧">与文献同事的评级分歧</h2>
+<p>两边评级都保留；写明归属，不强迫统一。证据：<code>_gather-2026-11-06/lit_disagreements.md</code>。</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文</th>
+<th>文献同事</th>
+<th>我（少步）</th>
+<th>分歧要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Clean Forcing</strong> <a href="https://arxiv.org/abs/2610.25634">2610.25634</a></td>
+<td><strong>必读</strong>（流式漂移主线）</td>
+<td><strong>值得读·流式（发现类）</strong></td>
+<td>他评漂移主线；我评蒸馏学生侧；SF 移植负面</td>
+</tr>
+<tr>
+<td><strong>DeForcing</strong> <code>225TN4s58Y</code></td>
+<td><strong>一行·出名单</strong></td>
+<td><strong>值得看（仅OR）旁注</strong></td>
+<td>他已出名单；我仍挂观察不升</td>
+</tr>
+<tr>
+<td><strong>Drift Forcing</strong> <code>Gffoov6YRI</code></td>
+<td><strong>观察</strong></td>
+<td><strong>必读·先跑</strong>（仅OR+匿名码）</td>
+<td>我按 (a) 核码；他等全文</td>
+</tr>
+<tr>
+<td><strong>Speculative</strong> <a href="https://arxiv.org/abs/2610.22347">2610.22347</a></td>
+<td><strong>值得看</strong> / 代码观察</td>
+<td><strong>必读·待代码</strong></td>
+<td>GH 仍空壳</td>
+</tr>
+<tr>
+<td><strong>One / Routed</strong></td>
+<td><strong>值得看</strong></td>
+<td><strong>必读·先跑</strong></td>
+<td>他存疑协议/缺码；我认 (a)/(b)</td>
+</tr>
+<tr>
+<td><strong>Any Forcing</strong> <a href="https://arxiv.org/abs/2610.42031">2610.42031</a></td>
+<td>catchup <strong>值得看</strong>（主评归流式）</td>
+<td><strong>值得读</strong></td>
+<td>同向露出；他档略低；双方都不升必读（缺码）</td>
+</tr>
+<tr>
+<td><strong>STAC</strong></td>
+<td><strong>值得读</strong></td>
+<td><strong>值得读</strong></td>
+<td><strong>一致</strong></td>
+</tr>
+<tr>
+<td><strong>History / VA-TDM</strong></td>
+<td>行动卡对齐；不改对方必读</td>
+<td><strong>必读·先跑 (a)</strong></td>
+<td><strong>一致</strong>（ownership=fewstep）</td>
+</tr>
+<tr>
+<td><strong>StepX / Disen / dKV</strong></td>
+<td>旁注 / worth·finding</td>
+<td><strong>值得读</strong></td>
+<td>无实质冲突</td>
+</tr>
+<tr>
+<td><strong>AGAVE</strong> <a href="https://arxiv.org/abs/2611.07566">2611.07566</a></td>
+<td>（Fri 转交）</td>
+<td>LIVE <strong>值得读</strong>；精核拟 <strong>必读·先跑 (b)</strong> 待折</td>
+<td><strong>站内待折档</strong>；仓无训码→先跑阻塞</td>
+</tr>
+<tr>
+<td><strong>FewStepRL</strong> <a href="https://arxiv.org/abs/2611.08240">2611.08240</a></td>
+<td>交叉 RL</td>
+<td>LIVE <strong>OUT·归RL</strong>；精核拟 <strong>值得读</strong> 待折</td>
+<td><strong>站内纠错待折</strong></td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class="layer1"><h2 id="预测命中率">预测命中率<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>节点</th>
+<th>论文级</th>
+<th>累计</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>上周结束（10-30）</td>
+<td>—</td>
+<td><strong>99/130 = 76%</strong></td>
+<td>末次入账不变</td>
+</tr>
+<tr>
+<td>10-31～11-06</td>
+<td>多数新文<strong>未事先登记预测</strong></td>
+<td><strong>99/130 = 76%</strong>（末次入账不变）</td>
+<td>History / VA-TDM / Any / STAC / Disen / dKV / TaoMate / StepX / Nitro 族 / FSF / Fisher / AGAVE 均为读结果后定级 → <strong>不计分</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>本周模式：</strong> 无新「低估型未中 → 当天复评」入账；认知变化来自<strong>新机制+码齐</strong>（History、VA-TDM）与<strong>配方簇</strong>（对抗/critic/KV），不是预测打分驱动。未结算预测：History scale 对照、Any/STAC/dKV 码开复评闸门、AGAVE (b) 是否折 LIVE。</p>
+<hr />
+</section><section class=""><h2 id="原创性分层与重做比例按方向">原创性分层与重做比例（按方向）</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>必读·先跑 / 待代码</th>
+<th>值得读</th>
+<th>值得看·高/旁注</th>
+<th>重做占比（粗）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>图像</strong></td>
+<td>Priming 维持</td>
+<td>StepX；Nitro；NextGAN；CAMFT；FSF-DMD；FisherDistill；GDMD；IDM/sDMD/ROAD 维持</td>
+<td>Hybrid 一步；SoL-Refiner；WeLM Turbo</td>
+<td>对抗/OPD/去 fake-score 配方重做多；训码普遍未开</td>
+</tr>
+<tr>
+<td><strong>视频（双向/逐帧）</strong></td>
+<td>One-Forcing 维持</td>
+<td>SF²/sDMD 维持；AGAVE（MeanFlow 引导）</td>
+<td>—</td>
+<td>AGAVE 引导场组合新；多数工程重做</td>
+</tr>
+<tr>
+<td><strong>AV</strong></td>
+<td><strong>VA-TDM（新）</strong>；PTD；Routed；Lost/LiveTalk 维持</td>
+<td><strong>TaoMate-HD</strong>；Pika-Flex 维持</td>
+<td>Wave；VidDub；LiveFoley/Touché 旁注</td>
+<td>H3 对照入口继续扩；VAD 相对 FastH3 是新监督</td>
+</tr>
+<tr>
+<td><strong>流式 AR</strong></td>
+<td><strong>History（新）</strong>；Direct；Speculative（待代码）；Drift 维持</td>
+<td>Any；STAC；Disen；dKV；Mix/SF²/Leta/ReSeed/Clean 维持</td>
+<td>Commit；PreSTP；Focused；Compression；ReCouple</td>
+<td>History residual + critic/KV 插件是本周增量</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>本周必读清单（LIVE）：</strong> History；VA-TDM；Direct；PTD；Priming；Speculative（待代码）；One / Routed / Drift / Lost（维持）。<strong>Fri catch-up LIVE 无新增必读·先跑。</strong></p>
+<hr />
+</section><section class=""><h2 id="最近工作是否真读了审计">最近工作是否真读了：审计</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>精读</th>
+<th>自称最近工作</th>
+<th>实际深度</th>
+<th>缺口</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>History</td>
+<td>SF / CausVid / Rolling</td>
+<td>原文表 + <code>dmd.py</code> loss 链 + HF</td>
+<td>未自跑同协议；OPSD 支路 DreamX 未复现</td>
+</tr>
+<tr>
+<td>VA-TDM</td>
+<td>DMD2 / TDM / FastH3</td>
+<td>原文表 + 仓 <code>loss_vad_*</code> / config</td>
+<td>H3 全量训配不在公开仓；未自跑</td>
+</tr>
+<tr>
+<td>Any Forcing</td>
+<td>One / Causal / ASD</td>
+<td>原文 VBench</td>
+<td><strong>训码未见</strong></td>
+</tr>
+<tr>
+<td>STAC</td>
+<td>DMD critic</td>
+<td>原文+项目页</td>
+<td><strong>Code soon</strong></td>
+</tr>
+<tr>
+<td>Disen / dKV</td>
+<td>Frame Sink / SGF / CF++</td>
+<td>原文表</td>
+<td>无独立训码 / coming soon</td>
+</tr>
+<tr>
+<td>TaoMate</td>
+<td>Wave / 流式 AV</td>
+<td>摘要+推理仓</td>
+<td><strong>完整训码无</strong></td>
+</tr>
+<tr>
+<td>StepX</td>
+<td>OPD 多教师</td>
+<td>原文+仓+LoRA</td>
+<td>T2I 域；非 AV</td>
+</tr>
+<tr>
+<td>Nitro/NextGAN/CAMFT</td>
+<td>对抗蒸馏 / MeanFlow</td>
+<td>摘要+HF/页</td>
+<td>训码缺或 GH 404</td>
+</tr>
+<tr>
+<td>FSF / Fisher / AGAVE</td>
+<td>DMD / MeanFlow / CFG</td>
+<td>原文+仓状态</td>
+<td>AGAVE 训码未发；Fisher 无视频</td>
+</tr>
+<tr>
+<td>Speculative</td>
+<td>—</td>
+<td>仓复查</td>
+<td><strong>仍空壳</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>总评：</strong> 代码链本周强化在 History / VA-TDM；短板仍是多数新值得读无训码 + Speculative 空壳 + ViRDM 等阅读债未清。</p>
+<hr />
+</section><section class=""><h2 id="召回审计本周指标">召回审计（本周指标）</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>指标</th>
+<th>本周结果</th>
+<th>目标</th>
+<th>达标？</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>批次覆盖</strong>（列表日 Mon–Fri 02–06）</td>
+<td><strong>5/5 = 100%</strong>（Mon 516/43；Tue 1426/95；Wed 707/40；Thu 644/56；Fri 664/63；Sat/Sun none）</td>
+<td>100%</td>
+<td>✓</td>
+</tr>
+<tr>
+<td><strong>发现延迟</strong></td>
+<td>工作日补扫约 <strong>6 h</strong>（13:5x）；<strong>Tue 列表延迟 ≈25 h</strong>（11-03 应出 → 11-04 09:20 翻日；当日 F3 空窗兜底，无范围内漏评）</td>
+<td>≤24 h（周末 ≤72 h）</td>
+<td><strong>△</strong>（4/5 日达标；Tue 超 24 h）</td>
+</tr>
+<tr>
+<td><strong>外部召回</strong>（Henry∪同事范围内，日终 F9）</td>
+<td>漏挂补录：11-03 <strong>1</strong>；11-04 <strong>10+35</strong>；11-05 <strong>22</strong>；11-06 <strong>11+3</strong> → 全 OUT/外围或已有评级补页；<strong>范围内机制真漏 0</strong></td>
+<td>≥95%</td>
+<td>✓</td>
+</tr>
+<tr>
+<td><strong>金标 screen 召回</strong></td>
+<td>沿用 v2.2；本周无新金标失败报告；History/VA-TDM/Any/STAC 等均进阅读</td>
+<td>100% + top-30</td>
+<td>✓（无逆行）</td>
+</tr>
+<tr>
+<td><strong>复评升级次数</strong></td>
+<td><strong>LIVE 已折 = 0</strong>（History/VA-TDM 计<strong>新必读</strong>非复评）；<strong>待折 LIVE ≥2</strong>：AGAVE 值得读→必读·先跑 (b)；FewStepRL OUT→值得读</td>
+<td>记录</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="漏检清单含损失阶段">漏检清单（含损失阶段）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>论文</th>
+<th>发现日</th>
+<th>损失阶段</th>
+<th>最终</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>—</td>
+<td>（本周范围内少步主线真漏）</td>
+<td>—</td>
+<td>—</td>
+<td><strong>0</strong></td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.40847">2610.40847</a></td>
+<td>Generative Gap / speculative drafter</td>
+<td>11-03</td>
+<td><strong>F5-kw → 发布页漏挂</strong></td>
+<td>OUT·LLM 已补</td>
+</tr>
+<tr>
+<td>11-04 lit×10 + RL∩×35</td>
+<td>（有评未上页 / kw∩）</td>
+<td>11-04</td>
+<td><strong>发布漏挂（F9）</strong></td>
+<td>补录后 covered</td>
+</tr>
+<tr>
+<td>11-05 RL×22</td>
+<td>forward_combined</td>
+<td>11-05</td>
+<td><strong>发布漏挂（F9）</strong></td>
+<td>全 OUT/外围</td>
+</tr>
+<tr>
+<td>11-06 RL×11 + kw×3</td>
+<td>forward/kw</td>
+<td>11-06</td>
+<td><strong>发布漏挂（F9）</strong></td>
+<td>全 OUT/外围</td>
+</tr>
+<tr>
+<td>Tue 11-03 整批</td>
+<td>列表翻日慢</td>
+<td>11-03→11-04</td>
+<td><strong>取数延迟</strong>；F3 空窗</td>
+<td>11-04 晨报折叠；无范围内漏评</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class=""><h2 id="放不进框架的">放不进框架的</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>条目</th>
+<th>类型</th>
+<th>挂哪 / 为何</th>
+<th>一句话</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PreSTP</strong></td>
+<td>训免 token 剪枝</td>
+<td>F7 旁注；不改训练信号</td>
+<td>少步 AR 加速</td>
+</tr>
+<tr>
+<td><strong>Commit Forcing</strong></td>
+<td>训免读链</td>
+<td>值得看·发现；与 dKV 写侧正交</td>
+<td>不减采样步</td>
+</tr>
+<tr>
+<td><strong>Compression Forcing</strong></td>
+<td>层次历史 tokenize</td>
+<td>值得看·旁注</td>
+<td>≠History residual</td>
+</tr>
+<tr>
+<td><strong>Route-DMD</strong></td>
+<td>语音任务路由</td>
+<td>旁注；AV 迁移=假说</td>
+<td>不因语音 OUT</td>
+</tr>
+<tr>
+<td><strong>FewStepRL</strong>（LIVE）</td>
+<td>少步后训 RL 菜单</td>
+<td>LIVE OUT·归RL；精核拟值得读待折</td>
+<td>≠蒸馏期 VAD/History</td>
+</tr>
+<tr>
+<td><strong>Geo-FSRL / Speculative Listening</strong></td>
+<td>RL / 语音</td>
+<td>OUT</td>
+<td>非媒体生成少步</td>
+</tr>
+<tr>
+<td><strong>OR Pyramid/Future</strong></td>
+<td>KV 策略</td>
+<td>值得看·流式记忆；孪生已闭</td>
+<td>非蒸馏主文</td>
+</tr>
+<tr>
+<td><strong>10-30 漏推事故提醒</strong></td>
+<td>流程</td>
+<td>双行头条维持</td>
+<td>禁止「无新必读」埋值得读</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class=""><h2 id="各线最强基线变化">各线最强基线变化</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>线</th>
+<th>上周</th>
+<th>本周更新</th>
+<th>注意</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L2 DMD 参考分</strong></td>
+<td>标准双向 <code>s_ref</code></td>
+<td><strong>+ History residual</strong> 必读·先跑</td>
+<td>码+HF 齐；先 Wan 对照</td>
+</tr>
+<tr>
+<td><strong>L3 AV 中间步监督</strong></td>
+<td>FastH3 / PDMD</td>
+<td><strong>+ VA-TDM（VAD）</strong> 必读·先跑</td>
+<td>公开链 SD3.5；H3 数字论文侧</td>
+</tr>
+<tr>
+<td><strong>L3 流式对抗</strong></td>
+<td>Hy hinge / One</td>
+<td><strong>+ Any Forcing</strong> 值得读</td>
+<td>缺训码</td>
+</tr>
+<tr>
+<td><strong>L2 critic</strong></td>
+<td>默认小 critic</td>
+<td><strong>+ STAC</strong> 值得读</td>
+<td>Code soon</td>
+</tr>
+<tr>
+<td><strong>流式架构插件</strong></td>
+<td>Frame sink / SGF</td>
+<td><strong>+ Disen / dKV</strong> 值得读</td>
+<td>缺训码</td>
+</tr>
+<tr>
+<td><strong>图像 OPD∩少步</strong></td>
+<td>—</td>
+<td><strong>+ StepX-OPD</strong> 值得读</td>
+<td>T2I；有码不升 AV 必读</td>
+</tr>
+<tr>
+<td><strong>图像对抗/MeanFlow</strong></td>
+<td>ROAD / CMM</td>
+<td><strong>+ Nitro/NextGAN/CAMFT/FSF/Fisher/AGAVE</strong></td>
+<td>多数缺码；AGAVE (b) 待折</td>
+</tr>
+<tr>
+<td><strong>F7</strong></td>
+<td>Speculative 待代码</td>
+<td>无新达标；PreSTP/Commit 旁注</td>
+<td>Speculative 仍空壳</td>
+</tr>
+<tr>
+<td><strong>H3 对照集</strong></td>
+<td>{教师, PTD, Flex-6, FastH3-8}</td>
+<td><strong>+ VA-TDM-4</strong></td>
+<td>与 History/Flex 不互斥</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class=""><h2 id="fri-catch-up-卡片无新必读-live最高值得读3">Fri catch-up 卡片（无新必读 LIVE；最高值得读×3）</h2>
+<h3 id="fsf-dmd-260519256-值得读">FSF-DMD <a href="https://arxiv.org/abs/2605.19256">2605.19256</a> → 值得读</h3>
+<p><strong>问题：</strong> 标准 DMD 要维护 fake-score 网络，训时内存/更新贵。<span class="b b-orig">原文</span></p>
+<p><strong>做法：</strong> 在 flow-map 设定下去掉 fake-score，仍做分布匹配。<span class="b b-orig">原文</span></p>
+<p><strong>为何不升必读：</strong> 未见齐备训码；图像主文，非 AV 闸门 (a)。</p>
+<p><strong>对我们：</strong> 记下「DMD 是否必须 fake-score」可检验问题；不另开票。</p>
+<h3 id="fisherdistill-261107604-值得读">FisherDistill <a href="https://arxiv.org/abs/2611.07604">2611.07604</a> → 值得读</h3>
+<p><strong>问题：</strong> 少步蒸馏残差常靠学出来的对抗判别；贵且不稳。<span class="b b-orig">原文</span></p>
+<p><strong>做法：</strong> 闭式 Fisher 判别补基蒸馏残差，可替/逼近对抗精炼。<span class="b b-orig">原文</span></p>
+<p><strong>为何不升：</strong> 无视频实验；源码「will be released」。</p>
+<p><strong>对我们：</strong> 与 STAC/ROAD 同读作「判别器要不要学」菜单。</p>
+<h3 id="agave-261107566-live-值得读精核拟必读先跑-b-待折">AGAVE <a href="https://arxiv.org/abs/2611.07566">2611.07566</a> → LIVE 值得读（精核拟必读·先跑 (b) 待折）</h3>
+<p><strong>问题：</strong> MeanFlow 单步里 CFG/引导怎么进区间积分。<span class="b b-orig">原文</span></p>
+<p><strong>做法：</strong> 把引导「场」编进 MeanFlow 单步区间积分。<span class="b b-orig">原文</span></p>
+<p><strong>数字。<span class="b b-orig">原文</span></strong> Wan2.1-distilled <strong>严格 1-NFE</strong>：Total <strong>85.2</strong> &gt; iMF 84.0 / rCM-1 83.0；Dynamic <strong>56.2</strong> &gt; iMF 51.5。</p>
+<p><strong>代码：</strong> <code>YMlinfeng/AGAVE</code> 仅 profiles；训/推/ckpt <strong>未发</strong>。【代码】</p>
+<p><strong>定级：</strong> LIVE 维持值得读；11-06 13:45 精核按 method (b) 拟升必读·先跑——<strong>未折 LIVE</strong>；执行「先跑」阻塞；Fast-H3 迁移=未验证假说。<span class="b b-inf">推断</span></p>
+<p>（OR Pyramid/Future / PreSTP / Route-DMD：见上表；无 Fri 新必读。）</p>
+<hr />
+</section><section class=""><h2 id="下周要先跑的对照便宜">下周要先跑的对照（便宜）</h2>
+<ol>
+<li><strong>History：</strong> Wan2.1-1.3B DMD，<code>use_history_guidance</code> on/off；报 VBench-Long / 回现 / Dynamic；记录 scale。</li>
+<li><strong>VA-TDM：</strong> SD3.5-M LoRA 默认 <code>λ_b/moment/reg_r2</code> 4 步复现 → 对照 DMD2/FastH3 方向；再评估迁 H3。</li>
+<li><strong>H3 AV 对照集：</strong> {教师, PTD-4/8, Flex-6, FastH3-8, VA-TDM-4}；480p/5s；固定参考图短边 768。</li>
+<li><strong>Direct vs ODE→DMD</strong>（上周挂票维持）。</li>
+<li><strong>盯码：</strong> Speculative / Any / STAC / Disen / dKV / NextGAN / CAMFT / FSF / Fisher / <strong>AGAVE 训码</strong>；码开同日复评。</li>
+<li><strong>折档决策：</strong> AGAVE (b) / FewStepRL→值得读 是否写入 LIVE（需父代理/Henry 确认后 publish）。</li>
+<li><strong>阅读债：</strong> ViRDM、APT2、Causal-rCM、PDD、PDMD <a href="https://arxiv.org/abs/2609.35768">2609.35768</a>。</li>
+</ol>
+<hr />
+</section><section class=""><h2 id="本周日报链接">本周日报链接</h2>
+<ul>
+<li><a href="../daily/2026-11-02.html">2026-11-02</a> — Mon done；Any Forcing / STAC 值得读</li>
+<li><a href="../daily/2026-11-03.html">2026-11-03</a> — Tue pending（F3 空）；F9 漏挂 40847 OUT·LLM</li>
+<li><a href="../daily/2026-11-04.html">2026-11-04</a> — Tue 列表折叠 + Wed done；<strong>History 必读·先跑</strong>；Disen/dKV/TaoMate/GDMD/StepX 值得读</li>
+<li><a href="../daily/2026-11-05.html">2026-11-05</a> — Thu done；<strong>VA-TDM 必读·先跑</strong>；Nitro/NextGAN/CAMFT 值得读</li>
+<li><a href="../daily/2026-11-06.html">2026-11-06</a> — Fri done；FSF/Fisher/AGAVE 值得读；无新必读 LIVE</li>
+</ul>
+<p>相关：<code>method.md</code> v1.4；<code>batches.md</code>；<code>lineage.md</code>；gather <code>_gather-2026-11-06/</code>（f5_f9_diff / or_f10 / lit_disagreements / metrics.json）。
+LIVE：https://thughy.github.io/fewstep-daily/daily/2026-11-06.html</p></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-11-06 17:38 (UTC+8)</div></main></div>
+<script>
+(function(){
+ // 详情卡片全部展开/收起
+ document.querySelectorAll('[data-act]').forEach(function(b){b.addEventListener('click',function(){
+   var o=b.getAttribute('data-act')==='open';document.querySelectorAll('details.card').forEach(function(d){d.open=o;});});});
+ // 点击目录中位于折叠卡片内的锚点时自动展开
+ function openFor(id){var el=document.getElementById(id);if(!el)return;var d=el.closest('details');if(d)d.open=true;}
+ if(location.hash)openFor(decodeURIComponent(location.hash.slice(1)));
+ window.addEventListener('hashchange',function(){openFor(decodeURIComponent(location.hash.slice(1)));});
+ // 目录高亮
+ var links=[].slice.call(document.querySelectorAll('nav.toc a'));
+ var heads=links.map(function(a){return document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));});
+ function hl(){var y=window.scrollY+80,k=-1;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top+window.scrollY<=y&&h.offsetParent!==null)k=i;});
+   links.forEach(function(a,i){a.classList.toggle('on',i===k);});}
+ window.addEventListener('scroll',hl,{passive:true});hl();
+})();
+</script><script>if(document.querySelector('code.language-mermaid')){var s=document.createElement('script');
+s.src='https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';s.onload=function(){document.querySelectorAll('code.language-mermaid').forEach(function(c){var d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentNode.replaceWith(d);});mermaid.initialize({startOnLoad:false});mermaid.run();};document.head.appendChild(s);}</script></body></html>
