@@ -1,5 +1,5 @@
 <!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"><title>少步蒸馏 · 每日 2026-11-09（周一 · Mon /new pending）</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>少步蒸馏 · 每日 2026-11-09（周一 · Mon /new done · 含补扫）</title>
 <style>
 :root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--side:#f6f8fa;--line:#d1d9e0;--acc:#0b57d0;--l1:#fff8e6;--l1b:#f0c36d}
 *{box-sizing:border-box}
@@ -63,47 +63,57 @@ details.card>.body{padding:4px 18px 10px}
 <li><a href="#结论先行">结论先行</a></li>
 <li><a href="#30-秒速览">30 秒速览</a></li>
 <li><a href="#一屏框架今天挂在哪一格">一屏框架：今天挂在哪一格</a></li>
-<li><a href="#f1-f3-覆盖明细">F1 / F3 覆盖明细</a><ul>
-<li><a href="#f3-命中预览窗">F3 命中（预览窗）</a></li>
+<li><a href="#f1-f3补扫-覆盖明细">F1 / F3→补扫 覆盖明细</a><ul>
+<li><a href="#f3-命中预览窗keep">F3 命中（预览窗，KEEP）</a></li>
 </ul>
 </li>
 <li><a href="#f4-openreview一行">F4 OpenReview（一行）</a></li>
 <li><a href="#f5-对账一行-表">F5 对账（一行 + 表）</a></li>
-<li><a href="#挂票不变">挂票（不变）</a></li>
+<li><a href="#挂票更新-traf-一行">挂票（更新 TraF 一行）</a></li>
 <li><a href="#下一步闭环">下一步（闭环）</a></li>
+<li><a href="#补扫1344-抓取北京时间-asiashanghai">补扫（13:44 抓取，北京时间 / Asia/Shanghai）</a><ul>
+<li><a href="#列表批相对晨间的定级要点">列表批相对晨间的定级要点</a></li>
+<li><a href="#补扫新必读短卡">补扫新必读短卡</a></li>
+<li><a href="#补扫新值得看短">补扫新值得看（短）</a></li>
+<li><a href="#f5-队友转交召回补扫按-f9-复核">F5 队友转交召回（补扫按 F9 复核）</a></li>
+<li><a href="#粗筛命中但未收录f854-命中逐条新必读已详卡">粗筛命中但未收录（F8，54 命中逐条；新必读已详卡）</a></li>
+<li><a href="#补扫收口">补扫收口</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div></nav>
-<main><h1 id="少步蒸馏-每日-2026-11-09周一-mon-new-pending">少步蒸馏 · 每日 2026-11-09（周一 · Mon <code>/new</code> <strong>pending</strong>）</h1>
+<main><h1 id="少步蒸馏-每日-2026-11-09周一-mon-new-done-含补扫">少步蒸馏 · 每日 2026-11-09（周一 · Mon <code>/new</code> <strong>done</strong> · 含补扫）</h1>
 <blockquote>
-<p><strong>批次覆盖（F1）</strong>：应出列表日 = <strong>Mon 9 Nov</strong>（周一覆盖周末）。09:15–09:16 curl 7 类 <code>/new</code> 页头均为 <strong>Friday, 6 November 2026</strong> → <strong>Mon 9 = pending</strong>（公告未翻日）。<strong>勿把周五当今天；勿标 done。</strong> Fri 6 Nov <strong>done</strong>（664/63；列表 max <strong><a href="https://arxiv.org/abs/2611.08487">2611.08487</a></strong>；LIVE <a href="https://thughy.github.io/fewstep-daily/daily/2026-11-06.html">2026-11-06</a>）。<strong>Sat 7 / Sun 8 = none</strong>（周末无公告）。</p>
-<p><strong>F3 ID 预览</strong>：接 Fri 列表 max <strong><a href="https://arxiv.org/abs/2611.08487">2611.08487</a></strong>；复用探针 <code>ids_found_probe.json</code>（未重探）<code>2611.08488</code>→<code>2611.08673</code> → <strong>found=178</strong> / 内部 404 <strong>8</strong>（8493/8497/8503/8528/8567/8572/8609/8672）/ 摘要 <strong>178/178</strong> / v2.2 hits <strong>6</strong><span class="b b-meas">实测</span>。产物 <code>daily/raw/1109morning/</code>。</p>
+<p><strong>批次覆盖（F1）</strong>：应出列表日 = <strong>Mon 9 Nov</strong>（周一覆盖周末）。晨间 09:15–09:16 <code>/new</code>×7 仍 <strong>Friday, 6 November 2026</strong> → pending+F3；<strong>补扫 13:44</strong> curl 7 类页头均为 <strong>Monday, 9 November 2026</strong> → <strong>Mon 9 = done</strong>。Fri 6 Nov <strong>done</strong>（664/63；列表 max <strong><a href="https://arxiv.org/abs/2611.08487">2611.08487</a></strong>；LIVE <a href="https://thughy.github.io/fewstep-daily/daily/2026-11-06.html">2026-11-06</a>）。<strong>Sat 7 / Sun 8 = none</strong>（周末无公告）。</p>
+<p><strong>Mon <code>/new</code>（补扫）</strong>：7 类（cs.AI / cs.CV / cs.LG / cs.MM / cs.SD / eess.AS / stat.ML）dedup <strong>825</strong>（new 333 / cross 119 / repl 373）；列表 max <strong><a href="https://arxiv.org/abs/2611.09894">2611.09894</a></strong>；v2.2 hits <strong>54</strong><span class="b b-meas">实测</span>。产物 <code>daily/raw/1109catchup/</code>。</p>
+<p><strong>F3 晨间预览</strong>：abs <code>08488–08673</code> found178 / 内部404=8 / hits6（无新必读/值得读；InstaGen 值得看·旁注）。列表新号自 <strong><a href="https://arxiv.org/abs/2611.08490">2611.08490</a></strong> 起，与 F3 窗交叠；F3 已评 ID <strong>KEEP</strong>。列表相对 F3 的新号至 <strong><a href="https://arxiv.org/abs/2611.09894">2611.09894</a></strong>（new 333 中窗内 38、窗外 295）。</p>
 <p><strong>F4 OpenReview</strong>：文献无新于 11-04 的 <code>or_iclr27*</code> dump；forcing 5 条维持（Pyramid/Future 值得看·流式记忆；SimForcing 外围·机器人；Position 外围·3D；Marine OUT）。coreish 积压 190 未清。</p>
-<p><strong>F5 对账</strong>：文献 forward <strong>无新增论文</strong>（STALE）；RL forward 10/10 已评（见 pending 11-09）；kw/shortlist 召回漏挂 <strong>31</strong> 已补录（全 OUT/外围）；<strong>机制真漏 0</strong>。
-标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】【HF】【仅OR摘要】<span class="b b-team">队友转述</span><span class="b b-inf">推断</span>【摘要】</p>
+<p><strong>F5 对账</strong>：文献晨间 forward <strong>无新增论文</strong>（STALE）；文献 13:45 catchup <code>forward-fewstep-1345.md</code> 转发 <strong>2</strong> 篇（Trajectory Forcing / AR-Edit），本补扫粗筛已独立评完、写入本页。RL <code>待少步定级</code> <strong>10/10</strong> 已在 11-06 或今早 LIVE 覆盖。本批 screen 54 全部写入下方 F8。<strong>机制真漏 0</strong>。
+标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】【HF】【仅OR摘要】<span class="b b-team">队友转述</span><span class="b b-inf">推断</span>【摘要】<span class="b b-codex">Codex✓</span></p>
 </blockquote>
 <hr />
 <section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
-<p><strong>周一列表批仍未上线（09:16 <code>/new</code> 仍 Fri 6 Nov）。F3 预告窗 found178 / hits6：无新「必读·先跑」、无新「值得读」。本日必须把两件已裁定、尚未折进 LIVE 的级变写入日报：（1）AGAVE <a href="https://arxiv.org/abs/2611.07566">2611.07566</a> → 必读·先跑 (b)；（2）WeLM-Image <a href="https://arxiv.org/abs/2611.07392">2611.07392</a> → 值得读。FewStepRL 维持值得读（加限定，不 OUT·归RL）。F3 新「值得看·旁注」×1：InstaGen（Wan 稀疏注意力加速，不减 NFE）。</strong>【摘要】<span class="b b-orig">原文</span>【代码】</p>
+<p><strong>Mon <code>/new</code> 补扫已翻日（13:44；825/54；max <a href="https://arxiv.org/abs/2611.09894">2611.09894</a>）。新「必读·先跑」×1：Trajectory Forcing。无新「值得读」。新「值得看·发现」AR-Edit；新「值得看·旁注」Dual-Rate / TPC。晨间折档维持：AGAVE 必读·先跑 (b)、WeLM-Image 值得读、FewStepRL 值得读+限定。F3 已评 InstaGen / ChainFlow KEEP。</strong><span class="b b-orig">原文</span>【代码】<span class="b b-codex">Codex✓</span>【自核】</p>
 <p><strong>认知推荐（该改预期；默认向他推荐读）：</strong>
-① <strong>AGAVE</strong>（折档）：把引导写成噪声区间上的积分「场」再编进 MeanFlow 单步；Wan2.1-distilled <strong>严格 1-NFE</strong> 同协议 Total <strong>85.2</strong> 超过 iMF 84.0 / rCM-1 83.0，Dynamic <strong>56.2</strong> 超过 iMF 51.5。按 method v1.4 (b) 升 <strong>必读·先跑</strong>。仓 <code>YMlinfeng/AGAVE</code> 仅 profiles、无训/推/ckpt → <strong>运行阻塞，但不因此降回值得读</strong>。<span class="b b-orig">原文</span>【代码】
-② <strong>WeLM-Image</strong>（升档）：相对 LIVE「值得看·旁注」升 <strong>值得读</strong>。可迁移点是 noise-aware OPD（高噪 PE 教师 / 低噪 RL 教师）再接 MeanFlow 平均速度 ⊕ DMD 在线轨迹对齐 ⊕ local anchoring，做出 guidance-free 8/4 Turbo。缺公开训码 <strong>不否决认知</strong>；纯图像、未在 AV/流式验证 → <strong>不升必读</strong>。<span class="b b-orig">原文</span>
-③ F3 本窗无新值得读。屏幕漏挂补评 <strong>InstaGen</strong>（Wan2.1-T2V 上把 PBSA top-p 改成 group-shared importance sampling，同密度/同时延 PSNR 升；不减步、非蒸馏）。ChainFlow 标题含 Few-Step Flow Matching，但是 LLM speculative decoding → <strong>OUT·LLM</strong>。【摘要】</p>
-<p><strong>执行推荐（开票/先跑）：无新「必读·先跑」训练票（含 F3）。</strong> AGAVE 虽升 (b)，训码未发 → <strong>先跑仍阻塞</strong>，码开则同日复评能否开工。仍挂：① VA-TDM vs FastH3/DMD ② History <code>use_history_guidance</code> ③ Flex-6 vs trunc-6 / FastH3-8 ④ Speculative <strong>待代码</strong>。WeLM <strong>不开图像必读票</strong>。<span class="b b-inf">推断</span>【代码】</p>
+① <strong>Trajectory Forcing</strong>（新）：现有 Self Forcing / Causal Forcing 跨 chunk 只把上一块的<strong>干净端点</strong>塞进 KV，丢掉了该块 T 步去噪轨迹。TraF 在每一步按 γ 从上一块轨迹里选一个点当条件；SL 段用高斯插值伪轨迹 + flow matching，RL 段用学生自己的 rollout 真轨迹 + DMD。Wan2.1-T2V-1.3B、Wan-14B 教师、<strong>4 NFE</strong>、与 SF/CF 同一 DMD 目标，VBench（946 prompt）Total <strong>85.15</strong> 超过 Self Forcing 84.31（+0.84）和 Causal Forcing 84.04（+1.11）。γ 消融：端点对照（γ=∞）84.24 → γ=2 为 85.15，机制可和「多一段 SL 初始化」分开。按 method v1.4 <strong>(b)</strong> 升 <strong>必读·先跑</strong>。项目页无 GitHub/HF 训码 → <strong>运行阻塞，但不因此降回值得读</strong>。<span class="b b-orig">原文</span>
+② <strong>AGAVE / WeLM</strong>（晨间折档，不重复催）：区间积分 CFG 场编进 MeanFlow 单步；noise-aware OPD→Turbo。维持原评级。<span class="b b-orig">原文</span>
+③ 新值得看： <strong>AR-Edit</strong>（DMD 蒸馏 AR 里 Q/K 跨步稳定、V 载内容，一次前向缓存源 V 即可免反演做流式编辑；<code>marghovo/AR-Edit</code> 有推理码，不减 NFE、不改 distill loss）；<strong>Dual-Rate</strong>（重/轻网络交错，推理便宜 2–4×，声称可叠加 Moment Matching Distillation）；<strong>TPC</strong>（flow / MeanFlow 训练时配对时刻速度一致性，同 NFE 提质）。<span class="b b-orig">原文</span>【代码】</p>
+<p><strong>执行推荐（开票/先跑）：无新可开工训练票。</strong> TraF 虽升 (b)，训码未发 → <strong>先跑仍阻塞</strong>，码开则同日评估能否对照「端点条件 vs 轨迹点条件」。仍挂：① VA-TDM vs FastH3/DMD ② History <code>use_history_guidance</code> ③ Flex-6 vs trunc-6 / FastH3-8 ④ Speculative <strong>待代码</strong> ⑤ AGAVE 区间积分 CFG（缺码）。TraF 与 History Forcing <strong>不是同一旋钮</strong>（见下卡），不互斥、不替代。<span class="b b-inf">推断</span>【代码】</p>
 <ol>
-<li><strong>周一 pending。</strong> 不要把周五 664/63 再报一遍当今日增量。<span class="b b-meas">实测</span></li>
-<li><strong>折档写入 LIVE 草稿（不得回退）：</strong> AGAVE → <strong>必读·先跑 (b)</strong>；WeLM-Image → <strong>值得读</strong>；FewStepRL → <strong>值得读</strong>（reward↑ 可与独立 VBench/held-out 变差同现；48 vs 32 GPU 非 sample-budget-matched）。SpecCTMC / Masked-diff RSA → OUT·LLM；EDGAR → 外围·应用。<span class="b b-orig">原文</span></li>
-<li><strong>F3：</strong> found178 / hits6 全评；新过线仅 InstaGen 值得看·旁注；无新必读/值得读。【摘要】</li>
-<li><strong>F5：</strong> 文献无新少步论文；RL forward 10/10；召回漏挂 31 补录（GARM/ArtiVidRM 外围·归RL，其余 OUT）；<strong>真漏 0</strong>。<span class="b b-team">队友转述</span></li>
+<li><strong>周一已翻日。</strong> 825/54；列表 max <strong><a href="https://arxiv.org/abs/2611.09894">2611.09894</a></strong>。勿把周五 664/63 再报一遍。<span class="b b-meas">实测</span></li>
+<li><strong>新必读·先跑 (b)：Trajectory Forcing <a href="https://arxiv.org/abs/2611.09096">2611.09096</a>。</strong> 4 NFE 同协议超 SF/CF；缺码阻塞。<span class="b b-orig">原文</span></li>
+<li><strong>无新值得读。</strong> TriTD <a href="https://arxiv.org/abs/2610.26165">2610.26165</a> 本日为替换版，维持 10-20 的值得读，不重开。<span class="b b-orig">原文</span></li>
+<li><strong>新值得看：</strong> AR-Edit 值得看·发现；Dual-Rate / TPC 值得看·旁注。InstaGen 晨间旁注维持。<span class="b b-orig">原文</span>【代码】</li>
+<li><strong>F5/F9：</strong> 文献 13:45 转发 TraF + AR-Edit（2/2 本补扫已评）；RL 待少步定级 10/10 已覆盖；本批 54 命中全部有评级。<strong>机制真漏 0。</strong><span class="b b-team">队友转述</span></li>
 </ol>
 <p><strong>对我们训练的含义：</strong></p>
 <ul>
 <li><strong>今天不开新训练票。</strong> 挂票照旧跑。<span class="b b-inf">推断</span></li>
-<li><strong>认知上</strong>把「单步 MeanFlow 的 CFG 不该只是一个标量」写成默认预期：AGAVE 的区间积分场是同协议赢了 iMF/rCM-1 的证据；等训码再评估是否改我们的引导训练。<span class="b b-orig">原文</span><span class="b b-inf">推断</span></li>
-<li><strong>WeLM</strong> 提供一条图像侧可检验配方（噪声分段选教师 + MeanFlow/DMD Turbo），缺码且非 AV → 先改预期，不改底座计划。<span class="b b-inf">推断</span></li>
-<li><strong>InstaGen</strong> 若上 Wan 服务，可当「每步更便宜」的注意力抽样对照，与少步正交；不改 distill loss。【摘要】</li>
+<li><strong>认知上</strong>把「流式学生跨 chunk 该条件在干净端点，还是该条件在去噪轨迹上的某一个点」写成默认问题。TraF 的 5 秒 VBench 同协议赢和 γ 消融，是这条问题的正面证据；30 秒 Quality Drift 1.38 vs SF 2.21 是加分，但按 Henry 口径，长时漂移本身不够单独撑必读。<span class="b b-orig">原文</span><span class="b b-inf">推断</span></li>
+<li><strong>TraF ≠ History Forcing</strong>：History 把历史残差编进 DMD/OPSD 的引导项；TraF 改的是注意力上下文里放哪一个中间去噪态。两个旋钮，等码后再决定要不要并排对照。<span class="b b-inf">推断</span></li>
+<li><strong>AR-Edit</strong> 若已在 DMD 蒸馏的 AR 学生上做流式编辑，可当「反演在少步日程上失效、改注入源 V」的对照；不改 distill loss。<span class="b b-orig">原文</span></li>
 <li><strong>闭环仍挂</strong>：训练同学 · VA-TDM / History / Flex-6。成功标准不变。【代码】</li>
-<li><strong>下一动作</strong>：等 Mon <code>/new</code> 翻日后再扫相对 08487 的列表增量（F3 窗将与周一列表交叠，已评 ID KEEP、不重开）。</li>
 </ul>
 <hr />
 </section><section class="layer1"><h2 id="30-秒速览">30 秒速览<span class="layer-tag">第一层 · 框架</span></h2>
@@ -118,14 +128,20 @@ details.card>.body{padding:4px 18px 10px}
 </thead>
 <tbody>
 <tr>
+<td><strong>Trajectory Forcing <a href="https://arxiv.org/abs/2611.09096">2611.09096</a></strong></td>
+<td><strong>必读·先跑 (b)</strong>（新·补扫）</td>
+<td>跨 chunk 条件在去噪轨迹点；4NFE 同协议超 SF/CF；缺码阻塞</td>
+<td><span class="b b-orig">原文</span></td>
+</tr>
+<tr>
 <td><strong>AGAVE <a href="https://arxiv.org/abs/2611.07566">2611.07566</a></strong></td>
-<td><strong>必读·先跑 (b)</strong>（折档·写入 LIVE）</td>
+<td><strong>必读·先跑 (b)</strong>（晨间折档）</td>
 <td>Wan 1-NFE 同协议超 iMF/rCM-1；仓无训码→运行阻塞</td>
 <td><span class="b b-orig">原文</span>【代码】</td>
 </tr>
 <tr>
 <td><strong>WeLM-Image <a href="https://arxiv.org/abs/2611.07392">2611.07392</a></strong></td>
-<td><strong>值得读</strong>（升·相对 LIVE 旁注）</td>
+<td><strong>值得读</strong>（晨间升档）</td>
 <td>noise-aware OPD + MeanFlow/DMD Turbo；缺码不升必读</td>
 <td><span class="b b-orig">原文</span></td>
 </tr>
@@ -136,16 +152,34 @@ details.card>.body{padding:4px 18px 10px}
 <td><span class="b b-orig">原文</span></td>
 </tr>
 <tr>
+<td>AR-Edit <a href="https://arxiv.org/abs/2611.09795">2611.09795</a></td>
+<td>值得看·发现（新）</td>
+<td>DMD-AR 的 QKV 不对称；免反演流式编辑；有推理码</td>
+<td><span class="b b-orig">原文</span>【代码】</td>
+</tr>
+<tr>
+<td>Dual-Rate <a href="https://arxiv.org/abs/2605.18190">2605.18190</a></td>
+<td>值得看·旁注（新·repl）</td>
+<td>重/轻网络交错加速，可叠加蒸馏</td>
+<td>【摘要】</td>
+</tr>
+<tr>
+<td>TPC <a href="https://arxiv.org/abs/2602.04908">2602.04908</a></td>
+<td>值得看·旁注（新·repl）</td>
+<td>flow/MeanFlow 配对时刻速度一致性；同 NFE 提质</td>
+<td>【摘要】</td>
+</tr>
+<tr>
 <td>InstaGen <a href="https://arxiv.org/abs/2611.08610">2611.08610</a></td>
-<td>值得看·旁注（新·F3）</td>
+<td>值得看·旁注（晨间 F3）</td>
 <td>Wan PBSA→importance sampling；不减 NFE</td>
 <td>【摘要】</td>
 </tr>
 <tr>
-<td>ChainFlow <a href="https://arxiv.org/abs/2611.08669">2611.08669</a></td>
-<td>OUT·LLM（新·F3）</td>
-<td>少步 flow matching 做 LLM 推测解码 drafter</td>
-<td>【摘要】</td>
+<td>TriTD <a href="https://arxiv.org/abs/2610.26165">2610.26165</a></td>
+<td><strong>值得读</strong>（维持·repl）</td>
+<td>轨迹+分布共蒸馏；10-20 已评</td>
+<td><span class="b b-orig">原文·10-20</span></td>
 </tr>
 <tr>
 <td>FSF-DMD / FisherDistill</td>
@@ -195,6 +229,12 @@ details.card>.body{padding:4px 18px 10px}
 <td>token 剪枝 / 语音路由 DMD</td>
 <td><span class="b b-orig">原文·11-06</span></td>
 </tr>
+<tr>
+<td>ChainFlow <a href="https://arxiv.org/abs/2611.08669">2611.08669</a></td>
+<td>OUT·LLM（维持）</td>
+<td>少步 flow matching 做 LLM 推测解码</td>
+<td>【摘要】</td>
+</tr>
 </tbody>
 </table></div>
 <hr />
@@ -211,14 +251,14 @@ details.card>.body{padding:4px 18px 10px}
 <tbody>
 <tr>
 <td><strong>L1 轨迹 / 一致性 / flow map</strong></td>
-<td><strong>AGAVE</strong>（MeanFlow 区间积分 CFG 场）；FSF-DMD 维持；WeLM Turbo（图像）</td>
-<td>PreSTP 维持</td>
+<td>AGAVE（MeanFlow 区间积分 CFG 场）；FSF-DMD 维持；WeLM Turbo（图像）；TPC 旁注（配对时刻）</td>
+<td><strong>TraF</strong>（跨 chunk 条件在轨迹点，SL=flow matching）；PreSTP 维持</td>
 <td>Route-DMD 旁注</td>
 </tr>
 <tr>
 <td><strong>L2 分数差分布匹配（DMD）</strong></td>
 <td>FisherDistill / WeLM（DMD 轨迹对齐）维持</td>
-<td>History / Disen / dKV 维持</td>
+<td><strong>TraF</strong>（RL 段 = 学生 rollout + DMD）；History / Disen / dKV 维持</td>
 <td>—</td>
 </tr>
 <tr>
@@ -241,22 +281,22 @@ details.card>.body{padding:4px 18px 10px}
 </tr>
 <tr>
 <td><strong>因果预训练 / 系统配方</strong></td>
-<td><strong>WeLM</strong>（noise-aware OPD→Turbo）</td>
+<td>WeLM（noise-aware OPD→Turbo）</td>
 <td>Mix / Wave 维持</td>
 <td>TaoMate 维持</td>
 </tr>
 <tr>
 <td><strong>推理时步数分配 / 注意力（F7）</strong></td>
-<td><strong>InstaGen</strong>（Wan PBSA importance sampling；不减 NFE）</td>
-<td>PreSTP / Commit 旁注</td>
+<td>InstaGen（Wan PBSA）；Dual-Rate 旁注（重/轻交错）</td>
+<td><strong>AR-Edit</strong>（源 V 注入，免反演编辑）；PreSTP / Commit 旁注</td>
 <td>Flex 固定 6 knots</td>
 </tr>
 </tbody>
 </table></div>
-<p>放不进框架的：ChainFlow（LLM speculative flow drafter）；F3 其余 5 条 OUT（GUI 推测解码 / 数据选择 / 医疗分割 / 有丝分裂蒸馏 / 海冰 SAR）；F5 补录 31（GARM/ArtiVidRM 归 RL；GuidedWAM/GPWM 世界模型；其余 LLM/控制/评测）。</p>
-<p><strong>按这一格预判 InstaGen 会在哪里出问题：</strong> 高熵注意力段抽样方差变大、或与已有 token-reduction（FastVideo #2004 / PreSTP）叠加时质量不单调。——读结果前。<span class="b b-inf">推断</span></p>
+<p>放不进框架的：ChainFlow（LLM speculative flow drafter）；Emo-LiveSync（口型同步应用）；Paste2Place（单步合成应用）；F3 其余 OUT；本批其余 OUT/外围见 F8。</p>
+<p><strong>按这一格预判 TraF 会在哪里出问题：</strong> 选点函数 γ 在 AV 或更长 chunk、或 KV 已经很挤时失效；以及 15.0 vs 17.0 FPS 的额外注意力开销在服务侧不可接受。另：论文用自己的 SL 初始化、基线保留原初始化——若有人把增益全部记在「多训了一段 SL」头上，γ=∞ 对照（84.24）和各向同性高斯扰动对照（更差）是反驳，但仍应在复现时做「同一 SL ckpt + 只改选点」的干净对照。——读结果前的预判，本文数字已核过，方向命中。<span class="b b-inf">推断</span><span class="b b-orig">原文</span></p>
 <hr />
-</section><section class=""><h2 id="f1-f3-覆盖明细">F1 / F3 覆盖明细</h2>
+</section><section class=""><h2 id="f1-f3补扫-覆盖明细">F1 / F3→补扫 覆盖明细</h2>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -270,36 +310,37 @@ details.card>.body{padding:4px 18px 10px}
 <td>Monday, 9 November 2026</td>
 </tr>
 <tr>
-<td><code>/new</code> 页头</td>
-<td><strong>Friday, 6 November 2026</strong>（pending；7 类均已核对）<span class="b b-meas">实测</span></td>
+<td><code>/new</code> 页头（晨间）</td>
+<td><strong>Friday, 6 November 2026</strong>（pending）<span class="b b-meas">实测</span></td>
 </tr>
 <tr>
-<td>列表 max（已知）</td>
-<td><strong><a href="https://arxiv.org/abs/2611.08487">2611.08487</a></strong>（Fri done）</td>
+<td><code>/new</code> 页头（补扫 13:44）</td>
+<td><strong>Monday, 9 November 2026</strong>（done；7 类一致）<span class="b b-meas">实测</span></td>
 </tr>
 <tr>
-<td>F3 ID 区间</td>
-<td><code>2611.08488</code>–<code>2611.08673</code></td>
+<td>7 类 dedup</td>
+<td><strong>825</strong>（new 333 / cross 119 / repl 373）</td>
 </tr>
 <tr>
-<td>found / 内部 404</td>
-<td><strong>178</strong> / <strong>8</strong></td>
+<td>列表 max / min new</td>
+<td><strong><a href="https://arxiv.org/abs/2611.09894">2611.09894</a></strong> / <a href="https://arxiv.org/abs/2611.08490">2611.08490</a></td>
 </tr>
 <tr>
-<td>摘要抓取</td>
-<td><strong>178/178</strong>（export API 对未公告 ID 几乎空返回；改 abs HTML）</td>
+<td>regex hits / 新必读 / 新值得读</td>
+<td><strong>54 / 1 / 0</strong></td>
 </tr>
 <tr>
-<td>v2.2 hits / ≥值得读新</td>
-<td><strong>6 / 0</strong>（另 spot InstaGen → 值得看·旁注）</td>
+<td>晨间 F3</td>
+<td><code>08488–08673</code> found178 / 404=8 / hits6（已评 KEEP）</td>
 </tr>
 <tr>
 <td>产物</td>
-<td><code>daily/raw/1109morning/</code></td>
+<td>晨间 <code>daily/raw/1109morning/</code> + 补扫 <code>daily/raw/1109catchup/</code></td>
 </tr>
 </tbody>
 </table></div>
-<h3 id="f3-命中预览窗">F3 命中（预览窗）</h3>
+<p><strong>说明：</strong> 晨间 F3 预览 ID 与周一列表批有交叠；补扫对 F3 已评命中（ChainFlow / QMAC 及 InstaGen 旁注等）<strong>KEEP</strong>，不重开为新过线项。<span class="b b-meas">实测</span></p>
+<h3 id="f3-命中预览窗keep">F3 命中（预览窗，KEEP）</h3>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -315,8 +356,8 @@ details.card>.body{padding:4px 18px 10px}
 <td><a href="https://arxiv.org/abs/2611.08669">2611.08669</a></td>
 <td>ChainFlow</td>
 <td><strong>OUT·LLM</strong></td>
-<td>少步 flow matching 做 LLM speculative drafter；非媒体蒸馏</td>
-<td>F3-hit</td>
+<td>少步 flow matching 做 LLM speculative drafter</td>
+<td>F3-hit / 列表复现</td>
 </tr>
 <tr>
 <td><a href="https://arxiv.org/abs/2611.08496">2611.08496</a></td>
@@ -330,7 +371,7 @@ details.card>.body{padding:4px 18px 10px}
 <td>QMAC</td>
 <td><strong>OUT·数据选择</strong></td>
 <td>指令数据特征函数匹配；≠ DMD</td>
-<td>F3-hit</td>
+<td>F3-hit / 列表复现</td>
 </tr>
 <tr>
 <td><a href="https://arxiv.org/abs/2611.08537">2611.08537</a></td>
@@ -367,9 +408,9 @@ details.card>.body{padding:4px 18px 10px}
 <p>无新于 11-04 的 OR dump；forcing 5 维持：Pyramid ↔ <a href="https://arxiv.org/abs/2605.13111">2605.13111</a> / Future ↔ <a href="https://arxiv.org/abs/2605.30083">2605.30083</a> = 值得看·流式记忆（已关 OR-only）；SimForcing 外围·机器人 WM；Position Forcing 外围·3D；Marine OUT·域外。coreish 积压 190 未清。详见 <code>raw/1109morning/f4_or.md</code>。</p>
 <hr />
 </section><section class=""><h2 id="f5-对账一行-表">F5 对账（一行 + 表）</h2>
-<p>文献 forward 0 新论文（STALE）。RL forward <strong>10/10</strong> 已评。kw_fewstep 33 中 11 漏挂 + kw_hits 额外 + lit shortlist 3 = <strong>并集 31</strong> 已补录（全 OUT/外围；GARM <a href="https://arxiv.org/abs/2611.07648">2611.07648</a> / ArtiVidRM <a href="https://arxiv.org/abs/2611.07301">2611.07301</a> → 外围·归RL）。<strong>机制真漏 0。</strong> 详见 <code>raw/1109morning/f5_report.md</code>。</p>
+<p>文献晨间 forward 0 新论文（STALE）。文献 13:45 <code>forward-fewstep-1345.md</code> 转发 TraF + AR-Edit（2/2 本补扫已评，写入本页）。RL forward <strong>10/10</strong> 已在发布页覆盖（Fisher / PreSTP / AGAVE / Route-DMD / SpecCTMC / EDGAR / RSA / FewStepRL / WeLM / LeNO）。本批 54 命中全部有评级。<strong>机制真漏 0。</strong> 详见补扫节。</p>
 <hr />
-</section><section class=""><h2 id="挂票不变">挂票（不变）</h2>
+</section><section class=""><h2 id="挂票更新-traf-一行">挂票（更新 TraF 一行）</h2>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -404,6 +445,11 @@ details.card>.body{padding:4px 18px 10px}
 <td><strong>(b) 已折档；运行阻塞</strong></td>
 <td>仓出现训码+配置 → 同日评估是否开工；在此之前只改预期</td>
 </tr>
+<tr>
+<td>TraF 轨迹点 vs 端点条件</td>
+<td><strong>(b) 新折档；运行阻塞</strong></td>
+<td>仓出现训码 → 同日评估是否与 History 残差并排对照；成功标准：同一 SL ckpt 下只改选点，VBench Total 方向不低于论文</td>
+</tr>
 </tbody>
 </table></div>
 <hr />
@@ -419,13 +465,13 @@ details.card>.body{padding:4px 18px 10px}
 <tbody>
 <tr>
 <td>本 bot · 下一轮</td>
-<td>Mon <code>/new</code> 页头 = Monday, 9 November 2026</td>
-<td>batches Mon→done；相对 08487 的列表增量全读标题+定级；F3 已评 ID KEEP</td>
+<td>Tue <code>/new</code> 页头 = Tuesday, 10 November 2026</td>
+<td>batches Tue 记账；相对 09894 的增量全读标题+定级</td>
 </tr>
 <tr>
 <td>Henry</td>
 <td>双行头条</td>
-<td><strong>认知：读 AGAVE (b) 与 WeLM 值得读</strong>；<strong>执行：无新可开工票</strong>（AGAVE 缺码）</td>
+<td><strong>认知：读 TraF (b)</strong>；<strong>执行：无新可开工票</strong>（TraF / AGAVE 均缺码）</td>
 </tr>
 <tr>
 <td>训练同学</td>
@@ -434,13 +480,227 @@ details.card>.body{padding:4px 18px 10px}
 </tr>
 <tr>
 <td>文献 / RL</td>
-<td>GuidedWAM/GPWM OUT；GARM/ArtiVidRM 归 RL；SpecCTMC/RSA OUT</td>
-<td>ownership 可关本批 fewstep forwarded</td>
+<td>TraF 少步主评必读·先跑 (b)；AR-Edit 值得看·发现</td>
+<td>文献 13:45 已转这两篇；不重复催、不改评</td>
 </tr>
 </tbody>
 </table></div>
-<hr /></section>
-<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-11-09 09:25 (UTC+8)</div></main></div>
+<hr />
+</section><section class=""><h2 id="补扫1344-抓取北京时间-asiashanghai">补扫（13:44 抓取，北京时间 / Asia/Shanghai）</h2>
+<p><strong>台账</strong>：<code>/new</code> 页头已是 <strong>Monday, 9 November 2026</strong>（fresh curl；7 类 cs.AI/CV/LG/MM/SD、eess.AS、stat.ML）。去重 <strong>825</strong>（new 333 / cross 119 / repl 373；<code>raw/1109catchup/meta.json</code>）；screen.py <strong>v2.2</strong> 命中 <strong>54</strong>，<strong>全部读过标题（F6）</strong><span class="b b-meas">实测</span>。相对晨间 F3 窗（至 08673）：列表 max <strong><a href="https://arxiv.org/abs/2611.09894">2611.09894</a></strong>；高信号增量 <strong>Trajectory Forcing / AR-Edit</strong>。发现延迟：应出约 05:00–08:00 → 进日报约 13:50 ≈ <strong>6–9 h</strong>。</p>
+<p><strong>补扫结论：新「必读·先跑」×1（Trajectory Forcing）；无新「值得读」；新值得看·发现 AR-Edit；新值得看·旁注 Dual-Rate / TPC；F3 已评 KEEP；F5 文献转发 TraF+AR-Edit 2/2 已评，RL 10/10 已覆盖；机制真漏 0。晨间 AGAVE/WeLM/FewStepRL 折档维持。</strong><span class="b b-orig">原文</span>【代码】<span class="b b-codex">Codex✓</span>【自核】</p>
+<h3 id="列表批相对晨间的定级要点">列表批相对晨间的定级要点</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>短名</th>
+<th>kind</th>
+<th>相对晨间</th>
+<th>评级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.09096">2611.09096</a></td>
+<td>Trajectory Forcing</td>
+<td>new</td>
+<td>列表新（F3 窗外）</td>
+<td><strong>必读·先跑 (b)</strong></td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.09795">2611.09795</a></td>
+<td>AR-Edit</td>
+<td>new</td>
+<td>列表新</td>
+<td>值得看·发现</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2605.18190">2605.18190</a></td>
+<td>Dual-Rate Diffusion</td>
+<td>repl</td>
+<td>列表新（此前日报未评）</td>
+<td>值得看·旁注</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2602.04908">2602.04908</a></td>
+<td>TPC</td>
+<td>repl</td>
+<td>列表新（此前日报未评）</td>
+<td>值得看·旁注</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2610.26165">2610.26165</a></td>
+<td>TriTD</td>
+<td>repl</td>
+<td>列表复现</td>
+<td><strong>值得读·维持</strong></td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.07551">2611.07551</a></td>
+<td>PreSTP</td>
+<td>repl</td>
+<td>列表复现</td>
+<td>值得看·旁注·维持</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.08669">2611.08669</a> / 08495</td>
+<td>ChainFlow / QMAC</td>
+<td>new</td>
+<td>F3 已评</td>
+<td>OUT·维持</td>
+</tr>
+<tr>
+<td>其余 Mon hits</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>见 F8</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="补扫新必读短卡">补扫新必读短卡</h3>
+<p><strong>Trajectory Forcing（<a href="https://arxiv.org/abs/2611.09096">2611.09096</a>）· 必读·先跑 (b)</strong></p>
+<p>白话背景：把固定长度的视频扩散模型拉成更长、甚至流式视频，现在通用的办法是按块自回归——生成下一块时，看着已经生成的上一块。Self Forcing、Causal Forcing、CausVid 这一路，给模型看的其实只是上一块去噪结束时的<strong>干净结果</strong>。</p>
+<p>具体问题：一块视频要走 T 步去噪，中间每一步都有一个「当前估计的干净信号」。现有方法把这整条轨迹丢掉，只留下终点。作者的类比是：语言模型会条件在已经生成的全部 token 历史上，而 AR 扩散却条件在「上一个词的最终写法」上，中间打草稿的过程全扔了。于是跨块能用的信息变少，质量与长时漂移一起受损。</p>
+<p>方法（两段，名词先定义）：</p>
+<ol>
+<li><strong>轨迹点</strong>：生成第 i 块时，第 t 步去噪得到的干净信号估计记作 x(i,t)；t=1 接近噪声，t=T 是最终块。现有方法无论当前走到哪一步，都只看 x(上一块, T)。</li>
+<li><strong>选点函数 γ</strong>：TraF 并不把上一块全部 T 个点都塞进 KV（那会让缓存乘上 T，训练吃不消），而是每一步只选一个点。γ 控制选得更靠噪声还是更靠干净；γ→∞ 退化成「只看端点」，γ=1 是「和当前步对齐」，实验里 γ=2–3 最好。</li>
+<li><strong>SL 段（有真视频时）</strong>：真视频没有模型自己滚出来的轨迹，就用高斯插值造一条伪轨迹，让模型再预测一遍，用 <strong>flow matching</strong>（回归速度场）训练。这是分类轴上的「轨迹匹配」。</li>
+<li><strong>RL 段（有教师时）</strong>：学生按块自己 rollout，每块真实跑 T 步，得到真轨迹；训练信号是 <strong>DMD</strong>（用冻结的教师分数和可学习 critic 做分布匹配，和 Self Forcing 同一目标）。作者把这称为 RL 段，本质仍是分数差分布匹配，不是另训一个 reward 模型。</li>
+</ol>
+<p>为何有效：当前步还很噪的时候，看上一块一个「也比较糙」的轨迹点，能对上空间布局、又不会过早把细节钉死；当前步变干净时，再看更干净的点来对齐纹理。只看端点等于每一步都被「已经画完的上一块」管着，早期步容易被过约束、动态变少。他们用各向同性高斯去扰动端点做对照，比不扰动更差，说明增益来自轨迹结构，不是「随便把条件弄脏一点」。</p>
+<p>关键数字<span class="b b-orig">原文</span>：</p>
+<ul>
+<li>实现：Wan2.1-T2V-1.3B + 因果注意，832×480 @ 16 fps；推理 <strong>4 步（跟随 Self Forcing）</strong>；DMD 的 real score 是 Wan2.1-T2V-14B（critic 从 1.3B 初始化）。SL 段 flow matching <strong>20K</strong> step，RL 段 DMD <strong>2K</strong> step。与 SF、CF <strong>同一骨干、同一教师、同一 DMD 目标、同一 4 NFE</strong>。轨迹缓存相对端点循环大约多 <strong>6%</strong> 训练墙钟，不增加去噪器次数。</li>
+<li>5 秒 VBench（946 prompt，官方 Total=(4×Quality+Semantic)/5）：TraF Total <strong>85.15</strong> / Quality 85.89 / Semantic 82.20；Self Forcing 84.31 / 85.07 / 81.28；Causal Forcing 84.04 / 84.59 / 81.84。吞吐 15.0 FPS vs SF/CF 的 17.0 FPS，延迟 0.78 s vs 0.69 s。</li>
+<li>γ 消融（整条流水线各训一个模型）：γ=∞ 端点 84.24；γ=2 为 85.15；γ=3 为 85.13。两颗种子：第一轮 84.24/85.15，第二轮 84.33/85.13。</li>
+<li>高斯扰动对照：σ=0.22 → Total 83.87，σ=0.11 → 83.95，都低于端点基线。</li>
+<li>30 秒（MovieGenBench 128 prompt，训练时长的 6 倍；与 SF/CF 用同一滑动窗口 local_attn_size=21、sink_size=3）：TraF Total 73.98 vs SF 71.06 / CF 70.48；Quality Drift 1.38 vs SF 2.21 / CF 4.36。Rolling Forcing / LongLive 的 Drift 更低（0.56 / 0.60），但作者标明它们做了长视频专项训练，且 Temporal Quality 明显更低。30 秒结果是加分项，<strong>不是</strong>本次升必读的单独理由。</li>
+</ul>
+<p>与最近几篇的具体差别：</p>
+<ul>
+<li><strong>Self Forcing</strong>：同样是学生 rollout + DMD，但跨块条件固定为干净端点 x(n,T)。TraF 改的是「每一步选轨迹上的哪一点」。</li>
+<li><strong>Causal Forcing</strong>：在 SF 上加了因果 ODE 初始化和 DMD，条件仍是固定点。</li>
+<li><strong>History Forcing（<a href="https://arxiv.org/abs/2611.02782">2611.02782</a>）</strong>：把历史残差写成引导，喂进 DMD/OPSD——改的是训练信号里的引导项。TraF 改的是注意力上下文里放哪个中间态。并发工作，文中未比；<strong>不是同一个旋钮</strong>。</li>
+<li><strong>Diffusion Forcing</strong>：他们在蒸馏前的 SL 段对照过，轨迹条件 Total 84.39 vs Diffusion Forcing 84.07 vs 普通 teacher forcing 83.47（50 步、蒸馏前）。</li>
+</ul>
+<p>分类轴：学生训练信号 = SL 段轨迹匹配 + RL 段分数差分布匹配（DMD）；问题出在流式时间轴（跨 chunk 上下文），不是单步去噪公式本身。</p>
+<p>限制：① 项目页 https://wangbohan97.github.io/Trajectory-Forcing/ 有论文和视频，<strong>无 GitHub / HF 训推仓库</strong>（公开检索无同名仓）→ 不能在代码里逐行核对 loss，先跑阻塞。② 吞吐 15.0 vs 17.0 FPS，作者自己写进局限性。③ TraF 用自己的 SL 初始化，SF/CF 保留原初始化；γ=∞ 与高斯对照用来隔离机制，复现时仍应做「同一 SL ckpt、只改选点」。④ 只在 Wan2.1-1.3B、单一分辨率上验证。⑤ 未对比 History Forcing。</p>
+<p>对我们：会改变「流式蒸馏时上一块往 KV 里放什么」这个训练决定，所以碰 (a) 的决策一半；缺码，(a) 不成立。同协议 4 NFE 超过当前最强对照 Self Forcing / Causal Forcing，且 γ 消融把增益落在选点上 → 按 (b) 定为 <strong>必读·先跑</strong>。码开之前只改预期、不开工；码开则优先跑「端点 vs γ=2 选点」对照，并与 History 残差想清楚是否并排。</p>
+<h3 id="补扫新值得看短">补扫新值得看（短）</h3>
+<p><strong>AR-Edit（<a href="https://arxiv.org/abs/2611.09795">2611.09795</a>）· 值得看·发现。</strong> 在 DMD 蒸馏过的 AR 视频模型上，自注意力的 Q/K 跨去噪步仍然稳定、对齐源视频，V 才跟着内容变；这种不对称从双向教师继承来，在少步学生工作的高噪声区最强。于是不必做反演：对源视频跑一次前向、把源 V 缓存起来，生成时按需注入，就能在流式、看不到未来帧的条件下做编辑。作者在 <code>Reward Forcing</code> 的 Wan 2.1 DMD 学生（4 个训练时间步）上验证；反演在少步 NFE 下会塌。项目页 + 仓 <a href="https://github.com/marghovo/AR-Edit"><code>marghovo/AR-Edit</code></a>（有 <code>inference_aredit.py</code> / configs，公开 API 可见）。不减 NFE、不改 distill loss，故不升值得读；发现本身对「少步 AR 里反演为什么失效」有用。<span class="b b-orig">原文</span>【代码】</p>
+<p><strong>Dual-Rate Diffusion（<a href="https://arxiv.org/abs/2605.18190">2605.18190</a>）· 值得看·旁注。</strong> 重型上下文编码稀疏算、轻型去噪每步算，特征复用，ImageNet 上称 2–4× 降耗且不掉点；并称可与 Moment Matching Distillation 叠加。首次出现在本追踪（本日替换版）。未见摘要/页面给出可核仓库，不当成可用配方。【摘要】</p>
+<p><strong>TPC（<a href="https://arxiv.org/abs/2602.04908">2602.04908</a>）· 值得看·旁注。</strong> 在同一条概率路径上把两个时刻的速度预测拉齐，不改结构、采样器和推理 NFE；CIFAR-10 上 FM FID 6.35→3.19、OT-CFM 3.58→2.90，并写到对 MeanFlow / DiT 同样有帮助。是训练正则，不是少步蒸馏方法，故不升值得读。【摘要】</p>
+<h3 id="f5-队友转交召回补扫按-f9-复核">F5 队友转交召回（补扫按 F9 复核）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>来源</th>
+<th>转发/候选</th>
+<th>LIVE 已覆盖（含评级）</th>
+<th>漏检</th>
+<th>补扫后</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lit <code>forward-fewstep-2026-11-09.md</code></td>
+<td><strong>none</strong> 新待定级（STALE 晨间）</td>
+<td>—</td>
+<td>0</td>
+<td>维持</td>
+</tr>
+<tr>
+<td>lit catchup 13:45 <code>forward-fewstep-1345.md</code></td>
+<td><strong>2</strong>（TraF / AR-Edit）</td>
+<td>补扫前发布页均无</td>
+<td><strong>0 真漏</strong>（本批 screen 已独立评完）</td>
+<td>已写入本页</td>
+</tr>
+<tr>
+<td>RL <code>draft/forward_fewstep.txt</code> 待少步定级</td>
+<td><strong>10</strong></td>
+<td><strong>10/10</strong>（11-06 或今早 LIVE：Fisher 值得读 / PreSTP 旁注 / AGAVE 必读(b) / Route-DMD 旁注 / SpecCTMC OUT·LLM / EDGAR 外围 / RSA OUT·LLM / FewStepRL 值得读 / WeLM 值得读 / LeNO 旁注）</td>
+<td><strong>0</strong></td>
+<td>维持</td>
+</tr>
+<tr>
+<td>本批 screen v2.2</td>
+<td>54</td>
+<td>部分已评</td>
+<td>新评写入本页</td>
+<td>见 F8</td>
+</tr>
+<tr>
+<td>晨间 F3 ratings</td>
+<td>6+spot</td>
+<td><strong>并入本页</strong></td>
+<td>0</td>
+<td>KEEP</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>召回：</strong> 文献 13:45 转发 2 篇（TraF / AR-Edit）补扫前发布页均无，但本批 screen 已独立评完并写入，不算「转发后才发现」的真漏；RL 待少步定级 10/10 补扫前已覆盖；范围内机制真漏 = 0。</p>
+<h3 id="粗筛命中但未收录f854-命中逐条新必读已详卡">粗筛命中但未收录（F8，54 命中逐条；新必读已详卡）</h3>
+<p><a href="https://arxiv.org/abs/2611.07551">2611.07551</a> → 值得看·旁注（维持·PreSTP：少步AR视频免训时空token剪枝；不减NFE）
+<a href="https://arxiv.org/abs/2611.09795">2611.09795</a> → 值得看·发现（AR-Edit：DMD蒸馏AR上Q/K稳、V载内容，免反演流式编辑；有推理码，不改distill）
+<a href="https://arxiv.org/abs/2610.26165">2610.26165</a> → 值得读（维持·TriTD 替换版维持：轨迹蒸馏+分块加噪+正交DMD；10-20已评）
+<a href="https://arxiv.org/abs/2611.08669">2611.08669</a> → OUT·LLM（维持·ChainFlow：少步flow matching做LLM推测解码drafter）
+<a href="https://arxiv.org/abs/2611.09096">2611.09096</a> → 必读·先跑 (b)（Trajectory Forcing：跨chunk条件在去噪轨迹点；4NFE同协议超SF/CF；缺码阻塞）
+<a href="https://arxiv.org/abs/2605.06916">2605.06916</a> → OUT·域外（Tyche：单步流做概率天气预报）
+<a href="https://arxiv.org/abs/2605.16396">2605.16396</a> → 外围（ProxiMAP：图像逆问题PnP/MAP近似，非生成少步蒸馏）
+<a href="https://arxiv.org/abs/2605.18190">2605.18190</a> → 值得看·旁注（Dual-Rate：重/轻网络交错加速2–4×，可叠加蒸馏；未见公开训码）
+<a href="https://arxiv.org/abs/2610.38238">2610.38238</a> → OUT·归RL（维持·离线RL的状态后果约束，非生成蒸馏）
+<a href="https://arxiv.org/abs/2611.09074">2611.09074</a> → 外围（Emo-LiveSync：LivePortrait口型同步+运动空间蒸馏，非媒体少步扩散）
+<a href="https://arxiv.org/abs/2602.04908">2602.04908</a> → 值得看·旁注（TPC：flow/MeanFlow训练时配对时刻速度一致性正则；同NFE提质，不减步）
+<a href="https://arxiv.org/abs/2605.10180">2605.10180</a> → 外围·推理（DiT注意力头上检测/抑制风险概念，无采样步数压缩）
+<a href="https://arxiv.org/abs/2605.23346">2605.23346</a> → OUT·域外（离散扩散奖励倾斜采样（文本/DNA/蛋白/dLLM），非媒体生成）
+<a href="https://arxiv.org/abs/2606.06423">2606.06423</a> → OUT·驾驶（RiskFlow：单步流生成安全关键交通场景）
+<a href="https://arxiv.org/abs/2608.22788">2608.22788</a> → OUT·LLM（TailSieve：LLM rollout长尾路由）
+<a href="https://arxiv.org/abs/2611.07722">2611.07722</a> → OUT·LLM（维持·语言模型推理的教师引导在策略蒸馏（SD-OPD））
+<a href="https://arxiv.org/abs/2611.09387">2611.09387</a> → 外围（Paste2Place：物理引导的单步图像合成应用，非通用少步蒸馏）
+<a href="https://arxiv.org/abs/2604.11748">2604.11748</a> → OUT·LLM（LangFlow：连续扩散做语言建模）
+<a href="https://arxiv.org/abs/2605.12951">2605.12951</a> → 外围（CCVFM：核集诱导的层次流匹配改源分布；少步是生成建模结果，非蒸馏配方）
+<a href="https://arxiv.org/abs/2605.16981">2605.16981</a> → OUT·域外（长序列循环三维重建的状态更新门，非媒体生成）
+<a href="https://arxiv.org/abs/2605.31557">2605.31557</a> → OUT·VLM（EGOSTREAM：自我中心流式情景记忆评测，非视频生成）
+<a href="https://arxiv.org/abs/2609.16222">2609.16222</a> → 外围（维持·StopGrads：stopgrad与flow map/MeanFlow平稳点理论）
+<a href="https://arxiv.org/abs/2610.23047">2610.23047</a> → 外围（维持·DIFFLET：Trainium上DiT推理引擎，无少步训练方法）
+<a href="https://arxiv.org/abs/2610.30320">2610.30320</a> → OUT·机器人（维持·FRED：单步未来视频表征自蒸馏服务机器人动作）
+<a href="https://arxiv.org/abs/2611.01617">2611.01617</a> → OUT·VLM（维持·VLM负载自适应推测解码）
+<a href="https://arxiv.org/abs/2611.02780">2611.02780</a> → OUT·VLM（维持·交错多模态推理的前瞻视觉重聚焦）
+<a href="https://arxiv.org/abs/2611.08495">2611.08495</a> → OUT·数据选择（维持·QMAC：指令数据特征匹配；≠DMD）
+<a href="https://arxiv.org/abs/2611.09042">2611.09042</a> → OUT·LLM（按失败模式筛选推理蒸馏轨迹，语言模型）
+<a href="https://arxiv.org/abs/2510.08369">2510.08369</a> → OUT·LLM（引导星形掩码扩散；实验覆盖文本与代码）
+<a href="https://arxiv.org/abs/2604.17748">2604.17748</a> → OUT·域外（无源域适应+视觉语言先验，非生成蒸馏）
+<a href="https://arxiv.org/abs/2604.27239">2604.27239</a> → 外围（Drifting单步生成模型的minibatch softmax偏差闭式修正；非扩散/流蒸馏主线）
+<a href="https://arxiv.org/abs/2606.17241">2606.17241</a> → OUT·驾驶（车载交通标志识别的连续端侧推理）
+<a href="https://arxiv.org/abs/2606.25478">2606.25478</a> → OUT·VLM（TACO：视频识别开放词汇适配，非媒体生成）
+<a href="https://arxiv.org/abs/2607.24532">2607.24532</a> → OUT·域外（遥感地图生产实践指南）
+<a href="https://arxiv.org/abs/2608.07224">2608.07224</a> → OUT·LLM（随机自回归学习的样本复杂度理论（文本式））
+<a href="https://arxiv.org/abs/2608.19119">2608.19119</a> → OUT·域外（掩码扩散做时间序列插补）
+<a href="https://arxiv.org/abs/2611.08731">2611.08731</a> → OUT·域外（eSharp：事件相机深度估计扩散，非生成加速）
+<a href="https://arxiv.org/abs/2611.09129">2611.09129</a> → OUT·域外（触觉标注的特权视角蒸馏）
+<a href="https://arxiv.org/abs/2611.09317">2611.09317</a> → OUT·域外（部分观测动力系统的稳定概率仿真）
+<a href="https://arxiv.org/abs/2611.09345">2611.09345</a> → OUT·域外（教育学习路径推荐；长程仅为关键词命中）
+<a href="https://arxiv.org/abs/2611.09722">2611.09722</a> → OUT·LLM（FOSCAR：低比特KV缓存解码注意力加速）
+<a href="https://arxiv.org/abs/2611.09825">2611.09825</a> → OUT·LLM（BitDecoding-FP4：语言模型原生FP4 KV解码）
+<a href="https://arxiv.org/abs/2412.12737">2412.12737</a> → OUT·域外（极化SAR分割的SAM变体）
+<a href="https://arxiv.org/abs/2601.20250">2601.20250</a> → 外围（无曲率假设下流匹配统计速率，无少步采样方案）
+<a href="https://arxiv.org/abs/2602.00513">2602.00513</a> → OUT·LLM（网络安全威胁情报LLM的可验证奖励RL）
+<a href="https://arxiv.org/abs/2603.16843">2603.16843</a> → OUT·LLM（LLM智能体反事实经验蒸馏）
+<a href="https://arxiv.org/abs/2603.20508">2603.20508</a> → OUT·LLM（推理模型轨迹可读性与弱到强迁移评测）
+<a href="https://arxiv.org/abs/2607.12455">2607.12455</a> → OUT·域外（量化交易策略自进化优化）
+<a href="https://arxiv.org/abs/2607.19395">2607.19395</a> → OUT·LLM（重放教师轨迹前缀并在线续写，LLM智能体）
+<a href="https://arxiv.org/abs/2611.08753">2611.08753</a> → OUT·域外（符号回归的随机符号提升）
+<a href="https://arxiv.org/abs/2611.08797">2611.08797</a> → OUT·域外（时空预测Shapley解释基准）
+<a href="https://arxiv.org/abs/2611.09313">2611.09313</a> → OUT·语音（语音词法/风格嵌入解耦，非音频生成）
+<a href="https://arxiv.org/abs/2611.09323">2611.09323</a> → OUT·域外（穿戴IMU跨地点残差扩散翻译）
+<a href="https://arxiv.org/abs/2605.30844">2605.30844</a> → OUT·LLM（微调语言模型的信息传递分析）</p>
+<h3 id="补扫收口">补扫收口</h3>
+<p>Mon <code>/new</code> <strong>done</strong>（825/54；max <strong><a href="https://arxiv.org/abs/2611.09894">2611.09894</a></strong>）。<strong>认知</strong>：新挂 Trajectory Forcing 必读·先跑 (b)；AR-Edit / Dual-Rate / TPC 值得看。<strong>执行</strong>：无新可开工票；VA-TDM / History / Flex-6 仍挂；TraF / AGAVE 等码。F5/F9 <strong>真漏 0</strong>。LIVE 见发布。</p></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-11-09 13:53 (UTC+8)</div></main></div>
 <script>
 (function(){
  // 详情卡片全部展开/收起
