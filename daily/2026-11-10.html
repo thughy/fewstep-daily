@@ -1,0 +1,600 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>少步蒸馏 · 每日 2026-11-10（周二 · Tue /new pending · F3 预览）</title>
+<style>
+:root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--side:#f6f8fa;--line:#d1d9e0;--acc:#0b57d0;--l1:#fff8e6;--l1b:#f0c36d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--fg);background:var(--bg);font:15.5px/1.75 "Noto Sans CJK SC","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.top{position:sticky;top:0;z-index:5;background:#24292f;color:#fff;padding:8px 20px;display:flex;gap:18px;align-items:center;font-size:14px}
+.top a{color:#fff;opacity:.9} .top .brand{font-weight:700;opacity:1}
+.wrap{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1400px;margin:0 auto}
+nav.toc{position:sticky;top:40px;align-self:start;height:calc(100vh - 40px);overflow:auto;background:var(--side);border-right:1px solid var(--line);padding:14px 10px 40px 14px;font-size:13.5px;line-height:1.5}
+nav.toc .tt{font-weight:700;color:var(--muted);margin:2px 0 8px}
+nav.toc ul{list-style:none;margin:0;padding-left:10px} nav.toc>div>ul{padding-left:0}
+nav.toc li{margin:3px 0} nav.toc a{color:#333;display:block;padding:1px 4px;border-radius:4px}
+nav.toc a:hover,nav.toc a.on{background:#dde7f7;text-decoration:none}
+main{padding:22px 40px 80px;min-width:0}
+h1{font-size:26px;margin:.2em 0 .6em;border-bottom:2px solid var(--line);padding-bottom:.3em}
+h2{font-size:21px;margin:1.8em 0 .6em;border-bottom:1px solid var(--line);padding-bottom:.25em}
+h3{font-size:17.5px;margin:1.4em 0 .5em}
+h4{font-size:15.5px}
+blockquote{margin:0 0 1em;padding:8px 16px;border-left:4px solid #8c959f;background:#f6f8fa;color:#3d444d;font-size:14px}
+blockquote p{margin:.3em 0}
+code{font-family:"JetBrains Mono","DejaVu Sans Mono",Menlo,Consolas,monospace;font-size:.88em;background:#eff1f3;padding:.1em .35em;border-radius:4px}
+pre{background:#f6f8fa;border:1px solid var(--line);border-radius:6px;padding:10px 14px;overflow:auto} pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:.6em 0 1.1em}
+table{border-collapse:collapse;font-size:13.8px;line-height:1.55;min-width:60%}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left}
+th{background:#eef2f6;font-weight:700;position:sticky;top:0}
+tr:nth-child(even) td{background:#fafbfc}
+td strong{color:#8a1c1c}
+hr{border:0;border-top:1px solid var(--line);margin:1.6em 0}
+section.layer1{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:2px 22px 10px;margin:18px 0 26px}
+section.layer1>h2{border-bottom-color:var(--l1b)}
+section.layer1 .tw table{background:#fff}
+.layer-tag{display:inline-block;font-size:12px;font-weight:700;color:#7a4b00;background:#ffe2a8;border-radius:10px;padding:0 9px;margin-left:8px;vertical-align:middle}
+details.card{border:1px solid var(--line);border-radius:8px;margin:12px 0;background:#fff}
+details.card>summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:16.5px;background:#f3f6fa;border-radius:8px;list-style:none}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary:before{content:"▸ ";color:var(--acc)} details.card[open]>summary:before{content:"▾ "}
+details.card[open]>summary{border-bottom:1px solid var(--line);border-radius:8px 8px 0 0}
+details.card>.body{padding:4px 18px 10px}
+.cardtools{font-size:13px;margin:6px 0 2px} .cardtools button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:#fff;border-radius:5px;padding:1px 8px;cursor:pointer;margin-right:6px}
+.b{display:inline-block;font-size:11.5px;line-height:1.5;padding:0 6px;border-radius:9px;margin:0 2px;font-weight:600;white-space:nowrap;vertical-align:1px;border:1px solid transparent}
+.b-meas{background:#dafbe1;color:#116329;border-color:#a8e6b5}
+.b-orig{background:#ddf4ff;color:#0a4b8c;border-color:#a6d4f5}
+.b-team{background:#fff1e5;color:#953800;border-color:#ffc89a}
+.b-inf{background:#eef0f2;color:#4a535c;border-color:#cfd5db}
+.b-codex{background:#fbefff;color:#6e2b91;border-color:#e3b8f5}
+.b-oth{background:#f6f8fa;color:#4a535c;border-color:#d1d9e0}
+.idx{max-width:900px;margin:0 auto;padding:30px 30px 80px}
+.idx .hero{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:12px 22px;margin:14px 0 24px;font-size:16.5px}
+.idx .cards a{display:block;border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:10px 0;color:var(--fg)}
+.idx .cards a:hover{border-color:var(--acc);text-decoration:none;background:#f6f9ff}
+.idx .cards .t{font-weight:700;color:var(--acc)} .idx .cards .d{font-size:13.5px;color:var(--muted)}
+.foot{color:var(--muted);font-size:12.5px;margin-top:40px;border-top:1px solid var(--line);padding-top:8px}
+@media (max-width:900px){.wrap{grid-template-columns:1fr} nav.toc{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)} main{padding:16px}}
+@media print{nav.toc,.top,.cardtools{display:none}.wrap{display:block} details.card{break-inside:avoid}}
+</style></head><body>
+<div class="top"><a class="brand" href="../index.html">多模态少步蒸馏 · 前沿调研</a><a href="../baseline.html">2026Q3 基线</a><a href="../index.html#dailies">每日</a><a href="../index.html#weeklies">每周</a></div>
+<div class="wrap"><nav class="toc"><div class="tt">目录</div><div><div class="toc">
+<ul>
+<li><a href="#结论先行">结论先行</a></li>
+<li><a href="#30-秒速览">30 秒速览</a></li>
+<li><a href="#一屏框架今天挂在哪一格">一屏框架：今天挂在哪一格</a></li>
+<li><a href="#f1-f3-覆盖明细">F1 / F3 覆盖明细</a><ul>
+<li><a href="#f3-命中预览窗">F3 命中（预览窗）</a></li>
+</ul>
+</li>
+<li><a href="#f4-openreview一行">F4 OpenReview（一行）</a></li>
+<li><a href="#f5-对账一行-表">F5 对账（一行 + 表）</a></li>
+<li><a href="#挂票无新折档">挂票（无新折档）</a></li>
+<li><a href="#下一步闭环">下一步（闭环）</a></li>
+<li><a href="#详细卡片reelcache-261109973值得看旁注">详细卡片：ReelCache 2611.09973（值得看·旁注）</a></li>
+<li><a href="#预测读更细结果之前">预测（读更细结果之前）</a></li>
+</ul>
+</div>
+</div></nav>
+<main><h1 id="少步蒸馏-每日-2026-11-10周二-tue-new-pending-f3-预览">少步蒸馏 · 每日 2026-11-10（周二 · Tue <code>/new</code> <strong>pending</strong> · F3 预览）</h1>
+<blockquote>
+<p><strong>批次覆盖（F1）</strong>：应出列表日 = <strong>Tue 10 Nov</strong>。09:24 curl 7 类 <code>/new</code> 页头均为 <strong>Monday, 9 November 2026</strong> → <strong>Tue 10 = pending</strong>（公告未翻日）。<strong>勿把周一当今天；勿标 done。</strong> Mon 9 Nov <strong>done</strong>（825/54；列表 max <strong><a href="https://arxiv.org/abs/2611.09894">2611.09894</a></strong>；LIVE <a href="https://thughy.github.io/fewstep-daily/daily/2026-11-09.html">2026-11-09</a>）。<strong>Sat 7 / Sun 8 = none</strong>（周末无公告）。</p>
+<p><strong>F3 ID 预览</strong>：接 Mon 列表 max <strong><a href="https://arxiv.org/abs/2611.09894">2611.09894</a></strong>；逐号探测 <code>2611.09895–2611.10219</code>（325）→ <strong>found=309</strong> / 内部 404 <strong>16</strong> / 摘要 <strong>309/309</strong> / v2.2 hits <strong>10</strong><span class="b b-meas">实测</span>。产物 <code>daily/raw/1110morning/</code>。</p>
+<p><strong>F4 OpenReview</strong>：文献无新于 11-04 的 <code>or_iclr27*</code> dump；forcing 5 条维持（Pyramid/Future 值得看·流式记忆；SimForcing 外围·机器人；Position 外围·3D；Marine OUT）。coreish 积压 190 未清。</p>
+<p><strong>F5 对账</strong>：文献 forward <strong>无新增论文</strong>（STALE）；RL pending 18/18 已评（全 OUT/维持）；shortlist 漏挂 3 + kw 未见 1 已补录（全 OUT/外围）；<strong>机制真漏 0</strong>。
+标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】【HF】【仅OR摘要】<span class="b b-team">队友转述</span><span class="b b-inf">推断</span>【摘要】<span class="b b-codex">Codex✓</span></p>
+</blockquote>
+<hr />
+<section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
+<p><strong>周二列表批仍未上线（09:24 <code>/new</code> 仍 Mon 9 Nov）。F3 预告窗 found309 / hits10：无新「必读·先跑」、无新「值得读」。新「值得看·旁注」×1：ReelCache（AR 视频 KV 压缩归档，不减 NFE）。挂票维持：TraF / AGAVE 必读·先跑 (b) 仍缺码阻塞；History / VA-TDM (a)、Flex-6 仍挂；Speculative 待代码；WeLM / FewStepRL 值得读维持。</strong>【摘要】【代码】<span class="b b-codex">Codex✓</span>【自核】</p>
+<p><strong>认知推荐（该改预期；默认向他推荐读）：</strong>
+① <strong>无新机制文要改少步预期。</strong> 本窗没有新的轨迹/DMD/对抗/flow-map 学生，也没有同协议赢过 SF/CF/Fast-H3 的数字。【摘要】
+② <strong>ReelCache</strong>（新·旁注）：自回归视频扩散多轮生成时，KV 原样存会按秒吞掉数 GB，丢掉再重建会堵住下一块。它把每块干净前向的 K/V 做成「低秩分解（按能量定秩）→ 8bit 系数 → HEVC」的不可变节点，块与块共享基底，会话树支持 resume / rewind / fork；生成过程仍读原生 KV，归档走后台流。论文称五套模型上 KV 存储降 <strong>14.46–21.13×</strong>、下一块生成快 <strong>1.25–3.36×</strong>，六个 VBench 指标跌幅 <strong>&lt;1%</strong>。仓 <code>Tianyu9748/ReelCache</code> 有包、examples、tests、SGLang Diffusion 补丁，对接 CausVid / LongLive 1.0–2.0 / LongCat-Video / RAVEN（另有 LingBot-World-Fast）。<strong>不减 NFE、不改 distill loss</strong>——和 InstaGen 一样是「每步更便宜 / 历史更省」的服务侧旋钮，可与少步叠加。【摘要】【代码】
+③ 挂票认知不改：TraF 仍是「跨 chunk 条件在轨迹点还是端点」；AGAVE 仍是「单步 MeanFlow 的 CFG 不该只是标量」；History 是历史残差进 DMD/OPSD；VA-TDM 是速度场对抗。WeLM / FewStepRL 维持原评，不回滚。<span class="b b-orig">原文·已报</span></p>
+<p><strong>执行推荐（开票/先跑）：无新「必读·先跑」训练票（含 F3）。</strong> TraF / AGAVE 缺码 → 先跑仍阻塞。仍挂：① VA-TDM vs FastH3/DMD ② History <code>use_history_guidance</code> ③ Flex-6 vs trunc-6 / FastH3-8 ④ Speculative <strong>待代码</strong> ⑤ AGAVE 区间积分 CFG（缺码）⑥ TraF 轨迹点 vs 端点（缺码）。ReelCache <strong>不开训练票</strong>（服务侧、有现成仓，训练同学不必动手）。<span class="b b-inf">推断</span>【代码】</p>
+<ol>
+<li><strong>周二 pending。</strong> 不要把周一 825/54 再报一遍当今日增量。<span class="b b-meas">实测</span></li>
+<li><strong>无新必读·先跑，无新值得读。</strong> 新过线仅 ReelCache 值得看·旁注。【摘要】【代码】<span class="b b-codex">Codex✓</span></li>
+<li><strong>挂票全部维持</strong>，无新证据上调或回滚。<span class="b b-team">队友转述</span></li>
+<li><strong>F5：</strong> 文献 0 新论文；RL 18/18 已覆盖；shortlist 漏挂 SPAWN/Open-HumanWAM/FATHOM + kw Physics Steering 已补录（全 OUT/外围）；<strong>真漏 0</strong>。<span class="b b-team">队友转述</span></li>
+</ol>
+<p><strong>对我们训练的含义：</strong></p>
+<ul>
+<li><strong>今天不开新训练票。</strong> 挂票照旧跑。<span class="b b-inf">推断</span></li>
+<li><strong>认知上</strong>不必因为本窗 F3 改少步配方预期。ReelCache 只改「多轮 AR 视频服务时 KV 怎么归档」，不改学生回归什么目标。【摘要】</li>
+<li>若已经在 CausVid / LongLive / LongCat 一类因果视频上做多轮会话（暂停、倒回、分叉），KV 内存是痛点时，可以用 ReelCache 当服务对照；和 InstaGen（注意力抽样）/ PreSTP（token 剪枝）/ FastVideo <code>#2004</code> 一样正交于蒸馏。成功标准：同模型同步数下 VBench 不差于论文方向，且 resume/rewind 延迟明显低于重算 KV。【代码】<span class="b b-inf">推断</span></li>
+<li><strong>闭环仍挂</strong>：训练同学 · VA-TDM / History / Flex-6。成功标准不变。【代码】</li>
+<li><strong>下一动作</strong>：等 Tue <code>/new</code> 翻日后再扫相对 09894 的列表增量（F3 窗将与周二列表交叠，已评 ID KEEP、不重开）。</li>
+</ul>
+<hr />
+</section><section class="layer1"><h2 id="30-秒速览">30 秒速览<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文 / 资源</th>
+<th>评级</th>
+<th>一句话</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ReelCache <a href="https://arxiv.org/abs/2611.09973">2611.09973</a></td>
+<td>值得看·旁注（新·F3）</td>
+<td>AR 视频 KV 低秩+HEVC 归档；14–21× 存储 / 1.25–3.36× 下一块；不减 NFE</td>
+<td>【摘要】【代码】</td>
+</tr>
+<tr>
+<td>Trajectory Forcing <a href="https://arxiv.org/abs/2611.09096">2611.09096</a></td>
+<td><strong>必读·先跑 (b)</strong>（维持）</td>
+<td>跨 chunk 条件在去噪轨迹点；4NFE 同协议超 SF/CF；缺码阻塞</td>
+<td><span class="b b-orig">原文·11-09</span></td>
+</tr>
+<tr>
+<td>AGAVE <a href="https://arxiv.org/abs/2611.07566">2611.07566</a></td>
+<td><strong>必读·先跑 (b)</strong>（维持）</td>
+<td>Wan 1-NFE 同协议超 iMF/rCM-1；仓无训码→运行阻塞</td>
+<td><span class="b b-orig">原文·11-09</span></td>
+</tr>
+<tr>
+<td>WeLM-Image <a href="https://arxiv.org/abs/2611.07392">2611.07392</a></td>
+<td><strong>值得读</strong>（维持）</td>
+<td>noise-aware OPD + MeanFlow/DMD Turbo；缺码不升必读</td>
+<td><span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td>FewStepRL <a href="https://arxiv.org/abs/2611.08240">2611.08240</a></td>
+<td><strong>值得读</strong>（维持+限定）</td>
+<td>reward↑ 可与 VBench 变差同现；预算不完全可比；不 OUT</td>
+<td><span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td>AR-Edit <a href="https://arxiv.org/abs/2611.09795">2611.09795</a></td>
+<td>值得看·发现（维持）</td>
+<td>DMD-AR 的 QKV 不对称；免反演流式编辑；有推理码</td>
+<td><span class="b b-orig">原文·11-09</span></td>
+</tr>
+<tr>
+<td>Dual-Rate / TPC</td>
+<td>值得看·旁注（维持）</td>
+<td>重/轻交错加速 / 配对时刻速度一致性</td>
+<td>【摘要·11-09】</td>
+</tr>
+<tr>
+<td>InstaGen <a href="https://arxiv.org/abs/2611.08610">2611.08610</a></td>
+<td>值得看·旁注（维持）</td>
+<td>Wan PBSA→importance sampling；不减 NFE</td>
+<td>【摘要·11-09】</td>
+</tr>
+<tr>
+<td><strong>VA-TDM <a href="https://arxiv.org/abs/2611.06796">2611.06796</a></strong></td>
+<td><strong>必读·先跑 (a)</strong>（维持）</td>
+<td>VAD；H3 4NFE 胜 Fast-H3；码齐</td>
+<td><span class="b b-orig">原文·11-05</span></td>
+</tr>
+<tr>
+<td>History Forcing <a href="https://arxiv.org/abs/2611.02782">2611.02782</a></td>
+<td><strong>必读·先跑 (a)</strong>（维持）</td>
+<td>历史残差→DMD/OPSD；码+HF齐</td>
+<td><span class="b b-orig">原文·11-04</span></td>
+</tr>
+<tr>
+<td>Priming <a href="https://arxiv.org/abs/2610.20331">2610.20331</a></td>
+<td><strong>必读·先跑</strong>（维持）</td>
+<td>一步重建预训练+特征 OT</td>
+<td><span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td>Nitro / NextGAN / CAMFT / StepX / Disen / dKV / TaoMate / GDMD / Any / STAC / FSF-DMD / Fisher / TriTD</td>
+<td><strong>值得读</strong>（维持）</td>
+<td>对账不重评</td>
+<td><span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td>Direct / PTD</td>
+<td>必读·先跑（维持）</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Speculative</td>
+<td>必读·待代码（维持）</td>
+<td>码仍空壳（文献 11-10 twin 复核）</td>
+<td><span class="b b-team">队友转述</span></td>
+</tr>
+<tr>
+<td>PreSTP / Route-DMD</td>
+<td>值得看·旁注（维持）</td>
+<td>token 剪枝 / 语音路由 DMD</td>
+<td><span class="b b-orig">原文·11-06</span></td>
+</tr>
+<tr>
+<td>DiMoT <a href="https://arxiv.org/abs/2611.10160">2611.10160</a></td>
+<td>外围·动作Tokenizer（新·F3）</td>
+<td>动作 VAE 的 critic 频谱 + 平均速度一步解码</td>
+<td>【摘要】</td>
+</tr>
+<tr>
+<td>SceneShifter <a href="https://arxiv.org/abs/2611.09960">2611.09960</a></td>
+<td>外围·音驱动画控制（新·F3-spot）</td>
+<td>免训练注意力做多场景切换；不减 NFE</td>
+<td>【摘要】</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class="layer1"><h2 id="一屏框架今天挂在哪一格">一屏框架：今天挂在哪一格<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>单步去噪</th>
+<th>流式时间轴</th>
+<th>AV 跨模态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L1 轨迹 / 一致性 / flow map</strong></td>
+<td>AGAVE / FSF-DMD / WeLM Turbo / TPC 旁注维持</td>
+<td>TraF / PreSTP 维持</td>
+<td>Route-DMD 旁注</td>
+</tr>
+<tr>
+<td><strong>L2 分数差分布匹配（DMD）</strong></td>
+<td>FisherDistill / WeLM 维持</td>
+<td>TraF RL 段 / History / Disen / dKV 维持</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L3 对抗</strong></td>
+<td>VA-TDM / Nitro/NextGAN/CAMFT 维持</td>
+<td>Any 维持</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L4 额外真实数据 / reward</strong></td>
+<td>Priming / FewStepRL 维持</td>
+<td>History 长一致</td>
+<td>Pika ReFL 维持</td>
+</tr>
+<tr>
+<td><strong>L5 样本级 / 表征分布场</strong></td>
+<td>—</td>
+<td>Direct 维持</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>因果预训练 / 系统配方</strong></td>
+<td>WeLM 维持</td>
+<td>Mix / Wave 维持</td>
+<td>TaoMate 维持</td>
+</tr>
+<tr>
+<td><strong>推理时步数分配 / 注意力（F7）</strong></td>
+<td>InstaGen / Dual-Rate 旁注维持</td>
+<td><strong>ReelCache</strong>（KV 归档 + 会话树）；AR-Edit / PreSTP / Commit 旁注</td>
+<td>Flex 固定 6 knots</td>
+</tr>
+</tbody>
+</table></div>
+<p>放不进框架的：DiMoT（人体动作 tokenizer）；SceneShifter（音驱动画场景控制）；F3 其余 OUT（医疗一步 MRI / 数据蒸馏 / 物理 forcing 数据集 / 工程 LLM 蒸馏 / VITS 流式部署 / 机器人视频-动作 / 医疗分割 KD / 多 LoRA 服务）；F5 补录 SPAWN（旧文世界模型训免刷入）/ Open-HumanWAM / FATHOM / Physics Steering。</p>
+<p><strong>按这一格预判 ReelCache 会在哪里出问题：</strong> 硬切镜或大运动让相邻块的注意力基底差很多时，强制共享基底会伤细节；在线定秩若低估高熵层，人眼伪影可能比 VBench 的 &lt;1% 更明显；HEVC 全帧内编码的墙钟若没能藏进请求间隙，所谓「后台归档」会反噬服务尾延迟。——读结果前的预判。<span class="b b-inf">推断</span></p>
+<hr />
+</section><section class=""><h2 id="f1-f3-覆盖明细">F1 / F3 覆盖明细</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>项</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>期望列表日</td>
+<td>Tuesday, 10 November 2026</td>
+</tr>
+<tr>
+<td><code>/new</code> 页头（09:24）</td>
+<td><strong>Monday, 9 November 2026</strong>（7 类 cs.CV/LG/MM/SD、eess.AS、stat.ML、cs.AI 一致）<span class="b b-meas">实测</span></td>
+</tr>
+<tr>
+<td>状态</td>
+<td><strong>Tue pending</strong>（勿把 Mon 825/54 当今日）</td>
+</tr>
+<tr>
+<td>上一已完成列表</td>
+<td>Mon 9 Nov · 825 / 54 · max <strong><a href="https://arxiv.org/abs/2611.09894">2611.09894</a></strong></td>
+</tr>
+<tr>
+<td>F3 窗</td>
+<td><code>2611.09895–2611.10219</code>（325 号）</td>
+</tr>
+<tr>
+<td>found / 内部 404 / 摘要</td>
+<td><strong>309</strong> / <strong>16</strong> / <strong>309</strong></td>
+</tr>
+<tr>
+<td>内部 404</td>
+<td>09898, 09930, 09936, 10028, 10069, 10076, 10077, 10082, 10083, 10098, 10099, 10109, 10135, 10142, 10173, 10183</td>
+</tr>
+<tr>
+<td>max id</td>
+<td><strong><a href="https://arxiv.org/abs/2611.10219">2611.10219</a></strong>（窗上沿，abs HTML 确认存在）</td>
+</tr>
+<tr>
+<td>regex hits / 新必读 / 新值得读</td>
+<td><strong>10 / 0 / 0</strong></td>
+</tr>
+<tr>
+<td>产物</td>
+<td><code>daily/raw/1110morning/</code></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>说明：</strong> F3 预览 ID 是公告前的 abs，不是周二列表批。等 <code>/new</code> 翻到 Tuesday 后再做列表增量；本窗已评 ID <strong>KEEP</strong>，不重开为新过线项。<span class="b b-meas">实测</span></p>
+<h3 id="f3-命中预览窗">F3 命中（预览窗）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>id</th>
+<th>短名</th>
+<th>评级</th>
+<th>理由</th>
+<th>stage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.09973">2611.09973</a></td>
+<td>ReelCache</td>
+<td><strong>值得看·旁注</strong></td>
+<td>AR 视频 KV 压缩归档 + 会话树；不减 NFE</td>
+<td>F3-hit</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.10160">2611.10160</a></td>
+<td>DiMoT</td>
+<td><strong>外围·动作Tokenizer</strong></td>
+<td>动作 VAE critic + 平均速度一步解码</td>
+<td>F3-hit</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.10043">2611.10043</a></td>
+<td>OneStepBrainMRI</td>
+<td><strong>OUT·医疗</strong></td>
+<td>一步残差预测脑 MRI；声称仓 404</td>
+<td>F3-hit</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.09956">2611.09956</a></td>
+<td>MAPA</td>
+<td><strong>OUT·数据蒸馏</strong></td>
+<td>医学分类潜空间 dataset distillation；≠ DMD</td>
+<td>F3-hit</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.09959">2611.09959</a></td>
+<td>LaGSplat dataset</td>
+<td><strong>OUT·数据集</strong></td>
+<td>物理 forcing 项，不是生成蒸馏</td>
+<td>F3-hit</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.10015">2611.10015</a></td>
+<td>Micius-Flash</td>
+<td><strong>OUT·LLM</strong></td>
+<td>工程智能体多教师 on-policy 蒸馏</td>
+<td>F3-hit</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.10035">2611.10035</a></td>
+<td>Ninada</td>
+<td><strong>OUT·语音系统</strong></td>
+<td>单次前向 VITS 的流式切分与声码器压缩</td>
+<td>F3-hit</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.10148">2611.10148</a></td>
+<td>BATCH</td>
+<td><strong>OUT·机器人</strong></td>
+<td>跨具身视频-动作扩散策略</td>
+<td>F3-hit</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.10033">2611.10033</a></td>
+<td>TinyUNet3D-KD</td>
+<td><strong>OUT·医疗分割</strong></td>
+<td>分割教师→学生压缩</td>
+<td>F3-hit</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.10049">2611.10049</a></td>
+<td>LoRazor</td>
+<td><strong>OUT·系统/LLM</strong></td>
+<td>多 LoRA 服务提前释放 adapter</td>
+<td>F3-hit</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.09960">2611.09960</a></td>
+<td>SceneShifter</td>
+<td><strong>外围·音驱动画控制</strong></td>
+<td>免训练注意力做场景切换；不减 NFE</td>
+<td>F3-spot</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class=""><h2 id="f4-openreview一行">F4 OpenReview（一行）</h2>
+<p>无新于 11-04 的 OR dump；forcing 5 维持：Pyramid ↔ <a href="https://arxiv.org/abs/2605.13111">2605.13111</a> / Future ↔ <a href="https://arxiv.org/abs/2605.30083">2605.30083</a> = 值得看·流式记忆（已关 OR-only）；SimForcing 外围·机器人 WM；Position Forcing 外围·3D；Marine OUT·域外。coreish 积压 190 未清。详见 <code>raw/1110morning/f4_or.md</code>。</p>
+<hr />
+</section><section class=""><h2 id="f5-对账一行-表">F5 对账（一行 + 表）</h2>
+<p>文献晨间 forward <strong>0</strong> 新论文（STALE；<code>forward-fewstep-2026-11-10.md</code> 明确不重转周一 TraF/AR-Edit）。RL <code>2026-11-10-forward-rl.md</code> <strong>18/18</strong> 已评（全 OUT/维持，该转发单独不告 Henry）。shortlist 漏挂 3 + kw 未见 1 已补录。本窗 10 命中 + SceneShifter 全部有评级。<strong>机制真漏 0。</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>id</th>
+<th>短名</th>
+<th>评级</th>
+<th>理由</th>
+<th>stage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://arxiv.org/abs/2606.02575">2606.02575</a></td>
+<td>SPAWN</td>
+<td><strong>外围·世界模型控制</strong></td>
+<td>六月旧文训免概念刷入；代码放出 FYI，非新方法</td>
+<td>F5-lit</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.06817">2611.06817</a></td>
+<td>Open-HumanWAM</td>
+<td><strong>OUT·机器人WAM</strong></td>
+<td>5 万小时自我中心视频的开放 WAM 配方</td>
+<td>F5-lit</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.08898">2611.08898</a></td>
+<td>FATHOM</td>
+<td><strong>OUT·机器人/水下</strong></td>
+<td>世界模型引导扩散动作，AUV 跟踪</td>
+<td>F5-lit</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2511.20798">2511.20798</a></td>
+<td>Physics Steering</td>
+<td><strong>OUT·物理基础模型</strong></td>
+<td>2025-11 旧号；物理 FM 激活转向</td>
+<td>F5-RL-kw</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class=""><h2 id="挂票无新折档">挂票（无新折档）</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>票</th>
+<th>状态</th>
+<th>成功标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VA-TDM vs FastH3/DMD</td>
+<td><strong>挂</strong>（必读·先跑 a）</td>
+<td>SD3.5-M 4 步复现 → 迁 H3；偏好/过饱和不劣于论文方向</td>
+</tr>
+<tr>
+<td>History <code>use_history_guidance</code></td>
+<td><strong>挂</strong>（必读·先跑 a）</td>
+<td>Wan/DMD 底座对照；长时一致与动态度</td>
+</tr>
+<tr>
+<td>Flex-6 vs trunc-6 / FastH3-8</td>
+<td><strong>挂</strong></td>
+<td>画质·同步·多样性分桶；与上两票不互斥</td>
+</tr>
+<tr>
+<td>Speculative Forcing</td>
+<td><strong>待代码</strong></td>
+<td>码开则同日复评（文献 11-10 twin：GH 仍空壳）</td>
+</tr>
+<tr>
+<td>AGAVE 区间积分 CFG</td>
+<td><strong>(b) 维持；运行阻塞</strong></td>
+<td>仓出现训码+配置 → 同日评估是否开工</td>
+</tr>
+<tr>
+<td>TraF 轨迹点 vs 端点条件</td>
+<td><strong>(b) 维持；运行阻塞</strong></td>
+<td>仓出现训码 → 同日评估是否与 History 残差并排对照</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class=""><h2 id="下一步闭环">下一步（闭环）</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>谁</th>
+<th>对照什么</th>
+<th>成功标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>本 bot · 下一轮</td>
+<td>Tue <code>/new</code> 页头 = Tuesday, 10 November 2026</td>
+<td>batches Tue 记账；相对 09894 的增量全读标题+定级；F3 已评 KEEP</td>
+</tr>
+<tr>
+<td>Henry</td>
+<td>双行头条</td>
+<td><strong>认知：无新机制必读/值得读，可扫一眼 ReelCache 旁注</strong>；<strong>执行：无新可开工票</strong></td>
+</tr>
+<tr>
+<td>训练同学</td>
+<td>VA-TDM / History / Flex-6（挂）</td>
+<td>分桶指标；今日不开新票</td>
+</tr>
+<tr>
+<td>文献</td>
+<td>ReelCache 值得看·旁注（少步主评；服务侧 KV，不改 distill）</td>
+<td>本晨转发；不重复催 TraF/AR-Edit</td>
+</tr>
+<tr>
+<td>RL</td>
+<td>本窗无新 RL-on-few-step；早间 18 条对账不重开</td>
+<td>可关本批 fewstep forwarded</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class=""><h2 id="详细卡片reelcache-261109973值得看旁注">详细卡片：ReelCache <a href="https://arxiv.org/abs/2611.09973">2611.09973</a>（值得看·旁注）</h2>
+<p><strong>白话背景。</strong> 因果视频模型（CausVid、LongLive、LongCat 这一类）一块一块往外长。每一块做自注意力时，都要看着前面各块存下来的 K 和 V。多轮会话还要能暂停再续、倒回某一刻、从某一点分出另一条结局——这些都得把历史 KV 再拿回来。</p>
+<p><strong>具体问题。</strong> 原样保存 KV，每秒视频能吞掉数 GB；丢掉再从 latent 重算，下一块就要先重放很长一段。服务上这是内存和尾延迟两头疼，跟「采样要走多少步」不是同一件事。</p>
+<p><strong>方法（逐步，词都落到操作）。</strong></p>
+<ol>
+<li><strong>采集：</strong> 每一块在干净时刻（t = 0）前向结束时，引擎把每层、RoPE 之前的归一化 K、V 交给 ReelCache。生成过程自己仍读原生 KV，不被压缩路径打扰。</li>
+<li><strong>压缩：</strong> 把 K 或 V 矩阵写成 <code>P·Q</code>，取刚够保住能量目标的最小秩（论文默认 K 留 98%、V 留 95%）。若复用上一块的基底比重新拟合更便宜，就共享基底。</li>
+<li><strong>编码与落盘：</strong> 系数量化到 8 bit，再按全帧内 HEVC 压（有 NVENC 用硬件，否则 libx265）。每个块变成会话树上一个不可变节点；最近几块还可以在 GPU/主机上留一份原样 KV。</li>
+<li><strong>恢复：</strong> resume / rewind / fork 时用 NVDEC 解开目标点能看见的历史，重构 <code>P·Q</code>，补上引擎的 RoPE，一层一层写回原生 KV；同时下一块的第一次前向可以开始。归档走独立 CUDA 流，可以塞进请求间隙。</li>
+</ol>
+<p><strong>为什么有效。</strong> 相邻视频块的注意力基底往往差不多，共享 <code>P</code> 能少存很多；剩下的系数在空间-时间上还有视频编码能吃的冗余。能量阈值把「丢掉多少」写成可调预算，而不是固定砍一半。</p>
+<p><strong>和最接近工作的差别。</strong></p>
+<ul>
+<li>vs <strong>InstaGen</strong>（昨旁注）：InstaGen 改的是每一步里面哪些 block 参与注意力（抽样更便宜）；ReelCache 改的是历史 KV 怎么归档和恢复。一个砍单步计算，一个砍跨块存储。</li>
+<li>vs <strong>Focused Forcing / 流式 KV 旁注</strong>：那些工作谈训练或注意力设计里如何对待 KV；ReelCache 是训后服务系统，对接现成 CausVid/LongLive/LongCat。</li>
+<li>vs <strong>PreSTP / FastVideo <code>#2004</code></strong>：那些是 token 级剪枝/减少，作用在每步计算图上；ReelCache 不改计算图，只改历史状态的存放。</li>
+</ul>
+<p><strong>证据。</strong> 摘要：五套视频生成模型，相对基线 KV 存储降 14.46–21.13×，下一块生成快 1.25–3.36×，六个代表性 VBench 指标跌幅 &lt;1%。仓 <code>https://github.com/Tianyu9748/ReelCache</code> 本晨 HTTP 200，含 <code>reelcache/</code> 包、examples、tests、SGLang Diffusion 补丁和 README（支持 CausVid、RAVEN、LongLive 1.0/2.0、LongCat-Video）。【摘要】【代码】未复现数字，未跑 GPU。</p>
+<p><strong>局限。</strong> 不降低 NFE，不提供新的蒸馏损失；质量数字只有 VBench、没有切镜/大运动的人眼分桶；依赖 HEVC/NVDEC 这条视频编码链，部署比「存一份 bf16 KV」重。声称仓是服务运行时，不是训练配方。</p>
+<p><strong>对我们训练的含义。</strong> 图像 / 纯逐步数学生：<strong>无</strong>。视频流式 AR：若多轮会话已经在做，可当 KV 内存对照，不改 distill。AV：摘要未谈音视频联合 KV。先跑哪个对照：不上训练票；若服务侧要试，对照「原样 KV vs ReelCache 归档」的存储、下一块延迟和切镜场景质量。<span class="b b-inf">推断</span></p>
+<hr />
+</section><section class=""><h2 id="预测读更细结果之前">预测（读更细结果之前）</h2>
+<ul>
+<li>ReelCache：相邻块共享基底在连续镜头上应该成立；硬切镜和大运动是最可能的质量坑。VBench &lt;1% 跌可能掩盖局部 KV 伪影——若复现，应单列切镜/rewind 场景，而不是只报总平均。<span class="b b-inf">推断</span></li>
+<li>本窗其余 hits 从标题+摘要即可判 OUT/外围，不预期翻盘；若周二列表里某篇补了少步实验数字，再复评。<span class="b b-inf">推断</span></li>
+</ul></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-11-10 09:31 (UTC+8)</div></main></div>
+<script>
+(function(){
+ // 详情卡片全部展开/收起
+ document.querySelectorAll('[data-act]').forEach(function(b){b.addEventListener('click',function(){
+   var o=b.getAttribute('data-act')==='open';document.querySelectorAll('details.card').forEach(function(d){d.open=o;});});});
+ // 点击目录中位于折叠卡片内的锚点时自动展开
+ function openFor(id){var el=document.getElementById(id);if(!el)return;var d=el.closest('details');if(d)d.open=true;}
+ if(location.hash)openFor(decodeURIComponent(location.hash.slice(1)));
+ window.addEventListener('hashchange',function(){openFor(decodeURIComponent(location.hash.slice(1)));});
+ // 目录高亮
+ var links=[].slice.call(document.querySelectorAll('nav.toc a'));
+ var heads=links.map(function(a){return document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));});
+ function hl(){var y=window.scrollY+80,k=-1;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top+window.scrollY<=y&&h.offsetParent!==null)k=i;});
+   links.forEach(function(a,i){a.classList.toggle('on',i===k);});}
+ window.addEventListener('scroll',hl,{passive:true});hl();
+})();
+</script><script>if(document.querySelector('code.language-mermaid')){var s=document.createElement('script');
+s.src='https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';s.onload=function(){document.querySelectorAll('code.language-mermaid').forEach(function(c){var d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentNode.replaceWith(d);});mermaid.initialize({startOnLoad:false});mermaid.run();};document.head.appendChild(s);}</script></body></html>
