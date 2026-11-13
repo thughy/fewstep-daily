@@ -1,0 +1,235 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>少步蒸馏 · 每日 2026-11-13（周五 · 官方 Fri 列表仍 pending · 含 API+F3 已公开稿预览补扫）</title>
+<style>
+:root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--side:#f6f8fa;--line:#d1d9e0;--acc:#0b57d0;--l1:#fff8e6;--l1b:#f0c36d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--fg);background:var(--bg);font:15.5px/1.75 "Noto Sans CJK SC","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.top{position:sticky;top:0;z-index:5;background:#24292f;color:#fff;padding:8px 20px;display:flex;gap:18px;align-items:center;font-size:14px}
+.top a{color:#fff;opacity:.9} .top .brand{font-weight:700;opacity:1}
+.wrap{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1400px;margin:0 auto}
+nav.toc{position:sticky;top:40px;align-self:start;height:calc(100vh - 40px);overflow:auto;background:var(--side);border-right:1px solid var(--line);padding:14px 10px 40px 14px;font-size:13.5px;line-height:1.5}
+nav.toc .tt{font-weight:700;color:var(--muted);margin:2px 0 8px}
+nav.toc ul{list-style:none;margin:0;padding-left:10px} nav.toc>div>ul{padding-left:0}
+nav.toc li{margin:3px 0} nav.toc a{color:#333;display:block;padding:1px 4px;border-radius:4px}
+nav.toc a:hover,nav.toc a.on{background:#dde7f7;text-decoration:none}
+main{padding:22px 40px 80px;min-width:0}
+h1{font-size:26px;margin:.2em 0 .6em;border-bottom:2px solid var(--line);padding-bottom:.3em}
+h2{font-size:21px;margin:1.8em 0 .6em;border-bottom:1px solid var(--line);padding-bottom:.25em}
+h3{font-size:17.5px;margin:1.4em 0 .5em}
+h4{font-size:15.5px}
+blockquote{margin:0 0 1em;padding:8px 16px;border-left:4px solid #8c959f;background:#f6f8fa;color:#3d444d;font-size:14px}
+blockquote p{margin:.3em 0}
+code{font-family:"JetBrains Mono","DejaVu Sans Mono",Menlo,Consolas,monospace;font-size:.88em;background:#eff1f3;padding:.1em .35em;border-radius:4px}
+pre{background:#f6f8fa;border:1px solid var(--line);border-radius:6px;padding:10px 14px;overflow:auto} pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:.6em 0 1.1em}
+table{border-collapse:collapse;font-size:13.8px;line-height:1.55;min-width:60%}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left}
+th{background:#eef2f6;font-weight:700;position:sticky;top:0}
+tr:nth-child(even) td{background:#fafbfc}
+td strong{color:#8a1c1c}
+hr{border:0;border-top:1px solid var(--line);margin:1.6em 0}
+section.layer1{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:2px 22px 10px;margin:18px 0 26px}
+section.layer1>h2{border-bottom-color:var(--l1b)}
+section.layer1 .tw table{background:#fff}
+.layer-tag{display:inline-block;font-size:12px;font-weight:700;color:#7a4b00;background:#ffe2a8;border-radius:10px;padding:0 9px;margin-left:8px;vertical-align:middle}
+details.card{border:1px solid var(--line);border-radius:8px;margin:12px 0;background:#fff}
+details.card>summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:16.5px;background:#f3f6fa;border-radius:8px;list-style:none}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary:before{content:"▸ ";color:var(--acc)} details.card[open]>summary:before{content:"▾ "}
+details.card[open]>summary{border-bottom:1px solid var(--line);border-radius:8px 8px 0 0}
+details.card>.body{padding:4px 18px 10px}
+.cardtools{font-size:13px;margin:6px 0 2px} .cardtools button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:#fff;border-radius:5px;padding:1px 8px;cursor:pointer;margin-right:6px}
+.b{display:inline-block;font-size:11.5px;line-height:1.5;padding:0 6px;border-radius:9px;margin:0 2px;font-weight:600;white-space:nowrap;vertical-align:1px;border:1px solid transparent}
+.b-meas{background:#dafbe1;color:#116329;border-color:#a8e6b5}
+.b-orig{background:#ddf4ff;color:#0a4b8c;border-color:#a6d4f5}
+.b-team{background:#fff1e5;color:#953800;border-color:#ffc89a}
+.b-inf{background:#eef0f2;color:#4a535c;border-color:#cfd5db}
+.b-codex{background:#fbefff;color:#6e2b91;border-color:#e3b8f5}
+.b-oth{background:#f6f8fa;color:#4a535c;border-color:#d1d9e0}
+.idx{max-width:900px;margin:0 auto;padding:30px 30px 80px}
+.idx .hero{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:12px 22px;margin:14px 0 24px;font-size:16.5px}
+.idx .cards a{display:block;border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:10px 0;color:var(--fg)}
+.idx .cards a:hover{border-color:var(--acc);text-decoration:none;background:#f6f9ff}
+.idx .cards .t{font-weight:700;color:var(--acc)} .idx .cards .d{font-size:13.5px;color:var(--muted)}
+.foot{color:var(--muted);font-size:12.5px;margin-top:40px;border-top:1px solid var(--line);padding-top:8px}
+@media (max-width:900px){.wrap{grid-template-columns:1fr} nav.toc{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)} main{padding:16px}}
+@media print{nav.toc,.top,.cardtools{display:none}.wrap{display:block} details.card{break-inside:avoid}}
+</style></head><body>
+<div class="top"><a class="brand" href="../index.html">多模态少步蒸馏 · 前沿调研</a><a href="../baseline.html">2026Q3 基线</a><a href="../index.html#dailies">每日</a><a href="../index.html#weeklies">每周</a></div>
+<div class="wrap"><nav class="toc"><div class="tt">目录</div><div><div class="toc">
+<ul>
+<li><a href="#补扫1359-抓取北京时间-asiashanghai">补扫（13:59 抓取，北京时间 / Asia/Shanghai）</a><ul>
+<li><a href="#列表批相对晨间的定级要点">列表批相对晨间的定级要点</a></li>
+<li><a href="#补扫新必读先跑短卡edmd-261117194">补扫新必读·先跑短卡：eDMD 2611.17194</a></li>
+<li><a href="#补扫新值得看短">补扫新值得看（短）</a></li>
+<li><a href="#f5-队友转交召回补扫按-f9-复核">F5 队友转交召回（补扫按 F9 复核）</a></li>
+<li><a href="#粗筛命中但未收录f841-命中逐条新必读已详卡">粗筛命中但未收录（F8，41 命中逐条；新必读已详卡）</a></li>
+</ul>
+</li>
+<li><a href="#方法备忘预览范围">方法备忘（预览范围）</a></li>
+</ul>
+</div>
+</div></nav>
+<main><h1 id="少步蒸馏-每日-2026-11-13周五-官方-fri-列表仍-pending-含-apif3-已公开稿预览补扫">少步蒸馏 · 每日 2026-11-13（周五 · 官方 Fri 列表仍 <strong>pending</strong> · 含 API+F3 已公开稿预览补扫）</h1>
+<blockquote>
+<p><strong>批次覆盖（F1）</strong>：应出列表日 = <strong>Fri 13 Nov</strong>（Veterans Day 合并窗：Tue 10 Nov 14:00 ET 之后、Thu 12 Nov 14:00 ET 之前收到的稿，官方预告在 <strong>Thu 12 Nov 20:00 ET = 周五 09:00 北京时间</strong> 公告）。晨间 09:12 例行失败，未出日报。<strong>13:47–13:59 补扫</strong>：7 类 <code>/new</code> 页头仍是 <strong>Wednesday, 11 November 2026</strong>；<code>/catchup/cs.CV/2026-11-12</code> 与 <code>/2026-11-13</code> 均为 <strong>0 entries</strong>（“There was either no announcement for this day, or no updates within the requested subject.”）。<code>list/recent</code>、<code>pastweek</code> 最新一档也仍是 Wed 11 Nov。官方邮件列表<strong>尚未翻日</strong>，Fri <strong>不能记 done</strong>。Thu 12 Nov 按官方说明无独立公告，记 <strong>none</strong>（并入周五合并列表，待列表上线后再结账）。公告说明：<a href="https://blog.arxiv.org/2026/11/06/announcement-change-veterans-day/">Veterans Day 日程</a>。<span class="b b-meas">实测</span></p>
+<p><strong>已公开稿预览（官方列表未到，论文 abs 已 200）</strong>：export API（submittedDate / lastUpdatedDate，7+2 类）在窗口内 unique <strong>581</strong>，max <strong><a href="https://arxiv.org/abs/2611.16694">2611.16694</a></strong>；再对 ID 窗 <code>2611.14520–2611.17544</code> 探 abs（f3_found <strong>2782</strong>，内部 404 <strong>246</strong>，尾段连续 404 <strong>207</strong>，max seen <strong><a href="https://arxiv.org/abs/2611.17337">2611.17337</a></strong>）。7 类 ours <strong>722</strong>（其中 <strong>178</strong> 篇在 API 日期窗之外、靠 ID 探针才接到；API-only 3）。v2.2 hits <strong>41</strong>（另 extra 类 4 条），全部读过标题。旧稿替换：本窗 lastUpdated 与 new 集合重合，<strong>older_updates = 0</strong>——官方列表上线前，替换稿与交叉挂靠可能漏，故只作预览，不以本扫结账。<span class="b b-meas">实测</span></p>
+<p><strong>F5</strong>：文献 <code>/workspace/paper-digest/2026-11-12</code>、<code>2026-11-13</code> 与 RL <code>/workspace/genrl-digest/2026-11-12</code>、<code>2026-11-13</code> 目录均不存在；两助手公开站 11-12 / 11-13 日报 404。今日无「待少步定级」转发可对账。不是转发漏评，是两侧都还没落盘。<span class="b b-meas">实测</span></p>
+<p><strong>F4 OpenReview</strong>：无新于 11-04 的结构化 dump；维持。</p>
+</blockquote>
+<p><strong>官方周五合并列表还没上线，但已经公开的稿里出现一篇会改 4 步 DMD 做法的新方法。</strong> 新「必读·先跑 (b)」：<strong>eDMD</strong>（<a href="https://arxiv.org/abs/2611.17194">2611.17194</a>）——多步 DMD 的 fake 网只学学生最后一步的输出，再用同一个 fake 去纠正每一步；同教师、4 NFE 下，在 SD3-Medium / FLUX.2-klein-4B / 9B / Qwen-Image-2.1 上超过他们复现的 DMD2、D-DMD、TDM、CDM。仓库链接 404，<strong>(a) 不成立，缺码不开票</strong>。值得看·旁注：一步流映射为何能避开维数灾难（<a href="https://arxiv.org/abs/2611.15447">2611.15447</a>）；全双工世界模型 Duo v1（<a href="https://arxiv.org/abs/2611.15131">2611.15131</a>，蒸馏侧是标准 DMD + Self-Forcing，GitHub / HF 写着即将开）。<span class="b b-orig">原文</span><span class="b b-meas">实测</span></p>
+<p><strong>执行推荐（开票/先跑）：不新开票。</strong> TRD 票维持。eDMD 缺码，等仓库后再对照「同一 4 步 DMD 配方，只改 fake 是否只学终点」。仍挂：VA-TDM、History、Flex-6、Speculative 待代码、AGAVE / TraF / eDMD 缺码阻塞。DA-DMD、Condition Shifting 缺码不开票。<span class="b b-inf">推断</span></p>
+<ol>
+<li><strong>官方 Fri 列表 pending</strong>，Thu 无独立公告。预览不是完整批次（替换稿可能漏）。<span class="b b-meas">实测</span></li>
+<li><strong>新必读·先跑仅 eDMD (b)</strong>；无新值得读。TRD 票与其余挂票维持，eDMD 不开票。<span class="b b-orig">原文</span></li>
+<li><strong>F5 真漏 0</strong>（今日无队友待定级转发）。<span class="b b-meas">实测</span></li>
+</ol>
+<hr />
+<section class=""><h2 id="补扫1359-抓取北京时间-asiashanghai">补扫（13:59 抓取，北京时间 / Asia/Shanghai）</h2>
+<p><strong>补扫结论：官方 <code>/new</code> 未翻日，Thu/Fri catchup 均 0 条，Fri 仍 pending。对已公开稿做 API+F3 预览（722/41；max <a href="https://arxiv.org/abs/2611.17337">2611.17337</a>）。新「必读·先跑 (b)」：eDMD <a href="https://arxiv.org/abs/2611.17194">2611.17194</a>（缺码不开票）。无新「值得读」。新值得看·旁注：15447（一步流理论）、Duo 15131（全双工世界模型，标准 DMD+SF）。F5：文献与 RL 今日无待少步定级转发。机制真漏 0（就已落到盘上的转发而言）。挂票维持。</strong>【摘要】<span class="b b-orig">原文</span><span class="b b-meas">实测</span></p>
+<h3 id="列表批相对晨间的定级要点">列表批相对晨间的定级要点</h3>
+<ul>
+<li>晨间例行失败，没有 F3 晨报。本补扫直接从周三已结账的 max <strong><a href="https://arxiv.org/abs/2611.14519">2611.14519</a></strong> 往后探。官方列表一旦上线，需要用完整 <code>/new</code> 或 catchup 再对一次，尤其补替换稿。</li>
+<li><strong>新必读仅 eDMD</strong>：改的是多步 DMD 里 fake 网该学哪一截分布，不是再搬一次 DMD。和 TRD（取消 fake 网、一次前向兼做轨迹对齐）不是同一条路，不抢今天的 TRD 票。</li>
+<li>Duo 的蒸馏段是「冻结 Intent 做语言 rollout + Realization 按 Self-Forcing 做媒体 rollout + 标准 4 步 DMD」，系统新、损失不新。15447 是自蒸馏流映射的统计保证，没有新训练配方。</li>
+</ul>
+<h3 id="补扫新必读先跑短卡edmd-261117194">补扫新必读·先跑短卡：eDMD <a href="https://arxiv.org/abs/2611.17194">2611.17194</a></h3>
+<p><strong>背景：</strong> 把多步扩散教师压成 4 步学生时，现在常用的办法是分布匹配蒸馏（DMD）：再训一个 fake 分数网，跟踪学生正在生成的分布，用「教师分数 − fake 分数」去推学生。学生推理时只交出最后一步的图；训练时它中间几步的预测，分布和终点并不一样。</p>
+<p><strong>问题：</strong> DMD2、D-DMD 让同一个 fake 去学「随机抽到的某一步预测」的混合物；TDM 则按阶段、用中间落点当参考。作者指出：只要 fake 参考的不是终点分布，就会多出一项「参考残差」。即使学生最后已经和教师对上了，这项残差还可以继续推学生，把中间步往错误方向拉。目标其实只要求终点对齐，中间步不必模仿教师对应时刻的分布。</p>
+<p><strong>方法（按一次学生更新）：</strong></p>
+<ol>
+<li>学生从噪声走完 4 步，得到终点 (\hat{x}_{K-1})（也就是最终输出）。</li>
+<li>只把这些终点再加噪，用来训练<strong>同一个</strong> fake 网 (F)（流匹配 / 去噪回归）。中间步的预测不进 fake 的训练集。</li>
+<li>纠正学生时，每一步的干净预测都可以拿来加噪成查询 (y)；校正用的是同一个终点 fake：(C = A(y,\tau) - F(y,\tau))。其中 (A) 是教师监督。</li>
+<li><strong>精确教师（PT）</strong>：对落在最后一段噪声区间里的查询，不再用教师单步带引导的预测，而改走一小段多步轨迹，只增加训练时的教师前向，不增加学生推理步数。</li>
+<li><strong>校准查询密度（Q）</strong>：中间步该在哪些噪声等级上查询，事先用教师跨等级预测一致性定好，训练中不再改。</li>
+</ol>
+<p><strong>为何能工作：</strong> 理论结果是：在共同的加噪过程下，参考残差为零，当且仅当 fake 学的就是终点分布。于是「匹配项是否消失」和「终点有没有对齐」绑在一起，不再被中间分布绑住。中间步因此可以按 4 步生成自己调整，不必再假装自己是多步教师的中间态。PT 和 Q 加强的是教师这一侧，不是 fake 参考的定义。</p>
+<p><strong>按这一格预判会在哪里出问题（读主表之前；摘要已声明 4 步超过现有 DM 方法，故不是严格盲评）：</strong> 终点 fake 应是主增益，去掉它应掉得最多；PT 是额外教师算力，可能早期更明显。风险：用 HPSv3++ 选峰会抬高标题指标；他们复现的 DMD2 去掉了 GAN；Qwen 上 eDMD 用了 PAG 加强教师，基线是否同样用要核对。——读表前的预判。<span class="b b-inf">推断</span></p>
+<p><strong>证据：</strong> 四个教师压成 4 步，不用真实图。DrawBench-1000（200 条 × 5 种子）；峰点按每 100 次更新在 raw/EMA 上取最高 HPSv3++，同时报 1k / 2k 次更新的 raw HPSv3++。SD3-Medium 与 FLUX.2 训 2000 次（CDM 的 191,500 条提示）；Qwen-Image-2.1 训 600 次。基线：DMD2、D-DMD（Decoupled DMD）、TDM、CDM，以及官方 4 步检查点；DMD2（无 GAN）和 D-DMD 在他们代码库按公开配方复现并调了学习率。主表（Tab. 1 / 2，HPSv3++）：SD3-Medium <strong>11.171</strong>（D-DMD 10.841，CDM 官方 10.396，TDM 官方 10.386，DMD2 10.270），1k/2k 仍领先（11.171 / 10.820 vs D-DMD 10.388 / 10.677）；FLUX.2-klein-4B <strong>12.699</strong>（DMD2 11.337，官方 4 步 10.509）；FLUX.2-klein-9B <strong>12.431</strong>（官方 4 步 11.526，D-DMD 11.325）；Qwen-Image <strong>14.691</strong>，七项相对 DMD2 / TDM 全领先（教师 40 步 13.767，官方 8 步 Turbo 13.850）。消融（Tab. 3）去掉终点参考掉得最多：SD3 11.171→10.122，FLUX-4B 12.699→11.095；去掉 PT 在 FLUX-4B 掉到 11.667；Q 在 SD3 更有用（11.171→10.798），在 FLUX-4B 上校准密度已接近均匀、几乎持平。独立复跑标准差约 0.074（SD3）/ 0.11（FLUX-4B）。不是所有指标都第一：SD3 上 CDM 的 HPSv3 / PickScore / CLIP 更高，DMD2 的 ImageReward 更高；FLUX-4B 官方 4 步的 PickScore、CLIP、DPG 更高。<span class="b b-orig">原文</span></p>
+<p><strong>局限与对我们的含义：</strong> 仓库 <a href="https://github.com/Westlake-AGI-Lab/eDMD">Westlake-AGI-Lab/eDMD</a> 今日 404，无训码无配置，<strong>(a) 不成立，不开票</strong>。主指标是偏好分不是 FD-DINOv2，峰点按 HPSv3++ 选，但 1k/2k 固定预算仍领先，不完全是选峰。(b) 在同教师、4 NFE、他们复现的最强 DM 基线上成立，故升「必读·先跑 (b)」。图像为主，没有视频 / AV 实验；迁到流式时，假网若仍按「每一步中间态」来学，这篇的诊断直接适用——应先改成「只学块终点 / 最终输出」。不替代 TRD 票：TRD 问要不要 fake 网，这篇问 fake 网该学哪一截。<span class="b b-orig">原文</span><span class="b b-inf">推断</span></p>
+<h3 id="补扫新值得看短">补扫新值得看（短）</h3>
+<ul>
+<li><strong><a href="https://arxiv.org/abs/2611.15447">2611.15447</a></strong>（值得看·旁注）：在「低维曲面 + 高斯噪声」假设下，给 Boffi 等人的自蒸馏流映射写出避开维数灾难的逼近与泛化界，并证明一类随机插值系数下 (W_2) 也能避开。NeurIPS 2026 接收，52 页纯理论，无实验、无代码。认知上记下：一步流映射的统计效率可以由本征维数而不是环境维数决定。不改训练决定。<span class="b b-orig">原文</span></li>
+<li><strong>Duo v1 <a href="https://arxiv.org/abs/2611.15131">2611.15131</a></strong>（值得看·旁注）：全双工音视频世界模型。蒸馏段是标准 DMD（冻结 real score、可训 fake、可选 GAN）+ 双 rollout：冻结 Intent 只对窗口最后一轮助手话语做语言 rollout，Realization 按 Self-Forcing 用自己的音视频历史做媒体 rollout，学生是 4 步块因果生成器；另有 VGGT 相机旋转对视频 DMD 项的再加权。项目页 <a href="https://duo-v1.github.io">duo-v1.github.io</a> 写明 GitHub / HF「即将开放」，今日仓库 404。系统新，蒸馏损失不新，不升值得读，不开票。<span class="b b-orig">原文</span></li>
+</ul>
+<h3 id="f5-队友转交召回补扫按-f9-复核">F5 队友转交召回（补扫按 F9 复核）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>来源</th>
+<th>转发/候选</th>
+<th>LIVE 已覆盖（含 ID+评级）</th>
+<th>漏检</th>
+<th>补扫后</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lit <code>2026-11-13</code> / <code>forward-fewstep*</code>、<code>catchup/fewstep_hits.json</code></td>
+<td><strong>目录不存在</strong></td>
+<td>—</td>
+<td>—</td>
+<td>无待定级转发可对账</td>
+</tr>
+<tr>
+<td>lit <code>2026-11-12</code>（昨晨/补扫若有）</td>
+<td><strong>目录不存在</strong></td>
+<td>—</td>
+<td>—</td>
+<td>同上；公开站 11-12 日报 404</td>
+</tr>
+<tr>
+<td>RL <code>2026-11-13</code> <code>fewstep_kw_hits.json</code> / 待少步定级</td>
+<td><strong>目录不存在</strong></td>
+<td>—</td>
+<td>—</td>
+<td>无待定级转发可对账</td>
+</tr>
+<tr>
+<td>RL <code>2026-11-12</code></td>
+<td><strong>目录不存在</strong></td>
+<td>—</td>
+<td>—</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>本批 screen v2.2（已公开稿预览）</td>
+<td><strong>41</strong></td>
+<td>0（尚无 11-12/11-13 发布页）</td>
+<td>本页新评</td>
+<td>见下 F8</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>召回：</strong> 今日（及昨日）文献、RL 均无「待少步定级」转发落盘，谈不上转发漏挂。<strong>机制真漏 0</strong>（就已落到盘上的转发而言）。官方列表上线后若队友补转，须再对一次发布页。</p>
+<h3 id="粗筛命中但未收录f841-命中逐条新必读已详卡">粗筛命中但未收录（F8，41 命中逐条；新必读已详卡）</h3>
+<p><a href="https://arxiv.org/abs/2611.17194">2611.17194</a> → <strong>必读·先跑 (b)</strong>（eDMD：fake 只学终点；4 步同协议超 DMD2/D-DMD/TDM/CDM；缺码不开票）
+<a href="https://arxiv.org/abs/2611.15447">2611.15447</a> → 值得看·旁注（一步流映射避开维数灾难的统计界；无配方）
+<a href="https://arxiv.org/abs/2611.15131">2611.15131</a> → 值得看·旁注（Duo v1：全双工世界模型；蒸馏为标准 DMD+SF；码即将开）
+<a href="https://arxiv.org/abs/2611.14532">2611.14532</a> → OUT·核工程代理模型（事故仿真注意力，不是生成蒸馏）
+<a href="https://arxiv.org/abs/2611.15457">2611.15457</a> → 外围·水下修复（小波域流匹配，1 步是修复推理）
+<a href="https://arxiv.org/abs/2611.16310">2611.16310</a> → 外围·视频去雨（一步扩散修复，不是少步生成蒸馏）
+<a href="https://arxiv.org/abs/2611.14659">2611.14659</a> → OUT·时间序列（不规则序列上的 EM 生成）
+<a href="https://arxiv.org/abs/2611.16748">2611.16748</a> → 外围·物理自改进（用 LLM 物理知识给视频模型做选择/修正，不减 NFE）
+<a href="https://arxiv.org/abs/2611.16345">2611.16345</a> → 外围·多模态 dLLM 推理加速（训练免费剪 token / 早停，不是学生蒸馏）
+<a href="https://arxiv.org/abs/2611.16402">2611.16402</a> → OUT·VLM（BlinkOPD：细粒度感知的 on-policy 蒸馏）
+<a href="https://arxiv.org/abs/2611.16793">2611.16793</a> → 外围·全景深度（教师到轻量深度模型的蒸馏）
+<a href="https://arxiv.org/abs/2611.17298">2611.17298</a> → 外围·视频翻译一致性（输入对应关系检索历史，不减生成 NFE）
+<a href="https://arxiv.org/abs/2611.14844">2611.14844</a> → OUT·系统搜索（AutoAssumption）
+<a href="https://arxiv.org/abs/2611.14931">2611.14931</a> → OUT·分割自蒸馏
+<a href="https://arxiv.org/abs/2611.14955">2611.14955</a> → 外围·世界模型诊断（CARLA 上想象信号衰减）
+<a href="https://arxiv.org/abs/2611.15298">2611.15298</a> → OUT·金融量子模型
+<a href="https://arxiv.org/abs/2611.15579">2611.15579</a> → OUT·检测硬件（FoveaDet）
+<a href="https://arxiv.org/abs/2611.15600">2611.15600</a> → OUT·Agent 记忆
+<a href="https://arxiv.org/abs/2611.15640">2611.15640</a> → 外围·流式视频记忆评测（理解任务，不是生成蒸馏）
+<a href="https://arxiv.org/abs/2611.15831">2611.15831</a> → OUT·神经影像 benchmark
+<a href="https://arxiv.org/abs/2611.16224">2611.16224</a> → OUT·数据集蒸馏
+<a href="https://arxiv.org/abs/2611.16269">2611.16269</a> → 外围·红外超分（Rectified Flow）
+<a href="https://arxiv.org/abs/2611.16400">2611.16400</a> → 外围·流式视频交互评测（FuGIBench）
+<a href="https://arxiv.org/abs/2611.16484">2611.16484</a> → 外围·金融扩散采样器
+<a href="https://arxiv.org/abs/2611.16655">2611.16655</a> → 外围·视觉语音表示（MuViRL 聚合蒸馏）
+<a href="https://arxiv.org/abs/2611.16701">2611.16701</a> → 外围·3D 管线（加速在网格后处理，不是少步蒸馏）
+<a href="https://arxiv.org/abs/2611.16727">2611.16727</a> → OUT·驾驶 VLM
+<a href="https://arxiv.org/abs/2611.17048">2611.17048</a> → 外围·流式视频 LLM 对话（AURA 2.0，不是生成蒸馏）
+<a href="https://arxiv.org/abs/2611.17316">2611.17316</a> → OUT·代码记忆
+<a href="https://arxiv.org/abs/2611.14850">2611.14850</a> → OUT·LLM 推理蒸馏
+<a href="https://arxiv.org/abs/2611.14929">2611.14929</a> → 外围·语音 tokenizer 攻击
+<a href="https://arxiv.org/abs/2611.15051">2611.15051</a> → OUT·故障诊断
+<a href="https://arxiv.org/abs/2611.15162">2611.15162</a> → OUT·电网攻击
+<a href="https://arxiv.org/abs/2611.15215">2611.15215</a> → 外围·机器人世界模型（AFTER）
+<a href="https://arxiv.org/abs/2611.15493">2611.15493</a> → OUT·LLM 探索
+<a href="https://arxiv.org/abs/2611.15507">2611.15507</a> → OUT·RL
+<a href="https://arxiv.org/abs/2611.16418">2611.16418</a> → OUT·数据集蒸馏
+<a href="https://arxiv.org/abs/2611.16525">2611.16525</a> → 外围·TTS（ZONOS3-Mini 零样本克隆；音频单模态，摘要级）
+<a href="https://arxiv.org/abs/2611.16642">2611.16642</a> → OUT·数据集蒸馏
+<a href="https://arxiv.org/abs/2611.16897">2611.16897</a> → 外围·个性化 LoRA（TokenStream 不减 NFE）
+<a href="https://arxiv.org/abs/2611.15227">2611.15227</a> → OUT·多目标 RL 优化</p>
+<p>七类外多扫 4 条，不计入 41，备查：<a href="https://arxiv.org/abs/2611.16064">2611.16064</a> OUT·LLM OPSD；<a href="https://arxiv.org/abs/2611.16714">2611.16714</a> OUT·LLM 投机解码；<a href="https://arxiv.org/abs/2611.14558">2611.14558</a> 外围·视频通话抠像；<a href="https://arxiv.org/abs/2611.15587">2611.15587</a> OUT·越南语小模型。</p>
+<hr />
+</section><section class=""><h2 id="方法备忘预览范围">方法备忘（预览范围）</h2>
+<ul>
+<li>来源：官方 <code>/new</code> 未翻日，改走 API + abs ID 探针；筛法 screen v2.2，无分数截断，41 条全部读标题。</li>
+<li>未覆盖：官方 Thu/Fri 邮件列表（替换稿 / 交叉挂靠）；OpenReview 新稿库；HF Daily。列表上线后必须再扫一遍才能把 Fri 记 done。</li>
+</ul></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-11-13 14:04 (UTC+8)</div></main></div>
+<script>
+(function(){
+ // 详情卡片全部展开/收起
+ document.querySelectorAll('[data-act]').forEach(function(b){b.addEventListener('click',function(){
+   var o=b.getAttribute('data-act')==='open';document.querySelectorAll('details.card').forEach(function(d){d.open=o;});});});
+ // 点击目录中位于折叠卡片内的锚点时自动展开
+ function openFor(id){var el=document.getElementById(id);if(!el)return;var d=el.closest('details');if(d)d.open=true;}
+ if(location.hash)openFor(decodeURIComponent(location.hash.slice(1)));
+ window.addEventListener('hashchange',function(){openFor(decodeURIComponent(location.hash.slice(1)));});
+ // 目录高亮
+ var links=[].slice.call(document.querySelectorAll('nav.toc a'));
+ var heads=links.map(function(a){return document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));});
+ function hl(){var y=window.scrollY+80,k=-1;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top+window.scrollY<=y&&h.offsetParent!==null)k=i;});
+   links.forEach(function(a,i){a.classList.toggle('on',i===k);});}
+ window.addEventListener('scroll',hl,{passive:true});hl();
+})();
+</script><script>if(document.querySelector('code.language-mermaid')){var s=document.createElement('script');
+s.src='https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';s.onload=function(){document.querySelectorAll('code.language-mermaid').forEach(function(c){var d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentNode.replaceWith(d);});mermaid.initialize({startOnLoad:false});mermaid.run();};document.head.appendChild(s);}</script></body></html>
