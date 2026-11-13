@@ -1,0 +1,717 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>少步蒸馏 · 本周认知变化 2026-11-13</title>
+<style>
+:root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--side:#f6f8fa;--line:#d1d9e0;--acc:#0b57d0;--l1:#fff8e6;--l1b:#f0c36d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--fg);background:var(--bg);font:15.5px/1.75 "Noto Sans CJK SC","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.top{position:sticky;top:0;z-index:5;background:#24292f;color:#fff;padding:8px 20px;display:flex;gap:18px;align-items:center;font-size:14px}
+.top a{color:#fff;opacity:.9} .top .brand{font-weight:700;opacity:1}
+.wrap{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1400px;margin:0 auto}
+nav.toc{position:sticky;top:40px;align-self:start;height:calc(100vh - 40px);overflow:auto;background:var(--side);border-right:1px solid var(--line);padding:14px 10px 40px 14px;font-size:13.5px;line-height:1.5}
+nav.toc .tt{font-weight:700;color:var(--muted);margin:2px 0 8px}
+nav.toc ul{list-style:none;margin:0;padding-left:10px} nav.toc>div>ul{padding-left:0}
+nav.toc li{margin:3px 0} nav.toc a{color:#333;display:block;padding:1px 4px;border-radius:4px}
+nav.toc a:hover,nav.toc a.on{background:#dde7f7;text-decoration:none}
+main{padding:22px 40px 80px;min-width:0}
+h1{font-size:26px;margin:.2em 0 .6em;border-bottom:2px solid var(--line);padding-bottom:.3em}
+h2{font-size:21px;margin:1.8em 0 .6em;border-bottom:1px solid var(--line);padding-bottom:.25em}
+h3{font-size:17.5px;margin:1.4em 0 .5em}
+h4{font-size:15.5px}
+blockquote{margin:0 0 1em;padding:8px 16px;border-left:4px solid #8c959f;background:#f6f8fa;color:#3d444d;font-size:14px}
+blockquote p{margin:.3em 0}
+code{font-family:"JetBrains Mono","DejaVu Sans Mono",Menlo,Consolas,monospace;font-size:.88em;background:#eff1f3;padding:.1em .35em;border-radius:4px}
+pre{background:#f6f8fa;border:1px solid var(--line);border-radius:6px;padding:10px 14px;overflow:auto} pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:.6em 0 1.1em}
+table{border-collapse:collapse;font-size:13.8px;line-height:1.55;min-width:60%}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left}
+th{background:#eef2f6;font-weight:700;position:sticky;top:0}
+tr:nth-child(even) td{background:#fafbfc}
+td strong{color:#8a1c1c}
+hr{border:0;border-top:1px solid var(--line);margin:1.6em 0}
+section.layer1{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:2px 22px 10px;margin:18px 0 26px}
+section.layer1>h2{border-bottom-color:var(--l1b)}
+section.layer1 .tw table{background:#fff}
+.layer-tag{display:inline-block;font-size:12px;font-weight:700;color:#7a4b00;background:#ffe2a8;border-radius:10px;padding:0 9px;margin-left:8px;vertical-align:middle}
+details.card{border:1px solid var(--line);border-radius:8px;margin:12px 0;background:#fff}
+details.card>summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:16.5px;background:#f3f6fa;border-radius:8px;list-style:none}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary:before{content:"▸ ";color:var(--acc)} details.card[open]>summary:before{content:"▾ "}
+details.card[open]>summary{border-bottom:1px solid var(--line);border-radius:8px 8px 0 0}
+details.card>.body{padding:4px 18px 10px}
+.cardtools{font-size:13px;margin:6px 0 2px} .cardtools button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:#fff;border-radius:5px;padding:1px 8px;cursor:pointer;margin-right:6px}
+.b{display:inline-block;font-size:11.5px;line-height:1.5;padding:0 6px;border-radius:9px;margin:0 2px;font-weight:600;white-space:nowrap;vertical-align:1px;border:1px solid transparent}
+.b-meas{background:#dafbe1;color:#116329;border-color:#a8e6b5}
+.b-orig{background:#ddf4ff;color:#0a4b8c;border-color:#a6d4f5}
+.b-team{background:#fff1e5;color:#953800;border-color:#ffc89a}
+.b-inf{background:#eef0f2;color:#4a535c;border-color:#cfd5db}
+.b-codex{background:#fbefff;color:#6e2b91;border-color:#e3b8f5}
+.b-oth{background:#f6f8fa;color:#4a535c;border-color:#d1d9e0}
+.idx{max-width:900px;margin:0 auto;padding:30px 30px 80px}
+.idx .hero{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:12px 22px;margin:14px 0 24px;font-size:16.5px}
+.idx .cards a{display:block;border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:10px 0;color:var(--fg)}
+.idx .cards a:hover{border-color:var(--acc);text-decoration:none;background:#f6f9ff}
+.idx .cards .t{font-weight:700;color:var(--acc)} .idx .cards .d{font-size:13.5px;color:var(--muted)}
+.foot{color:var(--muted);font-size:12.5px;margin-top:40px;border-top:1px solid var(--line);padding-top:8px}
+@media (max-width:900px){.wrap{grid-template-columns:1fr} nav.toc{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)} main{padding:16px}}
+@media print{nav.toc,.top,.cardtools{display:none}.wrap{display:block} details.card{break-inside:avoid}}
+</style></head><body>
+<div class="top"><a class="brand" href="../index.html">多模态少步蒸馏 · 前沿调研</a><a href="../baseline.html">2026Q3 基线</a><a href="../index.html#dailies">每日</a><a href="../index.html#weeklies">每周</a></div>
+<div class="wrap"><nav class="toc"><div class="tt">目录</div><div><div class="toc">
+<ul>
+<li><a href="#结论先行">结论先行</a></li>
+<li><a href="#一屏框架taxonomy-map">一屏框架：taxonomy map</a></li>
+<li><a href="#本周认知变化按格子">本周认知变化（按格子）</a><ul><li><a href="#l1l2-流式trajectory-forcing-必读先跑-b">L1/L2 × 流式：Trajectory Forcing → 必读·先跑 (b)</a></li><li><a href="#l1l2-单步trd-必读先跑-b">L1/L2 × 单步：TRD → 必读·先跑 (b)</a></li><li><a href="#l2-单步edmd-必读先跑-b">L2 × 单步：eDMD → 必读·先跑 (b)</a></li><li><a href="#l2-流式condition-shifting-crossdistill-值得读">L2 × 流式：Condition Shifting / CrossDistill → 值得读</a></li>
+<li><a href="#f7tors-值得读-可用配方">F7：TORS → 值得读 · 可用配方</a></li>
+</ul>
+</li>
+<li><a href="#预测命中率">预测命中率</a></li>
+<li><a href="#原创性分层与重做比例本周新评-折档">原创性分层与重做比例（本周新评 / 折档）</a></li>
+<li><a href="#最接近工作是否真的读过">最接近工作是否真的读过</a></li>
+<li><a href="#与文献同事的评级分歧">与文献同事的评级分歧</a><ul>
+<li><a href="#维持分歧上周延续">维持分歧（上周延续）</a></li>
+<li><a href="#本周新对账-已闭合站内折档">本周新对账 / 已闭合站内折档</a></li>
+</ul>
+</li>
+<li><a href="#召回审计">召回审计</a><ul>
+<li><a href="#漏检清单含损失阶段">漏检清单（含损失阶段）</a></li>
+</ul>
+</li>
+<li><a href="#放不进框架的">放不进框架的</a></li>
+<li><a href="#下周要先跑的对照便宜">下周要先跑的对照（便宜）</a></li>
+<li><a href="#本周日报链接">本周日报链接</a></li>
+</ul>
+</div>
+</div></nav>
+<main><h1 id="少步蒸馏-本周认知变化-2026-11-13">少步蒸馏 · 本周认知变化 2026-11-13</h1>
+<blockquote>
+<p>覆盖周：<strong>2026-11-07 → 2026-11-13</strong>（周末无 arXiv 公告；Thu 12 为 Veterans Day，无独立公告，并入周五合并列表；已发布日报：09、10、11、13；上周周报 <a href="../daily/2026-11-06.html">2026-11-06</a>）。
+数字来自本周日报 / read-log / batches / Fri 官方列表实测；未复现。标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】【HF】【仅OR】<span class="b b-inf">推断</span><span class="b b-codex">Codex✓</span><span class="b b-team">队友转述</span>。
+<strong>本周五不做</strong> Q3 摘要级语义复扫（该一次性只在 2026-10-23）。本周五做的是 <strong>Fri <code>/new</code> 清账</strong>（13:59 仍是周三，先预览；<strong>17:24</strong> 翻到 Friday，Mon–Wed + Fri 全 <strong>done</strong>，Thu <strong>none</strong>）+ F5/F9/F10 周报复核。证据：<code>weekly/_gather-2026-11-13/</code>、<code>daily/raw/1113official/</code>。</p>
+</blockquote>
+<hr />
+<section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
+<p><strong>本周主判断（三根新必读旋钮：跨 chunk 条件改到去噪轨迹点；一条共享策略同时做轨迹对齐并取消 fake 网；fake 网只学终点。另有一条训练免费的 10 步时间表，和一篇迟到的「高噪走轨迹、低噪走 DMD」孪生。）</strong></p>
+<ol>
+<li><strong>跨 chunk 不该只看干净端点：</strong> Trajectory Forcing <a href="https://arxiv.org/abs/2611.09096">2611.09096</a> → <strong>必读·先跑 (b)</strong>——上一块条件改放到去噪轨迹上的点；Wan 1.3B / 14B 教师 / 4 NFE / 与 SF、CF 同一 DMD，Total <strong>85.15</strong> 超 SF 84.31 / CF 84.04；项目页无训码，运行阻塞。<span class="b b-orig">原文</span></li>
+<li><strong>轨迹监督和分布匹配可以共用一次前向：</strong> TRD <a href="https://arxiv.org/abs/2611.12978">2611.12978</a> → <strong>必读·先跑 (b)</strong>——共享动量混合策略同时做一步生成、估计学生自己的边际速度（从而取消 fake 网）、在教师 ODE 网格上对齐速度；SANA 1-NFE FD-DINOv2 <strong>70.34</strong> 优于 MeanFlow 97.21 / DMD2 112.47；仓 <a href="https://github.com/happyw1nd/TRD"><code>happyw1nd/TRD</code></a> 有训练脚本，无学生权重。本周唯一可开工的新训练票。<span class="b b-orig">原文</span>【代码】</li>
+<li><strong>假网该学的是终点，不是中间态混合物：</strong> eDMD <a href="https://arxiv.org/abs/2611.17194">2611.17194</a> → <strong>必读·先跑 (b)</strong>——4 步同协议在 SD3 / FLUX.2-klein / Qwen-Image 上超过他们复现的 DMD2、D-DMD、TDM、CDM；仓 404，缺码不开票。与 TRD 不问同一件事：一篇问还要不要 fake 网，一篇问 fake 网学哪一截。<span class="b b-orig">原文</span></li>
+<li><strong>取消 fake 网还有第三条路，不和 TRD 抢票：</strong> Condition Shifting <a href="https://arxiv.org/abs/2611.14033">2611.14033</a>（条件取反兼做 fake，接到 S2 Self-Replay；值得读，无码）。高噪衰减 DMD 的 DA-DMD、MeanFlow 课表 EbbFlow 也是值得读，都缺训码。<span class="b b-orig">原文</span></li>
+<li><strong>F7 格子这周有了现代 T2I 证据：</strong> TORS <a href="https://arxiv.org/abs/2603.00763">2603.00763</a>（值得读·可用配方）——训练免费的恒定总旋转时间表，Flux 10 步 ImageReward <strong>0.97</strong> 对上 50 步的 0.96；只出现在周五官方替换稿里，13:59 预览看不到。screen 排第 32，靠「命中全读、不截断」才没漏。<span class="b b-orig">原文</span>【代码】<span class="b b-meas">实测</span></li>
+<li><strong>召回：</strong> 公告日 <strong>4/4 done</strong>（Thu none）；队友转发机制真漏 <strong>0</strong>。但观察名单上的 CrossDistill 孪生 <strong><a href="https://arxiv.org/abs/2609.14725">2609.14725</a></strong> 9 月 13 日已在 arXiv，周一检索没把它入库，本周五 F10 才关闭并升 <strong>值得读</strong>——这是本周要记上的漏，不是本批转发漏。<span class="b b-meas">实测</span></li>
+</ol>
+<p><strong>认知推荐（该改预期；默认向 Henry 推荐读）：</strong></p>
+<ul>
+<li><strong>TraF</strong>：流式学生跨 chunk，先问条件该放在干净端点还是去噪轨迹上的某个点；它和 History 的历史残差不是同一旋钮。</li>
+<li><strong>TRD / eDMD / 14033</strong>：少步坏了，不必先调 KL 权重。可以问「fake 网能不能取消、能不能由学生自己兼、该不该只学终点、能不能靠条件平移兼做 fake」。三条路并行，不互相替代。</li>
+<li><strong>TORS</strong>：10 步 Flux / SD3.5 的默认时间表不是上限；报 10 步基线时应带一档训练免费时间表。</li>
+<li><strong>CrossDistill</strong>：高噪保模式、低噪做分布匹配，是「轨迹 vs DMD」之外的第三条调度；多样性和 Semantic 的增益比 Total 更清楚。</li>
+<li><strong>勿埋：</strong> 本周新值得读（含折档与 F10 闭合）不要用「可开工的新票只有 TRD」盖掉。</li>
+</ul>
+<p><strong>执行推荐（开票 / 必读·先跑）：</strong></p>
+<ul>
+<li><strong>本周可开（且应挂着）的对照票：</strong> ① TRD（新，SANA 官方脚本，对照 DMD2 / MeanFlow / ArcFlow，带一档 K=2）；② History <code>use_history_guidance</code> on/off；③ VA-TDM vs FastH3/DMD；④ Flex-6 vs trunc-6 / FastH3-8。四张<strong>不互斥</strong>。</li>
+<li><strong>仍待代码、先别当可复现票：</strong> TraF、eDMD、AGAVE、Speculative、Any/STAC/Disen、DA-DMD、14033、EbbFlow、CrossDistill（仓未核完训码）。</li>
+<li><strong>TORS / Re-MeanFlow</strong> 有推理或训练仓，但是推理对照或图像 MeanFlow 菜单，不开新的底座训练票。</li>
+</ul>
+<p><strong>对我们训练的含义：</strong></p>
+<ul>
+<li><strong>流式 AR：</strong> TraF 把「端点条件 vs 轨迹点条件」写进默认问题；History 残差票继续跑；两者等码后可并排，不互相替代。</li>
+<li><strong>图像少步 / 可迁 H3：</strong> 对照集在上周 {教师, PTD, Flex-6, FastH3-8, VA-TDM-4} 上加 <strong>TRD</strong>；eDMD 是「假网只学终点」的待跑假设；10 步评估加 TORS 时间表。</li>
+<li><strong>AV：</strong> 14033 给出取消独立 fake 网的条件平移路径，等码再对照；运动掉、指令涨，不能写成全面第一。</li>
+</ul>
+<hr />
+</section><section class="layer1"><h2 id="一屏框架taxonomy-map">一屏框架：taxonomy map<span class="layer-tag">第一层 · 框架</span></h2>
+<p>轴：<strong>① 学生训练信号</strong> × <strong>② 问题位置</strong> + <strong>③ 推理时步数分配（F7）</strong>。</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>轴1 \ 轴2</th>
+<th>单步去噪</th>
+<th>流式时间轴</th>
+<th>AV 跨模态</th>
+<th><strong>推理时步数分配（F7）</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L1 轨迹</strong></td>
+<td><strong>TRD</strong>（轨迹网格速度，与 L2 共享策略）；<strong>EbbFlow</strong>（MeanFlow TSA 课表）；<strong>Re-MeanFlow</strong>（先拉直再学平均速度）；FSF / AGAVE / WeLM / TPC 维持</td>
+<td><strong>TraF</strong> SL 段（伪轨迹 + flow matching）</td>
+<td>PTD / TaoMate 维持</td>
+<td><strong>TORS</strong>（训练免费时间表）；ART 旁注</td>
+</tr>
+<tr>
+<td><strong>L2 分数差</strong></td>
+<td><strong>TRD</strong>（自估计学生速度，取消 fake 网）；<strong>eDMD</strong>（fake 只学终点）；<strong>DA-DMD</strong>（高噪衰减 DMD）；<strong>CrossDistill</strong> 低噪段 DMD；Fisher / StepX 维持</td>
+<td><strong>14033</strong>（条件平移兼做 fake）；TraF RL 段；History / STAC / Disen / dKV 维持</td>
+<td>OmniOPD 维持</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L3 对抗</strong></td>
+<td>Nitro / NextGAN / CAMFT 维持</td>
+<td>Any 维持</td>
+<td>VA-TDM 维持</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L4 混合 / 真实·reward</strong></td>
+<td>FewStepRL（折档后值得读+限定）；Priming 维持</td>
+<td>One-Forcing 维持</td>
+<td>Routed / Pika ReFL 维持</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L5 / 样本级场</strong></td>
+<td>—</td>
+<td>Direct 维持</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>因果预训练 / 系统配方</strong></td>
+<td>WeLM（折档值得读）</td>
+<td>Mix 维持</td>
+<td>TaoMate-HD / TaoMate-R1</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>MeanFlow / 引导场</strong></td>
+<td>AGAVE（已折必读·先跑 (b)，缺码）；Re-MeanFlow；EbbFlow</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>修正器 / KV / 其它</strong></td>
+<td>—</td>
+<td>AR-Edit（源 V 注入）；Clean / Focused / ReelCache 旁注</td>
+<td>—</td>
+<td>Speculative 待代码；Dual-Rate 旁注；TORS / ART</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>相对上周，每格理解变化（一句话）：</strong></p>
+<ul>
+<li><strong>L1×L2×单步：</strong> TRD 证明轨迹对齐和分布匹配可以共用一次前向、并取消独立 fake 网；eDMD 则说若还留 fake 网，它应该只学终点。</li>
+<li><strong>L2×流式 / AV：</strong> 14033 用条件平移取消独立 fake 网，接到因果 Self-Replay；指令涨、运动掉。</li>
+<li><strong>L1×流式：</strong> TraF 把跨 chunk 条件从干净端点改到轨迹点；和 History 残差不是同一操作。</li>
+<li><strong>MeanFlow：</strong> EbbFlow 用时间抽样课表改进 1/2 NFE；Re-MeanFlow 用拉直偶合改善一步优化地貌；AGAVE 已折 (b)，仍缺码。</li>
+<li><strong>F7：</strong> TORS 在 Flux / SD3.5 上给出「10 步默认表不是上限」的现代 T2I 证据；时间表比缓存、求解器更关键。ART 在 CIFAR EDM 上同向，但不升。</li>
+</ul>
+<hr />
+</section><section class="layer1"><h2 id="本周认知变化按格子">本周认知变化（按格子）<span class="layer-tag">第一层 · 框架</span></h2>
+<details class="card" open="open">
+<summary id="l1l2-流式trajectory-forcing-必读先跑-b">L1/L2 × 流式：Trajectory Forcing → 必读·先跑 (b)</summary>
+<div class="body">
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>周初相信</strong></td>
+<td>Self Forcing / Causal Forcing 跨 chunk 只把上一块的干净端点写入 KV。</td>
+</tr>
+<tr>
+<td><strong>现在相信</strong></td>
+<td>端点丢掉了该块 T 步去噪轨迹。TraF 按 γ 从上一块轨迹里取一个点当条件；SL 段用高斯插值伪轨迹 + flow matching，RL 段用学生 rollout 真轨迹 + DMD。γ=∞（端点对照）84.24 → γ=2 为 85.15，机制可以和「多一段 SL 初始化」分开。<span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td><strong>训练含义</strong></td>
+<td>等训码后对照「同一 SL ckpt，只改选点」。不替代 History 票。缺码期间先跑阻塞。</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>关键数字。<span class="b b-orig">原文</span></strong> Wan2.1-1.3B、4 NFE、VBench 946 prompt：Total <strong>85.15</strong> vs SF 84.31 / CF 84.04。30 秒 Quality Drift 1.38 vs SF 2.21 是加分，按既定口径不够单独撑必读。</p>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="l1l2-单步trd-必读先跑-b">L1/L2 × 单步：TRD → 必读·先跑 (b)</summary>
+<div class="body">
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>周初相信</strong></td>
+<td>轨迹线（MeanFlow / ArcFlow / 一致性）和分布线（DMD）分头训，后者通常再养一个 fake 网。</td>
+</tr>
+<tr>
+<td><strong>现在相信</strong></td>
+<td>可以把 ArcFlow 的动量混合策略只用一次前向，同时承担一步生成、估计学生边际速度（取消 fake 网）、以及教师网格上的速度对齐。多样性、覆盖会掉。<span class="b b-orig">原文</span>【代码】</td>
+</tr>
+<tr>
+<td><strong>训练含义</strong></td>
+<td>开 TRD 票：官方 SANA 脚本，对照 DMD2 / MeanFlow / ArcFlow，带 K=2。成功标准：1-NFE FD 方向优于后两者，并记下 Recall / Diversity。</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>关键数字。<span class="b b-orig">原文</span></strong> SANA-1.6B 1-NFE FD-DINOv2 <strong>70.34</strong> vs MeanFlow 97.21 / DMD2 112.47；消融里共享估计 70.34 vs 另训 fake 网 127.86。SD3.5-M 2-NFE FD 略逊 DMD（49.90 vs 49.12），不能写成全面第一。</p>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="l2-单步edmd-必读先跑-b">L2 × 单步：eDMD → 必读·先跑 (b)</summary>
+<div class="body">
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>周初相信</strong></td>
+<td>多步 DMD 的 fake 学的是随机中间步或分阶段落点的混合物。</td>
+</tr>
+<tr>
+<td><strong>现在相信</strong></td>
+<td>只要 fake 参考的不是终点分布，就会多出一项参考残差，在终点已经对齐后仍可能把中间步拉偏。fake 只学学生最后一步输出，再用同一个 fake 纠正每一步。<span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td><strong>训练含义</strong></td>
+<td>仓 404，不开票。假设是：同一 4 步 DMD 配方，只改 fake 是否只学终点。迁到流式时，假网若仍按「每一步中间态」来学，这条诊断直接适用。不替代 TRD 票。</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>关键数字。<span class="b b-orig">原文</span></strong> SD3-Medium HPSv3++ <strong>11.171</strong> vs D-DMD 10.841；消融去掉终点参考掉得最多（11.171→10.122）。不是所有指标都第一。</p>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="l2-流式condition-shifting-crossdistill-值得读">L2 × 流式：Condition Shifting / CrossDistill → 值得读</summary>
+<div class="body">
+<p>14033 把条件取反接到 S2 Self-Replay，取消独立 fake 网；指令人评净偏好 +30%，运动 −8.6%。CrossDistill 把互补目标按噪声轴切开：高噪 PCM、低噪 DMD，Wan 1.3B / 14B 4 NFE Total 小幅超过 AnyFlow，多样性显著更好。两者都是「轨迹和分布不必用同一份损失从头训到尾」，但操作不同，都不升必读（14033 无码；CrossDistill 仓未核完训码）。<span class="b b-orig">原文</span></p>
+</div>
+</details>
+<h3 id="f7tors-值得读-可用配方">F7：TORS → 值得读 · 可用配方</h3>
+<p>周初：F7 主要是 Speculative（待代码）和缓存/剪枝旁注，缺少现代大图模型上「等时默认表 vs 新时间表」的硬证据。现在：TORS 在 Flux.1-Dev 和 SD3.5-M 上把 10 步默认表拉开，Flux IR 甚至摸到 50 步；作者自己的设计空间实验里，时间表比缓存和求解器更关键。代码齐，但性质是推理对照，不开训练票。<span class="b b-orig">原文</span>【代码】</p>
+<hr />
+</section><section class="layer1"><h2 id="预测命中率">预测命中率<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>区间</th>
+<th>新计入</th>
+<th>累计</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>上周结束（11-06）</td>
+<td>—</td>
+<td><strong>99/130 = 76%</strong></td>
+<td>末次入账不变</td>
+</tr>
+<tr>
+<td>11-07～11-13</td>
+<td>多数新文<strong>未事先按条登记计分</strong></td>
+<td><strong>99/130 = 76%</strong>（末次入账不变）</td>
+<td>TraF / TRD / eDMD / 14033 在日报里写了按格预判，方向都对上了（TraF 的 γ 对照、TRD 的 1-NFE 优势与多样性下降、eDMD 去掉终点参考掉得最多、14033 有得有失），但不是读结果前的分条打分，<strong>不计分</strong>。无低估型未中触发的当天复评。</td>
+</tr>
+</tbody>
+</table></div>
+<p>分类框架本身：TraF、TRD、eDMD 的按格预判方向命中，没有暴露出需要改轴的失败。TORS 能挂进 F7，说明这个格子在用。</p>
+<hr />
+</section><section class=""><h2 id="原创性分层与重做比例本周新评-折档">原创性分层与重做比例（本周新评 / 折档）</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>新机制</th>
+<th>新发现</th>
+<th>重做 / 配方</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单步蒸馏</td>
+<td>TRD、eDMD、DA-DMD、CrossDistill、EbbFlow、Re-MeanFlow</td>
+<td>TORS（时间表 &gt; 缓存/求解器）</td>
+<td>WeLM（升档后仍是 OPD→Turbo 配方）</td>
+<td>新机制为主</td>
+</tr>
+<tr>
+<td>流式时间轴</td>
+<td>TraF</td>
+<td>AR-Edit（Q/K 稳定、V 载内容）</td>
+<td>Duo 蒸馏段（标准 DMD+SF）</td>
+<td>TraF 是本周流式主增量</td>
+</tr>
+<tr>
+<td>AV</td>
+<td>—</td>
+<td>14033（指令涨、运动掉）</td>
+<td>TaoMate-R1（LoRA 分工配方）</td>
+<td>无新必读</td>
+</tr>
+<tr>
+<td>F7 / 推理</td>
+<td>TORS（几何时间表）</td>
+<td>ART（EDM 格可学）</td>
+<td>Dual-Rate、缓存旁注</td>
+<td>TORS 是本周 F7 主增量</td>
+</tr>
+<tr>
+<td>少步后再训</td>
+<td>—</td>
+<td>FewStepRL（reward↑ 可与 VBench 变差同现）</td>
+<td>MVC-ZigAL（少步 T2MV 上 RL）</td>
+<td>归交叉，不升必读</td>
+</tr>
+</tbody>
+</table></div>
+<p>粗计：本周新过线里，新机制或新发现明显多于纯换底座重做；Duo、多数缓存和域外命中仍是重做或外围。</p>
+<hr />
+</section><section class=""><h2 id="最接近工作是否真的读过">最接近工作是否真的读过</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>本周论文</th>
+<th>声称最接近</th>
+<th>是否读过</th>
+<th>证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TraF</td>
+<td>Self Forcing、Causal Forcing</td>
+<td>是（基线报告与此前日报）</td>
+<td>同协议 4 NFE DMD；γ=∞ 端点对照写进卡<span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td>TRD</td>
+<td>MeanFlow、DMD2、ArcFlow</td>
+<td>是</td>
+<td>主表与消融直接对照；脚本里四条损失已核【代码】</td>
+</tr>
+<tr>
+<td>eDMD</td>
+<td>DMD2、D-DMD、TDM、CDM</td>
+<td>部分（CDM 10-20 已评；D-DMD / TDM 按他们复现）</td>
+<td>主表是他们复现的最强 DM 基线；DMD2 去 GAN 已标风险<span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td>14033</td>
+<td>S2 Self-Replay、图像 APEX</td>
+<td>是（S2 / 条件平移脉络）</td>
+<td>对照写的是自家 S2-Avatar，不是公开第三方协议<span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td>EbbFlow</td>
+<td>MeanFlow</td>
+<td>是</td>
+<td>1/2 NFE 同协议对照 MeanFlow<span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td>DA-DMD</td>
+<td>DMD2</td>
+<td>是</td>
+<td>四步同协议涨点；未比 STAC / TDM<span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td>TORS</td>
+<td>GITS、UniPC、DPM-Solver、AYS 脉络</td>
+<td>摘要+主表已读；AYS 在 ART 卡里对照，TORS 主表用的是 GITS 等训练免费方法<span class="b b-orig">原文</span></td>
+<td></td>
+</tr>
+<tr>
+<td>CrossDistill</td>
+<td>PCM、DMD、rCM、AnyFlow</td>
+<td>基线是官方发布检查点；我们此前评过 rCM / DMD 脉络，AnyFlow 作最强 4 步对照<span class="b b-orig">原文</span></td>
+<td></td>
+</tr>
+<tr>
+<td>Re-MeanFlow</td>
+<td>MeanFlow、2-rectified flow++</td>
+<td>MeanFlow 已在框架里；ImageNet 数字来自原文，未自跑<span class="b b-orig">原文</span></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>没有发现「只引用没读、把最强对照漏掉」的新事故。eDMD 的风险仍是主指标为偏好分、部分审美指标不是全面第一。</p>
+<hr />
+</section><section class=""><h2 id="与文献同事的评级分歧">与文献同事的评级分歧</h2>
+<p>两边评级都保留；写明归属。本周没有因分歧而改我方已折 LIVE 的档。</p>
+<h3 id="维持分歧上周延续">维持分歧（上周延续）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文</th>
+<th>文献同事</th>
+<th>我（少步）</th>
+<th>要点</th>
+<th>本周状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clean Forcing <a href="https://arxiv.org/abs/2610.25634">2610.25634</a></td>
+<td><strong>必读</strong>（流式漂移主线）</td>
+<td><strong>值得读·流式（发现类）</strong></td>
+<td>SF 移植负面；不满足 (a)(b)</td>
+<td>维持；本周无新证据改档</td>
+</tr>
+<tr>
+<td>DeForcing <code>225TN4s58Y</code></td>
+<td><strong>一行·出名单 / 重做</strong></td>
+<td><strong>值得看（仅OR）旁注</strong></td>
+<td>免 rollout DMD 观察不升</td>
+<td>维持</td>
+</tr>
+<tr>
+<td>Drift Forcing <code>Gffoov6YRI</code></td>
+<td><strong>观察</strong>（等孪生）</td>
+<td><strong>必读·先跑</strong>（仅OR+匿名码）</td>
+<td>我按 (a) 核码</td>
+<td>维持；本周仍无 arXiv 孪生</td>
+</tr>
+<tr>
+<td>Speculative <a href="https://arxiv.org/abs/2610.22347">2610.22347</a></td>
+<td><strong>值得看</strong> / 代码观察</td>
+<td><strong>必读·待代码</strong></td>
+<td>GH 仍空壳</td>
+<td>维持</td>
+</tr>
+<tr>
+<td>One-Forcing / Routed</td>
+<td><strong>值得看</strong></td>
+<td><strong>必读·先跑</strong></td>
+<td>他存疑协议/缺码；我认 (a)/(b)</td>
+<td>维持</td>
+</tr>
+<tr>
+<td>Direct <a href="https://arxiv.org/abs/2610.30861">2610.30861</a></td>
+<td><strong>一行</strong></td>
+<td><strong>必读·先跑</strong></td>
+<td>训码后升</td>
+<td>维持</td>
+</tr>
+<tr>
+<td>Mix <a href="https://arxiv.org/abs/2610.33589">2610.33589</a></td>
+<td><strong>观察关</strong></td>
+<td><strong>值得读</strong></td>
+<td>他盯系统，我盯因果预训练</td>
+<td>维持</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="本周新对账-已闭合站内折档">本周新对账 / 已闭合站内折档</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文</th>
+<th>文献同事</th>
+<th>我（少步）</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AGAVE</strong> <a href="https://arxiv.org/abs/2611.07566">2611.07566</a></td>
+<td>上周转交精核</td>
+<td>11-09 晨间已折 LIVE <strong>必读·先跑 (b)</strong>（仍缺训码，先跑阻塞）</td>
+<td>站内折档已完成，不再是「待折」</td>
+</tr>
+<tr>
+<td><strong>WeLM-Image</strong> <a href="https://arxiv.org/abs/2611.07392">2611.07392</a></td>
+<td>—</td>
+<td>11-09 升 <strong>值得读</strong></td>
+<td>已折 LIVE</td>
+</tr>
+<tr>
+<td><strong>FewStepRL</strong> <a href="https://arxiv.org/abs/2611.08240">2611.08240</a></td>
+<td>交叉归 RL</td>
+<td>11-09 纠成 <strong>值得读+限定</strong>（不再 OUT）</td>
+<td>已折 LIVE</td>
+</tr>
+<tr>
+<td><strong>TraF</strong> <a href="https://arxiv.org/abs/2611.09096">2611.09096</a></td>
+<td>13:45 转发，screen 已评</td>
+<td><strong>必读·先跑 (b)</strong></td>
+<td>同向露出；ownership=fewstep</td>
+</tr>
+<tr>
+<td><strong>TRD</strong> <a href="https://arxiv.org/abs/2611.12978">2611.12978</a></td>
+<td>对账不改对方必读</td>
+<td><strong>必读·先跑 (b)</strong></td>
+<td><strong>一致</strong></td>
+</tr>
+<tr>
+<td><strong>14033 Condition Shifting</strong></td>
+<td>worth 同向</td>
+<td><strong>值得读</strong>（不升必读）</td>
+<td>一致；两边都不开票</td>
+</tr>
+<tr>
+<td><strong>DA-DMD / EbbFlow / eDMD</strong></td>
+<td>部分转交或尚未落盘（Thu/Fri 无目录）</td>
+<td>值得读 / 值得读 / 必读·先跑 (b)</td>
+<td>无冲突记录</td>
+</tr>
+<tr>
+<td><strong>CrossDistill / TORS</strong></td>
+<td>本周未见单独新档</td>
+<td>值得读</td>
+<td>我方 F10 / 官方清账主评</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+</section><section class=""><h2 id="召回审计">召回审计</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>指标</th>
+<th>目标</th>
+<th>本周</th>
+<th>判定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>批次覆盖</td>
+<td>100% 公告日</td>
+<td>Mon 825/54、Tue 经 catchup 记 1254/100（完整 <code>/new</code> 实为 1946，缺口 693 已于周三晨补）、Wed 819/56、Thu <strong>none</strong>、Fri 1239/82（17:24 清账）→ 公告日 <strong>4/4 done</strong></td>
+<td><strong>达标</strong></td>
+</tr>
+<tr>
+<td>发现延迟</td>
+<td>≤24h（周末 ≤72h）</td>
+<td>Mon / Wed 补扫约 6h；Fri 自预告 09:00 起约 8.5h（实际翻日在 13:59 之后，清账 17:24）；Tue 完整名单迟到周三晨，<strong>DA-DMD 等约 25h</strong>；周末无公告</td>
+<td><strong>部分达标</strong>（4 个公告日里 Tue 超 24h）</td>
+</tr>
+<tr>
+<td>外部召回</td>
+<td>≥95%（Henry 点名 ∪ 队友范围内候选）</td>
+<td>本周无 Henry 点名；队友待定级转发按发布页 ID+评级计，漏挂均已日终补录，<strong>机制真漏 0</strong>。另有观察名单孪生缺口 1 条（CrossDistill），不进本周转发分母，单独记漏</td>
+<td>转发口径达标；<strong>孪生检索有 1 条真漏</strong></td>
+</tr>
+<tr>
+<td>金标筛召回</td>
+<td>100%，且排进前 30</td>
+<td>本周与常驻必读 / 先跑 14 个 ID，v2.2 全部命中（无截断）。新值得读 TORS 在周五官方 82 条里排第 <strong>32</strong>，若设前 30 会漏，靠全读命中保住</td>
+<td><strong>命中 100%；前 30 对 TORS 未达标</strong></td>
+</tr>
+<tr>
+<td>复评上调次数</td>
+<td>持续 &gt;0 则初评偏保守</td>
+<td>已折 LIVE：<strong>AGAVE</strong> 值得读→必读·先跑 (b)；<strong>WeLM</strong> 升值得读；<strong>FewStepRL</strong> OUT→值得读；<strong>CrossDistill</strong> 值得看·高（仅OR）→值得读。新必读 TraF / TRD / eDMD 为首次定级，不计上调</td>
+<td><strong>上调 4</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="漏检清单含损失阶段">漏检清单（含损失阶段）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>论文</th>
+<th>发现日</th>
+<th>损失阶段</th>
+<th>最终</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.11898">2611.11898</a></td>
+<td>DA-DMD</td>
+<td>11-11 晨</td>
+<td><strong>取数不完整</strong>：11-10 13:47 用 catchup 日期页提前记 Tue done（1254），完整 <code>/new</code> 次日才到 1946，缺口 693</td>
+<td>值得读，已补；延迟约 25h</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2609.14725">2609.14725</a></td>
+<td>CrossDistill</td>
+<td>孪生 09-13 已公开；本周五 F10 才入库</td>
+<td><strong>F4 孪生检索</strong>：10-19 已挂观察名单并写「每周一搜 arXiv」，检索未闭合</td>
+<td>值得读；本周关闭</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2603.00763">2603.00763</a></td>
+<td>TORS</td>
+<td>11-13 17:24</td>
+<td><strong>预览窗不含旧号替换稿</strong>（13:59 已声明）；不是漏评。screen 排 32，无截断所以读到了</td>
+<td>值得读·可用配方</td>
+</tr>
+<tr>
+<td>11-10 RL 漏挂 4 + kw 30；11-11 ESTRA + RL 4 + kw 15 等</td>
+<td>多为 OUT/外围</td>
+<td>当日补扫</td>
+<td><strong>发布页漏挂（F9）</strong></td>
+<td>补录后 covered；机制真漏 0</td>
+</tr>
+<tr>
+<td>—</td>
+<td>本周队友范围内少步主线真漏</td>
+<td>—</td>
+<td>—</td>
+<td><strong>0</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Tue 11-10 的教训与上周 Tue 延迟同类：<code>/new</code> 未翻日时，catchup 日期页可以先扫，但不能在完整 <code>/new</code> 到来前把该日写成无缺口的 done。本周已经用周三晨补上，没有范围内漏评。</p>
+<p>Fri 晨间例行失败，13:59 预览保住了 eDMD；17:24 官方列表完成 F2 清账。失败本身没有造成新稿漏评。</p>
+<hr />
+</section><section class=""><h2 id="放不进框架的">放不进框架的</h2>
+<ul>
+<li><strong>Duo v1 <a href="https://arxiv.org/abs/2611.15131">2611.15131</a></strong>：全双工世界模型，系统新；蒸馏段是标准 4 步 DMD + Self-Forcing，挂到「重做蒸馏 / 新系统」旁注，不进主格。</li>
+<li><strong><a href="https://arxiv.org/abs/2611.15447">2611.15447</a></strong>：一步流映射避开维数灾难的统计界，是发现、不是方法；挂在 L1 单步「一步流为何能成立」的前提上。</li>
+<li><strong>11887 / Memorizon / Persistent4D</strong>：世界模型记忆或一步随机模型，不减生成蒸馏 NFE。</li>
+<li><strong>FlashMotion</strong>：三维动作空间 MeanFlow，不是像素视频。</li>
+<li>大量 OUT：LLM 推测解码 / 智能体 OPD / 医疗 / 核工程代理 / 机器人任务分配等，见各日 F8。</li>
+</ul>
+<p>发现类（TORS 的「时间表最关键」、AR-Edit 的 QKV 不对称）已经挂回对应格子的前提，不进本节。</p>
+<hr />
+</section><section class=""><h2 id="下周要先跑的对照便宜">下周要先跑的对照（便宜）</h2>
+<ol>
+<li><strong>TRD（新）：</strong> 官方 SANA 脚本，对照 DMD2 / MeanFlow / ArcFlow；带 K=2。报 1-NFE FD-DINOv2 与 Recall / Diversity。</li>
+<li><strong>History：</strong> Wan2.1-1.3B DMD，<code>use_history_guidance</code> on/off；报 VBench-Long / 回现 / Dynamic。</li>
+<li><strong>VA-TDM：</strong> SD3.5-M LoRA 4 步复现 → 再评估迁 H3。</li>
+<li><strong>H3 AV 对照集：</strong> {教师, PTD-4/8, Flex-6, FastH3-8, VA-TDM-4, <strong>TRD 若迁得动</strong>}。</li>
+<li><strong>可选推理对照（不开训练票）：</strong> Flux / SD3.5 10 步默认表 vs TORS。</li>
+<li><strong>盯码：</strong> TraF / eDMD / AGAVE / Speculative / DA-DMD / 14033 / EbbFlow / CrossDistill 训码；码开同日复评。CrossDistill 先核 <code>AlibabaResearch/SparkDiffusion</code> 是否真有训练脚本。</li>
+<li><strong>观察名单孪生：</strong> ReplanFlow、Drift-Gated TTUR 继续按标题搜 arXiv，避免再出现 CrossDistill 这种拖了两个月的闭合。</li>
+<li><strong>阅读债：</strong> ViRDM、APT2、Causal-rCM、PDD、PDMD <a href="https://arxiv.org/abs/2609.35768">2609.35768</a>（上周未清）。</li>
+</ol>
+<hr />
+</section><section class=""><h2 id="本周日报链接">本周日报链接</h2>
+<ul>
+<li><a href="../daily/2026-11-09.html">2026-11-09</a> — Mon done；<strong>TraF 必读·先跑</strong>；AGAVE / WeLM / FewStepRL 折档写入 LIVE</li>
+<li><a href="../daily/2026-11-10.html">2026-11-10</a> — Tue 经 catchup 记 done（完整 <code>/new</code> 有缺口，次日补）；<strong>EbbFlow 值得读</strong></li>
+<li><a href="../daily/2026-11-11.html">2026-11-11</a> — 周二缺口补齐 + Wed done；<strong>TRD 必读·先跑</strong>；DA-DMD / Condition Shifting 值得读</li>
+<li><a href="../daily/2026-11-13.html">2026-11-13</a> — Fri done（17:24 官方清账）；<strong>eDMD 必读·先跑</strong>；TORS / CrossDistill / Re-MeanFlow 值得读</li>
+</ul>
+<p>相关：<code>method.md</code> v1.4；<code>batches.md</code>；<code>lineage.md</code>；gather <code>_gather-2026-11-13/</code>。
+LIVE：https://thughy.github.io/fewstep-daily/weekly/2026-11-13.html</p></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-11-13 17:35 (UTC+8)</div></main></div>
+<script>
+(function(){
+ // 详情卡片全部展开/收起
+ document.querySelectorAll('[data-act]').forEach(function(b){b.addEventListener('click',function(){
+   var o=b.getAttribute('data-act')==='open';document.querySelectorAll('details.card').forEach(function(d){d.open=o;});});});
+ // 点击目录中位于折叠卡片内的锚点时自动展开
+ function openFor(id){var el=document.getElementById(id);if(!el)return;var d=el.closest('details');if(d)d.open=true;}
+ if(location.hash)openFor(decodeURIComponent(location.hash.slice(1)));
+ window.addEventListener('hashchange',function(){openFor(decodeURIComponent(location.hash.slice(1)));});
+ // 目录高亮
+ var links=[].slice.call(document.querySelectorAll('nav.toc a'));
+ var heads=links.map(function(a){return document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));});
+ function hl(){var y=window.scrollY+80,k=-1;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top+window.scrollY<=y&&h.offsetParent!==null)k=i;});
+   links.forEach(function(a,i){a.classList.toggle('on',i===k);});}
+ window.addEventListener('scroll',hl,{passive:true});hl();
+})();
+</script><script>if(document.querySelector('code.language-mermaid')){var s=document.createElement('script');
+s.src='https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';s.onload=function(){document.querySelectorAll('code.language-mermaid').forEach(function(c){var d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentNode.replaceWith(d);});mermaid.initialize({startOnLoad:false});mermaid.run();};document.head.appendChild(s);}</script></body></html>
