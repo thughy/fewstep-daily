@@ -237,7 +237,7 @@ details.card>.body{padding:4px 18px 10px}
 <p><strong>关键操作（代码对照原文）：</strong></p>
 <ol>
 <li>4 步学生按固定网格做确定性 Euler rollout，每一步都会被抽到做生成器更新（<code>step_select: per_sample</code>）。</li>
-<li><strong>终点假网</strong>：<code>critic.source: final</code>。<code>select_steps("final")</code> 在 <code>edmd/algo/queries.py</code> 返回 <code>num_steps - 1</code>。假网只在 rollout <strong>最后一步交付图</strong>上，用新鲜噪声、t ~ U[0.02, 0.99)、eps-MSE + SNR SNR clamp [1, 10] 学习。见 <code>configs/methods/edmd.yaml</code> 与 <code>edmd/methods/step.py</code> 的 <code>critic_sample</code>。【代码】</li>
+<li><strong>终点假网</strong>：<code>critic.source: final</code>。<code>select_steps("final")</code> 在 <code>edmd/algo/queries.py</code> 返回 <code>num_steps - 1</code>。假网只在 rollout <strong>最后一步交付图</strong>上，用新鲜噪声、t ~ U[0.02, 0.99)、eps-MSE + SNR clamp [1, 10] 学习。见 <code>configs/methods/edmd.yaml</code> 与 <code>edmd/methods/step.py</code> 的 <code>critic_sample</code>。【代码】</li>
 <li>生成器仍用耦合项（引导教师 − fake）监督每一步。</li>
 <li><strong>Precise Teacher</strong>：末步带内，用 4 节点引导 Euler 走到 0，代替教师单步带引导的预测。</li>
 <li><strong>标定询分</strong>：末步前的查询密度按教师跨等级一致性事先定好，训练中不改。</li>
@@ -328,7 +328,7 @@ details.card>.body{padding:4px 18px 10px}
 <li>OpenReview：文献侧无新 dump，本晨无新仅OR摘要。</li>
 <li>未在本机跑 eDMD 训练或推理（无卡、不花钱）；核心链只核对到配置与源码，权重只核文件列表。【自核】</li>
 </ul></section>
-<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-11-16 09:27 (UTC+8)</div></main></div>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-11-16 09:28 (UTC+8)</div></main></div>
 <script>
 (function(){
  // 详情卡片全部展开/收起
