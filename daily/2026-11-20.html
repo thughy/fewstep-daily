@@ -1,0 +1,405 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>少步蒸馏 · 每日 2026-11-20（周五 · 补扫清账 Mon 16–Fri 20）</title>
+<style>
+:root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--side:#f6f8fa;--line:#d1d9e0;--acc:#0b57d0;--l1:#fff8e6;--l1b:#f0c36d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--fg);background:var(--bg);font:15.5px/1.75 "Noto Sans CJK SC","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.top{position:sticky;top:0;z-index:5;background:#24292f;color:#fff;padding:8px 20px;display:flex;gap:18px;align-items:center;font-size:14px}
+.top a{color:#fff;opacity:.9} .top .brand{font-weight:700;opacity:1}
+.wrap{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1400px;margin:0 auto}
+nav.toc{position:sticky;top:40px;align-self:start;height:calc(100vh - 40px);overflow:auto;background:var(--side);border-right:1px solid var(--line);padding:14px 10px 40px 14px;font-size:13.5px;line-height:1.5}
+nav.toc .tt{font-weight:700;color:var(--muted);margin:2px 0 8px}
+nav.toc ul{list-style:none;margin:0;padding-left:10px} nav.toc>div>ul{padding-left:0}
+nav.toc li{margin:3px 0} nav.toc a{color:#333;display:block;padding:1px 4px;border-radius:4px}
+nav.toc a:hover,nav.toc a.on{background:#dde7f7;text-decoration:none}
+main{padding:22px 40px 80px;min-width:0}
+h1{font-size:26px;margin:.2em 0 .6em;border-bottom:2px solid var(--line);padding-bottom:.3em}
+h2{font-size:21px;margin:1.8em 0 .6em;border-bottom:1px solid var(--line);padding-bottom:.25em}
+h3{font-size:17.5px;margin:1.4em 0 .5em}
+h4{font-size:15.5px}
+blockquote{margin:0 0 1em;padding:8px 16px;border-left:4px solid #8c959f;background:#f6f8fa;color:#3d444d;font-size:14px}
+blockquote p{margin:.3em 0}
+code{font-family:"JetBrains Mono","DejaVu Sans Mono",Menlo,Consolas,monospace;font-size:.88em;background:#eff1f3;padding:.1em .35em;border-radius:4px}
+pre{background:#f6f8fa;border:1px solid var(--line);border-radius:6px;padding:10px 14px;overflow:auto} pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:.6em 0 1.1em}
+table{border-collapse:collapse;font-size:13.8px;line-height:1.55;min-width:60%}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left}
+th{background:#eef2f6;font-weight:700;position:sticky;top:0}
+tr:nth-child(even) td{background:#fafbfc}
+td strong{color:#8a1c1c}
+hr{border:0;border-top:1px solid var(--line);margin:1.6em 0}
+section.layer1{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:2px 22px 10px;margin:18px 0 26px}
+section.layer1>h2{border-bottom-color:var(--l1b)}
+section.layer1 .tw table{background:#fff}
+.layer-tag{display:inline-block;font-size:12px;font-weight:700;color:#7a4b00;background:#ffe2a8;border-radius:10px;padding:0 9px;margin-left:8px;vertical-align:middle}
+details.card{border:1px solid var(--line);border-radius:8px;margin:12px 0;background:#fff}
+details.card>summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:16.5px;background:#f3f6fa;border-radius:8px;list-style:none}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary:before{content:"▸ ";color:var(--acc)} details.card[open]>summary:before{content:"▾ "}
+details.card[open]>summary{border-bottom:1px solid var(--line);border-radius:8px 8px 0 0}
+details.card>.body{padding:4px 18px 10px}
+.cardtools{font-size:13px;margin:6px 0 2px} .cardtools button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:#fff;border-radius:5px;padding:1px 8px;cursor:pointer;margin-right:6px}
+.b{display:inline-block;font-size:11.5px;line-height:1.5;padding:0 6px;border-radius:9px;margin:0 2px;font-weight:600;white-space:nowrap;vertical-align:1px;border:1px solid transparent}
+.b-meas{background:#dafbe1;color:#116329;border-color:#a8e6b5}
+.b-orig{background:#ddf4ff;color:#0a4b8c;border-color:#a6d4f5}
+.b-team{background:#fff1e5;color:#953800;border-color:#ffc89a}
+.b-inf{background:#eef0f2;color:#4a535c;border-color:#cfd5db}
+.b-codex{background:#fbefff;color:#6e2b91;border-color:#e3b8f5}
+.b-oth{background:#f6f8fa;color:#4a535c;border-color:#d1d9e0}
+.idx{max-width:900px;margin:0 auto;padding:30px 30px 80px}
+.idx .hero{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:12px 22px;margin:14px 0 24px;font-size:16.5px}
+.idx .cards a{display:block;border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:10px 0;color:var(--fg)}
+.idx .cards a:hover{border-color:var(--acc);text-decoration:none;background:#f6f9ff}
+.idx .cards .t{font-weight:700;color:var(--acc)} .idx .cards .d{font-size:13.5px;color:var(--muted)}
+.foot{color:var(--muted);font-size:12.5px;margin-top:40px;border-top:1px solid var(--line);padding-top:8px}
+@media (max-width:900px){.wrap{grid-template-columns:1fr} nav.toc{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)} main{padding:16px}}
+@media print{nav.toc,.top,.cardtools{display:none}.wrap{display:block} details.card{break-inside:avoid}}
+</style></head><body>
+<div class="top"><a class="brand" href="../index.html">多模态少步蒸馏 · 前沿调研</a><a href="../baseline.html">2026Q3 基线</a><a href="../index.html#dailies">每日</a><a href="../index.html#weeklies">每周</a></div>
+<div class="wrap"><nav class="toc"><div class="tt">目录</div><div><div class="toc">
+<ul>
+<li><a href="#结论先行">结论先行</a></li>
+<li><a href="#30-秒速览">30 秒速览</a></li>
+<li><a href="#一屏框架按本质操作">一屏框架（按本质操作）</a></li>
+<li><a href="#短卡-1-pmd-261126629值得读">短卡 1 · PMD 2611.26629（值得读）</a></li>
+<li><a href="#短卡-2-flowmap-opd-260937851值得读">短卡 2 · FlowMap-OPD 2609.37851（值得读）</a></li>
+<li><a href="#短卡-3-movieroll-261121339值得读">短卡 3 · MovieRoll 2611.21339（值得读）</a></li>
+<li><a href="#短卡-4-reference-forcing-261121559值得读">短卡 4 · Reference Forcing 2611.21559（值得读）</a></li>
+<li><a href="#短卡-5-rediverse-261118550值得读">短卡 5 · ReDiverse 2611.18550（值得读）</a></li>
+<li><a href="#短卡-69-blockalign-isthmus-meanflowadvantage-spm值得读更短">短卡 6–9 · BlockAlign / Isthmus / MeanFlowAdvantage / SPM（值得读，更短）</a></li>
+<li><a href="#补扫13451420-北京时间-asiashanghai">补扫（13:45–14:20 北京时间 / Asia/Shanghai）</a><ul>
+<li><a href="#f5-队友转交召回按-f9-复核">F5 队友转交召回（按 F9 复核）</a></li>
+<li><a href="#粗筛命中但未收录f8363-条keep-39-其余-324新值得读点名值得看已在上表与短卡">粗筛命中但未收录（F8，363 条：KEEP 39 + 其余 324；新值得读/点名值得看已在上表与短卡）</a></li>
+</ul>
+</li>
+<li><a href="#下一步">下一步</a></li>
+</ul>
+</div>
+</div></nav>
+<main><h1 id="少步蒸馏-每日-2026-11-20周五-补扫清账-mon-16fri-20">少步蒸馏 · 每日 2026-11-20（周五 · 补扫清账 Mon 16–Fri 20）</h1>
+<blockquote>
+<p><strong>批次覆盖（F1）</strong>：11-16 晨报把 Mon 16 记为 <strong>pending</strong>（当时 /new 仍是 Fri 13）。此后晨报 11-20 失败、11-17–11-19 未出日报，公开站停在 <a href="https://thughy.github.io/fewstep-daily/daily/2026-11-16.html">2026-11-16</a>。本补扫一次性清掉积压。<span class="b b-meas">实测</span></p>
+<p><strong>官方名单</strong>：/catchup/{cat}/日期 页头为 Catchup results … on Mon/Tue/Wed/Thu, 16–19 Nov 2026（标题列表，无摘要）；7+2 类抓取后用 OAI-PMH（from=2026-11-16 until=2026-11-20，12 页 / 15494 条）补全摘要，四天 <strong>empty_abs = 0</strong>。今日 7+2 类 /new 页头均为 <strong>Friday, 20 November 2026</strong>，摘要随页。<span class="b b-meas">实测</span></p>
+<ul>
+<li>Mon 16：7 类 dedup <strong>582</strong>（new <strong>251</strong> / cross <strong>102</strong> / repl <strong>229</strong>），hits <strong>35</strong>+extra9 <strong>2</strong>，max <strong><a href="https://arxiv.org/abs/2611.18563">2611.18563</a></strong>，new 区间 <a href="https://arxiv.org/abs/2611.17338">2611.17338</a>–<a href="https://arxiv.org/abs/2611.18563">2611.18563</a></li>
+<li>Tue 17：7 类 dedup <strong>1653</strong>（new <strong>722</strong> / cross <strong>307</strong> / repl <strong>624</strong>），hits <strong>127</strong>+extra9 <strong>6</strong>，max <strong><a href="https://arxiv.org/abs/2611.21608">2611.21608</a></strong>，new 区间 <a href="https://arxiv.org/abs/2611.18564">2611.18564</a>–<a href="https://arxiv.org/abs/2611.21608">2611.21608</a></li>
+<li>Wed 18：7 类 dedup <strong>884</strong>（new <strong>403</strong> / cross <strong>143</strong> / repl <strong>338</strong>），hits <strong>69</strong>+extra9 <strong>1</strong>，max <strong><a href="https://arxiv.org/abs/2611.23229">2611.23229</a></strong>，new 区间 <a href="https://arxiv.org/abs/2611.21655">2611.21655</a>–<a href="https://arxiv.org/abs/2611.23229">2611.23229</a></li>
+<li>Thu 19：7 类 dedup <strong>872</strong>（new <strong>401</strong> / cross <strong>144</strong> / repl <strong>327</strong>），hits <strong>67</strong>+extra9 <strong>3</strong>，max <strong><a href="https://arxiv.org/abs/2611.24941">2611.24941</a></strong>，new 区间 <a href="https://arxiv.org/abs/2611.23240">2611.23240</a>–<a href="https://arxiv.org/abs/2611.24941">2611.24941</a>（eess.AS 0 条，属空类而非漏抓）</li>
+<li>Fri 20：7 类 dedup <strong>909</strong>（new <strong>427</strong> / cross <strong>157</strong> / repl <strong>325</strong>），hits <strong>86</strong>+extra9 <strong>3</strong>，max <strong><a href="https://arxiv.org/abs/2611.26629">2611.26629</a></strong>，new 区间 <a href="https://arxiv.org/abs/2611.24980">2611.24980</a>–<a href="https://arxiv.org/abs/2611.26629">2611.26629</a>
+五天核心 7 类 hits 合计 <strong>384</strong>，extra9 <strong>15</strong>，去重后 <strong>376</strong> 篇（跨日重复 23 条只评一次）。产物 daily/raw/1120catchup/。<span class="b b-meas">实测</span>
+<strong>F4 OpenReview</strong>：本补扫未发现新的仅 OR 摘要必读/值得读候选。F10 孪生已在 11-13 关闭。<span class="b b-meas">实测</span></li>
+</ul>
+<p><strong>F5 对账</strong>：今日文献目录 /workspace/paper-digest/2026-11-20/ 有 catchup 语料与进行中的 triage，<strong>尚无</strong> forward-fewstep<em> / fewstep_hits.json。RL 无 11-17–11-20 目录；11-16 晨报已对过当天转发。就已落到盘上、标「待少步定级」的转发而言，</em><em>机制真漏 0</em>*。文献收口后如有新转发，再补评。<span class="b b-meas">实测</span>
+标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】【HF】<span class="b b-team">队友转述</span><span class="b b-inf">推断</span>【摘要】【自核】</p>
+</blockquote>
+<hr />
+<section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
+<p><strong>五天积压已清。没有新的「必读·先跑」。新「值得读」9 篇，主线是：少步蒸馏可以不靠假网、流映射该用自己的采样器采状态、长视频蒸馏要把更新做在整段自 rollout 上、外观一致性可以蒸进独立注意力通路、多样性塌缩往往是首步方向方差丢了。评测与代码都还不够开新训练票：PMD 在 SDXL 4 步上 FID 只比 DMD2 好 0.06，GenEval/DPG 还略差；FlowMap-OPD / MovieRoll / Reference Forcing / ReDiverse / BlockAlign / Isthmus 都缺可跑训链，或还不是同协议大底座碾压。执行上维持既有挂票，今天只改预期、不新开票。</strong><span class="b b-orig">原文</span>【自核】</p>
+<p><strong>认知推荐（该改预期；默认向他推荐读）：</strong>
+① PMD <a href="https://arxiv.org/abs/2611.26629">2611.26629</a>（新·值得读）：用一簇倾斜后验均值代替假网，监督学生整段条件分布；4 步 SDXL FID 19.14 对 DMD2 19.20，多样性明显更高（Vendi 4.46 vs 2.52）。不是必读·先跑(b)。
+② FlowMap-OPD <a href="https://arxiv.org/abs/2609.37851">2609.37851</a>（新·值得读，替换稿首次进入本追踪）：流映射学生要用自己的少步采样器采状态，但监督学瞬时速度，而不是直接学部署用的 map。FLUX / SD3.5 上 300 次更新合并三名教师。
+③ MovieRoll <a href="https://arxiv.org/abs/2611.21339">2611.21339</a>（新·值得读）：CuLT-DMD 在长自 rollout 里先冻参数、只平均局部梯度再更新，用来训少步流式学生。HeliosBench 到 60s 最高，但不因长漂单独升必读。
+④ Reference Forcing <a href="https://arxiv.org/abs/2611.21559">2611.21559</a>（新·值得读）：把「看初帧的对应区域」蒸进学生一条独立注意力通路，并拿未漂移的初帧值去纠正 KV。项目页有，未见完整训码。
+⑤ ReDiverse <a href="https://arxiv.org/abs/2611.18550">2611.18550</a>（新·值得读）：蒸馏多样性塌缩不是容量没了，而是首步某个中间块把方差堆进太少的方向。可用适配器对齐教师激活，或免训按教师主方向去转。
+⑥ BlockAlign <a href="https://arxiv.org/abs/2611.20351">2611.20351</a> / Isthmus <a href="https://arxiv.org/abs/2611.23616">2611.23616</a> / MeanFlowAdvantage <a href="https://arxiv.org/abs/2609.37670">2609.37670</a> / SPM <a href="https://arxiv.org/abs/2611.25998">2611.25998</a>（新·值得读）：分别是轨迹蒸馏的块边界偏好对齐、一步流映射的监督岛要用一条「地峡」连回对角线、平均速度空间里的 advantage 微调、少步 RL 的影子后验 credit。后两篇同时转 RL 组。<span class="b b-orig">原文</span></p>
+<p><strong>执行推荐（开票/先跑）：</strong>不开新训练票。没有一篇同时满足「会改 AV/流式训练决定」且「训码+配置齐」，也没有一篇在同协议大底座上清楚超过当前最强基线。PMD 是最接近(b)的，但没有赢过 DMD2 的提示对齐，项目页几乎是空的。挂票维持：eDMD 对照（已解阻）、TRD、History、VA-TDM、Flex-6；TraF / AGAVE 仍缺码阻塞。<span class="b b-inf">推断</span>【代码】</p>
+<ol>
+<li><strong>Mon 16–Fri 20 全部 done</strong>，11-16 的 pending 在本补扫闭合。<span class="b b-meas">实测</span></li>
+<li><strong>无新必读·先跑</strong>；新值得读 9 篇；新值得看以 AURA 可用配方、ScoutCache / Physics-IQ 发现为主。<span class="b b-orig">原文</span></li>
+<li><strong>F5：已落盘转发机制真漏 0</strong>；文献今日补扫尚未写出待定级转发文件。<span class="b b-meas">实测</span></li>
+</ol>
+<p><strong>对我们训练的含义：</strong></p>
+<ul>
+<li>图像 4 步：假网不是必须的——PMD 用倾斜后验均值也能打到和 DMD2 差不多的 FID，而且更多样。值得在现有 DMD 对照旁先读机制，等代码再决定开不开票。</li>
+<li>MeanFlow / 流映射学生：采样用 map，学习用瞬时速度（FlowMap-OPD）；做奖励微调时目标要写在平均速度上（MeanFlowAdvantage）。</li>
+<li>流式 / 长视频：长 rollout 的 DMD 更新不要按短窗逐步反传整图，而要在整段自 rollout 上冻参、聚合局部梯度（MovieRoll）；外观漂了，优先把「看初帧」蒸成独立通路，而不是只在 KV 里翻历史（Reference Forcing）。多样性若塌了，先查首步中间块的方向方差（ReDiverse）。</li>
+<li>闭环：训练同学不新开票；读这 9 篇里与当前底座最近的 PMD、FlowMap-OPD、MovieRoll、BlockAlign。成功标准仍看既有挂票。<span class="b b-orig">原文</span><span class="b b-inf">推断</span></li>
+</ul>
+<hr />
+</section><section class="layer1"><h2 id="30-秒速览">30 秒速览<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文</th>
+<th>评级</th>
+<th>一句话</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PMD <a href="https://arxiv.org/abs/2611.26629">2611.26629</a></strong></td>
+<td><strong>值得读</strong>（新）</td>
+<td>无假网，倾斜后验均值监督整段条件分布；4 步 SDXL FID 略优于 DMD2，多样性高一截；不够 (b)，暂无训码</td>
+<td><span class="b b-orig">原文</span>【自核】</td>
+</tr>
+<tr>
+<td><strong>FlowMap-OPD <a href="https://arxiv.org/abs/2609.37851">2609.37851</a></strong></td>
+<td><strong>值得读</strong>（新·替换稿首入）</td>
+<td>少步采状态、学瞬时速度；300 步合并三教师</td>
+<td><span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td><strong>MovieRoll <a href="https://arxiv.org/abs/2611.21339">2611.21339</a></strong></td>
+<td><strong>值得读</strong>（新）</td>
+<td>CuLT-DMD：长自 rollout 冻参、平均局部梯度；60s 最高但不升必读</td>
+<td><span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td><strong>Reference Forcing <a href="https://arxiv.org/abs/2611.21559">2611.21559</a></strong></td>
+<td><strong>值得读</strong>（新）</td>
+<td>初帧区域注意力蒸进独立通路 + KV 值纠正</td>
+<td><span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td><strong>ReDiverse <a href="https://arxiv.org/abs/2611.18550">2611.18550</a></strong></td>
+<td><strong>值得读</strong>（新）</td>
+<td>多样性塌缩=首步方向方差集中；适配器或免训转向可拉回</td>
+<td><span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td><strong>BlockAlign <a href="https://arxiv.org/abs/2611.20351">2611.20351</a></strong></td>
+<td><strong>值得读</strong>（新）</td>
+<td>PDD/PTD 要在块边界、用融合块速度做偏好对齐；H3 人评胜未对齐蒸馏</td>
+<td><span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td><strong>Isthmus <a href="https://arxiv.org/abs/2611.23616">2611.23616</a></strong></td>
+<td><strong>值得读</strong>（新）</td>
+<td>一步 map 的监督落在自洽岛上会塌方差；5% 训练对沿边布置即可</td>
+<td><span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td><strong>MeanFlowAdvantage <a href="https://arxiv.org/abs/2609.37670">2609.37670</a></strong></td>
+<td><strong>值得读</strong>（新·替换稿首入）</td>
+<td>平均速度空间的 advantage 微调；4 NFE SD3.5 对齐 40 步 DiffusionNFT 的 6/8 指标</td>
+<td><span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td><strong>SPM <a href="https://arxiv.org/abs/2611.25998">2611.25998</a></strong></td>
+<td><strong>值得读</strong>（新）</td>
+<td>少步 RL 用影子后验给 credit 并锚教师；同时转 RL 组</td>
+<td><span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td>AURA <a href="https://arxiv.org/abs/2611.26540">2611.26540</a></td>
+<td>值得看·可用配方（新）</td>
+<td>流式说话头，轨迹对齐+DMD；发权重和教师轨迹，未见完整训链</td>
+<td>【摘要】</td>
+</tr>
+<tr>
+<td>ScoutCache <a href="https://arxiv.org/abs/2611.21038">2611.21038</a></td>
+<td>值得看·旁注（新）</td>
+<td>免训加速少步 AR 视频，SF/LongLive 最高 2.28x</td>
+<td>【摘要】</td>
+</tr>
+<tr>
+<td>Kernel Physics-IQ <a href="https://arxiv.org/abs/2611.25632">2611.25632</a></td>
+<td>值得看·发现（新）</td>
+<td>少步把 Physics-IQ 抬高，可能只是多样性塌了</td>
+<td><span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td>Speed-Variation <a href="https://arxiv.org/abs/2611.17868">2611.17868</a></td>
+<td>值得看·发现（新）</td>
+<td>可识别中间态上的收缩—多样化蒸馏，非常规协议</td>
+<td>【摘要】</td>
+</tr>
+</tbody>
+</table></div>
+</section><section class="layer1"><h2 id="一屏框架按本质操作">一屏框架（按本质操作）<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>格子</th>
+<th>本批新挂</th>
+<th>相对最近工作差在哪</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>分布匹配（反向 / on-policy）</td>
+<td>PMD；FlowMap-OPD；MovieRoll 的 CuLT-DMD</td>
+<td>PMD 不训假网，改匹配倾斜后验均值；FlowMap-OPD 把「采状态」和「学速度」拆开；CuLT-DMD 把 DMD 更新放到整段长自 rollout</td>
+</tr>
+<tr>
+<td>轨迹匹配（前向 / 偏软）</td>
+<td>Reference Forcing（外观通路）；BlockAlign（块边界偏好）</td>
+<td>不是新的轨迹参数化，而是把初帧区域注意力蒸进去，以及偏好损失必须打在融合块速度上</td>
+</tr>
+<tr>
+<td>流映射 / 一步 / MeanFlow</td>
+<td>Isthmus；MeanFlowAdvantage</td>
+<td>Isthmus 改的是训练对落在时间三角形的位置；MeanFlowAdvantage 把奖励目标写在平均速度上</td>
+</tr>
+<tr>
+<td>多样性 / 评测前提</td>
+<td>ReDiverse；Kernel Physics-IQ</td>
+<td>塌缩定位到首步方向方差；物理分可能奖励少步变钝</td>
+</tr>
+<tr>
+<td>推理加速（F7，不改蒸馏损失）</td>
+<td>ScoutCache；TrajCal；分支缓存；D3-Cache；TRQ；UnStep 维持</td>
+<td>一律旁注</td>
+</tr>
+<tr>
+<td>配方 / 系统</td>
+<td>AURA；Streaming-AAA / SpecWM / StreamEgo / PhyS</td>
+<td>蒸馏骨架多为轨迹+DMD，不升值得读</td>
+</tr>
+<tr>
+<td>放不进框架</td>
+<td>大量 LLM-OPD、数据蒸馏、机器人/驾驶</td>
+<td>见 F8</td>
+</tr>
+</tbody>
+</table></div>
+<p>发现类：ReDiverse 证实的是「蒸馏学生还保有方差、只是方向堆错了」；Physics-IQ 的少步虚高推翻「步数少、物理分高就更好」。</p>
+</section><section class=""><h2 id="短卡-1-pmd-261126629值得读">短卡 1 · PMD <a href="https://arxiv.org/abs/2611.26629">2611.26629</a>（值得读）</h2>
+<p>背景：现在 4 步图像蒸馏几乎都要再训一张假网去对齐分布（DMD2 这一路），假网常把多样性压掉。</p>
+<p>问题：能不能不用假网，又把教师的整段条件分布教给学生，而不是只盯一个均值？</p>
+<p>方法：1. 学生是随机的，同一噪声状态可以出多个样本，因而支持任意步数（在训练网格内）。2. 固定一个带噪状态，对学生样本做指数倾斜平均，去对教师在同一倾斜下的后验均值。3. 高斯噪声下，倾斜后验均值等于教师在输入平移后的一次前向。4. 证明：在一个开邻域上匹配这些均值，就唯一确定整个后验。所以监督的是一簇均值约束，不必再训学生分数网。</p>
+<p>为何有效：假网拟合的是单一打分，容易把学生推到一个窄峰；一簇倾斜均值相当于从不同方向戳同一个后验，把形状也钉住。</p>
+<p>数字（读过原文表，【自核】）：SDXL 4 步 FID：PMD 19.14，DMD2 19.20，50x2 教师 18.24。但 GenEval / DPG / HPSv3 / CLIP-S 均低于 DMD2（0.5539 vs 0.5882；73.95 vs 74.49）。多样性（PartiPrompts，4 步 8 种子）：Vendi 4.46 vs DMD2 2.52，DINOv2 0.52 vs 0.25。FLUX.2 [klein] 4B 上 FID 24.12，优于官方 4 步 24.58 和 SMD 25.89，提示对齐略低于官方 4 步。视频（4 步 VBench Overall）PMD 85.47，低于 AnyFlow 85.51，高于 DMD2 84.50 / PDD 84.94。</p>
+<p>局限与对我们：项目页 https://pmd-distillation.github.io/ 几乎是占位，评论里没有仓。不够 (b)，不开票。值得读的是「假网不是分布匹配的唯一做法」，以及多样性明显更好。对照票若以后开，必须同教师、同 4 NFE、同更新次数，对 DMD2，并看多样性是不是真的来自倾斜均值、去掉会不会塌。<span class="b b-orig">原文</span>【自核】</p>
+</section><section class=""><h2 id="短卡-2-flowmap-opd-260937851值得读">短卡 2 · FlowMap-OPD <a href="https://arxiv.org/abs/2609.37851">2609.37851</a>（值得读）</h2>
+<p>背景：MeanFlow / 一致性模型这类流映射学生，推理是少步大跳；现成的 OPD 却常按多步采样器的局部转移来对教师，和学生真正部署的东西不是一回事。</p>
+<p>问题：对已经在用 map 采样的学生，OPD 到底该监督 map、由 map 诱导的速度，还是瞬时速度？</p>
+<p>方法：把采状态和监督拆开：状态用学生自己的少步采样器采；教师可以监督 map、诱导速度，或加一个小一致性权重的瞬时速度。他们选定的是最后一种。</p>
+<p>关键发现：「用 map 采样，学速度」最好；直接监督部署用的 map，在教师和学生不是同一份预训练时最差。这种形式还适用于只提供速度的多步教师，以及从多步模型初始化的学生。</p>
+<p>数字：FLUX / SD3.5 上，一个少步学生用 300 次更新合并三名专长教师，在各自基准上达到或超过老师（如 FLUX OCR 0.883 vs 0.850），并优于多奖励 RL 和 LoRA 合并。不是和 DMD2 头对头的同协议画质赛。【摘要】</p>
+<p>对我们：若在 MeanFlow 学生上做 on-policy 蒸馏，不要把损失直接打在 map 输出上，先试瞬时速度+小一致性项。缺码，不开票。这篇是 9 月号替换稿，此前发布页没有 ID+评级，按新值得读收，不记机制真漏。<span class="b b-orig">原文</span></p>
+</section><section class=""><h2 id="短卡-3-movieroll-261121339值得读">短卡 3 · MovieRoll <a href="https://arxiv.org/abs/2611.21339">2611.21339</a>（值得读）</h2>
+<p>背景：流式视频生成要在训练时长之外继续稳，还要吃自己写出的历史，KV 还会涨。</p>
+<p>问题：短窗 DMD 没法在很长的自 rollout 上稳定更新：计算图太长，梯度只盯近处。</p>
+<p>方法：先用 WinTF 把多步底座做好（窗内双向、对历史因果、块之间逐步噪声）。HieraKV 按层压缩历史，浅层保留全历史、深层只留 sink+近处，显存可降约 78%。然后 CuLT-DMD：在一次长自 rollout 里参数冻住，只把各局部梯度平均后再更新，因而只需保留一段局部计算图。推理超过训练视野时用 KV 重算，并用 AnnealCFG 把引导在干净端点处收掉。</p>
+<p>数字：HeliosBench 上，底座在只训到 15s 时 30s 仍有竞争力；蒸馏版在单事件和多事件、直到 60s 的对比方法里总分最高。按 10-20 约定，长漂超过 60s 本身不升必读。【摘要】</p>
+<p>对我们：若在流式学生上做 DMD，先考虑「整段 rollout 冻参、聚合局部梯度」，不要只在 2-4 秒窗里反传。缺码，不开票。<span class="b b-orig">原文</span><span class="b b-inf">推断</span></p>
+</section><section class=""><h2 id="短卡-4-reference-forcing-261121559值得读">短卡 4 · Reference Forcing <a href="https://arxiv.org/abs/2611.21559">2611.21559</a>（值得读）</h2>
+<p>背景：自回归长视频常用短窗 DMD 蒸馏，主体和背景会慢慢漂。只靠 KV 里翻历史不够，因为历史自己可能已经漂了。</p>
+<p>问题：怎样在不牺牲运动的前提下，把「还像第一眼」锁住？</p>
+<p>方法：1. 教师用分割模型找到区域，用注意力掩码强迫新帧每个区域去看初帧的同一区域。2. 把这种行为蒸到学生一条独立的注意力通路，推理时不再需要分割模型。3. 值纠正：把已经漂的 KV 值，拉向初帧里尚未漂移的对应值。消融表明两条都要，否则会损运动或锁不住。</p>
+<p>数字：摘要称在不同底座上主体/背景一致性达到长视频方法里最好，优势随长度增加。项目页 https://zhaosheng-thu.github.io/reference-force/ 。未见完整训码声明。【摘要】</p>
+<p>对我们：长视频外观漂，优先试「初帧参考通路 + 值纠正」，不要只做 KV 检索。不因长漂升必读，不开票。<span class="b b-orig">原文</span></p>
+</section><section class=""><h2 id="短卡-5-rediverse-261118550值得读">短卡 5 · ReDiverse <a href="https://arxiv.org/abs/2611.18550">2611.18550</a>（值得读）</h2>
+<p>背景：少步学生常用不同种子却几乎长一样，多样性塌缩是老问题。</p>
+<p>问题：学生是真的不会了，还是方差还在、只是堆错了方向？</p>
+<p>方法：对照教师和学生的内部激活：总方差相当，但学生把方差集中到少得多的方向，而且问题出在第一步去噪的某个中间块。ReDiverse-FT 用轻量适配器把学生激活回归到教师；ReDiverse-TF 免训，沿预先算好的教师主方向去转激活。图像和视频蒸馏基准上都是在保住画质的同时把多样性拉回。</p>
+<p>对我们：若少步学生变「一套脸」，先检查首步中间块的方向方差，不要先换损失。适配器修好了，等于说容量还在。缺码，先读机制。<span class="b b-orig">原文</span></p>
+</section><section class=""><h2 id="短卡-69-blockalign-isthmus-meanflowadvantage-spm值得读更短">短卡 6–9 · BlockAlign / Isthmus / MeanFlowAdvantage / SPM（值得读，更短）</h2>
+<p>BlockAlign <a href="https://arxiv.org/abs/2611.20351">2611.20351</a>：轨迹蒸馏（PDD / PTD）的部署接口是块起点的融合块平均速度，不是各个子区间速度头。把 DPO/NFT 直接打在子头上（DirectAlign）会训推不一致，人评还不如不对齐。BlockAlign 只在合法块边界上构造状态，监督跨度归一的转移残差。MiniMax-H3 Ref2VA 与内部 RefVid-V4 上，相对未对齐蒸馏的人评约 60% 非平局胜率。对我们：若给 PTD/PDD 学生做偏好或在线对齐，损失必须打在块速度上。缺码，不开票。</p>
+<p>Isthmus <a href="https://arxiv.org/abs/2611.23616">2611.23616</a>：一步流映射常被拿来当后验采样器，但一步样本会丢方差、和多步失相关；直接监督一步跳跃还会更塌。原因是训练对大多落在时间三角形的对角（有数据目标），一步用到的那一对要么没被监督，要么落在自洽恒等式连不回对角的「岛」上。Isthmus 把 5% 训练对沿连接该点与对角的边布置，一步误差就被这条边上的自洽残差控制。网络、损失、推理代码都不变。MRI / 人脸修复 / CIFAR / ImageNet 32 上都有改善。不是大底座 (b)，但改的是流映射训练对怎么采样。</p>
+<p>MeanFlowAdvantage <a href="https://arxiv.org/abs/2609.37670">2609.37670</a>：奖励微调通常写在瞬时速度或 x0 空间，MeanFlow 推理用的却是平均速度。他们在平均速度空间写带符号的 advantage 最小二乘，并用一份断开的 MeanFlow 导数修正，让 rollout 和参考正则都成为对部署网络的精确惩罚。SD3.5-Medium 上，相对匹配的 4 步 MeanFlowNFT，八项指标全升；4 NFE 在六项上达到或超过 40 步 DiffusionNFT。同时转 RL 组。替换稿首次进入本追踪。</p>
+<p>SPM <a href="https://arxiv.org/abs/2611.25998">2611.25998</a>：少步生成器是采样器不是分数模型，速度不是生成分布的前向速度，而且和学生教师没有共享转移。既有少步 RL 用边缘 KL 锚教师，但 credit 仍吃亏。SPM 把生成再加噪成影子输入，从影子后验取 credit，并导出把奖励变成奖励方向的回归损失，同时锚教师、对齐部署输入。4 步生成器上，奖励更高、reward hacking 更少。注释里有 https://github.com/shadow-posterior/code ，本补扫未点进核链，不开票。同时转 RL 组。<span class="b b-orig">原文</span>【摘要】</p>
+<hr />
+</section><section class=""><h2 id="补扫13451420-北京时间-asiashanghai">补扫（13:45–14:20 北京时间 / Asia/Shanghai）</h2>
+<p><strong>补扫结论：Mon 16–Fri 20 官方名单已清，五天 7 类 hits 384+extra 15，去重 376。无新必读·先跑。新值得读 9 篇。新值得看以 AURA 可用配方、ScoutCache、Physics-IQ、Speed-Variation 为主。F5 已落盘转发真漏 0。挂票维持，不开新票。</strong><span class="b b-orig">原文</span><span class="b b-meas">实测</span></p>
+<ul>
+<li>晨间 11-20 例行失败，没有 F3 晨报；11-17–11-19 无日报。本补扫不依赖 /new 是否已翻到某一积压日，对 Mon–Thu 走 catchup 日期页，对 Fri 走 /new。</li>
+<li>Catchup 页没有摘要，若只按标题筛会严重漏召回（补摘要前 Tue hits 仅 19，补全后 127）。已用 OAI-PMH 补全，四天 empty_abs=0。</li>
+<li><a href="https://arxiv.org/abs/2609.37851">2609.37851</a>、<a href="https://arxiv.org/abs/2609.37670">2609.37670</a> 为 9 月号替换稿，此前发布页无 ID+评级，按新值得读收录，不记本追踪窗口内的机制真漏。</li>
+</ul>
+<h3 id="f5-队友转交召回按-f9-复核">F5 队友转交召回（按 F9 复核）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>来源</th>
+<th>转发/候选</th>
+<th>LIVE 已覆盖（含 ID+评级）</th>
+<th>漏检</th>
+<th>补扫后</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文献 2026-11-20 forward-fewstep* / fewstep_hits.json</td>
+<td><strong>文件尚不存在</strong>（补扫语料与 triage 进行中）</td>
+<td>—</td>
+<td>—</td>
+<td>就已落盘转发而言无法对账；收口后如有新转发再补评</td>
+</tr>
+<tr>
+<td>文献 2026-11-17–11-19</td>
+<td><strong>目录不存在</strong></td>
+<td>—</td>
+<td>—</td>
+<td>同左</td>
+</tr>
+<tr>
+<td>文献 2026-11-16</td>
+<td>晨报已评（eDMD / Duo / PixVid / OmniDreams 等）</td>
+<td>已在 11-16 LIVE</td>
+<td>0</td>
+<td>不重报</td>
+</tr>
+<tr>
+<td>RL 2026-11-20 及 11-17–19 fewstep_kw_hits / 待定级转发</td>
+<td><strong>目录不存在</strong></td>
+<td>—</td>
+<td>—</td>
+<td>就已落盘转发而言真漏 0</td>
+</tr>
+<tr>
+<td>RL 2026-11-16</td>
+<td>晨报已对</td>
+<td>已在 11-16 LIVE</td>
+<td>0</td>
+<td>不重报</td>
+</tr>
+<tr>
+<td>本批 screen v2.2</td>
+<td>去重 <strong>376</strong></td>
+<td>既有发布页 KEEP <strong>39</strong></td>
+<td>本页新评</td>
+<td>见短卡与 F8</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>机制真漏 0</strong>（就已落到盘上的「待少步定级」转发而言）。</p>
+<h3 id="粗筛命中但未收录f8363-条keep-39-其余-324新值得读点名值得看已在上表与短卡">粗筛命中但未收录（F8，363 条：KEEP 39 + 其余 324；新值得读/点名值得看已在上表与短卡）</h3>
+<ul>
+<li><strong>已在既有发布页覆盖、维持原评级</strong>（39）：<a href="https://arxiv.org/abs/2611.10485">2611.10485</a>=外围·超分（KEEP·已在发布页有ID+评级（2026-11-10.md））；<a href="https://arxiv.org/abs/2609.38524">2609.38524</a>=OUT·域外（KEEP·已在发布页有ID+评级（2026-11-11.md））；<a href="https://arxiv.org/abs/2611.12799">2611.12799</a>=OUT·LLM（KEEP·已在发布页有ID+评级（2026-11-11.md））；<a href="https://arxiv.org/abs/2611.13442">2611.13442</a>=OUT·LLM（KEEP·已在发布页有ID+评级（2026-11-11.md））；<a href="https://arxiv.org/abs/2611.17484">2611.17484</a>=OUT·多目标优化（KEEP·已在发布页有ID+评级（2026-11-16.md））；<a href="https://arxiv.org/abs/2611.17524">2611.17524</a>=OUT·小数据分类训练（KEEP·已在发布页有ID+评级（2026-11-16.md））；<a href="https://arxiv.org/abs/2611.15162">2611.15162</a>=OUT·电网攻击（KEEP·已在发布页有ID+评级（2026-11-13.md））；<a href="https://arxiv.org/abs/2611.16525">2611.16525</a>=外围·TTS（KEEP·已在发布页有ID+评级（2026-11-13.md））；<a href="https://arxiv.org/abs/2610.30781">2610.30781</a>=值得读（KEEP·已在发布页有ID+评级（2026-10-23.md））；<a href="https://arxiv.org/abs/2610.21337">2610.21337</a>=OUT·LLM/VLM（KEEP·已在发布页有ID+评级（2026-10-19.md））；<a href="https://arxiv.org/abs/2611.09387">2611.09387</a>=外围（KEEP·已在发布页有ID+评级（2026-11-09.md））；<a href="https://arxiv.org/abs/2611.16748">2611.16748</a>=外围·物理自改进（KEEP·已在发布页有ID+评级（2026-11-13.md））；<a href="https://arxiv.org/abs/2607.02137">2607.02137</a>=值得看·旁注（KEEP·已在发布页有ID+评级（2026-11-11.md））；<a href="https://arxiv.org/abs/2611.07604">2611.07604</a>=值得读（KEEP·已在发布页有ID+评级（2026-11-06.md））；<a href="https://arxiv.org/abs/2610.37584">2610.37584</a>=OUT（KEEP·已在发布页有ID+评级（2026-10-29.md））；<a href="https://arxiv.org/abs/2611.16269">2611.16269</a>=外围·红外超分（KEEP·已在发布页有ID+评级（2026-11-13.md））；<a href="https://arxiv.org/abs/2611.16484">2611.16484</a>=外围·金融扩散采样器（KEEP·已在发布页有ID+评级（2026-11-13.md））；<a href="https://arxiv.org/abs/2505.07675">2505.07675</a>=OUT（KEEP·已在发布页有ID+评级（2026-10-27.md））；<a href="https://arxiv.org/abs/2610.41398">2610.41398</a>=OUT（KEEP·已在发布页有ID+评级（2026-11-03.md））；<a href="https://arxiv.org/abs/2610.41983">2610.41983</a>=OUT（KEEP·已在发布页有ID+评级（2026-11-02.md））；<a href="https://arxiv.org/abs/2611.17048">2611.17048</a>=外围·流式视频（KEEP·已在发布页有ID+评级（2026-11-13.md））；<a href="https://arxiv.org/abs/2611.12107">2611.12107</a>=值得看·旁注（KEEP·已在发布页有ID+评级（2026-11-11.md））；<a href="https://arxiv.org/abs/2610.22155">2610.22155</a>=值得读（KEEP·已在发布页有ID+评级（2026-10-23.md））；<a href="https://arxiv.org/abs/2611.16400">2611.16400</a>=外围·流式视频交互评测（KEEP·已在发布页有ID+评级（2026-11-13.md））；<a href="https://arxiv.org/abs/2610.31276">2610.31276</a>=值得读（KEEP·已在发布页有ID+评级（2026-10-23.md））；<a href="https://arxiv.org/abs/2610.35312">2610.35312</a>=OUT·理解/非生成（KEEP·已在发布页有ID+评级（2026-10-27.md））；<a href="https://arxiv.org/abs/2611.06518">2611.06518</a>=外围（KEEP·已在发布页有ID+评级（2026-11-05.md））；<a href="https://arxiv.org/abs/2611.15507">2611.15507</a>=OUT·RL（KEEP·已在发布页有ID+评级（2026-11-13.md））；<a href="https://arxiv.org/abs/2611.03404">2611.03404</a>=值得看·可用配方（KEEP·已在发布页有ID+评级（2026-11-04.md））；<a href="https://arxiv.org/abs/2605.14867">2605.14867</a>=OUT·神经科学（KEEP·已在发布页有ID+评级（2026-10-28.md））；<a href="https://arxiv.org/abs/2610.23297">2610.23297</a>=外围（KEEP·已在发布页有ID+评级（2026-10-19.md））；<a href="https://arxiv.org/abs/2611.01543">2611.01543</a>=值得看·旁注（KEEP·已在发布页有ID+评级（2026-11-04.md））；<a href="https://arxiv.org/abs/2605.08698">2605.08698</a>=外围（KEEP·已在发布页有ID+评级（2026-11-04.md））；<a href="https://arxiv.org/abs/2609.32518">2609.32518</a>=值得看·流式推理加速（KEEP：因果视频免训减步，维持10-26评级，替换稿摘要未改判）；<a href="https://arxiv.org/abs/2609.39600">2609.39600</a>=OUT·LLM/VLM（KEEP·已在发布页有ID+评级（2026-10-19.md））；<a href="https://arxiv.org/abs/2611.16310">2611.16310</a>=外围·视频去雨（KEEP·已在发布页有ID+评级（2026-11-13.md））；<a href="https://arxiv.org/abs/2509.21961">2509.21961</a>=OUT·驾驶（KEEP·已在发布页有ID+评级（2026-11-04.md））；<a href="https://arxiv.org/abs/2610.32113">2610.32113</a>=OUT·LLM/投机/深度/agent（KEEP·已在发布页有ID+评级（2026-10-26.md））；<a href="https://arxiv.org/abs/2611.03043">2611.03043</a>=外围·编辑（KEEP·已在发布页有ID+评级（2026-11-11.md））</li>
+<li><strong>值得看·发现</strong>（3）：<a href="https://arxiv.org/abs/2610.00518">2610.00518</a>（TDAC：用训练动力学作用量选耦合，一步生成且声称不蒸馏，IN256 FID&lt;1.1；码将发布，暂不升值得读）；<a href="https://arxiv.org/abs/2611.21119">2611.21119</a>（闭式耦合对少步生成的理论限度；改预期用，不是新训法）；<a href="https://arxiv.org/abs/2605.29920">2605.29920</a>（Midpoint Generative Models替换稿；看是否仍是中点生成理论/方法，不作新值得读）</li>
+<li><strong>值得看·旁注</strong>（14）：<a href="https://arxiv.org/abs/2611.20461">2611.20461</a>（LiveView：把双向重拍教师蒸成少步因果学生，做流式相机控制重拍；损失本身不新）；<a href="https://arxiv.org/abs/2611.20021">2611.20021</a>（FastGRN：把离散GRN蒸成3/4步，ImageNet上3步FID优于自身教师；协议在自有离散栈，不作大底座对照）；<a href="https://arxiv.org/abs/2611.18645">2611.18645</a>（Domino：少步掩码扩散同一步内用一阶Markov刻画位置依赖；主结果在文本/分子，图像为辅）；<a href="https://arxiv.org/abs/2609.38691">2609.38691</a>（No Corners Cut：视频生成中途改提示的状态接地转移；不是少步损失）；<a href="https://arxiv.org/abs/2611.23929">2611.23929</a>（ProxySearch：扩散推理期缩放，非对称噪声秩迁移；不改训练NFE目标）；<a href="https://arxiv.org/abs/2608.07981">2608.07981</a>（PhyS：物理视频SFT教师再蒸成1.3B少步因果，再RL+TCR；蒸馏骨架不新，主贡献在数据与物理RL）；<a href="https://arxiv.org/abs/2611.26040">2611.26040</a>（Streaming-AAA：高分辨率高帧率低延迟流式游戏视频系统；少步/蒸馏增量待正文确认，先按系统旁注）；<a href="https://arxiv.org/abs/2611.26211">2611.26211</a>（SpecWM：免训投机世界模型，用目标潜速度场做Accept/Refine/Reject）；<a href="https://arxiv.org/abs/2611.26615">2611.26615</a>（ScaleWorld：同一骨干先低分预测再一步高分精修，用任务不对称OPD蒸学生；系统向）；<a href="https://arxiv.org/abs/2611.26165">2611.26165</a>（StreamEgo：第三人称到第一人称的流式生成，再蒸成块自回归，H100上24.3fps；蒸馏不新）；<a href="https://arxiv.org/abs/2611.26334">2611.26334</a>（TRQ：视频DiT上按时间邻域在线旋转再做2bit KV量化；免训推理）；<a href="https://arxiv.org/abs/2611.25248">2611.25248</a>（在4/8步已蒸馏学生上做分支缓存+标量校正；加速约1.5×，不改蒸馏）；<a href="https://arxiv.org/abs/2611.25689">2611.25689</a>（D3-Cache：用DMD预测速度并门控跳步，免训免校准，图像/视频2.6–3.8×）；<a href="https://arxiv.org/abs/2611.25847">2611.25847</a>（TrajCal：免训搜索少步流采样时间表，按对多步参考的保真选固定表；不改训练损失）</li>
+<li><strong>外围</strong>（243）：<a href="https://arxiv.org/abs/2611.17503">2611.17503</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2603.09527">2603.09527</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.17862">2611.17862</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.17908">2611.17908</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.17930">2611.17930</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.18482">2611.18482</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2607.29617">2607.29617</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2609.38540">2609.38540</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2610.32664">2610.32664</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.17821">2611.17821</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.17921">2611.17921</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.18057">2611.18057</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.18274">2611.18274</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.18420">2611.18420</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2309.08674">2309.08674</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2609.18078">2609.18078</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.17982">2611.17982</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2301.12868">2301.12868</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.21479">2611.21479</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.18822">2611.18822</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.20805">2611.20805</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2609.33496">2609.33496</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2603.12529">2603.12529</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2605.07278">2605.07278</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2605.09329">2605.09329</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2607.15898">2607.15898</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.18807">2611.18807</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.20360">2611.20360</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2603.01430">2603.01430</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2604.09220">2604.09220</a>（一般KD，不是生成少步）；<a href="https://arxiv.org/abs/2605.09614">2605.09614</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2608.00111">2608.00111</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2609.34651">2609.34651</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.18743">2611.18743</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.18859">2611.18859</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.18963">2611.18963</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.19047">2611.19047</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.19085">2611.19085</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.19261">2611.19261</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.19709">2611.19709</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.19857">2611.19857</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.20565">2611.20565</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.20637">2611.20637</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.20687">2611.20687</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.20771">2611.20771</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.21015">2611.21015</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2404.00551">2404.00551</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2501.13946">2501.13946</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2602.19512">2602.19512</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2603.20304">2603.20304</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2604.05963">2604.05963</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2605.13501">2605.13501</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2605.17093">2605.17093</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2607.11505">2607.11505</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2607.19358">2607.19358</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2607.25164">2607.25164</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2607.26057">2607.26057</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2610.04950">2610.04950</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.10653">2611.10653</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.18648">2611.18648</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.18869">2611.18869</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.19207">2611.19207</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.19250">2611.19250</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.19475">2611.19475</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.19587">2611.19587</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.19649">2611.19649</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.19787">2611.19787</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.19951">2611.19951</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.19955">2611.19955</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.20187">2611.20187</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.20254">2611.20254</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.20445">2611.20445</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.20630">2611.20630</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.20815">2611.20815</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.20879">2611.20879</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.21040">2611.21040</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.21077">2611.21077</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.21126">2611.21126</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2507.04348">2507.04348</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2601.23163">2601.23163</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2603.27910">2603.27910</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2605.17671">2605.17671</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2608.21847">2608.21847</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2609.35673">2609.35673</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2610.28537">2610.28537</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.18602">2611.18602</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.18627">2611.18627</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.18639">2611.18639</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.18727">2611.18727</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.19274">2611.19274</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.19472">2611.19472</a>（一般KD，不是生成少步）；<a href="https://arxiv.org/abs/2611.19737">2611.19737</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.19756">2611.19756</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.19823">2611.19823</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.19922">2611.19922</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.20006">2611.20006</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.20185">2611.20185</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.20425">2611.20425</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.20693">2611.20693</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.20752">2611.20752</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.21597">2611.21597</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2610.10666">2610.10666</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.19108">2611.19108</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.21579">2611.21579</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.19273">2611.19273</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2605.07711">2605.07711</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.19455">2611.19455</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2603.27850">2603.27850</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.22925">2611.22925</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.21925">2611.21925</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2601.21760">2601.21760</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2609.23808">2609.23808</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.21812">2611.21812</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.22981">2611.22981</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.23155">2611.23155</a>（TextSphere：超球面对齐的T2I效率，摘要未见少步蒸馏主线）；<a href="https://arxiv.org/abs/2611.23226">2611.23226</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2602.08478">2602.08478</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2605.00367">2605.00367</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2610.40339">2610.40339</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.21698">2611.21698</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.21839">2611.21839</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.21852">2611.21852</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.22120">2611.22120</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.22164">2611.22164</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.22191">2611.22191</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.22331">2611.22331</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.22494">2611.22494</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.22628">2611.22628</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.22755">2611.22755</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2608.11537">2608.11537</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2610.23051">2610.23051</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.22038">2611.22038</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.22115">2611.22115</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.22446">2611.22446</a>（一般KD，不是生成少步）；<a href="https://arxiv.org/abs/2611.22495">2611.22495</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.22591">2611.22591</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.22595">2611.22595</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.22666">2611.22666</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.22717">2611.22717</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.22901">2611.22901</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.22955">2611.22955</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.23030">2611.23030</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.23034">2611.23034</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2607.07646">2607.07646</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.22061">2611.22061</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.22152">2611.22152</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.22270">2611.22270</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.22283">2611.22283</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.22543">2611.22543</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.23179">2611.23179</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2607.29241">2607.29241</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.22709">2611.22709</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2605.09439">2605.09439</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2608.30427">2608.30427</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.23345">2611.23345</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.23417">2611.23417</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2606.24152">2606.24152</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2610.06651">2610.06651</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.23498">2611.23498</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.24059">2611.24059</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.24552">2611.24552</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2505.07460">2505.07460</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2505.16959">2505.16959</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2602.16169">2602.16169</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2603.23397">2603.23397</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2606.25319">2606.25319</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2606.30852">2606.30852</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2608.15341">2608.15341</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2608.27065">2608.27065</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2609.23697">2609.23697</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2610.05745">2610.05745</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.23440">2611.23440</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.23463">2611.23463</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.23520">2611.23520</a>（一般KD，不是生成少步）；<a href="https://arxiv.org/abs/2611.23673">2611.23673</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.23807">2611.23807</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.23835">2611.23835</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.24161">2611.24161</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.24256">2611.24256</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.24380">2611.24380</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.24781">2611.24781</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.24805">2611.24805</a>（一般KD，不是生成少步）；<a href="https://arxiv.org/abs/2611.24806">2611.24806</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2504.09895">2504.09895</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2601.15500">2601.15500</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2605.14045">2605.14045</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2607.27292">2607.27292</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2609.20441">2609.20441</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.24205">2611.24205</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.24223">2611.24223</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.24323">2611.24323</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2411.02871">2411.02871</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2607.18553">2607.18553</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.24404">2611.24404</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2609.24657">2609.24657</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.24887">2611.24887</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.25667">2611.25667</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2609.16811">2609.16811</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.25607">2611.25607</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.26178">2611.26178</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2604.18194">2604.18194</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2605.07274">2605.07274</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2605.20643">2605.20643</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.25069">2611.25069</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.25257">2611.25257</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.25382">2611.25382</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.25536">2611.25536</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.25595">2611.25595</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.25838">2611.25838</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.26358">2611.26358</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.26509">2611.26509</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2605.26089">2605.26089</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2606.04236">2606.04236</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2608.00437">2608.00437</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2608.05813">2608.05813</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2608.26684">2608.26684</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2608.29519">2608.29519</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2609.19513">2609.19513</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2609.37789">2609.37789</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.25271">2611.25271</a>（一般KD，不是生成少步）；<a href="https://arxiv.org/abs/2611.25296">2611.25296</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.25371">2611.25371</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.25419">2611.25419</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.25801">2611.25801</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.25865">2611.25865</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.26413">2611.26413</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2604.08014">2604.08014</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2608.10090">2608.10090</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2609.30981">2609.30981</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2609.33698">2609.33698</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.25126">2611.25126</a>（一般KD，不是生成少步）；<a href="https://arxiv.org/abs/2611.25211">2611.25211</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.25385">2611.25385</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.25475">2611.25475</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.25551">2611.25551</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.25614">2611.25614</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.25635">2611.25635</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.26058">2611.26058</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.26187">2611.26187</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.25508">2611.25508</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.25567">2611.25567</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.26275">2611.26275</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）；<a href="https://arxiv.org/abs/2611.25813">2611.25813</a>（粗筛命中但摘要未显示媒体少步蒸馏主线，作外围）</li>
+<li><strong>外围·反演</strong>（1）：<a href="https://arxiv.org/abs/2606.22696">2606.22696</a>（NullFlow：测量一致子空间上的一步重建（inpainting/MRI），不是生成蒸馏）</li>
+<li><strong>外围·归RL</strong>（1）：<a href="https://arxiv.org/abs/2610.21125">2610.21125</a>（NPO：冻结少步生成器，只在初始噪声上学奖励倾斜策略；不改蒸馏，转RL）</li>
+<li><strong>外围·流式视频理解</strong>（4）：<a href="https://arxiv.org/abs/2611.21553">2611.21553</a>（流式视频理解/智能体，非生成蒸馏）；<a href="https://arxiv.org/abs/2611.21366">2611.21366</a>（流式视频LLM交互，非生成蒸馏）；<a href="https://arxiv.org/abs/2603.20422">2603.20422</a>（流式视频理解/智能体，非生成蒸馏）；<a href="https://arxiv.org/abs/2611.24267">2611.24267</a>（流式视频理解/智能体，非生成蒸馏）</li>
+<li><strong>外围·编辑</strong>（1）：<a href="https://arxiv.org/abs/2611.19076">2611.19076</a>（SearchChord：一步图像编辑的提示预选与场重组）</li>
+<li><strong>外围·超分</strong>（4）：<a href="https://arxiv.org/abs/2611.18243">2611.18243</a>（一步深度超分，不是生成蒸馏）；<a href="https://arxiv.org/abs/2607.12753">2607.12753</a>（超分/修复向，不是少步生成蒸馏）；<a href="https://arxiv.org/abs/2609.06490">2609.06490</a>（超分/修复向，不是少步生成蒸馏）；<a href="https://arxiv.org/abs/2610.05608">2610.05608</a>（超分/修复向，不是少步生成蒸馏）</li>
+<li><strong>OUT·LLM</strong>（27）：<a href="https://arxiv.org/abs/2611.17772">2611.17772</a>（防蒸馏/风格污染，不是生成少步）；<a href="https://arxiv.org/abs/2611.17753">2611.17753</a>（标题/摘要是LLM/Agent/OPD文本侧）；<a href="https://arxiv.org/abs/2611.18248">2611.18248</a>（标题/摘要是LLM/Agent/OPD文本侧）；<a href="https://arxiv.org/abs/2602.15189">2602.15189</a>（标题/摘要是LLM/Agent/OPD文本侧）；<a href="https://arxiv.org/abs/2606.32034">2606.32034</a>（标题/摘要是LLM/Agent/OPD文本侧）；<a href="https://arxiv.org/abs/2611.18564">2611.18564</a>（标题/摘要是LLM/Agent/OPD文本侧）；<a href="https://arxiv.org/abs/2606.02355">2606.02355</a>（标题/摘要是LLM/Agent/OPD文本侧）；<a href="https://arxiv.org/abs/2610.05200">2610.05200</a>（标题/摘要是LLM/Agent/OPD文本侧）；<a href="https://arxiv.org/abs/2611.03330">2611.03330</a>（标题/摘要是LLM/Agent/OPD文本侧）；<a href="https://arxiv.org/abs/2611.18656">2611.18656</a>（标题/摘要是LLM/Agent/OPD文本侧）；<a href="https://arxiv.org/abs/2611.19925">2611.19925</a>（标题/摘要是LLM/Agent/OPD文本侧）；<a href="https://arxiv.org/abs/2611.02414">2611.02414</a>（标题/摘要是LLM/Agent/OPD文本侧）；<a href="https://arxiv.org/abs/2611.19299">2611.19299</a>（标题/摘要是LLM/Agent/OPD文本侧）；<a href="https://arxiv.org/abs/2601.02236">2601.02236</a>（扩散语言模型的一致性蒸馏与自适应解码）；<a href="https://arxiv.org/abs/2611.20674">2611.20674</a>（标题/摘要是LLM/Agent/OPD文本侧）；<a href="https://arxiv.org/abs/2611.22298">2611.22298</a>（Streaming On-Policy Distillation：解耦三时钟，摘要是监督消耗/OPD日程，属LLM侧）；<a href="https://arxiv.org/abs/2603.19610">2603.19610</a>（标题/摘要是LLM/Agent/OPD文本侧）；<a href="https://arxiv.org/abs/2606.21869">2606.21869</a>（标题/摘要是LLM/Agent/OPD文本侧）；<a href="https://arxiv.org/abs/2611.23845">2611.23845</a>（标题/摘要是LLM/Agent/OPD文本侧）；<a href="https://arxiv.org/abs/2605.26104">2605.26104</a>（标题/摘要是LLM/Agent/OPD文本侧）；<a href="https://arxiv.org/abs/2611.23397">2611.23397</a>（标题/摘要是LLM/Agent/OPD文本侧）；<a href="https://arxiv.org/abs/2611.24362">2611.24362</a>（标题/摘要是LLM/Agent/OPD文本侧）；<a href="https://arxiv.org/abs/2607.11012">2607.11012</a>（标题/摘要是LLM/Agent/OPD文本侧）；<a href="https://arxiv.org/abs/2611.25391">2611.25391</a>（标题/摘要是LLM/Agent/OPD文本侧）；<a href="https://arxiv.org/abs/2611.26619">2611.26619</a>（标题/摘要是LLM/Agent/OPD文本侧）；<a href="https://arxiv.org/abs/2611.26450">2611.26450</a>（标题/摘要是LLM/Agent/OPD文本侧）；<a href="https://arxiv.org/abs/2611.25433">2611.25433</a>（标题/摘要是LLM/Agent/OPD文本侧）</li>
+<li><strong>OUT·化学</strong>（3）：<a href="https://arxiv.org/abs/2603.12344">2603.12344</a>（分子/材料/生物域）；<a href="https://arxiv.org/abs/2611.25651">2611.25651</a>（分子/材料/生物域）；<a href="https://arxiv.org/abs/2611.25917">2611.25917</a>（分子/材料/生物域）</li>
+<li><strong>OUT·医学</strong>（4）：<a href="https://arxiv.org/abs/2611.23212">2611.23212</a>（医学/病理蒸馏或检测）；<a href="https://arxiv.org/abs/2611.22189">2611.22189</a>（医学/病理蒸馏或检测）；<a href="https://arxiv.org/abs/2611.26370">2611.26370</a>（医学CT少步去噪，不是生成蒸馏主线）；<a href="https://arxiv.org/abs/2611.25194">2611.25194</a>（医学/病理蒸馏或检测）</li>
+<li><strong>OUT·数据蒸馏</strong>（5）：<a href="https://arxiv.org/abs/2611.21054">2611.21054</a>（数据集蒸馏，不是生成少步蒸馏）；<a href="https://arxiv.org/abs/2611.20680">2611.20680</a>（数据集蒸馏，不是生成少步蒸馏）；<a href="https://arxiv.org/abs/2605.07194">2605.07194</a>（数据集蒸馏，不是生成少步蒸馏）；<a href="https://arxiv.org/abs/2608.25480">2608.25480</a>（数据集蒸馏，不是生成少步蒸馏）；<a href="https://arxiv.org/abs/2609.34299">2609.34299</a>（数据集蒸馏，不是生成少步蒸馏）</li>
+<li><strong>OUT·机器人</strong>（7）：<a href="https://arxiv.org/abs/2501.16698">2501.16698</a>（机器人/驾驶域，不是媒体少步主线）；<a href="https://arxiv.org/abs/2611.22592">2611.22592</a>（把世界动作模型蒸到双手操作，锚定路径匹配）；<a href="https://arxiv.org/abs/2611.23118">2611.23118</a>（机器人/驾驶域，不是媒体少步主线）；<a href="https://arxiv.org/abs/2611.22395">2611.22395</a>（机器人/驾驶域，不是媒体少步主线）；<a href="https://arxiv.org/abs/2611.24011">2611.24011</a>（机器人/驾驶域，不是媒体少步主线）；<a href="https://arxiv.org/abs/2611.26103">2611.26103</a>（机器人/驾驶域，不是媒体少步主线）；<a href="https://arxiv.org/abs/2611.25553">2611.25553</a>（TwoPass：机器人操作视频预测4 NFE自条件精修；方法或可迁移，本域是机器人）</li>
+<li><strong>OUT·驾驶</strong>（7）：<a href="https://arxiv.org/abs/2611.17720">2611.17720</a>（机器人/驾驶域，不是媒体少步主线）；<a href="https://arxiv.org/abs/2603.14938">2603.14938</a>（机器人/驾驶域，不是媒体少步主线）；<a href="https://arxiv.org/abs/2603.14948">2603.14948</a>（机器人/驾驶域，不是媒体少步主线）；<a href="https://arxiv.org/abs/2611.24080">2611.24080</a>（机器人/驾驶域，不是媒体少步主线）；<a href="https://arxiv.org/abs/2507.19881">2507.19881</a>（机器人/驾驶域，不是媒体少步主线）；<a href="https://arxiv.org/abs/2611.24171">2611.24171</a>（机器人/驾驶域，不是媒体少步主线）；<a href="https://arxiv.org/abs/2610.14802">2610.14802</a>（机器人/驾驶域，不是媒体少步主线）</li>
+</ul>
+<hr />
+</section><section class=""><h2 id="下一步">下一步</h2>
+<ul>
+<li>训练：不新开票。挂票维持（eDMD 对照可跑；TRD / History / VA-TDM / Flex-6；TraF / AGAVE 缺码）。</li>
+<li>认知：优先读 PMD、FlowMap-OPD、MovieRoll、Reference Forcing、ReDiverse、BlockAlign。</li>
+<li>台账：Mon 16–Fri 20 记 <strong>done</strong>。</li>
+<li>文献今日补扫若稍后写出待定级转发，下次例行再对 F5，不把「文件尚未写出」写成已经对完未来转发。</li>
+</ul></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-11-20 14:09 (UTC+8)</div></main></div>
+<script>
+(function(){
+ // 详情卡片全部展开/收起
+ document.querySelectorAll('[data-act]').forEach(function(b){b.addEventListener('click',function(){
+   var o=b.getAttribute('data-act')==='open';document.querySelectorAll('details.card').forEach(function(d){d.open=o;});});});
+ // 点击目录中位于折叠卡片内的锚点时自动展开
+ function openFor(id){var el=document.getElementById(id);if(!el)return;var d=el.closest('details');if(d)d.open=true;}
+ if(location.hash)openFor(decodeURIComponent(location.hash.slice(1)));
+ window.addEventListener('hashchange',function(){openFor(decodeURIComponent(location.hash.slice(1)));});
+ // 目录高亮
+ var links=[].slice.call(document.querySelectorAll('nav.toc a'));
+ var heads=links.map(function(a){return document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));});
+ function hl(){var y=window.scrollY+80,k=-1;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top+window.scrollY<=y&&h.offsetParent!==null)k=i;});
+   links.forEach(function(a,i){a.classList.toggle('on',i===k);});}
+ window.addEventListener('scroll',hl,{passive:true});hl();
+})();
+</script><script>if(document.querySelector('code.language-mermaid')){var s=document.createElement('script');
+s.src='https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';s.onload=function(){document.querySelectorAll('code.language-mermaid').forEach(function(c){var d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentNode.replaceWith(d);});mermaid.initialize({startOnLoad:false});mermaid.run();};document.head.appendChild(s);}</script></body></html>
