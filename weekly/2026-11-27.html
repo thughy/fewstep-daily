@@ -1,0 +1,718 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>少步蒸馏 · 本周认知变化 2026-11-27</title>
+<style>
+:root{--fg:#1f2328;--muted:#59636e;--bg:#fff;--side:#f6f8fa;--line:#d1d9e0;--acc:#0b57d0;--l1:#fff8e6;--l1b:#f0c36d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--fg);background:var(--bg);font:15.5px/1.75 "Noto Sans CJK SC","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+.top{position:sticky;top:0;z-index:5;background:#24292f;color:#fff;padding:8px 20px;display:flex;gap:18px;align-items:center;font-size:14px}
+.top a{color:#fff;opacity:.9} .top .brand{font-weight:700;opacity:1}
+.wrap{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1400px;margin:0 auto}
+nav.toc{position:sticky;top:40px;align-self:start;height:calc(100vh - 40px);overflow:auto;background:var(--side);border-right:1px solid var(--line);padding:14px 10px 40px 14px;font-size:13.5px;line-height:1.5}
+nav.toc .tt{font-weight:700;color:var(--muted);margin:2px 0 8px}
+nav.toc ul{list-style:none;margin:0;padding-left:10px} nav.toc>div>ul{padding-left:0}
+nav.toc li{margin:3px 0} nav.toc a{color:#333;display:block;padding:1px 4px;border-radius:4px}
+nav.toc a:hover,nav.toc a.on{background:#dde7f7;text-decoration:none}
+main{padding:22px 40px 80px;min-width:0}
+h1{font-size:26px;margin:.2em 0 .6em;border-bottom:2px solid var(--line);padding-bottom:.3em}
+h2{font-size:21px;margin:1.8em 0 .6em;border-bottom:1px solid var(--line);padding-bottom:.25em}
+h3{font-size:17.5px;margin:1.4em 0 .5em}
+h4{font-size:15.5px}
+blockquote{margin:0 0 1em;padding:8px 16px;border-left:4px solid #8c959f;background:#f6f8fa;color:#3d444d;font-size:14px}
+blockquote p{margin:.3em 0}
+code{font-family:"JetBrains Mono","DejaVu Sans Mono",Menlo,Consolas,monospace;font-size:.88em;background:#eff1f3;padding:.1em .35em;border-radius:4px}
+pre{background:#f6f8fa;border:1px solid var(--line);border-radius:6px;padding:10px 14px;overflow:auto} pre code{background:none;padding:0}
+.tw{overflow-x:auto;margin:.6em 0 1.1em}
+table{border-collapse:collapse;font-size:13.8px;line-height:1.55;min-width:60%}
+th,td{border:1px solid var(--line);padding:6px 9px;vertical-align:top;text-align:left}
+th{background:#eef2f6;font-weight:700;position:sticky;top:0}
+tr:nth-child(even) td{background:#fafbfc}
+td strong{color:#8a1c1c}
+hr{border:0;border-top:1px solid var(--line);margin:1.6em 0}
+section.layer1{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:2px 22px 10px;margin:18px 0 26px}
+section.layer1>h2{border-bottom-color:var(--l1b)}
+section.layer1 .tw table{background:#fff}
+.layer-tag{display:inline-block;font-size:12px;font-weight:700;color:#7a4b00;background:#ffe2a8;border-radius:10px;padding:0 9px;margin-left:8px;vertical-align:middle}
+details.card{border:1px solid var(--line);border-radius:8px;margin:12px 0;background:#fff}
+details.card>summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:16.5px;background:#f3f6fa;border-radius:8px;list-style:none}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary:before{content:"▸ ";color:var(--acc)} details.card[open]>summary:before{content:"▾ "}
+details.card[open]>summary{border-bottom:1px solid var(--line);border-radius:8px 8px 0 0}
+details.card>.body{padding:4px 18px 10px}
+.cardtools{font-size:13px;margin:6px 0 2px} .cardtools button{font:inherit;font-size:12.5px;border:1px solid var(--line);background:#fff;border-radius:5px;padding:1px 8px;cursor:pointer;margin-right:6px}
+.b{display:inline-block;font-size:11.5px;line-height:1.5;padding:0 6px;border-radius:9px;margin:0 2px;font-weight:600;white-space:nowrap;vertical-align:1px;border:1px solid transparent}
+.b-meas{background:#dafbe1;color:#116329;border-color:#a8e6b5}
+.b-orig{background:#ddf4ff;color:#0a4b8c;border-color:#a6d4f5}
+.b-team{background:#fff1e5;color:#953800;border-color:#ffc89a}
+.b-inf{background:#eef0f2;color:#4a535c;border-color:#cfd5db}
+.b-codex{background:#fbefff;color:#6e2b91;border-color:#e3b8f5}
+.b-oth{background:#f6f8fa;color:#4a535c;border-color:#d1d9e0}
+.idx{max-width:900px;margin:0 auto;padding:30px 30px 80px}
+.idx .hero{background:var(--l1);border:1px solid var(--l1b);border-left:6px solid #e0a020;border-radius:8px;padding:12px 22px;margin:14px 0 24px;font-size:16.5px}
+.idx .cards a{display:block;border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:10px 0;color:var(--fg)}
+.idx .cards a:hover{border-color:var(--acc);text-decoration:none;background:#f6f9ff}
+.idx .cards .t{font-weight:700;color:var(--acc)} .idx .cards .d{font-size:13.5px;color:var(--muted)}
+.foot{color:var(--muted);font-size:12.5px;margin-top:40px;border-top:1px solid var(--line);padding-top:8px}
+@media (max-width:900px){.wrap{grid-template-columns:1fr} nav.toc{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)} main{padding:16px}}
+@media print{nav.toc,.top,.cardtools{display:none}.wrap{display:block} details.card{break-inside:avoid}}
+</style></head><body>
+<div class="top"><a class="brand" href="../index.html">多模态少步蒸馏 · 前沿调研</a><a href="../baseline.html">2026Q3 基线</a><a href="../index.html#dailies">每日</a><a href="../index.html#weeklies">每周</a></div>
+<div class="wrap"><nav class="toc"><div class="tt">目录</div><div><div class="toc">
+<ul>
+<li><a href="#结论先行">结论先行</a></li>
+<li><a href="#一屏框架taxonomy-map">一屏框架：taxonomy map</a></li>
+<li><a href="#本周认知变化按格子">本周认知变化（按格子）</a><ul><li><a href="#l2-视频-dmdhorizonflow-必读先跑-b不换损失改回归目标">L2 × 视频 DMD：HorizonFlow → 必读·先跑 (b)（不换损失，改回归目标）</a></li><li><a href="#l2-流式hindsight-forcing-必读先跑-ab历史去噪要接到未来损失">L2 × 流式：Hindsight Forcing → 必读·先跑 (a)(b)（历史去噪要接到未来损失）</a></li>
+<li><a href="#多样性前提mass-forcing-值得读塌在目标不是初始化">多样性前提：Mass Forcing → 值得读（塌在目标，不是初始化）</a></li>
+<li><a href="#流映射ar-flowmap-值得读裸-flowmap-不够">流映射：AR-FlowMap → 值得读（裸 FlowMap 不够）</a></li>
+<li><a href="#条件-额外信号pp-cfgdexopd-值得读">条件 / 额外信号：PP-CFG、DexOPD → 值得读</a></li>
+<li><a href="#执行格子与-11-23-补评">执行格子与 11-23 补评</a></li>
+</ul>
+</li>
+<li><a href="#预测命中率">预测命中率</a></li>
+<li><a href="#原创性分层与重做比例本周新评-折档">原创性分层与重做比例（本周新评 / 折档）</a></li>
+<li><a href="#最接近工作是否真的读过">最接近工作是否真的读过</a></li>
+<li><a href="#与文献同事的评级分歧">与文献同事的评级分歧</a><ul>
+<li><a href="#维持分歧上周延续">维持分歧（上周延续）</a></li>
+<li><a href="#本周新对账">本周新对账</a></li>
+</ul>
+</li>
+<li><a href="#召回审计">召回审计</a><ul>
+<li><a href="#漏检清单含损失阶段">漏检清单（含损失阶段）</a></li>
+</ul>
+</li>
+<li><a href="#放不进框架的">放不进框架的</a></li>
+<li><a href="#下周要先跑的对照便宜">下周要先跑的对照（便宜）</a></li>
+<li><a href="#本周日报链接">本周日报链接</a></li>
+</ul>
+</div>
+</div></nav>
+<main><h1 id="少步蒸馏-本周认知变化-2026-11-27">少步蒸馏 · 本周认知变化 2026-11-27</h1>
+<blockquote>
+<p>覆盖周：<strong>2026-11-21 → 2026-11-27</strong>（周末无 arXiv 公告；已发布日报只有 <a href="../daily/2026-11-27.html">11-27</a>，由周五补扫一次清完 Mon–Thu；Fri 27 感恩节无独立列表，记 none，不是 pending。上周周报 <a href="../daily/2026-11-20.html">2026-11-20</a>）。
+数字来自本周日报 / read-log / batches / 四天官方名单实测；未复现。标签：<span class="b b-meas">实测</span><span class="b b-orig">原文</span>【代码】【HF】【仅OR】<span class="b b-inf">推断</span>【摘要】【自核】<span class="b b-team">队友转述</span>。
+<strong>本周五不做</strong> Q3 摘要级语义复扫（该一次性只在 2026-10-23）。本周五做的是 <strong>F5/F9/F10 周报复核</strong>：官方名单已在 11-27 13:50–14:20 Asia/Shanghai 补扫清完 Mon–Thu。证据：<code>daily/2026-11-27.md</code>、<code>daily/raw/1127catchup/</code>、<code>weekly/_gather-2026-11-27/</code>。同日独立核过文献 13:56 转发的 8 条；HorizonFlow 档位按核稿写成 <strong>(b)、不写 (a)</strong>，与当日已告诉 Henry 的限定一致。11-27 日报短卡标题仍写过 (a)(b)，以本周报与当日更正为准。<span class="b b-meas">实测</span></p>
+</blockquote>
+<hr />
+<section class="layer1"><h2 id="结论先行">结论先行<span class="layer-tag">第一层 · 框架</span></h2>
+<p><strong>本周主判断（有两篇新的必读·先跑，都会改我们怎么跑视频少步对照，但没有一篇要求把整条训练路线换掉。一篇是不换 DMD 损失、只改回归目标，600 次迭代就能蒸好 Wan 1.3B；一篇是让自 rollout 里的历史去噪步第一次接到未来损失。执行上可以开两张对照票，不必等代码，也不取代现有挂票。认知上还要读四篇值得读：多样性塌了先查训练目标而不是初始化；AR 上只做 FlowMap 不够，要加反漂移和运动引导；少步学生里可调 CFG 可以做成极性分路；图像多教师 OPD 可以拿历史学生做自我外推。）</strong></p>
+<ol>
+<li><strong>不换损失，只改回归目标，也可以把少步视频蒸好：</strong> HorizonFlow <a href="https://arxiv.org/abs/2611.29431">2611.29431</a> → <strong>必读·先跑 (b)</strong>——Chunk Evenness 把块内运动抹匀，Semantic Commitment 把末步布局锚回教师补全。同一 600 次迭代，VBench Total 85.64 对自建 Plain DMD 84.51，仓齐。官方 Self-Forcing 不是同预算，不能当 (b) 的基线；实验是离线文生视频，不够 (a)。<span class="b b-orig">原文</span>【代码】【自核】</li>
+<li><strong>自 rollout 不要再截断历史去噪梯度：</strong> Hindsight Forcing <a href="https://arxiv.org/abs/2611.27074">2611.27074</a> → <strong>必读·先跑 (a)(b)</strong>——用 straight-through 桥把未来损失送回历史块里被选中的那一个去噪步。同协议 150 次更新，Total 85.74，高于 SF 84.29、CF 84.08、Reward Forcing 85.07；Dynamic 从 writer-only 的 73.33 拉到 92.22。仓齐。它不取代 History Forcing 那张挂票（那边管的是历史条件怎么进模型）。<span class="b b-orig">原文</span>【代码】【自核】</li>
+<li><strong>多样性塌了，先查目标，再查初始化：</strong> Mass Forcing <a href="https://arxiv.org/abs/2611.29618">2611.29618</a> → <strong>值得读</strong>。三种初始化之后，动态比例仍在后续 DMD 里掉下去。监督改到同一前缀下的若干续写，按师生密度比加权。Imaging Quality 低于 Self-Forcing（66.93 vs 69.53），这是真限定，不推翻「塌在目标」。缺码，不开票。<span class="b b-orig">原文</span></li>
+<li><strong>AR 上的 FlowMap 要靠两种引导，才能不用大 DMD 教师：</strong> AR-FlowMap <a href="https://arxiv.org/abs/2611.31164">2611.31164</a> → <strong>值得读</strong>。反漂移引导 + 运动感知 skip-layer 引导之后，1.3B AR 教师的 4 步 π-Flow 在 VBench 上对齐 14B 教师蒸出的 DMD 学生。未见训码。<span class="b b-orig">原文</span></li>
+<li><strong>PP-CFG <a href="https://arxiv.org/abs/2611.27266">2611.27266</a> / DexOPD <a href="https://arxiv.org/abs/2611.31969">2611.31969</a> → 值得读。</strong> 前者在少步学生里保可调 CFG 和负向提示；后者在图像多教师 OPD 里加历史学生自我外推。DexOPD 仓齐，但不自动变成音视频票。<span class="b b-orig">原文</span>【代码】</li>
+<li><strong>召回：</strong> 公告日 <strong>4/4 最终 done</strong>，Fri 27 因感恩节正确记 <strong>none</strong>；但发现延迟再次不达标——Mon–Thu 拖到周五下午才评完（周一约 102 小时）。队友已落盘转发机制真漏 <strong>0</strong>。本周 2 篇必读 + 4 篇值得读全部命中，且都排进当日 hits 前 30。<span class="b b-meas">实测</span></li>
+</ol>
+<p><strong>认知推荐（该改预期；默认向 Henry 推荐读）：</strong></p>
+<ul>
+<li><strong>视频 DMD 先试「不换损失、只改回归目标」。</strong> HorizonFlow 跟 eDMD / TRD / PMD 问的不是同一件事：后三者管假网怎么设，前者管运动和布局的回归目标怎么拆。</li>
+<li><strong>流式 AR 自 rollout：</strong> 历史条件怎么进模型（History Forcing）和历史去噪步能不能收到未来损失（Hindsight），是两步，不要互相替代。多样性若在训练中途塌掉，先按 Mass Forcing 查目标，也还要记住上周 ReDiverse 的「首步方向方差」。</li>
+<li><strong>想避开大双向教师、只用 AR FlowMap：</strong> 先假设需要反漂移 + 运动引导，不要指望裸 FlowMap 能打过 14B-DMD 学生。</li>
+<li><strong>勿埋：</strong> 本周有新必读，也有 4 篇新值得读。不要只用「开两张票」把 Mass Forcing / AR-FlowMap / PP-CFG / DexOPD 盖掉。优先读 HorizonFlow、Hindsight，再读 Mass Forcing、AR-FlowMap。</li>
+</ul>
+<p><strong>执行推荐（开票 / 必读·先跑）：</strong></p>
+<ul>
+<li><strong>本周建议新开、且不取代旧票的对照：</strong> ① <strong>HorizonFlow</strong>：Wan2.1-1.3B，同样 600 次迭代、同一批数据，只比 Plain DMD vs DMD+CE+SC；成功标准是 VBench Total 是否复现约 85.6，以及周期 4 的运动打嗝是否明显下降（论文里高 E 比例 0.3% 对 Plain DMD 6.8%）。② <strong>Hindsight Forcing</strong>：放在已有 Causal Forcing / Self-Forcing 旁边，同样 1.3B 学生、14B 教师、4 步、150 次生成器更新；成功标准是 Total 是否超过 85，以及 Dynamic 是否明显靠「历史去噪梯度」拉起来（对照 detach / writer-only）。两张<strong>建议开，不写成已经开了</strong>。</li>
+<li><strong>继续挂着、不互斥：</strong> eDMD（同一 4 步 DMD，只改 fake 是否只学终点）、TRD、History <code>use_history_guidance</code> on/off、VA-TDM、Flex-6。</li>
+<li><strong>仍待代码、先别当可复现票：</strong> TraF、AGAVE、Speculative、PMD、FlowMap-OPD、MovieRoll、Reference Forcing、ReDiverse、BlockAlign、Isthmus、DA-DMD、14033、EbbFlow、CrossDistill、Mass Forcing、AR-FlowMap、PP-CFG。</li>
+<li><strong>本周 4 篇新值得读一律不开新训练票。</strong> DexOPD 仓齐，但是图像 SD3.5-M 配方，尚未核与 StepX-OPD 的同协议对照，先不进 AV/流式票。</li>
+</ul>
+<p><strong>对我们训练的含义：</strong></p>
+<ul>
+<li><strong>视频少步 DMD：</strong> 对照集在现有挂票旁，先加一条「同一 600 步 Plain DMD，只加 CE+SC」。成功标准必须同教师、同 4 NFE、同更新次数，不要拿官方 Self-Forcing 的大预算来当赢面。</li>
+<li><strong>流式 AR：</strong> 若开 Hindsight 票，检查点是「接上历史去噪梯度之后，运动是否明显好于只更新 writer / 只做 detach」。不要把这张票和 History 残差票看成同一件事。</li>
+<li><strong>DMD 多样性：</strong> 不要只在初始化上找补。Mass Forcing 缺码，先把「训练曲线上 Dynamic 会不会掉、Imaging Quality 会不会换走」写成读卡时的观察项。</li>
+<li><strong>MeanFlow / FlowMap 学生：</strong> 若走 AR 教师、想避开 14B DMD，默认把反漂移和运动引导算进配方，而不是先做一轮裸 FlowMap 再奇怪为什么打不过。</li>
+</ul>
+<hr />
+</section><section class="layer1"><h2 id="一屏框架taxonomy-map">一屏框架：taxonomy map<span class="layer-tag">第一层 · 框架</span></h2>
+<p>轴：<strong>① 学生训练信号</strong> × <strong>② 问题位置</strong> + <strong>③ 推理时步数分配（F7）</strong>。</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>轴1 \ 轴2</th>
+<th>单步去噪</th>
+<th>流式时间轴</th>
+<th>AV 跨模态</th>
+<th><strong>推理时步数分配（F7）</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L1 轨迹</strong></td>
+<td><strong>AR-FlowMap</strong>（反漂移 + 运动引导，不必靠大 DMD 教师）；Isthmus / TRD / EbbFlow / Re-MeanFlow / FSF / AGAVE / WeLM / TPC 维持</td>
+<td>Reference Forcing / TraF SL 段维持</td>
+<td>PTD / TaoMate 维持</td>
+<td>TORS 维持；TrajCal 旁注</td>
+</tr>
+<tr>
+<td><strong>L2 分数差</strong></td>
+<td><strong>HorizonFlow</strong>（不换 DMD 损失，只改回归目标：块内运动抹匀 + 末步布局锚）；PMD / FlowMap-OPD / TRD / eDMD / DA-DMD / CrossDistill / Fisher / StepX / <strong>DexOPD</strong>（历史学生自我外推，图像）维持或新挂</td>
+<td><strong>Hindsight Forcing</strong>（未来损失送回历史去噪步）；<strong>Mass Forcing</strong>（状态级质量加权，针对反向 KL 吸质量）；MovieRoll / 14033 / TraF RL / History / STAC / Disen / dKV 维持</td>
+<td>OmniOPD 维持</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L3 对抗</strong></td>
+<td>Nitro / NextGAN / CAMFT 维持</td>
+<td>Any 维持</td>
+<td>VA-TDM 维持</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L4 混合 / 真实·reward</strong></td>
+<td>MeanFlowAdvantage / SPM / BlockAlign / FewStepRL 维持；<strong>PP-CFG</strong>（少步学生里极性分路，保住可调 CFG / 负向提示）</td>
+<td>One-Forcing 维持</td>
+<td>Routed / Pika ReFL 维持</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>L5 / 样本级场</strong></td>
+<td>—</td>
+<td>Direct 维持</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>因果预训练 / 系统配方</strong></td>
+<td>WeLM 维持</td>
+<td>Mix 维持</td>
+<td>TaoMate-HD / TaoMate-R1；AURA 可用配方</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>MeanFlow / 引导场</strong></td>
+<td>AGAVE（必读·先跑 (b)，仍缺码）；Re-MeanFlow；EbbFlow；Isthmus；MeanFlowAdvantage；<strong>AR-FlowMap</strong></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>多样性 / 评测前提</strong></td>
+<td>ReDiverse（首步方向方差）；Physics-IQ</td>
+<td><strong>Mass Forcing</strong>（塌在训练目标，不是初始化）</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>修正器 / KV / 其它</strong></td>
+<td>—</td>
+<td>AR-Edit；Clean / Focused / ReelCache 旁注；<strong>Molt Forcing</strong>（切场后旧场景活在缓存里，冲洗 KV 去不掉）发现</td>
+<td>—</td>
+<td><strong>FastFrames / LiveVAE / Draft Forcing / ShowNow / PCRG / FLEX / ScoutCache</strong> 旁注或配方；Speculative 待代码；TORS / ART 维持</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>相对上周，每格理解变化（一句话）：</strong></p>
+<ul>
+<li><strong>L2×单步 / 视频 DMD：</strong> 假网怎么设之外，又多了一条「回归目标怎么拆」——HorizonFlow 不换损失，也能在同一 600 步配方上超过自建 Plain DMD。</li>
+<li><strong>L2×流式：</strong> Hindsight 证明，截断历史去噪梯度会让运动先垮；接上未来损失之后，Dynamic 的跳变主要来自历史去噪梯度，而不是只训练 writer。</li>
+<li><strong>多样性前提：</strong> Mass Forcing 和上周 ReDiverse 互补：一个说首步把方差堆错方向，一个说反向 KL 在训练过程中把质量吸窄。不要只换初始化。</li>
+<li><strong>流映射 / MeanFlow：</strong> AR-FlowMap 把「只用 AR 教师做 FlowMap 为什么不够」写成两种引导；和上周 FlowMap-OPD「采状态、学速度」不是同一操作。</li>
+<li><strong>条件 / 引导：</strong> PP-CFG 说明少步蒸完以后，可调 CFG 和负向提示可以靠极性分路保住，不必当成不可逆的副作用。</li>
+<li><strong>L4 / 额外信号：</strong> DexOPD 在教师外推之外，让落后的历史学生做自我外推，靠任务奖励选方向；目前只在图像域站得住。</li>
+<li><strong>F7：</strong> FastFrames 从上周「摘要外围」升到可用配方，但仍是墙钟配件，不进蒸馏主格。Draft / ShowNow / LiveVAE 同样旁注。</li>
+<li><strong>执行格子：</strong> 新可跑对照两张（HorizonFlow、Hindsight），档位已定，仓齐。eDMD 等五张旧票维持。</li>
+</ul>
+<hr />
+</section><section class="layer1"><h2 id="本周认知变化按格子">本周认知变化（按格子）<span class="layer-tag">第一层 · 框架</span></h2>
+<details class="card" open="open">
+<summary id="l2-视频-dmdhorizonflow-必读先跑-b不换损失改回归目标">L2 × 视频 DMD：HorizonFlow → 必读·先跑 (b)（不换损失，改回归目标）</summary>
+<div class="body">
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>周初相信</strong></td>
+<td>要把少步 Wan 蒸好，要么加大预算去对官方 Self-Forcing 一类配方，要么改损失家族（假网、条件平移、倾斜后验均值）。回归目标本身很少被单独拆开。</td>
+</tr>
+<tr>
+<td><strong>现在相信</strong></td>
+<td>DMD 的梯度把外观、布局和运动捆在一起。外观收敛快，运动又吵又滞后；VAE 把 4 帧压进一个 latent 块，梯度没有要求块内运动摊匀，于是每隔 4 帧打嗝；最后一步又会把已经定好的布局冲掉。HorizonFlow 仍用原来的 DMD 损失，只在训练时改回归目标：Chunk Evenness 把块内运动往「摊匀」拉（只校正超过真实视频自身不均匀程度的部分），Semantic Commitment 让教师把学生末步补全，再用这个补全锚住粗布局。两项分别打在运动分量和与之正交的布局分量上。<span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td><strong>训练含义</strong></td>
+<td>够 (b)，仓齐，建议开对照票。不够 (a)：实验是离线文生视频，还不能证明会直接改流式或音视频训练决定。同协议对照必须是「同一 600 步 Plain DMD」，官方 Self-Forcing / FastWan 预算不同，不能拿来当赢面。不取代 eDMD / TRD / PMD 对假网的讨论。</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>关键数字与代码。</strong> Wan2.1-T2V-1.3B，4 步，600 次迭代，8.4k 样本，约 51 A100 小时。VBench Total <strong>85.64±0.16</strong>，自建 Plain DMD <strong>84.51</strong>（五种子全部更高）。已发布少步 Wan2.1-1.3B（更大预算）：FastWan 83.91、CoDMD 83.95、rCM 83.91、Self-Forcing 84.03。严重打嗝（E&gt;0.1）比例 <strong>0.3%</strong>，Plain DMD 6.8%。仓：<a href="https://github.com/XIANGLONGGUO/HorizonFlow-repo">XIANGLONGGUO/HorizonFlow-repo</a>，训练入口在 rCM 框架的 <code>scripts/train_horizonflow.sh</code>。<span class="b b-orig">原文</span>【代码】【自核】</p>
+</div>
+</details>
+<details class="card" open="open">
+<summary id="l2-流式hindsight-forcing-必读先跑-ab历史去噪要接到未来损失">L2 × 流式：Hindsight Forcing → 必读·先跑 (a)(b)（历史去噪要接到未来损失）</summary>
+<div class="body">
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>周初相信</strong></td>
+<td>Self-Forcing / Causal Forcing 一类自 rollout，为了省显存，通常截断跨块梯度，或把历史 latent detach。History Forcing 管的是历史条件怎么进模型，不是这件事。</td>
+</tr>
+<tr>
+<td><strong>现在相信</strong></td>
+<td>截断的代价是：早先的去噪步看不到「我写出来的历史会不会害到后面」。Hindsight 用一条 latent 上的 straight-through 桥，把前向生成和反向算账拆开——前向每块仍走完多步并更新 KV，反向只把未来损失送回历史块里被选中的那一个去噪步，同时训练 context writer 和历史去噪器（共享参数）。不加新参数，也不另外回放一条轨迹。消融里，只训练 writer、不把梯度送回历史去噪，Dynamic 掉到 73.33；接上之后到 92.22。detach 行是 84.67，不要把 84.67→92.22 写成相邻对照。<span class="b b-orig">原文</span>【代码】</td>
+</tr>
+<tr>
+<td><strong>训练含义</strong></td>
+<td>够 (a) 和 (b)：会改流式 AR 自 rollout 怎么回传梯度，且仓+配置齐；同一 150 次更新下超过 SF / CF / Reward Forcing。建议开对照票，检查点必须包含 writer-only / detach。不替代 History 残差票，也不声称能自动修好 60 秒以外的长漂。</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>关键数字与代码。</strong> 学生 Wan2.1-T2V-1.3B（从 Causal Forcing 因果 ODE 初始化），教师冻结的双向 14B，四步，150 次生成器更新后的 EMA。VBench Total <strong>85.74</strong>（Quality 86.89，Semantic 81.11，Dynamic 92.22），高于 SF 84.29、CF 84.08、Reward Forcing 85.07。仓：<a href="https://github.com/haonanAN309/Hindsight-Forcing">haonanAN309/Hindsight-Forcing</a>；权在 HF <code>NathanAN123/Hindsight_Forcing</code>，仓写明可能需要申请访问。<span class="b b-orig">原文</span>【代码】【HF】【自核】</p>
+</div>
+</details>
+<h3 id="多样性前提mass-forcing-值得读塌在目标不是初始化">多样性前提：Mass Forcing → 值得读（塌在目标，不是初始化）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>周初相信</strong></td>
+<td>DMD 多样性变差、动态变弱，常见解释是学生初始化没有铺开；上周 ReDiverse 补充了「首步方向方差堆错」。</td>
+</tr>
+<tr>
+<td><strong>现在相信</strong></td>
+<td>作者换了三种初始化，动态视频的比例仍在后续 DMD 训练里掉下去——说明是反向 KL 在训练中把质量往窄峰上吸。监督要从「整段视频」改到「同一个前缀下的若干续写」，用 score 积分估计师生密度比再加权。<span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td><strong>训练含义</strong></td>
+<td>改预期，不够 (a)/(b)，没码，不开票。读的时候要同时看 Imaging Quality：它低于 Self-Forcing（66.93 vs 69.53），这是真限定，不推翻诊断。和 ReDiverse 是互补，不是替代。</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="流映射ar-flowmap-值得读裸-flowmap-不够">流映射：AR-FlowMap → 值得读（裸 FlowMap 不够）</h3>
+<p>只对 AR 教师做 FlowMap，学生会漂，运动也不好学，所以大家又退回 SF-DMD，并依赖 14B 级双向教师。这篇加上反漂移引导（另训一个模仿学生漂移的辅助网当负向支路）和运动感知 skip-layer 引导。用 1.3B AR 教师时，4 步 π-Flow 在 Causal-rCM 一组 Total <strong>84.87</strong>，接近官方 14B-DMD 的 84.92，但 Dynamic 是 71.4 对 81.1，不能写成全面对齐。项目页有，文案仍是 <em>Code, soon</em>，不开票。<span class="b b-orig">原文</span></p>
+<h3 id="条件-额外信号pp-cfgdexopd-值得读">条件 / 额外信号：PP-CFG、DexOPD → 值得读</h3>
+<p><strong>PP-CFG。</strong> 少步蒸完以后，可调 CFG 和运行时负向提示往往会变弱。它把正、负文本条件分开，在共享视觉骨干里按相反符号合并注意力，再用 Scale-Time Polarity Mixer 按 guidance 和时间步调节；每一步只需一次视觉骨干前向。接在 Wan2.1 的 DMD 上，4 步 VBench <strong>81.46</strong>。仓写明代码准备中，不开票。<span class="b b-orig">原文</span></p>
+<p><strong>DexOPD。</strong> 多教师 OPD 之外，让落后的历史学生做自我外推，并用任务奖励决定往哪边走。图像 SD3.5-M，仓 <a href="https://github.com/SJTU-DENG-Lab/DexOPD">SJTU-DENG-Lab/DexOPD</a> 齐。不自动变成 AV/流式票，也尚未核与 StepX-OPD 的同协议对照，不升必读、不进训练票。<span class="b b-orig">原文</span>【代码】</p>
+<h3 id="执行格子与-11-23-补评">执行格子与 11-23 补评</h3>
+<ul>
+<li><strong>新可跑：</strong> HorizonFlow、Hindsight，建议开对照票。</li>
+<li><strong>档位不变的解阻：</strong> SPM <a href="https://arxiv.org/abs/2611.25998">2611.25998</a> 在 11-20 日报发布之后约 15:01 仓解阻；不把 SPM 当本周新文重推，也不改档、不开新票。</li>
+<li><strong>上调（不到值得读，不单开票）：</strong> FastFrames / Lynn / Spark-H3 / PCRG 在 11-20 因摘要欠评挂外围，11-23 按正文/仓升到值得看。FastFrames 仓+权齐，加速的是 VAE/KV 墙钟，不减训练 NFE。Spark-H3 的 MiniMax-H3 是 Hailuo，不是 Loopit。</li>
+</ul>
+<hr />
+</section><section class="layer1"><h2 id="预测命中率">预测命中率<span class="layer-tag">第一层 · 框架</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>区间</th>
+<th>新计入</th>
+<th>累计</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>上周结束（11-20）</td>
+<td>—</td>
+<td><strong>99/130 = 76%</strong></td>
+<td>末次入账不变</td>
+</tr>
+<tr>
+<td>11-21～11-27</td>
+<td>本周新文<strong>未事先按条登记计分</strong></td>
+<td><strong>99/130 = 76%</strong>（末次入账不变）</td>
+<td>四天名单在周五一次清完，没有读结果前的分条打分，<strong>不计分</strong>。无低估型未中触发的当天复评。HorizonFlow 从日报 (a)(b) 收到 (b) 是同日核稿限定，不是预测入账。</td>
+</tr>
+</tbody>
+</table></div>
+<p>分类框架本身：HorizonFlow 能挂进 L2×视频 DMD「回归目标」，Hindsight 能挂进 L2×流式「跨块信用」，Mass Forcing 能同时挂在多样性前提和 L2，AR-FlowMap 能挂进流映射格，说明现有轴还能用，不必改轴。F7 配件（FastFrames / Draft / ShowNow / LiveVAE）继续不进训练信号轴。</p>
+<hr />
+</section><section class=""><h2 id="原创性分层与重做比例本周新评-折档">原创性分层与重做比例（本周新评 / 折档）</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>新机制</th>
+<th>新发现</th>
+<th>重做 / 配方</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单步 / 视频 DMD</td>
+<td>HorizonFlow（损失不变，回归目标拆开）；PP-CFG（极性分路）</td>
+<td>—</td>
+<td>DexOPD（多教师 OPD + 历史学生外推，图像配方）</td>
+<td>必读是新操作，不是新损失家族</td>
+</tr>
+<tr>
+<td>流式时间轴</td>
+<td>Hindsight Forcing（历史去噪接到未来损失）；AR-FlowMap（两种引导）</td>
+<td>Mass Forcing（塌在目标不是初始化）；Molt Forcing（切场后旧场景活在缓存里）</td>
+<td>Zing-1.0 / LiveAudio / LuxAvatar / JetDiffusion（蒸馏骨架不新）</td>
+<td>两篇必读和两篇值得读是增量，系统文多为配方</td>
+</tr>
+<tr>
+<td>AV</td>
+<td>—</td>
+<td>—</td>
+<td>LiveAudio（级联配音少步块）</td>
+<td>无新必读</td>
+</tr>
+<tr>
+<td>F7 / 推理</td>
+<td>—</td>
+<td>—</td>
+<td>FastFrames（升可用配方）、LiveVAE、Draft Forcing、ShowNow、PCRG、FLEX、BigSmall</td>
+<td>一律旁注或配方；墙钟或调用次数 ≠ 减训练 NFE</td>
+</tr>
+<tr>
+<td>少步后再训</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>本周无新过线</td>
+</tr>
+</tbody>
+</table></div>
+<p>粗计：本周新过线的 2 篇必读 + 4 篇值得读，新机制或新发现明显多于纯换底座重做；同事过线里的 ShowNow / LiveVAE / Draft / BigSmall 在我这边是推理配件或系统配方，不进主格。</p>
+<hr />
+</section><section class=""><h2 id="最接近工作是否真的读过">最接近工作是否真的读过</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>本周论文</th>
+<th>声称最接近</th>
+<th>是否读过</th>
+<th>证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HorizonFlow</td>
+<td>同一配方的 Plain DMD；已发布少步 Wan（SF / FastWan / rCM / CoDMD）</td>
+<td>是（DMD / SF 主线；eDMD、TRD、PMD 本周又对过「假网怎么设」这条邻线）</td>
+<td>同协议对照写的是 600 步 Plain DMD；已发布基线预算不同，卡里已划开。<span class="b b-orig">原文</span>【自核】</td>
+</tr>
+<tr>
+<td>Hindsight Forcing</td>
+<td>Self-Forcing / Causal Forcing / Reward Forcing；SGF / RAVEN（梯度送到历史编码）</td>
+<td>是（SF / CF 主线；History Forcing 管条件，不是同一操作）</td>
+<td>同 150 次更新对照 SF/CF/RF；消融把 writer-only 和历史去噪梯度拆开。未自跑。<span class="b b-orig">原文</span>【代码】</td>
+</tr>
+<tr>
+<td>Mass Forcing</td>
+<td>Self-Forcing DMD 的多样性塌缩；Causal Forcing</td>
+<td>是（DMD 主线；上周 ReDiverse 已读）</td>
+<td>三种初始化后仍塌，指向目标。IQ 下降写进限定。<span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td>AR-FlowMap</td>
+<td>裸 AR FlowMap / 14B 教师 DMD 学生；Causal-rCM</td>
+<td>是（MeanFlow / FlowMap-OPD 在框架里）</td>
+<td>表按同一 AR 底座分组；Dynamic 并未对齐，不能写成全面超过。<span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td>PP-CFG</td>
+<td>普通 step-distilled DMD 上的 CFG / 负向提示变弱</td>
+<td>部分（少步引导问题熟，这篇分路是新读）</td>
+<td>4 步 VBench 81.46 来自原文；代码未放。<span class="b b-orig">原文</span></td>
+</tr>
+<tr>
+<td>DexOPD</td>
+<td>多教师 OPD / StepX-OPD</td>
+<td>部分（StepX 已读；同协议对照尚未核）</td>
+<td>故不升必读。<span class="b b-orig">原文</span>【代码】</td>
+</tr>
+<tr>
+<td>FastFrames 补评</td>
+<td>CF++ 两步里的慢 VAE/KV</td>
+<td>是（本周按正文补读）</td>
+<td>墙钟配件，不进蒸馏主格。<span class="b b-orig">原文</span>【代码】</td>
+</tr>
+</tbody>
+</table></div>
+<p>没有发现「只引用没读、把最强对照漏掉」的新事故。风险仍在：HorizonFlow 的 (b) 只对自建 Plain DMD 成立；Hindsight 的一分钟结果偏定性；Mass Forcing 的 Imaging Quality 下降和缺码；AR-FlowMap 的 Dynamic 没有对齐 14B-DMD 学生。</p>
+<hr />
+</section><section class=""><h2 id="与文献同事的评级分歧">与文献同事的评级分歧</h2>
+<p>两边评级都保留；写明归属。本周没有因分歧而改我方已发布主档（HorizonFlow 去掉 (a) 是我方同日核稿，不是被他们改档）。文献 11-27 写出了正式的「待少步定级」8 条（<code>peer-forwards-1345.md</code>，约 13:56 Asia/Shanghai），站点过线 8 篇、<strong>没有必读新定理</strong>；HorizonFlow 被标成「属少步蒸馏，转少步主评」，没有进他们的过线主卡。</p>
+<h3 id="维持分歧上周延续">维持分歧（上周延续）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文</th>
+<th>文献同事</th>
+<th>我（少步）</th>
+<th>要点</th>
+<th>本周状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clean Forcing <a href="https://arxiv.org/abs/2610.25634">2610.25634</a></td>
+<td><strong>必读</strong>（流式漂移主线）</td>
+<td><strong>值得读·流式（发现类）</strong></td>
+<td>SF 移植负面；不满足 (a)(b)</td>
+<td>维持；本周无新证据改档</td>
+</tr>
+<tr>
+<td>DeForcing <code>225TN4s58Y</code></td>
+<td><strong>一行·出名单 / 重做</strong></td>
+<td><strong>值得看（仅OR）旁注</strong></td>
+<td>免 rollout DMD 观察不升</td>
+<td>维持</td>
+</tr>
+<tr>
+<td>Drift Forcing <code>Gffoov6YRI</code></td>
+<td><strong>观察</strong>（等孪生）</td>
+<td><strong>必读·先跑</strong>（仅OR+匿名码）</td>
+<td>我按 (a) 核码</td>
+<td>维持；本周仍无 arXiv 孪生（API 检索 0 条）。题名相近的 <a href="https://arxiv.org/abs/2606.24084">2606.24084</a> 是语言模型 OPD 的 blockwise drift gating，不是这篇孪生。<span class="b b-meas">实测</span></td>
+</tr>
+<tr>
+<td>Speculative <a href="https://arxiv.org/abs/2610.22347">2610.22347</a></td>
+<td><strong>值得看</strong> / 代码观察</td>
+<td><strong>必读·待代码</strong></td>
+<td>GH 仍空壳</td>
+<td>维持</td>
+</tr>
+<tr>
+<td>One-Forcing / Routed</td>
+<td><strong>值得看</strong></td>
+<td><strong>必读·先跑</strong></td>
+<td>他存疑协议/缺码；我认 (a)/(b)</td>
+<td>维持</td>
+</tr>
+<tr>
+<td>Direct <a href="https://arxiv.org/abs/2610.30861">2610.30861</a></td>
+<td><strong>一行</strong></td>
+<td><strong>必读·先跑</strong></td>
+<td>训码后升</td>
+<td>维持</td>
+</tr>
+<tr>
+<td>Mix <a href="https://arxiv.org/abs/2610.33589">2610.33589</a></td>
+<td><strong>观察关</strong></td>
+<td><strong>值得读</strong></td>
+<td>他盯系统，我盯因果预训练</td>
+<td>维持</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="本周新对账">本周新对账</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>论文</th>
+<th>文献同事</th>
+<th>我（少步）</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hindsight Forcing</strong> <a href="https://arxiv.org/abs/2611.27074">2611.27074</a></td>
+<td><strong>worth</strong>（「不是必读新定理」；Total 只比 Reward Forcing 高 0.67）</td>
+<td><strong>必读·先跑 (a)(b)</strong></td>
+<td>同向看机制，分档不同。我认：会改流式自 rollout 怎么回传梯度，且同协议超过 SF/CF/RF，仓齐。他们看重的是 Total 涨点不大。不改我方档</td>
+</tr>
+<tr>
+<td><strong>HorizonFlow</strong> <a href="https://arxiv.org/abs/2611.29431">2611.29431</a></td>
+<td><strong>转少步主评</strong>，未进他们过线 8 篇，也未标 must</td>
+<td><strong>必读·先跑 (b)</strong></td>
+<td>归属清楚：蒸馏对照交给我评。我按同一 600 步 Plain DMD 的 (b) 收，明确不写 (a)</td>
+</tr>
+<tr>
+<td><strong>Mass Forcing / AR-FlowMap</strong></td>
+<td><strong>worth</strong>（Mass 可信度存疑，已转少步；FlowMap 不进必读）</td>
+<td><strong>值得读</strong></td>
+<td>同向；我也不升必读。Mass 的 IQ 下降两边都记下了</td>
+</tr>
+<tr>
+<td><strong>Draft Forcing / ShowNow / LiveVAE / CodecOPSD</strong></td>
+<td><strong>worth</strong>（可用配方 / 延迟主线）</td>
+<td><strong>值得看·旁注</strong></td>
+<td>镜头不同：他们盯交互延迟和 VAE 墙钟；我按「是否减训练 NFE / 是否新蒸馏损失」旁注。LiveVAE 相对 11-27 日报「可用配方」略降：未见本篇官方仓，且 MiniMax-H3 是 Hailuo 不是 Loopit</td>
+</tr>
+<tr>
+<td><strong>FastFrames</strong> <a href="https://arxiv.org/abs/2611.23226">2611.23226</a></td>
+<td>上周 <strong>must</strong>；本周已见替换不重推</td>
+<td><strong>值得看·可用配方</strong>（从 11-20 外围升）</td>
+<td>分歧缩小，仍不升值得读：加速的是 VAE/KV 墙钟</td>
+</tr>
+<tr>
+<td><strong>PP-CFG / DexOPD</strong></td>
+<td>11-27 过线 8 篇和转发 8 条里<strong>没有</strong></td>
+<td><strong>值得读</strong></td>
+<td>不是转发漏，是他们的过线包没收；我方已评，不记机制真漏</td>
+</tr>
+<tr>
+<td><strong>BigSmall / Molt Forcing / LiveAudio</strong></td>
+<td><strong>worth</strong></td>
+<td><strong>值得看·发现 / 旁注 / 可用配方</strong></td>
+<td>同向偏配件或诊断；我也不升值得读</td>
+</tr>
+</tbody>
+</table></div>
+<p>世界模型评测、驾驶、机器人控制被他们或 RL 组观察的条目，不在少步范围内的，不记机制真漏，也不开我方主卡。Loupe <a href="https://arxiv.org/abs/2611.31895">2611.31895</a> / WorldInteract <a href="https://arxiv.org/abs/2611.34730">2611.34730</a> 归 RL，我方未接管。</p>
+<hr />
+</section><section class=""><h2 id="召回审计">召回审计</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>指标</th>
+<th>目标</th>
+<th>本周</th>
+<th>判定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>批次覆盖</td>
+<td>100% 公告日</td>
+<td>Mon 750/62、Tue 1801/137、Wed 1059/108、Thu 994/90（均为 11-27 13:50–14:20 清账；+extra9 合计 12；去重 hits <strong>382</strong>；API 补摘要 empty_abs=0）→ 公告日 <strong>4/4 done</strong>；Sat/Sun <strong>none</strong>；<strong>Fri 27 none</strong>（感恩节：Wed 14:00 ET 11-25 至 Fri 14:00 ET 11-27 的稿改在 Sun 29 20:00 ET / 周一 11-30 上午公告；日期 catchup 0 条，list-new 仍为 Thursday, 26 November，Age≈25h）。不是 pending。<span class="b b-meas">实测</span></td>
+<td><strong>最终覆盖达标</strong>；清账日再次偏晚</td>
+</tr>
+<tr>
+<td>发现延迟</td>
+<td>≤24h（周末 ≤72h）</td>
+<td>以约 08:00 Asia/Shanghai 公告起算到 11-27 13:50：Mon <strong>≈102h</strong>，Tue <strong>≈78h</strong>，Wed <strong>≈54h</strong>，Thu <strong>≈30h</strong>。Fri 无公告，不计入。周末无公告。4 个公告日全部超时</td>
+<td><strong>不达标</strong>（0/4 公告日达 ≤24h）。这是连续第二周把周一到周四拖到周五下午</td>
+</tr>
+<tr>
+<td>外部召回</td>
+<td>≥95%（Henry 点名 ∪ 队友范围内候选）</td>
+<td>本周无 Henry 点名。11-23 文献 23 条待定级（实为上周积压）当时已在 11-20 发布页；其中 4 篇摘要欠评本周升值得看。11-23 RL 107 条：73 条已在 11-20，34 条在 11-27 补录。11-27 文献正式转发 8 条 + RL <code>FEWSTEP.json</code> 10 条，均已在 11-27 发布页有 ID+评级。文献过线 9 篇（站点写过线 8，read-log 列 9，含 LiveAudio）也全部有 ID+评级</td>
+<td>转发口径达标；<strong>机制真漏 0</strong></td>
+</tr>
+<tr>
+<td>金标筛召回</td>
+<td>100%，且排进前 30</td>
+<td>常驻必读本周仅 eDMD <a href="https://arxiv.org/abs/2611.17194">2611.17194</a> 以替换稿出现在周三 hits 第 2，已有发布页评级，无新的自然替换可测。新必读+值得读 <strong>6/6 命中</strong>，且全部落入当日 hits 前 30：PP-CFG 1/62、Hindsight 4/62、Mass Forcing 1/137、AR-FlowMap 3/137、HorizonFlow 6/137、DexOPD 16/108。筛子 v2.2 未改</td>
+<td><strong>命中 100%；前 30 达标</strong>（上周 PMD 排第 64 的风险本周未再出现）</td>
+</tr>
+<tr>
+<td>复评上调次数</td>
+<td>持续 &gt;0 则初评偏保守</td>
+<td>已折 LIVE：<strong>FastFrames / Lynn / Spark-H3 / PCRG</strong> 外围→值得看（11-23 补评，11-27 写入发布页；均不到值得读）。<strong>SPM</strong> 是代码解阻，档位未改，<strong>不计上调</strong>。HorizonFlow 去掉 (a) 是限定收紧，<strong>计下调不是上调</strong></td>
+<td><strong>上调 4</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="漏检清单含损失阶段">漏检清单（含损失阶段）</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>论文</th>
+<th>发现日</th>
+<th>损失阶段</th>
+<th>最终</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mon–Thu 官方名单（含 HorizonFlow、Hindsight、Mass Forcing、AR-FlowMap、PP-CFG、DexOPD）</td>
+<td>见上</td>
+<td>11-27 13:50 才评完</td>
+<td><strong>例行中断</strong>：11-21 后无晨报、无日报（额度用尽），不是筛子没抓住。周五补扫在额度重置后一次清完</td>
+<td>范围内未见漏评，但是发现延迟事故（连续第二周）</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.22717">2611.22717</a></td>
+<td>PCRG</td>
+<td>11-20 已命中；11-27 升值得看·旁注</td>
+<td><strong>摘要欠评</strong>（11-20 挂外围；周五 hits 若只看前 30 也会排到 38/62，但那是上周名单）。本周闭合到值得看，不记机制真漏</td>
+<td>值得看·旁注</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.23226">2611.23226</a> / <a href="https://arxiv.org/abs/2611.21479">2611.21479</a> / <a href="https://arxiv.org/abs/2611.24256">2611.24256</a></td>
+<td>FastFrames / Lynn / Spark-H3</td>
+<td>11-20 已命中</td>
+<td><strong>摘要欠评</strong>（挂外围），本周按正文升值得看</td>
+<td>值得看·可用配方</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2611.31184">2611.31184</a></td>
+<td>CodecOPSD</td>
+<td>11-27</td>
+<td><strong>粗筛排序</strong>：周二 hits 排第 60/137，若截前 30 会漏；全读命中保住。最终只到旁注，不影响金标前 30</td>
+<td>值得看·旁注</td>
+</tr>
+<tr>
+<td>—</td>
+<td>本周队友范围内少步主线真漏</td>
+<td>—</td>
+<td>—</td>
+<td><strong>0</strong></td>
+</tr>
+<tr>
+<td>ReplanFlow / Drift-Gated TTUR</td>
+<td>观察名单孪生</td>
+<td>本周五 API 检索</td>
+<td>仍无 arXiv 孪生（0 条）</td>
+<td>维持仅OR；继续每周一搜</td>
+</tr>
+</tbody>
+</table></div>
+<p>教训：这是连续第二周「中间几天没跑取数，周五一次补齐」。额度用尽会直接打穿发现延迟目标，覆盖最后虽然能补上，但 102 小时已经不是筛子问题。周五感恩节名单必须记 none，不能像「还没翻、交给周一」那样空等一个不会出现的列表；文献侧 headline 仍把 Fri 27 写成未翻，我方台账已按官方假期公告更正。「命中全读、不截前 30」本周保住了 CodecOPSD 这条旁注，过线 6 篇自己都在前 30，但不能因此把全读省掉。</p>
+<p>OpenReview F10：文献侧 11-23 / 11-27 均无新的 <code>or_iclr27*.json</code> 转储（最近一份完整 dump 仍停在 11-04，上上周已对过）。文献本槽也写明 OR 孪生未跑。我方本周五对观察名单做了 arXiv API 检索：ReplanFlow、Drift-Gated TTUR、DeForcing 仍 0 条。本周无新仅OR摘要，无新仅OR必读。<span class="b b-meas">实测</span></p>
+<hr />
+</section><section class=""><h2 id="放不进框架的">放不进框架的</h2>
+<ul>
+<li><strong>ShowNow / Draft Forcing / BigSmall：</strong> 推测流式、草稿验证器、或 14B 规划 + 1.3B 续写。减的是墙钟、输入延迟或大模型调用次数，不是训练 NFE。挂 F7 / 系统旁注，不进主格。</li>
+<li><strong>LiveVAE / FastFrames / PCRG / FLEX：</strong> VAE 或 KV / 视野外推配件。FastFrames 本周升到可用配方，仍不进蒸馏主格。LiveVAE 实例在 Hailuo MiniMax-H3，不是 Loopit；未见本篇官方仓。</li>
+<li><strong>Zing-1.0 / LiveAudio / LuxAvatar / JetDiffusion：</strong> 可玩世界、级联配音、实时头像、稀疏量化注意力，蒸馏骨架不新，挂配方。</li>
+<li><strong>Molt Forcing：</strong> 切场后旧场景活在缓存里的诊断，训练免费，挂发现，不改训练主线。</li>
+<li>大量 OUT：LLM-OPD、数据蒸馏、机器人/驾驶、医学，见 11-27 F8。</li>
+</ul>
+<p>发现类（Mass Forcing 的「塌在目标」）已经挂回「多样性 / 评测前提」，不进本节。</p>
+<hr />
+</section><section class=""><h2 id="下周要先跑的对照便宜">下周要先跑的对照（便宜）</h2>
+<ol>
+<li><strong>HorizonFlow（新可跑）：</strong> Wan2.1-1.3B，同样 600 次迭代、同一批数据，只比 Plain DMD vs DMD+CE+SC。报 VBench Total 是否复现约 85.6，以及周期 4 高 E 打嗝是否明显下降。不要拿官方 Self-Forcing 的大预算当对照。</li>
+<li><strong>Hindsight Forcing（新可跑）：</strong> 放在已有 CF / SF 旁边，同样 1.3B 学生、14B 教师、4 步、150 次生成器更新。报 Total 是否超过 85，以及 Dynamic 在 writer-only / detach / 接上历史去噪梯度三行上的差。不取代 History 票。</li>
+<li><strong>eDMD：</strong> 官方脚本/配置，同一 4 步 DMD，只改假网是否只学终点；底座优先 SD3 或 FLUX.2-klein LoRA。</li>
+<li><strong>TRD：</strong> 官方 SANA 脚本，对照 DMD2 / MeanFlow / ArcFlow；带 K=2。</li>
+<li><strong>History：</strong> Wan2.1-1.3B DMD，<code>use_history_guidance</code> on/off。</li>
+<li><strong>VA-TDM / Flex-6：</strong> 维持。H3 AV 对照集仍是 {教师, PTD-4/8, Flex-6, FastH3-8, VA-TDM-4, TRD 若迁得动, eDMD 若迁得动}；HorizonFlow / Hindsight 先在纯视频 1.3B 上跑，不自动并进 AV 集。</li>
+<li><strong>盯码：</strong> Mass Forcing、AR-FlowMap、PP-CFG，以及上周已列的 PMD、FlowMap-OPD、MovieRoll、Reference Forcing、ReDiverse、BlockAlign、Isthmus、TraF、AGAVE、Speculative、DA-DMD、14033、EbbFlow、CrossDistill；码开同日复评。</li>
+<li><strong>观察名单孪生：</strong> ReplanFlow、Drift-Gated TTUR 继续按标题搜 arXiv（本周五仍 0 条）。</li>
+<li><strong>阅读债：</strong> ViRDM、APT2、Causal-rCM、PDD、PDMD <a href="https://arxiv.org/abs/2609.35768">2609.35768</a>（仍未清）。</li>
+<li><strong>流程：</strong> 连续两周都把周一到周四拖到周五才清，不能再当成偶发。晨报或补扫因额度失败时，必须在额度恢复的当天补名单，不得默认「周五再一起做」。周五若是假期，先核官方公告，记 none，不要把未翻的 <code>/new</code> 写成还在 pending。</li>
+</ol>
+<hr />
+</section><section class=""><h2 id="本周日报链接">本周日报链接</h2>
+<ul>
+<li><a href="../daily/2026-11-27.html">2026-11-27</a> — 本周唯一发布日报；Mon 23–Thu 26 官方名单一次清完；Fri 27 感恩节 <strong>none</strong>；<strong>新必读·先跑 ×2</strong>（HorizonFlow (b)、Hindsight (a)(b)）；<strong>新值得读 ×4</strong>；11-23 四篇摘要欠评升值得看</li>
+</ul>
+<p>相关：<code>method.md</code> v1.4；<code>batches.md</code>；<code>lineage.md</code>；gather <code>_gather-2026-11-27/</code>。
+LIVE：https://thughy.github.io/fewstep-daily/weekly/2026-11-27.html</p></section>
+<div class="foot">由 build.py 从 Markdown 源生成（仅呈现转换，内容未改）· 2026-11-27 17:20 (UTC+8)</div></main></div>
+<script>
+(function(){
+ // 详情卡片全部展开/收起
+ document.querySelectorAll('[data-act]').forEach(function(b){b.addEventListener('click',function(){
+   var o=b.getAttribute('data-act')==='open';document.querySelectorAll('details.card').forEach(function(d){d.open=o;});});});
+ // 点击目录中位于折叠卡片内的锚点时自动展开
+ function openFor(id){var el=document.getElementById(id);if(!el)return;var d=el.closest('details');if(d)d.open=true;}
+ if(location.hash)openFor(decodeURIComponent(location.hash.slice(1)));
+ window.addEventListener('hashchange',function(){openFor(decodeURIComponent(location.hash.slice(1)));});
+ // 目录高亮
+ var links=[].slice.call(document.querySelectorAll('nav.toc a'));
+ var heads=links.map(function(a){return document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));});
+ function hl(){var y=window.scrollY+80,k=-1;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top+window.scrollY<=y&&h.offsetParent!==null)k=i;});
+   links.forEach(function(a,i){a.classList.toggle('on',i===k);});}
+ window.addEventListener('scroll',hl,{passive:true});hl();
+})();
+</script><script>if(document.querySelector('code.language-mermaid')){var s=document.createElement('script');
+s.src='https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';s.onload=function(){document.querySelectorAll('code.language-mermaid').forEach(function(c){var d=document.createElement('div');d.className='mermaid';d.textContent=c.textContent;c.parentNode.replaceWith(d);});mermaid.initialize({startOnLoad:false});mermaid.run();};document.head.appendChild(s);}</script></body></html>
